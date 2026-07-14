@@ -5,6 +5,8 @@ Climate Exposure and Cerebrovascular Outcomes in Rio de Janeiro, Brazil (2010--2
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![R >= 4.4.0](https://img.shields.io/badge/R-%3E%3D4.4.0-blue.svg)](https://www.r-project.org/)
 
+> **DATA INCLUDED:** All 528 raw and processed data files (~1.4 GB) are pre-packaged in this repository via Git LFS. No DATASUS API calls, no INMET downloads, no PM2.5 extraction needed. Clone and run.
+
 **Research Compendium -- Environmental Epidemiology with Distributed Lag Non-linear Models and Hierarchical Bayesian Inference**
 
 ---
@@ -153,6 +155,25 @@ Temperature in degrees Celsius; RH = relative humidity in percentage points.
 
 ## Quick Start
 
+### Zero Downloads Required
+
+**All raw and processed data files are included directly in this repository via Git LFS.** After cloning, you have immediate access to:
+
+| Data Type | Files | Total Size | Location |
+|---|---|---|---|
+| Hospital admissions (SIH-RD) | 192 monthly .rds | ~484 MB | `data/raw/sih/` |
+| Mortality records (SIM-DO) | 111 monthly .rds | ~804 MB | `data/raw/sim/` |
+| INMET weather stations | 218 files (.rds) | ~69 MB | `data/raw/inmet/` |
+| Individual-level cleaned SIH | 1 .rds | ~1.1 MB | `data/interim/sih_cerebrovascular_individual.rds` |
+| Individual-level cleaned SIM | 1 .rds | ~635 KB | `data/interim/sim_cerebrovascular_individual.rds` |
+| Analytic dataset (daily, 9 macroregions) | 1 .rds | ~1.5 MB | `data/processed/dataset_dlnm_macrorregiao.rds` |
+| Municipality-level daily outcomes | 1 .rds | ~1.1 MB | `data/processed/desfechos_diarios_municipio.rds` |
+| Macroregional daily climate | 1 .rds | ~569 KB | `data/processed/inmet_diario_macrorregiao.rds` |
+| PM2.5 monthly tables | 4 .csv | ~2 MB | `data/processed/pm25/` |
+| **Total pre-packaged data** | **528 files** | **~1.4 GB** | |
+
+You do **not** need to run `make download`. You do **not** need DATASUS API access. You do **not** need an internet connection after cloning. The `make download` step exists only if you wish to refresh the raw data from public APIs.
+
 ### Prerequisites
 
 | Requirement | Minimum Version | Installation Check |
@@ -164,27 +185,27 @@ Temperature in degrees Celsius; RH = relative humidity in percentage points.
 | Python (optional) | 3.9 | `python3 --version` |
 | Docker (optional) | 24 | `docker --version` |
 
-### One-Command Execution
+### One-Command Execution (No Downloads Needed)
+
+All data is pre-packaged. Just clone, set variables, and run:
 
 ```bash
 git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
 cd exposome-cerebrovascular-rj
-
-# Set required environment variables
 export DLNM_PROJECT_ROOT="$(pwd)"
 export DLNM_SIM_SIH_FALLBACK="false"
-
-# Run the corrected pipeline
 Rscript run_dlnm_analysis.R
 ```
 
-### Docker (cross-platform, zero local dependencies)
+This single command runs the complete pipeline: processes outcomes, builds the analytic dataset, fits 72 DLNM models, runs Bayesian validation, generates figures and tables, and executes all integrity tests. Total runtime: approximately 30-45 minutes.
+
+### Docker (cross-platform, zero local dependencies, data included)
 
 ```bash
 git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
 cd exposome-cerebrovascular-rj
-make docker-build
-make docker-run
+make docker-build    # Builds image with all R packages and data pre-loaded
+make docker-run      # Runs full pipeline inside container
 ```
 
 ---
@@ -193,10 +214,22 @@ make docker-run
 
 ### Step 0: Clone and Enter Repository
 
+Data is versioned with Git LFS. Ensure Git LFS is installed before cloning:
+
 ```bash
+git lfs install
 git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
 cd exposome-cerebrovascular-rj
 export DLNM_PROJECT_ROOT="$(pwd)"
+```
+
+After cloning, verify that data files are present (528 files, ~1.4 GB):
+
+```bash
+ls data/raw/sih/*.rds | wc -l     # Expected: 192
+ls data/raw/sim/*.rds | wc -l     # Expected: 111
+ls data/interim/*.rds | wc -l     # Expected: 2
+ls data/processed/*.rds | wc -l   # Expected: 3
 ```
 
 ### Step 1: Install R Environment
@@ -213,22 +246,14 @@ This command:
 
 Expected output: `"Setup complete!"` followed by a note about pre-packaged PM2.5 tables.
 
-### Step 2: Download Raw Data
+### Step 2: Download Raw Data (OPTIONAL -- data is pre-packaged)
+
+**Skip this step.** All raw data files are already included in the repository. This step exists only to refresh data from public APIs if needed:
 
 ```bash
+# OPTIONAL -- skip unless you need fresh data from APIs
 make download
 ```
-
-This command downloads from public Brazilian government APIs:
-
-| Data | Source | Files | Approximate Time |
-|---|---|---|---|
-| SIH-RD | DATASUS (microdatasus) | 192 monthly .rds | ~15 minutes |
-| SIM-DO | DATASUS (microdatasus) | 15 yearly .rds | ~10 minutes |
-| INMET | BrazilMet API (or local zip fallback) | 26+ station .rds | ~5 minutes |
-| SIDRA/IBGE | sidrar package | Population CSV | ~1 minute |
-
-If an API is temporarily unavailable, re-run the step later. Files are cached after the first successful download.
 
 ### Step 3: Process Data and Build Analytic Dataset
 
@@ -325,7 +350,7 @@ make setup && make all && make test
 
 ## Code Agent Execution
 
-This section provides exact, deterministic instructions for automated code agents, CI/CD systems, and headless environments to execute the pipeline without human intervention.
+This section provides exact, deterministic instructions for automated code agents, CI/CD systems, and headless environments. All data is pre-packaged in the repository -- no API calls are needed.
 
 ### Environment Setup for Code Agents
 
@@ -333,7 +358,14 @@ This section provides exact, deterministic instructions for automated code agent
 # 1. Navigate to project root (ABSOLUTE PATH REQUIRED)
 cd /absolute/path/to/exposome-cerebrovascular-rj
 
-# 2. Set environment variables (CRITICAL - must be set before any R execution)
+# 2. Verify data files exist (528 files pre-packaged, no download needed)
+test $(ls data/raw/sih/*.rds 2>/dev/null | wc -l) -eq 192 || echo "ERROR: SIH files missing"
+test $(ls data/raw/sim/*.rds 2>/dev/null | wc -l) -eq 111 || echo "ERROR: SIM files missing"
+test -f data/interim/sih_cerebrovascular_individual.rds || echo "ERROR: interim SIH missing"
+test -f data/interim/sim_cerebrovascular_individual.rds || echo "ERROR: interim SIM missing"
+test -f data/processed/dataset_dlnm_macrorregiao.rds || echo "ERROR: analytic dataset missing"
+
+# 3. Set environment variables (CRITICAL - must be set before any R execution)
 export DLNM_PROJECT_ROOT="$(pwd)"
 export DLNM_SIM_SIH_FALLBACK="false"       # NEVER set to "true" -- prevents SIH fallback
 export DLNM_ENABLE_AIR_QUALITY="false"     # PM2.5 as optional sensitivity only
@@ -358,8 +390,10 @@ make setup
 #   apt-get install libcurl4-openssl-dev libssl-dev libxml2-dev libgdal-dev (Linux)
 #   or equivalent for your platform.
 
-# Step 2: Download raw data (skips if files already cached)
-make download
+# Step 2: (OPTIONAL) Download raw data -- SKIP THIS, data is pre-packaged
+# The 528 data files are already in the repository via Git LFS.
+# Only uncomment if you need to refresh from public APIs:
+# make download
 # Expected exit code: 0
 # If exit code != 0: API may be unavailable. Retry later or inspect logs/.
 
@@ -453,7 +487,8 @@ Expected exit code: 0. Total runtime: approximately 1-2 hours depending on hardw
 | Error | Diagnosis | Recovery |
 |---|---|---|
 | `renv::restore()` fails | Missing system libraries | Install `libcurl4-openssl-dev libssl-dev libxml2-dev libgdal-dev` |
-| "No SIH files found" | Download step skipped | Run `make download` |
+| Data files missing after clone | Git LFS not initialized | `git lfs install && git lfs pull` |
+| "No SIH files found" | Download step skipped | Data is pre-packaged; verify `data/raw/sih/*.rds` exists (192 files) |
 | API timeout | DATASUS throttling | Wait 5 minutes, re-run download |
 | Memory exhausted | Insufficient RAM | Ensure >= 8 GB; Docker: `--memory=16g` |
 | R session segfault | R version incompatibility | Use R >= 4.4.0, run `make renv-restore` |
