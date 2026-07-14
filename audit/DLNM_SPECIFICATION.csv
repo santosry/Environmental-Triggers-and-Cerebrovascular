@@ -1,0 +1,16 @@
+parametro,valor
+Função exposição,natural spline (ns)
+df exposição,4
+Função lag,natural spline (ns)
+df lag,3 (log-knots)
+Lag máximo,21 dias
+Nós do lag,"logknots(21, df=3)"
+Centralização,Mediana regional (P50)
+Faixa de predição,P01 a P99 da exposição regional
+Família,Quasi-Poisson (Negative Binomial fallback se φ > 3)
+Controle temporal (internações),"ns(tempo, df = 7 × n_anos)"
+Controle temporal (óbitos),"ns(tempo, df = 5 × n_anos)"
+Total de modelos ajustados,72
+Total de contrastes,72 (36 P05 + 36 P95)
+Contrastes principais,P05 vs P50 e P95 vs P50
+Correção múltipla,Benjamini-Hochberg (FDR)

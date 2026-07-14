@@ -1,0 +1,27 @@
+codigo,municipio,macro_regiao,latitude,longitude,altitude,data_inicio,metodo,distancia_km
+A628,Angra Dos Reis,Baia da Ilha Grande,-22.97555554,-44.30333333,6,2017-08-24T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.0060069231765329
+A606,Arraial Do Cabo,Baixada Litoranea,-22.97527777,-42.02138888,5,2006-09-21T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00272141236692019
+A604,Cambuci,Noroeste,-21.58749999,-41.95833333,46,2002-11-19T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00344617215524162
+A607,Campos Dos Goytacazes,Norte,-21.71472222,-41.34388888,17,2006-09-24T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.0027247465744722
+A620,Campos Dos Goytacazes - Sao Tome,Norte,-22.04166666,-41.05166666,7,2008-06-12T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,47.234855780796096
+A629,Carmo,Serrana,-21.9386111,-42.60083333,293,2018-10-10T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.0036526081300256
+A603,Duque De Caxias - Xerem,Metropolitana I,-22.58972221,-43.28222221,22,2002-10-20T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00336129580997616
+A608,Macae,Norte,-22.3761111,-41.81194444,28,2006-09-21T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00473319900255587
+A627,Niteroi,Metropolitana II,-22.86749999,-43.10194444,6,2018-07-12T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00455313641927286
+A624,Nova Friburgo - Salinas,Serrana,-22.33472221,-42.67694443,1070,2010-09-17T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,15.654407646548435
+A619,Paraty,Baia da Ilha Grande,-23.2236111,-44.72694443,3,2006-11-18T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00470487439608708
+A610,Pico Do Couto,Serrana,-22.46472222,-43.29138888,1777,2006-10-21T00:00:00Z,alias_municipal_inmet_validado_por_lookup,11.645815118878998
+A637,Paty Do Alferes - Avelar,Centro-Sul,-22.34722221,-43.41777777,508,2022-11-09T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00336540390338346
+A609,Resende,Medio Paraiba,-22.45138888,-44.44499999,438.83,2006-09-28T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00123648971948926
+A626,Rio Claro,Medio Paraiba,-22.653579,-44.040916,516,2016-06-02T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00285453845841588
+A652,Rio De Janeiro - Forte De Copacabana,Metropolitana I,-22.98833333,-43.19055555,25.59,2007-05-17T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,9.23063378317713
+A636,Rio De Janeiro - Jacarepagua,Metropolitana I,-22.93999999,-43.40277777,20,2017-08-09T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,20.33697154922219
+A621,Rio De Janeiro - Vila Militar,Metropolitana I,-22.86138888,-43.41138888,30.43,2007-04-12T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,21.488742618043943
+A602,Rio De Janeiro-Marambaia,Metropolitana I,-23.05027777,-43.59555555,12,2002-11-07T00:00:00Z,alias_municipal_inmet_validado_por_lookup,42.809832412739965
+A630,Santa Maria Madalena,Serrana,-21.95055555,-42.01027777,586,2018-10-15T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00544847259695463
+A667,Saquarema - Sampaio Correia,Baixada Litoranea,-22.8711111,-42.60888888,26,2015-09-01T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00167969232376149
+A601,Seropedica-Ecologia Agricola,Metropolitana I,-22.75777777,-43.68472221,35,2000-05-23T00:00:00Z,alias_municipal_inmet_validado_por_lookup,0.00336103719122964
+A659,Silva Jardim,Metropolitana II,-22.64583333,-42.41555555,19,2015-08-27T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00587734867339544
+A618,Teresopolis-Parque Nacional,Serrana,-22.4486111,-42.98694444,981,2006-10-31T00:00:00Z,alias_municipal_inmet_validado_por_lookup,0.00473089752125261
+A625,Tres Rios,Centro-Sul,-22.09833333,-43.20833333,295,2016-06-07T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00505241876779775
+A611,Valenca,Medio Paraiba,-22.35805555,-43.69555555,370,2006-09-26T00:00:00Z,municipio_informado_inmet_validado_por_lookup; coordenadas_usadas_para_auditoria,0.00673231572933167

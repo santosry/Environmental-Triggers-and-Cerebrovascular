@@ -1,0 +1,13 @@
+teste,resultado,detalhe
+max(data_SIM) == 2024-12-31,TRUE,SIM max date: 2024-12-31
+nenhum obito SIM em 2025,TRUE,SIM registros em 2025: 0
+nenhum SIH_AIHS_MORTE na serie SIM,TRUE,Ok
+obitos 2025 sao NA (nao zero),TRUE,"Min: NA, Max: NA"
+max(data_SIH) == 2025-12-31,TRUE,SIH max date: 2025-12-30
+zero obitos apos 2024-12-31,TRUE,Obitos > 0 apos 2024-12-31: 0
+I69 presente no SIH (sequelas),TRUE,I69 no SIH: 40920 - incluido apenas em analise ampliada
+I63 no SIM verificado,TRUE,I63=1235 vs I61=27452 (razao=0.04) - atipicamente baixo
+diagnostico principal SIH,TRUE,"Colunas: fonte, data, cid3, ibge6, obito_hospitalar, ano_arquivo, mun_nome, macro_regiao"
+causa basica SIM,TRUE,"Colunas: fonte, data, cid3, ibge6, ano_arquivo, mun_nome, macro_regiao"
+sem duplicatas daily municipio,TRUE,Duplicatas: 0
+sem duplicatas dataset macro,TRUE,Duplicatas: 0

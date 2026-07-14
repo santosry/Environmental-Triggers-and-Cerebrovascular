@@ -26,12 +26,11 @@ data/processed/*
 !data/raw/sim/
 !data/raw/inmet/
 !data/raw/inmet_zip/
-!data/raw/pm25/
 !data/raw/sih/*.rds
 !data/raw/sim/*.rds
 !data/raw/inmet/*.rds
 !data/raw/inmet_zip/*.zip
-!data/raw/pm25/*.json
+!data/processed/pm25/.gitkeep
 !data/raw/*.csv
 !data/interim/.gitkeep
 !data/processed/.gitkeep
@@ -70,6 +69,7 @@ temp/
 *.knit.md
 
 # BSB manuscript — excluded from public compendium
+03_ARTIGO/
 reports/manuscript/*
 reports/presentations/*
 !reports/manuscript/.gitkeep
@@ -78,7 +78,6 @@ reports/presentations/*
 # Legacy directories (not in this repo)
 01_DLNMs_RJ_cerebrovascular/
 02_MP25_RJ_exposicao/
-03_RELATORIO_BSB2026/
 04_AUDITORIA/
 
 # OS files
@@ -87,6 +86,9 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Logs
+logs/*.log
 
 # Environment
 .env

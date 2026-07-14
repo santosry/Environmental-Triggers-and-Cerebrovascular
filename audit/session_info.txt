@@ -1,0 +1,49 @@
+=== SESSION INFO ===
+R version 4.6.0 (2026-04-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Portuguese_Brazil.utf8  LC_CTYPE=Portuguese_Brazil.utf8   
+[3] LC_MONETARY=Portuguese_Brazil.utf8 LC_NUMERIC=C                      
+[5] LC_TIME=Portuguese_Brazil.utf8    
+
+time zone: America/Sao_Paulo
+tzcode source: internal
+
+attached base packages:
+[1] splines   stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] scales_1.4.0    patchwork_1.3.2 spdep_1.4-2     sf_1.1-0       
+ [5] spData_2.3.5    survival_3.8-6  sandwich_3.1-1  lmtest_0.9-40  
+ [9] zoo_1.8-15      mgcv_1.9-4      nlme_3.1-169    MASS_7.3-65    
+[13] dlnm_2.4.10     ggplot2_4.0.3   stringi_1.8.7   stringr_1.6.0  
+[17] tibble_3.3.1    purrr_1.2.2     janitor_2.2.1   lubridate_1.9.5
+[21] readr_2.2.0     tidyr_1.3.2     dplyr_1.2.1    
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.6           lattice_0.22-9         tzdb_0.5.0            
+ [4] LearnBayes_2.15.2      vctrs_0.7.3            tools_4.6.0           
+ [7] generics_0.1.4         parallel_4.6.0         proxy_0.4-29          
+[10] pkgconfig_2.0.3        Matrix_1.7-5           KernSmooth_2.23-26    
+[13] data.table_1.18.4      RColorBrewer_1.1-3     S7_0.2.2              
+[16] lifecycle_1.0.5        compiler_4.6.0         farver_2.1.2          
+[19] deldir_2.0-4           textshaping_1.0.5      codetools_0.2-20      
+[22] snakecase_0.11.1       marginaleffects_0.32.0 class_7.3-23          
+[25] pillar_1.11.1          crayon_1.5.3           classInt_0.4-11       
+[28] spatialreg_1.4-3       wk_0.9.5               multcomp_1.4-30       
+[31] boot_1.3-32            tidyselect_1.2.1       mvtnorm_1.3-7         
+[34] labeling_0.4.3         grid_4.6.0             cli_3.6.6             
+[37] magrittr_2.0.5         TH.data_1.1-5          e1071_1.7-17          
+[40] withr_3.0.3            backports_1.5.1        sp_2.2-1              
+[43] bit64_4.8.0            timechange_0.4.0       igraph_2.3.0          
+[46] bit_4.6.0              otel_0.2.0             ragg_1.5.2            
+[49] hms_1.1.4              tsModel_0.6-2          coda_0.19-4.1         
+[52] s2_1.1.9               rlang_1.2.0            Rcpp_1.1.1-1.1        
+[55] glue_1.8.1             DBI_1.3.0              vroom_1.7.1           
+[58] R6_2.6.1               systemfonts_1.3.2      units_1.0-1           

@@ -1,0 +1,71 @@
+=== DATASET AUDIT ===
+Rows: 52596 
+Cols: 28 
+Columns: data, macro_regiao, internacoes_i60_i69, internacoes_i60_i64, internacoes_i60_i62, internacoes_i63, internacoes_i64, obitos_i60_i69, obitos_i60_i64, obitos_i60_i62, obitos_i63, obitos_i64, temp_med, temp_min, temp_max, ur_med, n_estacoes, ano, mes, dow, feriado, pandemia, tempo, populacao, offset_log_populacao, hi_temp_f, hi_rh, heat_index 
+
+=== EXPOSURE STATS BY REGION ===
+
+--- Baia da Ilha Grande ---
+  temp_med: med=22.8, P05=18.4, P95=27.9
+  ur_med: med=81.4, P05=69.7, P95=91.2
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 4906, óbitos I60-I69: 1772
+
+--- Baixada Litoranea ---
+  temp_med: med=23.3, P05=19.8, P95=27.0
+  ur_med: med=80.1, P05=67.4, P95=89.2
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 9209, óbitos I60-I69: 5614
+
+--- Centro-Sul ---
+  temp_med: med=19.7, P05=10.3, P95=26.5
+  ur_med: med=81.0, P05=63.3, P95=97.0
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 11117, óbitos I60-I69: 3407
+
+--- Medio Paraiba ---
+  temp_med: med=21.9, P05=16.7, P95=26.3
+  ur_med: med=76.7, P05=61.4, P95=87.8
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 27386, óbitos I60-I69: 8783
+
+--- Metropolitana I ---
+  temp_med: med=23.4, P05=19.0, P95=28.2
+  ur_med: med=77.3, P05=62.5, P95=89.0
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 137856, óbitos I60-I69: 89135
+
+--- Metropolitana II ---
+  temp_med: med=22.0, P05=14.4, P95=28.2
+  ur_med: med=79.5, P05=64.9, P95=94.6
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 39357, óbitos I60-I69: 17926
+
+--- Noroeste ---
+  temp_med: med=23.8, P05=18.4, P95=28.6
+  ur_med: med=75.0, P05=61.5, P95=88.9
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 10756, óbitos I60-I69: 3326
+
+--- Norte ---
+  temp_med: med=23.8, P05=19.8, P95=27.6
+  ur_med: med=77.7, P05=67.3, P95=88.6
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 15473, óbitos I60-I69: 7747
+
+--- Serrana ---
+  temp_med: med=17.8, P05=12.1, P95=22.4
+  ur_med: med=83.2, P05=67.4, P95=94.8
+  NA temp: 0 (0.0%), NA ur: 0 (0.0%)
+  internações I60-I69: 32335, óbitos I60-I69: 9549
+
+=== MORTALITY DOMAIN CHECK ===
+  Baia da Ilha Grande: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Baixada Litoranea: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Centro-Sul: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Medio Paraiba: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Metropolitana I: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Metropolitana II: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Noroeste: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Norte: obitos 2025 = Inf to -Inf (all NA: TRUE)
+  Serrana: obitos 2025 = Inf to -Inf (all NA: TRUE)

@@ -2,3 +2,6 @@
 # Interactive HTML figures: view locally, excluded from GitHub diffs
 outputs/figures/interactive/**/*.html linguist-generated=true -diff
 outputs/figures/interactive/**/*_files/** linguist-generated=true -diff
+data/**/*.rds filter=lfs diff=lfs merge=lfs -text
+data/**/*.zip filter=lfs diff=lfs merge=lfs -text
+data/**/*.RDS filter=lfs diff=lfs merge=lfs -text
