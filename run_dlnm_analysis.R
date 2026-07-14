@@ -71,7 +71,7 @@ DLNM_NW_LAGS <- 21
 PANDEMIC_START <- as.Date("2020-03-01")
 PANDEMIC_END   <- as.Date("2022-12-31")
 
-LOG_FILE <- file.path(PROJECT_ROOT, "logs", "pipeline_corrigido.log")
+LOG_FILE <- file.path(PROJECT_ROOT, "logs", "run_dlnm_analysis.log")
 dir.create(dirname(LOG_FILE), recursive = TRUE, showWarnings = FALSE)
 
 log_msg <- function(level = "INFO", ...) {

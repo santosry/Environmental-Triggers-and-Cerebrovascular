@@ -68,7 +68,7 @@ temp/
 *.tex
 *.knit.md
 
-# BSB manuscript — excluded from public compendium
+# Manuscript and presentation — excluded from public repository
 03_ARTIGO/
 reports/manuscript/*
 reports/presentations/*
