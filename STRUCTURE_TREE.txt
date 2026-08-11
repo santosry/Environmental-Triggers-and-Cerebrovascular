@@ -84,6 +84,7 @@ audit/validacoes_priorizacao_robusta_20260619_114632.csv
 CITATION.cff
 COMPENDIUM_MANIFEST.yml
 config/config.R
+config/README.md
 data/external/.gitkeep
 data/interim/.gitkeep
 data/processed/.gitkeep

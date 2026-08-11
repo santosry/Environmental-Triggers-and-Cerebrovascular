@@ -1,0 +1,22 @@
+{
+  "version": "1.1.0",
+  "release_date": "20260811_173331",
+  "description": "Correções de qualidade de dados — idade SIM, dedup SIH, sexo, pandemia",
+  "changes": {
+    "sim_age_converted": true,
+    "sih_deduplicated": true,
+    "sex_standardized": true,
+    "pandemia_restrita_added": true,
+    "influenza_flagged": true,
+    "artigo_updated": true,
+    "readme_updated": true,
+    "audit_report_added": true
+  },
+  "data_totals": {
+    "sih_unique": 258831,
+    "sim_total": 147551,
+    "sim_age_converted": 146800,
+    "sim_age_ignored": 751,
+    "sih_duplicates_removed": 29564
+  }
+}

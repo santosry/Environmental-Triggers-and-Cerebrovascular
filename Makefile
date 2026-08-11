@@ -1,21 +1,34 @@
 # Makefile — Automated workflow orchestration for the DLNM compendium
 # =============================================================================
 # Usage:
-#   make setup       — First-time setup (renv + Python + Playwright)
-#   make all          — Run the complete pipeline
-#   make download     — Download all raw data (SIH, SIM, INMET, PM2.5)
-#   make process      — Process and build analytic dataset
-#   make models       — Fit DLNM models
-#   make validate     — Run Bayesian validation
-#   make reports      — Generate figures, tables, and manuscript
-#   make audit        — Run benchmark and quality control
-#   make docker-build — Build Docker image
-#   make docker-run   — Run pipeline in Docker
-#   make clean        — Remove derived outputs
-#   make clean-all    — Remove everything including raw data
+#   make setup         — First-time setup: renv + R packages (no Python needed)
+#   make setup-python   — Optional: install Python + Playwright for PM2.5 re-extraction
+#   make all            — Run the complete pipeline (download → process → models → validate → reports → audit)
+#   make download       — Download raw data: SIH, SIM, INMET (DATASUS + BrazilMet APIs)
+#   make download-pm25  — Optional: re-extract PM2.5 from INEA/MonitorAr Power BI
+#   make process        — Build analytic dataset with PM2.5 join
+#   make models         — Fit DLNM models (144+ combinations)
+#   make validate       — Bayesian hierarchical validation + sensitivity analyses
+#   make reports        — Generate figures, tables, and manuscript
+#   make audit          — Run benchmark, quality control, centralize audits
+#   make test           — Run unit tests (testthat)
+#   make lint           — Lint R code
+#   make docker-build   — Build Docker image
+#   make docker-run     — Run pipeline in Docker
+#   make clean          — Remove derived outputs (preserves PM2.5 tables)
+#   make clean-all      — Full reset (removes all data including PM2.5)
+#   make renv-snapshot  — Update renv.lock
+#   make renv-restore   — Restore R packages from renv.lock
+#   make help           — Show this help
+#
+# Environment variables:
+#   DLNM_PROJECT_ROOT         — Absolute path to project (required)
+#   DLNM_ENABLE_AIR_QUALITY   — "true" to activate PM2.5 sensitivity
+#   DLNM_FORCE_RAW_DOWNLOAD   — "true" to re-download all raw data
+#   RUN_PIPELINE_ON_SOURCE    — "true" to auto-run run_pipeline.R on source()
 
-.PHONY: all setup download process models validate reports audit clean clean-all \
-        docker-build docker-run test lint
+.PHONY: all setup setup-python download download-pm25 process models validate reports audit clean clean-all \
+        docker-build docker-run test lint help renv-snapshot renv-restore
 
 RSCRIPT = Rscript --vanilla
 PYTHON = python3
@@ -25,15 +38,25 @@ setup:
 	@echo "=== Setting up R environment (renv) ==="
 	$(RSCRIPT) -e "install.packages('renv', repos='https://cloud.r-project.org')"
 	$(RSCRIPT) -e "renv::restore()"
-	@echo "=== Setting up Python environment ==="
+	@echo "=== Setup complete! ==="
+	@echo ""
+	@echo "💡 PM2.5 tables are pre-packaged in data/processed/pm25/ — no Python needed."
+	@echo "   To enable PM2.5 sensitivity: Sys.setenv(DLNM_ENABLE_AIR_QUALITY = 'true')"
+
+# ── Optional: Python setup for PM2.5 re-extraction ──
+setup-python:
+	@echo "=== Setting up Python environment (OPTIONAL) ==="
 	$(PYTHON) -m pip install -r python/requirements.txt
 	$(PYTHON) -m playwright install chromium
-	@echo "=== Setup complete! ==="
+	@echo "=== Python setup complete! ==="
 
 # ── Main targets ──
 all: download process models validate reports audit
 
 # ── Data acquisition ──
+# PM2.5 monthly tables are PRE-PACKAGED in data/processed/pm25/.
+# The download-pm25 target is OPTIONAL — only needed if you want to
+# re-extract from the INEA/MonitorAr Power BI dashboard de novo.
 download-pm25:
 	$(PYTHON) python/extrair_mp25_rj.py
 
@@ -62,9 +85,12 @@ audit:
 
 # ── Testing ──
 test:
-	$(RSCRIPT) -e "testthat::test_dir('tests/testthat')"
+	@echo "=== Running unit tests (testthat) ==="
+	$(RSCRIPT) -e "source('renv/activate.R'); testthat::test_dir('tests/testthat', reporter='summary')"
+	@echo "=== Tests complete ==="
 
 lint:
+	@echo "=== Linting R code ==="
 	$(RSCRIPT) -e "lintr::lint_dir('R/')"
 
 # ── Docker ──
@@ -89,26 +115,56 @@ renv-restore:
 # ── Cleaning ──
 clean:
 	rm -rf outputs/figures/* outputs/tables/* logs/*.log
-	rm -rf data/interim/* data/processed/*
+	rm -rf data/interim/*
+	# Preserve pre-packaged PM2.5 tables in data/processed/pm25/
+	find data/processed -mindepth 1 ! -path 'data/processed/pm25*' -exec rm -rf {} +
 
 clean-all: clean
 	rm -rf data/raw/*
+	# Also remove PM2.5 tables (full reset)
+	rm -rf data/processed/pm25
 
 # ── Help ──
 help:
-	@echo "DLNM Cerebrovascular RJ (2010–2025) — Research Compendium"
+	@echo "============================================"
+	@echo "  DLNM Cerebrovascular RJ (2010-2025)"
+	@echo "  Research Compendium"
+	@echo "============================================"
 	@echo ""
-	@echo "Targets:"
-	@echo "  all           Run complete pipeline"
-	@echo "  download      Download raw data (SIH, SIM, INMET)"
-	@echo "  process       Build analytic dataset"
-	@echo "  models        Fit DLNM models"
-	@echo "  validate      Run Bayesian validation"
-	@echo "  reports       Generate figures, tables, manuscript"
-	@echo "  audit         Benchmark and quality control"
-	@echo "  test          Run unit tests"
-	@echo "  lint          Lint R code"
-	@echo "  docker-build  Build Docker image"
-	@echo "  docker-run    Run pipeline in Docker"
-	@echo "  clean         Remove derived outputs"
-	@echo "  clean-all     Remove all data and outputs"
+	@echo "QUICK START:"
+	@echo "  make setup && make all"
+	@echo ""
+	@echo "PREREQUISITES:"
+	@echo "  R >= 4.4.0, Git >= 2.30, Git LFS >= 3.0, Make"
+	@echo "  PM2.5 tables PRE-PACKAGED -- no Python required"
+	@echo ""
+	@echo "ENVIRONMENT VARIABLES:"
+	@echo "  DLNM_PROJECT_ROOT         Absolute path to project (required)"
+	@echo "  DLNM_ENABLE_AIR_QUALITY   \"true\" to activate PM2.5 sensitivity"
+	@echo "  DLNM_FORCE_RAW_DOWNLOAD   \"true\" to re-download all raw data"
+	@echo ""
+	@echo "TARGETS:"
+	@echo "  setup             Install renv + restore 151 R packages"
+	@echo "  setup-python      Optional: install Python + Playwright"
+	@echo "  all               Full pipeline: download process models validate reports audit"
+	@echo "  download          Download SIH, SIM, INMET from public APIs"
+	@echo "  download-pm25     Optional: re-extract PM2.5 from Power BI"
+	@echo "  process           Build analytic dataset + join PM2.5"
+	@echo "  models            Fit 144+ DLNM models"
+	@echo "  validate          Bayesian validation + sensitivity + FDR"
+	@echo "  reports           Generate 16 figures + 129 interactive HTMLs + 34 tables"
+	@echo "  audit             Benchmark, QC, centralize audit trail (59+ files)"
+	@echo "  test              Run unit tests (testthat)"
+	@echo "  lint              Lint R code"
+	@echo "  docker-build      Build Docker image"
+	@echo "  docker-run        Run full pipeline in Docker"
+	@echo "  clean             Remove derived outputs (preserves PM2.5)"
+	@echo "  clean-all         Full reset (removes everything)"
+	@echo "  renv-snapshot     Update renv.lock"
+	@echo "  renv-restore      Restore packages from renv.lock"
+	@echo "  help              Show this help"
+	@echo ""
+	@echo "FOR AUTOMATED EXECUTION (CI/CD, code agents):"
+	@echo "  export DLNM_PROJECT_ROOT=\$$(pwd)"
+	@echo "  export DLNM_ENABLE_AIR_QUALITY=true"
+	@echo "  make setup && make all && make test"

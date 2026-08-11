@@ -15,16 +15,16 @@ compendium:
 authors:
   - name: "Ryan de Paulo Santos"
     email: "ryan.paulo@gsuite.iff.edu.br"
-    orcid: ""
+    orcid: "https://orcid.org/0009-0005-6770-2001"
   - name: "Camila Henriques Nunes"
     email: "camila.n@gsuite.iff.edu.br"
-    orcid: ""
+    orcid: "https://orcid.org/0000-0002-1663-9445"
   - name: "Karla Rangel Ribeiro"
     email: "karla.ribeiro@gsuite.iff.edu.br"
-    orcid: ""
+    orcid: "https://orcid.org/0000-0002-3975-6193"
   - name: "Enrique Medina-Acosta"
     email: "quique@uenf.br"
-    orcid: ""
+    orcid: "https://orcid.org/0000-0002-2529-0548"
 
 files:
   # ── Configuration ──
@@ -77,6 +77,10 @@ files:
   - path: "Makefile"
     role: "entry-point"
     description: "Automated workflow with make targets"
+
+  - path: "pipeline_runner.R"
+    role: "entry-point"
+    description: "Minimal CI/CD wrapper delegating to run_pipeline.R"
 
   # ── Containerization ──
   - path: "docker/Dockerfile"
@@ -139,7 +143,7 @@ files:
 
   - path: "audit/air_quality/auditoria_granularidade_exposicoes_clima_pm25.csv"
     role: "audit"
-    description: "Temporal/spatial granularity comparison between daily INMET climate exposures and annual PM2.5"
+    description: "Temporal/spatial granularity comparison between daily INMET climate exposures and monthly PM2.5"
 
   - path: "audit/air_quality/auditoria_decisao_metodologica_pm25_github.csv"
     role: "audit"
@@ -185,9 +189,9 @@ files:
     role: "output"
     description: "CSV tables of results"
 
-  - path: "outputs/logs/"
+  - path: "logs/"
     role: "output"
-    description: "Execution logs"
+    description: "Pipeline execution logs"
 
   - path: "audit/"
     role: "output"
@@ -196,3 +200,6 @@ files:
   - path: "reports/"
     role: "output"
     description: "Manuscript PDF and supplementary materials"
+
+# Última correção de dados: 20260811_173331
+# Correções: idade SIM, sexo, dedup SIH, pandemia restrita, documentação

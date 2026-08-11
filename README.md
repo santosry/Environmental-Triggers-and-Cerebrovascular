@@ -1,4 +1,4 @@
-# exposome-cerebrovascular-rj
+# dlnm-gam-cerebrovascular-rj
 
 Climate Exposure and Cerebrovascular Outcomes in Rio de Janeiro, Brazil (2010--2025)
 
@@ -42,15 +42,16 @@ This repository investigates non-linear and delayed associations between daily m
 |---|---|
 | Study design | Ecological daily time series |
 | Primary outcome | ICD-10 I60--I64: I60--I62 (hemorrhagic), I63 (ischemic), I64 (unspecified) |
-| Admissions period | 2010-01-01 to 2025-12-31 (SIH-RD, principal diagnosis) |
+| Admissions period | 2010-01-01 to 2025-12-31 (SIH-RD, principal diagnosis, deduplicated) |
 | Mortality period | 2010-01-01 to 2024-12-31 (SIM-DO, underlying cause of death) |
 | Spatial units | 9 health macroregions |
 | Temporal resolution | Daily |
 | Statistical method | Distributed Lag Non-linear Models (DLNM) + Hierarchical Bayesian stabilization |
 | Standard errors | Newey-West HAC (21 lags) with delta-method propagation to cumulative RR |
 | Multiple testing | Benjamini-Hochberg FDR across 72 primary contrasts |
-| Sensitivity analyses | 8 types (lag grid, temporal df, pandemic exclusion, mutual adjustment, outcome definition, climate aggregation, Bayesian priors, case-crossover) |
+| Sensitivity analyses | 8 types (lag grid, temporal df, pandemic exclusion [restricted + extended], mutual adjustment, outcome definition, climate aggregation, Bayesian priors, case-crossover) |
 | Reproducibility | renv (151 packages), Docker, Makefile, targets pipeline, 88+ audit files |
+| Data quality | SIM age converted from DATASUS 3-digit format; SIH deduplicated (29,564 removed); sex standardized across SIH/SIM |
 | License | MIT |
 
 ---
@@ -190,8 +191,8 @@ You do **not** need to run `make download`. You do **not** need DATASUS API acce
 All data is pre-packaged. Just clone, set variables, and run:
 
 ```bash
-git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
-cd exposome-cerebrovascular-rj
+git clone https://github.com/santosry/dlnm-gam-cerebrovascular-rj.git
+cd dlnm-gam-cerebrovascular-rj
 export DLNM_PROJECT_ROOT="$(pwd)"
 export DLNM_SIM_SIH_FALLBACK="false"
 Rscript run_dlnm_analysis.R
@@ -202,8 +203,8 @@ This single command runs the complete pipeline: processes outcomes, builds the a
 ### Docker (cross-platform, zero local dependencies, data included)
 
 ```bash
-git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
-cd exposome-cerebrovascular-rj
+git clone https://github.com/santosry/dlnm-gam-cerebrovascular-rj.git
+cd dlnm-gam-cerebrovascular-rj
 make docker-build    # Builds image with all R packages and data pre-loaded
 make docker-run      # Runs full pipeline inside container
 ```
@@ -218,8 +219,8 @@ Data is versioned with Git LFS. Ensure Git LFS is installed before cloning:
 
 ```bash
 git lfs install
-git clone https://github.com/santosry/exposome-cerebrovascular-rj.git
-cd exposome-cerebrovascular-rj
+git clone https://github.com/santosry/dlnm-gam-cerebrovascular-rj.git
+cd dlnm-gam-cerebrovascular-rj
 export DLNM_PROJECT_ROOT="$(pwd)"
 ```
 
@@ -356,7 +357,7 @@ This section provides exact, deterministic instructions for automated code agent
 
 ```bash
 # 1. Navigate to project root (ABSOLUTE PATH REQUIRED)
-cd /absolute/path/to/exposome-cerebrovascular-rj
+cd /absolute/path/to/dlnm-gam-cerebrovascular-rj
 
 # 2. Verify data files exist (528 files pre-packaged, no download needed)
 test $(ls data/raw/sih/*.rds 2>/dev/null | wc -l) -eq 192 || echo "ERROR: SIH files missing"
@@ -590,7 +591,7 @@ Models classified as invalid are excluded from all rankings and epidemiological 
 ## Repository Structure
 
 ```
-exposome-cerebrovascular-rj/
+dlnm-gam-cerebrovascular-rj/
 |
 |-- README.md                          # This file
 |-- LICENSE                            # MIT License
@@ -966,7 +967,7 @@ Complete package inventory: `renv.lock` (151 packages at exact versions).
   author = {Santos, Ryan de Paulo and Nunes, Camila Henriques and
             Ribeiro, Karla Rangel and Medina-Acosta, Enrique},
   year = {2026},
-  url = {https://github.com/santosry/exposome-cerebrovascular-rj}
+  url = {https://github.com/santosry/dlnm-gam-cerebrovascular-rj}
 }
 ```
 

@@ -57,7 +57,9 @@
 - [x] Lag maximum sensitivity: 7, 14, 21 days
 - [x] Spline df sensitivity: 3×3 grid (df_exp × df_lag)
 - [x] Pandemic exclusion sensitivity (2020-03 to 2022-12)
-- [x] Prior sensitivity (Bayesian stage)
+- [x] Temporal df sensitivity: 4, 5, 6 df/year
+- [x] Temporal holdout validation: train 2010-2022, test 2023-2025 (implemented in code)
+- [x] Newey-West HAC lag sensitivity (14, 21, 28, 35)
 
 ## Audit Trail
 
