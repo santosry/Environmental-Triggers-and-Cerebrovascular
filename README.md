@@ -661,8 +661,18 @@ dlnm-gam-cerebrovascular-rj/
 |-- docs/                              # Extended documentation
 |-- docker/                            # Container configuration
 |-- metadata/                          # FAIR metadata
+|-- studies/                           # Etapa anterior do estudo (descritiva)
+|   |-- README.md                      # Índice das etapas + proveniência
+|   `-- cerebrovascular-diseases-rj-2010-25/   # Etapa 1: epidemiologia descritiva (I60-I69)
 |-- .github/workflows/                 # CI/CD automation
 ```
+
+**Etapas do estudo — relação entre as pastas:** este compêndio cobre o ciclo completo da
+pesquisa. A **raiz** deste repositório é a etapa final de modelagem (DLNM/GAM + Bayesiano
+hierárquico). A pasta `studies/cerebrovascular-diseases-rj-2010-25/` é a **etapa anterior** — a
+epidemiologia descritiva da morbimortalidade por AVC (I60–I69) a partir de SIH/SIM (aquisição,
+processamento, indicadores e análises descritivas) — que fundamenta e antecede a modelagem da
+raiz. Veja `studies/README.md`.
 
 ---
 

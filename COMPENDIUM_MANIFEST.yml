@@ -201,5 +201,15 @@ files:
     role: "output"
     description: "Manuscript PDF and supplementary materials"
 
+studies:
+  # ── Etapa anterior (descritiva) do mesmo estudo ──
+  - path: "studies/cerebrovascular-diseases-rj-2010-25/"
+    role: "prior-stage"
+    description: "Etapa 1 (anterior) do estudo: epidemiologia descritiva da morbimortalidade por AVC (SIH/SIM, I60-I69, 2010-2025). Fundamenta a etapa de modelagem DLNM/GAM na raiz do compêndio."
+    source_repo: "https://github.com/santosry/cerebrovascular-diseases-rj-2010-25"
+    source_commit: "175173a8a85b0b78477998b9f2c4fe26be1a9a29"
+    source_tag: "data-lock-2026-07-17"
+    import_method: "git subtree add --squash --prefix=studies/cerebrovascular-diseases-rj-2010-25"
+
 # Última correção de dados: 20260811_173331
 # Correções: idade SIM, sexo, dedup SIH, pandemia restrita, documentação
