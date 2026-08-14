@@ -1,0 +1,14 @@
+item,status,evidencia
+1.1,Atendido,Título e resumo nomeiam dados administrativos SIH/SUS e registros SIM.
+1.2,Atendido,Título e resumo informam Rio de Janeiro e períodos específicos por sistema.
+1.3,Não aplicável,Não houve ligação entre bases; fontes analisadas independentemente.
+6.1,Atendido,"Métodos e suplemento descrevem seleção, campos e códigos por sistema."
+6.2,Atendido,Validações publicadas são citadas; ausência de validação clínica local é declarada.
+6.3,Não aplicável,Não houve ligação entre bases.
+7.1,Atendido,"Suplemento fornece códigos, campos e algoritmos completos."
+12.1,Atendido,Métodos descrevem acesso integral aos arquivos públicos selecionados.
+12.2,Atendido,Métodos e protocolo de auditoria descrevem limpeza e controle de cardinalidade.
+12.3,Não aplicável,Não houve ligação entre bases.
+13.1,Atendido,Fluxos separados apresentam contagens e exclusões de SIH e SIM.
+19.1,Atendido,"Discussão cobre finalidade administrativa, classificação, ausentes, confundimento e mudanças temporais."
+22.1,Atendido,"Seção de disponibilidade indica protocolo, código, suplementos e reconstrução dos dados."

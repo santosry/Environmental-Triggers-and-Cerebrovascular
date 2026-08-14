@@ -1,0 +1,7 @@
+sistema,etapa,descricao,n,excluidos_desde_etapa_anterior
+SIH/SUS,1,Registros extraídos da base,12023531,
+SIH/SUS,2,Registros após processamento,12023531,0
+SIH/SUS,3,CID-10 I60-I69 no campo principal,294060,11729471
+SIH/SUS,4,Residentes no estado do Rio de Janeiro,292952,1108
+SIH/SUS,5,População principal nas análises estaduais,292952,0
+SIH/SUS,6,Subconjunto com município válido para análises geográficas,292952,0

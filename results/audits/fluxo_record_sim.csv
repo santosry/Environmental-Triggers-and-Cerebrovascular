@@ -1,0 +1,7 @@
+sistema,etapa,descricao,n,excluidos_desde_etapa_anterior
+SIM,1,Registros extraídos da base,2143313,
+SIM,2,Registros após processamento,2143313,0
+SIM,3,CID-10 I60-I69 no campo principal,147551,1995762
+SIM,4,Residentes no estado do Rio de Janeiro,147551,0
+SIM,5,População principal nas análises estaduais,147551,0
+SIM,6,Subconjunto com município válido para análises geográficas,147259,292

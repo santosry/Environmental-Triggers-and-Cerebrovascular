@@ -1,0 +1,44 @@
+project:
+  title: "Morbimortalidade por doenças cerebrovasculares no Rio de Janeiro"
+  uf: "RJ"
+  year_start: 2010
+  year_end: 2025
+  pilot_year_sih: 2024
+  pilot_year_sim: 2024
+
+outcome:
+  definition: "Doenças cerebrovasculares, CID-10 I60-I69"
+  cid10_prefixes: ["I60", "I61", "I62", "I63", "I64", "I65", "I66", "I67", "I68", "I69"]
+  include_g45: false
+  sih_field: "DIAG_PRINC"
+  sim_field: "CAUSABAS"
+
+download:
+  retries: 3
+  wait_seconds: 10
+  timeout_seconds: 600
+  stop_on_error: false
+
+quality:
+  abrupt_change_threshold: 0.30
+  max_age_years: 120
+  max_hospital_days: 3650
+  extreme_cost_quantile: 0.999
+
+population:
+  rate_multiplier: 100000
+  source: "IBGE/SIDRA; tabela e variáveis devem ser confirmadas antes da execução"
+  allow_interpolation: false
+
+inference:
+  alpha: 0.05
+  monte_carlo_simulations: 99999
+  random_seed: 20260717
+  annual_multiplicity: "bonferroni"
+  association_multiplicity: ["BH", "bonferroni"]
+
+figures:
+  publication_dpi: 500
+  colour_space: "RGB"
+  base_font: "sans (Arial/Helvetica)"
+  palette: "viridis e Okabe-Ito, acessíveis a daltonismo"

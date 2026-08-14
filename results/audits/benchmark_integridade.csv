@@ -1,0 +1,5 @@
+format,rows,columns,parsing_problems,exact_r_identity
+rds,100000,236,0,TRUE
+csv_gz_readr,100000,236,194,FALSE
+csv_gz_data_table,100000,236,,FALSE
+parquet,100000,236,,FALSE

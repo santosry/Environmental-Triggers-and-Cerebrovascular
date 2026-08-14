@@ -1,0 +1,7 @@
+root <- normalizePath(file.path(testthat::test_path(), "..", ".."), winslash = "/")
+source(file.path(root, "R", "utils.R"), encoding = "UTF-8")
+source(file.path(root, "R", "validacao.R"), encoding = "UTF-8")
+source(file.path(root, "R", "auditoria.R"), encoding = "UTF-8")
+source(file.path(root, "R", "indicadores.R"), encoding = "UTF-8")
+source(file.path(root, "R", "processamento.R"), encoding = "UTF-8")
+source(file.path(root, "R", "estatistica.R"), encoding = "UTF-8")
