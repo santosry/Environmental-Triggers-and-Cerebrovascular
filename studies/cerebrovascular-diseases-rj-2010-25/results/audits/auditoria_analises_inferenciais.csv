@@ -1,0 +1,9 @@
+verificacao,valor,esperado,status
+internacoes_sih_residentes_rj,292952,> 0,OK
+municipios_georreferenciados,92,92,OK
+anos_mann_kendall_anual,8,8 séries,OK
+series_mann_kendall_sazonal,2,2 séries,OK
+testes_kruskal_wallis,31,> 0,OK
+comparacoes_dunn,1116,> 0,OK
+testes_associacao_obito,7,7 testes,OK
+testes_monte_carlo,0,>= 0,OK

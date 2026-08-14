@@ -1,0 +1,1381 @@
+ano,municipio,nome_municipio,populacao,fonte,metodo,obitos_causa_basica_cerebrovascular,taxa_100mil
+2010,330010,Angra dos Reis,169511,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,75,44.24491625912182
+2010,330015,Aperibé,10213,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,3,29.37432683834329
+2010,330020,Araruama,112008,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,85,75.8874366116706
+2010,330022,Areal,11423,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,9,78.78840934955791
+2010,330023,Armação dos Búzios,27560,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,11,39.912917271407835
+2010,330025,Arraial do Cabo,27715,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,14,50.51416200613386
+2010,330030,Barra do Piraí,94778,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,66,69.63641351368462
+2010,330040,Barra Mansa,177813,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,143,80.42156647714171
+2010,330045,Belford Roxo,469332,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,264,56.25015980159035
+2010,330050,Bom Jardim,25333,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,20,78.94840721588443
+2010,330060,Bom Jesus do Itabapoana,35411,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,33,93.19138120922877
+2010,330070,Cabo Frio,186227,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,99,53.16092725544631
+2010,330080,Cachoeiras de Macacu,54273,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,31,57.11864094485287
+2010,330090,Cambuci,14827,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,7,47.21116881365077
+2010,330093,Carapebus,13359,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,6,44.91354143274197
+2010,330095,Comendador Levy Gasparian,8180,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,4,48.89975550122249
+2010,330100,Campos dos Goytacazes,463731,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,374,80.65020453668183
+2010,330110,Cantagalo,19830,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,15,75.642965204236
+2010,330115,Cardoso Moreira,12600,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,14,111.11111111111111
+2010,330120,Carmo,17434,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,20,114.71836641046231
+2010,330130,Casimiro de Abreu,35347,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,16,45.26551051008572
+2010,330140,Conceição de Macabu,21211,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,15,70.71802366696527
+2010,330150,Cordeiro,20430,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,11,53.84238864415075
+2010,330160,Duas Barras,10930,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,10,91.49130832570906
+2010,330170,Duque de Caxias,855048,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,572,66.89682918385869
+2010,330180,Engenheiro Paulo de Frontin,13237,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,9,67.99123668504949
+2010,330185,Guapimirim,51483,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,23,44.674941242740324
+2010,330187,Iguaba Grande,22851,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,17,74.39499365454466
+2010,330190,Itaboraí,218008,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,123,56.419947891820485
+2010,330200,Itaguaí,109091,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,63,57.749951875040104
+2010,330205,Italva,14063,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,35.55429140297234
+2010,330210,Itaocara,22899,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,23,100.44106729551508
+2010,330220,Itaperuna,95841,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,66,68.86405609290387
+2010,330225,Itatiaia,28783,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,17,59.062641142340965
+2010,330227,Japeri,95492,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,40,41.88832572362083
+2010,330230,Laje do Muriaé,7487,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,66.78242286630159
+2010,330240,Macaé,206728,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,78,37.730737974536595
+2010,330245,Macuco,5269,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,4,75.91573353577529
+2010,330250,Magé,227322,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,169,74.343882246329
+2010,330260,Mangaratiba,36456,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,22,60.346719332894445
+2010,330270,Maricá,127461,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,96,75.31715583590275
+2010,330280,Mendes,17935,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,12,66.90827989963758
+2010,330285,Mesquita,168376,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,113,67.11170238038676
+2010,330290,Miguel Pereira,24642,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,21,85.22035549062576
+2010,330300,Miracema,26843,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,17,63.33122229259025
+2010,330310,Natividade,15082,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,15,99.45630552977059
+2010,330320,Nilópolis,157425,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,126,80.0381133873273
+2010,330330,Niterói,487562,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,304,62.351044585098926
+2010,330340,Nova Friburgo,182082,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,122,67.00277896771783
+2010,330350,Nova Iguaçu,796257,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,461,57.89588035018845
+2010,330360,Paracambi,47124,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,47,99.73686444274679
+2010,330370,Paraíba do Sul,41084,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,34,82.7572777723688
+2010,330380,Paraty,37533,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,16,42.62915301201609
+2010,330385,Paty do Alferes,26359,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,12,45.52524754353352
+2010,330390,Petrópolis,295917,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,272,91.91766610231923
+2010,330395,Pinheiral,22719,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,13,57.22082838153088
+2010,330400,Piraí,26314,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,15,57.00387626358592
+2010,330410,Porciúncula,17760,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,11,61.93693693693693
+2010,330411,Porto Real,16592,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,8,48.216007714561236
+2010,330412,Quatis,12793,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,6,46.900648792308296
+2010,330414,Queimados,137962,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,74,53.63795827836651
+2010,330415,Quissamã,20242,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,12,59.28267957711689
+2010,330420,Resende,119769,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,71,59.28078217234844
+2010,330430,Rio Bonito,55551,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,31,55.804575975229966
+2010,330440,Rio Claro,17425,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,7,40.17216642754663
+2010,330450,Rio das Flores,8561,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,58.404392010279174
+2010,330452,Rio das Ostras,105676,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,49,46.368144138688066
+2010,330455,Rio de Janeiro,6320446,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,4383,69.3463720756415
+2010,330460,Santa Maria Madalena,10321,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,48.44491812808836
+2010,330470,Santo Antônio de Pádua,40589,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,35,86.2302594298948
+2010,330475,São Francisco de Itabapoana,41354,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,28,67.7080814431494
+2010,330480,São Fidélis,37543,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,37,98.55365847161922
+2010,330490,São Gonçalo,999728,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,611,61.11662372165229
+2010,330500,São João da Barra,32747,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,19,58.02058203804929
+2010,330510,São João de Meriti,458673,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,279,60.827648455435565
+2010,330513,São José de Ubá,7003,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,7,99.95716121662146
+2010,330515,São José do Vale do Rio Preto,20251,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,9,44.44224976544368
+2010,330520,São Pedro da Aldeia,87875,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,32,36.41536273115221
+2010,330530,São Sebastião do Alto,8895,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,6,67.45362563237774
+2010,330540,Sapucaia,17525,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,13,74.17974322396577
+2010,330550,Saquarema,74234,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,50,67.35458145863082
+2010,330555,Seropédica,78186,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,29,37.09103931650168
+2010,330560,Silva Jardim,21349,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,12,56.20872171998688
+2010,330570,Sumidouro,14900,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,6,40.26845637583892
+2010,330575,Tanguá,30732,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,14,45.555121697253675
+2010,330580,Teresópolis,163746,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,86,52.520366909726036
+2010,330590,Trajano de Moraes,10289,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,48.595587520653126
+2010,330600,Três Rios,77432,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,68,87.81898956503771
+2010,330610,Valença,71843,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,59,82.12351934078477
+2010,330615,Varre-Sai,9475,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,5,52.770448548812666
+2010,330620,Vassouras,34410,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,31,90.09009009009009
+2010,330630,Volta Redonda,257803,"IBGE/SIDRA tabela 202, variável 93",censo_demografico_2010,180,69.82075460720007
+2011,330010,Angra dos Reis,173370,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,76,43.83688065986042
+2011,330015,Aperibé,10382,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,115.58466576767482
+2011,330020,Araruama,114250,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,71,62.144420131291035
+2011,330022,Areal,11540,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,69.32409012131716
+2011,330023,Armação dos Búzios,28279,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,31.82573641217865
+2011,330025,Arraial do Cabo,28010,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,53.55230274901821
+2011,330030,Barra do Piraí,95260,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,86,90.27923577577157
+2011,330040,Barra Mansa,178355,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,117,65.59950660200163
+2011,330045,Belford Roxo,472008,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,223,47.244961949797464
+2011,330050,Bom Jardim,25539,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,74.39602177062532
+2011,330060,Bom Jesus do Itabapoana,35546,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,98.46396218983853
+2011,330070,Cabo Frio,190787,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,96,50.317893776829656
+2011,330080,Cachoeiras de Macacu,54713,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,63.97017162283186
+2011,330090,Cambuci,14840,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,87.6010781671159
+2011,330093,Carapebus,13697,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,58.40695042710083
+2011,330095,Comendador Levy Gasparian,8200,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,85.36585365853658
+2011,330100,Campos dos Goytacazes,468087,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,357,76.26787327996719
+2011,330110,Cantagalo,19830,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,55.47150781643974
+2011,330115,Cardoso Moreira,12601,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,55.55114673438616
+2011,330120,Carmo,17599,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,85.23211546110575
+2011,330130,Casimiro de Abreu,36360,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,60.50605060506051
+2011,330140,Conceição de Macabu,21416,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,32.6858423608517
+2011,330150,Cordeiro,20571,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,63.19576102279909
+2011,330160,Duas Barras,10976,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,36.44314868804665
+2011,330170,Duque de Caxias,861158,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,547,63.519121926522196
+2011,330180,Engenheiro Paulo de Frontin,13324,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,82.55779045331732
+2011,330185,Guapimirim,52522,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,29,55.214957541601606
+2011,330187,Iguaba Grande,23475,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,55.378061767838126
+2011,330190,Itaboraí,220352,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,120,54.45832123148416
+2011,330200,Itaguaí,111171,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,48,43.17672774374612
+2011,330205,Italva,14174,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,49.38620008466206
+2011,330210,Itaocara,22892,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,161.62851651231873
+2011,330220,Itaperuna,96542,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,57,59.041660624391454
+2011,330225,Itatiaia,29094,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,51.557022066405445
+2011,330227,Japeri,96430,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,48,49.77704034014311
+2011,330230,Laje do Muriaé,7455,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,93.89671361502347
+2011,330240,Macaé,212433,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,79,37.188195807619344
+2011,330245,Macuco,5299,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,132.1003963011889
+2011,330250,Magé,228972,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,190,82.97957828904845
+2011,330260,Mangaratiba,37343,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,53.55756098867258
+2011,330270,Maricá,131355,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,87,66.2327281032317
+2011,330280,Mendes,17981,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,111.22851899226963
+2011,330285,Mesquita,168966,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,117,69.24470011718334
+2011,330290,Miguel Pereira,24699,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,34,137.6573950362363
+2011,330300,Miracema,26827,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,41.00346665672643
+2011,330310,Natividade,15079,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,119.37131109490018
+2011,330320,Nilópolis,157710,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,63.40752013188764
+2011,330330,Niterói,489720,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,287,58.60491709548313
+2011,330340,Nova Friburgo,182748,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,119,65.11699170442357
+2011,330350,Nova Iguaçu,799047,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,492,61.5733492522968
+2011,330360,Paracambi,47635,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,69.276792274588
+2011,330370,Paraíba do Sul,41367,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,67.68680349070515
+2011,330380,Paraty,38147,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,28.8358193304847
+2011,330385,Paty do Alferes,26469,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,52.89206241263364
+2011,330390,Petrópolis,296565,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,285,96.10034899600424
+2011,330395,Pinheiral,22968,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,56.60048763497039
+2011,330400,Piraí,26637,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,60.06682434208056
+2011,330410,Porciúncula,17899,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,94.97737303759986
+2011,330411,Porto Real,16938,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,47.231078049356476
+2011,330412,Quatis,12952,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,77.20815318097591
+2011,330414,Queimados,139188,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,63,45.26252263126131
+2011,330415,Quissamã,20747,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,38.5597917771244
+2011,330420,Resende,120938,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,80,66.14959731432634
+2011,330430,Rio Bonito,56001,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,36,64.28456634702951
+2011,330440,Rio Claro,17517,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,57.08740081064109
+2011,330450,Rio das Flores,8633,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,46.33383528321557
+2011,330452,Rio das Ostras,110992,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,40.54346259189851
+2011,330455,Rio de Janeiro,6355949,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4132,65.00996153367498
+2011,330460,Santa Maria Madalena,10310,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,96.99321047526674
+2011,330470,Santo Antônio de Pádua,40735,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,61.37228427642077
+2011,330475,São Francisco de Itabapoana,41371,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,55.594498561794495
+2011,330480,São Fidélis,37601,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,58.50908220526049
+2011,330490,São Gonçalo,1008065,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,601,59.61917138279773
+2011,330500,São João da Barra,33136,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,69.41091260260744
+2011,330510,São João de Meriti,459379,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,240,52.2444430415844
+2011,330513,São José de Ubá,7049,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,28.37281883955171
+2011,330515,São José do Vale do Rio Preto,20398,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,58.82929698990097
+2011,330520,São Pedro da Aldeia,89739,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,59,65.74621959237344
+2011,330530,São Sebastião do Alto,8933,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,55.972237770066045
+2011,330540,Sapucaia,17554,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,85.45060954768144
+2011,330550,Saquarema,75906,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,42,55.33159434036835
+2011,330555,Seropédica,79179,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,36,45.466600992687454
+2011,330560,Silva Jardim,21356,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,51.50777299119685
+2011,330570,Sumidouro,14956,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,60.176517785504146
+2011,330575,Tanguá,31091,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,35.380013508732425
+2011,330580,Teresópolis,165716,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,60.34420333582756
+2011,330590,Trajano de Moraes,10309,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,29.10078572121447
+2011,330600,Três Rios,77851,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,64,82.2083210234936
+2011,330610,Valença,72268,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,40,55.3495322964521
+2011,330615,Varre-Sai,9600,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,62.5
+2011,330620,Vassouras,34638,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,66.40106241699867
+2011,330630,Volta Redonda,259012,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,196,75.67216962920638
+2012,330010,Angra dos Reis,177101,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,75,42.34871626924749
+2012,330015,Aperibé,10545,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,75.86533902323376
+2012,330020,Araruama,116418,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,66,56.692264082873784
+2012,330022,Areal,11654,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,34.32297923459756
+2012,330023,Armação dos Búzios,28973,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,31.063403858765056
+2012,330025,Arraial do Cabo,28295,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,56.54709312599399
+2012,330030,Barra do Piraí,95726,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,101,105.50947495978104
+2012,330040,Barra Mansa,178880,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,107,59.81663685152057
+2012,330045,Belford Roxo,474596,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,272,57.311903176596516
+2012,330050,Bom Jardim,25738,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,101.01795011267386
+2012,330060,Bom Jesus do Itabapoana,35677,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,67.27023012024554
+2012,330070,Cabo Frio,195197,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,96,49.18108372567201
+2012,330080,Cachoeiras de Macacu,55139,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,56.221549175719545
+2012,330090,Cambuci,14851,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,114.47040603326376
+2012,330093,Carapebus,14024,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,35.6531660011409
+2012,330095,Comendador Levy Gasparian,8219,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,36.50079085046843
+2012,330100,Campos dos Goytacazes,472300,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,315,66.69489731103113
+2012,330110,Cantagalo,19830,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,60.5143721633888
+2012,330115,Cardoso Moreira,12601,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,71.42290294421078
+2012,330120,Carmo,17758,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,90.10023651312085
+2012,330130,Casimiro de Abreu,37340,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,42.849491162292445
+2012,330140,Conceição de Macabu,21613,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,41.641604589830195
+2012,330150,Cordeiro,20707,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,48.29284782923649
+2012,330160,Duas Barras,11020,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,45.37205081669691
+2012,330170,Duque de Caxias,867067,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,517,59.62630338831947
+2012,330180,Engenheiro Paulo de Frontin,13408,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,52.20763723150358
+2012,330185,Guapimirim,53527,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,32,59.78291329609356
+2012,330187,Iguaba Grande,24079,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,53.98895302961087
+2012,330190,Itaboraí,222618,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,120,53.90399698137617
+2012,330200,Itaguaí,113182,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,70,61.8472902051563
+2012,330205,Italva,14281,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,70.02310762551642
+2012,330210,Itaocara,22884,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,104.8767697954903
+2012,330220,Itaperuna,97219,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,62,63.773542208827486
+2012,330225,Itatiaia,29394,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,51.03082261686059
+2012,330227,Japeri,97337,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,48.285852245292126
+2012,330230,Laje do Muriaé,7424,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,67.34913793103449
+2012,330240,Macaé,217951,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,85,38.99959165133448
+2012,330245,Macuco,5327,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,37.54458419373005
+2012,330250,Magé,230568,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,174,75.46580618299157
+2012,330260,Mangaratiba,38201,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,52.35465040182195
+2012,330270,Maricá,135121,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,73,54.02565108310329
+2012,330280,Mendes,18024,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,66.57789613848203
+2012,330285,Mesquita,169537,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,104,61.343541527808085
+2012,330290,Miguel Pereira,24754,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,68.67576957259433
+2012,330300,Miracema,26810,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,70.86907870197687
+2012,330310,Natividade,15076,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,72.96365083576545
+2012,330320,Nilópolis,157986,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,102,64.56268276935931
+2012,330330,Niterói,491807,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,310,63.03285638472003
+2012,330340,Nova Friburgo,183391,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,117,63.79811441128518
+2012,330350,Nova Iguaçu,801746,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,461,57.49950732526261
+2012,330360,Paracambi,48129,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,58.17698269234765
+2012,330370,Paraíba do Sul,41639,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,62.44146113019045
+2012,330380,Paraty,38740,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,41.30098089829634
+2012,330385,Paty do Alferes,26575,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,90.31044214487301
+2012,330390,Petrópolis,297192,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,253,85.13015155185873
+2012,330395,Pinheiral,23208,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,47.39744915546363
+2012,330400,Piraí,26948,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,55.66275790411162
+2012,330410,Porciúncula,18034,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,83.17622269047355
+2012,330411,Porto Real,17272,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,57.89717461787865
+2012,330412,Quatis,13105,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,61.04540251812285
+2012,330414,Queimados,140374,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,73,52.003932352144986
+2012,330415,Quissamã,21234,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,51.80371102948102
+2012,330420,Resende,122068,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,71,58.16430186453452
+2012,330430,Rio Bonito,56436,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,38,67.3329080728613
+2012,330440,Rio Claro,17606,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,62.47870044303078
+2012,330450,Rio das Flores,8703,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,57.451453521774106
+2012,330452,Rio das Ostras,116134,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,40.47049098455233
+2012,330455,Rio de Janeiro,6390290,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4078,63.81557018539064
+2012,330460,Santa Maria Madalena,10298,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,48.55311711011847
+2012,330470,Santo Antônio de Pádua,40876,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,32,78.28554653097173
+2012,330475,São Francisco de Itabapoana,41386,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,57.99062484898275
+2012,330480,São Fidélis,37657,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,47.79987784475662
+2012,330490,São Gonçalo,1016128,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,620,61.01593500031492
+2012,330500,São João da Barra,33512,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,77.584148961566
+2012,330510,São João de Meriti,460062,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,257,55.862035986453996
+2012,330513,São José de Ubá,7093,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,84.59044128013534
+2012,330515,São José do Vale do Rio Preto,20540,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,73.0282375851996
+2012,330520,São Pedro da Aldeia,91542,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,42.603395162876055
+2012,330530,São Sebastião do Alto,8970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,22.296544035674472
+2012,330540,Sapucaia,17581,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,56.87958591661453
+2012,330550,Saquarema,77522,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,41,52.88821237842161
+2012,330555,Seropédica,80138,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,46.170356135665976
+2012,330560,Silva Jardim,21362,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,65.53693474393783
+2012,330570,Sumidouro,15010,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,53.29780146568954
+2012,330575,Tanguá,31438,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,54.07468668490362
+2012,330580,Teresópolis,167622,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,95,56.675138108362866
+2012,330590,Trajano de Moraes,10327,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,116.20025176721217
+2012,330600,Três Rios,78256,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,42,53.670006133714985
+2012,330610,Valença,72679,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,46,63.29201007168508
+2012,330615,Varre-Sai,9720,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,41.15226337448559
+2012,330620,Vassouras,34858,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,100.40736703195823
+2012,330630,Volta Redonda,260180,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,170,65.33938042893382
+2013,330010,Angra dos Reis,181486,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,69,38.019461556263295
+2013,330015,Aperibé,10736,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,102.45901639344262
+2013,330020,Araruama,118964,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,108,90.78376651760196
+2013,330022,Areal,11785,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,25.45608824777259
+2013,330023,Armação dos Búzios,29790,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,43.6388049681101
+2013,330025,Arraial do Cabo,28627,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,52.398085723268245
+2013,330030,Barra do Piraí,96261,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,84,87.26275438651167
+2013,330040,Barra Mansa,179472,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,133,74.10626727288937
+2013,330045,Belford Roxo,477583,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,221,46.27467895632801
+2013,330050,Bom Jardim,25969,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,80.86564750279179
+2013,330060,Bom Jesus do Itabapoana,35825,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,97.69713886950454
+2013,330070,Cabo Frio,200380,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,98,48.90707655454636
+2013,330080,Cachoeiras de Macacu,55632,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,34,61.11590451538683
+2013,330090,Cambuci,14862,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,67.28569506122999
+2013,330093,Carapebus,14408,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,27.762354247640204
+2013,330095,Comendador Levy Gasparian,8240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,48.543689320388346
+2013,330100,Campos dos Goytacazes,477208,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,329,68.9426832743793
+2013,330110,Cantagalo,19825,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,45.39722572509458
+2013,330115,Cardoso Moreira,12599,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,31.748551472339077
+2013,330120,Carmo,17944,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,111.45786892554615
+2013,330130,Casimiro de Abreu,38492,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,54.55679102151096
+2013,330140,Conceição de Macabu,21844,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,50.35707745834096
+2013,330150,Cordeiro,20863,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,95.8634903896851
+2013,330160,Duas Barras,11070,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,45.16711833785004
+2013,330170,Duque de Caxias,873921,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,507,58.01439718235401
+2013,330180,Engenheiro Paulo de Frontin,13505,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,96.26064420584969
+2013,330185,Guapimirim,54706,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,54.83859174496399
+2013,330187,Iguaba Grande,24788,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,80.68420203324189
+2013,330190,Itaboraí,225263,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,103,45.72433111518536
+2013,330200,Itaguaí,115542,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,63,54.525627044711015
+2013,330205,Italva,14405,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,48.59423811176675
+2013,330210,Itaocara,22870,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,69.96064713598601
+2013,330220,Itaperuna,98004,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,80,81.62932125219379
+2013,330225,Itatiaia,29744,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,63.878429263044644
+2013,330227,Japeri,98393,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,43.70229589503318
+2013,330230,Laje do Muriaé,7385,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,67.70480704129993
+2013,330240,Macaé,224442,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,75,33.41620552303045
+2013,330245,Macuco,5360,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,111.9402985074627
+2013,330250,Magé,232419,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,156,67.12015799052574
+2013,330260,Mangaratiba,39210,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,28.054067839836776
+2013,330270,Maricá,139552,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,63,45.14446227929374
+2013,330280,Mendes,18072,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,105.13501549358124
+2013,330285,Mesquita,170185,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,112,65.81073537620824
+2013,330290,Miguel Pereira,24815,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,76.566592786621
+2013,330300,Miracema,26786,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,74.66587023071754
+2013,330310,Natividade,15069,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,112.81438715243215
+2013,330320,Nilópolis,158288,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,105,66.33478216921056
+2013,330330,Niterói,494200,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,316,63.94172399838122
+2013,330340,Nova Friburgo,184122,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,154,83.64019508803946
+2013,330350,Nova Iguaçu,804815,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,467,58.02575747221411
+2013,330360,Paracambi,48705,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,51.3294322964788
+2013,330370,Paraíba do Sul,41955,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,59.587653438207596
+2013,330380,Paraty,39434,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,38.03824111173099
+2013,330385,Paty do Alferes,26696,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,93.64698831285585
+2013,330390,Petrópolis,297888,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,271,90.97378880653132
+2013,330395,Pinheiral,23488,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,51.08991825613079
+2013,330400,Piraí,27311,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,58.58445315074512
+2013,330410,Porciúncula,18188,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,71.47569826259071
+2013,330411,Porto Real,17663,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,56.6155239766744
+2013,330412,Quatis,13283,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,30.113679138748775
+2013,330414,Queimados,141753,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,86,60.66891000543198
+2013,330415,Quissamã,21806,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,41.273044116298266
+2013,330420,Resende,123385,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,67,54.301576366657216
+2013,330430,Rio Bonito,56942,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,87.80864739559551
+2013,330440,Rio Claro,17709,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,62.11530860014682
+2013,330450,Rio das Flores,8783,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,34.15689399977229
+2013,330452,Rio das Ostras,122196,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,35.189367900749616
+2013,330455,Rio de Janeiro,6429923,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3927,61.073826233999995
+2013,330460,Santa Maria Madalena,10282,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,68.08014005057382
+2013,330470,Santo Antônio de Pádua,41035,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,85.29304252467406
+2013,330475,São Francisco de Itabapoana,41397,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,41.065777713360866
+2013,330480,São Fidélis,37717,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,68.9344327491582
+2013,330490,São Gonçalo,1025507,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,616,60.06784936621593
+2013,330500,São João da Barra,33951,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,79.52637624812229
+2013,330510,São João de Meriti,460799,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,262,56.85776227812994
+2013,330513,São José de Ubá,7143,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,83.99832003359933
+2013,330515,São José do Vale do Rio Preto,20704,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,57.959814528593505
+2013,330520,São Pedro da Aldeia,93659,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,29,30.963388462400836
+2013,330530,São Sebastião do Alto,9012,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,22.192632046160675
+2013,330540,Sapucaia,17610,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,51.107325383304946
+2013,330550,Saquarema,79421,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,38,47.8462875058234
+2013,330555,Seropédica,81260,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,61.53088850603003
+2013,330560,Silva Jardim,21366,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,51.48366563699335
+2013,330570,Sumidouro,15070,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,59.72130059721301
+2013,330575,Tanguá,31844,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,65.94648913453084
+2013,330580,Teresópolis,169849,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,103,60.64209974742271
+2013,330590,Trajano de Moraes,10347,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,28.993911278631487
+2013,330600,Três Rios,78723,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,61,77.48688439210905
+2013,330610,Valença,73154,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,66,90.22063045082976
+2013,330615,Varre-Sai,9861,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,60.8457560085184
+2013,330620,Vassouras,35112,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,85.44087491455912
+2013,330630,Volta Redonda,261522,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,171,65.38646844242548
+2014,330010,Angra dos Reis,184940,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,81,43.79798853682275
+2014,330015,Aperibé,10882,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,73.51589781290204
+2014,330020,Araruama,120948,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,104,85.98736647154149
+2014,330022,Areal,11879,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,50.5093021298089
+2014,330023,Armação dos Búzios,30439,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,22.996813298728604
+2014,330025,Arraial do Cabo,28866,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,45.035682117369916
+2014,330030,Barra do Piraí,96568,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,87,90.09195592742938
+2014,330040,Barra Mansa,179697,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,132,73.45698592630929
+2014,330045,Belford Roxo,479386,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,217,45.26623639405406
+2014,330050,Bom Jardim,26126,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,76.55209369976268
+2014,330060,Bom Jesus do Itabapoana,35896,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,75.21729440606195
+2014,330070,Cabo Frio,204486,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,92,44.990855119665895
+2014,330080,Cachoeiras de Macacu,55967,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,83.9780584987582
+2014,330090,Cambuci,14849,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,60.610142097110916
+2014,330093,Carapebus,14713,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,54.37368313736152
+2014,330095,Comendador Levy Gasparian,8245,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,48.51425106124924
+2014,330100,Campos dos Goytacazes,480648,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,302,62.83184367770176
+2014,330110,Cantagalo,19792,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,60.63055780113177
+2014,330115,Cardoso Moreira,12578,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,71.55350612179997
+2014,330120,Carmo,18074,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,55.32809560694921
+2014,330130,Casimiro de Abreu,39414,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,40.59471253869183
+2014,330140,Conceição de Macabu,22006,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,63.61901299645551
+2014,330150,Cordeiro,20965,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,71.54781779155736
+2014,330160,Duas Barras,11096,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,81.11031002162942
+2014,330170,Duque de Caxias,878402,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,461,52.48166556997821
+2014,330180,Engenheiro Paulo de Frontin,13566,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,51.59958720330237
+2014,330185,Guapimirim,55626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,48.53845324129004
+2014,330187,Iguaba Grande,25354,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,70.9947148378954
+2014,330190,Itaboraí,227168,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,110,48.42231300183125
+2014,330200,Itaguaí,117374,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,42.59887198186992
+2014,330205,Italva,14489,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,62.11608806680931
+2014,330210,Itaocara,22824,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,87.62705923589205
+2014,330220,Itaperuna,98521,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,76,77.14091411983233
+2014,330225,Itatiaia,29996,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,43.339111881584216
+2014,330227,Japeri,99141,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,36,36.311919387538964
+2014,330230,Laje do Muriaé,7341,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,27.24424465331699
+2014,330240,Macaé,229624,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,75,32.662091070619795
+2014,330245,Macuco,5380,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,74.34944237918215
+2014,330250,Magé,233634,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,189,80.89576003492643
+2014,330260,Mangaratiba,40008,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,34.99300139972006
+2014,330270,Maricá,143111,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,62,43.32301500234084
+2014,330280,Mendes,18086,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,105.05363264403407
+2014,330285,Mesquita,170473,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,84,49.27466519624808
+2014,330290,Miguel Pereira,24829,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,84.57851705666761
+2014,330300,Miracema,26724,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,74.83909594372099
+2014,330310,Natividade,15040,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,73.13829787234042
+2014,330320,Nilópolis,158299,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,105,66.33017264796366
+2014,330330,Niterói,495470,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,276,55.70468444103579
+2014,330340,Nova Friburgo,184460,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,129,69.93386099967472
+2014,330350,Nova Iguaçu,806177,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,457,56.687303160472204
+2014,330360,Paracambi,49120,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,46.82410423452769
+2014,330370,Paraíba do Sul,42159,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,64.0432647833203
+2014,330380,Paraty,39965,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,42.53722006755911
+2014,330385,Paty do Alferes,26758,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,56.058001345392036
+2014,330390,Petrópolis,298017,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,249,83.55228057459809
+2014,330395,Pinheiral,23691,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,42.21012198725254
+2014,330400,Piraí,27579,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,87.02273468943761
+2014,330410,Porciúncula,18293,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,71.06543486579565
+2014,330411,Porto Real,17970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,61.21313299944351
+2014,330412,Quatis,13415,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,74.54342154304882
+2014,330414,Queimados,142709,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,67,46.94868578716129
+2014,330415,Quissamã,22261,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,53.90593414491712
+2014,330420,Resende,124316,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,62,49.8729045336079
+2014,330430,Rio Bonito,57284,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,54.11633265833392
+2014,330440,Rio Claro,17768,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,50.65285907248987
+2014,330450,Rio das Flores,8838,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,79.20343969223806
+2014,330452,Rio das Ostras,127171,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,36.95811151913565
+2014,330455,Rio de Janeiro,6453682,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3866,59.9037882560684
+2014,330460,Santa Maria Madalena,10253,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,97.53242953281966
+2014,330470,Santo Antônio de Pádua,41108,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,36,87.5741948039311
+2014,330475,São Francisco de Itabapoana,41343,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,58.050939699586394
+2014,330480,São Fidélis,37710,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,53.036329885971895
+2014,330490,São Gonçalo,1031903,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,560,54.26866672545772
+2014,330500,São João da Barra,34273,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,52.51947597233975
+2014,330510,São João de Meriti,460711,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,234,50.79105990523343
+2014,330513,São José de Ubá,7175,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,41.81184668989547
+2014,330515,São José do Vale do Rio Preto,20812,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,43.2442821449164
+2014,330520,São Pedro da Aldeia,95318,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,45.11215090539038
+2014,330530,São Sebastião do Alto,9033,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,66.42311524410495
+2014,330540,Sapucaia,17608,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,68.15084052703317
+2014,330550,Saquarema,80915,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,55.613915837607365
+2014,330555,Seropédica,82090,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,44,53.59970763795834
+2014,330560,Silva Jardim,21336,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,60.929883764529436
+2014,330570,Sumidouro,15099,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,86.09841711371614
+2014,330575,Tanguá,32140,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,40.44803982576229
+2014,330580,Teresópolis,171482,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,121,70.56134171516544
+2014,330590,Trajano de Moraes,10348,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,96.63703131039814
+2014,330600,Três Rios,78998,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,53,67.09030608369832
+2014,330610,Valença,73445,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,68.07815372047111
+2014,330615,Varre-Sai,9966,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,30.102347983142685
+2014,330620,Vassouras,35275,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,79.37632884479093
+2014,330630,Volta Redonda,262259,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,179,68.25313907244366
+2015,330010,Angra dos Reis,188276,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,91,48.333297924323865
+2015,330015,Aperibé,11023,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,117.9352263449152
+2015,330020,Araruama,122865,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,88,71.62332641517112
+2015,330022,Areal,11970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,58.47953216374269
+2015,330023,Armação dos Búzios,31067,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,41.84504458106672
+2015,330025,Arraial do Cabo,29097,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,44.678145513283155
+2015,330030,Barra do Piraí,96865,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,93,96.0099107004594
+2015,330040,Barra Mansa,179915,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,116,64.47489092071255
+2015,330045,Belford Roxo,481127,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,204,42.400447283149774
+2015,330050,Bom Jardim,26278,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,87.52568688636883
+2015,330060,Bom Jesus do Itabapoana,35964,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,72.29451673896118
+2015,330070,Cabo Frio,208451,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,74,35.499949628449855
+2015,330080,Cachoeiras de Macacu,56290,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,62.17800675075502
+2015,330090,Cambuci,14836,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,74.14397411701266
+2015,330093,Carapebus,15008,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,53.304904051172706
+2015,330095,Comendador Levy Gasparian,8250,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,121.21212121212122
+2015,330100,Campos dos Goytacazes,483970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,323,66.73967394673224
+2015,330110,Cantagalo,19759,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,65.7928032795182
+2015,330115,Cardoso Moreira,12558,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,15.926102882624622
+2015,330120,Carmo,18200,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,65.93406593406593
+2015,330130,Casimiro de Abreu,40305,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,34.73514452301203
+2015,330140,Conceição de Macabu,22163,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,22.560122727067633
+2015,330150,Cordeiro,21063,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,47.47661776575037
+2015,330160,Duas Barras,11121,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,26.975991367682763
+2015,330170,Duque de Caxias,882729,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,431,48.82585708637645
+2015,330180,Engenheiro Paulo de Frontin,13626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,58.711287244972844
+2015,330185,Guapimirim,56515,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,33.61939308148279
+2015,330187,Iguaba Grande,25901,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,61.77367669201961
+2015,330190,Itaboraí,229007,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,121,52.83681284851554
+2015,330200,Itaguaí,119143,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,71,59.59225468554594
+2015,330205,Italva,14569,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,68.63889079552474
+2015,330210,Itaocara,22779,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,48.29009175117432
+2015,330220,Itaperuna,99021,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,65,65.64264145989235
+2015,330225,Itatiaia,30240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,26.455026455026456
+2015,330227,Japeri,99863,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,43.05899081741987
+2015,330230,Laje do Muriaé,7298,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,95.91668950397369
+2015,330240,Macaé,234628,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,80,34.096527268697685
+2015,330245,Macuco,5398,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,55.57613931085587
+2015,330250,Magé,234809,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,160,68.14048865247925
+2015,330260,Mangaratiba,40779,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,34.33139606169842
+2015,330270,Maricá,146549,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,72,49.130325010747264
+2015,330280,Mendes,18099,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,88.40267418089397
+2015,330285,Mesquita,170751,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,103,60.321755070248486
+2015,330290,Miguel Pereira,24842,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,64.40705257225666
+2015,330300,Miracema,26665,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,45.002812675792235
+2015,330310,Natividade,15013,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,79.93072670352362
+2015,330320,Nilópolis,158309,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,116,73.2744190159751
+2015,330330,Niterói,496696,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,237,47.71530272037625
+2015,330340,Nova Friburgo,184786,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,92,49.78732155033391
+2015,330350,Nova Iguaçu,807492,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,439,54.365863686575224
+2015,330360,Paracambi,49521,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,90.87053977100624
+2015,330370,Paraíba do Sul,42356,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,21.24846538861082
+2015,330380,Paraty,40478,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,37.05716685606996
+2015,330385,Paty do Alferes,26818,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,67.11909911253635
+2015,330390,Petrópolis,298142,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,234,78.4860905206244
+2015,330395,Pinheiral,23887,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,50.23653033030519
+2015,330400,Piraí,27838,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,71.84424168402903
+2015,330410,Porciúncula,18059,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,38.76183620355501
+2015,330411,Porto Real,18266,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,43.797218876601335
+2015,330412,Quatis,13543,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,73.83888355608063
+2015,330414,Queimados,143632,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,53,36.89985518547399
+2015,330415,Quissamã,22700,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,26.431718061674008
+2015,330420,Resende,125214,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,57,45.52206622262686
+2015,330430,Rio Bonito,57615,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,81.57597847782696
+2015,330440,Rio Claro,17826,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,84.14675193537529
+2015,330450,Rio das Flores,8892,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,67.47638326585695
+2015,330452,Rio das Ostras,131976,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,53,40.158816754561435
+2015,330455,Rio de Janeiro,6476631,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3686,56.912305178417604
+2015,330460,Santa Maria Madalena,10225,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,39.119804400978
+2015,330470,Santo Antônio de Pádua,41178,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,75.28291806304337
+2015,330475,São Francisco de Itabapoana,41291,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,36.327529001477316
+2015,330480,São Fidélis,37703,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,58.35079436649603
+2015,330490,São Gonçalo,1038081,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,552,53.17504125400619
+2015,330500,São João da Barra,34583,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,57.831882716941855
+2015,330510,São João de Meriti,460625,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,246,53.405698778833106
+2015,330513,São José de Ubá,7206,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,41.631973355537056
+2015,330515,São José do Vale do Rio Preto,20916,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,100.4016064257028
+2015,330520,São Pedro da Aldeia,96920,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,44.36648782501032
+2015,330530,São Sebastião do Alto,9054,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,44.17936823503424
+2015,330540,Sapucaia,17606,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,79.51834601840281
+2015,330550,Saquarema,82359,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,44.92526621255722
+2015,330555,Seropédica,82892,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,47.04917241712108
+2015,330560,Silva Jardim,21307,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,61.01281269066504
+2015,330570,Sumidouro,15127,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,59.496264956699946
+2015,330575,Tanguá,32426,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,58.59495466600876
+2015,330580,Teresópolis,173060,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,107,61.82826765283717
+2015,330590,Trajano de Moraes,10350,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,96.61835748792271
+2015,330600,Três Rios,79264,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,55,69.38837303189342
+2015,330610,Valença,73725,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,52,70.53238385893523
+2015,330615,Varre-Sai,10402,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,38.45414343395501
+2015,330620,Vassouras,35432,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,84.66922555881689
+2015,330630,Volta Redonda,262970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,145,55.13936950983002
+2016,330010,Angra dos Reis,191504,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,70,36.55276130002506
+2016,330015,Aperibé,11160,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,53.763440860215056
+2016,330020,Araruama,124940,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,87,69.6334240435409
+2016,330022,Areal,12058,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,16.58649859014762
+2016,330023,Armação dos Búzios,31674,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,37.885963250615646
+2016,330025,Arraial do Cabo,29077,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,58.465453795095776
+2016,330030,Barra do Piraí,97152,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,111,114.25395256916995
+2016,330040,Barra Mansa,180126,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,118,65.50969876641906
+2016,330045,Belford Roxo,494141,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,233,47.15253338621972
+2016,330050,Bom Jardim,26424,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,68.11989100817438
+2016,330060,Bom Jesus do Itabapoana,36031,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,86.03702367405845
+2016,330070,Cabo Frio,212289,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,85,40.03975712354385
+2016,330080,Cachoeiras de Macacu,56603,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,58.300796777555966
+2016,330090,Cambuci,14824,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,60.71235833783054
+2016,330093,Carapebus,15293,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,45.77257568822337
+2016,330095,Comendador Levy Gasparian,8255,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,96.91096305269534
+2016,330100,Campos dos Goytacazes,487186,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,319,65.47807202998445
+2016,330110,Cantagalo,19727,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,55.76113955492472
+2016,330115,Cardoso Moreira,12538,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,63.8060296698038
+2016,330120,Carmo,18322,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,43.663355528872394
+2016,330130,Casimiro de Abreu,41167,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,34.00782179901377
+2016,330140,Conceição de Macabu,22315,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,58.25677795205019
+2016,330150,Cordeiro,21158,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,103.97958219113337
+2016,330160,Duas Barras,11145,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,35.89053387169134
+2016,330170,Duque de Caxias,886917,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,487,54.90930943932747
+2016,330180,Engenheiro Paulo de Frontin,13521,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,51.77131868944605
+2016,330185,Guapimirim,57105,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,45.53016373347343
+2016,330187,Iguaba Grande,26430,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,49.18653045781309
+2016,330190,Itaboraí,230786,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,136,58.92905115561603
+2016,330200,Itaguaí,120855,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,78,64.54015142112449
+2016,330205,Italva,14647,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,68.27336655970507
+2016,330210,Itaocara,22736,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,114.3560872624912
+2016,330220,Itaperuna,99504,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,64,64.31902235086027
+2016,330225,Itatiaia,30475,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,55.783429040196886
+2016,330227,Japeri,100562,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,42,41.76527913128219
+2016,330230,Laje do Muriaé,7257,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,68.8989940746865
+2016,330240,Macaé,239471,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,102,42.593884019359336
+2016,330245,Macuco,5417,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,73.84160974709249
+2016,330250,Magé,236319,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,187,79.13032807349389
+2016,330260,Mangaratiba,41557,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,64.9710036816902
+2016,330270,Maricá,149876,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,66.72182337398917
+2016,330280,Mendes,18111,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,82.8225940036442
+2016,330285,Mesquita,171020,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,95,55.54905858963864
+2016,330290,Miguel Pereira,24855,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,100.58338362502514
+2016,330300,Miracema,26607,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,52.61773217574323
+2016,330310,Natividade,14986,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,86.7476311223809
+2016,330320,Nilópolis,158319,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,90,56.8472514353931
+2016,330330,Niterói,497883,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,268,53.82790735976123
+2016,330340,Nova Friburgo,185102,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,105,56.725481086103876
+2016,330350,Nova Iguaçu,797435,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,423,53.04507577420103
+2016,330360,Paracambi,50071,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,89.87238121866949
+2016,330370,Paraíba do Sul,42737,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,72.53667782015584
+2016,330380,Paraty,40975,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,63.45332519829164
+2016,330385,Paty do Alferes,26939,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,85.37807639481792
+2016,330390,Petrópolis,298158,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,272,91.22679921383964
+2016,330395,Pinheiral,24076,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,62.30270809104503
+2016,330400,Piraí,28088,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,35.602392480774704
+2016,330410,Porciúncula,18156,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,66.09385327164573
+2016,330411,Porto Real,18552,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,70.07330746011212
+2016,330412,Quatis,13666,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,43.904580711254205
+2016,330414,Queimados,144525,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,97,67.11641584500951
+2016,330415,Quissamã,23125,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,69.1891891891892
+2016,330420,Resende,126084,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,64,50.75981091970433
+2016,330430,Rio Bonito,57963,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,86.26192571122958
+2016,330440,Rio Claro,17850,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,50.42016806722689
+2016,330450,Rio das Flores,8943,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,55.90965000559097
+2016,330452,Rio das Ostras,136626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,42,30.74085459575776
+2016,330455,Rio de Janeiro,6498837,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3900,60.010737305767165
+2016,330460,Santa Maria Madalena,10198,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,78.44675426554227
+2016,330470,Santo Antônio de Pádua,41246,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,94.55462347864035
+2016,330475,São Francisco de Itabapoana,41240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,50.921435499515034
+2016,330480,São Fidélis,37696,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,71.62563667232598
+2016,330490,São Gonçalo,1044058,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,600,57.46807169716625
+2016,330500,São João da Barra,34884,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,63.06616213736957
+2016,330510,São João de Meriti,460541,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,264,57.323886472648475
+2016,330513,São José de Ubá,7236,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,0,0
+2016,330515,São José do Vale do Rio Preto,21017,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,28.548318028262834
+2016,330520,São Pedro da Aldeia,98470,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,35.54382045292982
+2016,330530,São Sebastião do Alto,9075,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,33.057851239669425
+2016,330540,Sapucaia,17604,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,39.763690070438535
+2016,330550,Saquarema,83750,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,51,60.8955223880597
+2016,330555,Seropédica,83667,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,40,47.80857446783081
+2016,330560,Silva Jardim,21279,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,79.89097232012783
+2016,330570,Sumidouro,15153,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,52.7948261070415
+2016,330575,Tanguá,32703,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,42.809528177843006
+2016,330580,Teresópolis,174587,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,131,75.03422362489762
+2016,330590,Trajano de Moraes,10351,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,67.62631629794222
+2016,330600,Três Rios,79230,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,51,64.36955698599016
+2016,330610,Valença,73997,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,48,64.8674946281606
+2016,330615,Varre-Sai,10500,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,38.095238095238095
+2016,330620,Vassouras,35622,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,67.374094660603
+2016,330630,Volta Redonda,263659,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,166,62.96011135595599
+2017,330010,Angra dos Reis,194619,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,86,44.188902419599316
+2017,330015,Aperibé,11292,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,44.279135671271696
+2017,330020,Araruama,126742,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,80,63.120354736393615
+2017,330022,Areal,12143,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,90.58716956271103
+2017,330023,Armação dos Búzios,32260,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,52.696838189708615
+2017,330025,Arraial do Cabo,29304,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,54.600054600054605
+2017,330030,Barra do Piraí,97460,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,88,90.29345372460496
+2017,330040,Barra Mansa,179451,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,151,84.14553276381854
+2017,330045,Belford Roxo,495783,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,260,52.44229834423528
+2017,330050,Bom Jardim,26566,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,82.81261763155914
+2017,330060,Bom Jesus do Itabapoana,36068,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,32,88.72130420317178
+2017,330070,Cabo Frio,216030,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,81,37.494792389945836
+2017,330080,Cachoeiras de Macacu,57048,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,34,59.59893423082317
+2017,330090,Cambuci,15124,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,72.73208145993124
+2017,330093,Carapebus,15568,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,44.96402877697842
+2017,330095,Comendador Levy Gasparian,8336,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,71.97696737044146
+2017,330100,Campos dos Goytacazes,490288,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,302,61.59644943380218
+2017,330110,Cantagalo,19697,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,45.69223739655785
+2017,330115,Cardoso Moreira,12519,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,55.91500918603722
+2017,330120,Carmo,18264,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,49.27726675427069
+2017,330130,Casimiro de Abreu,41999,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,66.66825400604776
+2017,330140,Conceição de Macabu,22461,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,48.973776768621164
+2017,330150,Cordeiro,21250,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,103.52941176470587
+2017,330160,Duas Barras,11169,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,80.58017727639
+2017,330170,Duque de Caxias,890997,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,468,52.5254293785501
+2017,330180,Engenheiro Paulo de Frontin,13576,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,81.02533883323512
+2017,330185,Guapimirim,57921,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,39.70925916334318
+2017,330187,Iguaba Grande,26936,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,55.687555687555694
+2017,330190,Itaboraí,232394,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,136,58.52130433660077
+2017,330200,Itaguaí,122369,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,64,52.300827824040404
+2017,330205,Italva,14723,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,61.12884602322897
+2017,330210,Itaocara,22694,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,92.53547193090685
+2017,330220,Itaperuna,99997,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,59,59.001770053101595
+2017,330225,Itatiaia,30703,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,48.85516073347881
+2017,330227,Japeri,101237,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,38.52346474115195
+2017,330230,Laje do Muriaé,7217,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,83.13703755022863
+2017,330240,Macaé,244139,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,93,38.09305354736441
+2017,330245,Macuco,5434,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,110.41589988958411
+2017,330250,Magé,237420,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,168,70.76067728076826
+2017,330260,Mangaratiba,42415,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,54.226099257338205
+2017,330270,Maricá,153008,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,91,59.474014430618006
+2017,330280,Mendes,18123,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,60.6963527009877
+2017,330285,Mesquita,171280,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,106,61.88696870621205
+2017,330290,Miguel Pereira,24871,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,68.35269993164731
+2017,330300,Miracema,26551,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,41.42970132951678
+2017,330310,Natividade,14960,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,53.475935828877006
+2017,330320,Nilópolis,158329,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,108,68.21239318128707
+2017,330330,Niterói,499028,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,298,59.716088075218224
+2017,330340,Nova Friburgo,185381,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,118,63.65269364174322
+2017,330350,Nova Iguaçu,798647,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,436,54.592329276889544
+2017,330360,Paracambi,50447,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,65.41518821733702
+2017,330370,Paraíba do Sul,42922,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,65.2346116210801
+2017,330380,Paraty,41454,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,36.18468664061369
+2017,330385,Paty do Alferes,26991,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,92.62346708161981
+2017,330390,Petrópolis,298235,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,242,81.1440642446393
+2017,330395,Pinheiral,24282,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,94.7203689976114
+2017,330400,Piraí,28222,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,46.06335482956558
+2017,330410,Porciúncula,18248,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,71.24068391056555
+2017,330411,Porto Real,18829,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,69.0424345424611
+2017,330412,Quatis,13785,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,29.017047515415307
+2017,330414,Queimados,145386,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,79,54.33810683284498
+2017,330415,Quissamã,23535,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,72.23284469938389
+2017,330420,Resende,126923,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,68,53.57579004593336
+2017,330430,Rio Bonito,58272,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,63.4953322350357
+2017,330440,Rio Claro,17988,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,77.8296642205915
+2017,330450,Rio das Flores,8984,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,66.7853962600178
+2017,330452,Rio das Ostras,141117,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,46,32.59706484690009
+2017,330455,Rio de Janeiro,6520266,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3692,56.623456773082566
+2017,330460,Santa Maria Madalena,10172,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,108.1399921352733
+2017,330470,Santo Antônio de Pádua,41312,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,32,77.45933384972889
+2017,330475,São Francisco de Itabapoana,41191,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,31.560292296860965
+2017,330480,São Fidélis,37689,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,55.71917535620472
+2017,330490,São Gonçalo,1049826,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,593,56.4855509389175
+2017,330500,São João da Barra,35174,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,54.01717177460625
+2017,330510,São João de Meriti,460461,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,225,48.86407317883599
+2017,330513,São José de Ubá,6953,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,1,14.382281029771322
+2017,330515,São José do Vale do Rio Preto,21114,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,42.62574595055413
+2017,330520,São Pedro da Aldeia,99906,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,37.03481272396053
+2017,330530,São Sebastião do Alto,9094,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,1,10.996261271167803
+2017,330540,Sapucaia,17765,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,78.80664227413453
+2017,330550,Saquarema,85175,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,41,48.13619019665395
+2017,330555,Seropédica,84416,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,55.67664897649735
+2017,330560,Silva Jardim,21253,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,47.05218086858326
+2017,330570,Sumidouro,15191,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,52.662760845237315
+2017,330575,Tanguá,32970,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,51.56202608431907
+2017,330580,Teresópolis,176060,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,110,62.47870044303078
+2017,330590,Trajano de Moraes,10352,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,28.979907264296752
+2017,330600,Três Rios,79402,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,62,78.083675474169425
+2017,330610,Valença,74237,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,47,63.31074800975255
+2017,330615,Varre-Sai,10597,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,47.18316504671133
+2017,330620,Vassouras,35768,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,86.66964884813241
+2017,330630,Volta Redonda,265201,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,164,61.83988748157058
+2018,330010,Angra dos Reis,200407,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,63,31.436027683663745
+2018,330015,Aperibé,11612,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,68.89424733034792
+2018,330020,Araruama,130439,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,60,45.998512714755556
+2018,330022,Areal,12471,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,40.093015796648224
+2018,330023,Armação dos Búzios,33240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,63.1768953068592
+2018,330025,Arraial do Cabo,30096,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,69.77671451355661
+2018,330030,Barra do Piraí,99969,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,87,87.02697836329263
+2018,330040,Barra Mansa,183976,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,127,69.03074314040961
+2018,330045,Belford Roxo,508614,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,225,44.237869976052565
+2018,330050,Bom Jardim,27269,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,95.34636400308041
+2018,330060,Bom Jesus do Itabapoana,36985,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,62.1873732594295
+2018,330070,Cabo Frio,222528,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,78,35.05176876617774
+2018,330080,Cachoeiras de Macacu,58560,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,52.93715846994535
+2018,330090,Cambuci,15496,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,25.81311306143521
+2018,330093,Carapebus,16039,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,56.11322401645988
+2018,330095,Comendador Levy Gasparian,8544,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,46.81647940074907
+2018,330100,Campos dos Goytacazes,503424,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,331,65.7497457411645
+2018,330110,Cantagalo,20177,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,64.42979630272093
+2018,330115,Cardoso Moreira,12826,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,54.57664119756744
+2018,330120,Carmo,18755,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,69.31484937350041
+2018,330130,Casimiro de Abreu,43295,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,25.407090888093315
+2018,330140,Conceição de Macabu,23064,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,47.69337495664239
+2018,330150,Cordeiro,21806,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,41.273044116298266
+2018,330160,Duas Barras,11454,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,34.922297887200976
+2018,330170,Duque de Caxias,914383,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,515,56.32213197314473
+2018,330180,Engenheiro Paulo de Frontin,13929,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,57.4341302318903
+2018,330185,Guapimirim,59613,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,50.32459362890644
+2018,330187,Iguaba Grande,27762,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,36.02045962106477
+2018,330190,Itaboraí,238695,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,153,64.09853578834914
+2018,330200,Itaguaí,125913,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,75,59.56493769507517
+2018,330205,Italva,15113,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,46.317739694302915
+2018,330210,Itaocara,23247,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,55.92119413257625
+2018,330220,Itaperuna,102626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,57,55.54148071638766
+2018,330225,Itatiaia,31537,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,63.41757300948093
+2018,330227,Japeri,103960,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,22.123893805309734
+2018,330230,Laje do Muriaé,7386,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,81.23476848090982
+2018,330240,Macaé,251631,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,76,30.202955915606584
+2018,330245,Macuco,5574,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,89.7021887334051
+2018,330250,Magé,243657,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,170,69.77020976208358
+2018,330260,Mangaratiba,43689,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,52.64483050653483
+2018,330270,Maricá,157789,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,76,48.165588222246164
+2018,330280,Mendes,18578,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,75.35795026375283
+2018,330285,Mesquita,175620,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,120,68.3293474547318
+2018,330290,Miguel Pereira,25493,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,86.29819950574667
+2018,330300,Miracema,27195,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,44.125758411472695
+2018,330310,Natividade,15324,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,58.73140172278779
+2018,330320,Nilópolis,162269,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,98,60.39354405339282
+2018,330330,Niterói,511786,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,309,60.376798114837065
+2018,330340,Nova Friburgo,190084,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,126,66.28648387028892
+2018,330350,Nova Iguaçu,818875,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,458,55.93039230651809
+2018,330360,Paracambi,51815,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,57.89829200038599
+2018,330370,Paraíba do Sul,44045,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,59.03053695084573
+2018,330380,Paraty,42630,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,56.29838142153413
+2018,330385,Paty do Alferes,27678,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,72.25955632632416
+2018,330390,Petrópolis,305687,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,293,95.84967630288497
+2018,330395,Pinheiral,24941,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,56.132472635419596
+2018,330400,Piraí,28999,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,62.07110590020345
+2018,330410,Porciúncula,18730,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,37.37319807794981
+2018,330411,Porto Real,19381,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,15.479077446984158
+2018,330412,Quatis,14165,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,49.417578538651604
+2018,330414,Queimados,149265,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,86,57.615650018423615
+2018,330415,Quissamã,24246,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,45.368308174544254
+2018,330420,Resende,130334,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,74,56.777203185661456
+2018,330430,Rio Bonito,59814,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,55.17103019360015
+2018,330440,Rio Claro,18451,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,43.358083572706086
+2018,330450,Rio das Flores,9222,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,65.06180871828238
+2018,330452,Rio das Ostras,145989,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,44,30.13925706731329
+2018,330455,Rio de Janeiro,6688927,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3577,53.476439494705204
+2018,330460,Santa Maria Madalena,10417,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,67.19784966881059
+2018,330470,Santo Antônio de Pádua,42359,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,44.85469439788475
+2018,330475,São Francisco de Itabapoana,42201,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,37.91379351200209
+2018,330480,São Fidélis,38626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,59.54538393827992
+2018,330490,São Gonçalo,1077687,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,615,57.066662212683276
+2018,330500,São João da Barra,36138,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,49.809065249875474
+2018,330510,São João de Meriti,471888,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,281,59.54802834570915
+2018,330513,São José de Ubá,7134,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,84.10428931875525
+2018,330515,São José do Vale do Rio Preto,21670,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,41.532071988924784
+2018,330520,São Pedro da Aldeia,102846,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,38,36.94844719289034
+2018,330530,São Sebastião do Alto,9326,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,42.89084280506112
+2018,330540,Sapucaia,18205,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,49.436967865970885
+2018,330550,Saquarema,87704,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,48,54.72954483261881
+2018,330555,Seropédica,86743,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,52,59.947200350460555
+2018,330560,Silva Jardim,21773,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,41.33559913654526
+2018,330570,Sumidouro,15577,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,32.09860692045965
+2018,330575,Tanguá,33870,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,50.191910245054615
+2018,330580,Teresópolis,180886,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,131,72.42130402573997
+2018,330590,Trajano de Moraes,10611,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,37.6967298086891
+2018,330600,Três Rios,81453,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,63,77.34521748738537
+2018,330610,Valença,76163,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,65.64867455326078
+2018,330615,Varre-Sai,10890,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,27.54820936639118
+2018,330620,Vassouras,36702,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,76.29012042940438
+2018,330630,Volta Redonda,271998,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,193,70.95640409120655
+2019,330010,Angra dos Reis,203785,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,73,35.82206737492946
+2019,330015,Aperibé,11759,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,59.528871502678804
+2019,330020,Araruama,132400,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,73,55.135951661631424
+2019,330022,Areal,12572,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,71.58765510658607
+2019,330023,Armação dos Búzios,33870,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,47.239444936522
+2019,330025,Arraial do Cabo,30349,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,62.60502817226267
+2019,330030,Barra do Piraí,100374,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,98,97.63484567716739
+2019,330040,Barra Mansa,184412,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,144,78.0860247706223
+2019,330045,Belford Roxo,510906,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,242,47.36683460362572
+2019,330050,Bom Jardim,27446,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,51.00925453618014
+2019,330060,Bom Jesus do Itabapoana,37096,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,105.13262885486306
+2019,330070,Cabo Frio,226525,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,79,34.87473788765037
+2019,330080,Cachoeiras de Macacu,58937,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,50.901810407723495
+2019,330090,Cambuci,15505,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,51.59625927120283
+2019,330093,Carapebus,16301,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,24.538371879025828
+2019,330095,Comendador Levy Gasparian,8561,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,35.0426352061675
+2019,330100,Campos dos Goytacazes,507548,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,347,68.36791791121234
+2019,330110,Cantagalo,20172,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,54.5310331152092
+2019,330115,Cardoso Moreira,12823,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,77.9848709350386
+2019,330120,Carmo,18895,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,79.38608097380259
+2019,330130,Casimiro de Abreu,44184,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,29.422415353974287
+2019,330140,Conceição de Macabu,23228,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,43.05148958153952
+2019,330150,Cordeiro,21926,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,45.60795402718234
+2019,330160,Duas Barras,11492,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,17.40341106856944
+2019,330170,Duque de Caxias,919596,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,458,49.80447935832692
+2019,330180,Engenheiro Paulo de Frontin,14002,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,21.425510641336952
+2019,330185,Guapimirim,60517,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,39.65827783928483
+2019,330187,Iguaba Grande,28310,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,35.323207347227125
+2019,330190,Itaboraí,240592,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,124,51.53953581166456
+2019,330200,Itaguaí,133019,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,72,54.12760583074598
+2019,330205,Italva,15207,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,46.03143289274676
+2019,330210,Itaocara,23234,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,60.25652061633813
+2019,330220,Itaperuna,103224,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,59,57.157250251879404
+2019,330225,Itatiaia,31805,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,31.441597233139447
+2019,330227,Japeri,104768,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,37.225106902871104
+2019,330230,Laje do Muriaé,7355,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,40.78857919782461
+2019,330240,Macaé,256672,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,116,45.19386610148361
+2019,330245,Macuco,5599,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,89.3016610108948
+2019,330250,Magé,245071,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,146,59.574572266812474
+2019,330260,Mangaratiba,44468,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,53.9713951605649
+2019,330270,Maricá,161207,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,98,60.7914048397402
+2019,330280,Mendes,18614,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,91.32910712367035
+2019,330285,Mesquita,176103,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,93,52.81000323674213
+2019,330290,Miguel Pereira,25538,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,78.31466833737959
+2019,330300,Miracema,27174,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,58.879811584602926
+2019,330310,Natividade,15317,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,91.4017105177254
+2019,330320,Nilópolis,162485,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,90,55.389728282610704
+2019,330330,Niterói,513584,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,313,60.9442661765164
+2019,330340,Nova Friburgo,190631,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,116,60.850543720591084
+2019,330350,Nova Iguaçu,821128,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,439,53.46304108494656
+2019,330360,Paracambi,52257,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,44.01324224505808
+2019,330370,Paraíba do Sul,44285,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,83.54973467313988
+2019,330380,Paraty,43165,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,41.70045175489401
+2019,330385,Paty do Alferes,27769,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,54.01706939392848
+2019,330390,Petrópolis,306191,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,308,100.59080769846273
+2019,330395,Pinheiral,25156,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,47.70233741453331
+2019,330400,Piraí,29277,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,64.89735970215527
+2019,330410,Porciúncula,18847,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,47.75295803045577
+2019,330411,Porto Real,19683,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,45.72473708276177
+2019,330412,Quatis,14302,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,27.968116347364006
+2019,330414,Queimados,150319,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,57,37.91935816496917
+2019,330415,Quissamã,24700,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,60.72874493927126
+2019,330420,Resende,131341,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,70,53.29638117571817
+2019,330430,Rio Bonito,60201,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,49.83305925150745
+2019,330440,Rio Claro,18529,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,48.57250796049436
+2019,330450,Rio das Flores,9284,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,21.542438604049977
+2019,330452,Rio das Ostras,150674,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,50,33.18422554654419
+2019,330455,Rio de Janeiro,6718903,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3729,55.50013149468001
+2019,330460,Santa Maria Madalena,10404,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,48.05843906189927
+2019,330470,Santo Antônio de Pádua,42479,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,58.85260952470633
+2019,330475,São Francisco de Itabapoana,42205,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,73.45101291316195
+2019,330480,São Fidélis,38669,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,33.618660942874136
+2019,330490,São Gonçalo,1084839,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,582,53.648513742592215
+2019,330500,São João da Barra,36102,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,74.78810038225029
+2019,330510,São João de Meriti,472406,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,234,49.533663840002035
+2019,330513,São José de Ubá,7171,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,83.6703388648724
+2019,330515,São José do Vale do Rio Preto,21795,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,50.47029135122734
+2019,330520,São Pedro da Aldeia,104476,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,34,32.54335924039971
+2019,330530,São Sebastião do Alto,9357,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,53.43593031954686
+2019,330540,Sapucaia,18228,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,65.83278472679395
+2019,330550,Saquarema,89170,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,42,47.101042951665356
+2019,330555,Seropédica,82312,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,40,48.595587520653126
+2019,330560,Silva Jardim,21774,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,82.66740148801323
+2019,330570,Sumidouro,15623,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,32.00409652435511
+2019,330575,Tanguá,34309,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,37.89093240840596
+2019,330580,Teresópolis,182594,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,122,66.8149008182087
+2019,330590,Trajano de Moraes,10626,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,37.64351590438547
+2019,330600,Três Rios,81804,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,65,79.45821720209281
+2019,330610,Valença,76523,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,48,62.72623916992277
+2019,330615,Varre-Sai,11000,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,36.36363636363636
+2019,330620,Vassouras,36896,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,70.4683434518647
+2019,330630,Volta Redonda,273012,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,180,65.93116786075338
+2020,330010,Angra dos Reis,207044,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,70,33.80923861594637
+2020,330015,Aperibé,11901,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,33.610620956222164
+2020,330020,Araruama,134293,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,69,51.380191074739564
+2020,330022,Areal,12669,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,23.679848448969928
+2020,330023,Armação dos Búzios,34477,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,37.706296951590915
+2020,330025,Arraial do Cabo,30593,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,45.76210244173504
+2020,330030,Barra do Piraí,100764,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,72,71.45409074669524
+2020,330040,Barra Mansa,184833,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,137,74.12096324790487
+2020,330045,Belford Roxo,513118,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,216,42.09558035383674
+2020,330050,Bom Jardim,27616,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,50.695249130938585
+2020,330060,Bom Jesus do Itabapoana,37203,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,48.383194903636806
+2020,330070,Cabo Frio,230378,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,43.40692253600604
+2020,330080,Cachoeiras de Macacu,59303,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,23.60757465895486
+2020,330090,Cambuci,15514,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,96.68686347814877
+2020,330093,Carapebus,16586,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,18.087543711563967
+2020,330095,Comendador Levy Gasparian,8576,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,58.30223880597014
+2020,330100,Campos dos Goytacazes,511168,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,315,61.62357581069237
+2020,330110,Cantagalo,20168,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,74.37524791749306
+2020,330115,Cardoso Moreira,12821,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,116.99555416894158
+2020,330120,Carmo,19030,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,57.80346820809249
+2020,330130,Casimiro de Abreu,45041,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,31.082791234652873
+2020,330140,Conceição de Macabu,23398,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,42.73869561500983
+2020,330150,Cordeiro,22041,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,13.610997686130393
+2020,330160,Duas Barras,11528,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,60.72172102706454
+2020,330170,Duque de Caxias,924624,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,507,54.833099724861135
+2020,330180,Engenheiro Paulo de Frontin,14071,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,71.06815436003127
+2020,330185,Guapimirim,61388,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,63.53033166091093
+2020,330187,Iguaba Grande,28837,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,52.01650657141867
+2020,330190,Itaboraí,242543,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,112,46.177378856532656
+2020,330200,Itaguaí,134819,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,59,43.76237770640637
+2020,330205,Italva,15299,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,71.9001241911236
+2020,330210,Itaocara,23222,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,55.981396951167
+2020,330220,Itaperuna,103800,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,49,47.20616570327553
+2020,330225,Itatiaia,32064,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,49.9001996007984
+2020,330227,Japeri,105548,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,52,49.266684352143095
+2020,330230,Laje do Muriaé,7326,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,95.55009555009555
+2020,330240,Macaé,261501,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,84,32.122248098477634
+2020,330245,Macuco,5623,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,71.13640405477503
+2020,330250,Magé,246433,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,143,58.02794268624738
+2020,330260,Mangaratiba,45220,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,61.91950464396285
+2020,330270,Maricá,164504,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,107,65.04401108787629
+2020,330280,Mendes,18648,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,53.625053625053624
+2020,330285,Mesquita,176569,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,91,51.537925683443866
+2020,330290,Miguel Pereira,25581,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,74.27387514170674
+2020,330300,Miracema,27154,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,47.87508286072034
+2020,330310,Natividade,15311,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,58.78126836914636
+2020,330320,Nilópolis,162693,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,81,49.78702218288432
+2020,330330,Niterói,515317,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,337,65.39663935014758
+2020,330340,Nova Friburgo,191158,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,115,60.1596585023907
+2020,330350,Nova Iguaçu,823302,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,454,55.14379899477956
+2020,330360,Paracambi,52683,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,49.351783307708374
+2020,330370,Paraíba do Sul,44518,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,29,65.14218967608608
+2020,330380,Paraty,43680,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,34.34065934065934
+2020,330385,Paty do Alferes,27858,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,64.6133965108766
+2020,330390,Petrópolis,306678,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,217,70.75825458624355
+2020,330395,Pinheiral,25364,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,35.483362245702565
+2020,330400,Piraí,29545,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,47.38534438991369
+2020,330410,Porciúncula,18960,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,26.371308016877634
+2020,330411,Porto Real,19974,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,50.06508460999299
+2020,330412,Quatis,14435,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,34.638032559750606
+2020,330414,Queimados,151335,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,69,45.5942115174943
+2020,330415,Quissamã,25126,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,39.799410968717666
+2020,330420,Resende,132312,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,73,55.17262228671624
+2020,330430,Rio Bonito,60573,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,36,59.43242038532019
+2020,330440,Rio Claro,18605,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,42.99919376511691
+2020,330450,Rio das Flores,9344,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,21.404109589041095
+2020,330452,Rio das Ostras,155193,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,56,36.08410173139252
+2020,330455,Rio de Janeiro,6747815,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3505,51.94273998323902
+2020,330460,Santa Maria Madalena,10392,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,76.98229407236335
+2020,330470,Santo Antônio de Pádua,42594,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,61.04146123867212
+2020,330475,São Francisco de Itabapoana,42210,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,37.90570954750059
+2020,330480,São Fidélis,38710,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,54.249547920434
+2020,330490,São Gonçalo,1091737,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,570,52.21037667496842
+2020,330500,São João da Barra,36423,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,68.63794854899378
+2020,330510,São João de Meriti,472906,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,267,56.45942322575734
+2020,330513,São José de Ubá,7206,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,55.509297807382744
+2020,330515,São José do Vale do Rio Preto,21916,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,31.940135061142545
+2020,330520,São Pedro da Aldeia,106049,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,33.00361153806259
+2020,330530,São Sebastião do Alto,9387,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,63.91818472355385
+2020,330540,Sapucaia,18249,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,49.31777083675817
+2020,330550,Saquarema,90583,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,44,48.574235783756336
+2020,330555,Seropédica,83092,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,38,45.732441149569155
+2020,330560,Silva Jardim,21774,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,45.92633416000735
+2020,330570,Sumidouro,15667,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,19.148528754707346
+2020,330575,Tanguá,34610,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,17,49.11875180583647
+2020,330580,Teresópolis,184240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,114,61.87581415544941
+2020,330590,Trajano de Moraes,10640,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,28.195488721804512
+2020,330600,Três Rios,82142,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,52.34837233084171
+2020,330610,Valença,76869,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,61,79.3557871183442
+2020,330615,Varre-Sai,11106,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,54.02485143165856
+2020,330620,Vassouras,37083,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,70.11298977968342
+2020,330630,Volta Redonda,273988,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,172,62.776471962275714
+2021,330010,Angra dos Reis,210171,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,84,39.96745507229827
+2021,330015,Aperibé,12036,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,33.23363243602525
+2021,330020,Araruama,136109,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,82,60.24583238433902
+2021,330022,Areal,12763,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,70.51633628457259
+2021,330023,Armação dos Búzios,35060,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,51.3405590416429
+2021,330025,Arraial do Cabo,30827,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,22,71.36601031563241
+2021,330030,Barra do Piraí,101139,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,80,79.09906168738074
+2021,330040,Barra Mansa,185237,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,122,65.86157193217338
+2021,330045,Belford Roxo,515239,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,214,41.53412299922949
+2021,330050,Bom Jardim,27779,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,57.59746571150869
+2021,330060,Bom Jesus do Itabapoana,37306,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,72.37441698386318
+2021,330070,Cabo Frio,234077,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,93,39.730516026777515
+2021,330080,Cachoeiras de Macacu,59652,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,30,50.29169181251257
+2021,330090,Cambuci,15521,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,32.2144191740223
+2021,330093,Carapebus,16859,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,2,11.863099827985053
+2021,330095,Comendador Levy Gasparian,8590,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,58.20721769499418
+2021,330100,Campos dos Goytacazes,514643,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,331,64.31642905859013
+2021,330110,Cantagalo,20163,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,39.67663542131627
+2021,330115,Cardoso Moreira,12818,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,101.41987829614604
+2021,330120,Carmo,19161,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,78.28401440425864
+2021,330130,Casimiro de Abreu,45864,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,28.34467120181406
+2021,330140,Conceição de Macabu,23561,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,46.68732226985272
+2021,330150,Cordeiro,22152,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,58.68544600938967
+2021,330160,Duas Barras,11563,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,77.83447202283145
+2021,330170,Duque de Caxias,929449,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,582,62.61774449162891
+2021,330180,Engenheiro Paulo de Frontin,14138,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,35.36568114301882
+2021,330185,Guapimirim,62225,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,37,59.4616311771796
+2021,330187,Iguaba Grande,29344,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,88.6041439476554
+2021,330190,Itaboraí,244416,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,137,56.05197695731867
+2021,330200,Itaguaí,136547,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,65,47.60265696060697
+2021,330205,Italva,15387,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,19.496977968414896
+2021,330210,Itaocara,23211,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,68.93283357028996
+2021,330220,Itaperuna,104354,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,52,49.83038503555207
+2021,330225,Itatiaia,32312,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,49.51720722951226
+2021,330227,Japeri,106296,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,40,37.63076691502973
+2021,330230,Laje do Muriaé,7298,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,150.7262263633872
+2021,330240,Macaé,266136,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,78,29.30832356389214
+2021,330245,Macuco,5646,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,123.98157987956075
+2021,330250,Magé,247741,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,168,67.81275606379242
+2021,330260,Mangaratiba,45941,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,54.41762260290373
+2021,330270,Maricá,167668,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,122,72.76284085216022
+2021,330280,Mendes,18681,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,69.58942240779402
+2021,330285,Mesquita,177016,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,94,53.102544402765844
+2021,330290,Miguel Pereira,25622,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,93.66950277105613
+2021,330300,Miracema,27134,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,51.59578388737378
+2021,330310,Natividade,15305,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,91.4733747141457
+2021,330320,Nilópolis,162893,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,103,63.23169196957512
+2021,330330,Niterói,516981,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,320,61.89782603229133
+2021,330340,Nova Friburgo,191664,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,105,54.78337089907338
+2021,330350,Nova Iguaçu,825388,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,448,54.2775034286905
+2021,330360,Paracambi,53093,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,43,80.98996101180947
+2021,330370,Paraíba do Sul,44741,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,60.3473324243982
+2021,330380,Paraty,44175,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,47.53820033955857
+2021,330385,Paty do Alferes,27942,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,82.31336339560518
+2021,330390,Petrópolis,307144,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,215,69.99973953585288
+2021,330395,Pinheiral,25563,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,62.59046277823417
+2021,330400,Piraí,29802,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,60.39863096436481
+2021,330410,Porciúncula,19068,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,41.95510803440319
+2021,330411,Porto Real,20254,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,39.498370692208944
+2021,330412,Quatis,14562,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,34.33594286499107
+2021,330414,Queimados,152311,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,89,58.43307443323201
+2021,330415,Quissamã,25535,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,14,54.82670843939691
+2021,330420,Resende,133244,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,59,44.27966737714269
+2021,330430,Rio Bonito,60930,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,54.16051206302314
+2021,330440,Rio Claro,18677,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,37.479252556620445
+2021,330450,Rio das Flores,9401,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,85.09733007126901
+2021,330452,Rio das Ostras,159529,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,61,38.23756182261532
+2021,330455,Rio de Janeiro,6775561,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3967,58.54865744696269
+2021,330460,Santa Maria Madalena,10380,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,28.901734104046245
+2021,330470,Santo Antônio de Pádua,42705,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,37.46633883620185
+2021,330475,São Francisco de Itabapoana,42214,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,54.484294309944566
+2021,330480,São Fidélis,38749,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,54.19494696637333
+2021,330490,São Gonçalo,1098357,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,658,59.907662080726034
+2021,330500,São João da Barra,36731,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,27,73.50739157659743
+2021,330510,São João de Meriti,473385,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,294,62.10589689153649
+2021,330513,São José de Ubá,7240,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,55.24861878453039
+2021,330515,São José do Vale do Rio Preto,22032,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,40.84967320261438
+2021,330520,São Pedro da Aldeia,107556,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,41,38.119677191416564
+2021,330530,São Sebastião do Alto,9416,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,42.48088360237893
+2021,330540,Sapucaia,18270,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,71.15489874110564
+2021,330550,Saquarema,91938,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,54,58.7352346146316
+2021,330555,Seropédica,83841,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,40,47.70935461170549
+2021,330560,Silva Jardim,21775,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,55.10907003444317
+2021,330570,Sumidouro,15709,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,38.19466547838819
+2021,330575,Tanguá,34898,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,13,37.251418419393666
+2021,330580,Teresópolis,185820,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,94,50.5865891723173
+2021,330590,Trajano de Moraes,10653,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,46.93513564254201
+2021,330600,Três Rios,82468,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,52,63.0547606344279
+2021,330610,Valença,77202,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,44,56.9933421413953
+2021,330615,Varre-Sai,11208,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,98.14418272662384
+2021,330620,Vassouras,37262,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,33,88.56207396275025
+2021,330630,Volta Redonda,274925,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,165,60.01636810039102
+2022,330010,Angra dos Reis,167434,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,81,48.3772710441129
+2022,330015,Aperibé,11034,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,9,81.56606851549756
+2022,330020,Araruama,129671,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,77,59.381048962374
+2022,330022,Areal,11828,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,7,59.18160297598918
+2022,330023,Armação dos Búzios,40006,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,14,34.994750787381896
+2022,330025,Arraial do Cabo,30986,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,25,80.68159814109598
+2022,330030,Barra do Piraí,92883,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,96,103.35583475985918
+2022,330040,Barra Mansa,169894,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,135,79.46131117049454
+2022,330045,Belford Roxo,483087,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,229,47.403469768385406
+2022,330050,Bom Jardim,28102,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,19,67.61084620311722
+2022,330060,Bom Jesus do Itabapoana,35173,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,19,54.01870753134507
+2022,330070,Cabo Frio,222161,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,106,47.71314497143963
+2022,330080,Cachoeiras de Macacu,56943,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,38,66.73340006673341
+2022,330090,Cambuci,14616,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,15,102.6272577996716
+2022,330093,Carapebus,13847,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,4,28.887123564671047
+2022,330095,Comendador Levy Gasparian,8741,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,6,68.64203180414141
+2022,330100,Campos dos Goytacazes,483540,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,385,79.62112751788891
+2022,330110,Cantagalo,19390,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,10,51.5729757607014
+2022,330115,Cardoso Moreira,12958,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,10,77.17240314863405
+2022,330120,Carmo,17198,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,8,46.51703686475171
+2022,330130,Casimiro de Abreu,46110,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,11,23.85599653003687
+2022,330140,Conceição de Macabu,21104,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,4,18.953752843062926
+2022,330150,Cordeiro,20783,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,13,62.55112351441082
+2022,330160,Duas Barras,10980,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,6,54.6448087431694
+2022,330170,Duque de Caxias,808161,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,606,74.9850586702402
+2022,330180,Engenheiro Paulo de Frontin,12242,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,13,106.19179872569842
+2022,330185,Guapimirim,51696,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,41,79.30981120396162
+2022,330187,Iguaba Grande,27920,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,42.97994269340974
+2022,330190,Itaboraí,224267,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,180,80.26147404656056
+2022,330200,Itaguaí,116841,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,75,64.18979638996585
+2022,330205,Italva,14073,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,11,78.16385987351667
+2022,330210,Itaocara,22919,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,16,69.8110737815786
+2022,330220,Itaperuna,101041,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,45,44.53637632248295
+2022,330225,Itatiaia,30908,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,13,42.060308010870976
+2022,330227,Japeri,96289,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,46,47.77285048136339
+2022,330230,Laje do Muriaé,7336,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,5,68.15703380588877
+2022,330240,Macaé,246391,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,93,37.74488516220154
+2022,330245,Macuco,5415,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,5,92.33610341643582
+2022,330250,Magé,228127,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,157,68.82131444327064
+2022,330260,Mangaratiba,41220,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,22,53.37214944201844
+2022,330270,Maricá,197277,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,114,57.78676683039584
+2022,330280,Mendes,17502,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,8,45.70906182150611
+2022,330285,Mesquita,167127,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,120,71.80168374948393
+2022,330290,Miguel Pereira,26582,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,17,63.953050936724104
+2022,330300,Miracema,26881,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,44.64119638406309
+2022,330310,Natividade,15074,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,79.6072707973995
+2022,330320,Nilópolis,146774,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,87,59.27480343930124
+2022,330330,Niterói,481749,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,334,69.33070956037272
+2022,330340,Nova Friburgo,189939,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,109,57.3868452503172
+2022,330350,Nova Iguaçu,785867,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,491,62.47876549085278
+2022,330360,Paracambi,41375,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,28,67.67371601208458
+2022,330370,Paraíba do Sul,42063,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,25,59.43465753750327
+2022,330380,Paraty,45243,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,21,46.416020157814465
+2022,330385,Paty do Alferes,29619,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,11,37.13832337351025
+2022,330390,Petrópolis,278881,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,244,87.49251472850428
+2022,330395,Pinheiral,24298,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,49.38678080500452
+2022,330400,Piraí,27474,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,18,65.51648831622624
+2022,330410,Porciúncula,17288,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,10,57.84359093012494
+2022,330411,Porto Real,20373,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,10,49.08457271879448
+2022,330412,Quatis,13682,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,87.706475661453
+2022,330414,Queimados,140523,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,81,57.641809525842746
+2022,330415,Quissamã,22393,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,53.58817487607734
+2022,330420,Resende,129612,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,61,47.06354349905873
+2022,330430,Rio Bonito,56276,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,30,53.30869287085081
+2022,330440,Rio Claro,17401,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,14,80.4551462559623
+2022,330450,Rio das Flores,8954,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,5,55.84096493187402
+2022,330452,Rio das Ostras,156491,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,63,40.257906205468686
+2022,330455,Rio de Janeiro,6211223,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,3795,61.09907823306296
+2022,330460,Santa Maria Madalena,10232,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,6,58.63956215793589
+2022,330470,Santo Antônio de Pádua,41325,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,20,48.39685420447671
+2022,330475,São Francisco de Itabapoana,45059,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,23,51.044186511018886
+2022,330480,São Fidélis,38961,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,18,46.200046200046195
+2022,330490,São Gonçalo,896744,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,687,76.61049307271641
+2022,330500,São João da Barra,36573,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,29,79.29346785880294
+2022,330510,São João de Meriti,440962,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,271,61.45654274064432
+2022,330513,São José de Ubá,7070,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,6,84.86562942008486
+2022,330515,São José do Vale do Rio Preto,22080,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,11,49.81884057971014
+2022,330520,São Pedro da Aldeia,104029,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,36,34.60573493929577
+2022,330530,São Sebastião do Alto,7750,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,6,77.41935483870968
+2022,330540,Sapucaia,17729,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,12,67.6857126741497
+2022,330550,Saquarema,89559,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,52,58.06228296430286
+2022,330555,Seropédica,80596,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,48,59.55630552384734
+2022,330560,Silva Jardim,21352,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,8,37.467216185837394
+2022,330570,Sumidouro,15206,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,7,46.03446008154676
+2022,330575,Tanguá,31086,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,16,51.47011516438268
+2022,330580,Teresópolis,165123,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,109,66.01139756423999
+2022,330590,Trajano de Moraes,10302,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,3,29.120559114735006
+2022,330600,Três Rios,78346,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,50,63.81946749036326
+2022,330610,Valença,68088,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,60,88.12125484666902
+2022,330615,Varre-Sai,10207,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,9,88.17478201234448
+2022,330620,Vassouras,33976,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,42,123.6166705910054
+2022,330630,Volta Redonda,261563,"IBGE/SIDRA tabela 4709, variável 93",censo_demografico_2022,180,68.8170727511154
+2023,330010,Angra dos Reis,173277,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,87,50.20862549559376
+2023,330015,Aperibé,11227,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,6,53.44259374721653
+2023,330020,Araruama,133722,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,68,50.851767098906684
+2023,330022,Areal,12032,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,2,16.622340425531913
+2023,330023,Armação dos Búzios,41224,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,20,48.51542790607413
+2023,330025,Arraial do Cabo,31890,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,13,40.76513013483851
+2023,330030,Barra do Piraí,95692,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,92,96.14178823726121
+2023,330040,Barra Mansa,175791,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,119,67.69402301596782
+2023,330045,Belford Roxo,500675,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,254,50.731512458181456
+2023,330050,Bom Jardim,28919,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,13,44.95314499118227
+2023,330060,Bom Jesus do Itabapoana,36172,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,22,60.82052416233551
+2023,330070,Cabo Frio,230164,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,96,41.709389826384665
+2023,330080,Cachoeiras de Macacu,58390,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,35,59.941770851173146
+2023,330090,Cambuci,14843,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,4,26.948730041096812
+2023,330093,Carapebus,14086,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,2,14.19849495953429
+2023,330095,Comendador Levy Gasparian,8892,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,4,44.9842555105713
+2023,330100,Campos dos Goytacazes,501276,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,345,68.82436023268619
+2023,330110,Cantagalo,19693,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,10,50.77946478444117
+2023,330115,Cardoso Moreira,13180,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,2,15.174506828528072
+2023,330120,Carmo,17469,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,12,68.69311351537009
+2023,330130,Casimiro de Abreu,47336,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,17,35.91346966368092
+2023,330140,Conceição de Macabu,21436,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,15,69.97574174286247
+2023,330150,Cordeiro,21114,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,15,71.04290991759022
+2023,330160,Duas Barras,11167,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,5,44.77478284230321
+2023,330170,Duque de Caxias,837254,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,612,73.09609748057339
+2023,330180,Engenheiro Paulo de Frontin,12445,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,9,72.31820008035356
+2023,330185,Guapimirim,52998,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,46,86.79572814068456
+2023,330187,Iguaba Grande,28748,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,15,52.17754278558508
+2023,330190,Itaboraí,232154,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,150,64.61228322578978
+2023,330200,Itaguaí,120410,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,79,65.60916867369819
+2023,330205,Italva,14295,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,7,48.96817068905211
+2023,330210,Itaocara,23281,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,14,60.134873931532155
+2023,330220,Itaperuna,104144,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,70,67.21462590259641
+2023,330225,Itatiaia,31801,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,14,44.02377283733216
+2023,330227,Japeri,99219,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,34,34.26763019179794
+2023,330230,Laje do Muriaé,7460,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,4,53.61930294906167
+2023,330240,Macaé,255264,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,100,39.175128494421465
+2023,330245,Macuco,5508,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,2,36.31082062454612
+2023,330250,Magé,236110,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,130,55.05908263097708
+2023,330260,Mangaratiba,42422,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,20,47.14534911131017
+2023,330270,Maricá,204632,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,129,63.03999374486884
+2023,330280,Mendes,17776,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,11,61.881188118811885
+2023,330285,Mesquita,172965,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,125,72.2689561471974
+2023,330290,Miguel Pereira,27352,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,13,47.52851711026616
+2023,330300,Miracema,27646,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,14,50.640237285683284
+2023,330310,Natividade,15312,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,9,58.777429467084644
+2023,330320,Nilópolis,151159,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,104,68.8017253355738
+2023,330330,Niterói,499234,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,292,58.489606076509205
+2023,330340,Nova Friburgo,196634,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,99,50.34734583032436
+2023,330350,Nova Iguaçu,814456,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,452,55.49716620664591
+2023,330360,Paracambi,42516,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,23,54.09728102361464
+2023,330370,Paraíba do Sul,43265,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,22,50.849416387380096
+2023,330380,Paraty,46428,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,18,38.769707934866894
+2023,330385,Paty do Alferes,30482,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,21,68.89311724952431
+2023,330390,Petrópolis,286932,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,191,66.56629445304114
+2023,330395,Pinheiral,24692,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,16,64.79831524380366
+2023,330400,Piraí,28264,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,19,67.22332295499575
+2023,330410,Porciúncula,17560,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,13,74.03189066059225
+2023,330411,Porto Real,20718,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,7,33.78704508157158
+2023,330412,Quatis,13920,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,6,43.10344827586207
+2023,330414,Queimados,144808,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,81,55.93613612507596
+2023,330415,Quissamã,22760,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,11,48.33040421792619
+2023,330420,Resende,133612,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,82,61.371733077867255
+2023,330430,Rio Bonito,57694,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,39,67.598017124831
+2023,330440,Rio Claro,17676,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,9,50.91649694501018
+2023,330450,Rio das Flores,9109,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,3,32.934460423756725
+2023,330452,Rio das Ostras,162295,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,60,36.969715641270525
+2023,330455,Rio de Janeiro,6470558,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,3841,59.361186469544045
+2023,330460,Santa Maria Madalena,10406,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,11,105.70824524312897
+2023,330470,Santo Antônio de Pádua,42506,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,29,68.22566225944573
+2023,330475,São Francisco de Itabapoana,46214,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,27,58.4238542433029
+2023,330480,São Fidélis,40079,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,28,69.86202250555154
+2023,330490,São Gonçalo,928698,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,602,64.82193350260258
+2023,330500,São João da Barra,37640,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,33,87.67268862911797
+2023,330510,São João de Meriti,453749,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,290,63.911986582890535
+2023,330513,São José de Ubá,7192,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,4,55.61735261401557
+2023,330515,São José do Vale do Rio Preto,22440,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,9,40.106951871657756
+2023,330520,São Pedro da Aldeia,107292,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,43,40.07754539015025
+2023,330530,São Sebastião do Alto,7874,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,4,50.80010160020319
+2023,330540,Sapucaia,18009,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,9,49.97501249375312
+2023,330550,Saquarema,92380,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,50,54.12426932236415
+2023,330555,Seropédica,82666,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,44,53.22623569544916
+2023,330560,Silva Jardim,21689,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,17,78.38074600027664
+2023,330570,Sumidouro,15448,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,3,19.419989642672192
+2023,330575,Tanguá,31972,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,13,40.660578005755035
+2023,330580,Teresópolis,170908,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,107,62.606782596484656
+2023,330590,Trajano de Moraes,10477,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,5,47.723584995704876
+2023,330600,Três Rios,80323,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,52,64.73861783050931
+2023,330610,Valença,69775,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,42,60.19347903977069
+2023,330615,Varre-Sai,10383,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,6,57.78676683039584
+2023,330620,Vassouras,34940,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,27,77.27532913566112
+2023,330630,Volta Redonda,270730,Interpolação linear municipal entre IBGE 2022 e 2024,interpolacao_linear_2022_2024,172,63.531932183356105
+2024,330010,Angra dos Reis,179120,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,97,54.15364001786512
+2024,330015,Aperibé,11420,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,61.295971978984234
+2024,330020,Araruama,137773,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,72.58316215804258
+2024,330022,Areal,12236,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,73.55344883949003
+2024,330023,Armação dos Búzios,42442,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,35.342349559398706
+2024,330025,Arraial do Cabo,32794,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,60.98676587180582
+2024,330030,Barra do Piraí,98501,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,74,75.12614085136191
+2024,330040,Barra Mansa,181688,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,114,62.74492536656246
+2024,330045,Belford Roxo,518263,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,253,48.81691342040624
+2024,330050,Bom Jardim,29736,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,50.44390637610976
+2024,330060,Bom Jesus do Itabapoana,37172,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,19,51.11374152587969
+2024,330070,Cabo Frio,238166,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,118,49.54527514422713
+2024,330080,Cachoeiras de Macacu,59837,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,51,85.23154569914935
+2024,330090,Cambuci,15070,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,26.542800265428003
+2024,330093,Carapebus,14325,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,41.8848167539267
+2024,330095,Comendador Levy Gasparian,9044,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,7,77.39938080495357
+2024,330100,Campos dos Goytacazes,519011,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,310,59.72898454946042
+2024,330110,Cantagalo,19996,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,55.01100220044008
+2024,330115,Cardoso Moreira,13403,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,59.68812952324106
+2024,330120,Carmo,17740,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,12,67.64374295377678
+2024,330130,Casimiro de Abreu,48563,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,51.479521446368636
+2024,330140,Conceição de Macabu,21769,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,50.53057099545225
+2024,330150,Cordeiro,21444,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,18.653236336504385
+2024,330160,Duas Barras,11354,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,35.22987493394398
+2024,330170,Duque de Caxias,866347,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,590,68.10204225327726
+2024,330180,Engenheiro Paulo de Frontin,12648,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,31.625553447185325
+2024,330185,Guapimirim,54300,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,38,69.98158379373848
+2024,330187,Iguaba Grande,29577,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,26,87.90614328701355
+2024,330190,Itaboraí,240040,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,134,55.82402932844526
+2024,330200,Itaguaí,123980,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,86,69.36602677851266
+2024,330205,Italva,14517,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,20.665426741062205
+2024,330210,Itaocara,23643,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,76.13247049866769
+2024,330220,Itaperuna,107246,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,64,59.675885347705275
+2024,330225,Itatiaia,32694,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,61.17330397014742
+2024,330227,Japeri,102149,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,39,38.17952207070064
+2024,330230,Laje do Muriaé,7584,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3,39.55696202531645
+2024,330240,Macaé,264138,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,100,37.858997948042315
+2024,330245,Macuco,5601,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,89.26977325477594
+2024,330250,Magé,244092,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,147,60.2231945332088
+2024,330260,Mangaratiba,43624,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,57.30790390610673
+2024,330270,Maricá,211986,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,112,52.833677695696885
+2024,330280,Mendes,18049,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,88.64757050252092
+2024,330285,Mesquita,178803,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,101,56.48674798521278
+2024,330290,Miguel Pereira,28123,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,25,88.89521032606763
+2024,330300,Miracema,28411,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,70.39526943789377
+2024,330310,Natividade,15550,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,38.58520900321543
+2024,330320,Nilópolis,155544,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,92,59.14725093864115
+2024,330330,Niterói,516720,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,313,60.5743923207927
+2024,330340,Nova Friburgo,203328,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,114,56.06704438149197
+2024,330350,Nova Iguaçu,843046,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,448,53.14063526782643
+2024,330360,Paracambi,43656,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,52.68462525196995
+2024,330370,Paraíba do Sul,44467,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,51.723750196775136
+2024,330380,Paraty,47614,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,28,58.80623346074683
+2024,330385,Paty do Alferes,31345,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,57.42542670282342
+2024,330390,Petrópolis,294983,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,143,48.477369882332205
+2024,330395,Pinheiral,25085,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,59.79669124975084
+2024,330400,Piraí,29054,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,24,82.60480484614855
+2024,330410,Porciúncula,17832,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,61.6868550919695
+2024,330411,Porto Real,21064,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,9,42.726927459172046
+2024,330412,Quatis,14158,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,35.31572255968357
+2024,330414,Queimados,149093,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,91,61.03572937696606
+2024,330415,Quissamã,23126,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,16,69.18619735362795
+2024,330420,Resende,137612,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,66,47.96093363950818
+2024,330430,Rio Bonito,59113,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,35,59.20863431055775
+2024,330440,Rio Claro,17950,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,83.56545961002786
+2024,330450,Rio das Flores,9264,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,64.76683937823834
+2024,330452,Rio das Ostras,168099,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,66,39.26257740974069
+2024,330455,Rio de Janeiro,6729894,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,3997,59.391722960272475
+2024,330460,Santa Maria Madalena,10579,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,75.62151432082428
+2024,330470,Santo Antônio de Pádua,43686,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,20,45.78125715332143
+2024,330475,São Francisco de Itabapoana,47368,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,48.55598716433035
+2024,330480,São Fidélis,41197,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,23,55.829307959317426
+2024,330490,São Gonçalo,960652,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,605,62.978060733751654
+2024,330500,São João da Barra,38708,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,31,80.08680376149633
+2024,330510,São João de Meriti,466536,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,252,54.01512423478574
+2024,330513,São José de Ubá,7315,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,68.35269993164731
+2024,330515,São José do Vale do Rio Preto,22799,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,10,43.861572876003336
+2024,330520,São Pedro da Aldeia,110556,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,58,52.46210065487174
+2024,330530,São Sebastião do Alto,7999,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,4,50.006250781347674
+2024,330540,Sapucaia,18289,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,11,60.14544261577998
+2024,330550,Saquarema,95201,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,47.26841104610246
+2024,330555,Seropédica,84737,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,53,62.546467304719314
+2024,330560,Silva Jardim,22026,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,18,81.72160174339417
+2024,330570,Sumidouro,15690,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,6,38.24091778202677
+2024,330575,Tanguá,32858,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,15,45.65098301783432
+2024,330580,Teresópolis,176692,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,104,58.85948430036448
+2024,330590,Trajano de Moraes,10652,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,5,46.939541870071345
+2024,330600,Três Rios,82300,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,46,55.893074119076545
+2024,330610,Valença,71462,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,45,62.97052979205731
+2024,330615,Varre-Sai,10559,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,8,75.76475044985321
+2024,330620,Vassouras,35904,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,21,58.48930481283422
+2024,330630,Volta Redonda,279898,"IBGE/SIDRA tabela 6579, variável 9324",estimativa_1_julho,179,63.951868180551486

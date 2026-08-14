@@ -1,0 +1,3 @@
+serie,periodicidade,n,tau,p_valor,p_bonferroni
+SIH_internacoes,mensal sazonal,192,0.7055976002292016,0,0
+SIM_obitos_causa_basica,mensal sazonal,180,-0.07484205226250704,0.17893342593618922,0.35786685187237843

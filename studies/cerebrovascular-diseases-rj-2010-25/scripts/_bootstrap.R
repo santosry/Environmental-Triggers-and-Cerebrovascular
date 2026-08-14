@@ -1,0 +1,6 @@
+options(stringsAsFactors = FALSE, warn = 1)
+if (!requireNamespace("here", quietly = TRUE)) stop("Execute scripts/00_instalar_dependencias.R primeiro.")
+here::i_am("scripts/_bootstrap.R")
+source(here::here("R", "utils.R"), encoding = "UTF-8")
+load_project_functions()
+cfg <- read_config()

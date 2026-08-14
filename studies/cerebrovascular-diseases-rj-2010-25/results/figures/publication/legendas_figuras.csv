@@ -1,0 +1,10 @@
+figura,legenda
+FIG1,Evolução municipal das taxas de internação por doenças cerebrovasculares no SIH/SUS. A escala é comum entre painéis; 2023 usa população municipal interpolada linearmente entre 2022 e 2024.
+FIG2,Evolução municipal das taxas de mortalidade por causa básica cerebrovascular no SIM. A escala é comum entre painéis; 2023 usa população municipal interpolada linearmente entre 2022 e 2024.
+FIG3,"Distribuição mensal das internações SIH/SUS e óbitos SIM por ano-calendário. Cores representam a razão entre a contagem mensal e a média do respectivo sistema, permitindo comparar padrões sem confundir as escalas distintas."
+FIG4,Séries anuais de internações SIH/SUS e óbitos por causa básica no SIM. Os sistemas representam eventos distintos.
+FIG5,"Taxas anuais de internação SIH/SUS e mortalidade SIM segundo região de saúde de residência, calculadas separadamente para cada sistema."
+FIG6,Mortalidade hospitalar no SIH/SUS por características selecionadas. Pontos são proporções e barras são intervalos de 95% de Wilson.
+FIG7,Resíduos padronizados dos testes de associação com óbito hospitalar. Valores positivos indicam frequência observada acima da esperada sob independência.
+FIG8,Distribuição anual dos eventos segundo subgrupo CID-10 I60-I69 no SIH/SUS e SIM. Escala de cor transformada pela raiz quadrada.
+FIG9,"Magnitude das associações entre características categóricas e óbito hospitalar, expressa pelo V de Cramér corrigido."

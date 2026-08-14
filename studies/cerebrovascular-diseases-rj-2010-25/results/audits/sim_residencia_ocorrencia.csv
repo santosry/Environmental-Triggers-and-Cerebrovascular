@@ -1,0 +1,5 @@
+mesma_uf,mesmo_municipio,Freq
+FALSE,FALSE,501
+TRUE,FALSE,26808
+FALSE,TRUE,0
+TRUE,TRUE,120242

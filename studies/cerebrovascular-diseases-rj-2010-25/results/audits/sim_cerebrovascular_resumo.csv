@@ -1,0 +1,2 @@
+dataset,n_records,n_variables,exact_duplicates,potential_duplicates,invalid_cid,invalid_dates,outside_expected_uf
+sim_cerebrovascular,147551,117,0,12,0,0,0

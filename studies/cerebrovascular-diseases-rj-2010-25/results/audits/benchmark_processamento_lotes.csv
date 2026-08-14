@@ -1,0 +1,3 @@
+modo,arquivos,trabalhadores,tempo_parede_segundos,segundos_por_arquivo,observacao
+sequencial_piloto,12,1,397.3,33.1083,"SIH 2024"
+quatro_lotes_serie,180,4,1533.1,8.5172,"SIH 2010-2025 exceto meses ja processados no piloto"

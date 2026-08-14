@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Se este repositório for útil, cite o software e o artigo associado."
+title: "Morbimortalidade por doenças cerebrovasculares no Rio de Janeiro"
+type: software
+authors:
+  - name: "Ryan"
+version: 0.1.0
+date-released: 2026-07-16
+license: MIT
+abstract: "Pipeline reprodutível em R para análise descritiva do SIH/SUS e SIM no Rio de Janeiro, 2010-2025."
+keywords:
+  - DATASUS
+  - SIH/SUS
+  - SIM
+  - cerebrovascular diseases
+  - epidemiology
+

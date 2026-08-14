@@ -1,0 +1,11 @@
+vies,fonte,direcao_provavel,magnitude_avaliavel,mitigacao_no_estudo
+Cobertura do SIH,"Inclui internações financiadas pelo SUS, não toda a assistência",Incerta por território e período,Não estimável com os dados disponíveis,"Delimitação da população-alvo e ausência de generalização para toda a morbidade"
+Repetição de AIH,"Uma pessoa ou internação prolongada pode gerar mais de uma AIH",Superestima eventos como pessoas,Não estimável sem identificador confiável,"Unidade declarada como AIH/internação, nunca pessoa única"
+Classificação CID,"Diagnóstico principal e causa básica podem estar incorretos ou pouco específicos",Incerta; I64 e I69 ampliam heterogeneidade,Quantificada por distribuição de subgrupos,"Lista completa de códigos e sensibilidade recomendada excluindo I69"
+Óbito hospitalar,"MORTE captura apenas desfecho durante a internação SIH",Subestima mortalidade total,Não estimável sem seguimento,"Indicador nomeado mortalidade hospitalar; SIM analisado separadamente"
+Dados ausentes,"Raça/cor, escolaridade e outras variáveis têm ausência",Pode distorcer comparações em qualquer direção,Proporção ausente reportada por variável,"Categoria ausente explícita e nenhuma redistribuição"
+Confundimento,"Gravidade, comorbidades, acesso, cobertura privada e oferta não estão plenamente disponíveis",Incerta,Não estimável,"Resultados descritivos/brutos e ausência de interpretação causal"
+Denominadores,"Censo 2022 e estimativa 2024 usam referenciais distintos; 2023 é interpolado",Pode alterar taxas recentes,"Diferença observável em análise de sensibilidade","Método rotulado; 2023 não é tratado como estimativa oficial publicada"
+Mudança temporal,"Regras de codificação, cobertura e oportunidade podem mudar",Incerta,Auditada por cobertura e quebras,"Status dos dados e cobertura relatados por ano"
+Dependência espacial,"Municípios vizinhos e redes assistenciais não são independentes",Pode reduzir precisão dos testes regionais,Não modelada,"Kruskal-Wallis tratado como exploratório; limitação explícita"
+Multiplicidade,"Muitos testes aumentam falsos positivos",Aumenta achados ao acaso,Controlável,"BH ou Bonferroni por família e tamanho de efeito"

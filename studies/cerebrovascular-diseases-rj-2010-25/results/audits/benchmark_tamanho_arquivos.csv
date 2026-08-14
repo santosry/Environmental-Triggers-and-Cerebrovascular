@@ -1,0 +1,4 @@
+format,path,bytes
+rds,C:/Users/oorie/OneDrive/Documentos/TRABALHOS/artigo-morbimortalidade-avc-rj/work/benchmark/sample.rds,9646459
+csv_gz,C:/Users/oorie/OneDrive/Documentos/TRABALHOS/artigo-morbimortalidade-avc-rj/work/benchmark/sample.csv.gz,12435072
+parquet,C:/Users/oorie/OneDrive/Documentos/TRABALHOS/artigo-morbimortalidade-avc-rj/work/benchmark/sample.parquet,8838772
