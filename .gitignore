@@ -1,4 +1,7 @@
-*.parquet
+﻿*.parquet
 *.rds
 .RData
 .Rhistory
+*.zip
+*sih_cerebrovascular*.csv
+*modelos_dlnm*.rds
