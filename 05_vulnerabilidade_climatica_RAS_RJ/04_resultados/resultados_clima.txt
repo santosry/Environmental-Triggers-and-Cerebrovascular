@@ -1,0 +1,36 @@
+======================================================================
+EXPOSIÇÃO AMBIENTAL POR MACRORREGIÃO DE SAÚDE (2010-2024)
+======================================================================
+                     temp_media  temp_p05  temp_p95  temp_min_abs  temp_max_abs  ur_media  ur_p05  n_dias
+macro_regiao                                                                                             
+Baia da Ilha Grande       22.94     18.35     27.84         13.28         34.22     81.12   69.75    5479
+Baixada Litoranea         23.45     19.82     26.92         16.52         29.42     79.63   67.71    5479
+Centro-Sul                19.11     10.20     26.45          3.65         31.57     80.99   63.42    5479
+Medio Paraiba             21.74     16.79     26.33         11.33         34.10     75.97   61.45    5479
+Metropolitana I           23.54     18.99     28.19         14.92         31.47     76.59   62.21    5479
+Metropolitana II          21.65     14.29     28.06          9.25         32.48     80.06   65.75    5479
+Noroeste                  23.77     18.45     28.60         14.43         34.78     75.15   61.42    5479
+Norte                     23.87     19.86     27.65         16.21         30.99     77.91   67.22    5479
+Serrana                   17.48     12.03     22.31          6.63         27.20     82.86   67.42    5479
+PM2.5 médio (µg/m³) por macrorregião:
+Macroregiao
+Baixada Litorânea      10.50
+Baía da Ilha Grande    20.07
+Centro-Sul             19.50
+Metropolitana I        23.43
+Metropolitana II       17.07
+Médio Paraíba          20.63
+Noroeste               11.29
+Norte                   9.53
+Serrana                13.95
+
+Associação ecológica descritiva (correlação de Spearman, diária):
+  Baia da Ilha Grande: rho(temp, internações) = -0.002 (p=0.891)
+  Baixada Litoranea: rho(temp, internações) = -0.002 (p=0.865)
+  Centro-Sul: rho(temp, internações) = 0.079 (p=0.000)
+  Medio Paraiba: rho(temp, internações) = -0.071 (p=0.000)
+  Metropolitana I: rho(temp, internações) = -0.083 (p=0.000)
+  Metropolitana II: rho(temp, internações) = 0.262 (p=0.000)
+  Noroeste: rho(temp, internações) = -0.029 (p=0.034)
+  Norte: rho(temp, internações) = -0.052 (p=0.000)
+  Serrana: rho(temp, internações) = -0.026 (p=0.053)

@@ -1,0 +1,433 @@
+macro_regiao,exposicao,outcome,contrast,n_extreme,n_ref,effect_size_cohen,power_approx
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P05_vs_P50,294,247,0.2,0.6395
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.2,0.6388
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P05_vs_P50,294,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P05_vs_P50,294,247,0.8,1.0
+Baia da Ilha Grande,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.8,1.0
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P05_vs_P50,294,247,0.2,0.6395
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.2,0.6388
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P05_vs_P50,294,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P05_vs_P50,294,247,0.8,1.0
+Baia da Ilha Grande,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.8,1.0
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P05_vs_P50,294,247,0.2,0.6395
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.2,0.6388
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P05_vs_P50,294,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P05_vs_P50,294,247,0.8,1.0
+Baia da Ilha Grande,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.8,1.0
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P05_vs_P50,294,247,0.2,0.6395
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.2,0.6388
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P05_vs_P50,294,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.5,0.9999
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P05_vs_P50,294,247,0.8,1.0
+Baia da Ilha Grande,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.8,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P05_vs_P50,293,326,0.2,0.7
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P95_vs_P50,294,326,0.2,0.7008
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P05_vs_P50,293,326,0.5,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P95_vs_P50,294,326,0.5,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P05_vs_P50,293,326,0.8,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i69,P95_vs_P50,294,326,0.8,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P05_vs_P50,293,326,0.2,0.7
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P95_vs_P50,294,326,0.2,0.7008
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P05_vs_P50,293,326,0.5,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P95_vs_P50,294,326,0.5,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P05_vs_P50,293,326,0.8,1.0
+Baia da Ilha Grande,ur_med,internacoes_i60_i64,P95_vs_P50,294,326,0.8,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P05_vs_P50,293,326,0.2,0.7
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P95_vs_P50,294,326,0.2,0.7008
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P05_vs_P50,293,326,0.5,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P95_vs_P50,294,326,0.5,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P05_vs_P50,293,326,0.8,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i69,P95_vs_P50,294,326,0.8,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P05_vs_P50,293,326,0.2,0.7
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P95_vs_P50,294,326,0.2,0.7008
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P05_vs_P50,293,326,0.5,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P95_vs_P50,294,326,0.5,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P05_vs_P50,293,326,0.8,1.0
+Baia da Ilha Grande,ur_med,obitos_i60_i64,P95_vs_P50,294,326,0.8,1.0
+Baixada Litoranea,temp_med,internacoes_i60_i69,P05_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,internacoes_i60_i69,P95_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,internacoes_i60_i69,P05_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,internacoes_i60_i69,P95_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,internacoes_i60_i69,P05_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,internacoes_i60_i69,P95_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,internacoes_i60_i64,P05_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,internacoes_i60_i64,P95_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,internacoes_i60_i64,P05_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,internacoes_i60_i64,P95_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,internacoes_i60_i64,P05_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,internacoes_i60_i64,P95_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,obitos_i60_i69,P05_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,obitos_i60_i69,P95_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,obitos_i60_i69,P05_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,obitos_i60_i69,P95_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,obitos_i60_i69,P05_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,obitos_i60_i69,P95_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,obitos_i60_i64,P05_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,obitos_i60_i64,P95_vs_P50,293,240,0.2,0.632
+Baixada Litoranea,temp_med,obitos_i60_i64,P05_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,obitos_i60_i64,P95_vs_P50,293,240,0.5,0.9999
+Baixada Litoranea,temp_med,obitos_i60_i64,P05_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,temp_med,obitos_i60_i64,P95_vs_P50,293,240,0.8,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i69,P05_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,internacoes_i60_i69,P95_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,internacoes_i60_i69,P05_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i69,P95_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i69,P05_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i69,P95_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i64,P05_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,internacoes_i60_i64,P95_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,internacoes_i60_i64,P05_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i64,P95_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i64,P05_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,internacoes_i60_i64,P95_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,obitos_i60_i69,P05_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,obitos_i60_i69,P95_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,obitos_i60_i69,P05_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,obitos_i60_i69,P95_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,obitos_i60_i69,P05_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,obitos_i60_i69,P95_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,obitos_i60_i64,P05_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,obitos_i60_i64,P95_vs_P50,293,303,0.2,0.6847
+Baixada Litoranea,ur_med,obitos_i60_i64,P05_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,obitos_i60_i64,P95_vs_P50,293,303,0.5,1.0
+Baixada Litoranea,ur_med,obitos_i60_i64,P05_vs_P50,293,303,0.8,1.0
+Baixada Litoranea,ur_med,obitos_i60_i64,P95_vs_P50,293,303,0.8,1.0
+Centro-Sul,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.2,0.5756
+Centro-Sul,temp_med,internacoes_i60_i69,P95_vs_P50,294,191,0.2,0.5762
+Centro-Sul,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.5,0.9997
+Centro-Sul,temp_med,internacoes_i60_i69,P95_vs_P50,294,191,0.5,0.9997
+Centro-Sul,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.8,1.0
+Centro-Sul,temp_med,internacoes_i60_i69,P95_vs_P50,294,191,0.8,1.0
+Centro-Sul,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.2,0.5756
+Centro-Sul,temp_med,internacoes_i60_i64,P95_vs_P50,294,191,0.2,0.5762
+Centro-Sul,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.5,0.9997
+Centro-Sul,temp_med,internacoes_i60_i64,P95_vs_P50,294,191,0.5,0.9997
+Centro-Sul,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.8,1.0
+Centro-Sul,temp_med,internacoes_i60_i64,P95_vs_P50,294,191,0.8,1.0
+Centro-Sul,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.2,0.5756
+Centro-Sul,temp_med,obitos_i60_i69,P95_vs_P50,294,191,0.2,0.5762
+Centro-Sul,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.5,0.9997
+Centro-Sul,temp_med,obitos_i60_i69,P95_vs_P50,294,191,0.5,0.9997
+Centro-Sul,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.8,1.0
+Centro-Sul,temp_med,obitos_i60_i69,P95_vs_P50,294,191,0.8,1.0
+Centro-Sul,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.2,0.5756
+Centro-Sul,temp_med,obitos_i60_i64,P95_vs_P50,294,191,0.2,0.5762
+Centro-Sul,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.5,0.9997
+Centro-Sul,temp_med,obitos_i60_i64,P95_vs_P50,294,191,0.5,0.9997
+Centro-Sul,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.8,1.0
+Centro-Sul,temp_med,obitos_i60_i64,P95_vs_P50,294,191,0.8,1.0
+Centro-Sul,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.2,0.6745
+Centro-Sul,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.5,1.0
+Centro-Sul,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.8,1.0
+Centro-Sul,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.8,1.0
+Medio Paraiba,temp_med,internacoes_i60_i69,P05_vs_P50,293,248,0.2,0.6398
+Medio Paraiba,temp_med,internacoes_i60_i69,P95_vs_P50,294,248,0.2,0.6405
+Medio Paraiba,temp_med,internacoes_i60_i69,P05_vs_P50,293,248,0.5,0.9999
+Medio Paraiba,temp_med,internacoes_i60_i69,P95_vs_P50,294,248,0.5,0.9999
+Medio Paraiba,temp_med,internacoes_i60_i69,P05_vs_P50,293,248,0.8,1.0
+Medio Paraiba,temp_med,internacoes_i60_i69,P95_vs_P50,294,248,0.8,1.0
+Medio Paraiba,temp_med,internacoes_i60_i64,P05_vs_P50,293,248,0.2,0.6398
+Medio Paraiba,temp_med,internacoes_i60_i64,P95_vs_P50,294,248,0.2,0.6405
+Medio Paraiba,temp_med,internacoes_i60_i64,P05_vs_P50,293,248,0.5,0.9999
+Medio Paraiba,temp_med,internacoes_i60_i64,P95_vs_P50,294,248,0.5,0.9999
+Medio Paraiba,temp_med,internacoes_i60_i64,P05_vs_P50,293,248,0.8,1.0
+Medio Paraiba,temp_med,internacoes_i60_i64,P95_vs_P50,294,248,0.8,1.0
+Medio Paraiba,temp_med,obitos_i60_i69,P05_vs_P50,293,248,0.2,0.6398
+Medio Paraiba,temp_med,obitos_i60_i69,P95_vs_P50,294,248,0.2,0.6405
+Medio Paraiba,temp_med,obitos_i60_i69,P05_vs_P50,293,248,0.5,0.9999
+Medio Paraiba,temp_med,obitos_i60_i69,P95_vs_P50,294,248,0.5,0.9999
+Medio Paraiba,temp_med,obitos_i60_i69,P05_vs_P50,293,248,0.8,1.0
+Medio Paraiba,temp_med,obitos_i60_i69,P95_vs_P50,294,248,0.8,1.0
+Medio Paraiba,temp_med,obitos_i60_i64,P05_vs_P50,293,248,0.2,0.6398
+Medio Paraiba,temp_med,obitos_i60_i64,P95_vs_P50,294,248,0.2,0.6405
+Medio Paraiba,temp_med,obitos_i60_i64,P05_vs_P50,293,248,0.5,0.9999
+Medio Paraiba,temp_med,obitos_i60_i64,P95_vs_P50,294,248,0.5,0.9999
+Medio Paraiba,temp_med,obitos_i60_i64,P05_vs_P50,293,248,0.8,1.0
+Medio Paraiba,temp_med,obitos_i60_i64,P95_vs_P50,294,248,0.8,1.0
+Medio Paraiba,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.2,0.7013
+Medio Paraiba,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.2,0.702
+Medio Paraiba,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.5,1.0
+Medio Paraiba,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.5,1.0
+Medio Paraiba,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.8,1.0
+Medio Paraiba,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.8,1.0
+Medio Paraiba,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.2,0.7013
+Medio Paraiba,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.2,0.702
+Medio Paraiba,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.5,1.0
+Medio Paraiba,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.5,1.0
+Medio Paraiba,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.8,1.0
+Medio Paraiba,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.8,1.0
+Medio Paraiba,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.2,0.7013
+Medio Paraiba,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.2,0.702
+Medio Paraiba,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.5,1.0
+Medio Paraiba,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.5,1.0
+Medio Paraiba,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.8,1.0
+Medio Paraiba,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.8,1.0
+Medio Paraiba,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.2,0.7013
+Medio Paraiba,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.2,0.702
+Medio Paraiba,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.5,1.0
+Medio Paraiba,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.5,1.0
+Medio Paraiba,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.8,1.0
+Medio Paraiba,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.8,1.0
+Metropolitana I,temp_med,internacoes_i60_i69,P05_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,internacoes_i60_i69,P05_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,internacoes_i60_i69,P05_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,internacoes_i60_i69,P95_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,internacoes_i60_i64,P05_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,internacoes_i60_i64,P05_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,internacoes_i60_i64,P05_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,internacoes_i60_i64,P95_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,obitos_i60_i69,P05_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,obitos_i60_i69,P05_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,obitos_i60_i69,P05_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,obitos_i60_i69,P95_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,obitos_i60_i64,P05_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.2,0.6388
+Metropolitana I,temp_med,obitos_i60_i64,P05_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.5,0.9999
+Metropolitana I,temp_med,obitos_i60_i64,P05_vs_P50,293,247,0.8,1.0
+Metropolitana I,temp_med,obitos_i60_i64,P95_vs_P50,293,247,0.8,1.0
+Metropolitana I,ur_med,internacoes_i60_i69,P05_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,internacoes_i60_i69,P95_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,internacoes_i60_i69,P05_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,internacoes_i60_i69,P95_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,internacoes_i60_i69,P05_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,internacoes_i60_i69,P95_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,internacoes_i60_i64,P05_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,internacoes_i60_i64,P95_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,internacoes_i60_i64,P05_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,internacoes_i60_i64,P95_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,internacoes_i60_i64,P05_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,internacoes_i60_i64,P95_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,obitos_i60_i69,P05_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,obitos_i60_i69,P95_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,obitos_i60_i69,P05_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,obitos_i60_i69,P95_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,obitos_i60_i69,P05_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,obitos_i60_i69,P95_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,obitos_i60_i64,P05_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,obitos_i60_i64,P95_vs_P50,293,336,0.2,0.7061
+Metropolitana I,ur_med,obitos_i60_i64,P05_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,obitos_i60_i64,P95_vs_P50,293,336,0.5,1.0
+Metropolitana I,ur_med,obitos_i60_i64,P05_vs_P50,293,336,0.8,1.0
+Metropolitana I,ur_med,obitos_i60_i64,P95_vs_P50,293,336,0.8,1.0
+Metropolitana II,temp_med,internacoes_i60_i69,P05_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,internacoes_i60_i69,P95_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,internacoes_i60_i69,P05_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,internacoes_i60_i69,P95_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,internacoes_i60_i69,P05_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,internacoes_i60_i69,P95_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,internacoes_i60_i64,P05_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,internacoes_i60_i64,P95_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,internacoes_i60_i64,P05_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,internacoes_i60_i64,P95_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,internacoes_i60_i64,P05_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,internacoes_i60_i64,P95_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,obitos_i60_i69,P05_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,obitos_i60_i69,P95_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,obitos_i60_i69,P05_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,obitos_i60_i69,P95_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,obitos_i60_i69,P05_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,obitos_i60_i69,P95_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,obitos_i60_i64,P05_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,obitos_i60_i64,P95_vs_P50,293,339,0.2,0.7079
+Metropolitana II,temp_med,obitos_i60_i64,P05_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,obitos_i60_i64,P95_vs_P50,293,339,0.5,1.0
+Metropolitana II,temp_med,obitos_i60_i64,P05_vs_P50,293,339,0.8,1.0
+Metropolitana II,temp_med,obitos_i60_i64,P95_vs_P50,293,339,0.8,1.0
+Metropolitana II,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.2,0.7013
+Metropolitana II,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.2,0.702
+Metropolitana II,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.5,1.0
+Metropolitana II,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.5,1.0
+Metropolitana II,ur_med,internacoes_i60_i69,P05_vs_P50,293,328,0.8,1.0
+Metropolitana II,ur_med,internacoes_i60_i69,P95_vs_P50,294,328,0.8,1.0
+Metropolitana II,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.2,0.7013
+Metropolitana II,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.2,0.702
+Metropolitana II,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.5,1.0
+Metropolitana II,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.5,1.0
+Metropolitana II,ur_med,internacoes_i60_i64,P05_vs_P50,293,328,0.8,1.0
+Metropolitana II,ur_med,internacoes_i60_i64,P95_vs_P50,294,328,0.8,1.0
+Metropolitana II,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.2,0.7013
+Metropolitana II,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.2,0.702
+Metropolitana II,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.5,1.0
+Metropolitana II,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.5,1.0
+Metropolitana II,ur_med,obitos_i60_i69,P05_vs_P50,293,328,0.8,1.0
+Metropolitana II,ur_med,obitos_i60_i69,P95_vs_P50,294,328,0.8,1.0
+Metropolitana II,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.2,0.7013
+Metropolitana II,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.2,0.702
+Metropolitana II,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.5,1.0
+Metropolitana II,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.5,1.0
+Metropolitana II,ur_med,obitos_i60_i64,P05_vs_P50,293,328,0.8,1.0
+Metropolitana II,ur_med,obitos_i60_i64,P95_vs_P50,294,328,0.8,1.0
+Noroeste,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.2,0.5756
+Noroeste,temp_med,internacoes_i60_i69,P95_vs_P50,295,191,0.2,0.5767
+Noroeste,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.5,0.9997
+Noroeste,temp_med,internacoes_i60_i69,P95_vs_P50,295,191,0.5,0.9997
+Noroeste,temp_med,internacoes_i60_i69,P05_vs_P50,293,191,0.8,1.0
+Noroeste,temp_med,internacoes_i60_i69,P95_vs_P50,295,191,0.8,1.0
+Noroeste,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.2,0.5756
+Noroeste,temp_med,internacoes_i60_i64,P95_vs_P50,295,191,0.2,0.5767
+Noroeste,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.5,0.9997
+Noroeste,temp_med,internacoes_i60_i64,P95_vs_P50,295,191,0.5,0.9997
+Noroeste,temp_med,internacoes_i60_i64,P05_vs_P50,293,191,0.8,1.0
+Noroeste,temp_med,internacoes_i60_i64,P95_vs_P50,295,191,0.8,1.0
+Noroeste,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.2,0.5756
+Noroeste,temp_med,obitos_i60_i69,P95_vs_P50,295,191,0.2,0.5767
+Noroeste,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.5,0.9997
+Noroeste,temp_med,obitos_i60_i69,P95_vs_P50,295,191,0.5,0.9997
+Noroeste,temp_med,obitos_i60_i69,P05_vs_P50,293,191,0.8,1.0
+Noroeste,temp_med,obitos_i60_i69,P95_vs_P50,295,191,0.8,1.0
+Noroeste,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.2,0.5756
+Noroeste,temp_med,obitos_i60_i64,P95_vs_P50,295,191,0.2,0.5767
+Noroeste,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.5,0.9997
+Noroeste,temp_med,obitos_i60_i64,P95_vs_P50,295,191,0.5,0.9997
+Noroeste,temp_med,obitos_i60_i64,P05_vs_P50,293,191,0.8,1.0
+Noroeste,temp_med,obitos_i60_i64,P95_vs_P50,295,191,0.8,1.0
+Noroeste,ur_med,internacoes_i60_i69,P05_vs_P50,294,299,0.2,0.6826
+Noroeste,ur_med,internacoes_i60_i69,P95_vs_P50,293,299,0.2,0.6819
+Noroeste,ur_med,internacoes_i60_i69,P05_vs_P50,294,299,0.5,1.0
+Noroeste,ur_med,internacoes_i60_i69,P95_vs_P50,293,299,0.5,1.0
+Noroeste,ur_med,internacoes_i60_i69,P05_vs_P50,294,299,0.8,1.0
+Noroeste,ur_med,internacoes_i60_i69,P95_vs_P50,293,299,0.8,1.0
+Noroeste,ur_med,internacoes_i60_i64,P05_vs_P50,294,299,0.2,0.6826
+Noroeste,ur_med,internacoes_i60_i64,P95_vs_P50,293,299,0.2,0.6819
+Noroeste,ur_med,internacoes_i60_i64,P05_vs_P50,294,299,0.5,1.0
+Noroeste,ur_med,internacoes_i60_i64,P95_vs_P50,293,299,0.5,1.0
+Noroeste,ur_med,internacoes_i60_i64,P05_vs_P50,294,299,0.8,1.0
+Noroeste,ur_med,internacoes_i60_i64,P95_vs_P50,293,299,0.8,1.0
+Noroeste,ur_med,obitos_i60_i69,P05_vs_P50,294,299,0.2,0.6826
+Noroeste,ur_med,obitos_i60_i69,P95_vs_P50,293,299,0.2,0.6819
+Noroeste,ur_med,obitos_i60_i69,P05_vs_P50,294,299,0.5,1.0
+Noroeste,ur_med,obitos_i60_i69,P95_vs_P50,293,299,0.5,1.0
+Noroeste,ur_med,obitos_i60_i69,P05_vs_P50,294,299,0.8,1.0
+Noroeste,ur_med,obitos_i60_i69,P95_vs_P50,293,299,0.8,1.0
+Noroeste,ur_med,obitos_i60_i64,P05_vs_P50,294,299,0.2,0.6826
+Noroeste,ur_med,obitos_i60_i64,P95_vs_P50,293,299,0.2,0.6819
+Noroeste,ur_med,obitos_i60_i64,P05_vs_P50,294,299,0.5,1.0
+Noroeste,ur_med,obitos_i60_i64,P95_vs_P50,293,299,0.5,1.0
+Noroeste,ur_med,obitos_i60_i64,P05_vs_P50,294,299,0.8,1.0
+Noroeste,ur_med,obitos_i60_i64,P95_vs_P50,293,299,0.8,1.0
+Norte,temp_med,internacoes_i60_i69,P05_vs_P50,293,249,0.2,0.6407
+Norte,temp_med,internacoes_i60_i69,P95_vs_P50,294,249,0.2,0.6414
+Norte,temp_med,internacoes_i60_i69,P05_vs_P50,293,249,0.5,0.9999
+Norte,temp_med,internacoes_i60_i69,P95_vs_P50,294,249,0.5,0.9999
+Norte,temp_med,internacoes_i60_i69,P05_vs_P50,293,249,0.8,1.0
+Norte,temp_med,internacoes_i60_i69,P95_vs_P50,294,249,0.8,1.0
+Norte,temp_med,internacoes_i60_i64,P05_vs_P50,293,249,0.2,0.6407
+Norte,temp_med,internacoes_i60_i64,P95_vs_P50,294,249,0.2,0.6414
+Norte,temp_med,internacoes_i60_i64,P05_vs_P50,293,249,0.5,0.9999
+Norte,temp_med,internacoes_i60_i64,P95_vs_P50,294,249,0.5,0.9999
+Norte,temp_med,internacoes_i60_i64,P05_vs_P50,293,249,0.8,1.0
+Norte,temp_med,internacoes_i60_i64,P95_vs_P50,294,249,0.8,1.0
+Norte,temp_med,obitos_i60_i69,P05_vs_P50,293,249,0.2,0.6407
+Norte,temp_med,obitos_i60_i69,P95_vs_P50,294,249,0.2,0.6414
+Norte,temp_med,obitos_i60_i69,P05_vs_P50,293,249,0.5,0.9999
+Norte,temp_med,obitos_i60_i69,P95_vs_P50,294,249,0.5,0.9999
+Norte,temp_med,obitos_i60_i69,P05_vs_P50,293,249,0.8,1.0
+Norte,temp_med,obitos_i60_i69,P95_vs_P50,294,249,0.8,1.0
+Norte,temp_med,obitos_i60_i64,P05_vs_P50,293,249,0.2,0.6407
+Norte,temp_med,obitos_i60_i64,P95_vs_P50,294,249,0.2,0.6414
+Norte,temp_med,obitos_i60_i64,P05_vs_P50,293,249,0.5,0.9999
+Norte,temp_med,obitos_i60_i64,P95_vs_P50,294,249,0.5,0.9999
+Norte,temp_med,obitos_i60_i64,P05_vs_P50,293,249,0.8,1.0
+Norte,temp_med,obitos_i60_i64,P95_vs_P50,294,249,0.8,1.0
+Norte,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.5,1.0
+Norte,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.5,1.0
+Norte,ur_med,internacoes_i60_i69,P05_vs_P50,293,289,0.8,1.0
+Norte,ur_med,internacoes_i60_i69,P95_vs_P50,293,289,0.8,1.0
+Norte,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.5,1.0
+Norte,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.5,1.0
+Norte,ur_med,internacoes_i60_i64,P05_vs_P50,293,289,0.8,1.0
+Norte,ur_med,internacoes_i60_i64,P95_vs_P50,293,289,0.8,1.0
+Norte,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.5,1.0
+Norte,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.5,1.0
+Norte,ur_med,obitos_i60_i69,P05_vs_P50,293,289,0.8,1.0
+Norte,ur_med,obitos_i60_i69,P95_vs_P50,293,289,0.8,1.0
+Norte,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.2,0.6745
+Norte,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.5,1.0
+Norte,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.5,1.0
+Norte,ur_med,obitos_i60_i64,P05_vs_P50,293,289,0.8,1.0
+Norte,ur_med,obitos_i60_i64,P95_vs_P50,293,289,0.8,1.0
+Serrana,temp_med,internacoes_i60_i69,P05_vs_P50,294,237,0.2,0.6297
+Serrana,temp_med,internacoes_i60_i69,P95_vs_P50,293,237,0.2,0.629
+Serrana,temp_med,internacoes_i60_i69,P05_vs_P50,294,237,0.5,0.9999
+Serrana,temp_med,internacoes_i60_i69,P95_vs_P50,293,237,0.5,0.9999
+Serrana,temp_med,internacoes_i60_i69,P05_vs_P50,294,237,0.8,1.0
+Serrana,temp_med,internacoes_i60_i69,P95_vs_P50,293,237,0.8,1.0
+Serrana,temp_med,internacoes_i60_i64,P05_vs_P50,294,237,0.2,0.6297
+Serrana,temp_med,internacoes_i60_i64,P95_vs_P50,293,237,0.2,0.629
+Serrana,temp_med,internacoes_i60_i64,P05_vs_P50,294,237,0.5,0.9999
+Serrana,temp_med,internacoes_i60_i64,P95_vs_P50,293,237,0.5,0.9999
+Serrana,temp_med,internacoes_i60_i64,P05_vs_P50,294,237,0.8,1.0
+Serrana,temp_med,internacoes_i60_i64,P95_vs_P50,293,237,0.8,1.0
+Serrana,temp_med,obitos_i60_i69,P05_vs_P50,294,237,0.2,0.6297
+Serrana,temp_med,obitos_i60_i69,P95_vs_P50,293,237,0.2,0.629
+Serrana,temp_med,obitos_i60_i69,P05_vs_P50,294,237,0.5,0.9999
+Serrana,temp_med,obitos_i60_i69,P95_vs_P50,293,237,0.5,0.9999
+Serrana,temp_med,obitos_i60_i69,P05_vs_P50,294,237,0.8,1.0
+Serrana,temp_med,obitos_i60_i69,P95_vs_P50,293,237,0.8,1.0
+Serrana,temp_med,obitos_i60_i64,P05_vs_P50,294,237,0.2,0.6297
+Serrana,temp_med,obitos_i60_i64,P95_vs_P50,293,237,0.2,0.629
+Serrana,temp_med,obitos_i60_i64,P05_vs_P50,294,237,0.5,0.9999
+Serrana,temp_med,obitos_i60_i64,P95_vs_P50,293,237,0.5,0.9999
+Serrana,temp_med,obitos_i60_i64,P05_vs_P50,294,237,0.8,1.0
+Serrana,temp_med,obitos_i60_i64,P95_vs_P50,293,237,0.8,1.0
+Serrana,ur_med,internacoes_i60_i69,P05_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,internacoes_i60_i69,P95_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,internacoes_i60_i69,P05_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,internacoes_i60_i69,P95_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,internacoes_i60_i69,P05_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,internacoes_i60_i69,P95_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,internacoes_i60_i64,P05_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,internacoes_i60_i64,P95_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,internacoes_i60_i64,P05_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,internacoes_i60_i64,P95_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,internacoes_i60_i64,P05_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,internacoes_i60_i64,P95_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,obitos_i60_i69,P05_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,obitos_i60_i69,P95_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,obitos_i60_i69,P05_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,obitos_i60_i69,P95_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,obitos_i60_i69,P05_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,obitos_i60_i69,P95_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,obitos_i60_i64,P05_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,obitos_i60_i64,P95_vs_P50,293,329,0.2,0.7019
+Serrana,ur_med,obitos_i60_i64,P05_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,obitos_i60_i64,P95_vs_P50,293,329,0.5,1.0
+Serrana,ur_med,obitos_i60_i64,P05_vs_P50,293,329,0.8,1.0
+Serrana,ur_med,obitos_i60_i64,P95_vs_P50,293,329,0.8,1.0

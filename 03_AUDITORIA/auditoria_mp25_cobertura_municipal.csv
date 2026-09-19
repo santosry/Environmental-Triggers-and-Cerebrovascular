@@ -1,0 +1,93 @@
+Municipio;Macroregiao;PM25_medio;Fonte;Vizinho;Distancia_graus;Status;Cobertura_%
+Paraty;Baía da Ilha Grande;15.57;Monitorado;;0.0;Monitorado;100.0
+Angra dos Reis;Baía da Ilha Grande;20.829166666666666;Monitorado;;0.0;Monitorado;100.0
+Arraial do Cabo;Baixada Litorânea;9.4725;Monitorado;;0.0;Monitorado;100.0
+Mangaratiba;Baía da Ilha Grande;23.819166666666664;Monitorado;;0.0;Monitorado;100.0
+Maricá;Metropolitana II;16.566666666666666;Monitorado;;0.0;Monitorado;100.0
+Saquarema;Baixada Litorânea;11.923333333333334;Monitorado;;0.0;Monitorado;100.0
+Niterói;Metropolitana II;21.136666666666667;Monitorado;;0.0;Monitorado;100.0
+Araruama;Baixada Litorânea;11.269166666666669;Monitorado;;0.0;Monitorado;100.0
+Itaguaí;Metropolitana I;24.48416666666667;Monitorado;;0.0;Monitorado;100.0
+São Pedro da Aldeia;Baixada Litorânea;10.1875;Monitorado;;0.0;Monitorado;100.0
+São Gonçalo;Metropolitana II;20.146666666666665;Monitorado;;0.0;Monitorado;100.0
+São João de Meriti;Metropolitana I;23.8075;Monitorado;;0.0;Monitorado;100.0
+Belford Roxo;Metropolitana I;24.085;Monitorado;;0.0;Monitorado;100.0
+Itaboraí;Metropolitana II;17.8575;Monitorado;;0.0;Monitorado;100.0
+Armação dos Búzios;Baixada Litorânea;9.252499999999998;Monitorado;;0.0;Monitorado;100.0
+Tanguá;Metropolitana II;15.82;Monitorado;;0.0;Monitorado;100.0
+Rio Claro;Médio Paraíba;24.376666666666665;Monitorado;;0.0;Monitorado;100.0
+Queimados;Metropolitana I;24.274166666666662;Monitorado;;0.0;Monitorado;100.0
+Magé;Metropolitana I;19.9925;Monitorado;;0.0;Monitorado;100.0
+Silva Jardim;Metropolitana II;12.173333333333334;Monitorado;;0.0;Monitorado;100.0
+Japeri;Metropolitana I;23.815;Monitorado;;0.0;Monitorado;100.0
+Piraí;Médio Paraíba;24.42083333333333;Monitorado;;0.0;Monitorado;100.0
+Paracambi;Centro-Sul;23.66;Monitorado;;0.0;Monitorado;100.0
+Engenheiro Paulo de Frontin;Centro-Sul;22.93916666666667;Monitorado;;0.0;Monitorado;100.0
+Barra Mansa;Médio Paraíba;22.50333333333333;Monitorado;;0.0;Monitorado;100.0
+Guapimirim;Serrana;18.328333333333337;Monitorado;;0.0;Monitorado;100.0
+Mendes;Centro-Sul;22.865833333333335;Monitorado;;0.0;Monitorado;100.0
+Volta Redonda;Médio Paraíba;22.88083333333333;Monitorado;;0.0;Monitorado;100.0
+Itatiaia;Médio Paraíba;19.36083333333333;Monitorado;;0.0;Monitorado;100.0
+Casimiro de Abreu;Baixada Litorânea;11.4775;Monitorado;;0.0;Monitorado;100.0
+Barra do Piraí;Médio Paraíba;22.576666666666668;Monitorado;;0.0;Monitorado;100.0
+Cachoeiras de Macacu;Serrana;14.634166666666664;Monitorado;;0.0;Monitorado;100.0
+Paty do Alferes;Centro-Sul;20.85666666666667;Monitorado;;0.0;Monitorado;100.0
+Porto Real;Médio Paraíba;20.790000000000003;Monitorado;;0.0;Monitorado;100.0
+Vassouras;Centro-Sul;21.38083333333333;Monitorado;;0.0;Monitorado;100.0
+Quatis;Médio Paraíba;20.894166666666667;Monitorado;;0.0;Monitorado;100.0
+Macaé;Norte;9.491666666666667;Monitorado;;0.0;Monitorado;100.0
+Nova Friburgo;Serrana;13.625;Monitorado;;0.0;Monitorado;100.0
+Valença;Médio Paraíba;6.860833333333333;Monitorado;;0.0;Monitorado;100.0
+Areal;Centro-Sul;17.333333333333332;Monitorado;;0.0;Monitorado;100.0
+Carapebus;Norte;9.494166666666668;Monitorado;;0.0;Monitorado;100.0
+Rio das Flores;Centro-Sul;18.69083333333333;Monitorado;;0.0;Monitorado;100.0
+Paraíba do Sul;Centro-Sul;17.674999999999997;Monitorado;;0.0;Monitorado;100.0
+Bom Jardim;Serrana;9.854166666666666;Monitorado;;0.0;Monitorado;100.0
+São José do Vale do Rio Preto;Serrana;15.755833333333332;Monitorado;;0.0;Monitorado;100.0
+Três Rios;Centro-Sul;16.860833333333332;Monitorado;;0.0;Monitorado;100.0
+Quissamã;Norte;9.224166666666669;Monitorado;;0.0;Monitorado;100.0
+Conceição de Macabu;Norte;10.483333333333333;Monitorado;;0.0;Monitorado;100.0
+Trajano de Moraes;Serrana;11.5325;Monitorado;;0.0;Monitorado;100.0
+Duas Barras;Serrana;13.851666666666668;Monitorado;;0.0;Monitorado;100.0
+Comendador Levy Gasparian;Centro-Sul;15.980833333333331;Monitorado;;0.0;Monitorado;100.0
+Cordeiro;Serrana;13.113333333333337;Monitorado;;0.0;Monitorado;100.0
+Sapucaia;Centro-Sul;14.936666666666667;Monitorado;;0.0;Monitorado;100.0
+Macuco;Serrana;12.608333333333333;Monitorado;;0.0;Monitorado;100.0
+São Sebastião do Alto;Serrana;11.998333333333337;Monitorado;;0.0;Monitorado;100.0
+Santa Maria Madalena;Serrana;11.371666666666668;Monitorado;;0.0;Monitorado;100.0
+Carmo;Serrana;14.051666666666668;Monitorado;;0.0;Monitorado;100.0
+Campos dos Goytacazes;Norte;9.303333333333333;Monitorado;;0.0;Monitorado;100.0
+Itaocara;Noroeste;11.686666666666667;Monitorado;;0.0;Monitorado;100.0
+São Fidélis;Norte;10.391666666666667;Monitorado;;0.0;Monitorado;100.0
+São João da Barra;Norte;8.770833333333334;Monitorado;;0.0;Monitorado;100.0
+Aperibé;Noroeste;11.766666666666666;Monitorado;;0.0;Monitorado;100.0
+Cambuci;Noroeste;11.055;Monitorado;;0.0;Monitorado;100.0
+Santo Antônio de Pádua;Noroeste;12.020833333333334;Monitorado;;0.0;Monitorado;100.0
+Cardoso Moreira;Noroeste;10.2425;Monitorado;;0.0;Monitorado;100.0
+São Francisco de Itabapoana;Norte;9.100833333333332;Monitorado;;0.0;Monitorado;100.0
+Italva;Noroeste;10.484166666666669;Monitorado;;0.0;Monitorado;100.0
+São José de Ubá;Noroeste;11.2325;Monitorado;;0.0;Monitorado;100.0
+Laje do Muriaé;Noroeste;11.738333333333337;Monitorado;;0.0;Monitorado;100.0
+Itaperuna;Noroeste;11.136666666666668;Monitorado;;0.0;Monitorado;100.0
+Bom Jesus do Itabapoana;Noroeste;10.635;Monitorado;;0.0;Monitorado;100.0
+Natividade;Noroeste;11.379166666666665;Monitorado;;0.0;Monitorado;100.0
+Porciúncula;Noroeste;11.5375;Monitorado;;0.0;Monitorado;100.0
+Varre-Sai;Noroeste;11.073333333333332;Monitorado;;0.0;Monitorado;100.0
+Cabo Frio;Baixada Litorânea;10.1875;Vizinho mais proximo (São Pedro da Aldeia, 0.087 deg);São Pedro da Aldeia;0.0874;Vizinho_mais_proximo;100.0
+Cantagalo;Serrana;11.766666666666666;Vizinho mais proximo (Aperibé, 0.162 deg);Aperibé;0.1616;Vizinho_mais_proximo;100.0
+Duque de Caxias;Metropolitana I;23.8075;Vizinho mais proximo (São João de Meriti, 0.071 deg);São João de Meriti;0.0709;Vizinho_mais_proximo;100.0
+Iguaba Grande;Baixada Litorânea;11.269166666666669;Vizinho mais proximo (Araruama, 0.107 deg);Araruama;0.1073;Vizinho_mais_proximo;100.0
+Mesquita;Metropolitana I;24.085;Vizinho mais proximo (Belford Roxo, 0.035 deg);Belford Roxo;0.0351;Vizinho_mais_proximo;100.0
+Miguel Pereira;Centro-Sul;20.85666666666667;Vizinho mais proximo (Paty do Alferes, 0.047 deg);Paty do Alferes;0.0466;Vizinho_mais_proximo;100.0
+Miracema;Noroeste;12.020833333333334;Vizinho mais proximo (Santo Antônio de Pádua, 0.130 deg);Santo Antônio de Pádua;0.1301;Vizinho_mais_proximo;100.0
+Nilópolis;Metropolitana I;23.8075;Vizinho mais proximo (São João de Meriti, 0.041 deg);São João de Meriti;0.0409;Vizinho_mais_proximo;100.0
+Nova Iguaçu;Metropolitana I;24.085;Vizinho mais proximo (Belford Roxo, 0.050 deg);Belford Roxo;0.0498;Vizinho_mais_proximo;100.0
+Petrópolis;Serrana;18.328333333333337;Vizinho mais proximo (Guapimirim, 0.191 deg);Guapimirim;0.1914;Vizinho_mais_proximo;100.0
+Pinheiral;Médio Paraíba;22.88083333333333;Vizinho mais proximo (Volta Redonda, 0.103 deg);Volta Redonda;0.1031;Vizinho_mais_proximo;100.0
+Resende;Médio Paraíba;19.36083333333333;Vizinho mais proximo (Itatiaia, 0.123 deg);Itatiaia;0.1226;Vizinho_mais_proximo;100.0
+Rio Bonito;Metropolitana II;15.82;Vizinho mais proximo (Tanguá, 0.100 deg);Tanguá;0.1003;Vizinho_mais_proximo;100.0
+Rio das Ostras;Baixada Litorânea;9.491666666666667;Vizinho mais proximo (Macaé, 0.220 deg);Macaé;0.2199;Vizinho_mais_proximo;100.0
+Rio de Janeiro;Metropolitana I;21.136666666666667;Vizinho mais proximo (Niterói, 0.073 deg);Niterói;0.0734;Vizinho_mais_proximo;100.0
+Seropédica;Metropolitana I;23.815;Vizinho mais proximo (Japeri, 0.111 deg);Japeri;0.1111;Vizinho_mais_proximo;100.0
+Sumidouro;Serrana;14.051666666666668;Vizinho mais proximo (Carmo, 0.138 deg);Carmo;0.138;Vizinho_mais_proximo;100.0
+Teresópolis;Serrana;18.328333333333337;Vizinho mais proximo (Guapimirim, 0.125 deg);Guapimirim;0.1248;Vizinho_mais_proximo;100.0

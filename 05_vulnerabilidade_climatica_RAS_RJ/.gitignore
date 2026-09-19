@@ -1,0 +1,3 @@
+/01_dados/tmp_parquet/
+/01_dados/processados/*.csv
+/10_auditoria/AUDITORIA_COMPLETA_R.md

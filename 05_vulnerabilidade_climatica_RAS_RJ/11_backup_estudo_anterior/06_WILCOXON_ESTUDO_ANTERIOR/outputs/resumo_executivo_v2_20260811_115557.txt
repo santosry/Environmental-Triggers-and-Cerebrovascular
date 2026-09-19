@@ -1,0 +1,26 @@
+RESUMO EXECUTIVO — WILCOXON v2 EXPANDIDA
+============================================================
+data_execucao: 20260811_115557
+versao: v2_expandida
+audit_registros: 33
+qualidade_media: 0.2857
+n_testes_macro: 288
+n_testes_estratificados: 440
+n_testes_chi2: 288
+n_testes_sazonais: 216
+n_testes_dia_util: 144
+n_testes_mensais: 72
+n_total_testes: 1448
+sinais_mw_fdr005_macro: 6
+sinais_ks_fdr005_macro: 6
+sinais_combinados_macro: 6
+sinais_estrat_fdr005: 38
+sinais_chi2_fdr005: 0
+sinais_sazonais_fdr005: 13
+sinais_diautil_fdr005: 10
+sinais_mensais_fdr005: 0
+concordancia_MW_KS: 88.5%
+concordancia_MW_BM: 78.5%
+corr_spearman_MW_KS: 0.869
+jackknife_media_sinais: 30.2
+jackknife_std_sinais: 3.5

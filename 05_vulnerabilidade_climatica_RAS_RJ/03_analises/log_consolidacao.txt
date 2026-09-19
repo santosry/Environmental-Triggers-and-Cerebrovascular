@@ -1,0 +1,80 @@
+======================================================================
+CONSOLIDAÇÃO PARALELA — SIH-RD e SIM
+======================================================================
+Arquivos SIH encontrados: 192
+Arquivos SIM encontrados: 15
+Processando SIH...
+  sih: 72/192 já convertidos; 120 pendentes
+  sih: 10/120 pendentes processados
+  sih: 20/120 pendentes processados
+  sih: 30/120 pendentes processados
+  sih: 40/120 pendentes processados
+  sih: 50/120 pendentes processados
+  sih: 60/120 pendentes processados
+  sih: 70/120 pendentes processados
+  sih: 80/120 pendentes processados
+  sih: 90/120 pendentes processados
+  sih: 100/120 pendentes processados
+  sih: 110/120 pendentes processados
+  sih: 120/120 pendentes processados
+SIH bruto I60-I69 (residentes RJ): 198,443
+Processando SIM...
+  sim: 0/15 já convertidos; 15 pendentes
+  sim: 10/15 pendentes processados
+  sim: 15/15 pendentes processados
+SIM bruto I60-I69 (residentes RJ): 147,551
+Duplicatas SIH removidas: 0
+SIH único (antes filtro período): 198,443
+SIH após filtro DT_INTER 2010-2024: 177,749
+SIM após filtro DTOBITO 2010-2024: 147,551
+Traceback (most recent call last):
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\integer.py", line 53, in _safe_cast
+    return values.astype(dtype, casting="safe", copy=copy)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Cannot cast array data from dtype('O') to dtype('int32') according to the rule 'safe'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\vulnerabilidade_climatica_RAS_RJ\02_scripts\01_consolidar_dados.py", line 223, in <module>
+    sih.loc[cod == "3", "idade_anos"] = sih.loc[cod == "3", "idade_anos"] / 12
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\indexing.py", line 912, in __setitem__
+    iloc._setitem_with_indexer(indexer, value, self.name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\indexing.py", line 1943, in _setitem_with_indexer
+    self._setitem_with_indexer_split_path(indexer, value, name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\indexing.py", line 1987, in _setitem_with_indexer_split_path
+    self._setitem_single_column(ilocs[0], value, pi)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\indexing.py", line 2176, in _setitem_single_column
+    self.obj._mgr.column_setitem(loc, plane_indexer, value)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 1356, in column_setitem
+    new_mgr = col_mgr.setitem((idx,), value)
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 434, in setitem
+    return self.apply("setitem", indexer=indexer, value=value)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\managers.py", line 363, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\internals\blocks.py", line 2129, in setitem
+    values[indexer] = value
+    ~~~~~~^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\masked.py", line 320, in __setitem__
+    value, mask = self._coerce_to_array(value, dtype=self.dtype)
+                  ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\numeric.py", line 272, in _coerce_to_array
+    values, mask, _, _ = _coerce_to_data_and_mask(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~^
+        value, dtype, copy, dtype_cls, default_dtype
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\numeric.py", line 229, in _coerce_to_data_and_mask
+    values = dtype_cls._safe_cast(values, dtype, copy=False)
+  File "C:\Users\oorie\AppData\Local\Programs\Python\Python314\Lib\site-packages\pandas\core\arrays\integer.py", line 59, in _safe_cast
+    raise TypeError(
+        f"cannot safely cast non-equivalent {values.dtype} to {np.dtype(dtype)}"
+    ) from err
+TypeError: cannot safely cast non-equivalent object to int32

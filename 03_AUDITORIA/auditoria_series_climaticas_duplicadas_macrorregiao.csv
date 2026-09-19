@@ -1,0 +1,37 @@
+macro_a,macro_b,temp_identica,ur_identica
+Baia da Ilha Grande,Baixada Litoranea,FALSE,FALSE
+Baia da Ilha Grande,Centro-Sul,FALSE,FALSE
+Baia da Ilha Grande,Medio Paraiba,FALSE,FALSE
+Baia da Ilha Grande,Metropolitana I,FALSE,FALSE
+Baia da Ilha Grande,Metropolitana II,FALSE,FALSE
+Baia da Ilha Grande,Noroeste,FALSE,FALSE
+Baia da Ilha Grande,Norte,FALSE,FALSE
+Baia da Ilha Grande,Serrana,FALSE,FALSE
+Baixada Litoranea,Centro-Sul,FALSE,FALSE
+Baixada Litoranea,Medio Paraiba,FALSE,FALSE
+Baixada Litoranea,Metropolitana I,FALSE,FALSE
+Baixada Litoranea,Metropolitana II,FALSE,FALSE
+Baixada Litoranea,Noroeste,FALSE,FALSE
+Baixada Litoranea,Norte,FALSE,FALSE
+Baixada Litoranea,Serrana,FALSE,FALSE
+Centro-Sul,Medio Paraiba,FALSE,FALSE
+Centro-Sul,Metropolitana I,FALSE,FALSE
+Centro-Sul,Metropolitana II,FALSE,FALSE
+Centro-Sul,Noroeste,FALSE,FALSE
+Centro-Sul,Norte,FALSE,FALSE
+Centro-Sul,Serrana,FALSE,FALSE
+Medio Paraiba,Metropolitana I,FALSE,FALSE
+Medio Paraiba,Metropolitana II,FALSE,FALSE
+Medio Paraiba,Noroeste,FALSE,FALSE
+Medio Paraiba,Norte,FALSE,FALSE
+Medio Paraiba,Serrana,FALSE,FALSE
+Metropolitana I,Metropolitana II,FALSE,FALSE
+Metropolitana I,Noroeste,FALSE,FALSE
+Metropolitana I,Norte,FALSE,FALSE
+Metropolitana I,Serrana,FALSE,FALSE
+Metropolitana II,Noroeste,FALSE,FALSE
+Metropolitana II,Norte,FALSE,FALSE
+Metropolitana II,Serrana,FALSE,FALSE
+Noroeste,Norte,FALSE,FALSE
+Noroeste,Serrana,FALSE,FALSE
+Norte,Serrana,FALSE,FALSE

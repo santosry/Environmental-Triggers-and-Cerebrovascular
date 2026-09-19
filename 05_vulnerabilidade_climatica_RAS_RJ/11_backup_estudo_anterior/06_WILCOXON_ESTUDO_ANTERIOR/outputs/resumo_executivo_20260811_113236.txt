@@ -1,0 +1,18 @@
+RESUMO EXECUTIVO — ANÁLISE WILCOXON
+============================================================
+data_execucao: 20260811_113236
+n_testes_macro: 144
+n_testes_estratificado: 201
+n_testes_sensibilidade: 288
+sinais_macro_fdr005: 17
+sinais_macro_fdr010: 32
+sinais_estrat_fdr005: 27
+sinais_estrat_fdr010: 35
+sinais_sensibilidade_fdr005: 19
+concordancia_P10P90: 70.1%
+concordancia_semPand: 88.9%
+power_median_d05: 1.000
+cliffs_delta_mean: -0.0054
+macroregioes: 9
+total_eventos_individuais: 435946
+n_rows_macro: 52596
