@@ -1,0 +1,34 @@
+etapa,dataset,n_rows,n_cols,n_nas_total,n_duplicatas,na_details,status,macro_regiao,n_days,date_range_start,date_range_end,n_gaps,total_gap_days,gap_details,variavel,outliers_low,outliers_high,lower_bound,upper_bound,pct_outliers,zero_inflation_score,overdispersion,n_zeros,pct_zeros,check,sih_unique_dates,sim_unique_dates,overlap,pct_overlap,counts,n_categories,max_proportion,mw_U,mw_p,break_detected,completeness,outlier_frac,quality_score,n_na,n_outliers
+A1_integridade,macro,52596.0,32.0,64.0,0.0,"{""temp_min"": 5, ""temp_max"": 5, ""influenza_lag7"": 54}",WARN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+A1_integridade,sih,288395.0,10.0,0.0,25764.0,none,WARN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+A1_integridade,sim,147551.0,9.0,584.0,952.0,"{""mun_nome"": 292, ""macro_regiao"": 292}",WARN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Baia da Ilha Grande,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Baixada Litoranea,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Centro-Sul,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Medio Paraiba,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Metropolitana I,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Metropolitana II,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Noroeste,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Norte,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A2_temporal,,,,,,,PASS,Serrana,5844.0,2010-01-01,2025-12-31,0.0,0.0,none,,,,,,,,,,,,,,,,,,,,,,,,,,
+A3_outliers,,,,,,,WARN,,,,,,,,internacoes_i60_i69,0.0,6527.0,-5.0,11.0,12.41,,,,,,,,,,,,,,,,,,,,
+A3_outliers,,,,,,,WARN,,,,,,,,internacoes_i60_i64,0.0,5752.0,-5.0,11.0,10.94,,,,,,,,,,,,,,,,,,,,
+A3_outliers,,,,,,,WARN,,,,,,,,obitos_i60_i69,0.0,5633.0,-4.5,7.5,10.71,,,,,,,,,,,,,,,,,,,,
+A3_outliers,,,,,,,WARN,,,,,,,,obitos_i60_i64,0.0,5475.0,-3.0,5.0,10.41,,,,,,,,,,,,,,,,,,,,
+A4_zero_inflation,,,,,,,WARN,,,,,,,,internacoes_i60_i69,,,,,,34.51,60.69,7544.0,14.34,,,,,,,,,,,,,,,,
+A4_zero_inflation,,,,,,,WARN,,,,,,,,internacoes_i60_i64,,,,,,14.83,8.94,8419.0,16.01,,,,,,,,,,,,,,,,
+A4_zero_inflation,,,,,,,WARN,,,,,,,,obitos_i60_i69,,,,,,5.86,8.66,17441.0,33.16,,,,,,,,,,,,,,,,
+A4_zero_inflation,,,,,,,WARN,,,,,,,,obitos_i60_i64,,,,,,2.91,6.26,24140.0,45.9,,,,,,,,,,,,,,,,
+A5_cruzada,,,,,,,PASS,,,,,,,,,,,,,,,,,,datas_comuns_SIH_SIM,45052.0,33055.0,29729.0,66.0,,,,,,,,,,,
+A6_balanceamento,sih,,,,,,PASS,,,,,,,,sexo,,,,,,,,,,,,,,,"{""1"": 149494, ""3"": 138901}",2.0,0.518,,,,,,,,
+A6_balanceamento,sim,,,,,,PASS,,,,,,,,sexo,,,,,,,,,,,,,,,"{""2"": 75990, ""1"": 71549, ""0"": 10, ""9"": 2}",4.0,0.515,,,,,,,,
+A7_structural_break,,,,,,,WARN,,,,,,,,internacoes_i60_i69,,,,,,,,,,,,,,,,,,248931853.0,0.0,True,,,,,
+A7_structural_break,,,,,,,WARN,,,,,,,,internacoes_i60_i64,,,,,,,,,,,,,,,,,,252482282.5,0.0,True,,,,,
+A7_structural_break,,,,,,,WARN,,,,,,,,obitos_i60_i69,,,,,,,,,,,,,,,,,,264559680.5,0.0,True,,,,,
+A7_structural_break,,,,,,,WARN,,,,,,,,obitos_i60_i64,,,,,,,,,,,,,,,,,,283670067.0,0.0,True,,,,,
+A8_quality_score,,,,,,,WARN,,,,,,,,temp_med,,,,,,,,,,,,,,,,,,,,,1.0,0.0175,0.8255,0.0,918.0
+A8_quality_score,,,,,,,WARN,,,,,,,,ur_med,,,,,,,,,,,,,,,,,,,,,1.0,0.0111,0.8886,0.0,586.0
+A8_quality_score,,,,,,,WARN,,,,,,,,internacoes_i60_i69,,,,,,,,,,,,,,,,,,,,,1.0,0.1241,0.0,0.0,6527.0
+A8_quality_score,,,,,,,WARN,,,,,,,,internacoes_i60_i64,,,,,,,,,,,,,,,,,,,,,1.0,0.1094,0.0,0.0,5752.0
+A8_quality_score,,,,,,,WARN,,,,,,,,obitos_i60_i69,,,,,,,,,,,,,,,,,,,,,1.0,0.1071,0.0,0.0,5633.0
+A8_quality_score,,,,,,,WARN,,,,,,,,obitos_i60_i64,,,,,,,,,,,,,,,,,,,,,1.0,0.1041,0.0,0.0,5475.0

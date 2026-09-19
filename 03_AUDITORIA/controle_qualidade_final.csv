@@ -1,0 +1,6 @@
+item,valor,status
+arquivos_obrigatorios,TRUE;TRUE;TRUE;TRUE;TRUE;TRUE;TRUE,ok
+n_macrorregioes,9,ok
+dias_por_macro,5844,ok
+modelos_dlnm,128,falha
+alerta_convergencia,26,falha

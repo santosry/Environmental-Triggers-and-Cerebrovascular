@@ -1,0 +1,93 @@
+ibge6,lon_mun,lat_mun,fonte_geometria,ibge7,mun_nome,mun_nome_norm
+330010,-44.3033,-22.9756,tabela_estatica_ibge_sedes_municipais,3300100,Angra dos Reis,ANGRA DOS REIS
+330015,-42.1042,-21.6256,tabela_estatica_ibge_sedes_municipais,3300150,Aperibé,APERIBE
+330020,-42.3378,-22.8731,tabela_estatica_ibge_sedes_municipais,3300200,Araruama,ARARUAMA
+330022,-43.1094,-22.2314,tabela_estatica_ibge_sedes_municipais,3300220,Areal,AREAL
+330023,-41.8875,-22.6164,tabela_estatica_ibge_sedes_municipais,3300230,Armação dos Búzios,ARMACAO DOS BUZIOS
+330025,-42.0214,-22.9753,tabela_estatica_ibge_sedes_municipais,3300250,Arraial do Cabo,ARRAIAL DO CABO
+330030,-43.8306,-22.4689,tabela_estatica_ibge_sedes_municipais,3300300,Barra do Piraí,BARRA DO PIRAI
+330040,-44.1664,-22.5367,tabela_estatica_ibge_sedes_municipais,3300400,Barra Mansa,BARRA MANSA
+330045,-43.3969,-22.7639,tabela_estatica_ibge_sedes_municipais,3300450,Belford Roxo,BELFORD ROXO
+330050,-42.2683,-22.1528,tabela_estatica_ibge_sedes_municipais,3300500,Bom Jardim,BOM JARDIM
+330060,-41.6797,-21.1356,tabela_estatica_ibge_sedes_municipais,3300600,Bom Jesus do Itabapoana,BOM JESUS DO ITABAPOANA
+330070,-42.0264,-22.8808,tabela_estatica_ibge_sedes_municipais,3300700,Cabo Frio,CABO FRIO
+330080,-42.655,-22.4625,tabela_estatica_ibge_sedes_municipais,3300800,Cachoeiras de Macacu,CACHOEIRAS DE MACACU
+330090,-41.9583,-21.5875,tabela_estatica_ibge_sedes_municipais,3300900,Cambuci,CAMBUCI
+330093,-41.73,-22.1842,tabela_estatica_ibge_sedes_municipais,3300930,Carapebus,CARAPEBUS
+330095,-43.2044,-22.0289,tabela_estatica_ibge_sedes_municipais,3300950,Comendador Levy Gasparian,COMENDADOR LEVY GASPARIAN
+330100,-41.3439,-21.7147,tabela_estatica_ibge_sedes_municipais,3301000,Campos dos Goytacazes,CAMPOS DOS GOYTACAZES
+330110,-42.3678,-21.98,tabela_estatica_ibge_sedes_municipais,3301100,Cantagalo,CANTAGALO
+330115,-41.6147,-21.4875,tabela_estatica_ibge_sedes_municipais,3301150,Cardoso Moreira,CARDOSO MOREIRA
+330120,-42.6008,-21.9386,tabela_estatica_ibge_sedes_municipais,3301200,Carmo,CARMO
+330130,-42.19,-22.4808,tabela_estatica_ibge_sedes_municipais,3301300,Casimiro de Abreu,CASIMIRO DE ABREU
+330140,-41.8703,-22.0867,tabela_estatica_ibge_sedes_municipais,3301400,Conceição de Macabu,CONCEICAO DE MACABU
+330150,-42.3636,-22.2267,tabela_estatica_ibge_sedes_municipais,3301500,Cordeiro,CORDEIRO
+330160,-42.5272,-22.1503,tabela_estatica_ibge_sedes_municipais,3301600,Duas Barras,DUAS BARRAS
+330170,-43.2822,-22.5897,tabela_estatica_ibge_sedes_municipais,3301700,Duque de Caxias,DUQUE DE CAXIAS
+330180,-43.5553,-22.4917,tabela_estatica_ibge_sedes_municipais,3301800,Engenheiro Paulo de Frontin,ENGENHEIRO PAULO DE FRONTIN
+330185,-42.9864,-22.5378,tabela_estatica_ibge_sedes_municipais,3301850,Guapimirim,GUAPIMIRIM
+330187,-42.7264,-22.8375,tabela_estatica_ibge_sedes_municipais,3301870,Iguaba Grande,IGUABA GRANDE
+330190,-42.8569,-22.7436,tabela_estatica_ibge_sedes_municipais,3301900,Itaboraí,ITABORAI
+330200,-43.7756,-22.8672,tabela_estatica_ibge_sedes_municipais,3302000,Itaguaí,ITAGUAI
+330205,-41.4203,-21.4306,tabela_estatica_ibge_sedes_municipais,3302050,Italva,ITALVA
+330210,-42.0717,-21.6725,tabela_estatica_ibge_sedes_municipais,3302100,Itaocara,ITAOCARA
+330220,-41.8042,-21.5567,tabela_estatica_ibge_sedes_municipais,3302200,Itaperuna,ITAPERUNA
+330225,-44.5581,-22.4942,tabela_estatica_ibge_sedes_municipais,3302250,Itatiaia,ITATIAIA
+330227,-43.6536,-22.6431,tabela_estatica_ibge_sedes_municipais,3302270,Japeri,JAPERI
+330230,-42.1008,-21.53,tabela_estatica_ibge_sedes_municipais,3302300,Laje do Muriaé,LAJE DO MURIAE
+330240,-41.8119,-22.3761,tabela_estatica_ibge_sedes_municipais,3302400,Macaé,MACAE
+330245,-42.2583,-21.9614,tabela_estatica_ibge_sedes_municipais,3302450,Macuco,MACUCO
+330250,-43.0408,-22.6528,tabela_estatica_ibge_sedes_municipais,3302500,Magé,MAGE
+330260,-43.9856,-22.9603,tabela_estatica_ibge_sedes_municipais,3302600,Mangaratiba,MANGARATIBA
+330270,-42.8225,-22.92,tabela_estatica_ibge_sedes_municipais,3302700,Maricá,MARICA
+330280,-43.7231,-22.5281,tabela_estatica_ibge_sedes_municipais,3302800,Mendes,MENDES
+330285,-43.4342,-22.7828,tabela_estatica_ibge_sedes_municipais,3302850,Mesquita,MESQUITA
+330290,-43.4689,-22.4569,tabela_estatica_ibge_sedes_municipais,3302900,Miguel Pereira,MIGUEL PEREIRA
+330300,-42.2022,-21.4125,tabela_estatica_ibge_sedes_municipais,3303000,Miracema,MIRACEMA
+330310,-42.013,-21.0517,tabela_estatica_ibge_sedes_municipais,3303100,Natividade,NATIVIDADE
+330320,-43.4167,-22.8083,tabela_estatica_ibge_sedes_municipais,3303200,Nilópolis,NILOPOLIS
+330330,-43.1019,-22.8675,tabela_estatica_ibge_sedes_municipais,3303300,Niterói,NITEROI
+330340,-42.5347,-22.2847,tabela_estatica_ibge_sedes_municipais,3303400,Nova Friburgo,NOVA FRIBURGO
+330350,-43.4544,-22.7597,tabela_estatica_ibge_sedes_municipais,3303500,Nova Iguaçu,NOVA IGUACU
+330360,-43.7064,-22.6108,tabela_estatica_ibge_sedes_municipais,3303600,Paracambi,PARACAMBI
+330370,-43.2922,-22.1586,tabela_estatica_ibge_sedes_municipais,3303700,Paraíba do Sul,PARAIBA DO SUL
+330380,-44.7269,-23.2236,tabela_estatica_ibge_sedes_municipais,3303800,Paraty,PARATY
+330385,-43.4178,-22.3472,tabela_estatica_ibge_sedes_municipais,3303850,Paty do Alferes,PATY DO ALFERES
+330390,-43.1864,-22.5042,tabela_estatica_ibge_sedes_municipais,3303900,Petrópolis,PETROPOLIS
+330395,-44.1358,-22.5186,tabela_estatica_ibge_sedes_municipais,3303950,Pinheiral,PINHEIRAL
+330400,-43.9008,-22.6331,tabela_estatica_ibge_sedes_municipais,3304000,Piraí,PIRAI
+330410,-41.9817,-20.9664,tabela_estatica_ibge_sedes_municipais,3304100,Porciúncula,PORCIUNCULA
+330411,-44.2892,-22.4214,tabela_estatica_ibge_sedes_municipais,3304110,Porto Real,PORTO REAL
+330412,-44.2575,-22.4081,tabela_estatica_ibge_sedes_municipais,3304120,Quatis,QUATIS
+330414,-43.5556,-22.7133,tabela_estatica_ibge_sedes_municipais,3304140,Queimados,QUEIMADOS
+330415,-41.4667,-22.1083,tabela_estatica_ibge_sedes_municipais,3304150,Quissamã,QUISSAMA
+330420,-44.445,-22.4514,tabela_estatica_ibge_sedes_municipais,3304200,Resende,RESENDE
+330430,-42.6139,-22.7044,tabela_estatica_ibge_sedes_municipais,3304300,Rio Bonito,RIO BONITO
+330440,-44.0409,-22.6536,tabela_estatica_ibge_sedes_municipais,3304400,Rio Claro,RIO CLARO
+330450,-43.5811,-22.1689,tabela_estatica_ibge_sedes_municipais,3304500,Rio das Flores,RIO DAS FLORES
+330452,-41.9058,-22.5281,tabela_estatica_ibge_sedes_municipais,3304520,Rio das Ostras,RIO DAS OSTRAS
+330455,-43.2075,-22.9068,tabela_estatica_ibge_sedes_municipais,3304550,Rio de Janeiro,RIO DE JANEIRO
+330460,-42.0103,-21.9506,tabela_estatica_ibge_sedes_municipais,3304600,Santa Maria Madalena,SANTA MARIA MADALENA
+330470,-42.1725,-21.5344,tabela_estatica_ibge_sedes_municipais,3304700,Santo Antônio de Pádua,SANTO ANTONIO DE PADUA
+330475,-41.1247,-21.4475,tabela_estatica_ibge_sedes_municipais,3304750,São Francisco de Itabapoana,SAO FRANCISCO DE ITABAPOANA
+330480,-41.7431,-21.6467,tabela_estatica_ibge_sedes_municipais,3304800,São Fidélis,SAO FIDELIS
+330490,-43.0575,-22.8269,tabela_estatica_ibge_sedes_municipais,3304900,São Gonçalo,SAO GONCALO
+330500,-41.0433,-21.6386,tabela_estatica_ibge_sedes_municipais,3305000,São João da Barra,SAO JOAO DA BARRA
+330510,-43.3667,-22.8036,tabela_estatica_ibge_sedes_municipais,3305100,São João de Meriti,SAO JOAO DE MERITI
+330513,-42.2333,-21.3333,tabela_estatica_ibge_sedes_municipais,3305130,São José de Ubá,SAO JOSE DE UBA
+330515,-42.8639,-22.1667,tabela_estatica_ibge_sedes_municipais,3305150,São José do Vale do Rio Preto,SAO JOSE DO VALE DO RIO PRETO
+330520,-42.0986,-22.84,tabela_estatica_ibge_sedes_municipais,3305200,São Pedro da Aldeia,SAO PEDRO DA ALDEIA
+330530,-42.3,-22.0033,tabela_estatica_ibge_sedes_municipais,3305300,São Sebastião do Alto,SAO SEBASTIAO DO ALTO
+330540,-42.9131,-22.0019,tabela_estatica_ibge_sedes_municipais,3305400,Sapucaia,SAPUCAIA
+330550,-42.6089,-22.8711,tabela_estatica_ibge_sedes_municipais,3305500,Saquarema,SAQUAREMA
+330555,-43.6847,-22.7578,tabela_estatica_ibge_sedes_municipais,3305550,Seropédica,SEROPEDICA
+330560,-42.4156,-22.6458,tabela_estatica_ibge_sedes_municipais,3305600,Silva Jardim,SILVA JARDIM
+330570,-42.6733,-22.0897,tabela_estatica_ibge_sedes_municipais,3305700,Sumidouro,SUMIDOURO
+330575,-42.7144,-22.7408,tabela_estatica_ibge_sedes_municipais,3305750,Tanguá,TANGUA
+330580,-42.9869,-22.4486,tabela_estatica_ibge_sedes_municipais,3305800,Teresópolis,TERESOPOLIS
+330590,-42.2575,-22.2125,tabela_estatica_ibge_sedes_municipais,3305900,Trajano de Moraes,TRAJANO DE MORAES
+330600,-43.2083,-22.0983,tabela_estatica_ibge_sedes_municipais,3306000,Três Rios,TRES RIOS
+330610,-43.6956,-22.3581,tabela_estatica_ibge_sedes_municipais,3306100,Valença,VALENCA
+330615,-41.8403,-20.9203,tabela_estatica_ibge_sedes_municipais,3306150,Varre-Sai,VARRE SAI
+330620,-43.6586,-22.4044,tabela_estatica_ibge_sedes_municipais,3306200,Vassouras,VASSOURAS
+330630,-44.1014,-22.4828,tabela_estatica_ibge_sedes_municipais,3306300,Volta Redonda,VOLTA REDONDA

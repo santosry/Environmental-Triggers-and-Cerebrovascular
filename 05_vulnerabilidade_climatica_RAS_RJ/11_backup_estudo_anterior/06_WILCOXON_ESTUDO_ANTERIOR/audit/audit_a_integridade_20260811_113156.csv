@@ -1,0 +1,14 @@
+dataset,check,variaveis_com_na,n_rows,status,faltantes,count,hash
+macro,NAs,"temp_min=5, temp_max=5, influenza_lag7=54",52596.0,WARN,,,
+sih,NAs,nenhum,288395.0,PASS,,,
+sim,NAs,"mun_nome=292, macro_regiao=292",147551.0,WARN,,,
+macro,colunas_essenciais,,,PASS,nenhuma,,
+sih,colunas_essenciais,,,PASS,nenhuma,,
+sim,colunas_essenciais,,,PASS,nenhuma,,
+macro,negativos_internacoes_i60_i69,,,PASS,,0.0,
+macro,negativos_internacoes_i60_i64,,,PASS,,0.0,
+macro,negativos_obitos_i60_i69,,,PASS,,0.0,
+macro,negativos_obitos_i60_i64,,,PASS,,0.0,
+macro,sha256_16,,,INFO,,,34b3095e1ea646c5
+sih,sha256_16,,,INFO,,,29cb134478c6c7fc
+sim,sha256_16,,,INFO,,,99ed620811c23d32
