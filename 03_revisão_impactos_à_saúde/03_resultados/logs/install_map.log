@@ -1,0 +1,11 @@
+Installing packages into 'C:/Users/oorie/AppData/Local/R/win-library/4.6'
+(as 'lib' is unspecified)
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rnaturalearth_1.2.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rnaturalearthdata_1.0.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/sf_1.1-3.zip'
+package 'rnaturalearth' successfully unpacked and MD5 sums checked
+package 'rnaturalearthdata' successfully unpacked and MD5 sums checked
+package 'sf' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\oorie\AppData\Local\Temp\RtmpYDucAo\downloaded_packages

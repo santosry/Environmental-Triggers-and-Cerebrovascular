@@ -1,0 +1,229 @@
+Instalando (CRAN): meta, revtools, pubmedR, bibliometrix, PRISMA2020, robvis, metaDigitise, fulltext, clubSandwich, weightr, orchaRd 
+Installing packages into 'C:/Users/oorie/AppData/Local/R/win-library/4.6'
+(as 'lib' is unspecified)
+also installing the dependencies 'pixmap', 'NLP', 'janeaustenr', 'tokenizers', 'beeswarm', 'vipor', 'metabook', 'CompQuadForm', 'ade4', 'ngram', 'slam', 'SnowballC', 'tm', 'topicmodels', 'bibliometrixData', 'contentanalysis', 'dimensionsR', 'openalexR', 'rscopus', 'shinycssloaders', 'tidytext', 'shinyjs', 'webp', 'ggbeeswarm', 'latex2exp', 'rWishart', 'tester'
+
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/pixmap_0.4-14.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/NLP_0.3-3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/janeaustenr_1.0.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/tokenizers_0.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/beeswarm_0.4.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/vipor_0.4.7.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/metabook_0.2-0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/CompQuadForm_1.4.4.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ade4_1.7-24.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ngram_3.2.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/slam_0.1-56.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/SnowballC_0.7.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/tm_0.7-19.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/topicmodels_0.2-17.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/bibliometrixData_0.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/contentanalysis_1.1.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/dimensionsR_0.0.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/openalexR_3.1.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rscopus_0.9.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/shinycssloaders_1.1.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/tidytext_0.4.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/shinyjs_2.1.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/webp_1.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/ggbeeswarm_0.7.3.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/latex2exp_0.9.8.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rWishart_0.1.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/tester_0.3.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/meta_8.5-0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/revtools_0.4.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/pubmedR_1.0.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/bibliometrix_5.5.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/PRISMA2020_1.1.5.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/robvis_0.3.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/metaDigitise_1.0.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/clubSandwich_0.7.0.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/weightr_2.0.2.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/orchaRd_2.2.1.zip'
+package 'pixmap' successfully unpacked and MD5 sums checked
+package 'NLP' successfully unpacked and MD5 sums checked
+package 'janeaustenr' successfully unpacked and MD5 sums checked
+package 'tokenizers' successfully unpacked and MD5 sums checked
+package 'beeswarm' successfully unpacked and MD5 sums checked
+package 'vipor' successfully unpacked and MD5 sums checked
+package 'metabook' successfully unpacked and MD5 sums checked
+package 'CompQuadForm' successfully unpacked and MD5 sums checked
+package 'ade4' successfully unpacked and MD5 sums checked
+package 'ngram' successfully unpacked and MD5 sums checked
+package 'slam' successfully unpacked and MD5 sums checked
+package 'SnowballC' successfully unpacked and MD5 sums checked
+package 'tm' successfully unpacked and MD5 sums checked
+package 'topicmodels' successfully unpacked and MD5 sums checked
+package 'bibliometrixData' successfully unpacked and MD5 sums checked
+package 'contentanalysis' successfully unpacked and MD5 sums checked
+package 'dimensionsR' successfully unpacked and MD5 sums checked
+package 'openalexR' successfully unpacked and MD5 sums checked
+package 'rscopus' successfully unpacked and MD5 sums checked
+package 'shinycssloaders' successfully unpacked and MD5 sums checked
+package 'tidytext' successfully unpacked and MD5 sums checked
+package 'shinyjs' successfully unpacked and MD5 sums checked
+package 'webp' successfully unpacked and MD5 sums checked
+package 'ggbeeswarm' successfully unpacked and MD5 sums checked
+package 'latex2exp' successfully unpacked and MD5 sums checked
+package 'rWishart' successfully unpacked and MD5 sums checked
+package 'tester' successfully unpacked and MD5 sums checked
+package 'meta' successfully unpacked and MD5 sums checked
+package 'revtools' successfully unpacked and MD5 sums checked
+package 'pubmedR' successfully unpacked and MD5 sums checked
+package 'bibliometrix' successfully unpacked and MD5 sums checked
+package 'PRISMA2020' successfully unpacked and MD5 sums checked
+package 'robvis' successfully unpacked and MD5 sums checked
+package 'metaDigitise' successfully unpacked and MD5 sums checked
+package 'clubSandwich' successfully unpacked and MD5 sums checked
+package 'weightr' successfully unpacked and MD5 sums checked
+package 'orchaRd' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\oorie\AppData\Local\Temp\Rtmpo536pk\downloaded_packages
+Warning message:
+package 'fulltext' is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+Instalando do GitHub: elizagrames/litsearchr 
+Installing 5 packages: ISOcodes, unglue, stopwords, synthesisr, changepoint
+package 'ISOcodes' successfully unpacked and MD5 sums checked
+package 'unglue' successfully unpacked and MD5 sums checked
+package 'stopwords' successfully unpacked and MD5 sums checked
+package 'synthesisr' successfully unpacked and MD5 sums checked
+package 'changepoint' successfully unpacked and MD5 sums checked
+Instalando do GitHub: MathiasHarrer/dmetar 
+Installing 11 packages: DEoptimR, mclust, robustbase, diptest, prabclus, flexmix, magic, fpc, MuMIn, poibin, netmeta
+
+  There are binary versions available but the source versions are later:
+         binary  source needs_compilation
+DEoptimR  1.2-1   1.2-2             FALSE
+magic     1.6-1 1.6-1-1             FALSE
+
+package 'mclust' successfully unpacked and MD5 sums checked
+package 'robustbase' successfully unpacked and MD5 sums checked
+package 'diptest' successfully unpacked and MD5 sums checked
+package 'prabclus' successfully unpacked and MD5 sums checked
+package 'flexmix' successfully unpacked and MD5 sums checked
+package 'fpc' successfully unpacked and MD5 sums checked
+package 'MuMIn' successfully unpacked and MD5 sums checked
+package 'poibin' successfully unpacked and MD5 sums checked
+package 'netmeta' successfully unpacked and MD5 sums checked
+installing the source packages 'DEoptimR', 'magic'
+
+
+== Verificação final ==
+metafor        OK
+meta           OK
+revtools       OK
+pubmedR        OK
+bibliometrix   OK
+PRISMA2020     OK
+robvis         OK
+metaDigitise   OK
+fulltext       -- AUSENTE
+readr          OK
+dplyr          OK
+tidyr          OK
+purrr          OK
+tibble         OK
+stringr        OK
+janitor        OK
+ggplot2        OK
+patchwork      OK
+countrycode    OK
+igraph         OK
+here           OK
+targets        OK
+Registered S3 method overwritten by 'clubSandwich':
+  method    from    
+  bread.mlm sandwich
+clubSandwich   OK
+weightr        OK
+orchaRd        OK
+diagram        OK
+gtsummary      OK
+litsearchr     OK
+dmetar         OK
+
+Sessão:
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26340)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Portuguese_Brazil.utf8  LC_CTYPE=Portuguese_Brazil.utf8   
+[3] LC_MONETARY=Portuguese_Brazil.utf8 LC_NUMERIC=C                      
+[5] LC_TIME=Portuguese_Brazil.utf8    
+
+time zone: America/Sao_Paulo
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+  [1] countrycode_1.8.0      splines_4.6.1          later_1.4.8           
+  [4] clubSandwich_0.7.0     tibble_3.3.1           cellranger_1.1.0      
+  [7] janitor_2.2.1          litsearchr_1.0.0       XML_3.99-0.23         
+ [10] lifecycle_1.0.5        httr2_1.2.3            Rdpack_2.6.6          
+ [13] gtsummary_2.5.0        rprojroot_2.1.1        prabclus_2.3-5        
+ [16] processx_3.9.0         NLP_0.3-3              lattice_0.22-9        
+ [19] MASS_7.3-65            backports_1.5.1        SnowballC_0.7.1       
+ [22] magrittr_2.0.5         openxlsx_4.2.8.1       metafor_5.2-1         
+ [25] plotly_4.12.0          sass_0.4.10            rmarkdown_2.31        
+ [28] jquerylib_0.1.4        yaml_2.3.12            remotes_2.5.0         
+ [31] httpuv_1.6.17          otel_0.2.0             flexmix_2.3-21        
+ [34] zip_3.0.0              askpass_1.2.1          pkgbuild_1.4.8        
+ [37] topicmodels_0.2-17     minqa_1.2.8            RColorBrewer_1.1-3    
+ [40] ade4_1.7-24            lubridate_1.9.5        abind_1.4-8           
+ [43] purrr_1.2.2            robvis_0.3.1           contentanalysis_1.1.1 
+ [46] nnet_7.3-20            rappdirs_0.3.4         sandwich_3.1-1        
+ [49] cpp11_0.5.5            tm_0.7-19              ggrepel_0.9.8         
+ [52] tokenizers_0.3.0       rentrez_1.2.4          bibliometrix_5.5.0    
+ [55] codetools_0.2-20       MuMIn_1.48.19          DT_0.34.0             
+ [58] xml2_1.6.0             pdftools_3.9.0         tidyselect_1.2.1      
+ [61] shape_1.4.6.1          netmeta_3.7-0          rscopus_0.9.0         
+ [64] metaDigitise_1.0.2     farver_2.1.2           lme4_2.0-1            
+ [67] stats4_4.6.1           base64enc_0.1-6        mathjaxr_2.0-0        
+ [70] jsonlite_2.0.0         tools_4.6.1            progress_1.2.3        
+ [73] stringdist_0.9.17      rio_1.3.0              Rcpp_1.1.1-1.1        
+ [76] glue_1.8.1             gridExtra_2.3          xfun_0.59             
+ [79] here_1.0.2             dplyr_1.2.1            ca_0.71.1             
+ [82] shinydashboard_0.7.3   numDeriv_2016.8-1.1    fastmap_1.2.0         
+ [85] boot_1.3-32            metabook_0.2-0         shinyjs_2.1.1         
+ [88] PRISMA2020_1.1.5       callr_3.8.0            digest_0.6.39         
+ [91] secretbase_1.2.2       timechange_0.4.0       R6_2.6.1              
+ [94] mime_0.13              colorspace_2.1-2       qpdf_1.4.1            
+ [97] revtools_0.4.1         weightr_2.0.2          webp_1.3.0            
+[100] diptest_0.77-2         tidyr_1.3.2            generics_0.1.4        
+[103] data.table_1.18.4      robustbase_0.99-7      class_7.3-23          
+[106] prettyunits_1.2.0      httr_1.4.8             htmlwidgets_1.6.4     
+[109] pkgconfig_2.0.3        gtable_0.3.6           modeltools_0.2-24     
+[112] S7_0.2.2               janeaustenr_1.0.0      htmltools_0.5.9       
+[115] base64url_1.4          poibin_1.6             scales_1.4.0          
+[118] reformulas_0.4.4       snakecase_0.11.1       knitr_1.51            
+[121] reshape2_1.4.5         tzdb_0.5.0             magic_1.6-1-1         
+[124] visNetwork_2.1.4       nlme_3.1-169           curl_7.1.0            
+[127] nloptr_2.2.1           cachem_1.1.0           zoo_1.8-15            
+[130] stringr_1.6.0          parallel_4.6.1         metadat_1.6-0         
+[133] shinycssloaders_1.1.0  targets_1.12.0         pubmedR_1.0.2         
+[136] desc_1.4.3             pillar_1.11.1          grid_4.6.1            
+[139] vctrs_0.7.3            orchaRd_2.2.1          slam_0.1-56           
+[142] promises_1.5.0         cluster_2.1.8.2        xtable_1.8-8          
+[145] evaluate_1.0.5         readr_2.2.0            meta_8.5-0            
+[148] mvtnorm_1.3-7          cli_3.6.6              compiler_4.6.1        
+[151] rlang_1.3.0            crayon_1.5.3           tidytext_0.4.3        
+[154] mclust_6.1.3           ps_1.9.3               dimensionsR_0.0.3     
+[157] plyr_1.8.9             forcats_1.0.1          stringi_1.8.7         
+[160] viridisLite_0.4.3      dmetar_0.1.0           lazyeval_0.2.3        
+[163] CompQuadForm_1.4.4     Matrix_1.7-5           bibliometrixData_0.3.0
+[166] hms_1.1.4              patchwork_1.3.2        ggplot2_4.0.3         
+[169] fpc_2.2-15             shiny_1.14.0           kernlab_0.9-33        
+[172] rbibutils_2.4.1        igraph_2.3.0           openalexR_3.1.0       
+[175] bslib_0.11.0           DEoptimR_1.2-2         diagram_1.6.5         
+[178] readxl_1.5.0          

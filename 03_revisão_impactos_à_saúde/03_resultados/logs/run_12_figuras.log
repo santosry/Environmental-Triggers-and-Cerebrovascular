@@ -1,0 +1,5 @@
+`height` was translated to `width`.
+Warning message:
+`geom_errorbarh()` was deprecated in ggplot2 4.0.0.
+ℹ Please use the `orientation` argument of `geom_errorbar()` instead. 
+== Figuras simples geradas em C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/03_resultados/figuras ==

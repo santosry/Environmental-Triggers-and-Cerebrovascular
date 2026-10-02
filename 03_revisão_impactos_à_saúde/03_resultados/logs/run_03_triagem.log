@@ -1,0 +1,9 @@
+Registros brutos importados: 19027
+n = 14978 > 5000: deduplicação fuzzy (revtools) omitida; usadas DOI exato + título normalizado.
+
+== Triagem preparada ==
+Registros brutos: 18483 
+Duplicatas removidas: 3505 
+Após deduplicação: 14978 
+Planilhas em: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/02_dados/processados 
+PRÓXIMO PASSO: triagem humana por dois revisores; depois 05_extracao_dados.R

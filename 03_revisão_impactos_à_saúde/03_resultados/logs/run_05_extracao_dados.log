@@ -1,0 +1,7 @@
+Template criado: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/02_dados/extraidos/planilha_extracao.csv
+Planilha vazia — preencha 02_dados/extraidos/planilha_extracao.csv. O restante do script demonstra o cálculo com um exemplo interno.
+
+== Extração/efeitos concluídos ==
+Estudos com efeito calculável: 6 
+Efeitos (log RR) e variâncias salvos em: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/02_dados/processados 
+PRÓXIMO PASSO: 06_risco_de_vies.R e 07_meta_analise_metafor.R
