@@ -1,0 +1,302 @@
+# Frente 02 — Vulnerabilidade climática, morbimortalidade cerebrovascular e RAS no Rio de Janeiro
+
+📁 **Parte do monorepo** [Gatilhos Ambientais e Doenças Cerebrovasculares](../README.md)
+
+Estudo ecológico de séries temporais (2010–2024) sobre a morbimortalidade por doenças
+cerebrovasculares (**CID-10 I60–I69**, além dos blocos **G45–G46**) no estado do Rio de
+Janeiro, com **modelagem logística multinível (GLMM)** da mortalidade intra-hospitalar
+e análise territorial pelas **nove regiões de saúde**. Última atualização: 2 de outubro
+de 2026.
+
+---
+
+## Sumário
+
+- [Enquadramento](#enquadramento)
+- [Estrutura das pastas](#estrutura-das-pastas)
+- [Detalhamento de `01_dados/`](#detalhamento-de-01_dados)
+- [Cadeia de execução](#cadeia-de-execução)
+- [Função de cada script](#função-de-cada-script)
+- [Decisões metodológicas registradas](#decisões-metodológicas-registradas)
+- [Resultados principais](#resultados-principais)
+- [Robustez e conferência entre motores](#robustez-e-conferência-entre-motores)
+- [Limitações](#limitações)
+- [Limpeza realizada](#limpeza-realizada)
+- [Pendências](#pendências)
+
+---
+
+## Enquadramento
+
+- **Desenho:** estudo ecológico de séries temporais, retrospectivo (01/01/2010 a
+  31/12/2024).
+- **Unidades de análise:** município → **9 regiões de saúde** → macrorregiões.
+- **Aquisição:** pacote **`microdatasus` 2.5.0** em R 4.6.1 (SIH-RD e SIM-DO).
+- **Análise:** **R 4.6.1**, `glmmTMB` 1.1.15.2, com conferência em `lme4` 2.0.1.
+- **Ética:** dados secundários, agregados e anonimizados de domínio público
+  (Resolução CNS 510/2016 — dispensa de CEP), em conformidade com a LGPD.
+
+---
+
+## Estrutura das pastas
+
+| Pasta | Conteúdo |
+|---|---|
+| `01_dados/` | Dados brutos e processados. Ver [detalhamento](#detalhamento-de-01_dados). |
+| `02_scripts/` | Todo o código, em R e Python. Ver a [cadeia de execução](#cadeia-de-execução). |
+| `03_analises/` | Logs de aquisição e consolidação. |
+| `04_resultados/` | Resultados em texto, um arquivo por etapa. |
+| `05_tabelas/` | Tabelas em CSV, numeradas na ordem em que entram no manuscrito. |
+| `06_figuras/` | Figuras em PNG a 300 dpi. |
+| `07_literatura/` | Matriz de literatura com autoria verificada. |
+| `08_manuscrito/` | Manuscrito em Markdown. |
+| `09_documentos_submissao/` | Modelos de documentos exigidos pelo edital. |
+| `10_auditoria/` | Auditorias do estudo anterior, dos dados e da metodologia. |
+| `12_relatorios/` | Relatórios executivo e final, e comparação antigo×novo. |
+| `13_documentos_referencia/` | PDFs de referência (edital e plano estadual de saúde). |
+
+### Detalhamento de `01_dados/`
+
+| Caminho | Conteúdo |
+|---|---|
+| `brutos_sih/` | 191 competências do SIH-RD do RJ, 2010-01 a 2025-11, baixadas pelo `microdatasus` (~479 MB). |
+| `brutos_sim/` | 15 arquivos anuais do SIM-DO do RJ, 2010 a 2024, baixados pelo `microdatasus` (~98 MB). |
+| `processados/` | Bases consolidadas (`sih_cerebrovascular_...csv`, `coorte_glmm_2010_2024.csv`, `modelo_glmm_principal_glmmTMB.rds`, previsões e efeitos hospitalares). |
+| `inventario_colunas/` | Inventário de colunas por arquivo do SIH-RD. |
+| `tmp_ipca/` | Cache da série do IPCA (SIDRA/IBGE, tabela 1737). |
+| `tmp_parquet/` | Intermediário da consolidação histórica (pode ser refeito). |
+
+> A competência 2025-12 não está publicada no DATASUS. As competências de 2025 existem
+> apenas para capturar internações de dezembro de 2024, que podem ser processadas em
+> janeiro de 2025. O filtro final é sempre `DT_INTER` entre **2010 e 2024**.
+
+---
+
+## Cadeia de execução
+
+Executar a partir da raiz desta frente:
+
+```powershell
+$R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
+
+# 1. aquisicao dos microdados (R, microdatasus) -- cerca de 38 min
+& $R "02_scripts\01_baixar_microdatasus.R"
+
+# 2. coorte analitica e tabelas descritivas
+& $R "02_scripts\02_montar_coorte.R"
+& $R "02_scripts\03_tabelas_descritivas.R"
+
+# 3. Indice de Swaroop-Uemura por regiao de saude
+& $R "02_scripts\04_isu_regiao_saude.R"
+
+# 4. GLMM principal com FDR -- cerca de 3 min
+& $R "02_scripts\05_glmm_principal.R"
+
+# 5. tratamento da UTI (decomposicao de Mundlak)
+& $R "02_scripts\06_glmm_uti.R"
+
+# 6. auditoria de consistencia (SIH x SIM x modelo)
+& $R "02_scripts\07_auditoria_consistencia.R"
+
+# 7. robustez -- cerca de 40 min
+& $R "02_scripts\08_glmm_robustez.R"
+
+# 8. conferencia entre motores (invoca a si mesmo em processo isolado)
+& $R "02_scripts\09_conferencia_motores.R"
+
+# 9. figuras
+& $R "02_scripts\10_figuras.R"
+```
+
+### Legado da fase anterior
+
+`02_scripts/legado_fase_anterior/` mantém os scripts que produzem os resultados de
+**tendência, mortalidade (SIM) e custos (IPCA)** usados no manuscrito fora do escopo do
+GLMM. Foram mantidos para reprodutibilidade:
+
+| Script | Função |
+|---|---|
+| `01_consolidar_dados.py` | Consolidação histórica do SIH e do SIM. |
+| `02_analises_principais.py` | Tendências, taxas e fluxo. |
+| `02b_analises_sim.py` | Mortalidade no SIM. |
+| `04_auditoria_completa.R` | Auditoria de consistência. |
+| `05_verificacao_sidra.R` | Verificação das populações do SIDRA/IBGE. |
+| `06_deflacao_ipca.py` | Deflação dos custos pelo IPCA. |
+
+---
+
+## Função de cada script
+
+| Script | Função |
+|---|---|
+| `00_glmm_utils.R` | Utilitários compartilhados do GLMM (ajuste, ICC, MOR, calibração). Normaliza a interface entre `lme4::glmer` e `glmmTMB::glmmTMB`. |
+| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus`. |
+| `02_montar_coorte.R` | Coorte analítica a partir dos `.rds` baixados (I60–I69 + G45/G46 completos). |
+| `03_tabelas_descritivas.R` | Tabelas descritivas da coorte. |
+| `04_isu_regiao_saude.R` | Índice de Swaroop-Uemura por região de saúde. |
+| `05_glmm_principal.R` | GLMM principal, OR, IC95%, p-valores e FDR. |
+| `06_glmm_uti.R` | Tratamento do uso de UTI (marcador de gravidade; decomposição *within/between* de Mundlak). |
+| `07_auditoria_consistencia.R` | Auditoria de incongruências (SIH bruto, coorte, triangulação SIH×SIM, modelo). |
+| `08_glmm_robustez.R` | Bateria de 18 cenários de robustez. |
+| `09_conferencia_motores.R` | Conferência `glmmTMB` × `lme4` e adequação da aproximação de Laplace (processo isolado, `--worker`). |
+| `10_figuras.R` | Figuras do Bloco 4 (OR, regiões, funnel, subtipos, UTI). |
+
+---
+
+## Decisões metodológicas registradas
+
+1. **Cobertura diagnóstica:** I60 a I69 completos mais os blocos completos **G45 e G46**,
+   incluindo G45.8 (7.113 registros), G46.7 (1) e G46.8 (1.406). A lista parcial
+   anterior deixava o grupo G46 com apenas 18 internações e um OR ininterpretável.
+2. **Período:** `DT_INTER` de 2010 a 2024.
+3. **Unidade territorial:** as nove regiões de saúde, sem agregação por macrorregião.
+4. **Motor do GLMM:** `glmmTMB` (principal), com conferência em `lme4` — ambas
+   implementações de referência da aproximação de Laplace.
+5. **Múltiplas comparações:** q-valores de Benjamini-Hochberg (FDR), com família global
+   e famílias separadas para covariáveis de paciente e para regiões de saúde.
+6. **Uso de UTI:** mantido no modelo por exigência do plano, mas tratado como
+   **marcador de gravidade** e não como fator de risco. O registro cresce de 8,2% (2010)
+   para 20,8% (2024) e varia de 9,5% (Serrana) a 31,7% (Noroeste), o que indica prática
+   de registro.
+7. **Assimetria SIH × SIM:** a coorte de internações inclui G45/G46, mas a série de
+   mortalidade permanece em I60–I69. G45/G46 aparecem como causa básica em 60 de
+   2.143.313 óbitos (0,0028%) — assimetria desprezível, declarada como limitação.
+
+---
+
+## Resultados principais
+
+| Indicador | Valor |
+|---|---|
+| Internações na coorte | **295.673** |
+| Óbitos intra-hospitalares | **55.827 (18,88%)** |
+| Estabelecimentos (CNES) | 254 |
+| Regiões de saúde | 9 |
+| VPC / ICC hospitalar | **14,95%** (IC95% 12,29–18,06) |
+| MOR | **2,065** (IC95% 1,911–2,253) |
+| AUC condicional | 0,740 |
+| Coeficientes significativos após FDR | **14 de 19** |
+| ISU estadual por DCV | **92,38%** |
+
+**Composição:** I60–I69 = 267.746 internações (90,55%; mortalidade 19,58%);
+G45/G46 = 27.927 (9,45%; 12,16%). Subtipos com maior letalidade: isquêmico (I63,
+27,35%), hemorrágico (I60–I62, 26,66%) e não especificado (I64, 21,13%).
+
+**Componente hospitalar:** σ² = 0,578; desvio-padrão hospitalar = 0,760; AIC =
+252.992. Dos 206 hospitais com eventos suficientes, limites ingênuos classificariam
+102 como atípicos, mas apenas **3** permanecem fora dos limites após acomodar a
+variabilidade real entre serviços.
+
+### Odds ratios ajustados (destaques)
+
+| Covariável | OR (IC95%) | q (FDR) |
+|---|---|---|
+| Idade (+1 DP = 14,9 anos) | 1,460 (1,444–1,476) | < 1,0 × 10⁻³⁰⁰ |
+| Hemorrágico (I60–I62) | 1,264 (1,222–1,307) | 1,23 × 10⁻⁴¹ |
+| Isquêmico (I63) | 1,070 (1,023–1,119) | 4,60 × 10⁻³ |
+| Caráter de urgência | 1,798 (1,679–1,924) | 1,27 × 10⁻⁶³ |
+| Uso de UTI* | 3,904 (3,789–4,022) | < 1,0 × 10⁻³⁰⁰ |
+| Fluxo intermunicipal | 0,951 (0,922–0,980) | 1,90 × 10⁻³ |
+| Médio Paraíba (vs. Metropolitana I) | 0,467 (0,417–0,524) | 1,78 × 10⁻³⁸ |
+
+\* OR sem leitura causal (marcador de gravidade/registro). Referências: subtipo = I64,
+sexo = feminino, caráter = eletiva, região = Metropolitana I.
+
+### Índice de Swaroop-Uemura (topo)
+
+| Região de saúde | ISU (%) |
+|---|---|
+| Serrana | 93,75 |
+| Metropolitana II | 93,61 |
+| Noroeste | 93,51 |
+| … | … |
+| Baixada Litorânea | 91,50 |
+| **Estado do Rio de Janeiro** | **92,38** |
+
+A amplitude regional do ISU por DCV é de apenas 2,25 p.p. (4,68 p.p. com corte em 65
+anos): a mortalidade cerebrovascular já se concentra em idades avançadas, e o
+indicador tem pouco poder discriminante entre territórios.
+
+---
+
+## Robustez e conferência entre motores
+
+- **18 cenários** de robustez, todos convergidos. Fora dos extremos, o ICC fica entre
+  14,4% e 16,5% (principal: 14,95%). Retirar a UTI eleva o ICC para 17,25%; restringir
+  a hospitais com 10+ óbitos reduz para 11,48%.
+- **Estrutura multinível é necessária:** o modelo agrupado sem efeito aleatório tem
+  ΔAIC ≈ **7.851** pior que o GLMM, com um único parâmetro adicional.
+- **Conferência `glmmTMB` × `lme4`** (subamostra de 20.000): σ² = 0,25490 vs 0,25479
+  (0,042%); log-verossimilhanças diferem em 0,0006. Quadratura de Gauss-Hermite
+  (`nAGQ = 11`) altera OR em no máximo 0,14% → aproximação de Laplace adequada.
+
+> ⚠️ Carregar `glmmTMB` e `lme4` na mesma sessão R encerra o processo sem mensagem de
+> erro, mesmo com 20 mil registros. Por isso a conferência roda em processo isolado
+> (`09_conferencia_motores.R --worker`).
+
+---
+
+## Limitações
+
+1. **Codificação do subtipo:** I64 responde por 56,6% da coorte — mede qualidade de
+   codificação tanto quanto fisiopatologia.
+2. **Mortalidade registrada em AIT:** G45 tem 11,99% de mortalidade intra-hospitalar,
+   valor clinicamente implausível para evento transitório.
+3. **Ausência de gravidade clínica:** sem sinais vitais, escalas, exames ou neuroimagem.
+4. **Comorbidade incompleta:** diagnóstico secundário só tem preenchimento integral a
+   partir de 2015.
+5. **Reinternações:** o SIH-RD é anonimizado; internações tratadas como independentes.
+6. **Áreas pequenas:** 68 estabelecimentos com <100 internações em 15 anos e 26 sem
+   nenhum óbito.
+7. **Raça/cor (~25% sem informação) e escolaridade (~inutilizável)** não entraram.
+8. **Generalização:** restrito ao Rio de Janeiro, sem validação externa.
+9. **Sem leitura causal:** desenho observacional.
+10. **Sem mapa coroplético:** não há shapefile das regiões de saúde do RJ no projeto.
+
+---
+
+## Limpeza realizada
+
+Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
+
+- `01_dados/brutos_parquet/` e `01_dados/brutos_sim_parquet/` (238 MB), conversão
+  intermediária dispensada quando o R passou a ler os `.rds` do `microdatasus` direto;
+- a execução paralela em Python (sete scripts `*_py_*.py` e suas saídas), substituída
+  pela execução em R (preservada em `legado_fase_anterior/`);
+- scripts R superados: `07_extrair_g45_g46.R`, `08_montar_coorte_glmm.R`,
+  `15_robustez_cenarios_faltantes.R`, `19_rds_para_parquet.R` e `03_swaroop_ipca.R`;
+- tabelas descritivas da coorte antiga, regeradas pelo script 03;
+- os PDFs de referência foram movidos para `13_documentos_referencia/`.
+
+---
+
+## Pendências
+
+1. **Repor documentos ausentes:** `HANDOFF.md` e `PLANO_METODOLOGICO_GLMM_COX.md`
+   (especificação/continuidade) não estão mais na pasta; recomenda-se repô-los ou
+   substituí-los por este README.
+2. **Decidir sobre a UTI** no modelo principal ou apresentar as duas versões
+   (retirá-la eleva o ICC a ~17%).
+3. **Produzir o mapa** das regiões de saúde quando a malha territorial estiver
+   disponível.
+4. **Declaração de software** deve refletir **R 4.6.1** (a instalação de R 4.6.0 na
+   máquina está incompleta e sem `Rscript.exe` funcional).
+
+---
+
+## Arquivos-chave
+
+| Item | Caminho |
+|---|---|
+| Relatório executivo final | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
+| Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
+| Manuscrito | [`08_manuscrito/manuscrito.md`](08_manuscrito/manuscrito.md) |
+| Matriz de literatura | [`07_literatura/MATRIZ_LITERATURA.md`](07_literatura/MATRIZ_LITERATURA.md) |
+| Declaração de variáveis SIH | [`04_resultados/DICIONARIO_VARIAVEIS_SIH.md`](04_resultados/DICIONARIO_VARIAVEIS_SIH.md) |
+| OR ajustados (CSV) | [`05_tabelas/tab3_glmm_or.csv`](05_tabelas/tab3_glmm_or.csv) |
+| Robustez (CSV) | [`05_tabelas/tab9_robustez_or.csv`](05_tabelas/tab9_robustez_or.csv) |
+| Atalho rápido | [`LEIA-ME.md`](LEIA-ME.md) |
+
+---
+
+⬅️ [Voltar ao README do monorepo](../README.md)

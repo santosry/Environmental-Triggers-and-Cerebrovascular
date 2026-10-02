@@ -1,0 +1,21 @@
+metrica,valor
+Motor,glmmTMB
+N (internacoes),295673
+Obitos,55827
+Taxa de obito (%),18.881
+Hospitais (CNES),254
+Regioes de saude,9
+Variancia hospitalar (s2_hosp),0.57805
+DP hospitalar (s_hosp),0.76029
+VPC / ICC,0.14945
+VPC / ICC (%),14.945
+MOR,2.0652
+Log-verossimilhanca,-126475.08
+AIC,252992.16
+Tempo de ajuste (min),1.76
+DP hospitalar IC95% inf,0.67883
+DP hospitalar IC95% sup,0.85154
+VPC/ICC IC95% inf,0.12286
+VPC/ICC IC95% sup,0.1806
+MOR IC95% inf,1.9108
+MOR IC95% sup,2.253

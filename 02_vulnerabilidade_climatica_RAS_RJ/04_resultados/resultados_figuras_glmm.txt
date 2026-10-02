@@ -1,0 +1,15 @@
+FIGURAS DO GLMM | inicio: 2026-10-02 10:26:47
+gravada fig_or_forest.png
+gravada fig_regioes_ajustado.png
+variancia entre hospitais usada no funnel: s2 = 0.57805
+hospitais com obito esperado > 0: 254
+hospitais no funnel (esperado >= 5 obitos): 206 | excluidos por baixo volume de eventos: 48
+  fora dos limites de Poisson 99,8%: 102
+  fora dos limites AJUSTADOS 99,8%:  3
+  fora dos limites AJUSTADOS 95% (total): 10
+gravada fig_funnel_hospitais.png
+gravada fig_mortalidade_subtipo.png
+gravada fig_uti_tempo_regiao.png
+UTI por ano: 2010=8.2 2011=8.8 2012=9.2 2013=9.2 2014=10.4 2015=10.1 2016=10.0 2017=12.1 2018=12.3 2019=12.8 2020=13.7 2021=13.8 2022=18.0 2023=19.1 2024=20.8
+UTI por regiao: Noroeste=31.7 | Centro-Sul=17.4 | Norte=17.0 | Medio Paraiba=15.9 | Metropolitana II=13.6 | Baixada Litoranea=11.9 | Baia da Ilha Grande=11.2 | Metropolitana I=10.7 | Serrana=9.5
+fim: 2026-10-02 10:26:50
