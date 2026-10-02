@@ -1,0 +1,15 @@
+Installing packages into 'C:/Users/oorie/AppData/Local/R/win-library/4.6'
+(as 'lib' is unspecified)
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/easyScieloPack_0.1.1.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/rscopus_0.9.0.zip'
+package 'easyScieloPack' successfully unpacked and MD5 sums checked
+package 'rscopus' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\oorie\AppData\Local\Temp\RtmpAhUhZU\downloaded_packages
+Warning message:
+package 'rscielo' is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 

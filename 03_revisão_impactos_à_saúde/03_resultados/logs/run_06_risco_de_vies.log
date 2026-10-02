@@ -1,0 +1,10 @@
+Sem avaliações preenchidas — gerando demonstração com um estudo-exemplo.
+Warning message:
+In ggplot2::geom_point(shape = 1, colour = "black", size = psize,  :
+  All aesthetics have length 1, but the data has 48 rows.
+ℹ Please consider using `annotate()` or provide this layer with data containing
+  a single row.
+
+== Risco de viés processado ==
+Estudos avaliados: 6 
+Figuras em: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/03_resultados/figuras 

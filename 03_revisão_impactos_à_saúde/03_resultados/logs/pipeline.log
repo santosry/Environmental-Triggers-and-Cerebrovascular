@@ -1,0 +1,85 @@
+[2026-09-27 10:35:25] ======================================================= 
+[2026-09-27 10:35:25] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 10:35:25] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 
+[2026-09-27 10:50:27] ======================================================= 
+[2026-09-27 10:50:27] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 10:50:27] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 
+[2026-09-27 10:50:27] SEÇÃO 11: consolidação da triagem título/resumo 
+[2026-09-27 10:50:27] Triagem título/resumo: incluídos=0 excluídos=0 discordâncias=0 pendentes=14978 | kappa=NA (indefinido (sem pares decididos)) 
+[2026-09-27 10:50:27] SEÇÃO 12: triagem de texto completo 
+[2026-09-27 10:50:27] Texto completo: templates criados com 0 estudos; aguardando preenchimento. 
+[2026-09-27 10:50:28] SEÇÃO 13: extração de dados e cálculo de efeitos 
+[2026-09-27 10:50:28] Efeitos calculados: 6 estudos. 
+[2026-09-27 10:50:28] SEÇÃO 14: risco de viés 
+[2026-09-27 10:50:31] Risco de viés: 6 estudos avaliados. 
+[2026-09-27 10:50:31] SEÇÃO 15: meta-análise (REML) 
+[2026-09-27 10:50:31] k < 10: Egger/trim-and-fill não recomendados (Sterne et al., 2011). 
+[2026-09-27 10:50:31] Meta-análise: k=6 RR=1.066 I2=85.4% 
+[2026-09-27 10:50:31] SEÇÃO 16: forest plots estratificados 
+[2026-09-27 10:50:32] Forest plots estratificados gerados. 
+[2026-09-27 10:50:32] SEÇÃO 17: subgrupos/metarregressão/sensibilidade 
+[2026-09-27 10:50:33] E-value (estimativa): 1.33 
+[2026-09-27 10:50:33] SEÇÃO 18: diagrama PRISMA 
+[2026-09-27 10:50:37] PRISMA: bases=19027 dup=3505 triados=14978 
+[2026-09-27 10:50:37] SEÇÃO 19: figuras simples 
+[2026-09-27 10:52:55] Figuras simples geradas. 
+[2026-09-27 10:52:55] ======================================================= 
+[2026-09-27 10:52:55] PIPELINE finalizado. 
+[2026-09-27 10:56:39] ======================================================= 
+[2026-09-27 10:56:39] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 10:56:39] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 
+[2026-09-27 10:56:39] SEÇÃO 11: consolidação da triagem título/resumo 
+[2026-09-27 10:56:40] Triagem título/resumo: incluídos=0 excluídos=0 discordâncias=0 pendentes=14978 | kappa=NA (indefinido (sem pares decididos)) 
+[2026-09-27 10:56:40] SEÇÃO 12: triagem de texto completo 
+[2026-09-27 10:56:40] Texto completo: templates criados com 0 estudos; aguardando preenchimento. 
+[2026-09-27 10:56:41] SEÇÃO 13: extração de dados e cálculo de efeitos 
+[2026-09-27 10:56:41] Efeitos calculados: 6 estudos. 
+[2026-09-27 10:56:41] SEÇÃO 14: risco de viés 
+[2026-09-27 10:56:43] Risco de viés: 6 estudos avaliados. 
+[2026-09-27 10:56:43] SEÇÃO 15: meta-análise (REML) 
+[2026-09-27 10:56:43] k < 10: Egger/trim-and-fill não recomendados (Sterne et al., 2011). 
+[2026-09-27 10:56:43] Meta-análise: k=6 RR=1.066 I2=85.4% 
+[2026-09-27 10:56:43] SEÇÃO 16: forest plots estratificados 
+[2026-09-27 10:56:44] Forest plots estratificados gerados. 
+[2026-09-27 10:56:44] SEÇÃO 17: subgrupos/metarregressão/sensibilidade 
+[2026-09-27 10:56:44] E-value (estimativa): 1.33 
+[2026-09-27 10:56:44] SEÇÃO 18: diagrama PRISMA 
+[2026-09-27 10:56:46] PRISMA: bases=19027 dup=3505 triados=14978 
+[2026-09-27 10:56:47] SEÇÃO 19: figuras simples 
+[2026-09-27 10:59:02] Figuras simples geradas. 
+[2026-09-27 10:59:02] ======================================================= 
+[2026-09-27 10:59:02] PIPELINE finalizado. 
+[2026-09-27 11:01:18] ======================================================= 
+[2026-09-27 11:01:18] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 11:01:18] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 
+[2026-09-27 11:02:31] SEÇÃO 11: consolidação da triagem título/resumo 
+[2026-09-27 11:02:32] Triagem título/resumo: incluídos=0 excluídos=0 discordâncias=0 pendentes=14978 | kappa=NA (indefinido (sem pares decididos)) 
+[2026-09-27 11:02:52] SEÇÃO 12: triagem de texto completo 
+[2026-09-27 11:02:52] Texto completo: templates criados com 0 estudos; aguardando preenchimento. 
+[2026-09-27 11:04:00] SEÇÃO 13: extração de dados e cálculo de efeitos 
+[2026-09-27 11:04:00] Efeitos calculados: 6 estudos. 
+[2026-09-27 11:14:50] ======================================================= 
+[2026-09-27 11:14:50] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 11:14:50] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 
+[2026-09-27 11:15:13] SEÇÃO 11: consolidação da triagem título/resumo 
+[2026-09-27 11:15:15] Triagem título/resumo: incluídos=0 excluídos=0 discordâncias=0 pendentes=14978 | kappa=NA (indefinido (sem pares decididos)) 
+[2026-09-27 11:17:15] SEÇÃO 11: consolidação da triagem título/resumo 
+[2026-09-27 11:17:15] Triagem título/resumo: incluídos=0 excluídos=0 discordâncias=0 pendentes=14978 | kappa=NA (indefinido (sem pares decididos)) 
+[2026-09-27 11:17:16] SEÇÃO 12: triagem de texto completo 
+[2026-09-27 11:17:16] Texto completo: templates criados com 0 estudos; aguardando preenchimento. 
+[2026-09-27 11:17:18] SEÇÃO 13: extração de dados e cálculo de efeitos 
+[2026-09-27 11:17:18] Efeitos calculados: 6 estudos. 
+[2026-09-27 11:17:25] SEÇÃO 14: risco de viés 
+[2026-09-27 11:17:28] Risco de viés: 6 estudos avaliados. 
+[2026-09-27 11:17:36] SEÇÃO 15: meta-análise (REML) 
+[2026-09-27 11:17:36] k < 10: Egger/trim-and-fill não recomendados (Sterne et al., 2011). 
+[2026-09-27 11:17:37] Meta-análise: k=6 RR=1.066 I2=85.4% 
+[2026-09-27 11:17:41] SEÇÃO 16: forest plots estratificados 
+[2026-09-27 11:17:43] Forest plots estratificados gerados. 
+[2026-09-27 11:17:44] SEÇÃO 17: subgrupos/metarregressão/sensibilidade 
+[2026-09-27 11:17:44] E-value (estimativa): 1.33 
+[2026-09-27 11:18:05] SEÇÃO 18: diagrama PRISMA 
+[2026-09-27 11:18:14] PRISMA: bases=19027 dup=3505 triados=14978 
+[2026-09-27 11:37:44] ======================================================= 
+[2026-09-27 11:37:44] PIPELINE iniciado — R R version 4.6.1 (2026-06-24 ucrt) 
+[2026-09-27 11:37:44] Projeto: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/03_revisão_impactos_à_saúde 

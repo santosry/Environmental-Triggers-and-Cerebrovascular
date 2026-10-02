@@ -1,0 +1,7 @@
+Warning message:
+In PRISMA_flowdiagram(dados, interactive = FALSE, previous = FALSE,  : 2.5
+PRISMA_save indisponível: Saving a widget with selfcontained = TRUE requires pandoc. See here to learn more https://bookdown.org/yihui/rmarkdown-cookbook/install-pandoc.html
+Widget salvo em HTML; PNG/PDF gerados via navegador headless quando disponível.
+== Diagrama PRISMA concluído ==
+Contagens: bases = 19027 | duplicatas = 3505 | triagem = 14978 
+Saídas em: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/03_resultados/figuras 

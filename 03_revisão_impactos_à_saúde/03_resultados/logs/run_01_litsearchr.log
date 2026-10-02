@@ -1,0 +1,13 @@
+Documentos no corpus de treino: 1000
+Loading required namespace: stopwords
+Termos candidatos extraídos: 915
+null device 
+          1 
+Palavras-chave selecionadas: 482
+write_search falhou: menu() cannot be used non-interactively
+
+== litsearchr concluído ==
+Termos extraídos: 915 | palavras-chave: 482 
+Saídas em: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/02_dados/processados e C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/06_revisão_impactos_à_saúde/04_referencias 
+NOTA: validar a string final contra um conjunto-semente (sensibilidade/precisão)
+      e revisar por bibliotecário (recomendação Cochrane).

@@ -1,0 +1,32 @@
+Usando chave Scopus embutida (recomenda-se mover para api_keys.txt).
+Scopus: 37114 registros totais. Coletando por ano (2020–2026)...
+  2020: 1556 registros
+  2021: 1881 registros
+  2022: 1921 registros
+  2023: 1974 registros
+  2024: 2169 registros
+  2025: 2469 registros
+  2026: 1944 registros
+Error in `bind_rows()`:
+! Can't combine `..1$ano` <integer> and `..2$ano` <character>.
+Backtrace:
+     ▆
+  1. ├─utils::write.csv(...)
+  2. │ └─base::eval.parent(Call)
+  3. │   └─base::eval(expr, p)
+  4. │     └─base::eval(expr, p)
+  5. ├─utils::write.table(...)
+  6. │ └─base::is.data.frame(x)
+  7. ├─dplyr::mutate(...)
+  8. ├─dplyr::bind_rows(contagens, tibble(ano = "TOTAL_API", registros = n_total))
+  9. │ └─vctrs::vec_rbind(!!!dots, .names_to = .id, .error_call = current_env())
+ 10. └─vctrs (local) `<fn>`() at vctrs/R/bind.R:194:3
+ 11.   └─vctrs::vec_default_ptype2(...)
+ 12.     ├─base::withRestarts(...) at vctrs/R/type2.R:178:3
+ 13.     │ └─base (local) withOneRestart(expr, restarts[[1L]])
+ 14.     │   └─base (local) doWithOneRestart(return(expr), restart)
+ 15.     └─vctrs::stop_incompatible_type(...) at vctrs/R/type2.R:178:3
+ 16.       └─vctrs:::stop_incompatible(...) at vctrs/R/conditions.R:146:3
+ 17.         └─vctrs:::stop_vctrs(...) at vctrs/R/conditions.R:95:3
+ 18.           └─rlang::abort(message, class = c(class, "vctrs_error"), ..., call = call) at vctrs/R/conditions.R:65:3
+Execution halted

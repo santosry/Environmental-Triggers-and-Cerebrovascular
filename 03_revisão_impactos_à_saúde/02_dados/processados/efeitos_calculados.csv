@@ -1,0 +1,7 @@
+"id_estudo","autor_ano","medida_efeito","efeito","ic95_inf","ic95_sup","categoria_exposicao","tipo_desfecho","desenho","yi","vi"
+"exemplo_1","A 2021","RR",1.05,1.01,1.09,"temperatura","I63","serie_temporal",0.048790164169432,0.000378151342055002
+"exemplo_2","B 2021","RR",1.12,1.05,1.2,"temperatura","I64","serie_temporal",0.113328685307003,0.00116040765035603
+"exemplo_3","C 2022","RR",0.98,0.95,1.02,"poluicao_ar","I60","coorte",-0.0202027073175195,0.000328952509709955
+"exemplo_4","D 2023","RR",1.2,1.1,1.31,"poluicao_ar","I61","coorte",0.182321556793955,0.00198661606378029
+"exemplo_5","E 2024","RR",1.03,0.99,1.07,"saneamento","I63","ecologico",0.0295588022415444,0.000392994336725178
+"exemplo_6","F 2025","RR",1.08,1.02,1.15,"ambiente_construido","I64","caso_cruzado",0.0769610411361284,0.00093650862510206

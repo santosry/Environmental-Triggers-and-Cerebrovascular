@@ -1,0 +1,3450 @@
+TY  - JOUR
+ID  - CRD42012003107
+AU  - Tiew-Hwa Katherine TENG; Judith FINN; Teresa WILLIAMS; Alexandra BREMNER; Hideo TOHIRA; Peter FRANKLIN; Andrew TONKIN; Ian JACOBS
+TI  - Air pollution and its association with cardiac arrest: a systematic review and meta-analysis
+DP  - 16/10/2012
+YR  - 2012
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42012003107
+ER  - 
+
+TY  - JOUR
+ID  - CRD42014009225
+AU  - Anoop Shah; David Newby; Nicholas Mills; David McAllister
+TI  - Ambient air pollution and stroke morbidity and mortality: a systematic review and meta-analysis
+DP  - 16/07/2015
+YR  - 2015
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42014009225
+ER  - 
+
+TY  - JOUR
+ID  - CRD42015016805
+AU  - Melinda Power; Jennifer Weuve
+TI  - Outdoor air pollution and cognitive aging or related outcomes: a systematic review
+DP  - 15/12/2017
+YR  - 2017
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42015016805
+ER  - 
+
+TY  - JOUR
+ID  - CRD42015016998
+AU  - Jacob Burns; Hanna Boogaard; Ruth Turley; Lisa Pfadenhauer; Annemoon van Erp; Anke Rohwer; Eva Rehfuess
+TI  - Interventions to reduce ambient particulate matter air pollution and their effect on health [Cochrane Protocol]
+DP  - 22/02/2015
+YR  - 2015
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42015016998
+ER  - 
+
+TY  - JOUR
+ID  - CRD42015018970
+AU  - Paola Michelozzi; Anna Bargagli; Simona Vecchi; Manuela De Sario; Patrizia Schifano; Marina Davoli
+TI  - Interventions for reducing adverse health effects of high temperature and heatwaves [Cochrane Protocol]
+DP  - 27/03/2015
+YR  - 2015
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42015018970
+ER  - 
+
+TY  - JOUR
+ID  - CRD42015026364
+AU  - Xia Wang
+TI  - Weather parameters and stroke occurrence
+DP  - 19/09/2015
+YR  - 2015
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42015026364
+ER  - 
+
+TY  - JOUR
+ID  - CRD42016035275
+AU  - Jefferson Vieira; Francisco Macedo; Alexandre Benjo; Guilherme Guimarães; Johanna Contreras; Edimar Bocchi
+TI  - Cardiovascular effects of controlled exposure of health subjects to diesel exhaust: a pooled systematic review and meta-analysis from randomized controlled trials
+DP  - 11/02/2016
+YR  - 2016
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42016035275
+ER  - 
+
+TY  - JOUR
+ID  - CRD42016051733
+AU  - Katherine Newell; Christiana Kartsonaki; Hubert Lam; Om Kurmi
+TI  - The cardio-respiratory health impacts of ambient air pollution (AAP) exposure in adults within low and/or middle income countries (LMIC’s): a systematic review and meta-analysis
+DP  - 21/11/2017
+YR  - 2017
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42016051733
+ER  - 
+
+TY  - JOUR
+ID  - CRD42017057820
+AU  - yafeng wang; mingxu wang
+TI  - Main air pollutants and different types of cancer: a systematic review and meta-analysis
+DP  - 22/02/2017
+YR  - 2017
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42017057820
+ER  - 
+
+TY  - JOUR
+ID  - CRD42017064739
+AU  - Robert Gifford; Tommaso Todisco
+TI  - Does female sex confer greater risk of heat stroke, exertional heat illness or heat illness-associated mortality?
+DP  - 27/04/2017
+YR  - 2017
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42017064739
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018082577
+AU  - Gerard Hoek; Jie Chen
+TI  - Systematic review on long-term exposure to PM and all-cause and cause-specific mortality
+DP  - 05/01/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018082577
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018087749
+AU  - Pablo Orellano; Nancy Quaranta; Julieta Reynoso; Ariel Bardach; Agustin Ciapponi
+TI  - Short-term exposure to PM2.5, PM10, NO2, NOx and O3 and all-cause and cause-specific mortality: a systematic review and meta-analysis
+DP  - 29/11/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018087749
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018088941
+AU  - Otavio Ranzani; Cathryn Tonne
+TI  - Particulate air pollution exposure and carotid intima-media thickness
+DP  - 23/02/2018
+YR  - 2018
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018088941
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018101964
+AU  - Jian Cheng; Zhiwei Xu; Hilary Bambrick; Hong Su; Shilu Tong; Wenbiao Hu
+TI  - Global association of heatwaves and cardiovascular and respiratory diseases: a systematic review and meta-analysis<br />
+DP  - 20/07/2018
+YR  - 2018
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018101964
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018105730
+AU  - Asya Dimitrova; Cathryn Tonne
+TI  - Systematic review and meta-analysis of the association between temperature and mortality in South Asia
+DP  - 03/09/2018
+YR  - 2018
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018105730
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018112705
+AU  - Kamolrat Sangkharat; Paul Fisher; G. Neil Thomas; John Thornes; Francis Pope
+TI  - The impact of air pollutants on ambulance dispatches: a systematic review and meta-analysis
+DP  - 31/10/2018
+YR  - 2018
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018112705
+ER  - 
+
+TY  - JOUR
+ID  - CRD42018118113
+AU  - Albert Manyuchi  Edgar ; Ashtyn Areal; Bianca Wernecke; Barend Erasmus; Chongying Wang; Caradee  Wright; Helen Rees; Robyn Hetem; Lois Harden; Matthew Chersich; Minh Duc Pham; Ruwadzano  Matsika; Shanshan Wang; Wen Hu; Yan Wang
+TI  - The impacts of heat on health and effectiveness of interventions to reduce these impacts: a systematic review in the era of climate change
+DP  - 21/12/2018
+YR  - 2018
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42018118113
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019118998
+AU  - zeynab farhadi; Hosein   Shabaninejad; Mouloud  Agajani Delavar; Haasan Abolghasem Gorji; soghand  tourani
+TI  - A systematic review and meta-analysis of the short-term exposure of outdoor air pollution (pm 2.5) on the risk of hospitalisation for myocardial infarction (mi) subtypes
+DP  - 15/06/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019118998
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019119726
+AU  - Paul Fisher; Kamolrat  Sangkharata; John Thornes; Francis  Pope; Lee  Chapman; G. Neil Thomas
+TI  - The impact of temperature on ambulance dispatches: a systematic review and meta-analysis
+DP  - 04/01/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019119726
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019124093
+AU  - Sheng Yuan; Jiaxin Wang; Shiyi Cao
+TI  - Association between long-term exposure to PM2.5 and stroke: a systematic review and meta-analysis
+DP  - 30/11/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019124093
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019125058
+AU  - Gerard Hoek; Jie Chen
+TI  - Systematic review on long-term exposure to PM2.5, PM10, NO2 and O3 in indoor settings and all-cause and cause-specific mortality : a systematic review and meta-analysis protocol
+DP  - 14/03/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019125058
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019125060
+AU  - Kuan Ken Lee; Rong Bing; Joanne Kiang; Sophia Bashir; Nicholas Spath; Dominik Stelzle; Anda Bularga; Shruti Joshi; Fiona Strachan; David Newby; Nicholas Mills; David McAllister; Anoop Shah
+TI  - Global burden of disease due to indoor air pollution
+DP  - 28/02/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019125060
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019129265
+AU  - Ruth Peters; Jean Peters; Nicole  Ee
+TI  - Common risk factors for common non-communicable diseases, a systematic umbrella review of the evidence
+DP  - 02/05/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019129265
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019136720
+AU  - Lambed Tatah; Yishen Wang; Will Ashley-Fenn; Natalie Mueller; Marko Tainio; Thomas Goetschi; Mark Nieuwenhuijsen; James Woodcock
+TI  - Health impact of active transport: a systematic review
+DP  - 24/06/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019136720
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019145176
+AU  - Christina Dillon; Eilis O'Reilly; Stig Hellebust; Claire Buckley; Greg Kelly
+TI  - The modifying effects of obesity on the association between air pollution and stroke; a systematic review and meta-analysis protocol
+DP  - 29/10/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019145176
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019147326
+AU  - Melanie Schubert; Janice Hegewald; Doreen-Constance Daniel; Antonia Hopf; Andreas Seidler
+TI  - Quantification of competing risks due to air pollutants or road traffic noise and cardiovascular diseases or depression
+DP  - 28/11/2019
+YR  - 2019
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019147326
+ER  - 
+
+TY  - JOUR
+ID  - CRD42019150642
+AU  - Hanna Boogaard; Allison Patton; Francesco Forastiere; Frederick Lurmann; Richard Atkinson; Jeffrey Brook; Howard Chang; Gerard Hoek; Barbara Hoffmann; Sharon Sagiv; Evi Samoli; Audrey Smargiassi; Adam Szpiro; Danielle Vienneau; Jennifer Weuve
+TI  - Systematic review and meta-analysis of selected health effects of long term exposure to traffic-related air pollution
+DP  - 24/08/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42019150642
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020147543
+AU  - Teodoro De Vecchi; Costanza Peinkhofer; Vardan Nersesjan; Daniel Kondziella
+TI  - Global warming and neurological disorders: systematic review
+DP  - 28/04/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020147543
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020152943
+AU  - Jennifer Weuve; Melinda Power
+TI  - Outdoor air pollution exposure in relation to Alzheimer’s dementia and related outcomes: a systematic review and quantitative bias analysis
+DP  - 28/04/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020152943
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020153003
+AU  - Alyshia Cook; Vivian  Pang; Heidi Harris; Julie Hill; Sam Stevenson
+TI  - How effective are public health interventions in preventing heatwave-related morbidity and mortality among seniors? A systematic review and meta-analysis.
+DP  - 12/05/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020153003
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020157094
+AU  - F?bio Dominski; Alexandro Andrade
+TI  - Effects of air pollution on health: An exposure-wide umbrella review of systematic reviews and meta-analysis
+DP  - 28/04/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020157094
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020157548
+AU  - Seulkee Heo; Michelle L. Bell; Donna Speigelman; Jiyoung Son; Chris Lim; Kelvin C. Fong; Hayon Choi; Raul Ramirez; Kate Nyhan; Preet K.  Dhillon ; Dorairaj  Prabhakaran; Suhela Kapoor
+TI  - Systematic review on Effect Modification by gender or sex in Associations with PM2.5 and Cardiovascular outcomes in adults
+DP  - 08/06/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020157548
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020163948
+AU  - Youssef Bouchriti; Abderrahmane  Achbani; Ahmed  Kharbach; Belkacem Kabbachi
+TI  - Systematic review of the health effects of exposure to outdoor air pollution in the Moroccan population.
+DP  - 14/07/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020163948
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020165702
+AU  - Pin Wang; Xuyi Zhang; Masahiro  Hashizume; Chao Luo; William B. Gogggins
+TI  - A Systematic Review on Lagged Association in Environmental Studies
+DP  - 17/02/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020165702
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020166072
+AU  - Siqi Cheng; Yan Dou; Yuxin Jin; Yan Zhao; Yaxin Duan; Hanlei Pei; Peiyuan Lv
+TI  - Long-term PM2.5 exposure and dementia: A systematic review and meta-analysis
+DP  - 27/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020166072
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020167827
+AU  - Hong Chuan Loh; Irene  Looi; Nurzalina Abdul Karim Khan; Kay Hay Yuen
+TI  - Effect of vitamin E on stroke: a systematic review with meta analysis
+DP  - 28/04/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020167827
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020172116
+AU  - Anoop Shah; Mark Miller
+TI  - The impact of agricultural emissions on human health: a systematic review
+DP  - 09/03/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020172116
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020179509
+AU  - Suzanne Bartington; Mehajabeen Farid; Brian Stacey; Carole Cummins; Roy Harrison
+TI  - Risk of cardiovascular and cerebrovascular morbidity and mortality associated with ambient short-term exposure to ultrafine particles among adults; protocol for a systematic review
+DP  - 24/02/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020179509
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020192887
+AU  - Ashley Akerman; Robert Meade; Sean Notley; Gregory McGarr; Joseph Costello; Craig Crandall; James Cotter; Glen Kenny
+TI  - Cadiac adjustments to heat stress: a systematic review and meta-analysis
+DP  - 12/08/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020192887
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020200420
+AU  - MJ Ruzmyn Vilcassim; Amy Callahan; Kristina Zierold
+TI  - A systematic review of air pollution, health outcomes, and the state of knowledge regarding air quality impacts on the health of travelers
+DP  - 14/08/2020
+YR  - 2020
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020200420
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020212048
+AU  - Dilson David Goethe Flórez; Carlos Eduardo Schnorr; Luis Felipe Silva Oliveira
+TI  - Incidence of air pollution on metabolic syndrome: a protocol for a systematic review and meta-analysis
+DP  - 04/08/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020212048
+ER  - 
+
+TY  - JOUR
+ID  - CRD42020216532
+AU  - Matthew O'Reilly; Jonathan Gruber; Arthur Daniel; John Fraser; Eliot Hu; Janelle Marra; Doug Jones
+TI  - Consistency and applicability of return to activity guidelines in tactical-athletes with heat injury
+DP  - 03/12/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42020216532
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021224501
+AU  - Nuria Burguillos; Jordi Carratalà
+TI  - Air pollution and acute respiratory syndromes: a systematic review
+DP  - 04/08/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021224501
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021232601
+AU  - Jingwen Liu; Blesson Varghese; Alana Hansen; Peng Bi
+TI  - Impact of hot weather on cardiovascular mortality and morbidity in different climate zones: a systematic review and meta-analysis
+DP  - 05/07/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021232601
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021244471
+AU  - Hannah Grant; Hannah Marker; Peter Winch
+TI  - Systematic review of ambient air pollution interventions in West Africa
+DP  - 29/04/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021244471
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021246580
+AU  - Mingwei Liu; Paul Meijer; Thao Lam; Erik Timmermans; Diederick Grobbee; Joline Beulens; Ilonca Vaartjes; Jeroen Lakerveld
+TI  - Built environment characteristics associated with fatal and non-fatal cardiovascular disease events: an umbrella review
+DP  - 03/06/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021246580
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021248800
+AU  - Akorede Adekoya; Kurmi Om; Adenike  Adeyemi
+TI  - Effects of household air pollution (HAP) on cardiovascular diseases in low and middle income countries: a systematic review and meta-analysis.
+DP  - 10/05/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021248800
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021249407
+AU  - Clare Faurie; Blesson Varghese; Liu Jingwen; Michael Tong; Peng Bi
+TI  - The relationship between high temperatures and heatwaves, and heat-related illnesses: a systematic review and meta-analysis
+DP  - 17/05/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021249407
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021249413
+AU  - Nandin-Erdene Bayart; Yun Zhao; Christopher Reid; Sylvester Dodzi Nyadanu; Krassi Rumchev
+TI  - Association between ambient air pollution and ischemic heart diseases and stroke-related hospital admissions and mortality in low- and middle-income countries: Protocol for a Systematic Review and Meta-Analysis
+DP  - 10/06/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021249413
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021250209
+AU  - Jeroen de Bont; Suganthi Jaganathan; Marcus Dahlquist; Åsa Persson; Massimo Stafoggia; Petter Ljungman
+TI  - Ambient air pollution and cardiovascular diseases: an Umbrella review of systematic reviews and meta-analyses
+DP  - 20/06/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021250209
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021250232
+AU  - Li Shang; Zhiheng Li; Landi Sun; Wenfang Yang; Chuchu Kang; Guannan Liu; Yingqiong Zhou; Lingxia Zeng; Qing Wang; Mei Chun Chung
+TI  - The association between homocysteine levels during pregnancy and the risk of adverse pregnancy outcomes: a systematic review and meta-analysis
+DP  - 27/05/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021250232
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021252148
+AU  - Nidhi Singh; Susanne Breitner; Kathrin Wolf; Ute Kraus; Alexandra Schneider
+TI  - Impact of heat/temperature increases on cardiovascular mortality: a systematic review and meta-analysis
+DP  - 27/05/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021252148
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021265192
+AU  - Adekunle Fakunle; Akinkunmi Okekunle; Callistus Akinleye; Morakinyo Oyewale; Johnson Ogundare; Temilade Bello
+TI  - Air Pollution (AP) and Risk of Cardiovascular diseases (CVD) among young adults: a systematic review and meta-analysis
+DP  - 01/08/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021265192
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021268197
+AU  - Maria Roriz; Vitor Teixeira; Pedro Brito; João Brito; Filipe Teixeira
+TI  - Performance effects of internal cooling techniques before and during different types of exercise in hot environments: a systematic review
+DP  - 23/11/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021268197
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021270637
+AU  - Jason Sun; Changxin Lan; Le Yuan
+TI  - Long-term surface ozone exposure metrics and risks of associated mortality: An updated systematic review and meta-analysis
+DP  - 29/09/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021270637
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021276784
+AU  - Juan Gabriel  PiÃ±eros ; Emmanuel Nieto; Diana Cano; Alejandra Hoyos
+TI  - Systematic review of health impacts of short-term exposure to PM2.5 and Black carbon ambient air pollution from wildfires.
+DP  - 03/10/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021276784
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021278628
+AU  - Andrew Dhawan; Shreya Louis; Joshua Rim; Alise Carlson
+TI  - Neurology in a Changing Climate: A Systematic Review
+DP  - 14/10/2021
+YR  - 2021
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021278628
+ER  - 
+
+TY  - JOUR
+ID  - CRD42021291009
+AU  - Wenjian Lin; Xiaoyu Zhou
+TI  - Meta-analysis of the relationship between atmospheric particulate matter and the incidence or death of stroke in residents
+DP  - 30/04/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42021291009
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022299034
+AU  - Arnab Ghosh; Benjamin Geisler
+TI  - Association between hurricanes and related extreme weather events and cardiovascular disease outcomes: a systematic review
+DP  - 17/01/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022299034
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022310545
+AU  - Priyal ; Hariom Solanki; Nayanika Tummala; Sana Rehman; Shreya Pandey
+TI  - How does breathing polluted air compare with breathing fresh air in causing stroke in adults: an Overview of Reviews
+DP  - 22/03/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022310545
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022320923
+AU  - Dhruv Kazi; Ethan Katznelson; Chia-Liang Liu; Nora Al-Roub; Richard Chaudhary; Diane Young; Megan McNichol; Loretta Mickley; Daniel Kramer; Wayne Cascio; Aaron Bernstein; Mary Rice
+TI  - Climate Change and Cardiovascular Health: A Review
+DP  - 05/03/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022320923
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022326993
+AU  - Julia Meadows; Rebecca Bentley; Ang Li; Adelle Mansour
+TI  - A systematic review of the effects of chronic physical and mental health conditions on heat-related morbidity and mortality
+DP  - 05/06/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022326993
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022331596
+AU  - Ran Huo; Zhengli Di; Hongwei Zhao
+TI  - a meta-analysis of the correlation between short-term exposure to major air pollutants and the incidence of ischemic stroke
+DP  - 20/05/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022331596
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022346328
+AU  - Alessandro Bianconi; Angela Andrea Coa; Matteo Fiore; Giulia Longo; Davide Gori
+TI  - Impacts of Urban green on Cardiovascular and Cerebrovascular diseases – A Systematic Review
+DP  - 16/10/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022346328
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022355138
+AU  - Isobel Braithwaite; Nazanin Rassa; Rob Aldridge; Anna Mavrogianni; Spiros Denaxas
+TI  - Housing and health: a systematic review of the impacts of energy inefficiency and cold housing on a range of physical and mental health outcomes over time
+DP  - 05/04/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022355138
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022356857
+AU  - Anjali  Rana; Rajbir Kaur; J. S. Thakur; Samir Malhotra
+TI  - Non-communicable Diseases associated with household air pollution from biomass fuel in South-East Asia Region: A systematic review and meta-analysis protocol
+DP  - 10/09/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022356857
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022358960
+AU  - Shihua Shi; Marloes Eeftens; Sarah Glick; Alexandra Bürgler
+TI  - Associations between airborne pollen, intermittent allergic rhinitis and cardiovascular health: a systematic review of observational studies
+DP  - 28/10/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022358960
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022366982
+AU  - Andrew Chang; Michelle Odden; Annabel Tan; Amanda Woodward
+TI  - Cardiac Imaging Findings Associated with Air Pollution Exposure: A Systematic Review and Meta-Analysis
+DP  - 24/10/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022366982
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022371764
+AU  - jingxin wang; limei ai; wenyi yang; danying li; xia wan
+TI  - A systematic review and meta analysis of association between smoking and disease in Asian population
+DP  - 27/11/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022371764
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022373943
+AU  - STEPHANEY GYAASE; Kwaku Poku Asante; George Downward; Kerstin Klipstein Grobusch; Roel Vermeulen; Solomon Nyame
+TI  - Climatic factors and household air pollution relationship, cardiovascular disease morbidity and mortality pattern: Protocol for systematic review
+DP  - 19/11/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022373943
+ER  - 
+
+TY  - JOUR
+ID  - CRD42022384628
+AU  - Atiya Kamal; Aaisha Connor; Emma Bridger; Guojin Liu; Susan O'Sullivan
+TI  - A systematic review of health outcomes across the lifespan for Central African groups in the UK
+DP  - 20/12/2022
+YR  - 2022
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42022384628
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023367672
+AU  - viviane chaury; Julie BREDA; Loïc Blanchet-Mazuel; charlotte GOOLAERTS; Antoine Elias
+TI  - Systematic review of the co-benefits of a sustainable diet on health and environment
+DP  - 23/01/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023367672
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023390151
+AU  - Mobolaji Olagunju; Olunike Abodunrin; Ifeoluwa Adewole; Samuel Sijuade; Folahanmi Akinsolu; Shen Chong
+TI  - Air pollution and Non-Communicable Diseases in China: A systematic review and meta-analysis.
+DP  - 19/01/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023390151
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023392247
+AU  - Muhammad Saleem Pomee; Elke Hertig; Evamaria Krause
+TI  - The impact of climate change on cardiovascular and respiratory health in Europe: A systematic review protocol
+DP  - 30/01/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023392247
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023395403
+AU  - Ahmad Toubasi; Thuraya Al-Sayegh
+TI  - The Impact of Environmental Changes on Stroke: A Systematic Review and Meta-analysis
+DP  - 09/02/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023395403
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023397145
+AU  - Francesco Forastiere; Michal Krzyzanowski; Carla Ancona; Zorana Andersen; Ilaria Cozzi; Jiawei Zhang; Sylvia Medina; Heather Walton; Joseph Spadaro; Roman Perez Velasco; Pierpaolo Mudu; Sophie Gumy; Denjan Loncar
+TI  - Choices of morbidity outcomes and concentration-response functions for health risk assessment of air pollution: an umbrella review of systematic reviews and meta-analyses
+DP  - 11/04/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023397145
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023397994
+AU  - Tomasz Tomasik; Magdalena Abramczyk; Adam Windak; Jacek Jozwiak; Janusz Krzyszton
+TI  - The influence of architecture, design and physical environment in residential buildings on cardiovascular disease - protocol for an overview of systematic reviews.
+DP  - 20/02/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023397994
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023402099
+AU  - Sanjay M Sisodiya; Francesco Fortunato; Ethan Haynes; Medine I Gulcebi; James Mills
+TI  - Hot Brain: a systematic review of climate change and nervous system diseases
+DP  - 08/03/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023402099
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023413916
+AU  - Mahdiyeh Mohammadzadeh; Amir Hossein Khoshakhlagh
+TI  - Impact of air pollution on cognitive impairment and dementia: a systematic review
+DP  - 14/04/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023413916
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023418737
+AU  - Marie Russell; Beth Haley; Erik Slawsky; Hanna Jardel; Kristen Cowan; David Dillon; Caitlin McConaghy; Joel Hoffman; Kristen Rappazzo
+TI  - Reviews and Meta-analyses of Associations between Sewer Overflows and Health Outcomes
+DP  - 16/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023418737
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023420549
+AU  - Joseph Balikuddembe Kimuli; Zheng Yafang; Don Eliseo Lucero Prisno III; Robert Stodden
+TI  - Impact of climate-induced floods and typhoons on geriatric disabling health among older Chinese and Filipinos: A cross-country systematic review
+DP  - 01/12/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023420549
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023423207
+AU  - Daniela Celi Lalama; Aida Lorena Soria
+TI  - Effectivity of thermal stimulation plus standard rehabilitation for improving the functionality post stroke. Systematic Review and Meta-analysis
+DP  - 16/05/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023423207
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023425327
+AU  - Pablo Orellano; Evangelia Samoli; Maria-Iosifina Kasdagli; Román Pérez Velasco
+TI  - Long-term exposure to particulate matter, nitrogen dioxide and ozone and all-cause and cause-specific mortality: An updated systematic review and meta-analysis
+DP  - 04/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023425327
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023429791
+AU  - Maria Alejandra Ospino Vergara; Alexandra Bannach-Brown; Erika von Schneidemesser; Samruddhi Yerunkar; Ana Maria Guerrero Fonseca; Carolina Severiche Mena
+TI  - The association of short-term exposure to particulate matter 2.5 and hospitalization risk and mortality for ischemic stroke in low-middle income countries: A systematic review and meta-analysis protocol.
+DP  - 10/07/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023429791
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023434702
+AU  - Mahdiyeh Mohammadzadeh; Amir Hossein Khoshakhlagh
+TI  - Ambient air pollution and cardiovascular burden disease: a systematic review
+DP  - 23/06/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023434702
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023437674
+AU  - Michael Tong; Lei Wan; Yannan Li
+TI  - The impact of ambient air pollution on cardiovascular diseases in Australia: A systematic literature review and meta-analysis
+DP  - 10/07/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023437674
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023441916
+AU  - Jongmin Oh; Gonzalo Benjamin Hevia-Ramos; Youn-Hee Lim
+TI  - A systematic review and meta-analysis on long-term exposure to particulate matter and all-cause and cause-specific mortality in the Asia Pacific States.
+DP  - 24/03/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023441916
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023443287
+AU  - Jasper Kampman; Kim Plasmans; Niek Sperna Weiland
+TI  - Comparison of nitrous oxide-based general anaesthesia with nitrous oxide-free general anaesthesia: systematic review and meta-analysis
+DP  - 23/10/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023443287
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023444656
+AU  - Periklis Charalampous; Gunn Marit Aasvang; Anette Kocbach Bølling; Brecht Devleesschauwer; Vanessa Gorasso; Arno Pauwels; Ricardo Assunção; Carla Martins; Susanne Breitner; Alberto Fernández; Jurgen Buekers; Hamid Hassen; Karen Van de Vel; Michael Brauer; Juanita Haagsma
+TI  - Relationship between long-term transportation noise exposure and ischemic heart disease and stroke: a systematic review and meta-analysis
+DP  - 23/07/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023444656
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023444930
+AU  - Pranita Tiwari; Honglu Zhang; Hongbo Liu
+TI  - The association of Particulate Matter with the incidence and mortality of Stroke and Its Subtypes: A systematic review and meta-analysis.
+DP  - 26/07/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023444930
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023448787
+AU  - Hoimonty  Mazumder ; Easter Protiva Gain; Jyoti Das; Monir Hossain Shimul; Faria Rimu; M. Mahbub Hossain
+TI  - Maternal health outcomes associated with ambient air pollution: An Umbrella review of systematic reviews and meta-analyses
+DP  - 18/01/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023448787
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023452405
+AU  - Kenneth Finlayson; Soo Downe; Gill Moncrieff; Cath Harris; Doris Chou
+TI  - Experiences of Non-Communicable Diseases (NCD’s) during the Maternity Continuum: A qualitative synthesis of women’s and health professional’s views
+DP  - 08/08/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023452405
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023456590
+AU  - Xiulin Tian; Kaiming Liu; Hanze Chen; Qiaomin Tang; Weiya Ma
+TI  - Association of traffic-related noise and air pollution and risk of cardiovascular diseases: systematic review and meta-analysis
+DP  - 01/09/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023456590
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023457991
+AU  - Tayebeh Sabokbar; Ehsan Sharifipour; Abolfazl Mohammadbeigi
+TI  - Air Pollution and Stroke, acute exposure and chronic or long-term exposure: A Comprehensive Systematic Review and Meta-Analysis
+DP  - 06/09/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023457991
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023460443
+AU  - Stephan Mayntz; Jess Lambrechtsen
+TI  - Exposure to Air and Noise Pollution and its Impact on Cardiovascular Health: A Systematic Review
+DP  - 12/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023460443
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023466543
+AU  - Daraje Kaba  Gurmessa; Worku Jimma
+TI  - A Comprehensive Evaluation of Explainable Artificial Intelligence Techniques in Stroke Diagnosis: A Systematic Review
+DP  - 26/10/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023466543
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023471056
+AU  - Elizabeth Marsh; Katrin Burkart; Michael Brauer; Vanessa Garcia; Charlie Ashbaugh
+TI  - Long-term exposure of ambient and household air pollution and cardiovascular diseases: systematic review and metaanalysis
+DP  - 29/10/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023471056
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023475516
+AU  - Mobolaji Olagunju; Olunike Abodunrin; Ifeoluwa Omotoso; Oluwabukola Ola; Ifeoluwa Adewole; Chukwuemeka Abel; Folahanmi Akinsolu
+TI  - Cooking fuel used and Non-Communicable Diseases in China: A systematic review and meta-analysis.
+DP  - 03/11/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023475516
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023479926
+AU  - Daraje Gurmessa; Worku Jimma
+TI  - A Comprehensive Evaluation of Interpretable Artificial Intelligence for Epileptic Seizure Detection using an Electroencephalogram: A Systematic Review
+DP  - 10/01/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023479926
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023484421
+AU  - changmao Dai; Xiaolan Sun
+TI  - Association between exposure to ambient air pollutants and metabolic syndrome: a meta-analysis
+DP  - 30/11/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023484421
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023484771
+AU  - Xiru Yu; Xiaoling Yan
+TI  - A Comparative Study of Digital and Traditional Intervention Strategies for Secondary Prevention of Stroke Recurrence
+DP  - 30/11/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023484771
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023484929
+AU  - Shadi Rahimzadeh; Mariachiara Di Cesare; Mark Miller; Anoop Shah; Pablo Perel; Sean Taylor; Marvellous Adeoye
+TI  - Impact of Air Pollution on Heart Failure, Stroke, and Myocardial Infarction in LMIC &amp; LIC Countries.
+DP  - 30/11/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023484929
+ER  - 
+
+TY  - JOUR
+ID  - CRD42023485716
+AU  - Jack Brown; Paris Baptiste; Jianhua Wu
+TI  - What is the current evidence regarding the impact of neighbourhood and community level factors on (all-type) cardiovascular disease?
+DP  - 23/11/2023
+YR  - 2023
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42023485716
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024458036
+AU  - bahareh ebrahimi; Mina Molayem
+TI  - Particulate matter (PM) as a major threat to autophagy-induced homeostasis regulation, a systematic review of the literature
+DP  - 09/06/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024458036
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024479220
+AU  - Nomagugu  Ndlovu; Benedicta Nkeh-Chungag
+TI  - Impact of indoor air pollution on cardiovascular health outcomes of older adults
+DP  - 17/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024479220
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024483797
+AU  - Qingya Zeng; Shuyao Pan; Feng Yuan; Gang Chen
+TI  - Impact of high temperature on obesity risk: a systematic review and meta-analysis
+DP  - 19/01/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024483797
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024503898
+AU  - Pamela Okoye; Bhuputra Panda; Saumya Pani; Zamira Kombo Khamis; Manasmruti Sahu
+TI  - Effectiveness of Personal Cooling Strategies on Heat Stress Management in Low- and Middle-Income Countries: A Systematic Review
+DP  - 04/02/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024503898
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024510590
+AU  - Dolors Ramirez Tarruella; Vanesa Rodríguez Salés; Laura Gavaldà Mestre; Noemí Párraga Niño
+TI  - Predictors of mortality of Nosocomial and Community-Acquired Legionellosis: A Systematic Review and meta-analysis
+DP  - 17/02/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024510590
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024511153
+AU  - Ana Bonell; Leonidas Ioannou; Andreas Flouris; Jane Hirst
+TI  - Understanding the physiological and biological response to ambient heat exposure in pregnancy: a protocol for a systematic review and meta-analysis
+DP  - 09/02/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024511153
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024512402
+AU  - Gagandeep Kaur; Ankur Singh; Suzanne Mavoa; Carina Dexter; Nyssa Hadgraft; Rebecca Reid; Timothy Chaston; Ziqi Chen
+TI  - Inequity impact of air pollution interventions
+DP  - 25/02/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024512402
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024518640
+AU  - Jeevan K Shetty; Vijayalakshmi Sitanadhi Bhojaraja
+TI  - Barriers and enablers of physical activity practices in patients with major non-communicable (NCDs) diseases.
+DP  - 11/03/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024518640
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024519482
+AU  - Rabab Awad; Ahmad Abu-Akel; Liat Ayalon
+TI  - Heat stress effects on the immune system among older persons: A systematic literature review
+DP  - 12/03/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024519482
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024526442
+AU  - Prakasini Satapathy; Zahir Quazi
+TI  - Exposure to Polycyclic Aromatic Hydrocarbons and Risk of incident Cardiovascular Diseases and cardiovascular mortality: A systematic review and meta-analysis
+DP  - 30/03/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024526442
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024530973
+AU  - Mengdi Wang; dongsheng hu; yang zhao
+TI  - Solid fuel use and hypertension, diabetes, and cardiovascular events: a systematic review and meta-analysis of prospective cohort studies
+DP  - 11/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024530973
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024531345
+AU  - Kang Fengguang; Dezhu Chen
+TI  - Association between air pollution and development of atrial  fibrillation: An updated meta-analysis
+DP  - 13/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024531345
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024531797
+AU  - Amensisa Hailu Tesfaye; Jason Prior; Erica McIntyre
+TI  - Impact of climate change on the health workforce
+DP  - 13/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024531797
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024533094
+AU  - Kaijun Zhang; Min Cheng; Penghui Yang; Ping Xiang; Mi Li; Wei Eric Wang
+TI  - Asian Dust and the Risk of Acute Myocardial Infarction and Stroke: a systemic review and Meta analysis
+DP  - 17/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024533094
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024537582
+AU  - Shipeng Zhang; Yanjie ; Xinyi He; Qinwei Fu
+TI  - Associations between air pollution and residential greening and chronic disease in old age: a systematic review and meta-analysis
+DP  - 29/04/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024537582
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024540478
+AU  - Samuel Pintos Rodríguez; Pablo Juan Salvadores; Adolfo Figueiras Guzmán
+TI  - Influence of air pollution in the onset and development of coronary artery disease in very young patients: a systematic review
+DP  - 02/08/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024540478
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024542145
+AU  - Amensisa Hailu Tesfaye; Erica Mcintyre; Jason Prior
+TI  - Heat related illness symptoms among firefighters: Systematic review
+DP  - 13/05/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024542145
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024546683
+AU  - Nu Quy Linh Tran; Tri Dung Phung; Thudawe Yohani Shavindi Dalugoda; Patrick Amoatey
+TI  - Impacts of heat on human health and effectiveness of heat-related health intervention in Queensland: A systematic review
+DP  - 02/06/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024546683
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024548438
+AU  - Jose Alberto Mendivil de la Ossa; Paula Andrea Fonseca Zuluaga; Daniel Duque Restrepo; Diana Maryori Gómez Gallego; Santiago Rendón Marín; Ángela María Segura Cardona; Juliana Espinosa Rojas
+TI  - Protocol for a systematic review of the most frequent major cardiovascular outcomes among taxi drivers worldwide, and their occupational and non-occupational risk factors.
+DP  - 31/07/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024548438
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024549000
+AU  - DANILA SANTANA; Hermano Castro
+TI  - Effects of air pollution of fires over human health: an integrative review
+DP  - 31/05/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024549000
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024555579
+AU  - Hoimonty  Mazumder ; Easter Protiva Gain; Md. Monir Hossain Shimul; Farah Faizah; Naznin Alam; Xichen Mou; M. Mahbub Hossain; Fawaz Mzayek; Matthew P. Smeltzer; Hongmei Zhang; Howard H. Chang; Robert Lowell Davis; Joshua S. Fu; Csaba P. Kovesdy; Abu Mohd Naser
+TI  - Effect of ambient temperature on renal colic: A systematic review and meta-analysis
+DP  - 26/09/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024555579
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024558141
+AU  - Hadi Hassan; Farhana Haque; Ruth Willis
+TI  - Exploring the Influence of Climate Change-Linked Meteorological Factors on Diabetes Complications in South Asia.
+DP  - 17/06/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024558141
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024559205
+AU  - Nicole Macedo; Elizabeth Sousa; Ana Beatriz Hennemann Koury; Gustavo Ferreira
+TI  - The relation between climate changes and the occurance of cardiovascular and neurovascular diseases
+DP  - 27/10/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024559205
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024560330
+AU  - Caradee Wright; Thandi Kapwata; Nomfundo Mahlangeni; Tracey Laban; Candice Webster; Sarisha Perumal; Natasha Naidoo; Pier Mudu; Kerolyn Shairsingh; Devon Jarvis
+TI  - A systematic review protocol on the air pollution-related health impacts from domestic waste burning and associated interventions and policies: the merits of a traditional versus machine learning methodology
+DP  - 05/07/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024560330
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024563176
+AU  - Gunn Marit Aasvang; Göran Pershagen; Andrei Pyko; Timo Lanki; Mikael Ögren; Mette Sörensen
+TI  - Road traffic noise and incident ischemic heart disease, myocardial infarction and stroke: A systematic review and meta-analysis
+DP  - 16/07/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024563176
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024565994
+AU  - Chun Zhang; HuiLin Wang; Danqi Huang; Jiang Li; Jingbo Zhai; GuoQiang Li
+TI  - Outdoor ozone exposure and the risk of non-communicable chronic disease: an umbrella review of systematic reviews and meta-analyses
+DP  - 18/07/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024565994
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024570959
+AU  - Aziza Seitova; Aiperi Asanbek kyzy; Nobutoshi Nawa; Roman Kalmatov; Takeo Fujiwara
+TI  - Air pollution and adverse health outcomes in Central Asia: a systematic review and meta-analysis
+DP  - 07/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024570959
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024572067
+AU  - Sarah Zelasky; Peter Maniloff; Neal Fann
+TI  - Outdoor Fine Particles and Incident Dementia in US, Canadian, and European study populations: Systematic Review and Meta-Analysis to Inform Regulatory Risk Assessments
+DP  - 04/08/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024572067
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024577546
+AU  - Edda Parrinello; Rosella Saulle; Manuela De Sario; Zuzana Mitrova; Ilaria Cozzi; Francesca de' Donato; Paola Michelozzi
+TI  - Health outcomes, environmental sustainability and socio-economic factors of Mediterranean Diet: an Umbrella Review
+DP  - 20/09/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024577546
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024580538
+AU  - Janina del Rosario Bazalar Palacios; Anthony Copez-Lonzoy; Juan Carlos Bazo-Alvarez
+TI  - Exposure to air pollution and mortality from all causes and cardiovascular diseases: a systematic review
+DP  - 27/08/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024580538
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024582088
+AU  - Bhavana Gill; Asha Kuriachan; Ashley Truesdale; Bhavini Gohel; Philip Barber; Nathalie Jette
+TI  - The Association between Wildfire Smoke and Acute Cardiac, Neurologic and Psychiatric Health Care Utilization and Mortality: a Systematic Review
+DP  - 01/09/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024582088
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024588528
+AU  - Chinnu Sara  Varughese; Sapna Meryl Mani; Vineetha Vincent; Sunu Alice Cherian; Nisha Kurian
+TI  - Impact of urban heat islands on human health in India - a systematic review
+DP  - 24/02/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024588528
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024592854
+AU  - Yu You; juan chen; Kai Wang; Tong Wu; Lijun Bai; Ge Li
+TI  - Impact of short-term exposure to ozone on hospital admissions for various cardiovascular diseases: A systematic review and meta-analysis
+DP  - 30/09/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024592854
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024593463
+AU  - Oluwapelumi  Peter Arinola; Temilade Bello; Adekunle Fakunle
+TI  - Cardiovascular health outcomes associated with housing among adults in sub-Saharan Africa: A systematic review and meta-analysis
+DP  - 04/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024593463
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024597791
+AU  - Samrin Kusum; Grace Kilroy; Jacqueline MacDonald Gibson
+TI  - Climate change and its impact on cardiovascular disease in high-income countries- A systematic literature review and meta-analysis
+DP  - 14/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024597791
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024598193
+AU  - Haiying Chen; Haotian Liu; Jialu Yin; Ying Feng; Yiran Zhu; Jixv Li; Pei Wang
+TI  - Causal relationship between air pollution and health outcomes: a Meta-analysis of Mendelian randomization studies.
+DP  - 19/10/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024598193
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024599299
+AU  - Fatin Sofea  Rabuan; Nur Zakiah Mohd Saat; Noraidatulakma Abdullah @ Muda
+TI  - Environmental Factors with Risk Of Cardiovascular Disease: A Systematic Review
+DP  - 19/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024599299
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024599443
+AU  - Desale Bihonegn; Tadele Biresaw Belachew; Wubshet Debebe Negash
+TI  - Impact of Climate Change on Cardiovascular Health: systematic review
+DP  - 20/10/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024599443
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024604503
+AU  - Kirsten Sjonnesen; Riley Martens; Serena Orr; Stephen Wilton
+TI  - Ambient Air Pollution and Early Subclinical Vascular Changes in Children and Young Adults: A systematic review protocol
+DP  - 01/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024604503
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024607107
+AU  - Melani Ratih Mahanani; Lisa Wolf; Adele Isber; Braun Volker; Veronica Shiroya; Christopher M. Jones; Vera Araújo-Soares
+TI  - The effects of heat exposures on cardiometabolic health among populations with low socioeconomic status and/or a migration background
+DP  - 30/10/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024607107
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024611316
+AU  - Caitlin Wyrwoll; Leaf Kardol; Amina Rhaman; Shane Maloney; Erin Kelty; Dani Russel
+TI  - Under control? A systematic review of mouse models of heat exposure and housing temperatures
+DP  - 29/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024611316
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024612468
+AU  - Shiyi Zhou; Yongfang Zhao
+TI  - Effects of warm needling combined with traditional Chinese Tuina manipulation on frozen shoulder A systematic review and meta-analysis
+DP  - 21/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024612468
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024615500
+AU  - Yuan-Yao CUI; Yuan Sun
+TI  - Association between Dust Storms and Multi-Organ Health Outcomes: A Systematic Review and Network Meta-Analysis
+DP  - 29/11/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024615500
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024621372
+AU  - Shivam  R; Muhammed Shabil; Ajay Malvi
+TI  - Association of Hydrocarbon Exposure and Risk of Cardiovascular Diseases and Cardiovascular Mortality: A Systematic Review and Meta-Analysis
+DP  - 13/12/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024621372
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024628318
+AU  - Bavapriya Iyngararasan; Salma Ayis; Seeromanie Harding
+TI  - Adverse health effects associated with household air pollution: An updated systematic review, meta-analysis, and burden estimation with consideration of structural determinants of health
+DP  - 30/12/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024628318
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024628600
+AU  - Kurt Straif; Mikaela Raphael; ARNAU SAGRERA AYALA; Sara Lasunción; Marília Paulo; Michelle Turner; Xavier Basagaña
+TI  - Systematic review on the effectiveness of interventions on occupational heat-related physical and mental health outcomes among construction workers.
+DP  - 30/12/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024628600
+ER  - 
+
+TY  - JOUR
+ID  - CRD42024629397
+AU  - Ganesh B; Muhammed Shabil; Ajay Malvi
+TI  - Association of Hydrocarbon Exposure and Risk of Hypertension: A Systematic Review
+DP  - 29/12/2024
+YR  - 2024
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42024629397
+ER  - 
+
+TY  - JOUR
+ID  - CRD420250645338
+AU  - Tanwi Trushna; Surya Singh; Megha Singh Parihar; Ekta Barkade; Sandul Yasobant; Rajnarayan R Tiwari; Vishal Diwan
+TI  - The Impact of Water Salinity on Human Health: A Systematic Review and Meta-Analysis
+DP  - 18/03/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420250645338
+ER  - 
+
+TY  - JOUR
+ID  - CRD420250651593
+AU  - KINGSLEY KWAKYE; Michael Foli
+TI  - Urban-Rural Disparities in Non-Communicable Disease Related Mortality in Ghana: A Systematic Review of Burden, Risk Factors, and Health System Responses
+DP  - 24/02/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420250651593
+ER  - 
+
+TY  - JOUR
+ID  - CRD420250654942
+AU  - Kelly Fernanda Molena; Maria Júlia Delsin Gallo; Alexandra Mussolino de Queiroz; Francisco Wanderley Garcia de Paula-Silva
+TI  - Heat Exposure Models in Rodents: A Systematic Review
+DP  - 15/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420250654942
+ER  - 
+
+TY  - JOUR
+ID  - CRD420250655136
+AU  - Katherine Dibbon; Julie Abraham
+TI  - Environmental heat stress and pregnancy: A systematic review of adverse fetal outcomes and pregnancy complications
+DP  - 05/03/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420250655136
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251000552
+AU  - Pranali Ahir; Suresh Yadav
+TI  - Air Pollution and Chronic Respiratory Diseases in Rajasthan
+DP  - 04/03/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251000552
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251015695
+AU  - Lennart Koch; Jan Stratil; Lára Rún Hallsson; Milena Mühler; Ellen John; Katharina Brugger; Gaby Sroczynski
+TI  - The effect of heat on hospitalisations for cardiovascular, respiratory and cerebrovascular diseases - a systematic review and meta-analysis
+DP  - 06/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251015695
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251016662
+AU  - Pitak Benjarattanaporn; Pete Dodd; Andrew Lee; Debebe Adewo; Anthea Sutton
+TI  - Dengue Forecasting Models: A Systematic Review and Comparative Analysis of Methodologies (PICO Framework)
+DP  - 23/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251016662
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251017266
+AU  - Elisha John Igwe; Desmond Uchechukwu Onu
+TI  - Genetic, environmental, and clinical risk factors of sickle cell disease: a systematic review
+DP  - 17/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251017266
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251020849
+AU  - Alice Frevert; Marike Andreas; Sophie Busalt; Melani Ratih Mahanani; Vera Araújo-Soares; Nikolaus Mezger; Franziska Matthies-Wiesler; Falko Sniehotta
+TI  - Assessing the effectiveness of interventions to reduce heat-related mortality, morbidity, and emergency service demand during heat waves
+DP  - 07/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251020849
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251023140
+AU  - Sarah Wilson; Clare Tolley; Leanne Morrison; Dawn-Marie Walker; Sarah Slight; Valentina Abayomi; Nehal Hassan; Madalena Vaz-Monteiro; Davide Filingeri; Justin Sheffield; Nuno Koch Esteves; Robert Slight
+TI  - Interventions used by vulnerable groups to mitigate the health impacts of exposure to extreme temperatures: a qualitative systematic review 
+DP  - 19/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251023140
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251023708
+AU  - safiye ghobakhloo; Amir Hossein Khoshakhlagh
+TI  - Global systematic evaluation of disease burden due to indoor air pollution exposure 
+DP  - 01/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251023708
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251025163
+AU  - duo wang; zhi yong wang
+TI  - A systematic review and meta-analysis of the Risk factors and prevalence of Cognitive Frailty in maintenance hemodialysis patients
+DP  - 04/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251025163
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251030714
+AU  - Ariunzaya Nyamjav; Nominzul Ganbold; Khulan Ganzoo; Saran-Erdene Ganzorig; Enkhjin Altangagnuur; Bulganzaya Purevdorj
+TI  - "Neurotoxic Smog: A Comprehensive Systematic Review and Meta-Analysis of Long-Term Ambient Air Pollution Exposure's Impact on MRI Biomarkers of Brain Structure and Microvascular Injury"
+DP  - 12/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251030714
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251031080
+AU  - Andrew Aoun; Virginie Desgreniers; Vangel Matic; Priscilla Lopes; Welde Aregawi
+TI  - Interventions targeting public transportation accessibility for individuals with visual impairments: A Systematic Review
+DP  - 11/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251031080
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251031712
+AU  - Syed Asad Irfan; Kleiton Strobl; Khubaib Wariach; Mehdi Zahiri; Om Kurmi
+TI  - Association between air pollution exposure and risk of hemorrhagic stroke: A systematic review and meta-analysis
+DP  - 13/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251031712
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251033582
+AU  - Giulia Bonanni; Alireza Shamshirsaz; Kjersti Aagaard; Vincenzo Berghella; Faezeh Aghajani; Samaneh Saraeian; Kamyar Ebrahimi; Izat Mohammad Khawajah
+TI  - Dose-response meta-analysis of aspirin for the prevention of term and preterm preeclampsia: a systematic review of randomized controlled trials
+DP  - 21/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251033582
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251034507
+AU  - Ramin Assempoor; Alireza Sattari Abroy
+TI  - Association between exposure to endocrine-disrupting chemicals and subclinical carotid atherosclerosis: A systematic review and meta-analysis
+DP  - 17/04/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251034507
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251036539
+AU  - Hannah Gardner; Prerna Gopal; Alyssa Despotis; Manisha Nair
+TI  - The role of climatic factors and environmental pollutants in anaemia among women and girls: a systematic review
+DP  - 08/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251036539
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251043716
+AU  - Carver Goodhue; Ethan Abbott
+TI  - Heat emergency: a systematic review of social determinants of health of emergency medical services patients with heat-related illness
+DP  - 02/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251043716
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251044494
+AU  - Gabriel Scursone; Diana Adamatti
+TI  - Artificial intelligence for air quality prediction and its relationship with respiratory diseases: a systematic literature review  
+DP  - 07/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251044494
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251046639
+AU  - Damian Skrypnik; Weronika Banach; Julia Bałoniak; Dominika Kozłowska; Oskar Matuszak; Martyna Soloch; Kinga Brzezińska; Wojciech Starczewski; Mariusz Dotka
+TI  - The impact of maternal exposure to air pollution on pregnancy outcomes: a systematic review
+DP  - 10/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251046639
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251049068
+AU  - keyu xie; lina zhang; jiarui gong; jiayi lin
+TI  - The impact of green spaces on heat-related health outcomes: A systematic review with meta-analysis
+DP  - 12/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251049068
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251051848
+AU  - Sara Alves; Helder Fernandes; Adilia Fernandes; Maria Pilar Molés Julio
+TI  - Occupational Exposure and Cardiovascular Risk in Firefighters
+DP  - 13/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251051848
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251052384
+AU  - Michèle Renard; Terence Buan Kiong Chua; Pearl Min Sze Tan; Leonidas G. Ioannou; Boris R. M. Kingma; Marco Morabito; Chaunsi Gao; Jason Kai Wei Lee
+TI  - Heat Health Advisories: A Systematic Review and Decision-Making Framework
+DP  - 02/10/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251052384
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251053016
+AU  - Tobias Magnus Schuster; Francis Xavier Kasujja; Soledad Cuevas; Hugh Sharma Waddington; Pauline Scheelbeek
+TI  - Effect of greenhouse gas pricing on quantitative health outcomes - a systematic review and meta-analysis
+DP  - 19/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251053016
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251059361
+AU  - Ludovico Baiamonte; Domenico Tarantino; Manuela Lodico; Tommaso Piccoli; Domenica Matranga; Giuseppe Salemi
+TI  - Air pollution and risk of Alzhimer disease: a systematic review and meta-analysis
+DP  - 12/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251059361
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251061533
+AU  - Yulin Shi; Yayuan Mei; Yongfu Yan
+TI  - Evaluation of Population-Level air pollution Interventions and Health Outcomes A Systematic Review and Meta-Analysis
+DP  - 24/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251061533
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251062081
+AU  - JUAN RODRIGO GOMEZ-BERNAL; Arturo Juárez-García
+TI  - Systematic Review with Meta-Analysis: Thermal Stress and Cognitive Performance in Workers Exposed to Extreme Heat
+DP  - 27/05/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251062081
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251066564
+AU  - Aladin Rustamov; Ibrahim Gulmaliyev; Lasin Ozbek; Mustafa Guldan; Derya Goksu Fidan; Mehmet Kanbay
+TI  - Ambient particulate air pollution and post-transplant outcomes in adult kidney-transplant recipients: systematic review and meta-analysis
+DP  - 14/11/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251066564
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251067087
+AU  - Mohsen Ansari; Reza Ghanbari; Mohammad Mahdi Emamjomeh; Hamzeh Ali Jamali; Mohammad Reza Sheikhi
+TI  - The Impacts of Climate Change on Human Health: A Systematic Review of Evidence from 25-years
+DP  - 09/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251067087
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251068585
+AU  - Masaki Sugi; Yu Sakagami; Shigeru Ohtsuru; Toshiya Murai; Aran Tajika; Koji Kitagori; Yoshitsugu Murata; Kazuya Takemura; Atsuhiro Arifuku; Yoshino Horie; Rei Sakagami; Nanpei Hattori; Ayumi Yamaoka; Toshihisa Hatae
+TI  - Heatstroke: A Systematic Review of Case Reports and Case Series
+DP  - 02/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251068585
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251068843
+AU  - James Donaldson; Jamie O'Driscoll; Andre Ng; Anna Hansell; Ahmed Abdelrazik; Christopher Nelson
+TI  - The Effect of Exercise Interventions on Blood Pressure in Adults: A Systematic Review and Meta-Analysis Considering Environmental Air Pollution Context
+DP  - 01/07/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251068843
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251069195
+AU  - Tingting Zhu; Jixu Li
+TI  - Causal association between PM2.5 and 10 cardiocerebral vascular disease: Evidence from MR and meta-analysis
+DP  - 08/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251069195
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251071321
+AU  - Robert Meade; Monica Robles; Tess Wiskel; Neil Singh Bedi; Carrie Wade; Bhargav Krishna; Daniel Schrag; Rafael Irizarry; Satchit Balsari; Caroline Buckee
+TI  - Factors contributing to heterogeneity in excess mortality estimates during major heat waves: A systematic review and meta-analysis  
+DP  - 13/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251071321
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251073731
+AU  - Payel Roy; Md Wasim Momin; Manish Taywade
+TI  - Global Epidemiological Trends in Heat Stroke-Related Morbidity and Mortality Amidst Climate Change: A Systematic Review and Meta-analysis
+DP  - 16/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251073731
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251075050
+AU  - Sanat Singh; Suhani Singhal; Abdulaziz Momin
+TI  - Health effects of household biomass fuel use in India with comparative analysis across LMICs: a systematic review and meta-analysis of observational studies (2000–2025)
+DP  - 16/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251075050
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251075836
+AU  - Hendrawan Chandra Kusuma; Victoria Larasati; Septiana Ailen; Rachel Siyulan; Clara Ann; Michelle Chiara
+TI  - The Role of Vitamin D Status in Predicting Stroke Severity and Functional Recovery Among Asian Adults with Acute Ischemic Stroke: A Systematic Review and Meta-Analysis
+DP  - 18/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251075836
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251080745
+AU  - Andrea Perri; Alessandra Pandolfo; Velia Malizia; Stefania La Grutta; Valentina Lazzara; Giusy Albano
+TI  - Epigenetic Modifications Associated with Environmental Pollution Exposure and Their Effects on the Cardiopulmonary and Nervous Systems in Humans: A Systematic Review and Meta-analysis
+DP  - 26/06/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251080745
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251081067
+AU  - Dhruv Rathod; Josephine Ding; Jasmeen Dourka; Teruko Kishibe; Greg Evans; Chung-Wai Chow; Nancy N. Baxter; Andrea S. Gershon; Ashwin Sankar
+TI  - The Association Between Air Pollution and Postoperative Mortality After Inpatient Scheduled Surgery: A Systematic Review and Meta-Analysis
+DP  - 18/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251081067
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251081592
+AU  - Awakash Turkar; Sanghamitra Pati; Vikas Dhiman
+TI  - Interventions and Preventive Strategies for Mitigating the Health Impacts of Extreme Heat or Heatwaves: An Umbrella Review 
+DP  - 16/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251081592
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251087987
+AU  - tang yan; Xiaolan Mao
+TI  - Associations of Hypomagnesemia with Prognosis in Kidney Transplant Recipients: A Systematic Review and Meta-Analysis
+DP  - 06/07/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251087987
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251104580
+AU  - Alexander Moses; Sidney Siyuan Guo; Timothy English
+TI  - Examining Evidence and Policy to Protect People Experiencing Homelessness from Extreme Heat – A Systematic Review &amp; Policy Case Study
+DP  - 11/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251104580
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251117977
+AU  - Serri Rivally; Hendrawan Chandra Kusuma; Putu Sri Maharani Utami; Ave Maria
+TI  - From Air to Artery, The Impact of Ambient Air Pollution on Stroke in Asia: A Systematic Review and Meta-Analysis
+DP  - 06/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251117977
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251119094
+AU  - Bright Nsia-Tawia; Fiona Niedermayer; Annette Peters; Stefanie Klug
+TI  - The Relationship between Chronic Low-Dose Exposure to Plastic- related Endocrine Disrupting Chemicals and Cardiovascular Disease in Humans: A Systematic Literature Review and Meta-Analysis
+DP  - 26/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251119094
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251119146
+AU  - Amirhossein Hasanpour; Mohammad J. Mansourzadeh; Farzad Hadaegh
+TI  - Systematic Review and Meta-Analysis of the Association between Ambient Air Pollution and Cardiometabolic Health Outcomes in Tehran, Iran
+DP  - 25/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251119146
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251120732
+AU  - Margherita Ferrante; Paola Rapisarda; Andrea Moscato; Maria Castrogiovanni; Eloise Pulvirenti; Carmen Sica; Maria Fiore; Gea Oliveri  Conti
+TI  - Mitigating Air Pollution through Urban Greening: A Systematic Review of Health and Economic Co-benefits
+DP  - 18/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251120732
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251121297
+AU  - ziyu Wang; xiaoqian Yan
+TI  - Meta-analysis of the air pollution sensitivity of cardiovascular disease patients in a healthy lifestyle
+DP  - 07/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251121297
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251125705
+AU  - Neha Bharti; Rohit Rai; Ramesh Athe
+TI  - Environmental Pollution (Ambient air pollution, indoor air pollution) and Its Impact on Public Health (cardiovascular diseases) in India: Systematic Literature Review
+DP  - 13/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251125705
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251130305
+AU  - Muhnnad AlGhamdi; Khalid AlGhamdi
+TI  - The Role of Antioxidants in Preventing Recurrence of Head and Neck Cancers: A Systematic Review and Meta-analysis
+DP  - 23/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251130305
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251131056
+AU  - Aditya Saran; Harshita Jain; Aditi Saran
+TI  - Air Pollution and Cardiovascular Morbidity in India: A Systematic Review
+DP  - 21/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251131056
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251135013
+AU  - ya'nan wang; lirong wei
+TI  - Association between Cardiometabolic Index (CMI) and Adverse Health Outcomes: A Systematic Review and Meta-Analysis
+DP  - 29/08/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251135013
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251136030
+AU  - Margaret M. Brennan; Teresa O'Dowd; Nicholas B. Brink; Danielle Travill; Cherlynn Dumbura; Carla Devantier-Du Pleiss; Ursula Gazeley; Lebohang Radebe; Jeroen de Bont; Cathal Walsh; Andrew Parnell; Fergus McCarthy; Noel D. McCarthy; Matthew F. Chersich; Darshnika Lakhoo
+TI  - High ambient temperatures and hypertensive disorders of pregnancy: a systematic review and meta-analysis 
+DP  - 15/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251136030
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251138768
+AU  - 俊伟 陈; lihong li
+TI  - The incidence and mortality rate of acute kidney injury in patients with heat stroke: A systematic review and meta-analysis.
+DP  - 02/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251138768
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251142351
+AU  - Ahmad Toubasi; Thuraya Al-Sayegh
+TI  - Air Pollution and the Risk and Progression of Multiple Sclerosis: A Systematic Review and Meta-analysis
+DP  - 07/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251142351
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251147354
+AU  - Jyoti Sharma; Aksh Chahal; Puspangi Agarwal; Mohammad Sidiq
+TI  - Multimodal physiotherapy approaches for managing air pollution–related health deterioration: a systematic review of respiratory and cardiovascular outcomes
+DP  - 16/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251147354
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251148066
+AU  - Ye Chen; He-Hua Zhang
+TI  - Diet Factors Modify the Association Between Air Pollution and Chronic Diseases: A Systematic Review and Meta-Analysis
+DP  - 30/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251148066
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251150702
+AU  - Md. Farid Reza Mashfi; Sumiya Sharmin Mou; Monalisa Riya; Nasiba Binte Bahar; Tasnuha Islam; Fayek Rafi Ahmad; Fabliha Fatima; Md. Elias Al-Mamun
+TI  - Pharmacogenomics Guided Cardiovascular Therapy in Low and Middle Income Countries: A Systematic Review of Barriers, Equity Gaps, and Pathways to Personalized Medicine
+DP  - 07/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251150702
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251150925
+AU  - Dr Shruti Sharma; Neeti Rustagi; Farheen Ahmed; Kalyani Deshmukh; Aravind Gandhi P
+TI  - Global Prevalence of Heat Stress–Related Disorders Among School-Aged Children and Adolescents : A Systematic Review and Meta Analysis
+DP  - 17/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251150925
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251151817
+AU  - Xinxin Deng; Liying Zhou; Yayuan Ma; Liang Yao; Hui Liu
+TI  - Association between cold exposure and cardiovascular mortality: systematic review and dose-response meta-analysis
+DP  - 22/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251151817
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251152299
+AU  - Kimia Pakdaman; Pouyan Ebrahimi
+TI  - Global incidence of pregnancy-related stroke: a systematic review and meta-analysis of over 270 million women
+DP  - 21/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251152299
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251152866
+AU  - Seohyun Hong; Yoon Lee
+TI  - Health outcomes associated with high temperature and heat exposure: an umbrella review of meta-analyses
+DP  - 22/09/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251152866
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251153728
+AU  - Xiaoxia Fan; Qimin Fang
+TI  - The Association between Heatwave Health Warning Systems and Mortality Reduction: A Systematic Review and Meta-Analysis
+DP  - 14/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251153728
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251155620
+AU  - Ogechi Obute; Taagbara Abaate; Orish Orisakwe
+TI  - Cardiopulmonary diseases and Environmental pollution in Niger Delta, Nigeria: A Systematic Review and Meta-Analysis
+DP  - 08/10/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251155620
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251167114
+AU  - Jiayan Gou; Wenjie Liu
+TI  - The Impact of Extreme Temperature Exposure (Cold Spell and Heatwave) on the Incidence or Mortality of Intracerebral Hemorrhage: A Systematic Review and Meta-Analysis
+DP  - 10/11/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251167114
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251168637
+AU  - Inaam Chattha; Amr Labek
+TI  - Climate Change–Driven Extreme Heat and Cardiovascular Disease: Integrating Epidemiologic and Physiologic Evidence   
+DP  - 16/10/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251168637
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251172573
+AU  - Nathanonl Dissakorntharavanij; Wissawa Malakan; Yin May Tun; Phantira Saphankaew; Sarin KC; Juthamard Surapongchai; Kantheera Areerak
+TI  - The Impact of Heat Exposure on Human Health outcomes in Thailand: A Systematic Review
+DP  - 10/11/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251172573
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251172917
+AU  - Margo Tonnelier; Damien Delforge; Niko Speybroeck; Periklis Charalampous
+TI  - Impact of heatwaves on mortality and morbidity: global evidence based on a systematic review and meta-analysis
+DP  - 23/10/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251172917
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251180295
+AU  - Arianna Menardi; Anna Sertorelli; Eleonora Fiorenzato; Antonino Vallesi
+TI  - Exposure to air pollution as a risk factor in the development of neurodegenerative diseases: a systematic review
+DP  - 29/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251180295
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251185440
+AU  - Deanna Gracia; Ta-Chien Chan; Chinmayee Rayguru
+TI  - Systematic review and meta-analysis of the hourly effects of short-term exposure to ambient air pollutants and non-optimal temperature on acute cardiovascular and respiratory events
+DP  - 10/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251185440
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251185597
+AU  - Prince Campbell; Strao Campbell
+TI  - Impact of Occupational Heat Exposure on Productivity and Health Outcomes among Outdoor Workers in Sub-Saharan Africa: A Systematic Review and Meta-Analyses
+DP  - 06/11/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251185597
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251229684
+AU  - Vivek Elangovan; R Padmavathi; Omprakash Abirami
+TI  - Nutrition as an Effect Modifier in the Association Between Air Pollution and Cardiovascular Risk Factors: A Systematic Review
+DP  - 08/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251229684
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251237360
+AU  - ANDREA CALDERONE; Rocco Salvatore Calabrò
+TI  - The inpatient exposome in neurorehabilitation wards: an indoor environmental systematic review.
+DP  - 27/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251237360
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251237724
+AU  - Linhong Pang; Zijun Li
+TI  - Hourly air pollution and cardiovascular morbidity: A systematic review and meta-analysis
+DP  - 27/11/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251237724
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251241469
+AU  - PHAM THAO VAN LUONG; Marion Mortamais; Pascal Demoly; Luciana Tanno
+TI  - Personal exposure to air pollutants measured by portable sensors and their associations with cardiorespiratory health: A systematic review
+DP  - 02/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251241469
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251248991
+AU  - Jin Sun; Chenxi Yan; Keqin Yang; Yihao Hao; Tong Li; Zhuohui Zhao
+TI  - The spectrum of health effects associated with long-term exposure to nitrogen dioxide: a systematic review and meta-analysis
+DP  - 09/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251248991
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251249510
+AU  - Jin Sun; Yihao Hao; Keqin Yang; Tong Li; Chenxi Yan; Zhuohui Zhao
+TI  - The spectrum of health effects associated with long-term exposure to sulfur dioxide: a systematic review and meta-analysis
+DP  - 09/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251249510
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251249533
+AU  - Jin Sun; Tong Li; Keqin Yang; Yihao Hao; Chenxi Yan; Zhuohui Zhao
+TI  - The spectrum of health effects associated with long-term exposure to ozone: a systematic review and meta-analysis
+DP  - 09/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251249533
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251251089
+AU  - Madison Hughes; Julia Brillinger; Estefania Zapata-Bravo; Jill Baumgartner; Robert Platt; Scott Weichenthal; Antonios Douros; Abhinav Sharma; Kristian Filion
+TI  - The Impact of Heat and Heat Extremes on the Effectiveness and Safety of Cardiometabolic Drugs: A Systematic Review
+DP  - 12/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251251089
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251252776
+AU  - Eugénia Barros; Mariana Alves; Carolina Maruta; Daniel Caldeira
+TI  - Modifiable Risk Factors Associated with Frontotemporal Dementia: A Systematic Review
+DP  - 20/12/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251252776
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251252804
+AU  - Basumatary Purnima; Alisha Tressa Thomas; Romate John; Sruthi K S; Manjima Mahesh; Eslavath Rajkumar; Gosetty Sri Ramya
+TI  - Environmental Stressors of Climate Change and Their Role in Neuroinflammation: A Systematic Review
+DP  - 12/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251252804
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251266874
+AU  - MASAFUMI NOZOE; Rikuto Adachi; Mizuki Numa
+TI  - Effectiveness of Tele-Physiotherapy in Preventing Long-Term Cognitive Decline among Stroke Survivors: A Systematic Review and Meta-Analysis
+DP  - 17/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251266874
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251269449
+AU  - Amit Agrawal; Shweta Mishra; Manisha Shrivastava; Harneet Cheema; Md. Moshiur Rahman; Luis Rafael Moscote- Salazar; Amit Agrawal; Sagar Galwankar
+TI  - The Interplay Between Circadian Rhythms and Stroke: A Systematic Review of Clinical Evidence.
+DP  - 20/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251269449
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251271234
+AU  - Swathy Krishna V P; Vineeth Rajagopal; Ashish Behara; Mehak Verma; Suraj Tiwari; Vijay Kumar; Manya Soni; Kuldeep Chand; Prakasini Satapathy; Bijaya Kumar Padhi
+TI  - Association between indoor air pollution and cognitive function among adults in India: a systematic review and meta-analysis.
+DP  - 02/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251271234
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251274199
+AU  - Basumatary Purnima; Alisha Treesa Thomas; Romate John; Sruthi K S; Manjima Mahesh; Eslavath Rajkumar; Gosetty Sri Ramya
+TI  - Environmental Stressors of Climate Change and Their Role in Neuroinflammation: A Systematic Review
+DP  - 11/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251274199
+ER  - 
+
+TY  - JOUR
+ID  - CRD420251276510
+AU  - Palanivel Chinnakali; Harshal Ramesh Salve
+TI  - Workplace-Based Prevention of Heat-Related Illness: A Systematic Review of Interventions for Vulnerable Populations
+DP  - 05/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420251276510
+ER  - 
+
+TY  - JOUR
+ID  - CRD42025608345
+AU  - Behdin Nowrouzi-Kia; Javier Mencia Ledo; Raihana Premji; Charlene Choi; Aishvinigaa Sathananthan
+TI  - Impact of Extreme Heat on Mental and Physical Health in Agricultural Workers: Systematic Review and Meta-Analysis 
+DP  - 25/03/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42025608345
+ER  - 
+
+TY  - JOUR
+ID  - CRD42025633964
+AU  - Yashendra Sethi; Oroshay Kaiwan
+TI  - Impact of PM2.5 Exposure on Cardiovascular Diseases: An Umbrella Review of Systematic Reviews and Meta-Analyses
+DP  - 16/01/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42025633964
+ER  - 
+
+TY  - JOUR
+ID  - CRD42025634293
+AU  - Marufat Oluyemisi Odetunde; Tadesse Gebrye; Chidozie Mbada; Faatihah Niyi-Odumosu; Francis Fatoye
+TI  - Global and regional burden of climate change on health outcomes of stroke survivors
+DP  - 10/01/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42025634293
+ER  - 
+
+TY  - JOUR
+ID  - CRD42025636854
+AU  - JunYi Guo; ZongKai Zhou; Shu Xuan; Han Chen; Haitao Liu
+TI  - Interrelationships between climate change and outdoor activities: a systematic review
+DP  - 21/01/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42025636854
+ER  - 
+
+TY  - JOUR
+ID  - CRD42025649127
+AU  - Ramya Nagarajan; Dr Madhanraj K
+TI  - Global burden of heat-related illness (Heat cramps, heat exhaustion, heat stroke, heat syncope, heat rash): A systematic review and meta-analysis
+DP  - 17/02/2025
+YR  - 2025
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD42025649127
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261279531
+AU  - SYEDA SHAHRBANO; MEHWISH BATOOL; SEUNG WON LEE
+TI  - Environmental Exposures and Men's Health Outcomes: A Systematic Review of Ethical Considerations in Occupational and Community Contexts
+DP  - 06/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261279531
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261280301
+AU  - Yating Hou; Jun Liu
+TI  - Review of the public health risks of road traffic-related air pollution: mechanism, exposure, and meta-analysis
+DP  - 07/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261280301
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261284385
+AU  - Haoran Zheng; Yi Wang
+TI  - Association Between Methotrexate Therapy and Lymphoma Risk in Patients with Rheumatoid Arthritis A Systematic Review and Meta-Analysis of Observational Studies.
+DP  - 13/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261284385
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261286127
+AU  - Jun Lv; Chunying Gao
+TI  - Intervention Strategies for Sleep Disorders in the Elderly: a meta-analysis of randomized controlled trials
+DP  - 19/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261286127
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261289342
+AU  - Asma Abdul Malik; Khadija Vadsaria; Ujala Masood; Jai Das; Zulfiqar Bhutta
+TI  - Combined Effects of Extreme Heat and Air Pollution on Health Outcomes: A Systematic Review
+DP  - 22/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261289342
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261289729
+AU  - Michèle RENARD; Warinthorn ANGKANASIRIKUL; Pearl Min Sze TAN; Lydia Yu Li LAW; Jason Kai Wei LEE
+TI  - A Systematic Review to Inform Heat Vulnerability Index Development in Urban Settings
+DP  - 01/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261289729
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261292428
+AU  - Yang Yao; Mengning Zheng
+TI  - Sleep apnea–specific hypoxic burden and cardiovascular outcomes in adults with obstructive sleep apnea: a systematic review and meta-analysis
+DP  - 27/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261292428
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261293080
+AU  - Similien NDAGIJIMANA; Muhammed Semakula
+TI  - Air Quality and Health in Rwanda: A Systematic Review and Evidence Synthesis (2000–2025)
+DP  - 25/01/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261293080
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261293295
+AU  - Raj Prakash; Shuby Puthussery; Sunil Mehra; Tim Staniland; Gurch Randhawa
+TI  - Interventions to Reduce Adverse Health Outcomes from Extreme Heat among Pregnant Women, Postpartum Mothers, Newborns and Children: An Overview of Reviews
+DP  - 14/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261293295
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261299979
+AU  - Kathleen O'Leary; Joanne Caldwell Odgers; Benjamin Meadley
+TI  - Thermoregulatory and physiological responses to exercise in the heat in older individuals: a systematic review
+DP  - 14/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261299979
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261301918
+AU  - Julide Gurbuz; Elif Betül Balcı; Abdullah Yaser Güney; Ramazan Emre Bastug; Ayse isik guven; Ömer Faruk Çakıroğlu; Bilal Araç; Bahadır Taşlıdere
+TI  - Association Between Ambient Air Pollution and the Risk of Subarachnoid Hemorrhage: A Systematic Review and Meta-Analysis
+DP  - 02/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261301918
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261302366
+AU  - Ankit Sheth; Urvish Joshi; Bhavesh Modi; Geethu Mathew; Rakesh Balachandar
+TI  - Health burden of Indian farmers / agricultural workers and its association with occupational hazards of farming: Systematic review and meta-analysis 
+DP  - 13/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261302366
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261306225
+AU  - Vasileios-Arsenios Lioutas; Rafail Chionatos; Sally Ladsaria; Dylan Selbst; Angie Alonso
+TI  - Environmental exposures and risk of incident stroke: a systematic review and meta-analysis
+DP  - 12/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261306225
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261306254
+AU  - shaghayegh Tamouk; Hamzeh Mirshekari
+TI  - Pulsed Electromagnetic Field Therapy in Neurological Disorders: A Systematic Review with Computational Parameter Optimization
+DP  - 08/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261306254
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261320038
+AU  - Holly Whittome; Kim van Daalen
+TI  - Sex/gender difference in the association between long-term ambient air pollution exposure and stroke – a systematic review and meta-analysis
+DP  - 11/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261320038
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261320735
+AU  - Anshita Jaiswal; Gaurav Mittal; Suyash Khabiya; Anas Hasham; Devansh Pardhi; Vijay Kumar Chattu
+TI  - Association of wet-bulb temperature and heat-humidity indices with cardiovascular mortality: a systematic review
+DP  - 18/02/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261320735
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261322498
+AU  - Zefeng WANG; Yi GU; Yun Wah Lam
+TI  - Living Environment Modifications and Their Impact on Psychological and Functional Well-Being in Later Life: A Systematic Narrative Review
+DP  - 10/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261322498
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261324479
+AU  - Hogan Kok-Fung Wai; Jingmian Zhang; Imane El Idrissi Saik
+TI  - Climate change and population health in Hong Kong: a systematic review
+DP  - 02/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261324479
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261325014
+AU  - Jake Thomas Warton Williams; Philomena Colagiuri; James Smallcombe; Ollie Jay
+TI  - Effect of substance use on all-cause and cause-specific hospitalisation and mortality in humans during high heat periods: a systematic review and meta-analysis
+DP  - 28/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261325014
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261327364
+AU  - Katelyn Wasacz; Preyashi Chaudhuri; Renata Yen
+TI  - Assessment of Alternate Heat Exposure Indices Compared To Current Standard of Wet Bulb Globe Temperature as Predictors Of Medical Events In Athletes: A Systematic Review
+DP  - 04/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261327364
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261327451
+AU  - Zixie Yang; Mei Shen
+TI  - This study aims to investigate the association between size-fractionated atmospheric particulate matter and the incidence of type 2 diabetes
+DP  - 01/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261327451
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261329705
+AU  - Jack Riley; Charlotte Thompson; Lena Sun
+TI  - Systematic Review of Clinical Outcomes Related to Anesthesia Exposure and its Effect on Mitochondrial Dysfunction 
+DP  - 17/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261329705
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261335607
+AU  - Dzul Hairy Mohd Ramlan; Nik Rosmawati Nik Husain; Mohd Faiz Ibrahim; Siti Nurbaya Mohd Nawi; Mohamad Fadli Kharie
+TI  - Ambient air pollution and hospital admissions for cardiovascular and respiratory diseases among older adults: a systematic review
+DP  - 14/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261335607
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261337068
+AU  - Otávio Augusto Fernandes Marques Bianco; Joselin Valeska Martinez-Sobalvarro; Isabelle Soares Ribolli; Janara de Oliveira Martins; Luma Freire de Carvalho Holsbach da Costa; Guilherme Totoli Zanetti de Sousa; Larissa Helena Torres
+TI  - Systematic Review Protocol Summary: Prevalence of Ischemic Stroke
+DP  - 20/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261337068
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261345644
+AU  - Ramlati Said; Holy BEZANAHARY; Eyram Maria Conchéta TCHIBOZO
+TI  - Systematic review of the relationship between air pollution and cardiovascular diseases in women.
+DP  - 25/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261345644
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261345686
+AU  - Alice O’Hagan; Elizabeth Biggs; Lauren Bandy; John Buckell; Peter Scarborough
+TI  - The effectiveness of interventions in online food delivery platforms to encourage healthier or more environmentally sustainable food choices in the out-of-home sector: a systematic review.
+DP  - 13/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261345686
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261353251
+AU  - Ilaria Stanisci; Andrea Perri
+TI  - Review of morbidity/hospitalizations and exposure to environmental pollutants
+DP  - 31/03/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261353251
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261358211
+AU  - kihun kim; Yun Hak Kim
+TI  - Urbanicity and Human Health: An Umbrella Review of Systematic Reviews and Meta-Analyses
+DP  - 01/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261358211
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261358595
+AU  - 梦娜 周; Zhisheng Li; Qingyue He
+TI  - Heat exposure and stroke mortality in China: a systematic review and meta-analysis
+DP  - 02/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261358595
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261360861
+AU  - Theo Wijaya; Khansa Afiyah; Amanda Lie
+TI  - Effects of PM2.5 and PM10 on Cardiovascular Outcomes in Southeast Asia: A Systematic Review and Selective Meta-Analysis 
+DP  - 07/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261360861
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261363894
+AU  - MARY ENARE ETTA; Maha Hoteit; Despo Ierodiakonou; Liliane Alkadi; Batoul Matar
+TI  - Health Outcomes Associated With Extreme Weather Events Among Adults Aged 18-64 Years: A Systematic Review
+DP  - 29/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261363894
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261364048
+AU  - José Luis López González; Martín del Río Sánchez; Jorge Luis Carrera Martínez
+TI  - Systematic review of vascular complications associated with emerging arbovirus infections.
+DP  - 09/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261364048
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261369489
+AU  - James Owupele Ibibama; Polycarp Dauda Madaki; Godswill James Udom
+TI  - The Gut-Brain-Lung Axis and Persistent Environmental Contaminants - A Systematic Review of Implications for Neuro-cardio-respiratory Health.
+DP  - 14/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261369489
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261371430
+AU  - Mian Afaq Ahmad; Bilal Khan; Ehtesham Ahmad; Nauman Arif; Saima Afaq; Colin McClean; Andre Bedendo
+TI  - Association between ambient particulate matter (PM2.5 and PM10) exposure and cardiovascular outcomes among adults in South Asia: a systematic review and meta-analysis protocol
+DP  - 14/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261371430
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261378335
+AU  - Zachary Bryan Thornton; Amelia Clubb; Fiona Foo; Carolynn L Smith; Georgia Fisher
+TI  - Systematic review of environmental factors that increase ischaemic heart disease - heat, air pollution and plastics
+DP  - 30/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261378335
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261378682
+AU  - Siqi Xue; Sean Kidd; Eric Brown; Maya Cosentino; Jurjen Luykx; Jura Augustinavicius
+TI  - Morbidity and mortality outcomes associated with psychotropic medications in the context of severe heat: A systematic review
+DP  - 15/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261378682
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261380078
+AU  - Xiaoli Ma; Hao Chen
+TI  - Wildfire smoke exposure and brain health: a systematic review of human studies
+DP  - 29/04/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261380078
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261380794
+AU  - Rachit Sharma; Abinaya Sekar; Payel Kundu; Taruna Singh; Khushboo Khushboo; Sneha Patil; Vigneswari Aravindalochanan; Saritha Sendhil; Karthiga Devi; Santu Ghosh; Sumit Aggarwal; Vikram Singh; Pragati Agarwal; Tanvir Kaur; Ajay Pillarisetti; Pallavi Pant; Sagnik Dey; Kalpana Balakrishnan
+TI  - Effects of PM2.5 and PM10 pollution on morbidity and mortality in India: A systematic review and meta-analysis
+DP  - 17/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261380794
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261388274
+AU  - Shuo Zheng; Qi Wang; Danyang Ling
+TI  - The association between NO2 exposure  and the risk of cardiometabolic disease: a systematic review and meta-analysis.
+DP  - 07/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261388274
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261389105
+AU  - chaofu zhang; Fei Liu
+TI  - Air pollution exposure and cardiometabolic multimorbidity risk: A meta-analysis
+DP  - 07/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261389105
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261390217
+AU  - Nuomin Chen; XueMei Dai; DongLiang Yang; NuoMin Bao; FUN WuYinGa
+TI  - A meta-analysis of shared modifiable risk factors for insomnia and cerebral infarction, with DALY-weighted results
+DP  - 09/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261390217
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261394092
+AU  - warangkana srimoke; Dudsadee Muenhor); Pimpichaya Sangchart
+TI  - Indoor Environmental Conditions as Modifiers of Heat-Related Mortality and Hospitalization Among Older Adults
+DP  - 14/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261394092
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261396294
+AU  - Ioannis Adamopoulos; Aida Vafae Eslahi
+TI  - Impact of Heatwaves on Cardiovascular Mortality in Mediterranean Urban Areas: A Systematic Review and Meta-Analysis
+DP  - 15/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261396294
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261396481
+AU  - Jun-Nan Zhao; Chun-Yi Wang
+TI  - Air Pollution and Disease: Insights from Mendelian Randomization Studies
+DP  - 17/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261396481
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261396907
+AU  - Yujie An; 竞谊 韩; 荟 海; Yusong Wang; bahenur abdehalek; Xiaolong Yan; Ke Li
+TI  - Ambient air pollution exposure and the risk of long COVID: a systematic review and meta-analysis
+DP  - 29/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261396907
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261399778
+AU  - Christopher Musembi Makau; Muinde Nthusi; Jasmit Shah; Richard E. Brown; Raj Kalaria
+TI  - Impact of Air Pollution on Stroke and Use of Animal Models: A systematic Review  
+DP  - 21/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261399778
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261402999
+AU  - Dilini Abeykoon; Dinithi Abeysekara; Dulmi Abeywickrama
+TI  - Prevalence and associated factors of occupation-related dehydration among outdoor workers: a systematic review
+DP  - 23/05/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261402999
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261411996
+AU  - Frisca Rahmadina; Rohani Angelia Nababan; Morrin Choirunnisa Thohira
+TI  - Health Effects of Air Pollution below WHO 2021 Air Quality Guideline Levels: A Systematic Review and Meta-analysis
+DP  - 29/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261411996
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261415227
+AU  - Andres camilo jesús Herrera Arellano; Diana Carolina López Medina
+TI  - Association between second-hand smoke exposure and the incidence of stroke in healthy adults: a systematic review based on Bradford Hill causality criteria
+DP  - 04/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261415227
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261415893
+AU  - Jason Joseph; Inez Amaral; Lyssa Losa; Matthew Smith
+TI  - Heat exposure and acute clinical and behavioral outcomes in people living with dementia: a systematic review
+DP  - 10/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261415893
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261415998
+AU  - Abdulaziz Alotaibi; Anas Hindi; Shahad Alharbi; Reema Alghannam; Faisal Alhafi; Rayda Alharbi; Hassan Alghamdi; Yahya Alqahtani; Rawia Alzughaibi; Eyad Albarrati
+TI  - The Hidden Preoperative Risk: Environmental Exposure Before Anesthesia and Postoperative Complications
+DP  - 27/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261415998
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261416425
+AU  - Paula Grammatikos; Nathalie Mendez; Erik Timmermans; Danielle Vienneau; Joline Beulens; Ilonca Vaartjes
+TI  - Short-term environmental triggers and cardiovascular outcomes: An umbrella review
+DP  - 08/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261416425
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261417737
+AU  - Haris Abbasi; Hani Ahmed; Ayaan Raza; Ishaq Rahman; Rui Providencia
+TI  - Long-Term Fine Particulate Matter Exposure and Incident Atrial Fibrillation in Adults: A Systematic Review and Meta-Analysis of Observational Studies
+DP  - 20/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261417737
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261419803
+AU  - Martin Krizan; Lisa Krizan
+TI  - Community Aircraft Noise Event Standard (CANES): A Systematic Review and Proposed Framework for Replacing Ldn/DNL in Residential Aircraft Noise Health Assessment and Mitigation Sufficiency Determinations
+DP  - 10/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261419803
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261421396
+AU  - Aakaanksha Singh; Jessica Schiff; Patrick Fahr; Samantha Tracy; Van Tran
+TI  - Effect of extreme temperatures on adverse health outcomes among individuals prescribed psychiatric medications: a systematic review. 
+DP  - 15/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261421396
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261423465
+AU  - ANJALI Sunil PIMPARAMULE; Dwight Figueiredo
+TI  - Climate Change and Neurological Health: A Systematic Review of Evidence, Knowledge, Guidelines and Implementation Barriers.
+DP  - 15/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261423465
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261426555
+AU  - Amare Tareke; Melkamu Beyene; Azmeraw Amare
+TI  - The Role of Environmental Exposures in Brain Ageing and Neurodegeneration: A Systematic Review Protocol
+DP  - 27/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261426555
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261428784
+AU  - Melody Haratian; Nathaniel Wesley; Noah Huff; Lacy (Henry) Bryant III
+TI  - Neighborhood-Level Socioeconomic Deprivation and Postoperative Outcomes Among United States Adults Undergoing Colorectal Resection: A Systematic Review and Meta-Analysis
+DP  - 02/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261428784
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261430408
+AU  - Lisa Bauleo; Davide Petri; Orazio Valerio Giannico
+TI  - Normalized Difference Vegetation Index (NDVI) and Cardiovascular Disease: A Systematic Review and Meta-Analysis of Epidemiological Studies
+DP  - 23/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261430408
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261436101
+AU  - Heewon Yoon; Avanthika Sivakumar; Jonas Ching-Yin Yip; Søren Kudsk-Iversen; Audrey Nakagawa; Syed Hur Hazeez Shah; Suvika Kumaravelu; Walter Lampeter; Youngji Ahn; Emily Jenkinson; Hannah McGivern
+TI  - Environmental Outcomes of Standard Surgical Management versus Less Invasive Management: A Systematic Review
+DP  - 24/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261436101
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261436591
+AU  - Nandita Bhatnagar; Rohit Kumar; Joseph L Mathew
+TI  - Association of Ambient Air Pollution with Childhood Tuberculosis: A Systematic Review and Meta-Analysis
+DP  - 29/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261436591
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261437160
+AU  - Swati Bangalore; Mary Bridgeman; Daniel Abazia
+TI  - Systematic Review of Weather-Related Effects on Older Adults with Type 2 Diabetes (SWEAT)
+DP  - 30/06/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261437160
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261437185
+AU  - Christopher Potts; Akbar Ali; Shivam Gandhi; Jeri Tyler; Haley Harkins; Andrea Alimario
+TI  - Association Between Fine Particulate Matter PM2.5 Air Pollution Exposure and Atrial Fibrillation: An Updated Systematic Review and Meta-Analysis
+DP  - 25/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261437185
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261437245
+AU  - Pêngd-Wendé Habib Boussé TRAORE; Simeon TUYISHIME; Justine GIFFARD-BOUVIER; Marc MESSIER-PEET; Branka VULESEVIC; Annie CHAMBERLAND; Carl CHARTRAND-LEFEBVRE; Kevin BOCZAR; Benoit DESJARDINS; Nicolas CHOMONT; Andres FINZI; Florent BERTRAND; Mohamed EL-FAR; Madeleine DURAND
+TI  - Pericoronary fat attenuation index and chronic inflammatory conditions: systematic review protocol
+DP  - 04/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261437245
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261438314
+AU  - Kleiton Strobl; Syed Irfan; Mehdi Zahiri; Om Prakash Kurmi
+TI  - Association between air pollution exposure and risk of atrial fibrillation: A systematic review and meta-analysis
+DP  - 01/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261438314
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261438897
+AU  - Syed Irfan; Kleiton Strobl; Om Kurmi
+TI  - Air Pollution Exposure and Risk of Peptic Ulcer Disease: A Systematic Review and Meta-Analysis
+DP  - 01/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261438897
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261440198
+AU  - Nanati Legese Alemu; Hoang Minh Anh An; Lan Gao; Dieu Nguyen
+TI  - Healthcare utilisation and healthcare expenditure associated with heat exposure, wildfire smoke, and ambient air pollution among people with mental, behavioural, and neurocognitive disorders: a systematic review
+DP  - 17/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261440198
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261440317
+AU  - Bhavya G Nair; K . Sathish Kumar; Arun Murugan
+TI  - Systematic review on association between air pollution and cardiovascular diseases 
+DP  - 01/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261440317
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261441194
+AU  - Rayhendra Hanif; Zakwinul Ammar; Kharisma Ahmad Abdillah Putra Carensa; Maulana Fikri Saefuddin; Muhammad Hibban Heldian
+TI  - The Risk-Benefit Trade-off of Outdoor Cycling in High Traffic-Related Air Pollution (TRAP) Environments on Cardiovascular Mortality and Major Adverse Cardiac Event: A Systematic Review and Meta-Analysis of Prospective Cohort Studies 
+DP  - 03/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261441194
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261442733
+AU  - Christopher Potts; Akbar Ali; Shivam Gandhi
+TI  - Environmental noise exposure and risk of atrial fibrillation: an updated systematic review and meta-analysis
+DP  - 06/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261442733
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261442746
+AU  - Prabu Rajkumar; Manickam Ponnaiah; Aakash Shrivastava; Sumit Aggarwal; Satyaban Bishoyi Ratna; Tanu Anand; Madhanraj K; Prathiksha G; Saravana Kumar; Shri Vijay Bala Yogendra; Vigneshwaran K; Priyanthi Arichandran; Vaidehi Goswami; Vignesh Babu
+TI  - Burden of Heat-Related Illnesses Across Different Climatic Zones of India: A Systematic Review and Meta-Analysis
+DP  - 18/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261442746
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261444918
+AU  - Sofia Coelho Linhares da Silva; Deborah Soares; Laura Adjuto
+TI  - The association between environmental exposures and female precocious puberty: A systematic review 
+DP  - 07/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261444918
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261445599
+AU  - Maryam Gholami Shahrebabak; Mohammad-Matin Karbalaee-Alinazari; Maryam Akbari; Azam Gholami
+TI  - Effect of Ambient Air Pollution on Pulmonary Exacerbations and Lung function in Cystic Fibrosis: A Comprehensive Global Systematic Review and Meta-analysis
+DP  - 10/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261445599
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261445982
+AU  - Fale Timothy; Polycarp Dauda Madaki; James Owupele Ibibama; Chiara Frazzoli; Orish Ebere Orisakwe
+TI  - Air Pollution and Associated Public Health Effects in Northern Nigeria: A Systematic Review of Evidence
+DP  - 12/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261445982
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261451853
+AU  - Maria Morales-Suarez-Varela; Gabriele Donzelli
+TI  - Combined Effects of Air Pollution and Climate Change on Human Health: A Systematic Review of Epidemiological Studies
+DP  - 20/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261451853
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261455253
+AU  - zina feng; xi Xia; Shaowei Wu
+TI  - Does ambient air pollution modify the association between physical activity and incident cardiovascular disease? A systematic review and meta-analysis of prospective cohort studies
+DP  - 03/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261455253
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261456335
+AU  - Ucheoma Mark-Harrison; Chisom Oguejiofor
+TI  - Ambient heat, physical activity, and health outcomes: a systematic review and meta -analysis of observational and experimental studies
+DP  - 22/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261456335
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261457527
+AU  - Youli Jiang; Lili Wu; Wan Ling Lee
+TI  - Long-term ambient air pollution exposure and the risk of incident multimorbidity in adults: a systematic review and meta-analysis of cohort studies
+DP  - 27/07/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261457527
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261459173
+AU  - Charlotte Goolaerts; Séti Kouka Matingou; Leeloo Le Gall; Viviane Chaury; Julie Bréda; Loïc Blanchet-Mazuel
+TI  - Revision of systematic review of the co-benefits of a sustainable diet on health and environment 
+DP  - 04/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261459173
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261463176
+AU  - Guanglei Chen; Ran Wang; Zhihao Zhang; Hailian Tang; Xiaoxu Zhang; Ning Zhao; Yulin Shen; Qinyong Wang; Mengmeng Zhang; Haiman Yan; Xiaoyan Chen; Weiguo Yu
+TI  - Heat Acclimation for the Prevention of Heat Stroke: A Systematic Review and Meta-Analysis
+DP  - 04/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261463176
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261466804
+AU  - Sian Zhou; Pengpeng Gou
+TI  - Environmental Heat Exposure, Medical Burden, and the Risk of Non-Completion in Mass-Participation Endurance Events: A Systematic Review and Dose–Response Meta-Analysis
+DP  - 01/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261466804
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261467947
+AU  - Samaneh Motalebi; Sadegh Ahmadi-Mazhin
+TI  - The Effect of Heatwaves on Heat-Related Health Outcomes in Men: A Systematic Review
+DP  - 07/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261467947
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261470893
+AU  - Eunice Oey; Angelina Stevany Regina Masengi; Edward Nangoy; Windy Mariane Virenia Wariki; Johanis Nathaniel Suli; Keishia Pertiwi Adhiwana
+TI  - Systematic Review and Meta-Analysis of the Relationship between Persistent Organic Pollutant Exposure and Stroke (Ischaemic and Hemorrhagic)
+DP  - 16/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261470893
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261472802
+AU  - Loganathan Devaraj; Rajalakshmi Muthukumar; Aravind P Gandhi; Ruben Raj; Mithru Balasubramani; Tamil Selvan Srinivasan; Palanivel Chinnakali
+TI  - Effects of Ambient Heat Exposure on Cause-Specific Emergency Department Visits and Hospital Admissions: A Systematic Review and Meta-analysis
+DP  - 24/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261472802
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261474017
+AU  - Dr. Abu Sayeed Md Saleh; Anika Tasneem Chowdhury
+TI  - Microplastic Exposure and Cerebrovascular Disease in Humans: A Systematic Review and Meta-analysis of Stroke, Transient Ischemic Attack, and Cerebrovascular Atherosclerosis
+DP  - 09/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261474017
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261474673
+AU  - Jing-Xuan Zhou; Yaotao Li
+TI  - Interaction Between Extreme Temperature Events and Air Pollution on Mortality and Cardiovascular Events: A Systematic Review and Meta-Analysis
+DP  - 12/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261474673
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261476433
+AU  - Chi Ming Chan; Kai Yang Chan
+TI  - Ambient Temperature, Heat Waves, and Seasonal Variation as Risk Factors for Retinal Vein Occlusion and Retinal Artery Occlusion: A Systematic Review and Meta-analysis
+DP  - 12/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261476433
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261476866
+AU  - Mu Jianhua; Chongqi Tu
+TI  - Ambient Temperature and Health Outcomes: An Umbrella Review of Meta-Analyses
+DP  - 12/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261476866
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261477772
+AU  - Muhammad Muhtadi Taufik; Muhammad Abi Ghoffari Siregar; Nesty Angelica Suryana
+TI  - Fever Exposure and Neurological Outcomes After Aneurysmal Subarachnoid Hemorrhage: A Systematic Review and Meta-analysis
+DP  - 13/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261477772
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261478557
+AU  - Irene Carlino; Alberto Palazzuoli; Gennari Luigi
+TI  - Global epidemiology of cardiovascular-kidney-metabolic disease: Associations of lifestyle and metabolic risk factors with chronic kidney disease, heart Failure, and atherosclerotic cardiovascular disease across four world regions. A Systematic Review
+DP  - 15/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261478557
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261479032
+AU  - Jiale Wang; Sixian Chen
+TI  - Flood Exposure and Cardiovascular Disease Outcomes: A Systematic Review and Meta-Analysis
+DP  - 15/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261479032
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261479069
+AU  - Qingwei Zhong; Liang Xu
+TI  - Joint associations of ambient air pollution and physical activity with long-term mortality and chronic disease outcomes: a systematic review and multilevel meta-analysis
+DP  - 16/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261479069
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261479940
+AU  - angela stufano; Valentina Schino
+TI  - HEAT EXPOSURE AND NEUROLOGICAL HEALTH: A SYSTEMATIC REVIEW
+DP  - 16/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261479940
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261486018
+AU  - Muhammad Amir Khan; Maimoona Shah; Muhammad Zain Khan
+TI  - Association of Ambient Temperature Extremes, Heatwaves, and Diurnal Temperature Range (DTR) with Adverse Epilepsy Outcomes: A Systematic Review and Meta-Analysis
+DP  - 23/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261486018
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261491766
+AU  - Nelu-Mihai Trofenciuc; Simina Crisan; Alice Munteanu; Catalin Hreniuc
+TI  - Ambient temperature and cardiovascular outcomes in Central and Eastern Europe: a systematic review, meta-analysis and meta-regression of regional effect modification
+DP  - 30/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261491766
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261491901
+AU  - Laura Emilce Flores Rodriguez; Patricia Gimenez; Mirta Caceres
+TI  - Occupational heat stress and health outcomes in agricultural and construction workers: a systematic review and meta-analysis
+DP  - 31/08/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261491901
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261497803
+AU  - Zhen Huang; Bingxu Zhang
+TI  - Occupational noise exposure and the risk of ischaemic heart disease incidence and mortality: a systematic review, meta-analysis and dose–response analysis
+DP  - 08/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261497803
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261500094
+AU  - Lois Antwi-Boadi; Abigail Yeboah
+TI  - Heat exposure and mental health outcomes among health workers: a systematic review
+DP  - 07/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261500094
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261513289
+AU  - Yang Han; Rui Zhu
+TI  - A Meta-Analysis of the Association Between Exposure to Fine Particulate Matter and Gaseous Pollutants and the Risk of Pediatric Allergic Rhinitis
+DP  - 21/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261513289
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261517359
+AU  - Fajrizqi Rahmandiar Muhammad; Athaya Rahmanardi Muhammad; Lugas Edwin Ardiansyah; Makhrifa Azizzilla Aqilananda Sutopo; Muhammad Fazil Arshaq; Tobias Pangihutan Tua
+TI  - Histopathological Effects of Particulate Matter Exposure on the Central Nervous System: A Systematic Review and Meta-analysis of In Vivo Animal Studies
+DP  - 25/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261517359
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261517470
+AU  - Manali D; Anom Dule
+TI  - Environmental Heat Exposure and Brain Health in adults: An Epidemiological and Mechanistic Systematic Review
+DP  - 25/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261517470
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261518341
+AU  - Rozhin Yari; Hana Yari; Bahareh Motaghian Monazam
+TI  - The association between exposure to air pollution and the risk of osteoarthritis and osteoporosis: a systematic review and meta-analysis
+DP  - 26/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261518341
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261518367
+AU  - Deepti Khanna; Vijayshree singh; Arvind Gupta; Prachi Singh; Hitesh Choudhary; Gautam Sahu; Manoj Kumar; Suraj Tiwari; Pawan Kumar; Vineeth Rajagopal; Ashish Behera; Bijaya Kumar Padhi
+TI  - Night time Heat Exposure and Cardiovascular Mortality: A Systematic Review and Meta-analysis 
+DP  - 26/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261518367
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261518376
+AU  - Hana Yari; Rozhin Yari; Bahareh Motaghian Monazam
+TI  - The association between exposure to air pollution and the risk of rheumatoid arthritis: a systematic review and meta-analysis
+DP  - 26/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261518376
+ER  - 
+
+TY  - JOUR
+ID  - CRD420261518405
+AU  - Bahare Motaghian Monazzam; Rozhin Yari; Hana Yari
+TI  - The association between exposure to air pollution and the risk of systemic lupus erythematosus and systemic sclerosis: a systematic review and meta-analysis
+DP  - 26/09/2026
+YR  - 2026
+DB  - PROSPERO
+SO  - https://www.crd.york.ac.uk/PROSPERO/view/CRD420261518405
+ER  - 
+

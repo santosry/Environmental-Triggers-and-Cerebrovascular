@@ -1,0 +1,7 @@
+"id_estudo","desenho","robins_confundimento","robins_selecao","robins_classificacao_exposicao","robins_desvio","robins_dados_faltantes","robins_desfecho","robins_relato","pior","robins_geral"
+"exemplo_1","serie_temporal","Moderate","Low","Moderate","Low","Low","Low","Low","Moderate","Moderate"
+"exemplo_2","serie_temporal","Low","Low","Low","Low","Low","Low","Low","Low","Low"
+"exemplo_3","coorte","Serious","Low","Moderate","Low","Moderate","Low","Low","Serious","Serious"
+"exemplo_4","coorte","Low","Low","Low","Low","Low","Moderate","Low","Moderate","Moderate"
+"exemplo_5","ecologico","Critical","Low","Serious","Low","Serious","Serious","Low","Critical","Critical"
+"exemplo_6","caso_cruzado","Moderate","Low","Low","Low","Low","Low","Low","Moderate","Moderate"
