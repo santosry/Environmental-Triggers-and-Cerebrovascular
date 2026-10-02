@@ -1,7 +1,21 @@
-﻿*.parquet
+﻿# Dados volumosos / binários
+*.parquet
 *.rds
 .RData
 .Rhistory
 *.zip
 *sih_cerebrovascular*.csv
 *modelos_dlnm*.rds
+
+# Ambiente R / RStudio
+.Rproj.user
+.Rproj.user/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Temporários / caches locais
+.chrome_scielo/
+*.tmp
