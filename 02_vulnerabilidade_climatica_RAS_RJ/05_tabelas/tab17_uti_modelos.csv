@@ -1,0 +1,5 @@
+modelo,n,sigma2,ICC,MOR,AIC,OR_uti_within,OR_uti_between,OR_uti,tempo_min
+M1 sem UTI,295673,0.68598,0.17254,2.2035,261038.8,,,,4.6
+M2 com UTI (especificacao do plano),295673,0.57811,0.14946,2.0653,252992.2,,,3.904,4.48
+M3 so componente do hospital,295673,0.64588,0.16411,2.1524,261030.3,,2.397,,4.08
+M4 Mundlak (intra + entre),295673,0.57052,0.14779,2.0554,252991.9,3.909,2.658,,6.65
