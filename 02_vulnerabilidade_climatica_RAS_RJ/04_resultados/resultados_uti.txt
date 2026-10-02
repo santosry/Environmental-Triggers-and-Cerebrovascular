@@ -52,3 +52,6 @@ hospitais com 100 ou mais internacoes: 186
 
 ### M2 com UTI (especificacao do plano)        sigma2=0.57811 ICC=0.14946 MOR=2.0653 AIC=252992.2
       uti              OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00
+
+### M3 so componente do hospital               sigma2=0.64588 ICC=0.16411 MOR=2.1524 AIC=261030.3
+      uti_between      OR=  2.397 (IC95%  1.426-  4.028) p=9.69e-04

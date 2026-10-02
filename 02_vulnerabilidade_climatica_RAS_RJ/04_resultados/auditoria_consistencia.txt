@@ -1,0 +1,9 @@
+=====================================================================
+AUDITORIA DE INCONGRUENCIAS E INCONSISTENCIAS
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-02 14:55:02
+=====================================================================
+
+=========== A. REGISTROS BRUTOS DO SIH-RD ===========
+competicoes lidas em varredura: 191
+     48/191 competicoes | 2.3 min
+     96/191 competicoes | 5.2 min
