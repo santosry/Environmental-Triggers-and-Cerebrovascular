@@ -1,0 +1,54 @@
+=====================================================================
+TRATAMENTO DO USO DE UTI: DECOMPOSICAO INTRA E ENTRE HOSPITAIS
+R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | inicio: 2026-10-02 14:43:28
+=====================================================================
+internacoes: 295.673 | obitos: 55.827 | hospitais: 254
+
+--- O REGISTRO DE UTI E PRATICA INSTITUCIONAL? ---
+prevalencia global: 12.97%
+hospitais com 100 ou mais internacoes: 186
+  taxa de UTI entre hospitais: P10=0.0% mediana=0.4% P90=37.6% (amplitude 100.0 p.p.)
+
+  correlacao da taxa de UTI do hospital com o perfil de casos (Spearman):
+    idade_media        rho=-0.289  p=6.13e-05
+    hemorragico_pct    rho=+0.492  p=1.04e-12
+    eletiva_pct        rho=+0.203  p=0.0054
+    obito_pct          rho=+0.329  p=4.48e-06
+    n                  rho=+0.202  p=0.0056
+  Se a taxa de UTI fosse so gravidade, ela acompanharia a mortalidade e a
+  composicao de casos. Correlacao fraca com o perfil sustenta a leitura de
+  pratica de registro.
+
+  evolucao temporal da prevalencia de UTI:
+    2010   8.23%
+    2011   8.82%
+    2012   9.19%
+    2013   9.24%
+    2014  10.37%
+    2015  10.12%
+    2016   9.97%
+    2017  12.06%
+    2018  12.34%
+    2019  12.84%
+    2020  13.69%
+    2021  13.77%
+    2022  18.03%
+    2023  19.08%
+    2024  20.85%
+  tendencia de Mann-Kendall: tau=+0.943  p=1.02e-09
+
+  taxa de UTI por regiao de saude:
+    Noroeste               31.67%  (n=11.512)
+    Centro-Sul             17.40%  (n=11.130)
+    Norte                  17.01%  (n=17.444)
+    Medio Paraiba          15.95%  (n=31.820)
+    Metropolitana II       13.58%  (n=38.532)
+    Baixada Litoranea      11.87%  (n=9.463)
+    Baia da Ilha Grande    11.16%  (n=5.115)
+    Metropolitana I        10.68%  (n=135.595)
+    Serrana                 9.50%  (n=35.062)
+
+### M1 sem UTI                                 sigma2=0.68598 ICC=0.17254 MOR=2.2035 AIC=261038.8
+
+### M2 com UTI (especificacao do plano)        sigma2=0.57811 ICC=0.14946 MOR=2.0653 AIC=252992.2
+      uti              OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00

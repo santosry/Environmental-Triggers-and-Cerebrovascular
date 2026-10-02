@@ -1,0 +1,86 @@
+=====================================================================
+EXTRACAO G45/G46 DO SIH-RD BRUTO
+inicio: 2026-10-01 15:07:16
+R: R version 4.6.1 (2026-06-24 ucrt)
+origem: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/01_DLNMs_RJ_cerebrovascular/data_raw/sih
+=====================================================================
+arquivos .rds encontrados: 192
+lookup: 92 municipios | 9 regioes de saude
+   24/192 arquivos | G45/G46 brutos=5422 | residentes RJ=5418 | 0.6 min
+   48/192 arquivos | G45/G46 brutos=8956 | residentes RJ=8942 | 1.2 min
+   72/192 arquivos | G45/G46 brutos=12384 | residentes RJ=12364 | 1.7 min
+   96/192 arquivos | G45/G46 brutos=16059 | residentes RJ=16025 | 2.5 min
+  120/192 arquivos | G45/G46 brutos=19476 | residentes RJ=19425 | 3.4 min
+  144/192 arquivos | G45/G46 brutos=22163 | residentes RJ=22103 | 4.1 min
+  168/192 arquivos | G45/G46 brutos=26129 | residentes RJ=26064 | 4.9 min
+  192/192 arquivos | G45/G46 brutos=29888 | residentes RJ=29818 | 5.8 min
+
+arquivos lidos com sucesso: 192 | erros: 0
+registros G45/G46 (todas as UFs): 29888
+registros G45/G46 residentes no RJ: 29818
+linhas agregadas: 29818
+duplicatas removidas: 0
+DT_INTER invalidas: 0
+apos filtro DT_INTER 2010-2024: 27927
+
+--- COMPOSICAO DA COORTE G ---
+total: 27927
+
+Diagnostico principal (CID-10 4 digitos):
+  G45                                 323  ( 1.16%)
+  G450                               3643  (13.04%)
+  G451                               1044  ( 3.74%)
+  G452                                 78  ( 0.28%)
+  G453                                 11  ( 0.04%)
+  G454                                 12  ( 0.04%)
+  G458                               6707  (24.02%)
+  G459                              14760  (52.85%)
+  G46                                  10  ( 0.04%)
+  G460                                  6  ( 0.02%)
+  G463                                  3  ( 0.01%)
+  G464                                  8  ( 0.03%)
+  G465                                  1  ( 0.00%)
+  G468                               1321  ( 4.73%)
+
+Diagnostico principal (CID-10 3 digitos):
+  G45                               26578  (95.17%)
+  G46                                1349  ( 4.83%)
+
+Regiao de saude de residencia:
+  Baia da Ilha Grande                 722  ( 2.59%)
+  Baixada Litoranea                  1195  ( 4.28%)
+  Centro-Sul                          756  ( 2.71%)
+  Medio Paraiba                      6766  (24.23%)
+  Metropolitana I                    6336  (22.69%)
+  Metropolitana II                   3040  (10.89%)
+  Noroeste                           1334  ( 4.78%)
+  Norte                              3481  (12.46%)
+  Serrana                            4297  (15.39%)
+
+obitos hospitalares: 3395 (12.16%)
+estabelecimentos distintos (CNES): 213
+idade: mediana=68 | P25=58 | P75=77 | NA=0
+sexo: F=13925 | M=14002
+carater: Eletiva=2978 | Urgencia=24949
+uso de UTI (UTI_MES_TO>0): 2786 (9.98%)
+
+--- POR ANO ---
+  2010    2852  obitos=  361  taxa=12.66%
+  2011    2521  obitos=  354  taxa=14.04%
+  2012    1882  obitos=  313  taxa=16.63%
+  2013    1602  obitos=  229  taxa=14.29%
+  2014    1626  obitos=  215  taxa=13.22%
+  2015    1886  obitos=  275  taxa=14.58%
+  2016    1916  obitos=  257  taxa=13.41%
+  2017    1686  obitos=  192  taxa=11.39%
+  2018    1708  obitos=  186  taxa=10.89%
+  2019    1715  obitos=  147  taxa= 8.57%
+  2020    1192  obitos=  139  taxa=11.66%
+  2021    1514  obitos=  193  taxa=12.75%
+  2022    1936  obitos=  198  taxa=10.23%
+  2023    2025  obitos=  177  taxa= 8.74%
+  2024    1866  obitos=  159  taxa= 8.52%
+
+gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/sih_g45_g46_2010_2024.csv (27927 linhas)
+fim: 2026-10-01 15:13:10
+tempo total (min): 5.9

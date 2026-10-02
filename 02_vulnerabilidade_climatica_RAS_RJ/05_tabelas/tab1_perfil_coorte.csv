@@ -1,0 +1,27 @@
+variavel,categoria,n,pct,n_obito,pct_obito,mortalidade
+Coorte diagnostica,I60-I69,267746,90.55,52432,93.92,19.58
+Coorte diagnostica,G45/G46,27927,9.45,3395,6.08,12.16
+Subtipo diagnostico,Nao especificado (I64),167470,56.64,35394,63.4,21.13
+Subtipo diagnostico,Hemorragico (I60-I62),35094,11.87,9356,16.76,26.66
+Subtipo diagnostico,Oclusao e outras (I65-I68),8339,2.82,623,1.12,7.47
+Subtipo diagnostico,AIT (G45),26578,8.99,3187,5.71,11.99
+Subtipo diagnostico,Isquemico (I63),16831,5.69,4603,8.25,27.35
+Subtipo diagnostico,Sindromes vasculares (G46),1349,0.46,208,0.37,15.42
+Subtipo diagnostico,Sequelas (I69),40012,13.53,2456,4.4,6.14
+Regiao de saude,Norte,17444,5.9,2732,4.89,15.66
+Regiao de saude,Noroeste,11512,3.89,1301,2.33,11.3
+Regiao de saude,Centro-Sul,11130,3.76,1849,3.31,16.61
+Regiao de saude,Baixada Litoranea,9463,3.2,1973,3.53,20.85
+Regiao de saude,Serrana,35062,11.86,3941,7.06,11.24
+Regiao de saude,Metropolitana II,38532,13.03,7264,13.01,18.85
+Regiao de saude,Metropolitana I,135595,45.86,31487,56.4,23.22
+Regiao de saude,Baia da Ilha Grande,5115,1.73,896,1.6,17.52
+Regiao de saude,Medio Paraiba,31820,10.76,4384,7.85,13.78
+Sexo,F,142760,48.28,27760,49.73,19.45
+Sexo,M,152913,51.72,28067,50.27,18.35
+Carater da internacao,Urgencia,249959,84.54,51515,92.28,20.61
+Carater da internacao,Eletiva,45714,15.46,4312,7.72,9.43
+Uso de UTI,0,257316,87.03,42063,75.35,16.35
+Uso de UTI,1,38357,12.97,13764,24.65,35.88
+Fluxo intermunicipal,0,245679,83.09,46625,83.52,18.98
+Fluxo intermunicipal,1,49994,16.91,9202,16.48,18.41

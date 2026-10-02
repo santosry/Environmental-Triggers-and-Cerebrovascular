@@ -1,0 +1,24 @@
+﻿===================================================================== 
+CONFERENCIA COM lme4 EM PROCESSO ISOLADO (sem glmmTMB carregado) 
+subamostra: 20.000 registros | 228 hospitais | 3744 obitos 
+semente 20261001, mesma subamostra usada pelo glmmTMB 
+===================================================================== 
+
+[A] lme4 Laplace (nAGQ=1): tempo=2.09 min | logLik=-8623.5606 | AIC=17289.12 
+    s2=0.25479 | ICC=0.07188 | MOR=1.6185 
+    glmmTMB na mesma subamostra: s2=0.25490 | diferenca relativa=0.042% 
+    log-verossimilhanca glmmTMB=-8623.5600 | diferenca absoluta=0.0006 
+
+[B] adequacao da aproximacao de Laplace: nAGQ = 11 
+    tempo=4.40 min | logLik=-8623.4105 | AIC=17288.82 
+    s2=0.25666 (Laplace 0.25479, diferenca relativa 0.732%) 
+    ICC=0.07237 (Laplace 0.07188) | MOR=1.6213 (Laplace 1.6185) 
+    OR: diferenca relativa maxima 0.1376% | mediana 0.0197% 
+    maiores divergencias: 
+      regiao_saudeNoroeste                       Laplace=0.5750 AGHQ=0.5758 dif=0.1376% 
+      regiao_saudeSerrana                        Laplace=0.6640 AGHQ=0.6646 dif=0.0950% 
+      (Intercept)                                Laplace=0.1173 AGHQ=0.1172 dif=0.0944% 
+      subtipoSequelas (I69)                      Laplace=0.4835 AGHQ=0.4839 dif=0.0793% 
+      regiao_saudeCentro-Sul                     Laplace=0.7770 AGHQ=0.7774 dif=0.0531% 
+
+fim: 2026-10-02 13:49:12 

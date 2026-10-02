@@ -1,0 +1,48 @@
+========================================================================
+DEFLAÇÃO DOS CUSTOS PELO IPCA (base: dezembro/2024)
+Fonte: IBGE/SIDRA tabela 1737, variável 2266 (número-índice mensal)
+Fator: indice_dez2024 / indice_médio_anual(t)  [fluxo anual → dez/2024]
+========================================================================
+
+Custo total corrente (2010-2024):        R$ 535,221,745.30
+Custo total deflacionado (dez/2024):     R$ 790,722,708.56
+Inflação acumulada implícita 2010-2024:  128.0%
+
+Fatores de deflação por ano:
+ ano  indice_medio_ano  fator_para_dez2024_media  fator_para_dez2024_dez_dez
+2010       3114.504167                  2.279817                    2.221760
+2011       3321.196667                  2.137934                    2.086094
+2012       3500.657500                  2.028333                    1.971014
+2013       3717.849167                  1.909841                    1.861016
+2014       3953.153333                  1.796161                    1.748952
+2015       4310.119167                  1.647402                    1.580287
+2016       4686.786667                  1.515004                    1.486798
+2017       4848.310833                  1.464531                    1.444230
+2018       5025.994167                  1.412755                    1.392088
+2019       5213.613333                  1.361915                    1.334618
+2020       5381.062500                  1.319535                    1.276933
+2021       5827.780000                  1.218388                    1.160205
+2022       6368.604167                  1.114922                    1.096756
+2023       6661.150000                  1.065957                    1.048312
+2024       6952.073333                  1.021350                    1.000000
+
+Custo por macrorregião (corrente e deflacionado a dez/2024):
+          macro3  n_internacoes  custo_corrente  custo_deflacionado_dez2024  custo_medio_deflacionado
+   Metropolitana         164761    297017482.77                4.331710e+08               2629.086720
+      Centro-Sul          70598    146221803.27                2.213835e+08               3135.833114
+Norte e Noroeste          32415     91982459.26                1.361682e+08               4200.777581
+
+Custo por região de saúde (corrente e deflacionado a dez/2024):
+       regiao_saude  n_internacoes  custo_corrente  custo_deflacionado_dez2024  custo_medio_deflacionado
+    Metropolitana I         129269    239903779.75                3.543120e+08               2740.888852
+            Serrana          30777     74065982.31                1.171080e+08               3805.049372
+   Metropolitana II          35492     57113703.02                7.885900e+07               2221.880875
+      Medio Paraiba          25054     44698807.61                6.435916e+07               2568.817712
+              Norte          13963     38803397.46                5.510525e+07               3946.519486
+           Noroeste          10184     35765128.93                5.457901e+07               5359.289997
+         Centro-Sul          10374     19783224.77                2.916299e+07               2811.161295
+  Baixada Litoranea           8268     17413932.87                2.648394e+07               3203.186305
+Baia da Ilha Grande           4393      7673788.58                1.075340e+07               2447.847815
+
+Nota: série de número-índice obtida em 26/09/2025 via API SIDRA/IBGE;
+      fatores calculados pelo índice médio anual do IPCA.

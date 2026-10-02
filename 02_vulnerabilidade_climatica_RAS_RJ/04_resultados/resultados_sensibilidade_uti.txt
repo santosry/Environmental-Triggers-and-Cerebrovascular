@@ -1,0 +1,43 @@
+=====================================================================
+SENSIBILIDADE A DEFINICAO DE UTI E QUALIDADE DOS DADOS
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-02 10:43:32
+=====================================================================
+
+=========== A) SENSIBILIDADE A DEFINICAO DE USO DE UTI ===========
+  UTI >= 1 dia (principal)   prevalencia = 12.97%
+  -> s2=0.57805 | ICC=0.14945 | MOR=2.0652 | AIC=252992.2 | OR UTI=3.904 (3.789-4.022)
+  UTI >= 2 dias              prevalencia = 11.32%
+  -> s2=0.58155 | ICC=0.15022 | MOR=2.0697 | AIC=253270.5 | OR UTI=3.963 (3.844-4.086)
+  UTI >= 7 dias              prevalencia = 5.33%
+  -> s2=0.58670 | ICC=0.15135 | MOR=2.0764 | AIC=257217.5 | OR UTI=3.351 (3.227-3.479)
+  UTI por MARCA_UTI          prevalencia = 12.99%
+  -> s2=0.57970 | ICC=0.14981 | MOR=2.0673 | AIC=252952.0 | OR UTI=3.917 (3.802-4.036)
+  -> s2=0.68598 | ICC=0.17254 | MOR=2.2035 | AIC=261038.8 | OR UTI=ausente
+
+--- EFEITO DA DEFINICAO DE UTI NOS DEMAIS COEFICIENTES (OR) ---
+
+
+=========== B) QUALIDADE DOS CAMPOS USADOS ===========
+  Internacoes na coorte                          295.673 
+  Obitos intra-hospitalares                      55.827 
+  Hospitais (CNES)                               254 
+  Regioes de saude                               9 
+  Idade ausente                                  0 
+  Idade acima de 120 anos                        0 
+  Idade abaixo de 0                              0 
+  Sexo ignorado                                  0 
+  Carater da internacao ignorado                 0 
+  Regiao de saude ausente                        0 
+  CNES ausente                                   0 
+  UTI_MES_TO > dias de permanencia               5.173 (inconsistencia)
+  UTI_MES_TO maximo                              306 (valor implausivel)
+  UTI_MES_TO ausente                             0 
+  Dias de permanencia ausentes                   0 
+  Dias de permanencia negativos                  0 
+  Dias de permanencia acima de 365               0 
+  Valor total negativo                           0 (erro de entrada)
+  Internacoes G45/G46 na coorte                  27.927 
+  Obitos entre G45/G46 (SIH)                     3.395 (12.16%)
+  Mortalidade da coorte (%)                      18.88 
+
+fim: 2026-10-02 10:54:04

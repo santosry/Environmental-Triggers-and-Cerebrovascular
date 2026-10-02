@@ -1,0 +1,57 @@
+=====================================================================
+AQUISICAO VIA microdatasus 2.5.0
+R R version 4.6.1 (2026-06-24 ucrt)
+inicio: 2026-10-02 09:01:25
+SIH-RD RJ: competencias 2010-01 a 2025-12
+SIM-DO RJ: 2010 a 2024
+fonte SIH-RD: ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/RDRJ{aamm}.dbc
+=====================================================================
+
+=========== SIH-RD ===========
+   12/192 | baixados=12 | pulados=0 | falhas=0 | 1.8 min
+   24/192 | baixados=24 | pulados=0 | falhas=0 | 3.8 min
+    tentativa 1 falhou: server response timeout
+   36/192 | baixados=36 | pulados=0 | falhas=0 | 7.4 min
+   48/192 | baixados=48 | pulados=0 | falhas=0 | 9.6 min
+   60/192 | baixados=60 | pulados=0 | falhas=0 | 11.8 min
+   72/192 | baixados=72 | pulados=0 | falhas=0 | 13.7 min
+   84/192 | baixados=84 | pulados=0 | falhas=0 | 16.3 min
+    tentativa 1 falhou: server response timeout
+   96/192 | baixados=96 | pulados=0 | falhas=0 | 19.9 min
+  108/192 | baixados=108 | pulados=0 | falhas=0 | 22.6 min
+  120/192 | baixados=120 | pulados=0 | falhas=0 | 24.1 min
+  132/192 | baixados=132 | pulados=0 | falhas=0 | 25.4 min
+  144/192 | baixados=144 | pulados=0 | falhas=0 | 27.5 min
+  156/192 | baixados=156 | pulados=0 | falhas=0 | 29.4 min
+  168/192 | baixados=168 | pulados=0 | falhas=0 | 31.0 min
+  180/192 | baixados=180 | pulados=0 | falhas=0 | 33.0 min
+  FALHA 2025-12
+
+SIH-RD concluido: 191 baixados, 0 ja existiam, 1 falhas (35.9 min)
+competencias com falha: 2025-12
+
+=========== SIM-DO ===========
+  2010 baixado (127536 linhas)
+  2011 baixado (127095 linhas)
+  2012 baixado (126261 linhas)
+  2013 baixado (130032 linhas)
+  2014 baixado (131044 linhas)
+  2015 baixado (132714 linhas)
+  2016 baixado (141089 linhas)
+  2017 baixado (136709 linhas)
+  2018 baixado (140706 linhas)
+  2019 baixado (144600 linhas)
+  2020 baixado (172185 linhas)
+  2021 baixado (189232 linhas)
+  2022 baixado (150806 linhas)
+  2023 baixado (145148 linhas)
+  2024 baixado (148156 linhas)
+
+SIM-DO concluido: 15 baixados, 0 ja existiam, 0 falhas (2.1 min)
+
+=========== INVENTARIO ===========
+arquivos SIH-RD: 191
+tamanho total (MB): 479.3
+arquivos SIM-DO: 15 | tamanho (MB): 98.1
+
+fim: 2026-10-02 09:39:21
