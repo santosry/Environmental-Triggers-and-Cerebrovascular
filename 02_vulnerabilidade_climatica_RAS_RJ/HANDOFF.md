@@ -1,192 +1,198 @@
 # HANDOFF — Frente 02 (vulnerabilidade climática, RAS/RJ)
 
-> Documento de continuidade. Escrito em **3 de outubro de 2026** para retomar o
-> trabalho depois da sessão de aquisição + auditoria. Substitui o antigo
+> Documento de continuidade. Atualizado em **3 de outubro de 2026**. Repõe o
 > `HANDOFF.md` citado como pendente no `README.md`.
 
 ---
 
-## 1. O que foi pedido nesta sessão
+## 1. O que já está pronto
 
-1. Rodar uma **bateria de auditorias robustas** na pasta
-   `02_vulnerabilidade_climatica_RAS_RJ/`.
-2. Alterar `02_scripts/01_baixar_microdatasus.R` para que, **depois de baixar os
-   `.rds`**, faça a **filtragem pelos CIDs do estudo** e grave um **CSV**, com o
-   arquivo **versionado no repositório** (se já estivesse feito, ignorar).
+### Sessão 1 — aquisição, recorte CID e auditoria
 
----
+- `02_scripts/01_baixar_microdatasus.R` baixa SIH-RD (191 competências, 2010-01 a
+  2025-11) e SIM-DO (2010–2024) e, **depois do download**, filtra os CIDs do estudo e
+  grava dois recortes leves **versionados**:
+  - `01_dados/processados/sih_cid_estudo_2010_2024.csv` — 295.673 linhas, 21 colunas,
+    ~37 MB (I60–I69, G45 e G46; residentes no RJ; `DT_INTER` 2010–2024).
+  - `01_dados/processados/sim_cid_estudo_2010_2024.csv` — 147.551 linhas, 7 colunas,
+    ~6 MB (causa básica I60–I69; residentes no RJ; `DTOBITO` 2010–2024).
+  - `DTOBITO`/`DT_INTER` são strings numéricas: reler como caractere para não perder
+    zeros à esquerda.
+- Bateria de auditoria: `07_auditoria_consistencia.R` (0 erro) e
+  `12_auditoria_geral.R` (84 verificações: 75 OK, 1 ATENÇÃO esperada, 0 erro).
 
-## 2. O que foi feito
+### Sessão 2 — reorganização, manuscrito e figuras
 
-### 2.1 Filtragem por CID no script 01
-
-`02_scripts/01_baixar_microdatasus.R` foi estendido com um bloco novo
-(**“FILTRAGEM POR CID DO ESTUDO (CSV)”**), executado após os downloads e antes do
-inventário. O bloco:
-
-- Varre os `.rds` já baixados (não rebaixa nada existente) e produz dois recortes:
-  - **SIH** (`DIAG_PRINC` em I60–I69, G45 ou G46), residentes no RJ (`MUNIC_RES`
-    começando por `33`), `DT_INTER` entre 2010-01-01 e 2024-12-31.
-  - **SIM** (`CAUSABAS` em I60–I69), `CODMUNRES` do RJ, `DTOBITO` entre 2010 e 2024.
-- Mantém apenas colunas essenciais do estudo (o bruto completo de 113 colunas
-  continua nos `.rds`, que são volumosos e não versionados).
-- É idempotente: só regenera se o CSV não existir ou se algum `.rds` for mais
-  novo que o CSV (`precisa_refazer()`).
-
-**Saídas versionadas (novas):**
-
-| Arquivo | Linhas | Colunas | Tamanho |
-|---|---:|---:|---:|
-| `01_dados/processados/sih_cid_estudo_2010_2024.csv` | 295.673 | 21 | ~37,4 MB |
-| `01_dados/processados/sim_cid_estudo_2010_2024.csv` | 147.551 | 7 | ~6,4 MB |
-
-Colunas do recorte SIH: `N_AIH, IDENT, DT_INTER, DT_SAIDA, DIAG_PRINC, MUNIC_RES,
-MUNIC_MOV, SEXO, IDADE, COD_IDADE, CNES, MORTE, CAR_INT, RACA_COR, INSTRU,
-UTI_MES_TO, MARCA_UTI, DIAS_PERM, VAL_TOT, COMPLEX, NAT_JUR`.
-
-Colunas do recorte SIM: `DTOBITO, IDADE, SEXO, RACACOR, LOCOCOR, CODMUNRES, CAUSABAS`.
-
-> ⚠️ `DTOBITO` e `DT_INTER` são strings numéricas no CSV. Ao reler com
-> `data.table::fread`/pandas, **leia como caractere** para não perder zeros à
-> esquerda (o `DTOBITO` é `DDMMYYYY`).
-
-O `.gitignore` da frente recebeu as duas exceções (`!.../sih_cid_estudo...`,
-`!.../sim_cid_estudo...`); sem elas, a regra `/01_dados/processados/*.csv`
-bloquearia o versionamento.
-
-### 2.2 Bateria de auditoria
-
-Criado o script novo `02_scripts/12_auditoria_geral.R` (532 linhas), que audita o
-que o `07_auditoria_consistencia.R` não cobre. Executados os **dois** scripts:
-
-| Script | Foco | Resultado |
-|---|---|---|
-| `07_auditoria_consistencia.R` | bruto SIH/SIM, coorte, triangulação SIH×SIM, modelo/tabelas | **0 ERRO**, 12 ATENÇÃO (conhecidas), 38 OK |
-| `12_auditoria_geral.R` | aquisição, recorte CID, artefatos, numérico, código, Git/LGPD | **0 ERRO**, 1 ATENÇÃO (esperada), 8 INFO, 75 OK |
-
-Destaques do `12`:
-
-- **Re-derivação independente** do recorte CID a partir dos 191 `.rds`: 11.947.354
-  registros brutos relidos; recorte SIH = **295.673** e SIM = **147.551**, idênticos
-  aos CSVs; zero linhas fora de CID/RJ/período; marginais por ano e por CID3
-  conferidas (diferença 0).
-- O recorte SIH **bate 1:1 com a coorte** `coorte_glmm_2010_2024.csv` (mesmos
-  295.673 e 55.827 óbitos; 295.673 chaves localizadas, 0 não localizadas).
-- Fórmulas conferidas: `or = exp(beta)`, `z = beta/ep`, `p` bicaudal, IC95%,
-  FDR `BH`, ICC, MOR, calibração e ISU — todas OK.
-- Afirmações-chave do `README.md` presentes (295.673; 55.827; 14,95%; 2,065;
-  92,38%; 267.746; 27.927; 252.992).
-- 15 scripts R e 4 Python **sem erro de sintaxe**; 0 caminhos absolutos e 0 `setwd`;
-  10 pacotes exigidos, todos instalados.
-- 97 arquivos versionados na frente, **nenhum campo identificável direto** em CSV,
-  nenhum arquivo rastreado > 50 MB; `.rds` brutos continuam ignorados.
-
-**Artefatos de auditoria gerados:**
-
-- `10_auditoria/AUDITORIA_GERAL.md`
-- `05_tabelas/tab26_auditoria_geral.csv`
-- `04_resultados/resultados_auditoria_geral.txt`
-- `04_resultados/auditoria_consistencia.txt` e `05_tabelas/tab19_auditoria.csv`
-  (regerados pelo script 07)
-
-A única ATENÇÃO do `12` é a ausência esperada de `sih_rd_rj_2025_12.rds`
-(competência ainda não publicada no DATASUS).
+- **Scripts todos em `02_scripts/`** (a pasta `legado_fase_anterior/` foi eliminada):
+  - `13_figuras_exploratorias.R` (novo) — banco de 25 figuras.
+  - `14_verificacao_sidra.R` (novo, análise atual) — auditoria dos denominadores
+    populacionais do IBGE/SIDRA.
+  - `15_deflacao_ipca.R` (novo, análise atual) — deflação dos custos, agora em R sobre
+    a coorte (`coorte_glmm_2010_2024.csv`), recorte I60–I69.
+  - `16_consolidar_dados_legado.py`, `17_analises_territoriais_legado.py` e
+    `18_mortalidade_sim_legado.py` (históricos, movidos e com caminhos corrigidos).
+  - `04_auditoria_completa.R` (obsoleto) foi removido.
+- **`06_figuras/` organizada em subpastas:**
+  - `manuscrito/` — `figura1_taxa_internacao_letalidade.jpg` e
+    `figura2_funnel_hospitais.jpg` (300 dpi, < 2 MB, requisitos do edital), além dos
+    PNGs-base do GLMM.
+  - `exploratorias/` — 25 figuras (`fig_ex01` … `fig_ex25`).
+  - `suplementares/` — figuras antigas (ISU, UTI, exploratório, fig1–fig3).
+  - Os scripts `04`, `06`, `10`, `11` e `17` foram apontados para as subpastas certas.
+- **`08_manuscrito/manuscrito.md` reescrito** (ver seção 3).
 
 ---
 
-## 3. Estado do Git (ponto exato para retomar)
-
-Foram **preparados/commitados** (ver `git status`) apenas os arquivos desta tarefa:
-
-- `02_scripts/01_baixar_microdatasus.R` (modificado)
-- `02_scripts/12_auditoria_geral.R` (novo)
-- os **dois CSVs** de recorte CID (novos)
-- `.gitignore`, `README.md`, `LEIA-ME.md` (modificados)
-- artefatos de auditoria listados acima
-
-A frente já tinha **~30 arquivos modificados/não rastreados de sessões
-anteriores** (scripts, resultados, figuras). Eles **não** foram mexidos nem
-commitados nesta sessão — decidir depois se entram num commit próprio.
-
-> Os `.rds` (~580 MB) e as bases pesadas de `01_dados/processados/`
-> (`coorte_glmm_2010_2024.csv`, modelo, previsões) **permanecem fora do Git**
-> por tamanho. Só os recortes CID são versionados.
-
----
-
-## 4. Como reproduzir a sessão
+## 2. Como reproduzir
 
 ```powershell
-$R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
+$R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"   # não está no PATH
 
-# 1. aquisição + filtragem CID (só rede para o que faltar; ~9 min, sendo ~4 min
-#    tentando a competência 2025-12, que não existe)
+# 1. aquisicao + recortes CID (rede so para o que faltar; ~9 min, 4 min dos quais
+#    tentando a competencia 2025-12, que nao existe)
 & $R "02_scripts\01_baixar_microdatasus.R"
 
-# 2. auditorias
-& $R "02_scripts\07_auditoria_consistencia.R"   # ~10 min
-& $R "02_scripts\12_auditoria_geral.R"          # ~6 min
+# 2. coorte, descritivas, ISU, GLMM
+& $R "02_scripts\02_montar_coorte.R"
+& $R "02_scripts\03_tabelas_descritivas.R"
+& $R "02_scripts\04_isu_regiao_saude.R"
+& $R "02_scripts\05_glmm_principal.R"
+& $R "02_scripts\06_glmm_uti.R"
+
+# 3. auditorias
+& $R "02_scripts\07_auditoria_consistencia.R"
+& $R "02_scripts\12_auditoria_geral.R"
+
+# 4. robustez e conferencia de motores
+& $R "02_scripts\08_glmm_robustez.R"
+& $R "02_scripts\09_conferencia_motores.R"
+
+# 5. figuras e analises correntes
+& $R "02_scripts\10_figuras.R"
+& $R "02_scripts\11_exploratorio.R"
+& $R "02_scripts\13_figuras_exploratorias.R"
+& $R "02_scripts\14_verificacao_sidra.R"
+& $R "02_scripts\15_deflacao_ipca.R"
+
+# 6. tabelas historicas de tendencia/mortalidade
+python "02_scripts\16_consolidar_dados_legado.py"
+python "02_scripts\18_mortalidade_sim_legado.py"
+python "02_scripts\17_analises_territoriais_legado.py"
 ```
 
 Observações de ambiente:
 
-- `Rscript.exe` está em `C:\Program Files\R\R-4.6.1\bin` e **não** está no PATH.
-- Neste ambiente, chamadas curtas de `Rscript` **sem** `--vanilla` sofreram
-  `segfault` intermitente; com `--vanilla` rodou estável. Os scripts foram
-  executados com `--vanilla` durante a auditoria. Vale investigar o arquivo de
-  sítio (`R_HOME/etc/Rprofile.site`) antes de considerar isso um problema do código.
-- O script 01 gasta ~4 min tentando baixar `2025-12` a cada execução (4 tentativas
-  × 20 s + timeouts). **Otimização pendente**: pular competências futuras/ausentes
-  conhecidas sem tentar rede.
+- `Rscript.exe` em `C:\Program Files\R\R-4.6.1\bin`; usar `--vanilla` para evitar
+  `segfault` intermitente observado com `-e` sem `--vanilla`.
+- O script 01 gasta ~4 min tentando baixar `2025-12` a cada execução (pendência de
+  otimização: pular competências futuras conhecidas sem tentar rede).
 
 ---
 
-## 5. Pendências e próximos passos
+## 3. Manuscrito (Edital nº 02/2026)
 
-1. **Commit/push**: confirmar se o commit escopado desta sessão deve ser feito e
-   enviado ao remoto (`origin/main` =
-   `santosry/Environmental-Triggers-and-Cerebrovascular`).
-2. **Commit dos ~30 arquivos anteriores**: separar em um commit coerente
-   (scripts 02–11 e resultados) ou descartar o que for obsoleto.
-3. **Otimizar o script 01**: evitar a tentativa de rede para `2025-12`.
-4. **`HANDOFF.md`**: este arquivo repõe a pendência 1 do `README.md`. Ainda falta
-   o `PLANO_METODOLOGICO_GLMM_COX.md` (pendência 2) ou atualizar o README para
-   assumir que o plano foi absorvido.
-5. **Arquivos legados volumosos ainda no disco** (não versionados):
-   `sih_cerebrovascular_2010_2024.csv` (~172 MB) e `sih_g45_g46_2010_2024.csv`
-   (~8,8 MB) em `01_dados/processados/`. Avaliar remoção ou marcar como legado.
-6. **Decisão da UTI no modelo principal** (mantida como marcador de gravidade;
-   retirá-la eleva o ICC a ~17%) — ver pendência 3 do `README.md`.
-7. **Mapa coroplético das 9 regiões** continua sem shapefile (pendência 4).
+O manuscrito foi reescrito no estilo de **interpretação científica aplicada em
+linguagem simples**: apresenta o achado quantitativo, traduz o número, compara modelos,
+explica a implicação e termina com a cautela metodológica. Exemplo do tratamento dado
+ao achado central:
+
+> “Cerca de **14,95% de toda a variação na chance de morrer** entre pacientes internados
+> por DCV está relacionada a diferenças entre os hospitais, e não a características
+> individuais. […] Quando o uso de UTI é retirado, o ICC sobe para 17,25%; quando a UTI
+> entra, cai para 14,95%. […] Como um quarto dessa diferença é explicado por natureza
+> jurídica e complexidade e três quartos permanecem sem explicação, […]. A cautela: o
+> ICC deve ser lido como faixa (14,78% a 17,25%).”
+
+Conformidade checada com o edital:
+
+| Item do edital | Situação |
+|---|---|
+| Título ≤ 150 caracteres | 118 caracteres (PT); EN e ES traduzidos |
+| Resumo estruturado ≤ 250 palavras | PT 244 · EN 240 · ES 249 |
+| Palavras-chave (3–6, DeCS) | 6 por idioma |
+| Eixos temáticos | 1 (Planejamento) e 3 (Regionalização/RAS) |
+| 10–15 páginas de texto | ~14 páginas |
+| Até 40 referências | 13 (Vancouver) |
+| ≤ 5 tabelas + figuras | 3 tabelas + 2 figuras |
+| Figuras `.jpg`, ≥300 dpi, ≤2 MB | `figura1` e `figura2` geradas a 300 dpi, < 0,4 MB |
+
+**Seleção de tabelas/figuras do manuscrito:** Tabela 1 (perfil por macrorregião),
+Tabela 2 (OR ajustados), Tabela 3 (efeito dos blocos sobre o ICC), Figura 1 (taxa de
+internação e letalidade) e Figura 2 (funil hospitalar).
+
+O banco de 25 figuras exploratórias consta no material suplementar
+(`06_figuras/exploratorias/`), pronto para substituir qualquer seleção.
 
 ---
 
-## 6. Números de referência (para conferência rápida)
+## 4. Números de referência
 
 | Indicador | Valor |
 |---|---|
 | Registros brutos SIH-RD (191 competências) | 11.947.354 |
 | Internações da coorte | 295.673 |
 | Óbitos intra-hospitalares | 55.827 (18,88%) |
-| Óbitos I60–I69 no SIM (RJ, 2010–2024) | 147.551 |
+| Óbitos I60–I69 no SIM | 147.551 |
 | Estabelecimentos / regiões | 254 / 9 |
-| ICC hospitalar / MOR | 14,95% / 2,065 |
-| ISU estadual por DCV | 92,38% |
-| Cenários de robustez convergidos | 18 de 18 |
+| VPC/ICC / MOR | 14,95% (12,29–18,06) / 2,065 |
+| Faixa do ICC (com/sem UTI) | 14,78% a 17,25% |
+| Variância hospitalar explicada (M4) | 25,7% |
+| Funil: 102 ingênuos → 3 ajustados | 206 avaliáveis |
+| AUC condicional / marginal | 0,740 / 0,690 |
+| Taxa de internação 2010 → 2024 | 94,76 → 125,97/100.000 |
+| Mortalidade populacional 2010 → 2024 | 65,66 → 58,33/100.000 |
+| Custo total corrente / deflacionado (dez/2024) | R$ 535,1 mi / R$ 790,6 mi |
+| ISU estadual | 92,38% |
+
+> **Nota:** a deflação agora roda em `15_deflacao_ipca.R` sobre a coorte. Os totais
+> ficaram R$ 535.140.920 (corrente) e R$ 790.617.014 (dez/2024) — diferença de 0,015%
+> em relação ao cálculo histórico, por redistribuição de ~10 registros entre regiões.
+> O manuscrito usa valores arredondados (“cerca de R$ 535 milhões / R$ 790,6 milhões”).
 
 ---
 
-## 7. Arquivos-chave desta sessão
+## 5. Estado do Git
+
+- Sessão 1 foi **commitada** (`16c955c`): recortes CID versionados, `12_auditoria_geral.R`,
+  docs e artefatos de auditoria.
+- Sessão 2 (reorganização dos scripts, manuscrito, 25 figuras, JPGs, docs) foi
+  preparada e **pendente de commit** no momento da escrita deste handoff.
+- Os `.rds` (~580 MB) e bases pesadas de `01_dados/processados/` continuam fora do Git.
+- A frente ainda carrega outros arquivos modificados de sessões anteriores (scripts
+  02–11 e resultados); decidir se entram em um commit próprio.
+
+---
+
+## 6. Pendências e próximos passos
+
+1. **Revisar o manuscrito** com leitura clínica e, se possível, revisão ortográfica.
+2. **Conferir os dois JPG** do manuscrito no Word e confirmar legendas/numeração finais.
+3. **Decidir a seleção final** de figuras/tabelas (o banco tem 25; trocar é trivial).
+4. **Otimizar o script 01** para não tentar baixar competências futuras.
+5. **Commit/push** da sessão 2 e organização do commit dos arquivos anteriores.
+6. **`PLANO_METODOLOGICO_GLMM_COX.md`** continua ausente; README e este handoff o
+   substituem provisoriamente.
+7. **Legados volumosos** (`sih_cerebrovascular_2010_2024.csv`, ~172 MB;
+   `sih_g45_g46_2010_2024.csv`, ~8,8 MB) seguem no disco, não versionados — avaliar
+   remoção.
+8. **Mapa coroplético** das 9 regiões ainda sem shapefile.
+9. **Declaração de software:** registrar R 4.6.1, `glmmTMB` 1.1.15.2, `microdatasus`
+   2.5.0, IPCA/SIDRA 1737 e IBGE/SIDRA 6579.
+
+---
+
+## 7. Arquivos-chave
 
 | Item | Caminho |
 |---|---|
-| Script de aquisição + filtro CID | `02_scripts/01_baixar_microdatasus.R` |
-| Script de auditoria geral | `02_scripts/12_auditoria_geral.R` |
-| Auditoria de consistência (pré-existente) | `02_scripts/07_auditoria_consistencia.R` |
-| Relatório de auditoria geral | `10_auditoria/AUDITORIA_GERAL.md` |
-| Log da auditoria geral | `04_resultados/resultados_auditoria_geral.txt` |
-| Tabela consolidada da auditoria | `05_tabelas/tab26_auditoria_geral.csv` |
-| Recorte SIH versionado | `01_dados/processados/sih_cid_estudo_2010_2024.csv` |
-| Recorte SIM versionado | `01_dados/processados/sim_cid_estudo_2010_2024.csv` |
+| Aquisição + filtro CID | `02_scripts/01_baixar_microdatasus.R` |
+| Banco de figuras | `02_scripts/13_figuras_exploratorias.R` |
+| Verificação SIDRA | `02_scripts/14_verificacao_sidra.R` |
+| Deflação IPCA | `02_scripts/15_deflacao_ipca.R` |
+| Auditoria geral | `02_scripts/12_auditoria_geral.R` |
+| Manuscrito | `08_manuscrito/manuscrito.md` |
+| Figuras do manuscrito | `06_figuras/manuscrito/` |
+| Figuras exploratórias | `06_figuras/exploratorias/` |
+| Recorte SIH / SIM versionado | `01_dados/processados/si{h,m}_cid_estudo_2010_2024.csv` |
 
 ⬅️ [Voltar ao README](README.md)

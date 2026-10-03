@@ -1,0 +1,16 @@
+item,valor,classificacao,nota
+Arquivo de populacao existe,sim,OK,""
+Linhas na serie populacional,1472,INFO,""
+Municipios distintos,92,INFO,""
+Anos cobertos,2010 a 2025,INFO,""
+Municipios esperados (92 do RJ),92,OK,""
+Cobertura completa municipio x ano (92 x 16),1472,OK,esperado 1.472 linhas
+Populacao ausente,0,OK,""
+Populacao nao positiva,0,OK,""
+Pares municipio x ano duplicados,0,OK,""
+Registros por interpolacao linear,184 (12.50%),OK,anos sem estimativa oficial do IBGE
+Municipios do lookup ausentes na populacao,0,OK,""
+Municipios da populacao ausentes no lookup,0,OK,""
+Populacao do RJ em 2010,16112678,INFO,""
+Populacao do RJ em 2024,17219679,INFO,""
+Variacao anual da populacao abaixo de 3%,max 8.06%,ATENCAO,""

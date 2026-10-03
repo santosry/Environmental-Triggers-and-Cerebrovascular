@@ -47,7 +47,7 @@ de 2026.
 | `03_analises/` | Logs de aquisição e consolidação. |
 | `04_resultados/` | Resultados em texto, um arquivo por etapa. |
 | `05_tabelas/` | Tabelas em CSV, numeradas na ordem em que entram no manuscrito. |
-| `06_figuras/` | Figuras em PNG a 300 dpi. |
+| `06_figuras/` | Figuras organizadas em `manuscrito/` (selecionadas em `.jpg`), `exploratorias/` (banco de ~25) e `suplementares/` (demais). PNG a 300 dpi. |
 | `07_literatura/` | Matriz de literatura com autoria verificada. |
 | `08_manuscrito/` | Manuscrito em Markdown. |
 | `09_documentos_submissao/` | Modelos de documentos exigidos pelo edital. |
@@ -108,22 +108,26 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 # 9. figuras
 & $R "02_scripts\10_figuras.R"
 & $R "02_scripts\11_exploratorio.R"          # variaveis nao usadas (~20 min)
+& $R "02_scripts\13_figuras_exploratorias.R" # banco de ~25 figuras
+
+# 10. denominadores populacionais e custos (analise atual)
+& $R "02_scripts\14_verificacao_sidra.R"
+& $R "02_scripts\15_deflacao_ipca.R"
+
+# 11. analises territoriais historicas (tabelas de tendencia e mortalidade)
+& python "02_scripts\16_consolidar_dados_legado.py"
+& python "02_scripts\18_mortalidade_sim_legado.py"
+& python "02_scripts\17_analises_territoriais_legado.py"
 ```
 
-### Legado da fase anterior
+### Organizacao dos scripts
 
-`02_scripts/legado_fase_anterior/` mantém os scripts que produzem os resultados de
-**tendência, mortalidade (SIM) e custos (IPCA)** usados no manuscrito fora do escopo do
-GLMM. Foram mantidos para reprodutibilidade:
-
-| Script | Função |
-|---|---|
-| `01_consolidar_dados.py` | Consolidação histórica do SIH e do SIM. |
-| `02_analises_principais.py` | Tendências, taxas e fluxo. |
-| `02b_analises_sim.py` | Mortalidade no SIM. |
-| `04_auditoria_completa.R` | Auditoria de consistência. |
-| `05_verificacao_sidra.R` | Verificação das populações do SIDRA/IBGE. |
-| `06_deflacao_ipca.py` | Deflação dos custos pelo IPCA. |
+Nao ha mais subpasta de legado: todos os scripts ficam em `02_scripts/`. Os
+scripts 14 (SIDRA) e 15 (IPCA) foram promovidos a **analise atual** e usam a coorte
+consolidada (`coorte_glmm_2010_2024.csv`). Os scripts 16, 17 e 18 mantem, de forma
+explicita e identificada, a reconstrucao historica das tabelas descritivas de
+tendencia, mortalidade (SIM) e fluxo que ainda alimentam alguns indicadores do
+manuscrito.
 
 ---
 
@@ -144,6 +148,12 @@ GLMM. Foram mantidos para reprodutibilidade:
 | `10_figuras.R` | Figuras do Bloco 4 (OR, regiões, funnel, subtipos, UTI). |
 | `11_exploratorio.R` | Exploração das variáveis não usadas no modelo principal: raça/cor, escolaridade, comorbidade, natureza jurídica, complexidade e permanência. |
 | `12_auditoria_geral.R` | Bateria de auditoria do repositório: aquisição e integridade dos `.rds`, re-derivação do recorte CID versionado, coerência entre coorte e tabelas, consistência numérica, sintaxe/paths dos scripts e higiene/LGPD do Git. |
+| `13_figuras_exploratorias.R` | Banco de ~25 figuras exploratórias da análise atual (séries, pirâmide, fluxo, concentração, caterpilar hospitalar, ROC, calibração, ISU, comorbidade), em `06_figuras/exploratorias/`. |
+| `14_verificacao_sidra.R` | Verificação dos denominadores populacionais do IBGE/SIDRA (cobertura, fontes, interpolação, consistência com o lookup). |
+| `15_deflacao_ipca.R` | Deflação dos custos do SIH para dez/2024 pelo IPCA (SIDRA 1737), lendo a coorte atual e I60–I69. |
+| `16_consolidar_dados_legado.py` | (Histórico) consolidação dos microdados brutos de SIH e SIM nos CSVs largos usados pelas análises territoriais. |
+| `17_analises_territoriais_legado.py` | (Histórico) tendências, taxas, fluxo, permanência e custo. |
+| `18_mortalidade_sim_legado.py` | (Histórico) mortalidade populacional no SIM. |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
@@ -346,6 +356,14 @@ Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
 - tabelas descritivas da coorte antiga, regeradas pelo script 03;
 - os PDFs de referência foram movidos para `13_documentos_referencia/`.
 
+Em **3 de outubro de 2026** a pasta `02_scripts/legado_fase_anterior/` foi eliminada e
+todos os scripts passaram a residir em `02_scripts/`. A verificação de SIDRA e a deflação
+pelo IPCA foram promovidas a análise atual (`14_verificacao_sidra.R` e
+`15_deflacao_ipca.R`, este último reescrito em R sobre a coorte); as análises territoriais
+históricas foram renomeadas com o sufixo `_legado` (`16`, `17` e `18`). A pasta
+de figuras foi organizada em `manuscrito/`, `exploratorias/` e `suplementares/`, e o
+banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_exploratorias.R`.
+
 ---
 
 ## Pendências
@@ -371,6 +389,8 @@ Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
 | Handoff / continuidade | [`HANDOFF.md`](HANDOFF.md) |
 | Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
 | Manuscrito | [`08_manuscrito/manuscrito.md`](08_manuscrito/manuscrito.md) |
+| Figuras do manuscrito | [`06_figuras/manuscrito/`](06_figuras/manuscrito) |
+| Banco de figuras exploratórias | [`06_figuras/exploratorias/`](06_figuras/exploratorias) |
 | Matriz de literatura | [`07_literatura/MATRIZ_LITERATURA.md`](07_literatura/MATRIZ_LITERATURA.md) |
 | Declaração de variáveis SIH | [`04_resultados/DICIONARIO_VARIAVEIS_SIH.md`](04_resultados/DICIONARIO_VARIAVEIS_SIH.md) |
 | OR ajustados (CSV) | [`05_tabelas/tab3_glmm_or.csv`](05_tabelas/tab3_glmm_or.csv) |

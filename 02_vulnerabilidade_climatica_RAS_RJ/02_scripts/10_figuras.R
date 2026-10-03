@@ -24,7 +24,7 @@ suppressWarnings({
   ROOT <- normalizePath(".")
   PROC <- file.path(ROOT, "01_dados", "processados")
   TAB <- file.path(ROOT, "05_tabelas")
-  FIG <- file.path(ROOT, "06_figuras")
+  FIG <- file.path(ROOT, "06_figuras", "manuscrito")
   RES <- file.path(ROOT, "04_resultados")
   dir.create(FIG, showWarnings = FALSE, recursive = TRUE)
 
@@ -36,6 +36,15 @@ suppressWarnings({
   or <- fread(file.path(TAB, "tab3_glmm_or.csv"), encoding = "UTF-8")
   eh <- fread(file.path(PROC, "efeitos_hospital_glmm.csv"), encoding = "UTF-8")
   pv <- fread(file.path(PROC, "previsoes_glmm.csv"), encoding = "UTF-8")
+
+  ## ---- paleta viridis, unica em todas as figuras deste script ----
+  COR_LINHA <- viridisLite::viridis(1, begin = 0.30)
+  CORES_BLOCO <- viridisLite::viridis(3, option = "D", begin = 0.15, end = 0.85)
+  names(CORES_BLOCO) <- c("Paciente", "Subtipo diagnostico", "Regiao de saude")
+  CORES_FORA <- viridisLite::viridis(3, option = "D", begin = 0.25, end = 0.95)
+  names(CORES_FORA) <- c("Dentro do esperado",
+                         "Fora dos limites ajustados 95%",
+                         "Fora dos limites ajustados 99,8%")
 
   ## ================= 1. forest plot geral =================
   o <- or[termo != "(Intercept)"]
@@ -60,9 +69,7 @@ suppressWarnings({
     scale_shape_manual(values = c("q < 0,05 (FDR)" = 16,
                                   "nao significativo apos FDR" = 1)) +
     scale_x_log10() +
-    scale_colour_manual(values = c("Paciente" = "#08519c",
-                                   "Subtipo diagnostico" = "#cb181d",
-                                   "Regiao de saude" = "#238b45")) +
+    scale_colour_viridis_d(option = "D", end = 0.85, name = NULL) +
     labs(title = "Odds ratio ajustado de \u00f3bito intra-hospitalar",
          subtitle = paste0("Modelo log\u00edstico multin\u00edvel com intercepto aleat\u00f3rio por ",
                            "hospital (CNES) - RJ, 2010-2024\n",
@@ -88,8 +95,8 @@ suppressWarnings({
   g2 <- ggplot(r, aes(x = or, y = regiao)) +
     geom_vline(xintercept = 1, linetype = "dashed", colour = "grey40") +
     geom_errorbar(aes(xmin = lo, xmax = hi), orientation = "y", width = 0.2,
-                  colour = "#238b45") +
-    geom_point(size = 2.8, colour = "#238b45") +
+                  colour = COR_LINHA) +
+    geom_point(size = 2.8, colour = COR_LINHA) +
     geom_text(aes(label = sprintf("%.2f", or)), vjust = -0.9, size = 2.9) +
     scale_x_log10() +
     labs(title = "Efeito ajustado da regi\u00e3o de sa\u00fade de resid\u00eancia",
@@ -142,16 +149,22 @@ suppressWarnings({
 
   g3 <- ggplot(f, aes(x = esperado, y = oe)) +
     geom_hline(yintercept = 1, colour = "grey25") +
-    geom_line(aes(y = l998_pois_sup), linetype = "dotted", colour = "#f39c12") +
-    geom_line(aes(y = l998_pois_inf), linetype = "dotted", colour = "#f39c12") +
-    geom_line(aes(y = l998_aj_sup), linetype = "longdash", colour = "#08519c") +
-    geom_line(aes(y = l998_aj_inf), linetype = "longdash", colour = "#08519c") +
-    geom_point(aes(colour = fora), size = 2.1, alpha = 0.85) +
+    geom_line(aes(y = l998_pois_sup), linetype = "dotted", colour = COR_LINHA) +
+    geom_line(aes(y = l998_pois_inf), linetype = "dotted", colour = COR_LINHA) +
+    geom_line(aes(y = l998_aj_sup), linetype = "longdash", colour = CORES_FORA[[1]]) +
+    geom_line(aes(y = l998_aj_inf), linetype = "longdash", colour = CORES_FORA[[1]]) +
+    geom_point(aes(colour = fora, size = fora, alpha = fora)) +
     scale_x_log10() +
     scale_y_log10(limits = c(0.04, 25)) +
-    scale_colour_manual(values = c("Dentro do esperado" = "grey65",
-                                   "Fora dos limites ajustados 95%" = "#f39c12",
-                                   "Fora dos limites ajustados 99,8%" = "#cb181d")) +
+    scale_colour_manual(values = CORES_FORA) +
+    scale_size_manual(values = c("Dentro do esperado" = 1.5,
+                                 "Fora dos limites ajustados 95%" = 2.2,
+                                 "Fora dos limites ajustados 99,8%" = 2.9),
+                      guide = "none") +
+    scale_alpha_manual(values = c("Dentro do esperado" = 0.45,
+                                  "Fora dos limites ajustados 95%" = 0.95,
+                                  "Fora dos limites ajustados 99,8%" = 1),
+                       guide = "none") +
     labs(title = "Mortalidade observada em rela\u00e7\u00e3o \u00e0 esperada, por hospital",
          subtitle = paste0("Hospitais com pelo menos ", MIN_ESP,
                            " \u00f3bitos esperados; esperado obtido pelo GLMM (perfil do paciente).\n",
@@ -178,11 +191,12 @@ suppressWarnings({
   s <- s[!is.na(subtipo)]
   s[, subtipo := factor(subtipo, levels = subtipo[order(mortalidade)])]
 
-  g4 <- ggplot(s, aes(x = mortalidade, y = subtipo)) +
-    geom_col(fill = "#cb181d", width = 0.68) +
+  g4 <- ggplot(s, aes(x = mortalidade, y = subtipo, fill = mortalidade)) +
+    geom_col(width = 0.68) +
     geom_text(aes(label = sprintf("%.1f%%  (n=%s)", mortalidade,
                                   format(n, big.mark = "."))),
-              hjust = -0.06, size = 3.1) +
+              hjust = -0.06, size = 3.1, colour = "grey20") +
+    scale_fill_viridis_c(option = "D", direction = -1, guide = "none") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.28))) +
     labs(title = "Mortalidade intra-hospitalar por subtipo diagn\u00f3stico",
          subtitle = "Coorte I60-I69 e c\u00f3digos G45 e G46, RJ, 2010-2024",

@@ -134,7 +134,7 @@ suppressWarnings({
                     "Norte", "Noroeste", "Serrana", "Centro-Sul", "Medio Paraiba",
                     "Baia da Ilha Grande")
   CAR_ORDEM <- c("Eletiva", "Urgencia", "Acidente trabalho", "Acidente trajeto",
-                 "Outros acidentes", "Outras lesoes", "Outros", "Ignorado")
+                 "Outros acidentes", "Outras lesoes", "Outros")
   COLS <- c("CNES", "obito_hospitalar", "idade_z", "sexo", "subtipo", "car_int",
             "uti", "fluxo_inter", "regiao_saude")
 

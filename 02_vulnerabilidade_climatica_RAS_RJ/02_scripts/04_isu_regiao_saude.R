@@ -34,7 +34,7 @@ suppressWarnings({
   DIR_SIM <- file.path(ROOT, "01_dados", "brutos_sim")
   RES <- file.path(ROOT, "04_resultados")
   TAB <- file.path(ROOT, "05_tabelas")
-  FIG <- file.path(ROOT, "06_figuras")
+  FIG <- file.path(ROOT, "06_figuras", "suplementares")
   LOOKUP <- file.path(dirname(ROOT), "01_DLNMs_RJ_cerebrovascular", "data_processed",
                       "lookup_municipio_macrorregiao.csv")
   for (d in c(RES, TAB, FIG)) dir.create(d, showWarnings = FALSE, recursive = TRUE)
@@ -198,14 +198,21 @@ suppressWarnings({
   say("  mas precisa ser declarada como limitacao.")
 
   ## ---------------- 6. figura ----------------
+  ## Paleta viridis: as barras sao coloridas pelo proprio valor do ISU, de modo
+  ## que a cor tambem carrega a informacao; a linha de referencia do estado usa
+  ## a extremidade escura da mesma paleta para manter o contraste.
   isu_plot <- isu_reg[regiao_saude != "SEM MUNICIPIO CORRESPONDENTE"]
-  g <- ggplot(isu_plot, aes(x = reorder(regiao_saude, ISU), y = ISU)) +
-    geom_col(fill = "#2c7fb8", width = 0.7) +
-    geom_text(aes(label = sprintf("%.1f", ISU)), hjust = -0.15, size = 3.4) +
-    geom_hline(yintercept = isu_geral$ISU, linetype = "dashed", colour = "#c0392b") +
+  COR_REF <- viridisLite::viridis(1, begin = 0.0)
+  g <- ggplot(isu_plot, aes(x = reorder(regiao_saude, ISU), y = ISU, fill = ISU)) +
+    geom_col(width = 0.7) +
+    geom_text(aes(label = sprintf("%.1f", ISU)), hjust = -0.15, size = 3.4,
+              colour = "grey20") +
+    geom_hline(yintercept = isu_geral$ISU, linetype = "dashed", colour = COR_REF,
+               linewidth = 0.6) +
     annotate("text", x = 0.7, y = isu_geral$ISU + 0.6,
              label = sprintf("Estado: %.1f", isu_geral$ISU), hjust = 0, size = 3.2,
-             colour = "#c0392b") +
+             colour = COR_REF) +
+    scale_fill_viridis_c(option = "D", name = "ISU (%)") +
     coord_flip(ylim = c(min(isu_plot$ISU) - 3, max(isu_plot$ISU) + 3)) +
     labs(title = "Indice de Swaroop-Uemura por regiao de saude",
          subtitle = "Obitos por doencas cerebrovasculares em pessoas de 50 anos ou mais (%) - RJ, 2010-2024",

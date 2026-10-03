@@ -18,9 +18,13 @@ from scipy import stats
 warnings.filterwarnings("ignore")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+while not os.path.isdir(os.path.join(ROOT, "01_dados")) and \
+        os.path.dirname(ROOT) != ROOT:
+    ROOT = os.path.dirname(ROOT)
 DLNM_ROOT = os.path.dirname(ROOT)
-SRC_SIM = os.path.join(DLNM_ROOT, "05_publicacao_github", "data", "raw", "sim")
-SRC_LOOKUP = os.path.join(DLNM_ROOT, "05_publicacao_github", "data", "processed",
+# Fontes atuais: microdados do SIM baixados pelo script 01 nesta frente.
+SRC_SIM = os.path.join(ROOT, "01_dados", "brutos_sim")
+SRC_LOOKUP = os.path.join(DLNM_ROOT, "01_DLNMs_RJ_cerebrovascular", "data_processed",
                           "lookup_municipio_macrorregiao.csv")
 TAB = os.path.join(ROOT, "05_tabelas")
 FIG = os.path.join(ROOT, "06_figuras")
@@ -54,7 +58,7 @@ pop_estado = pop.groupby("ano", as_index=False)["populacao"].sum()
 # ---------------------------------------------------------------------------
 chunks = []
 for ano in range(2010, 2025):
-    f = os.path.join(SRC_SIM, f"sim_do_rj_year_{ano}.rds")
+    f = os.path.join(SRC_SIM, f"sim_do_rj_{ano}.rds")
     if not os.path.exists(f):
         continue
     df = list(pyreadr.read_r(f).values())[0]
