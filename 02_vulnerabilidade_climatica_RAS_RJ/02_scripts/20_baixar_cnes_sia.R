@@ -21,11 +21,26 @@ suppressWarnings({
   library(microdatasus)
   library(data.table)
 
-  ROOT <- normalizePath(".")
+  ## Encontra a raiz da frente (que contem 01_dados/ e 02_scripts/), mesmo se o
+  ## script for chamado de outro diretorio ou pela raiz do monorepo.
+  acha_root <- function() {
+    d <- normalizePath(".")
+    for (i in 1:6) {
+      if (dir.exists(file.path(d, "01_dados")) && dir.exists(file.path(d, "02_scripts")))
+        return(d)
+      sub <- file.path(d, "02_vulnerabilidade_climatica_RAS_RJ")
+      if (dir.exists(file.path(sub, "01_dados"))) return(sub)
+      pai <- dirname(d); if (pai == d) break; d <- pai
+    }
+    normalizePath(".")
+  }
+  ROOT <- acha_root()
   DIR <- file.path(ROOT, "01_dados", "brutos_cnes_sia")
+  DIR_LOG <- file.path(ROOT, "03_analises")
   dir.create(DIR, showWarnings = FALSE, recursive = TRUE)
+  dir.create(DIR_LOG, showWarnings = FALSE, recursive = TRUE)
 
-  logcon <- file(file.path(ROOT, "03_analises", "log_cnes_sia.txt"), open = "wt", encoding = "UTF-8")
+  logcon <- file(file.path(DIR_LOG, "log_cnes_sia.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
 
   SISTEMAS <- c("CNES-LT", "CNES-ST", "CNES-DC", "CNES-EQ", "CNES-SR", "CNES-HB",
@@ -44,6 +59,13 @@ suppressWarnings({
       " | meses: ", paste(meses, collapse = ","), " | uf: ", uf)
   say("inicio: ", format(Sys.time()))
   say("=====================================================================")
+
+  say("raiz da frente: ", ROOT)
+  if (Sys.getenv("CNES_DRYRUN", "0") == "1") {
+    say("CNES_DRYRUN=1: apenas valida caminhos e lista os sistemas, sem baixar.")
+    say("sistemas (", length(SISTEMAS), "): ", paste(SISTEMAS, collapse = ", "))
+    say("fim: ", format(Sys.time())); close(logcon); quit(save = "no")
+  }
 
   baixar <- function(expr, tentativas = 3, pausa = 20) {
     for (k in seq_len(tentativas)) {
