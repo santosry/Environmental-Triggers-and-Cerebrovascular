@@ -3,7 +3,7 @@ Baia da Ilha Grande,2010,113,104,92.04
 Baia da Ilha Grande,2011,107,101,94.39
 Baia da Ilha Grande,2012,111,96,86.49
 Baia da Ilha Grande,2013,95,88,92.63
-Baia da Ilha Grande,2014,112,104,92.86
+Baia da Ilha Grande,2014,113,105,92.92
 Baia da Ilha Grande,2015,120,112,93.33
 Baia da Ilha Grande,2016,123,114,92.68
 Baia da Ilha Grande,2017,124,113,91.13
@@ -24,7 +24,7 @@ Baixada Litoranea,2016,356,337,94.66
 Baixada Litoranea,2017,361,336,93.07
 Baixada Litoranea,2018,331,305,92.15
 Baixada Litoranea,2019,336,307,91.37
-Baixada Litoranea,2020,360,334,92.78
+Baixada Litoranea,2020,361,335,92.8
 Baixada Litoranea,2021,410,368,89.76
 Baixada Litoranea,2022,396,363,91.67
 Baixada Litoranea,2023,382,350,91.62
@@ -41,49 +41,49 @@ Centro-Sul,2018,229,215,93.89
 Centro-Sul,2019,230,210,91.3
 Centro-Sul,2020,198,181,91.41
 Centro-Sul,2021,247,233,94.33
-Centro-Sul,2022,219,202,92.24
+Centro-Sul,2022,220,203,92.27
 Centro-Sul,2023,193,171,88.6
-Centro-Sul,2024,203,191,94.09
+Centro-Sul,2024,205,193,94.15
 Medio Paraiba,2010,590,543,92.03
 Medio Paraiba,2011,595,544,91.43
 Medio Paraiba,2012,570,532,93.33
 Medio Paraiba,2013,596,559,93.79
-Medio Paraiba,2014,594,541,91.08
+Medio Paraiba,2014,595,542,91.09
 Medio Paraiba,2015,542,502,92.62
 Medio Paraiba,2016,582,536,92.1
 Medio Paraiba,2017,606,563,92.9
-Medio Paraiba,2018,607,570,93.9
+Medio Paraiba,2018,608,571,93.91
 Medio Paraiba,2019,605,554,91.57
-Medio Paraiba,2020,579,540,93.26
+Medio Paraiba,2020,580,541,93.28
 Medio Paraiba,2021,548,507,92.52
 Medio Paraiba,2022,616,581,94.32
 Medio Paraiba,2023,581,553,95.18
 Medio Paraiba,2024,572,547,95.63
-Metropolitana I,2010,6573,6039,91.88
-Metropolitana I,2011,6236,5762,92.4
+Metropolitana I,2010,6575,6041,91.88
+Metropolitana I,2011,6237,5763,92.4
 Metropolitana I,2012,6192,5676,91.67
-Metropolitana I,2013,5999,5504,91.75
-Metropolitana I,2014,5810,5379,92.58
+Metropolitana I,2013,6002,5507,91.75
+Metropolitana I,2014,5813,5382,92.59
 Metropolitana I,2015,5591,5156,92.22
-Metropolitana I,2016,5936,5442,91.68
-Metropolitana I,2017,5692,5211,91.55
-Metropolitana I,2018,5680,5244,92.32
-Metropolitana I,2019,5639,5239,92.91
+Metropolitana I,2016,5937,5443,91.68
+Metropolitana I,2017,5694,5213,91.55
+Metropolitana I,2018,5682,5246,92.33
+Metropolitana I,2019,5645,5245,92.91
 Metropolitana I,2020,5482,5055,92.21
-Metropolitana I,2021,6104,5628,92.2
+Metropolitana I,2021,6105,5629,92.2
 Metropolitana I,2022,6006,5527,92.02
 Metropolitana I,2023,6046,5618,92.92
-Metropolitana I,2024,6149,5657,92
-Metropolitana II,2010,1191,1115,93.62
-Metropolitana II,2011,1153,1072,92.97
+Metropolitana I,2024,6155,5663,92.01
+Metropolitana II,2010,1192,1116,93.62
+Metropolitana II,2011,1154,1073,92.98
 Metropolitana II,2012,1192,1107,92.87
-Metropolitana II,2013,1180,1103,93.47
-Metropolitana II,2014,1065,985,92.49
+Metropolitana II,2013,1181,1104,93.48
+Metropolitana II,2014,1067,987,92.5
 Metropolitana II,2015,1061,987,93.03
-Metropolitana II,2016,1185,1116,94.18
-Metropolitana II,2017,1182,1105,93.49
-Metropolitana II,2018,1212,1137,93.81
-Metropolitana II,2019,1178,1101,93.46
+Metropolitana II,2016,1188,1119,94.19
+Metropolitana II,2017,1183,1106,93.49
+Metropolitana II,2018,1213,1138,93.82
+Metropolitana II,2019,1181,1104,93.48
 Metropolitana II,2020,1189,1118,94.03
 Metropolitana II,2021,1295,1226,94.67
 Metropolitana II,2022,1369,1294,94.52
@@ -105,28 +105,28 @@ Noroeste,2022,199,187,93.97
 Noroeste,2023,204,188,92.16
 Noroeste,2024,196,185,94.39
 Norte,2010,569,516,90.69
-Norte,2011,527,480,91.08
+Norte,2011,529,482,91.12
 Norte,2012,493,456,92.49
-Norte,2013,498,466,93.57
-Norte,2014,473,445,94.08
+Norte,2013,500,468,93.6
+Norte,2014,474,446,94.09
 Norte,2015,479,434,90.61
 Norte,2016,527,494,93.74
 Norte,2017,483,445,92.13
 Norte,2018,495,456,92.12
 Norte,2019,563,515,91.47
-Norte,2020,484,430,88.84
+Norte,2020,485,431,88.87
 Norte,2021,507,458,90.34
 Norte,2022,568,520,91.55
 Norte,2023,561,518,92.34
 Norte,2024,520,480,92.31
-Serrana,2010,645,593,91.94
-Serrana,2011,676,620,91.72
+Serrana,2010,646,594,91.95
+Serrana,2011,677,621,91.73
 Serrana,2012,641,599,93.45
-Serrana,2013,706,658,93.2
+Serrana,2013,708,660,93.22
 Serrana,2014,691,633,91.61
-Serrana,2015,599,564,94.16
+Serrana,2015,600,565,94.17
 Serrana,2016,666,631,94.74
-Serrana,2017,636,599,94.18
+Serrana,2017,637,600,94.19
 Serrana,2018,710,681,95.92
 Serrana,2019,687,648,94.32
 Serrana,2020,580,554,95.52

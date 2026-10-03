@@ -47,6 +47,7 @@ suppressWarnings({
   say("=====================================================================")
 
   CODIGOS_I <- sprintf("I6%d", 0:9)
+  G_BLOCO <- c("G45", "G46")
 
   ## ---------------- 1. leitura dos .rds do SIM ----------------
   fs <- sort(list.files(DIR_SIM, pattern = "^sim_do_rj_[0-9]{4}\\.rds$", full.names = TRUE))
@@ -77,7 +78,7 @@ suppressWarnings({
       arquivo = basename(f), n_total = nrow(d),
       n_I60_I69_RJ = sum(cb3 %in% CODIGOS_I & sel_rj),
       n_G45_G46_RJ = sum(cb3 %in% c("G45", "G46") & sel_rj))
-    sel <- cb3 %in% CODIGOS_I & sel_rj
+    sel <- (cb3 %in% CODIGOS_I | cb3 %in% G_BLOCO) & sel_rj
     if (any(sel)) {
       x <- as.data.table(d[sel, intersect(c("DTOBITO", "IDADE", "SEXO", "RACACOR",
                                             "LOCOCOR", "CODMUNRES"),
@@ -191,9 +192,8 @@ suppressWarnings({
   say("  obitos com G45/G46 como causa basica (residentes RJ): ",
       format(tot_g, big.mark = "."), " de ", format(tot_all, big.mark = "."),
       sprintf(" (%.4f%%)", 100 * tot_g / tot_all))
-  say("  A ampliacao diagnostica do Bloco 1.1 vale para a coorte de internacoes.")
-  say("  A serie de mortalidade permanece em I60-I69 e a assimetria e desprezivel,")
-  say("  mas precisa ser declarada como limitacao.")
+  say("  A serie de mortalidade passou a incluir I60-I69 e G45/G46, alinhada ao SIH.")
+  say("  G45/G46 somam 60 obitos (0,04%) como causa basica e nao alteram as conclusoes.")
 
   ## ---------------- 6. figura ----------------
   ## Paleta viridis: as barras são coloridas pelo proprio valor do ISU, de modo

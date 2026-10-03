@@ -1,6 +1,6 @@
 # AUDITORIA GERAL DO REPOSITORIO
 
-**Data da execucao:** 2026-10-03 12:14:59
+**Data da execucao:** 2026-10-03 13:22:27
 **Ambiente:** R version 4.6.1 (2026-06-24 ucrt)
 **Script:** `02_scripts/12_auditoria_geral.R`
 
@@ -78,9 +78,9 @@ aquisicao, recorte CID versionado, coerencia entre artefatos, tabelas, codigo e 
 | 4 | tab5: soma de n na calibracao (marginal) | 295673 | OK |  |
 | 4 | tab5: soma de n na calibracao (condicional) | 295673 | OK |  |
 | 4 | tab5: razao esperado/observado condicional proxima de 1 | 0.9999 | OK |  |
-| 4 | tab6: soma regional = total estadual | 147551 | OK |  |
-| 4 | tab6: ISU = 100*50+/total | 4.66e-03 | OK |  |
-| 4 | tab6: obitos I60-I69 do recorte SIM iguais ao total do ISU | 147551 | OK | recorte SIM completo (com G45/G46): 147611 |
+| 4 | tab6: soma regional = total estadual | 147611 | OK |  |
+| 4 | tab6: ISU = 100*50+/total | 4.90e-03 | OK |  |
+| 4 | tab6: total do ISU igual ao recorte SIM (I60-I69 + G45/G46) | 147611 | OK |  |
 | 4 | tab8: S0 reproduz o modelo principal | 0.57805 | OK |  |
 | 4 | tab8: todos os cenarios convergidos | 18 de 18 | OK |  |
 | 4 | tab19: nenhuma verificacao classificada como ERRO | 0 | OK |  |
@@ -88,12 +88,12 @@ aquisicao, recorte CID versionado, coerencia entre artefatos, tabelas, codigo e 
 | 4 | README contem '55.827' | sim | OK |  |
 | 4 | README contem '14,95%' | sim | OK |  |
 | 4 | README contem '2,065' | sim | OK |  |
-| 4 | README contem '92,38%' | sim | OK |  |
+| 4 | README contem '92,39%' | sim | OK |  |
 | 4 | README contem '267.746' | sim | OK |  |
 | 4 | README contem '27.927' | sim | OK |  |
 | 4 | README contem '252.992' | sim | OK |  |
-| 5 | Scripts R no diretorio de scripts | 17 | INFO |  |
-| 5 | Scripts Python no diretorio de scripts | 3 | INFO |  |
+| 5 | Scripts R no diretorio de scripts | 20 | INFO |  |
+| 5 | Scripts Python no diretorio de scripts | 4 | INFO |  |
 | 5 | Scripts R com erro de sintaxe | 0 | OK |  |
 | 5 | Scripts Python com erro de sintaxe | 0 | OK |  |
 | 5 | Linhas de codigo R com caminho absoluto | 0 | OK |  |

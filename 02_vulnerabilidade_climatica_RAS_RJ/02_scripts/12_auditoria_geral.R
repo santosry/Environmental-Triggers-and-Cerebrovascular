@@ -306,10 +306,8 @@ suppressWarnings({
   chk(max(abs(isu_calc - isu$ISU)) < 0.01, "4", "tab6: ISU = 100*50+/total",
       sprintf("%.2e", max(abs(isu_calc - isu$ISU))))
   if (file.exists(f_sim_csv)) {
-    n_sim_i69 <- sum(substr(toupper(trimws(as.character(sm$CAUSABAS))), 1, 3) %in% ESTUDO_I)
-    chk(n_sim_i69 == isu[regiao_saude == "ESTADO DO RJ"]$obitos_total,
-        "4", "tab6: obitos I60-I69 do recorte SIM iguais ao total do ISU", n_sim_i69,
-        nota = sprintf("recorte SIM completo (com G45/G46): %d", nrow(sm)))
+    chk(nrow(sm) == isu[regiao_saude == "ESTADO DO RJ"]$obitos_total,
+        "4", "tab6: total do ISU igual ao recorte SIM (I60-I69 + G45/G46)", nrow(sm))
   }
 
   ## tab8: robustez
@@ -331,7 +329,7 @@ suppressWarnings({
   ## README: afirmacoes-chave presentes
   rd <- paste(readLines(file.path(ROOT, "README.md"), encoding = "UTF-8", warn = FALSE),
               collapse = " ")
-  for (af in c("295.673", "55.827", "14,95%", "2,065", "92,38%", "267.746", "27.927", "252.992")) {
+  for (af in c("295.673", "55.827", "14,95%", "2,065", "92,39%", "267.746", "27.927", "252.992")) {
     chk(grepl(af, rd, fixed = TRUE), "4", paste0("README contem '", af, "'"),
         if (grepl(af, rd, fixed = TRUE)) "sim" else "nao")
   }

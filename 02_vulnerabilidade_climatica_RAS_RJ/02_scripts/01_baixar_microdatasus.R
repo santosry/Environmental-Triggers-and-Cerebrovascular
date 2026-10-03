@@ -78,6 +78,10 @@ suppressWarnings({
   ok <- 0L; falhas <- character(0); pulados <- 0L
   comps <- expand.grid(ano = 2010:2025, mes = 1:12)
   comps <- comps[order(comps$ano, comps$mes), ]
+  ## Competências ainda não publicadas no DATASUS: evita perder ~4 min com
+  ## 4 tentativas de rede a cada execução.
+  COMP_AUSENTES <- "2025-12"
+  comps <- comps[!sprintf("%d-%02d", comps$ano, comps$mes) %in% COMP_AUSENTES, , drop = FALSE]
 
   for (i in seq_len(nrow(comps))) {
     ano <- comps$ano[i]; mes <- comps$mes[i]

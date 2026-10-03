@@ -1,7 +1,7 @@
 =====================================================================
 BATERIA DE AUDITORIA GERAL DO REPOSITORIO
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-03 12:09:19
+inicio: 2026-10-03 13:15:09
 repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 =====================================================================
 
@@ -16,11 +16,11 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 2. RECORTE CID VERSIONADO ===========
   lendo os microdados brute para re-derivar o recorte...
-     40/191 | 0.7 min
-     80/191 | 1.6 min
-    120/191 | 2.5 min
-    160/191 | 3.3 min
-    191/191 | 4.3 min
+     40/191 | 1.0 min
+     80/191 | 2.1 min
+    120/191 | 3.3 min
+    160/191 | 4.7 min
+    191/191 | 5.9 min
   [OK     ] Falhas de leitura dos .rds do SIH                          0 
   [OK     ] Registros brutos SIH relidos                               11.947.354 referencia: 11.947.354
   [INFO   ] Registros do estudo nos brutos (antes de RJ/periodo)       321.911 
@@ -44,7 +44,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Linhas do recorte SIM fora do RJ                           0 
   [OK     ] DTOBITO invalida no recorte SIM                            0 
   [OK     ] Diferenca de obitos por ano (SIM re-derivacao x CSV)       0 
-  tempo da re-derivacao: 5.5 min
+  tempo da re-derivacao: 7.1 min
 
 =========== 3. COERENCIA ENTRE ARTEFATOS ===========
   [OK     ] Coorte analitica existe                                    sim 
@@ -72,9 +72,9 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] tab5: soma de n na calibracao (marginal)                   295.673 
   [OK     ] tab5: soma de n na calibracao (condicional)                295.673 
   [OK     ] tab5: razao esperado/observado condicional proxima de 1    0.9999 
-  [OK     ] tab6: soma regional = total estadual                       147.551 
-  [OK     ] tab6: ISU = 100*50+/total                                  4.66e-03 
-  [OK     ] tab6: obitos I60-I69 do recorte SIM iguais ao total do ISU 147.551 recorte SIM completo (com G45/G46): 147611
+  [OK     ] tab6: soma regional = total estadual                       147.611 
+  [OK     ] tab6: ISU = 100*50+/total                                  4.90e-03 
+  [OK     ] tab6: total do ISU igual ao recorte SIM (I60-I69 + G45/G46) 147.611 
   [OK     ] tab8: S0 reproduz o modelo principal                       0.57805 
   [OK     ] tab8: todos os cenarios convergidos                        18 de 18 
   [OK     ] tab19: nenhuma verificacao classificada como ERRO          0 
@@ -82,14 +82,14 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] README contem '55.827'                                     sim 
   [OK     ] README contem '14,95%'                                     sim 
   [OK     ] README contem '2,065'                                      sim 
-  [OK     ] README contem '92,38%'                                     sim 
+  [OK     ] README contem '92,39%'                                     sim 
   [OK     ] README contem '267.746'                                    sim 
   [OK     ] README contem '27.927'                                     sim 
   [OK     ] README contem '252.992'                                    sim 
 
 =========== 5. CODIGO E REPRODUTIBILIDADE ===========
-  [INFO   ] Scripts R no diretorio de scripts                          17 
-  [INFO   ] Scripts Python no diretorio de scripts                     3 
+  [INFO   ] Scripts R no diretorio de scripts                          20 
+  [INFO   ] Scripts Python no diretorio de scripts                     4 
   [OK     ] Scripts R com erro de sintaxe                              0 
   [OK     ] Scripts Python com erro de sintaxe                         0 
   [OK     ] Linhas de codigo R com caminho absoluto                    0 
@@ -120,4 +120,4 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 relatorios gravados:
   10_auditoria/AUDITORIA_GERAL.md
   05_tabelas/tab26_auditoria_geral.csv
-fim: 2026-10-03 12:14:59
+fim: 2026-10-03 13:22:27
