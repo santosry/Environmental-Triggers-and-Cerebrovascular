@@ -29,7 +29,7 @@ os guias de relato RECORD e STROBE.
 
 - O manuscrito segue a iniciativa STROBE (ref. 16) e sua extensão RECORD (ref. 15) para
   estudos baseados em dados de rotina.
-- O Plano Estadual é citado com indicação de página no manuscrito (pág. 181), (pág. 356), (pág. 364), (pág. 461) e (pág. 480), conforme a orientação editorial.
+- O Plano Estadual é citado com indicação de página no manuscrito (pág. 147), (pág. 322), (pág. 330), (pág. 427) e (pág. 446), conforme a orientação editorial.
 - **Financiamento:** projeto de iniciação científica sobre a relação entre fatores
   ambientais e doenças cerebrovasculares, com bolsa de Iniciação Científica do CNPq.
 - **Uso de IA:** declarado em conformidade com a Portaria CNPq nº 2.664/2026 (ref. 17).
