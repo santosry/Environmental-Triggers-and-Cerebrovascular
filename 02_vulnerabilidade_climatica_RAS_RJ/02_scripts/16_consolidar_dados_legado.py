@@ -167,9 +167,7 @@ if __name__ == "__main__":
     sim = load_parquets(sim_out)
     print(f"SIM bruto I60-I69 (residentes RJ): {len(sim):,}")
 
-    # ------------------------------------------------------------------
     # Deduplicação SIH
-    # ------------------------------------------------------------------
     DEDUP_KEY = ["N_AIH", "IDENT", "DT_INTER", "DT_SAIDA", "DIAG_PRINC",
                  "MUNIC_RES6", "SEXO", "IDADE"]
     sih["_dup"] = sih.duplicated(subset=[c for c in DEDUP_KEY if c in sih.columns],
@@ -179,9 +177,7 @@ if __name__ == "__main__":
     print(f"Duplicatas SIH removidas: {n_dup:,}")
     print(f"SIH único (antes filtro período): {len(sih):,}")
 
-    # ------------------------------------------------------------------
     # Datas e filtro de período
-    # ------------------------------------------------------------------
     sih["DT_INTER_d"] = pd.to_datetime(sih["DT_INTER"].astype("string"),
                                        format="%Y%m%d", errors="coerce")
     sih["DT_SAIDA_d"] = pd.to_datetime(sih["DT_SAIDA"].astype("string"),
@@ -196,9 +192,7 @@ if __name__ == "__main__":
     sim = sim[(sim["DTOBITO_d"] >= "2010-01-01") & (sim["DTOBITO_d"] <= "2024-12-31")]
     print(f"SIM após filtro DTOBITO 2010-2024: {len(sim):,}")
 
-    # ------------------------------------------------------------------
     # Lookup municipal
-    # ------------------------------------------------------------------
     lookup = pd.read_csv(SRC_LOOKUP, dtype=str)
     lookup["ibge6"] = lookup["ibge6"].str.zfill(6)
     lookup["ibge7"] = lookup["ibge7"].str.zfill(7)
@@ -213,9 +207,7 @@ if __name__ == "__main__":
     lookup["regiao_saude"] = lookup["macro_regiao"]
     lookup["macro3"] = lookup["regiao_saude"].map(macro3)
 
-    # ------------------------------------------------------------------
     # Derivadas SIH
-    # ------------------------------------------------------------------
     s = lambda df, c: df[c].astype("string").str.strip()
     sih["sexo"] = s(sih, "SEXO").map({"1": "M", "3": "F"}).fillna("I")
     
@@ -261,9 +253,7 @@ if __name__ == "__main__":
     sih["faixa_etaria"] = pd.cut(sih["idade_anos"], bins=bins, labels=labels)
     sih["ano"] = sih["DT_INTER_d"].dt.year
 
-    # ------------------------------------------------------------------
     # Derivadas SIM
-    # ------------------------------------------------------------------
     sim["idade_bruta"] = pd.to_numeric(sim["IDADE"], errors="coerce")
     def idade_sim(v):
         if pd.isna(v) or v == 999:
@@ -302,9 +292,7 @@ if __name__ == "__main__":
     sim["faixa_etaria"] = pd.cut(sim["idade_anos"], bins=bins, labels=labels)
     sim["ano"] = sim["DTOBITO_d"].dt.year
 
-    # ------------------------------------------------------------------
     # Gravação
-    # ------------------------------------------------------------------
     sih.to_csv(os.path.join(OUT_DIR, "sih_cerebrovascular_2010_2024.csv"), index=False)
     sim.to_csv(os.path.join(OUT_DIR, "sim_cerebrovascular_2010_2024.csv"), index=False)
     print(f"Gravado SIH: {len(sih):,} linhas")

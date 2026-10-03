@@ -1,30 +1,27 @@
-# =====================================================================
 # 12_auditoria_geral.R
-# ---------------------------------------------------------------------
-# Bateria de auditoria do repositorio, complementar ao script 07 (que
-# audita a coerencia interna dos microdados SIH/SIM, da coorte e do
-# modelo). Este script cobre o que o 07 nao cobre:
+# Bateria de auditoria do repositório, complementar ao script 07 (que
+# audita a coerência interna dos microdados SIH/SIM, da coorte e do
+# modelo). Este script cobre o que o 07 não cobre:
 #
-#   1. ESTRUTURA E AQUISICAO: completude e integridade dos .rds brutos.
-#   2. RECORTE CID VERSIONADO: re-derivacao independente do recorte
+#   1. ESTRUTURA E AQUISIÇÃO: completude e integridade dos .rds brutos.
+#   2. RECORTE CID VERSIONADO: re-derivação independente do recorte
 #      produzido pelo script 01 (sih/sim_cid_estudo_2010_2024.csv) a
-#      partir dos .rds e conferencia linha a linha de totais e marginais.
-#   3. COERENCIA ENTRE ARTEFATOS: coorte x recorte x tabelas publicadas.
-#   4. CONSISTENCIA NUMERICA DAS TABELAS: formulas de OR, ICC, MOR, FDR,
-#      calibracao e ISU; aderencia das principais afirmacoes do README.
-#   5. CODIGO E REPRODUTIBILIDADE: sintaxe de todos os scripts R e Python,
+#      partir dos .rds e conferência linha a linha de totais e marginais.
+#   3. COERÊNCIA ENTRE ARTEFATOS: coorte x recorte x tabelas publicadas.
+#   4. CONSISTÊNCIA NUMERICA DAS TABELAS: formulas de OR, ICC, MOR, FDR,
+#      calibração e ISU; aderencia das principais afirmacoes do README.
+#   5. CÓDIGO E REPRODUTIBILIDADE: sintaxe de todos os scripts R e Python,
 #      caminhos relativos, ausencia de setwd/absolutos, pacotes exigidos.
-#   6. PRIVACIDADE E HIGIENE DO REPOSITORIO: campos identificaveis nos
+#   6. PRIVACIDADE E HIGIENE DO REPOSITÓRIO: campos identificaveis nos
 #      arquivos versionados, arquivos grandes rastreados e regras de
 #      .gitignore.
 #
-# Cada verificacao recebe: OK | ATENCAO | ERRO | INFO.
+# Cada verificação recebe: OK | ATENÇÃO | ERRO | INFO.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_auditoria_geral.txt
 #   05_tabelas/tab26_auditoria_geral.csv
 #   10_auditoria/AUDITORIA_GERAL.md
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -67,9 +64,7 @@ suppressWarnings({
   ESTUDO_G <- c("G45", "G46")
   ESTUDO <- c(ESTUDO_I, ESTUDO_G)
 
-  ## ==================================================================
-  ## 1. ESTRUTURA E AQUISICAO
-  ## ==================================================================
+  ## 1. ESTRUTURA E AQUISIÇÃO
   say("\n=========== 1. ESTRUTURA E AQUISICAO ===========")
   fs_sih <- sort(list.files(DIR_SIH, pattern = "^sih_rd_rj_[0-9]{4}_[0-9]{2}\\.rds$",
                             full.names = TRUE))
@@ -94,9 +89,7 @@ suppressWarnings({
   reg("1", "Arquivos com tamanho zero", sum(file.info(c(fs_sih, fs_sim))$size == 0),
       if (sum(file.info(c(fs_sih, fs_sim))$size == 0) == 0) "OK" else "ERRO")
 
-  ## ==================================================================
-  ## 2. RECORTE CID VERSIONADO (re-derivacao a partir dos .rds)
-  ## ==================================================================
+  ## 2. RECORTE CID VERSIONADO (re-derivação a partir dos .rds)
   say("\n=========== 2. RECORTE CID VERSIONADO ===========")
   say("  lendo os microdados brute para re-derivar o recorte...")
   t0 <- Sys.time()
@@ -160,7 +153,7 @@ suppressWarnings({
     chk(!anyDuplicated(s), "2", "Linhas integralmente duplicadas no recorte", sum(duplicated(s)),
         nota = "se >0, ha duplicacao exata no CSV")
 
-    ## marginais por ano, CID3 e municipio
+    ## marginais por ano, CID3 e município
     csv_ano <- s[, .(n = .N, obitos = sum(as.integer(as.character(MORTE) == "1"), na.rm = TRUE)),
                  by = .(ano = format(dts, "%Y"))][order(ano)]
     cmp <- merge(exp_ano, csv_ano, by = "ano", suffixes = c("_exp", "_csv"), all = TRUE)
@@ -189,7 +182,8 @@ suppressWarnings({
     cb <- toupper(trimws(as.character(d[["CAUSABAS"]])))
     muni <- sprintf("%06s", as.character(d[["CODMUNRES"]]))
     dt <- suppressWarnings(as.Date(as.character(d[["DTOBITO"]]), format = "%d%m%Y"))
-    sel <- substr(cb, 1, 3) %in% ESTUDO_I & substr(muni, 1, 2) == "33" &
+    sel <- (substr(cb, 1, 3) %in% ESTUDO_I | substr(cb, 1, 3) %in% ESTUDO_G) &
+      substr(muni, 1, 2) == "33" &
       !is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")
     if (any(sel)) {
       n_sim_rec <- n_sim_rec + sum(sel)
@@ -208,7 +202,7 @@ suppressWarnings({
         paste("re-derivado:", format(n_sim_rec, big.mark = ".")))
     chk(n_sim_rec == nrow(sm), "2", "Recorte SIM bate com a re-derivacao", nrow(sm))
     cbs <- substr(toupper(trimws(as.character(sm$CAUSABAS))), 1, 3)
-    chk(all(cbs %in% ESTUDO_I), "2", "Linhas do recorte SIM fora de I60-I69", sum(!cbs %in% ESTUDO_I))
+    chk(all(cbs %in% ESTUDO), "2", "Linhas do recorte SIM fora de I60-I69 e G45/G46", sum(!cbs %in% ESTUDO))
     chk(all(substr(sprintf("%06s", as.character(sm$CODMUNRES)), 1, 2) == "33"),
         "2", "Linhas do recorte SIM fora do RJ", sum(substr(sprintf("%06s", as.character(sm$CODMUNRES)), 1, 2) != "33"))
     dtos <- suppressWarnings(as.Date(as.character(sm$DTOBITO), format = "%d%m%Y"))
@@ -222,9 +216,7 @@ suppressWarnings({
   say(sprintf("  tempo da re-derivacao: %.1f min",
               as.numeric(difftime(Sys.time(), t0, units = "mins"))))
 
-  ## ==================================================================
-  ## 3. COERENCIA ENTRE ARTEFATOS (coorte x recorte x tabelas)
-  ## ==================================================================
+  ## 3. COERÊNCIA ENTRE ARTEFATOS (coorte x recorte x tabelas)
   say("\n=========== 3. COERENCIA ENTRE ARTEFATOS ===========")
   f_coorte <- file.path(PROC, "coorte_glmm_2010_2024.csv")
   chk(file.exists(f_coorte), "3", "Coorte analitica existe", if (file.exists(f_coorte)) "sim" else "nao")
@@ -239,7 +231,7 @@ suppressWarnings({
       chk(sum(co$obito_hospitalar) ==
             sum(as.integer(as.character(s$MORTE) == "1"), na.rm = TRUE),
           "3", "Obitos da coorte iguais aos do recorte SIH", sum(co$obito_hospitalar))
-      ## conferencia por chave
+      ## conferência por chave
       k1 <- paste(co$N_AIH, co$IDENT, format(co$DT_INTER_d, "%Y%m%d"), co$DT_SAIDA)
       k2 <- paste(s$N_AIH, s$IDENT, s$DT_INTER, s$DT_SAIDA)
       casam <- sum(k2 %in% k1)
@@ -261,9 +253,7 @@ suppressWarnings({
         nota = "esperado 9")
   }
 
-  ## ==================================================================
-  ## 4. CONSISTENCIA NUMERICA DAS TABELAS
-  ## ==================================================================
+  ## 4. CONSISTÊNCIA NUMERICA DAS TABELAS
   say("\n=========== 4. CONSISTENCIA NUMERICA DAS TABELAS ===========")
 
   ## tab4: componentes
@@ -297,7 +287,7 @@ suppressWarnings({
       "tab3: q_bh reproduz p.adjust(BH)",
       sprintf("%.2e", max(abs(p.adjust(or$p[ok_q], "BH") - or$q_bh[ok_q]))))
 
-  ## tab5: calibracao
+  ## tab5: calibração
   cal <- fread(file.path(TAB, "tab5_calibracao.csv"), encoding = "UTF-8")
   for (tp in unique(cal$tipo))
     chk(sum(cal[tipo == tp]$n) == nrow(co), "4",
@@ -316,8 +306,10 @@ suppressWarnings({
   chk(max(abs(isu_calc - isu$ISU)) < 0.01, "4", "tab6: ISU = 100*50+/total",
       sprintf("%.2e", max(abs(isu_calc - isu$ISU))))
   if (file.exists(f_sim_csv)) {
-    chk(nrow(sm) == isu[regiao_saude == "ESTADO DO RJ"]$obitos_total,
-        "4", "tab6: total do ISU igual ao recorte SIM", nrow(sm))
+    n_sim_i69 <- sum(substr(toupper(trimws(as.character(sm$CAUSABAS))), 1, 3) %in% ESTUDO_I)
+    chk(n_sim_i69 == isu[regiao_saude == "ESTADO DO RJ"]$obitos_total,
+        "4", "tab6: obitos I60-I69 do recorte SIM iguais ao total do ISU", n_sim_i69,
+        nota = sprintf("recorte SIM completo (com G45/G46): %d", nrow(sm)))
   }
 
   ## tab8: robustez
@@ -328,7 +320,7 @@ suppressWarnings({
   chk(all(rob$convergiu), "4", "tab8: todos os cenarios convergidos",
       paste(sum(rob$convergiu), "de", nrow(rob)))
 
-  ## tab19: auditoria de consistencia sem ERRO
+  ## tab19: auditoria de consistência sem ERRO
   if (file.exists(file.path(TAB, "tab19_auditoria.csv"))) {
     a19 <- fread(file.path(TAB, "tab19_auditoria.csv"), encoding = "UTF-8")
     chk(sum(a19$classificacao == "ERRO") == 0, "4",
@@ -344,9 +336,7 @@ suppressWarnings({
         if (grepl(af, rd, fixed = TRUE)) "sim" else "nao")
   }
 
-  ## ==================================================================
-  ## 5. CODIGO E REPRODUTIBILIDADE
-  ## ==================================================================
+  ## 5. CÓDIGO E REPRODUTIBILIDADE
   say("\n=========== 5. CODIGO E REPRODUTIBILIDADE ===========")
   fs_r <- list.files(SCR, pattern = "\\.R$", recursive = TRUE, full.names = TRUE)
   fs_py <- list.files(SCR, pattern = "\\.py$", recursive = TRUE, full.names = TRUE)
@@ -373,7 +363,7 @@ suppressWarnings({
         nota = paste(erros_py, collapse = ", "))
   } else reg("5", "Python disponivel para checagem", "nao", "ATENCAO")
 
-  ## caminhos absolutos e setwd (o proprio script de auditoria contem os padroes)
+  ## caminhos absolutos e setwd (o proprio script de auditoria contem os padrões)
   fs_scan <- fs_r[basename(fs_r) != "12_auditoria_geral.R"]
   linhas <- unlist(lapply(fs_scan, readLines, warn = FALSE), use.names = FALSE)
   linhas <- linhas[!grepl("^\\s*#", linhas)]
@@ -398,16 +388,14 @@ suppressWarnings({
   chk(length(faltam) == 0, "5", "Pacotes R exigidos e nao instalados", length(faltam),
       nota = paste(faltam, collapse = ", "))
 
-  ## scripts do diretorio mencionados no README
+  ## scripts do diretório mencionados no README
   scripts_existentes <- c(basename(fs_r), basename(fs_py))
   nao_citados <- scripts_existentes[!vapply(scripts_existentes,
                                             function(x) grepl(x, rd, fixed = TRUE), logical(1))]
   chk(length(nao_citados) == 0, "5", "Scripts do diretorio ausentes do README",
       length(nao_citados), bad = "ATENCAO", nota = paste(nao_citados, collapse = ", "))
 
-  ## ==================================================================
-  ## 6. PRIVACIDADE E HIGIENE DO REPOSITORIO
-  ## ==================================================================
+  ## 6. PRIVACIDADE E HIGIENE DO REPOSITÓRIO
   say("\n=========== 6. PRIVACIDADE E HIGIENE DO REPOSITORIO ===========")
   git_ok <- nzchar(Sys.which("git")) &&
     length(suppressWarnings(system2("git", c("-C", shQuote(REPO), "rev-parse", "--show-toplevel"),
@@ -443,7 +431,7 @@ suppressWarnings({
     reg("6", "Maior arquivo versionado (MB)",
         round(max(info$size, na.rm = TRUE) / 1024^2, 2), "INFO")
 
-    ## os recortes CID nao estao ignorados
+    ## os recortes CID não estão ignorados
     for (f in c("01_dados/processados/sih_cid_estudo_2010_2024.csv",
                 "01_dados/processados/sim_cid_estudo_2010_2024.csv")) {
       out <- suppressWarnings(system2("git", c("-C", shQuote(REPO), "check-ignore",
@@ -453,7 +441,7 @@ suppressWarnings({
           if (length(out) == 0) "sim" else "nao")
     }
 
-    ## .rds brutos e modelos nao versionados
+    ## .rds brutos e modelos não versionados
     out_rds <- suppressWarnings(system2("git", c("-C", shQuote(REPO), "check-ignore",
                                                  file.path(basename(ROOT), "01_dados/brutos_sih/sih_rd_rj_2010_01.rds")),
                                         stdout = TRUE, stderr = FALSE))
@@ -464,9 +452,7 @@ suppressWarnings({
         bad = "ATENCAO", nota = paste(rds_tracked, collapse = ", "))
   } else reg("6", "Git disponivel", "nao", "ATENCAO")
 
-  ## ==================================================================
   ## 7. CONSOLIDACAO
-  ## ==================================================================
   say("\n=========== 7. CONSOLIDACAO ===========")
   r <- rbindlist(res, fill = TRUE)
   fwrite(r, file.path(TAB, "tab26_auditoria_geral.csv"), encoding = "UTF-8", na = "NA")
@@ -485,7 +471,7 @@ suppressWarnings({
     for (i in seq_len(nrow(at))) say("    - ", at$bloco[i], " | ", at$item[i], " | ", at$valor[i])
   }
 
-  ## relatorio markdown
+  ## relatório markdown
   md <- c(
     "# AUDITORIA GERAL DO REPOSITORIO",
     "",

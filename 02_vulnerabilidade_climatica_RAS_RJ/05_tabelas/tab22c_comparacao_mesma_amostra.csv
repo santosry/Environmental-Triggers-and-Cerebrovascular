@@ -1,0 +1,6 @@
+modelo,n,sigma2_base_mesma_amostra,ICC_base_mesma_amostra,sigma2_modelo,ICC_modelo,delta_ICC_pp,var_hosp_explicada_pct
+M0 principal (script 05),295673,0.57805,0.14945,0.57805,0.14945,0,0
+M1 + raca/cor,222003,0.55555,0.14447,0.55997,0.14545,0.098,-0.8
+M2 + natureza juridica,255118,0.56237,0.14598,0.46529,0.12391,-2.208,17.3
+M3 + complexidade,295673,0.57805,0.14945,0.49681,0.1312,-1.825,14.1
+M4 completo,195399,0.58608,0.15121,0.43562,0.11693,-3.428,25.7

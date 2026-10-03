@@ -1,0 +1,5 @@
+desfecho,uti,n,media,p25,mediana,p75,p90
+"Obito","Sem UTI",42063,9.85,2,6,12,22
+"Alta","Com UTI",24593,14.06,4,9,18,31
+"Alta","Sem UTI",215253,11.42,3,6,16,30
+"Obito","Com UTI",13764,13.86,4,8,16,32

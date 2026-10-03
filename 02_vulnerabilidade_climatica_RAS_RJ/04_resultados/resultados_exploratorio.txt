@@ -1,0 +1,131 @@
+=====================================================================
+EXPLORACAO DAS VARIAVEIS NAO USADAS NO MODELO PRINCIPAL
+R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | inicio: 2026-10-03 10:45:10
+=====================================================================
+internacoes: 295.673 | obitos: 55.827 | hospitais: 254
+
+=========== A. PREENCHIMENTO E VARIABILIDADE ===========
+  A verificacao de ausencia NAO basta: um campo pode estar 100%
+  preenchido e ser inutil por ser constante. Foi o caso de INSTRU.
+
+  variavel                  ausente%  niveis nivel dominante            utilizavel
+  Raca/cor                    24.92%       5 Parda (45.5%)              sim
+  Escolaridade                 0.00%       2 Sem instrucao (100.0%)     NAO
+  Diagnosticos secundarios     0.00%       8 0 (90.8%)                  NAO
+  Complexidade                 0.00%       2 Media complexidade (95.4%) NAO
+  Natureza juridica           13.72%       3 Administracao public (70.8%) sim
+  Permanencia                  0.00%     225 3 (10.9%)                  sim
+  Total de servicos            0.00%   82556 228.18 (0.3%)              sim
+  Valor de UTI                 0.00%     868 0 (87.0%)                  sim
+
+  VARIAVEIS INUTILIZAVEIS, VERIFICADAS NOS ARQUIVOS BRUTOS:
+    INFEHOSP  infeccao hospitalar: 100% vazio em 2010 a 2024.
+    CID_ASSO  causa associada: apenas o valor 0000.
+    NATUREZA  um unico valor distinto no arquivo estadual.
+    INSTRU    preenchido em 100% e constante: 295.672 de 295.673
+              registros como 'sem instrucao', o que nao e plausivel e
+              indica campo nao utilizado na pratica. Escolaridade fica fora.
+    ESPEC     varia, mas sem a tabela oficial do DATASUS a interpretacao
+              seria suposicao. Fica registrado, nao interpretado.
+
+  DISPONIBILIDADE AO LONGO DO TEMPO:
+      ano     n sem_sec media_sec raca_aus natjur_aus instru_aus
+    <int> <int>  <char>    <char>   <char>     <char>     <char>
+ 1:  2010 18120  100.0%      0.00    35.4%      98.4%       0.0%
+ 2:  2011 17956  100.0%      0.00    30.9%      95.9%       0.0%
+ 3:  2012 17871  100.0%      0.00    31.1%      30.8%       0.0%
+ 4:  2013 18894  100.0%      0.00    23.7%       0.0%       0.0%
+ 5:  2014 17433   98.7%      0.01    24.4%       0.0%       0.0%
+ 6:  2015 17554   89.5%      0.13    24.0%       0.0%       0.0%
+ 7:  2016 19116   90.0%      0.12    28.3%       0.0%       0.0%
+ 8:  2017 18310   89.6%      0.13    31.9%       0.0%       0.0%
+ 9:  2018 19720   89.2%      0.14    27.9%       0.0%       0.0%
+10:  2019 20326   87.6%      0.16    27.8%       0.0%       0.0%
+11:  2020 18471   87.9%      0.16    32.4%       0.0%       0.0%
+12:  2021 20279   87.0%      0.19    34.7%       0.0%       0.0%
+13:  2022 23368   84.0%      0.23    29.4%       0.0%       0.0%
+14:  2023 24701   83.8%      0.24     3.8%       0.0%       0.0%
+15:  2024 23554   83.3%      0.27     0.0%       0.0%       0.0%
+
+  Leitura: DIAGSEC inexiste ate 2013 e, de 2014 em diante, esta
+  preenchido em no maximo 17% dos registros. NAT_JUR so existe a partir
+  de 2013. RACA_COR tem ausencia decrescente, de 35,4% em 2010 a 0,0% em
+  2024, o que por si so ja cria gradiente temporal na variavel.
+  Os ausentes sao NA; nao existe rotulo substituto para ausencia.
+
+  A AUSENCIA E INFORMATIVA? Mortalidade de quem tem NA contra quem tem valor:
+    raca_cor       com NA:  24.17% (n=73.670) | sem NA:  17.13% (n=222.003) | diferenca +7.04 p.p.
+    instru         sem NA ou todo NA; nao se aplica
+    nat_jur_lab    com NA:  19.14% (n=40.555) | sem NA:  18.84% (n=255.118) | diferenca +0.30 p.p.
+
+=========== B. ASSOCIACAO BRUTA COM A MORTALIDADE ===========
+   Complexidade:
+      Media complexidade                 n=  282.078  mortalidade= 19.37%
+      Basica                             n=   13.595  mortalidade=  8.73%
+   Diagnosticos secundarios:
+      1                                  n=   20.305  mortalidade= 41.41%
+      4                                  n=      650  mortalidade= 40.62%
+      3                                  n=    1.509  mortalidade= 31.94%
+      2                                  n=    4.297  mortalidade= 23.23%
+      0                                  n=  268.588  mortalidade= 16.95%
+   Natureza juridica:
+      Administracao publica              n=  180.743  mortalidade= 22.28%
+      NA                                 n=   40.555  mortalidade= 19.14%
+      Entidades sem fins lucrativos      n=   54.619  mortalidade= 12.54%
+      Entidades empresariais             n=   19.756  mortalidade=  4.81%
+   Raca/cor:
+      NA                                 n=   73.670  mortalidade= 24.17%
+      Preta                              n=   41.044  mortalidade= 18.26%
+      Parda                              n=  101.085  mortalidade= 17.94%
+      Amarela                            n=    2.842  mortalidade= 17.17%
+      Branca                             n=   77.019  mortalidade= 15.45%
+
+  A mortalidade de quem tem raca/cor ausente e reportada acima.
+  de todas as categorias. A ausencia nao e aleatoria.
+
+=========== C. IMPACTO NO COMPONENTE HOSPITALAR ===========
+  data.frame enxuto para os ajustes: 295673 linhas x 15 colunas (18.1 Mb)
+  casos completos por modelo (ausentes sao NA e sao omitidos):
+    n =   295.673
+    n =   222.003
+    n =   255.118
+    n =   295.673
+    n =   195.399
+
+### M0 principal (script 05)       sigma2=0.57805 ICC=0.14945 MOR=2.0652 AIC=252992.2 (7.0 min)
+
+### M1 + raca/cor                  sigma2=0.55997 ICC=0.14545 MOR=2.0417 AIC=178797.7 (7.6 min)
+      base na MESMA amostra (n=222.003): sigma2=0.55555 ICC=0.14447 -> variacao +0.098 p.p.
+      raca_corPreta                            OR=  0.982 (IC95%  0.946-  1.018) p=0.3154
+      raca_corParda                            OR=  0.934 (IC95%  0.907-  0.963) p=8.19e-06
+      raca_corAmarela                          OR=  1.040 (IC95%  0.931-  1.161) p=0.4917
+      raca_corIndigena                         OR=  2.118 (IC95%  0.564-  7.957) p=0.2666
+
+### M2 + natureza juridica         sigma2=0.46529 ICC=0.12391 MOR=1.9168 AIC=217970.4 (6.8 min)
+      base na MESMA amostra (n=255.118): sigma2=0.56237 ICC=0.14598 -> variacao -2.208 p.p.
+      nat_jur_labEntidades empresariais        OR=  0.396 (IC95%  0.296-  0.528) p=3.07e-10
+      nat_jur_labEntidades sem fins lucrativos OR=  0.882 (IC95%  0.737-  1.056) p=0.1723
+
+### M3 + complexidade              sigma2=0.49681 ICC=0.13120 MOR=1.9588 AIC=251915.6 (9.5 min)
+      base na MESMA amostra (n=295.673): sigma2=0.57805 ICC=0.14945 -> variacao -1.825 p.p.
+      complex_labMedia complexidade            OR=  3.324 (IC95%  3.081-  3.587) p=5.90e-211
+
+### M4 completo                    sigma2=0.43562 ICC=0.11693 MOR=1.8768 AIC=156827.0 (3.7 min)
+      base na MESMA amostra (n=195.399): sigma2=0.58608 ICC=0.15121 -> variacao -3.428 p.p.
+      raca_corPreta                            OR=  1.028 (IC95%  0.989-  1.069) p=0.1599
+      raca_corParda                            OR=  0.963 (IC95%  0.933-  0.995) p=0.0235
+      raca_corAmarela                          OR=  1.094 (IC95%  0.978-  1.224) p=0.1176
+      raca_corIndigena                         OR=  2.084 (IC95%  0.419- 10.361) p=0.3693
+      nat_jur_labEntidades empresariais        OR=  0.433 (IC95%  0.317-  0.592) p=1.60e-07
+      nat_jur_labEntidades sem fins lucrativos OR=  0.856 (IC95%  0.713-  1.029) p=0.0975
+      complex_labMedia complexidade            OR=  3.165 (IC95%  2.884-  3.473) p=1.99e-130
+
+  IMPACTO NO VPC/ICC, SEMPRE CONTRA A BASE NA MESMA AMOSTRA:
+    modelo                                 n  ICC base  ICC mod.   delta pp   var expl.
+    M0 principal (script 05)         295.673    14.95%    14.95%    +0.000        0.0%
+    M1 + raca/cor                    222.003    14.45%    14.54%    +0.098       -0.8%
+    M2 + natureza juridica           255.118    14.60%    12.39%    -2.208       17.3%
+    M3 + complexidade                295.673    14.95%    13.12%    -1.825       14.1%
+    M4 completo                      195.399    15.12%    11.69%    -3.428       25.7%
+
+  COMORBIDADE (DIAGSEC), restrita a 2014-2024, unico periodo com o campo:

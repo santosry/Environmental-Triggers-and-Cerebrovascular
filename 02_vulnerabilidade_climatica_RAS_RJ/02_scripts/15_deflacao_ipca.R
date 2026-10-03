@@ -1,21 +1,18 @@
-# =====================================================================
 # 15_deflacao_ipca.R
-# ---------------------------------------------------------------------
-# Deflacao dos custos assistenciais (SIH-RD, VAL_TOT) para reais de
-# dezembro de 2024 pelo IPCA (IBGE), a partir da serie de numero-indice
-# mensal (SIDRA tabela 1737, variavel 2266).
+# Deflação dos custos assistenciais (SIH-RD, VAL_TOT) para reais de
+# dezembro de 2024 pelo IPCA (IBGE), a partir da série de número-índice
+# mensal (SIDRA tabela 1737, variável 2266).
 #
-# Faz parte da ANALISE ATUAL: le a coorte analitica ja consolidada
-# (01_dados/processados/coorte_glmm_2010_2024.csv) e nao depende mais do
+# Faz parte da ANÁLISE ATUAL: le a coorte analítica já consolidada
+# (01_dados/processados/coorte_glmm_2010_2024.csv) e não depende mais do
 # antigo arquivo de consolidacao (sih_cerebrovascular_2010_2024.csv).
-# O recorte de custo e I60-I69, para manter a mesma base historica dos
+# O recorte de custo e I60-I69, para manter a mesma base histórica dos
 # indicadores de custo do manuscrito; os blocos G45/G46 (AIT e sindromes
-# vasculares) ficam fora dos custos, como nas demais series descritivas.
+# vasculares) ficam fora dos custos, como nas demais séries descritivas.
 #
-# Metodo
-# ------
-#   1. Serie mensal do numero-indice do IPCA (base: dez/1993 = 100).
-#   2. Fator de correcao para dez/2024 de cada ano t (fluxo anual):
+# Método
+#   1. Série mensal do número-índice do IPCA (base: dez/1993 = 100).
+#   2. Fator de correção para dez/2024 de cada ano t (fluxo anual):
 #        fator(t) = indice_dez2024 / indice_medio_anual(t).
 #   3. Custo deflacionado = VAL_TOT * fator(ano).
 #
@@ -23,13 +20,12 @@
 #   01_dados/processados/coorte_glmm_2010_2024.csv
 #   01_dados/tmp_ipca/ipca_1737_2266.json
 #
-# Saidas:
+# Saídas:
 #   05_tabelas/fatores_deflacao_ipca.csv
 #   05_tabelas/custos_deflacionados_ipca_macro.csv
 #   05_tabelas/custos_deflacionados_ipca_regiao.csv
 #   05_tabelas/custos_deflacionados_ipca_ano.csv
 #   04_resultados/resultados_deflacao_ipca.txt
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -41,7 +37,7 @@ suppressWarnings({
   IPCA_JSON <- file.path(ROOT, "01_dados", "tmp_ipca", "ipca_1737_2266.json")
   TAB <- file.path(ROOT, "05_tabelas")
   RES <- file.path(ROOT, "04_resultados")
-  BASE_YM <- "202412"  # referencia: dezembro de 2024
+  BASE_YM <- "202412"  # referência: dezembro de 2024
 
   logcon <- file(file.path(RES, "resultados_deflacao_ipca.txt"),
                  open = "wt", encoding = "UTF-8")
@@ -112,7 +108,7 @@ suppressWarnings({
   fwrite(por_regiao, file.path(TAB, "custos_deflacionados_ipca_regiao.csv"), encoding = "UTF-8")
   fwrite(por_ano, file.path(TAB, "custos_deflacionados_ipca_ano.csv"), encoding = "UTF-8")
 
-  ## ---------------- 4. relatorio ----------------
+  ## ---------------- 4. relatório ----------------
   say("")
   say(sprintf("Custo total corrente (2010-2024):        R$ %s", format(round(total_corrente, 2), big.mark = ".", decimal.mark = ",")))
   say(sprintf("Custo total deflacionado (dez/2024):     R$ %s", format(round(total_defl, 2), big.mark = ".", decimal.mark = ",")))

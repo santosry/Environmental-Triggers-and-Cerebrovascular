@@ -1,24 +1,21 @@
-# =====================================================================
 # 08_glmm_robustez.R
-# ---------------------------------------------------------------------
-# Analises de robustez do Bloco 2 do PLANO_METODOLOGICO_GLMM_COX.md.
+# Análises de robustez do Bloco 2 do PLANO_METODOLOGICO_GLMM_COX.md.
 #
-# Cada cenario reajusta o MESMO GLMM logistico multinivel alterando um
-# unico aspecto: covariavel sob suspeita, periodo, recorte diagnostico,
-# conjunto de hospitais, estrutura de efeitos aleatorios, forma funcional
-# da idade ou configuracao numerica do ajuste.
+# Cada cenários reajusta o MESMO GLMM logístico multinível alterando um
+# único aspecto: covariável sob suspeita, período, recorte diagnóstico,
+# conjunto de hospitais, estrutura de efeitos aleatórios, forma funcional
+# da idade ou configuração numerica do ajuste.
 #
-# A comparacao entre motores (glmmTMB x lme4) fica no script 09.
-# Nao se aplica regressao logistica simples univariada, Cox ou Moran/LISA.
-# O cenario S12 (modelo agrupado) existe apenas para dimensionar o ganho da
-# estrutura multinivel; nao e um modelo univariado.
+# A comparação entre motores (glmmTMB x lme4) fica no script 09.
+# Não se aplica regressão logistica simples univariada, Cox ou Moran/LISA.
+# O cenários S12 (modelo agrupado) existe apenas para dimensionar o ganho da
+# estrutura multinível; não e um modelo univariado.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_glmm_robustez.txt
 #   05_tabelas/tab8_robustez_componentes.csv
 #   05_tabelas/tab9_robustez_or.csv
 #   05_tabelas/tab10_robustez_or_largo.csv
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -124,7 +121,7 @@ suppressWarnings({
   BASE <- obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti + fluxo_inter +
     regiao_saude + (1 | CNES)
 
-  ## ================= cenarios =================
+  ## ================= cenários =================
   say("\n\n================ CENARIOS ================")
 
   ## S0 principal
@@ -136,19 +133,19 @@ suppressWarnings({
   add_fit(d, obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti_marca +
             fluxo_inter + regiao_saude + (1 | CNES), "S2_UTI_por_MARCA_UTI")
 
-  ## --- periodo ---
+  ## --- período ---
   add_fit(d[ano >= 2015], BASE, "S3_periodo_2015_2024")
   add_fit(d[ano <= 2014], BASE, "S4_periodo_2010_2014")
 
-  ## --- recorte diagnostico ---
+  ## --- recorte diagnóstico ---
   add_fit(d[cid3 != "I69"], BASE, "S5_sem_I69")
   add_fit(d[coorte == "I60-I69"], BASE, "S6_somente_I60_I69")
   add_fit(d[coorte == "G45/G46"], BASE, "S7_somente_G45_G46")
 
-  ## --- categoria diagnostica sem quarto digito ---
-  ## Praticamente todos os diagnosticos de 3 caracteres sao I64, que e uma
-  ## categoria completa da CID-10 (AVC nao especificado quanto a hemorragia ou
-  ## infarto) e responde por 56,6% da coorte. O cenario remove essa categoria.
+  ## --- categoria diagnóstica sem quarto digito ---
+  ## Praticamente todos os diagnósticos de 3 caracteres são I64, que e uma
+  ## categoria completa da CID-10 (AVC não especificado quanto a hemorragia ou
+  ## infarto) e responde por 56,6% da coorte. O cenários remove essa categoria.
   add_fit(d[nchar(as.character(cid4)) == 4], BASE, "S8_sem_categoria_I64")
 
   ## --- influencia de hospitais ---
@@ -157,20 +154,20 @@ suppressWarnings({
   add_fit(d[CNES %in% hb[ob > 0]$CNES], BASE, "S10_sem_hospitais_sem_obito")
   add_fit(d[CNES %in% hb[ob >= 10]$CNES], BASE, "S11_hospitais_10mais_obitos")
 
-  ## --- estrutura de efeitos aleatorios ---
+  ## --- estrutura de efeitos aleatórios ---
   add_fit(d, obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti + fluxo_inter +
             (1 | CNES) + (1 | regiao_saude), "S12_regiao_aleatoria")
   add_pooled(d, "S13_sem_efeito_aleatorio")
 
-  ## --- forma funcional e tendencia ---
+  ## --- forma funcional e tendência ---
   add_fit(d, obito_hospitalar ~ ns(idade_anos, 3) + sexo + subtipo + car_int + uti +
             fluxo_inter + regiao_saude + (1 | CNES), "S14_idade_spline_ns3")
   add_fit(d, obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti + fluxo_inter +
             regiao_saude + ano + (1 | CNES), "S15_com_tendencia_ano")
 
-  ## --- configuracao numerica e forma funcional alternativa da idade ---
-  ## S16 e S18 nao existem: o glmmTMB nao aceita os argumentos nAGQ nem rel.tol.
-  ## A adequacao da aproximacao de Laplace e verificada por quadratura de
+  ## --- configuração numerica e forma funcional alternativa da idade ---
+  ## S16 e S18 não existem: o glmmTMB não aceita os argumentos nAGQ nem rel.tol.
+  ## A adequação da aproximação de Laplace e verificada por quadratura de
   ## Gauss-Hermite no lme4, no script 09, e a robustez numerica fica coberta
   ## pelo otimizador alternativo S17. A numeracao abaixo foi mantida igual a da
   ## execucao registrada em 04_resultados/resultados_glmm_robustez.txt.

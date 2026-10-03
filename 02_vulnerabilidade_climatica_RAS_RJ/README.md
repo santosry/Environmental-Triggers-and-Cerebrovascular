@@ -47,8 +47,8 @@ de 2026.
 | `03_analises/` | Logs de aquisição e consolidação. |
 | `04_resultados/` | Resultados em texto, um arquivo por etapa. |
 | `05_tabelas/` | Tabelas em CSV, numeradas na ordem em que entram no manuscrito. |
-| `06_figuras/` | Figuras organizadas em `manuscrito/` (selecionadas em `.jpg`), `exploratorias/` (banco de ~25) e `suplementares/` (demais). PNG a 300 dpi. |
-| `07_literatura/` | Matriz de literatura com autoria verificada. |
+| `06_figuras/` | Figuras em `manuscrito/` (Figuras 1–2 finais em `.jpg` 300 dpi), `exploratorias/` (banco de ~25) e `suplementares/` (demais). PNG/JPEG a 300 dpi. |
+| `07_literatura/` | Matriz de literatura com autoria verificada e 13 artigos completos em PDF (texto livre, via DOI/SciELO/Europe PMC). |
 | `08_manuscrito/` | Manuscrito em Markdown. |
 | `09_documentos_submissao/` | Modelos de documentos exigidos pelo edital. |
 | `10_auditoria/` | Auditorias do estudo anterior, dos dados e da metodologia. |
@@ -107,8 +107,9 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 
 # 9. figuras
 & $R "02_scripts\10_figuras.R"
-& $R "02_scripts\11_exploratorio.R"          # variaveis nao usadas (~20 min)
+& $R "02_scripts\11_exploratorio.R"          # modelos exploratorios (~60 min)
 & $R "02_scripts\13_figuras_exploratorias.R" # banco de ~25 figuras
+& $R "02_scripts\19_figura_exploratorio.R"   # refaz a figura do script 11 (rapido)
 
 # 10. denominadores populacionais e custos (analise atual)
 & $R "02_scripts\14_verificacao_sidra.R"
@@ -136,7 +137,7 @@ manuscrito.
 | Script | Função |
 |---|---|
 | `00_glmm_utils.R` | Utilitários compartilhados do GLMM (ajuste, ICC, MOR, calibração). Normaliza a interface entre `lme4::glmer` e `glmmTMB::glmmTMB`. |
-| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus` e, em seguida, filtragem dos códigos CID do estudo (I60–I69, G45/G46 no SIH; I60–I69 no SIM, residentes no RJ, 2010–2024) com gravação dos recortes leves em CSV versionado. |
+| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus` e, em seguida, filtragem dos códigos CID do estudo (I60–I69 **e** blocos G45/G46, em ambas as fontes; residentes no RJ; 2010–2024) com gravação dos recortes leves em CSV versionado. |
 | `02_montar_coorte.R` | Coorte analítica a partir dos `.rds` baixados (I60–I69 + G45/G46 completos). |
 | `03_tabelas_descritivas.R` | Tabelas descritivas da coorte. |
 | `04_isu_regiao_saude.R` | Índice de Swaroop-Uemura por região de saúde. |
@@ -154,6 +155,7 @@ manuscrito.
 | `16_consolidar_dados_legado.py` | (Histórico) consolidação dos microdados brutos de SIH e SIM nos CSVs largos usados pelas análises territoriais. |
 | `17_analises_territoriais_legado.py` | (Histórico) tendências, taxas, fluxo, permanência e custo. |
 | `18_mortalidade_sim_legado.py` | (Histórico) mortalidade populacional no SIM. |
+| `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
@@ -368,10 +370,9 @@ banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_explorato
 
 ## Pendências
 
-1. **Documentos de continuidade:** `HANDOFF.md` foi reposto em 3 de outubro de 2026
-   (estado da aquisição, dos recortes CID versionados e das auditorias). Falta o
-   `PLANO_METODOLOGICO_GLMM_COX.md` original; enquanto isso, este README e o
-   `HANDOFF.md` fazem as vezes de especificação.
+1. **Documentos de continuidade:** o `HANDOFF.md` foi removido em 3 de outubro de 2026 a
+   pedido. Falta o `PLANO_METODOLOGICO_GLMM_COX.md` original; este README faz as vezes de
+   especificação.
 2. **Decidir sobre a UTI** no modelo principal ou apresentar as duas versões
    (retirá-la eleva o ICC a ~17%).
 3. **Produzir o mapa** das regiões de saúde quando a malha territorial estiver
@@ -386,12 +387,12 @@ banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_explorato
 | Item | Caminho |
 |---|---|
 | Relatório executivo final | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
-| Handoff / continuidade | [`HANDOFF.md`](HANDOFF.md) |
 | Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
-| Manuscrito | [`08_manuscrito/manuscrito.md`](08_manuscrito/manuscrito.md) |
+| Manuscrito (não versionado) | `08_manuscrito/manuscrito.md` |
 | Figuras do manuscrito | [`06_figuras/manuscrito/`](06_figuras/manuscrito) |
 | Banco de figuras exploratórias | [`06_figuras/exploratorias/`](06_figuras/exploratorias) |
 | Matriz de literatura | [`07_literatura/MATRIZ_LITERATURA.md`](07_literatura/MATRIZ_LITERATURA.md) |
+| Artigos completos (PDF) | [`07_literatura/`](07_literatura) |
 | Declaração de variáveis SIH | [`04_resultados/DICIONARIO_VARIAVEIS_SIH.md`](04_resultados/DICIONARIO_VARIAVEIS_SIH.md) |
 | OR ajustados (CSV) | [`05_tabelas/tab3_glmm_or.csv`](05_tabelas/tab3_glmm_or.csv) |
 | Robustez (CSV) | [`05_tabelas/tab9_robustez_or.csv`](05_tabelas/tab9_robustez_or.csv) |

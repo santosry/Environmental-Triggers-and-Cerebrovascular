@@ -1,25 +1,20 @@
-# =====================================================================
 # 00_glmm_utils.R
-# ---------------------------------------------------------------------
-# Utilitarios compartilhados do GLMM logistico multinivel.
+# Utilitários compartilhados do GLMM logístico multinível.
 # Normaliza a interface entre lme4::glmer e glmmTMB::glmmTMB para que os
-# scripts de analise e de robustez usem a mesma extracao de resultados.
+# scripts de análise e de robustez usem a mesma extração de resultados.
 #
 # Motivo do duplo motor: lme4 com 295.701 registros e 254 grupos leva de
-# 30 a 60 minutos por ajuste (custo dominado pelas iteracoes do otimizador,
-# nao pelo tamanho da amostra), enquanto glmmTMB resolve o mesmo modelo em
+# 30 a 60 minutos por ajuste (custo dominado pelas iterações do otimizador,
+# não pelo tamanho da amostra), enquanto glmmTMB resolve o mesmo modelo em
 # cerca de 2 minutos. glmmTMB e usado como motor principal e lme4 como
-# verificacao independente da especificacao principal.
+# verificação independente da especificacao principal.
 #
-# Nao usar source() fora do diretorio raiz do projeto.
-# =====================================================================
+# Não usar source() fora do diretório raiz do projeto.
 
 suppressWarnings({
   library(data.table)
 
-  ## ------------------------------------------------------------------
   ## Ajuste normalizado
-  ## ------------------------------------------------------------------
   fit_glmm <- function(fml, data, engine = "glmmTMB", optimizer = NULL,
                        optArgs = NULL, rel.tol = NULL, nAGQ = 1, maxfun = 1e4) {
     t0 <- Sys.time()
@@ -91,20 +86,16 @@ suppressWarnings({
       vc = vc, fitted = fed, lp_marg = lp, ranef = re, prof_parm = prof_parm)
   }
 
-  ## ------------------------------------------------------------------
-  ## VPC/ICC e MOR a partir da variancia do intercepto aleatorio
-  ## ------------------------------------------------------------------
+  ## VPC/ICC e MOR a partir da variância do intercepto aleatório
   icc_mor <- function(s2) {
     icc <- s2 / (s2 + pi^2 / 3)
     mor <- exp(sqrt(2 * s2) * qnorm(0.75))
     list(icc = icc, mor = mor)
   }
 
-  ## ------------------------------------------------------------------
-  ## IC95% do desvio-padrao do intercepto aleatorio
+  ## IC95% do desvio-padrão do intercepto aleatório
   ##   glmmTMB: IC de Wald, linha "Std.Dev.(Intercept)|<grupo>" de confint(method="wald")
-  ##   lme4:    verossimilhanca de perfil sobre .sig01 (lento, usado so na conferencia)
-  ## ------------------------------------------------------------------
+  ##   lme4:    verossimilhança de perfil sobre .sig01 (lento, usado só na conferência)
   varcov_ci <- function(fit, grp = "CNES", lme4_parm = ".sig01") {
     if (fit$engine == "glmmTMB") {
       out <- tryCatch({
@@ -124,9 +115,7 @@ suppressWarnings({
     if (is.null(out)) NULL else sort(abs(out))
   }
 
-  ## ------------------------------------------------------------------
-  ## Calibracao: Hosmer-Lemeshow em decis de risco
-  ## ------------------------------------------------------------------
+  ## Calibração: Hosmer-Lemeshow em decis de risco
   hosmer_lemeshow <- function(y, p, g = 10) {
     br <- unique(stats::quantile(p, probs = seq(0, 1, length.out = g + 1)))
     grp <- cut(p, breaks = br, include.lowest = TRUE, labels = FALSE)
@@ -137,9 +126,7 @@ suppressWarnings({
     list(tab = dt, stat = stat, gl = gl, p = 1 - stats::pchisq(stat, gl))
   }
 
-  ## ------------------------------------------------------------------
   ## Formatacao de p em notacao cientifica (regra do Bloco 3)
-  ## ------------------------------------------------------------------
   p_cient <- function(p) {
     ifelse(is.na(p), "NA",
            ifelse(p < 1e-3, formatC(p, format = "e", digits = 2),

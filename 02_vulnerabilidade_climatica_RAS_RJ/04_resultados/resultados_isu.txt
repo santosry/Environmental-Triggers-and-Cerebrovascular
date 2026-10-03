@@ -1,7 +1,7 @@
 =====================================================================
 INDICE DE SWAROOP-UEMURA POR REGIAO DE SAUDE
 fonte: microdados do SIM-DO baixados pelo microdatasus
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-02 10:21:15
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 10:11:43
 =====================================================================
 arquivos anuais do SIM-DO: 15
 obitos por DCV I60-I69, residentes no RJ (todas as competicoes): 147.551
@@ -49,4 +49,4 @@ separa melhor os territorios.
 
 figura gravada: 06_figuras/fig_isu_regiao.png
 
-fim: 2026-10-02 10:21:53
+fim: 2026-10-03 10:12:25

@@ -1,37 +1,35 @@
-# =====================================================================
 # 11_exploratorio.R
-# ---------------------------------------------------------------------
-# Exploracao das variaveis que o modelo principal nao usa.
+# Exploração das variáveis que o modelo principal não usa.
 #
-# O modelo principal (script 05) usa: idade, sexo, subtipo diagnostico,
-# carater da internacao, uso de UTI, fluxo intermunicipal e regiao de saude.
-# Ficaram de fora, disponiveis nos microdados, raca/cor, escolaridade,
-# comorbidade, complexidade, natureza juridica do estabelecimento,
-# permanencia, procedimento e intensidade de uso.
+# O modelo principal (script 05) usa: idade, sexo, subtipo diagnóstico,
+# caráter da internação, uso de UTI, fluxo intermunicipal e região de saúde.
+# Ficaram de fora, disponíveis nos microdados, raça/cor, escolaridade,
+# comorbidade, complexidade, natureza jurídica do estabelecimento,
+# permanência, procedimento e intensidade de uso.
 #
 # O QUE ESTE SCRIPT RESPONDE
-#   A. as variaveis tem preenchimento e variabilidade suficientes?
+#   A. as variáveis tem preenchimento e variabilidade suficientes?
 #   B. como se associam a mortalidade intra-hospitalar?
 #   C. ajustar por elas muda o VPC/ICC hospitalar?
-#   D. ha interacao entre sexo e idade, entre raca e regiao, entre subtipo e UTI?
-#   E. o que a permanencia hospitalar mostra?
+#   D. ha interação entre sexo e idade, entre raça e região, entre subtipo e UTI?
+#   E. o que a permanência hospitalar mostra?
 #
 # A RESPOSTA EM A E TANTO OU MAIS IMPORTANTE QUE AS DEMAIS. A auditoria
-# mostrou que boa parte das variaveis "disponiveis" nao e utilizavel:
+# mostrou que boa parte das variáveis "disponíveis" não e utilizável:
 #
 #   INFEHOSP   100% vazio em todos os anos.
 #   CID_ASSO   traz apenas o valor 0000.
-#   NATUREZA   um unico valor distinto no arquivo estadual.
-#   INSTRU     preenchido em 100% dos registros e CONSTANTE ("sem instrucao"
-#              em 295.672 de 295.673). Ausencia zero nao significa campo util.
-#   DIAGSEC    inexistente ate 2013 e, de 2014 em diante, preenchido em no
-#              maximo 17% dos registros. Mede codificacao, nao doenca.
-#   NAT_JUR    so existe a partir de 2013.
+#   NATUREZA   um único valor distinto no arquivo estadual.
+#   INSTRU     preenchido em 100% dos registros e CONSTANTE ("sem instrução"
+#              em 295.672 de 295.673). Ausencia zero não significa campo útil.
+#   DIAGSEC    inexistente até 2013 e, de 2014 em diante, preenchido em no
+#              máximo 17% dos registros. Mede codificação, não doença.
+#   NAT_JUR    só existe a partir de 2013.
 #   RACA_COR   tem registros ausentes que variam de 35,4% (2010) a 0,0% (2024)
 #              informativa, com mortalidade bem acima da dos demais.
 #              todas. A ausencia e informativa, o que limita a leitura racial.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_exploratorio.txt
 #   05_tabelas/tab20_preenchimento.csv
 #   05_tabelas/tab20b_preenchimento_ano.csv
@@ -40,12 +38,12 @@
 #   05_tabelas/tab22b_comorbidade.csv
 #   05_tabelas/tab23_exploratorio_or.csv
 #   06_figuras/fig_exploratorio.png
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
   library(data.table)
   library(ggplot2)
+  library(ragg)
   source("02_scripts/00_glmm_utils.R")
 
   ENGINE <- Sys.getenv("GLMM_ENGINE", "glmmTMB")
@@ -58,7 +56,7 @@ suppressWarnings({
 
   logcon <- file(file.path(RES, "resultados_exploratorio.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
-  ## print() escreve so no console; este helper leva a tabela tambem ao log,
+  ## print() escreve só no console; este helper leva a tabela também ao log,
   ## para que o arquivo de resultados fique completo.
   mostrar <- function(x) {
     for (l in capture.output(print(x))) say(l)
@@ -91,7 +89,7 @@ suppressWarnings({
     "Metropolitana I","Metropolitana II","Baixada Litoranea","Norte","Noroeste",
     "Serrana","Centro-Sul","Medio Paraiba","Baia da Ilha Grande")))]
   d[, car_int := droplevels(factor(as.character(car_int)))]
-  ## Branca como referencia, e nao Amarela (ordem alfabetica), porque e o
+  ## Branca como referência, e não Amarela (ordem alfabetica), porque e o
   ## comparador usual em estudos brasileiros de equidade racial.
   d[, raca_cor := droplevels(factor(raca_cor, levels = c("Branca","Preta","Parda",
                                                           "Amarela","Indigena")))]
@@ -101,9 +99,7 @@ suppressWarnings({
   d[, faixa_idade := cut(idade_anos, c(-1, 40, 50, 60, 70, 80, 200),
                          labels = c("<40","40-49","50-59","60-69","70-79","80+"))]
 
-  ## ==================================================================
   ## A. PREENCHIMENTO E VARIABILIDADE
-  ## ==================================================================
   say("\n=========== A. PREENCHIMENTO E VARIABILIDADE ===========")
   say("  A verificacao de ausencia NAO basta: um campo pode estar 100%")
   say("  preenchido e ser inutil por ser constante. Foi o caso de INSTRU.")
@@ -113,8 +109,8 @@ suppressWarnings({
            "Natureza juridica","Permanencia","Total de servicos","Valor de UTI")
   prop <- rbindlist(lapply(seq_along(VARS), function(i) {
     v <- VARS[i]; x <- d[[v]]
-    ## Ausente e NA, como o R representa. Nao ha rotulo substituto para
-    ## ausencia: um codigo que a fonte usa para "sem informacao" vira NA.
+    ## Ausente e NA, como o R representa. Não ha rótulo substituto para
+    ## ausencia: um código que a fonte usa para "sem informação" vira NA.
     aus <- mean(is.na(x))
     t <- d[!is.na(x), .N, by = v][order(-N)]
     data.table(variavel = ROT[i], coluna = v, pct_ausente = round(100 * aus, 2),
@@ -173,9 +169,7 @@ suppressWarnings({
                 m_ok, format(sum(!is.na(x)), big.mark = "."), m_na - m_ok))
   }
 
-  ## ==================================================================
-  ## B. ASSOCIACAO BRUTA
-  ## ==================================================================
+  ## B. ASSOCIAÇÃO BRUTA
   say("\n=========== B. ASSOCIACAO BRUTA COM A MORTALIDADE ===========")
   bruto <- list()
   addb <- function(var, rot) {
@@ -202,16 +196,14 @@ suppressWarnings({
   say("\n  A mortalidade de quem tem raca/cor ausente e reportada acima.")
   say("  de todas as categorias. A ausencia nao e aleatoria.")
 
-  ## ==================================================================
   ## C. OS MODELOS ESTENDIDOS MUDAM O VPC/ICC?
-  ## ==================================================================
   say("\n=========== C. IMPACTO NO COMPONENTE HOSPITALAR ===========")
   BASE <- obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti + fluxo_inter +
     regiao_saude + (1 | CNES)
 
   ## A base tem 52 colunas. Converter a tabela inteira para data.frame a cada
-  ## ajuste multiplica o tempo e a memoria sem necessidade: aqui se constroi UMA
-  ## vez o data.frame enxuto, so com as colunas que os modelos usam.
+  ## ajuste multiplica o tempo e a memória sem necessidade: aqui se constroi UMA
+  ## vez o data.frame enxuto, só com as colunas que os modelos usam.
   COLS_MOD <- c("obito_hospitalar","idade_z","sexo","subtipo","car_int","uti",
                 "fluxo_inter","regiao_saude","CNES","raca_cor","nat_jur_lab",
                 "complex_lab","n_diag_sec","faixa_idade","ano")
@@ -220,8 +212,8 @@ suppressWarnings({
   say("  data.frame enxuto para os ajustes: ", nrow(dm), " linhas x ",
       ncol(dm), " colunas (", format(object.size(dm), units = "MB"), ")")
 
-  ## Ausente e NA. Em vez de criar um nivel falso para ausencia, cada modelo e
-  ## ajustado nos casos completos das variaveis que ele usa, e o n resultante e
+  ## Ausente e NA. Em vez de criar um nível falso para ausencia, cada modelo e
+  ## ajustado nos casos completos das variáveis que ele usa, e o n resultante e
   ## reportado. E o comportamento nativo do R.
   dm_completo <- function(fml, dd = dm) {
     vars <- intersect(all.vars(fml), names(dd))
@@ -241,12 +233,12 @@ suppressWarnings({
     list(rot = "M3 + complexidade",        fml = update(BASE, . ~ . + complex_lab)),
     list(rot = "M4 completo",              fml = update(BASE, . ~ . + raca_cor +
                                                           nat_jur_lab + complex_lab)))
-  ## ATENCAO METODOLOGICA. Como ausente e NA, cada modelo estendido e ajustado em
+  ## ATENÇÃO METODOLÓGICA. Como ausente e NA, cada modelo estendido e ajustado em
   ## um conjunto diferente de casos completos. Comparar o sigma^2 de um modelo
   ## estendido com o do modelo principal ajustado em OUTRA amostra confundiria o
-  ## efeito da variavel com o efeito da mudanca de amostra. Por isso, para cada
+  ## efeito da variável com o efeito da mudanca de amostra. Por isso, para cada
   ## modelo estendido, o modelo BASE e reajustado na MESMA amostra, e a
-  ## comparacao e feita contra essa base.
+  ## comparação e feita contra essa base.
   mods <- list(); ors <- list(); compar <- list()
   for (e in espec) {
     dados <- dm_completo(e$fml)
@@ -298,7 +290,7 @@ suppressWarnings({
                 100 * cmp$ICC_modelo[i], cmp$delta_ICC_pp[i],
                 cmp$var_hosp_explicada_pct[i]))
 
-  ## ---- comorbidade: so onde o campo existe ----
+  ## ---- comorbidade: só onde o campo existe ----
   say("\n  COMORBIDADE (DIAGSEC), restrita a 2014-2024, unico periodo com o campo:")
   d14 <- d[ano >= 2014]
   fml_c <- update(BASE, . ~ . + n_diag_sec)
@@ -328,26 +320,24 @@ suppressWarnings({
     AIC = round(c(f_b$AIC, f_c$AIC), 1)),
     file.path(TAB, "tab22b_comorbidade.csv"), encoding = "UTF-8")
 
-  ## ==================================================================
-  ## D. INTERACOES
-  ## ==================================================================
+  ## D. INTERAÇÕES
   say("\n=========== D. INTERACOES ===========")
-  ## o modelo base e ajustado UMA vez e reaproveitado nas tres comparacoes
+  ## o modelo base e ajustado UMA vez e reaproveitado nas três comparacoes
   f0 <- fit_glmm(BASE, dm_completo(BASE), engine = ENGINE)
   inter <- list(
     list(rot = "sexo x faixa de idade", fml = update(BASE, . ~ . - sexo + sexo:faixa_idade)),
     list(rot = "subtipo x UTI",         fml = update(BASE, . ~ . + subtipo:uti)),
     list(rot = "raca x regiao",         fml = update(BASE, . ~ . + raca_cor:regiao_saude)))
-  ## A interacao raca x regiao acrescenta 45 termos e domina o tempo de execucao.
-  ## Fica desligada por padrao e pode ser ligada com GLMM_INTER_RACA=1.
+  ## A interação raça x região acrescenta 45 termos e domina o tempo de execucao.
+  ## Fica desligada por padrão e pode ser ligada com GLMM_INTER_RACA=1.
   if (Sys.getenv("GLMM_INTER_RACA", "0") != "1") {
     inter <- inter[!vapply(inter, function(z) z$rot == "raca x regiao", logical(1))]
     say("  (interacao raca x regiao desativada; use GLMM_INTER_RACA=1 para incluir)")
   }
-  ## Os graus de liberdade de um teste de razao de verossimilhanca sao a
-  ## diferenca de parametros ESTIMADOS, que nao se le no vetor de coeficientes
-  ## fixos (foi o erro da primeira versao, que devolvia gl = 0). O numero de
-  ## parametros e estrutural, entao pode ser contado em uma subamostra pequena,
+  ## Os graus de liberdade de um teste de razão de verossimilhança são a
+  ## diferenca de parâmetros ESTIMADOS, que não se le no vetor de coeficientes
+  ## fixos (foi o erro da primeira versão, que devolvia gl = 0). O número de
+  ## parâmetros e estrutural, então pode ser contado em uma subamostra pequena,
   ## sem depender do tamanho da amostra completa.
   dm_sub <- dm[sample(nrow(dm), 20000), ]
   npar <- function(fml) attr(logLik(fit_glmm(fml, dm_sub, engine = ENGINE)$model), "df")
@@ -368,9 +358,7 @@ suppressWarnings({
   }
   fwrite(rbindlist(intr), file.path(TAB, "tab24_interacoes.csv"), encoding = "UTF-8")
 
-  ## ==================================================================
-  ## E. PERMANENCIA
-  ## ==================================================================
+  ## E. PERMANÊNCIA
   say("\n=========== E. PERMANENCIA HOSPITALAR ===========")
   d[, obito_lab := fifelse(obito_hospitalar == 1, "Obito", "Alta")]
   d[, uti_lab := fifelse(uti == 1, "Com UTI", "Sem UTI")]
@@ -387,102 +375,10 @@ suppressWarnings({
   print(d[!is.na(DIAS_PERM), .(n = .N, mediana_permanencia = median(DIAS_PERM),
                                mortalidade = sprintf("%.2f%%", 100 * mean(obito_hospitalar))),
           by = regiao_saude][order(-n)])
-
-  ## ==================================================================
-  ## F. FIGURAS com paleta viridis
-  ## ==================================================================
-  say("\n=========== F. FIGURAS ===========")
-
-  ## O painel inclui o grupo com raca/cor ausente (NA) de proposito: e o
-  ## grupo de maior mortalidade, e mostra-lo torna visivel que a ausencia
-  ## nao e aleatoria.
-  r1 <- d[, .(n = .N, mort = 100 * mean(obito_hospitalar)),
-          by = raca_cor][order(-mort)]
-  g1 <- ggplot(r1, aes(x = mort, y = reorder(raca_cor, mort), fill = mort)) +
-    geom_col(width = 0.65) +
-    geom_text(aes(label = sprintf("%.2f%%  (n=%s)", mort, format(n, big.mark = "."))),
-              hjust = -0.06, size = 3.1, colour = "grey20") +
-    scale_fill_viridis_c(option = "D", guide = "none") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0.34))) +
-    labs(title = "Mortalidade intra-hospitalar por raça/cor",
-         subtitle = "Inclui o grupo com raça/cor ausente (NA), que tem a maior mortalidade de todas as categorias",
-         x = "%", y = NULL) +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5),
-          panel.grid.major.y = element_blank())
-
-  r2 <- d[sexo %in% c("F","M"), .(n = .N, mort = 100 * mean(obito_hospitalar)),
-          by = .(faixa_idade, sexo)]
-  g2 <- ggplot(r2, aes(x = faixa_idade, y = mort, colour = sexo, group = sexo)) +
-    geom_line(linewidth = 0.9) + geom_point(size = 2.2) +
-    scale_colour_viridis_d(option = "D", end = 0.72, name = "Sexo") +
-    labs(title = "Mortalidade por faixa de idade e sexo",
-         subtitle = "Interação testada no bloco D", x = "Faixa de idade (anos)",
-         y = "Mortalidade (%)") +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5), legend.position = "bottom")
-
-  r3 <- d[n_diag_sec <= 5, .(n = .N, mort = 100 * mean(obito_hospitalar)),
-          by = n_diag_sec][order(n_diag_sec)]
-  g3 <- ggplot(r3, aes(x = factor(n_diag_sec), y = mort, fill = mort)) +
-    geom_col(width = 0.7) +
-    geom_text(aes(label = sprintf("%.1f", mort)), vjust = -0.5, size = 3, colour = "grey20") +
-    scale_fill_viridis_c(option = "D", guide = "none") +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.16))) +
-    labs(title = "Mortalidade por número de diagnósticos secundários",
-         subtitle = "Relação não monotônica: o campo mede codificação, não só doença",
-         x = "Diagnósticos secundários preenchidos", y = "Mortalidade (%)") +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5), panel.grid.major.x = element_blank())
-
-  r4 <- d[, .(n = .N, mort = 100 * mean(obito_hospitalar)), by = nat_jur_lab][n >= 500][order(-mort)]
-  g4 <- ggplot(r4, aes(x = mort, y = reorder(nat_jur_lab, mort), fill = mort)) +
-    geom_col(width = 0.65) +
-    geom_text(aes(label = sprintf("%.2f%%  (n=%s)", mort, format(n, big.mark = "."))),
-              hjust = -0.06, size = 3.1, colour = "grey20") +
-    scale_fill_viridis_c(option = "D", guide = "none") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0.36))) +
-    labs(title = "Mortalidade por natureza jurídica do estabelecimento",
-         subtitle = "Bloco C mostra quanto disso explica o componente hospitalar",
-         x = "%", y = NULL) +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5), panel.grid.major.y = element_blank())
-
-  g5 <- ggplot(md, aes(x = 100 * ICC, y = reorder(modelo, ICC), fill = ICC)) +
-    geom_col(width = 0.62) +
-    geom_text(aes(label = sprintf("%.2f%%", 100 * ICC)), hjust = -0.12, size = 3.1,
-              colour = "grey20") +
-    scale_fill_viridis_c(option = "D", direction = -1, guide = "none") +
-    scale_x_continuous(expand = expansion(mult = c(0, 0.22))) +
-    labs(title = "VPC/ICC hospitalar conforme as covariáveis incluídas",
-         subtitle = "Se o ICC cai muito ao incluir uma variável, ela era, em parte, o hospital",
-         x = "VPC / ICC (%)", y = NULL) +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5), panel.grid.major.y = element_blank())
-
-  g6 <- ggplot(perm, aes(x = uti, y = mediana, fill = uti)) +
-    geom_col(width = 0.6) +
-    geom_text(aes(label = sprintf("%.0f dias", mediana)), vjust = -0.5, size = 3,
-              colour = "grey20") +
-    facet_wrap(~ desfecho) +
-    scale_fill_viridis_d(option = "D", end = 0.75, guide = "none") +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.18))) +
-    labs(title = "Permanência mediana por desfecho e uso de UTI",
-         subtitle = "Permanência faturável, em dias", x = NULL, y = "Dias") +
-    theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 7.5), panel.grid.major.x = element_blank())
-
-  library(patchwork)
-  ggsave(file.path(FIG, "fig_exploratorio.png"),
-         (g1 | g2) / (g3 | g4) / (g5 | g6),
-         width = 15, height = 14, dpi = 300)
-  say("  figura gravada: 06_figuras/fig_exploratorio.png")
+  ## F. FIGURAS
+  ## A figura-painel e produzida pelo script 19, que le os resultados
+  ## já cacheados em 05_tabelas e dispensa o reajuste dos modelos.
+  source("02_scripts/19_figura_exploratorio.R", local = new.env())
 
   say("\nfim: ", format(Sys.time()))
   close(logcon)

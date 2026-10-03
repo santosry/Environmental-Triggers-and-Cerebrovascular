@@ -1,12 +1,10 @@
-# =====================================================================
 # 14_verificacao_sidra.R
-# ---------------------------------------------------------------------
-# Verificacao dos denominadores populacionais usados nas taxas por
+# Verificação dos denominadores populacionais usados nas taxas por
 # 100.000 habitantes (IBGE/SIDRA). Antes o script apenas checava a
-# existencia do arquivo; agora audita a serie usada na ANALISE ATUAL:
-# cobertura municipal, anos, duplicatas, populacao positiva, fontes
-# (estimativa oficial, Censo 2022 e interpolacao) e consistencia com o
-# lookup de municipios do RJ.
+# existencia do arquivo; agora audita a série usada na ANÁLISE ATUAL:
+# cobertura municipal, anos, duplicatas, população positiva, fontes
+# (estimativa oficial, Censo 2022 e interpolacao) e consistência com o
+# lookup de municípios do RJ.
 #
 # Entradas:
 #   ../01_DLNMs_RJ_cerebrovascular/data_processed/
@@ -14,10 +12,9 @@
 #   ../01_DLNMs_RJ_cerebrovascular/data_processed/
 #       lookup_municipio_macrorregiao.csv
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_verificacao_sidra.txt
 #   05_tabelas/tab27_verificacao_populacao.csv
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -83,7 +80,7 @@ suppressWarnings({
         "anos sem estimativa oficial do IBGE")
   }
 
-  ## consistencia com o lookup
+  ## consistência com o lookup
   if (file.exists(LOOKUP)) {
     lk <- fread(LOOKUP, colClasses = "character", encoding = "UTF-8")
     lk[, ibge6 := sprintf("%06s", ibge6)]
@@ -95,7 +92,7 @@ suppressWarnings({
         bad = "ATENCAO")
   }
 
-  ## populacao estadual por ano (checagem de plausibilidade)
+  ## população estadual por ano (checagem de plausibilidade)
   est <- pop[ano <= 2024, .(populacao = sum(populacao, na.rm = TRUE)), by = ano][order(ano)]
   reg("Populacao do RJ em 2010", round(est[ano == 2010, populacao]), "INFO")
   reg("Populacao do RJ em 2024", round(est[ano == 2024, populacao]), "INFO")
@@ -104,7 +101,7 @@ suppressWarnings({
   chk(all(abs(va$cresc[-1]) < 3), "Variacao anual da populacao abaixo de 3%",
       sprintf("max %.2f%%", max(abs(va$cresc), na.rm = TRUE)), bad = "ATENCAO")
 
-  ## tabela de verificacao
+  ## tabela de verificação
   verif <- data.table(
     metrica = c("linhas", "municipios", "ano_min", "ano_max", "pop_2010", "pop_2024",
                 "n_interpolados", "pct_interpolados", "duplicatas", "populacao_ausente"),

@@ -1,30 +1,27 @@
-# =====================================================================
 # 02_montar_coorte.R
-# ---------------------------------------------------------------------
-# Monta a coorte analitica a partir dos microdados baixados pelo
-# microdatasus (script 01), lendo os .rds direto, sem conversao de formato.
+# Monta a coorte analítica a partir dos microdados baixados pelo
+# microdatasus (script 01), lendo os .rds direto, sem conversão de formato.
 #
-# COBERTURA DIAGNOSTICA (Bloco 1.1 do plano, com a revisao pedida):
+# COBERTURA DIAGNÓSTICA (Bloco 1.1 do plano, com a revisão pedida):
 #   I60 a I69 completos
 #   G45 completo, incluindo G45.8
 #   G46 completo, incluindo G46.7 e G46.8
-# Os codigos G45.8 e G46.8 foram incorporados a pedido e o bloco completo
-# passa a ser a definicao unica, o que tambem da interpretabilidade ao
-# grupo G46 (a lista parcial anterior deixava G46 com 18 internacoes).
+# Os códigos G45.8 e G46.8 foram incorporados a pedido e o bloco completo
+# passa a ser a definição única, o que também da interpretabilidade ao
+# grupo G46 (a lista parcial anterior deixava G46 com 18 internações).
 #
-# PERIODO: DT_INTER de 2010 a 2024. As competicoes de 2025 sao lidas
-# porque o SIH-RD e organizado por competencia de processamento e
-# internacoes de dezembro de 2024 podem cair em janeiro de 2025.
+# PERÍODO: DT_INTER de 2010 a 2024. As competições de 2025 são lidas
+# porque o SIH-RD e organizado por competência de processamento e
+# internações de dezembro de 2024 podem cair em janeiro de 2025.
 #
 # Entradas:
-#   01_dados/brutos_sih/sih_rd_rj_{ano}_{mes}.rds   (191 competicoes)
+#   01_dados/brutos_sih/sih_rd_rj_{ano}_{mes}.rds   (191 competições)
 #   ../01_DLNMs_RJ_cerebrovascular/data_processed/lookup_municipio_macrorregiao.csv
 #
-# Saidas:
+# Saídas:
 #   01_dados/processados/coorte_glmm_2010_2024.csv
 #   05_tabelas/tab_verificacao_cid.csv
 #   04_resultados/resultados_coorte_glmm.txt
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -57,11 +54,11 @@ suppressWarnings({
   say("competencias do SIH-RD encontradas: ", length(fs))
   if (!length(fs)) stop("nenhum arquivo em ", DIR_SIH, "; rode 01_baixar_microdatasus.R")
 
-  ## KEEP carrega tambem as variaveis ainda nao exploradas: os nove diagnosticos
-  ## secundarios (DIAGSEC1 a DIAGSEC9), a complexidade do procedimento, a
-  ## natureza juridica do estabelecimento, a infeccao hospitalar, o
-  ## procedimento realizado e a intensidade de uso. Sao elas que sustentam a
-  ## analise exploratoria do script 11.
+  ## KEEP carrega também as variáveis ainda não exploradas: os nove diagnósticos
+  ## secundários (DIAGSEC1 a DIAGSEC9), a complexidade do procedimento, a
+  ## natureza jurídica do estabelecimento, a infeccao hospitalar, o
+  ## procedimento realizado e a intensidade de uso. São elas que sustentam a
+  ## análise exploratoria do script 11.
   KEEP <- c("N_AIH", "IDENT", "DT_INTER", "DT_SAIDA", "DIAG_PRINC", "MUNIC_RES",
             "MUNIC_MOV", "SEXO", "IDADE", "COD_IDADE", "CNES", "MORTE", "CAR_INT",
             "RACA_COR", "INSTRU", "UTI_MES_TO", "MARCA_UTI", "DIAS_PERM", "VAL_TOT",
@@ -80,7 +77,7 @@ suppressWarnings({
     cid <- toupper(trimws(as.character(d[["DIAG_PRINC"]])))
     cid3 <- substr(cid, 1, 3); cid4 <- substr(cid, 1, 4)
 
-    ## verificacao de presenca, arquivo por arquivo
+    ## verificação de presenca, arquivo por arquivo
     v <- data.table(arquivo = basename(fs[i]), n_total = nrow(d))
     for (c in CODIGOS_I) v[[paste0("I_", c)]] <- sum(cid3 == c)
     for (c in c("G450","G451","G452","G453","G454","G458","G459",
@@ -134,7 +131,7 @@ suppressWarnings({
       " | soma dos subcodigos de 4 digitos: ", format(soma4, big.mark = "."),
       " | truncados em 3 digitos: ", format(sum(vd$G_bloco) - soma4, big.mark = "."))
 
-  ## ---------------- 2. uniao, deduplicacao e periodo ----------------
+  ## ---------------- 2. união, deduplicacao e período ----------------
   d <- rbindlist(acc[!vapply(acc, is.null, logical(1))], use.names = TRUE, fill = TRUE)
   rm(acc); invisible(gc())
   say("\napos filtro de CID e residencia no RJ: ", format(nrow(d), big.mark = "."))
@@ -151,17 +148,17 @@ suppressWarnings({
            DT_INTER_d <= as.Date("2024-12-31")]
   say("apos filtro DT_INTER 2010-2024: ", format(nrow(d), big.mark = "."))
 
-  ## ---------------- 3. derivadas a partir do codigo bruto ----------------
+  ## ---------------- 3. derivadas a partir do código bruto ----------------
   cod2 <- function(x) sprintf("%02d", suppressWarnings(as.integer(as.character(x))))
   cod1 <- function(x) as.character(suppressWarnings(as.integer(as.character(x))))
 
   CAR_MAP <- c("01"="Eletiva","02"="Urgencia","03"="Acidente trabalho",
                "04"="Acidente trajeto","05"="Outros acidentes","06"="Outras lesoes",
                "07"="Outros")
-  ## Ausente e representado por NA, como o R faz nativamente. Os codigos que a
-  ## propria fonte usa para "sem informacao" ou "ignorado" (99 em RACA_COR,
-  ## 9 em INSTRU) NAO recebem rotulo: viram NA, para nao criar uma categoria
-  ## falsa que se confundiria com um nivel real da variavel.
+  ## Ausente e representado por NA, como o R faz nativamente. Os códigos que a
+  ## propria fonte usa para "sem informação" ou "ignorado" (99 em RACA_COR,
+  ## 9 em INSTRU) NÃO recebem rótulo: viram NA, para não criar uma categoria
+  ## falsa que se confundiria com um nível real da variável.
   RACA_MAP <- c("01"="Branca","02"="Preta","03"="Parda","04"="Amarela",
                 "05"="Indigena")
   INSTRU_MAP <- c("0"="Sem instrucao","1"="Fundamental I incompleto",
@@ -177,7 +174,7 @@ suppressWarnings({
   d[cod == "2", idade_anos := idade_anos / 365]
   d[cod == "1", idade_anos := idade_anos / (365 * 24)]
 
-  ## Ausente permanece NA: nao se cria rotulo para ausencia.
+  ## Ausente permanece NA: não se cria rótulo para ausencia.
   d[, car_int := unname(CAR_MAP[cod2(CAR_INT)])]
   d[, raca_cor := unname(RACA_MAP[cod2(RACA_COR)])]
   d[, instru := unname(INSTRU_MAP[cod1(INSTRU)])]
@@ -191,17 +188,17 @@ suppressWarnings({
   d[, VAL_UTI := suppressWarnings(as.numeric(as.character(VAL_UTI)))]
   d[, US_TOT := suppressWarnings(as.numeric(as.character(US_TOT)))]
 
-  ## ---- variaveis de complexidade e comorbidade ----
-  ## ATENCAO, verificado nos arquivos brutos antes de derivar:
-  ##   DIAGSEC1 a DIAGSEC9 NAO EXISTEM antes de 2016 e, mesmo depois, estao
+  ## ---- variáveis de complexidade e comorbidade ----
+  ## ATENÇÃO, verificado nos arquivos brutos antes de derivar:
+  ##   DIAGSEC1 a DIAGSEC9 NÃO EXISTEM antes de 2016 e, mesmo depois, estão
   ##     preenchidos em apenas 18% a 22% dos registros (DIAGSEC1) e menos de
-  ##     4% (DIAGSEC2). A carga de comorbidade e, portanto, fraca e so pode ser
-  ##     usada como sensibilidade no periodo de 2016 a 2024.
+  ##     4% (DIAGSEC2). A carga de comorbidade e, portanto, fraca e só pode ser
+  ##     usada como sensibilidade no período de 2016 a 2024.
   ##   INFEHOSP esta 100% vazio em todos os anos: inutilizavel.
-  ##   CID_ASSO so traz "0000": inutilizavel.
-  ##   NAT_JUR e um codigo de 4 digitos (1015, 1023, ...). O primeiro digito
+  ##   CID_ASSO só traz "0000": inutilizavel.
+  ##   NAT_JUR e um código de 4 digitos (1015, 1023, ...). O primeiro digito
   ##     indica a categoria ampla, que e o que se usa aqui.
-  ##   COMPLEX so assume 02 (media) e 03 (basica) nesta base.
+  ##   COMPLEX só assume 02 (média) e 03 (básica) nesta base.
   SEC <- intersect(paste0("DIAGSEC", 1:9), names(d))
   for (v in SEC) d[[v]] <- toupper(trimws(as.character(d[[v]])))
   d[, n_diag_sec := Reduce(`+`, lapply(SEC, function(v)
@@ -234,14 +231,14 @@ suppressWarnings({
   d[, coorte := fifelse(cid3 %in% CODIGOS_I, "I60-I69", "G45/G46")]
 
   ## idade padronizada: o Bloco 2 pede idade continua padronizada, de modo que
-  ## o OR seja lido por aumento de um desvio-padrao
+  ## o OR seja lido por aumento de um desvio-padrão
   d[, idade_z := (idade_anos - mean(idade_anos, na.rm = TRUE)) /
         sd(idade_anos, na.rm = TRUE)]
   say("\nidade: media=", round(mean(d$idade_anos, na.rm = TRUE), 2),
       " | DP=", round(sd(d$idade_anos, na.rm = TRUE), 2),
       " (OR por +1 DP de idade)")
 
-  ## ---------------- 4. regiao de saude ----------------
+  ## ---------------- 4. região de saúde ----------------
   lk <- fread(LOOKUP, colClasses = "character", encoding = "UTF-8")
   lk[, ibge6 := sprintf("%06s", ibge6)]
   d <- merge(d, lk[, .(ibge6, mun_nome, regiao_saude = macro_regiao)],
@@ -324,8 +321,8 @@ suppressWarnings({
   fwrite(h, file.path(TAB, "tab_hospitais.csv"), encoding = "UTF-8", na = "NA")
 
   ## ---------------- 7. gravacao ----------------
-  ## N_AIH, IDENT e DT_SAIDA ficam na base de analise por rastreabilidade e
-  ## para que a auditoria (script 07) possa reverificar a deduplicacao, que so
+  ## N_AIH, IDENT e DT_SAIDA ficam na base de análise por rastreabilidade e
+  ## para que a auditoria (script 07) possa reverificar a deduplicacao, que só
   ## e checavel com a chave completa.
   OUT <- c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","CNES","coorte","obito_hospitalar",
            "idade_anos","idade_z","sexo","car_int","subtipo","cid3","cid4","uti",

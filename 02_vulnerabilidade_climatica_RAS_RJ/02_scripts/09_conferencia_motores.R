@@ -1,31 +1,28 @@
-# =====================================================================
 # 09_conferencia_motores.R
-# ---------------------------------------------------------------------
-# Conferencia entre motores e adequacao da aproximacao de Laplace, em UM
-# unico comando.
+# Conferência entre motores e adequação da aproximação de Laplace, em UM
+# único comando.
 #
 # POR QUE ESTE SCRIPT E AUTOORQUESTRADO. Carregar o glmmTMB e o lme4 na
-# mesma sessao R encerra o processo sem mensagem de erro, mesmo com 20 mil
-# registros e memoria disponivel (verificado em tres tentativas). A solucao
+# mesma sessão R encerra o processo sem mensagem de erro, mesmo com 20 mil
+# registros e memória disponível (verificado em três tentativas). A solução
 # adotada e este script se invocar a si mesmo com o argumento --worker, de
 # modo que o lme4 roda em um processo R limpo, sem o glmmTMB carregado.
 #
 # O QUE E VERIFICADO.
 #   [A] glmmTMB contra lme4 na MESMA subamostra, com a mesma semente. Se os
-#       dois motores concordam, o resultado nao e artefato de implementacao.
-#   [B] dentro do lme4, aproximacao de Laplace (nAGQ = 1) contra quadratura
+#       dois motores concordam, o resultado não e artefato de implementação.
+#   [B] dentro do lme4, aproximação de Laplace (nAGQ = 1) contra quadratura
 #       adaptativa de Gauss-Hermite (nAGQ = 11). Se os OR coincidem, a
-#       aproximacao de Laplace e suficiente, que e a premissa do modelo
+#       aproximação de Laplace e suficiente, que e a premissa do modelo
 #       principal.
 #
 # A subamostra e gravada em arquivo temporario para que os dois processos
 # usem exatamente as mesmas linhas.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_conferencia_motores.txt
 #   05_tabelas/tab11_conferencia_motores.csv
 #   05_tabelas/tab16_conferencia_aghq.csv
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -43,9 +40,7 @@ suppressWarnings({
 
   args <- commandArgs(trailingOnly = TRUE)
 
-  ## ==================================================================
   ## MODO TRABALHADOR: roda o lme4 em processo limpo
-  ## ==================================================================
   if (length(args) >= 1 && args[1] == "--worker") {
     library(data.table)
     library(lme4)
@@ -107,9 +102,7 @@ suppressWarnings({
     quit(save = "no", status = 0)
   }
 
-  ## ==================================================================
   ## MODO ORQUESTRADOR
-  ## ==================================================================
   library(data.table)
   source(UTILS)
 

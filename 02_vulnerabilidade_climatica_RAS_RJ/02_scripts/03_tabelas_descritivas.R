@@ -1,16 +1,13 @@
-# =====================================================================
 # 03_tabelas_descritivas.R
-# ---------------------------------------------------------------------
-# Tabelas descritivas da coorte, para o manuscrito. Le a base analitica
-# gerada pelo script 02 e nao ajusta nenhum modelo.
+# Tabelas descritivas da coorte, para o manuscrito. Le a base analítica
+# gerada pelo script 02 e não ajusta nenhum modelo.
 #
 #   05_tabelas/tab1_perfil_coorte.csv      perfil por desfecho
-#   05_tabelas/tab2_coorte_por_regiao.csv  coorte por regiao de saude
+#   05_tabelas/tab2_coorte_por_regiao.csv  coorte por região de saúde
 #   05_tabelas/tab_hospitais.csv           volume e mortalidade por hospital
 #
-# Saida:
+# Saída:
 #   04_resultados/resultados_descritivas.txt
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -70,7 +67,7 @@ suppressWarnings({
                 as.character(it$desfecho[i]), format(it$n[i], big.mark = "."),
                 it$media[i], it$mediana[i], it$p25[i], it$p75[i]))
 
-  ## ---------------- por regiao ----------------
+  ## ---------------- por região ----------------
   t2 <- d[, .(internacoes = .N, obitos = sum(obito_hospitalar),
               mortalidade_pct = round(100 * mean(obito_hospitalar), 2),
               idade_mediana = median(idade_anos),

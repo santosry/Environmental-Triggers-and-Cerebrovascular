@@ -1,14 +1,14 @@
 =====================================================================
 COORTE A PARTIR DOS MICRODADOS DO microdatasus
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-02 10:20:57
+inicio: 2026-10-02 21:51:24
 =====================================================================
 competencias do SIH-RD encontradas: 191
-   40/191 competencias | brutos=2.365.010 | acumulado=59.940 | 0.4 min
-   80/191 competencias | brutos=4.687.828 | acumulado=119.009 | 1.0 min
-  120/191 competencias | brutos=7.073.334 | acumulado=185.897 | 1.5 min
-  160/191 competencias | brutos=9.582.190 | acumulado=257.505 | 2.0 min
-  191/191 competencias | brutos=11.947.354 | acumulado=320.739 | 2.6 min
+   40/191 competencias | brutos=2.365.010 | acumulado=59.940 | 0.5 min
+   80/191 competencias | brutos=4.687.828 | acumulado=119.009 | 1.1 min
+  120/191 competencias | brutos=7.073.334 | acumulado=185.897 | 1.7 min
+  160/191 competencias | brutos=9.582.190 | acumulado=257.505 | 2.4 min
+  191/191 competencias | brutos=11.947.354 | acumulado=320.739 | 3.0 min
 
 --- VERIFICACAO DE PRESENCA DOS CODIGOS ---
 registros brutos lidos (todas as causas, RJ): 11.947.354
@@ -142,5 +142,5 @@ Hospitais: 254
   hospitais sem nenhum obito:             26
 
 gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/coorte_glmm_2010_2024.csv
-  linhas: 295.673 | colunas: 25
-fim: 2026-10-02 10:23:37
+  linhas: 295.673 | colunas: 52
+fim: 2026-10-02 21:54:33
