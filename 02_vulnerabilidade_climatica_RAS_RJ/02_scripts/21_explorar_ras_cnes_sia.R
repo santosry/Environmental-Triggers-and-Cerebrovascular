@@ -17,11 +17,21 @@ suppressWarnings({
   options(stringsAsFactors = FALSE)
   library(data.table)
 
-  ROOT <- normalizePath(".")
+  ROOT <- local({
+    d <- normalizePath(".")
+    for (i in 1:6) {
+      if (dir.exists(file.path(d, "01_dados")) && dir.exists(file.path(d, "02_scripts"))) break
+      sub <- file.path(d, "02_vulnerabilidade_climatica_RAS_RJ")
+      if (dir.exists(file.path(sub, "01_dados"))) { d <- sub; break }
+      pai <- dirname(d); if (pai == d) break; d <- pai
+    }
+    d
+  })
   DIR <- file.path(ROOT, "01_dados", "brutos_cnes_sia")
   TAB <- file.path(ROOT, "05_tabelas")
   RES <- file.path(ROOT, "04_resultados")
   dir.create(TAB, showWarnings = FALSE, recursive = TRUE)
+  dir.create(RES, showWarnings = FALSE, recursive = TRUE)
 
   logcon <- file(file.path(RES, "resultados_ras_cnes_sia.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
