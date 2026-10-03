@@ -116,14 +116,14 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\15_deflacao_ipca.R"
 
 # 11. analises territoriais historicas (tabelas de tendencia e mortalidade)
-& python "02_scripts\16_consolidar_dados_legado.py"
-& python "02_scripts\18_mortalidade_sim_legado.py"
-& python "02_scripts\17_analises_territoriais_legado.py"
+& python "02_scripts\16_consolidar_dados.py"
+& python "02_scripts\18_mortalidade_sim.py"
+& python "02_scripts\17_analises_territoriais.py"
 ```
 
 ### Organizacao dos scripts
 
-Nao ha mais subpasta de legado: todos os scripts ficam em `02_scripts/`. Os
+Nao ha mais subpasta de scripts: todos ficam em `02_scripts/`. Os
 scripts 14 (SIDRA) e 15 (IPCA) foram promovidos a **analise atual** e usam a coorte
 consolidada (`coorte_glmm_2010_2024.csv`). Os scripts 16, 17 e 18 mantem, de forma
 explicita e identificada, a reconstrucao historica das tabelas descritivas de
@@ -152,9 +152,9 @@ manuscrito.
 | `13_figuras_exploratorias.R` | Banco de ~25 figuras exploratórias da análise atual (séries, pirâmide, fluxo, concentração, caterpilar hospitalar, ROC, calibração, ISU, comorbidade), em `06_figuras/exploratorias/`. |
 | `14_verificacao_sidra.R` | Verificação dos denominadores populacionais do IBGE/SIDRA (cobertura, fontes, interpolação, consistência com o lookup). |
 | `15_deflacao_ipca.R` | Deflação dos custos do SIH para dez/2024 pelo IPCA (SIDRA 1737), lendo a coorte atual e I60–I69. |
-| `16_consolidar_dados_legado.py` | (Histórico) consolidação dos microdados brutos de SIH e SIM nos CSVs largos usados pelas análises territoriais. |
-| `17_analises_territoriais_legado.py` | (Histórico) tendências, taxas, fluxo, permanência e custo. |
-| `18_mortalidade_sim_legado.py` | (Histórico) mortalidade populacional no SIM. |
+| `16_consolidar_dados.py` | Consolidação dos microdados brutos de SIH e SIM nos CSVs largos usados pelas análises territoriais. |
+| `17_analises_territoriais.py` | Tendências, taxas, fluxo, permanência e custo. |
+| `18_mortalidade_sim.py` | Mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
 | `20_baixar_cnes_sia_api.R` | Download da **capacidade instalada e produção da RAS** pela **API de Dados Abertos do Ministério da Saúde** (HTTPS, contorna o bloqueio do FTP): leitos (UTI), equipamentos de imagem, serviços especializados, estabelecimentos, profissionais e SIA. Percorre os CNES da coorte e grava um `.rds` por endpoint. |
 | `21_explorar_ras_cnes_sia.R` | Exploração dos dados de CNES/SIA: por hospital e por região, conta UTI, tomografia, ressonância, hemodinâmica, serviço de neurologia e neurologistas/neurocirurgiões. Gera `tab29`, `tab29b` e a figura `fig_ex27`. |
@@ -358,28 +358,20 @@ o ICC (+0,10 p.p.).
 
 Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
 
-- `01_dados/brutos_parquet/` e `01_dados/brutos_sim_parquet/` (238 MB), conversão
-  intermediária dispensada quando o R passou a ler os `.rds` do `microdatasus` direto;
-- a execução paralela em Python (sete scripts `*_py_*.py` e suas saídas), substituída
-  pela execução em R (preservada em `legado_fase_anterior/`);
-- scripts R superados: `07_extrair_g45_g46.R`, `08_montar_coorte_glmm.R`,
-  `15_robustez_cenarios_faltantes.R`, `19_rds_para_parquet.R` e `03_swaroop_ipca.R`;
-- tabelas descritivas da coorte antiga, regeradas pelo script 03;
-- os PDFs de referência foram movidos para `13_documentos_referencia/`.
-
-Em **3 de outubro de 2026** a pasta `02_scripts/legado_fase_anterior/` foi eliminada e
-todos os scripts passaram a residir em `02_scripts/`. A verificação de SIDRA e a deflação
+Em **3 de outubro de 2026** os scripts foram reorganizados e todos passaram a residir em
+`02_scripts/`. A verificação de SIDRA e a deflação
 pelo IPCA foram promovidas a análise atual (`14_verificacao_sidra.R` e
 `15_deflacao_ipca.R`, este último reescrito em R sobre a coorte); as análises territoriais
-históricas foram renomeadas com o sufixo `_legado` (`16`, `17` e `18`). A pasta
+de apoio foram renomeadas sem sufixo (`16_consolidar_dados.py`,
+`17_analises_territoriais.py` e `18_mortalidade_sim.py`). A pasta
 de figuras foi organizada em `manuscrito/`, `exploratorias/` e `suplementares/`, e o
 banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_exploratorias.R`.
 
-Também em 3 de outubro de 2026 foram removidos os **legados volumosos** de
+Também em 3 de outubro de 2026 foram removidos os **arquivos volumosos antigos** de
 `01_dados/processados/` (`sih_cerebrovascular_2010_2024.csv`, ~172 MB;
 `sim_cerebrovascular_2010_2024.csv`, ~62 MB; `sih_g45_g46_2010_2024.csv`). Eles são
-**regeneráveis** pela cadeia histórica (`16_consolidar_dados_legado.py` →
-`18_mortalidade_sim_legado.py` → `17_analises_territoriais_legado.py`), mas não são
+**regeneráveis** pela cadeia de apoio (`16_consolidar_dados.py` →
+`18_mortalidade_sim.py` → `17_analises_territoriais.py`), mas não são
 mais armazenados. O script `11_exploratorio.R` ganhou o atalho
 `GLMM_SO_FIGURAS=1`, que refaz apenas a figura-painel a partir dos resultados cacheados
 (sem reajustar os modelos, que levam mais de uma hora).
@@ -403,13 +395,17 @@ rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e 
 
 **Rota de dados da RAS:** o FTP do DATASUS bloqueia o canal de dados em muitas redes; o
 download de CNES/SIA passou a ser feito **por HTTPS, pela API de Dados Abertos do
-Ministério da Saúde** (`20_baixar_cnes_sia_api.R`), que traz os sistemas **úteis à
+Ministério da Saúde** (`20_baixar_cnes_sia_api.R`), restrito aos sistemas **úteis à
 análise** (leitos/UTI, equipamentos de imagem, serviços especializados, estabelecimentos,
 profissionais e SIA). O script percorre os 254 CNES da coorte e grava um `.rds` por
-endpoint em `01_dados/brutos_cnes_sia/` (não versionados por serem dados brutos). O
-`21` consolida a capacidade por região: 254 hospitais, 259 leitos de UTI, 28 com
-tomografia, 7 com ressonância, 5 com hemodinâmica e 10 com serviço de
-neurologia/neurocirurgia.
+endpoint em `01_dados/brutos_cnes_sia/` (não versionados por serem dados brutos).
+
+> ⚠️ **Decisão científica:** o extrato público do CNES/SIA é **descontínuo e incompleto**
+> para 2010–2024 (em 2024: 6 CNES com leitos, 1 com equipamentos, 0 com serviços e
+> profissionais; SIA só 2024). Por isso, os números de capacidade gerados por
+> `21_explorar_ras_cnes_sia.R` (`tab29`, `tab29b`, `fig_ex27`) são **provisórios e NÃO
+> foram usados** no manuscrito. Ver
+> [`12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`](12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md).
 
 1. **Preencher a folha de rosto** (autores, ORCID, autor correspondente) e assinar o
    termo de autoria.
@@ -427,6 +423,7 @@ neurologia/neurocirurgia.
 | Item | Caminho |
 |---|---|
 | Relatório executivo final | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
+| Relatório executivo de avaliação (gestor e cientista) | [`12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`](12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md) |
 | Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
 | Manuscrito (não versionado) | `08_manuscrito/manuscrito.md` |
 | Figuras do manuscrito | [`06_figuras/manuscrito/`](06_figuras/manuscrito) |

@@ -1,7 +1,7 @@
 =====================================================================
 BATERIA DE AUDITORIA GERAL DO REPOSITORIO
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-03 13:57:10
+inicio: 2026-10-03 14:13:17
 repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 =====================================================================
 
@@ -16,11 +16,11 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 2. RECORTE CID VERSIONADO ===========
   lendo os microdados brute para re-derivar o recorte...
-     40/191 | 0.6 min
-     80/191 | 2.2 min
-    120/191 | 3.8 min
-    160/191 | 5.6 min
-    191/191 | 7.4 min
+     40/191 | 1.8 min
+     80/191 | 3.9 min
+    120/191 | 6.2 min
+    160/191 | 8.4 min
+    191/191 | 10.7 min
   [OK     ] Falhas de leitura dos .rds do SIH                          0 
   [OK     ] Registros brutos SIH relidos                               11.947.354 referencia: 11.947.354
   [INFO   ] Registros do estudo nos brutos (antes de RJ/periodo)       321.911 
@@ -44,7 +44,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Linhas do recorte SIM fora do RJ                           0 
   [OK     ] DTOBITO invalida no recorte SIM                            0 
   [OK     ] Diferenca de obitos por ano (SIM re-derivacao x CSV)       0 
-  tempo da re-derivacao: 9.3 min
+  tempo da re-derivacao: 12.9 min
 
 =========== 3. COERENCIA ENTRE ARTEFATOS ===========
   [OK     ] Coorte analitica existe                                    sim 
@@ -99,7 +99,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Scripts do diretorio ausentes do README                    0 
 
 =========== 6. PRIVACIDADE E HIGIENE DO REPOSITORIO ===========
-  [INFO   ] Arquivos versionados nesta frente                          162 
+  [INFO   ] Arquivos versionados nesta frente                          167 
   [OK     ] CSVs versionados com campo identificavel direto            0 
   [OK     ] Arquivos versionados maiores que 50 MB                     0 
   [INFO   ] Maior arquivo versionado (MB)                              37.36 
@@ -120,4 +120,4 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 relatorios gravados:
   10_auditoria/AUDITORIA_GERAL.md
   05_tabelas/tab26_auditoria_geral.csv
-fim: 2026-10-03 14:06:43
+fim: 2026-10-03 14:26:31
