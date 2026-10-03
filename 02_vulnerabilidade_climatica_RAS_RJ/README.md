@@ -1,6 +1,6 @@
-# Frente 02 — Vulnerabilidade climática, morbimortalidade cerebrovascular e RAS no Rio de Janeiro
+# Frente 02 — Morbimortalidade cerebrovascular e RAS no Rio de Janeiro
 
-📁 **Parte do monorepo** [Gatilhos Ambientais e Doenças Cerebrovasculares](../README.md)
+📁 **Parte do monorepo** [DLNM — doenças cerebrovasculares](../README.md)
 
 Estudo ecológico de séries temporais (2010–2024) sobre a morbimortalidade por doenças
 cerebrovasculares (**CID-10 I60–I69**, além dos blocos **G45–G46**) no estado do Rio de
@@ -156,8 +156,6 @@ manuscrito.
 | `17_analises_territoriais.py` | Tendências, taxas, fluxo, permanência e custo. |
 | `18_mortalidade_sim.py` | Mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
-| `20_baixar_cnes_sia_api.R` | Download da **capacidade instalada e produção da RAS** pela **API de Dados Abertos do Ministério da Saúde** (HTTPS, contorna o bloqueio do FTP): leitos (UTI), equipamentos de imagem, serviços especializados, estabelecimentos, profissionais e SIA. Percorre os CNES da coorte e grava um `.rds` por endpoint. |
-| `21_explorar_ras_cnes_sia.R` | Exploração dos dados de CNES/SIA: por hospital e por região, conta UTI, tomografia, ressonância, hemodinâmica, serviço de neurologia e neurologistas/neurocirurgiões. Gera `tab29`, `tab29b` e a figura `fig_ex27`. |
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
 | `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
 
@@ -392,49 +390,5 @@ otimização do script 01 (não tenta mais a competência 2025-12) e do script 1
 **Documentos de submissão** gerados em `08_manuscrito/` (não versionados): folha de
 rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e as versões
 `.docx` do manuscrito e dos documentos.
-
-**Rota de dados da RAS:** o FTP do DATASUS bloqueia o canal de dados em muitas redes; o
-download de CNES/SIA passou a ser feito **por HTTPS, pela API de Dados Abertos do
-Ministério da Saúde** (`20_baixar_cnes_sia_api.R`), restrito aos sistemas **úteis à
-análise** (leitos/UTI, equipamentos de imagem, serviços especializados, estabelecimentos,
-profissionais e SIA). O script percorre os 254 CNES da coorte e grava um `.rds` por
-endpoint em `01_dados/brutos_cnes_sia/` (não versionados por serem dados brutos).
-
-> ⚠️ **Decisão científica:** o extrato público do CNES/SIA é **descontínuo e incompleto**
-> para 2010–2024 (em 2024: 6 CNES com leitos, 1 com equipamentos, 0 com serviços e
-> profissionais; SIA só 2024). Por isso, os números de capacidade gerados por
-> `21_explorar_ras_cnes_sia.R` (`tab29`, `tab29b`, `fig_ex27`) são **provisórios e NÃO
-> foram usados** no manuscrito. Ver
-> [`12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`](12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md).
-
-1. **Preencher a folha de rosto** (autores, ORCID, autor correspondente) e assinar o
-   termo de autoria.
-2. **Decidir sobre a UTI** no modelo principal ou apresentar as duas versões
-   (retirá-la eleva o ICC a ~17%).
-3. **Produzir o mapa** das regiões de saúde quando a malha territorial estiver
-   disponível.
-4. **Declaração de software** deve refletir **R 4.6.1** (a instalação de R 4.6.0 na
-   máquina está incompleta e sem `Rscript.exe` funcional).
-
----
-
-## Arquivos-chave
-
-| Item | Caminho |
-|---|---|
-| Relatório executivo final | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
-| Relatório executivo de avaliação (gestor e cientista) | [`12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`](12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md) |
-| Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
-| Manuscrito (não versionado) | `08_manuscrito/manuscrito.md` |
-| Figuras do manuscrito | [`06_figuras/manuscrito/`](06_figuras/manuscrito) |
-| Banco de figuras exploratórias | [`06_figuras/exploratorias/`](06_figuras/exploratorias) |
-| Matriz de literatura | [`07_literatura/MATRIZ_LITERATURA.md`](07_literatura/MATRIZ_LITERATURA.md) |
-| Artigos completos (PDF) | [`07_literatura/`](07_literatura) |
-| Declaração de variáveis SIH | [`04_resultados/DICIONARIO_VARIAVEIS_SIH.md`](04_resultados/DICIONARIO_VARIAVEIS_SIH.md) |
-| OR ajustados (CSV) | [`05_tabelas/tab3_glmm_or.csv`](05_tabelas/tab3_glmm_or.csv) |
-| Robustez (CSV) | [`05_tabelas/tab9_robustez_or.csv`](05_tabelas/tab9_robustez_or.csv) |
-| Atalho rápido | [`LEIA-ME.md`](LEIA-ME.md) |
-
----
 
 ⬅️ [Voltar ao README do monorepo](../README.md)
