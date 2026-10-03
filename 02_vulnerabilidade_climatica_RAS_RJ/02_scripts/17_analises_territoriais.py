@@ -25,9 +25,8 @@ import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# O script foi movido de 02_scripts/ para 02_scripts/legado_fase_anterior/.
-# Em vez de contar níveis, sobe a arvore até achar a pasta do projeto, o que
-# continua correto em qualquer profundidade.
+# Em vez de fixar a profundidade, sobe a arvore ate achar a pasta do projeto,
+# o que continua correto em qualquer profundidade de diretorio.
 while not os.path.isdir(os.path.join(ROOT, "01_dados")) and \
         os.path.dirname(ROOT) != ROOT:
     ROOT = os.path.dirname(ROOT)
