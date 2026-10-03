@@ -1,3 +1,6 @@
 /01_dados/tmp_parquet/
 /01_dados/processados/*.csv
+# Recortes por CID do estudo: leves e versionados de proposito (produto do script 01)
+!/01_dados/processados/sih_cid_estudo_2010_2024.csv
+!/01_dados/processados/sim_cid_estudo_2010_2024.csv
 /10_auditoria/AUDITORIA_COMPLETA_R.md
