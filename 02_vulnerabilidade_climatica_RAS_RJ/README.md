@@ -1,6 +1,6 @@
 # Frente 02 — Morbimortalidade cerebrovascular e RAS no Rio de Janeiro
 
-📁 **Parte do monorepo** [DLNM — doenças cerebrovasculares](../README.md)
+📁 **Parte do monorepo** [Gatilhos Ambientais e Doenças Cerebrovasculares](../README.md)
 
 Estudo ecológico de séries temporais (2010–2024) sobre a morbimortalidade por doenças
 cerebrovasculares (**CID-10 I60–I69**, além dos blocos **G45–G46**) no estado do Rio de
