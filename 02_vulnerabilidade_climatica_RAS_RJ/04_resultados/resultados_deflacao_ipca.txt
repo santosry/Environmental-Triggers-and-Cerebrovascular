@@ -2,12 +2,12 @@
 DEFLACAO DOS CUSTOS PELO IPCA (base: dezembro/2024)
 Fonte: IBGE/SIDRA tabela 1737, variavel 2266 (numero-indice mensal)
 Fator: indice_dez2024 / indice_medio_anual(t)  [fluxo anual -> dez/2024]
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 09:26:31
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 17:16:02
 =====================================================================
 meses do IPCA lidos: 180 | de 201001 a 202412
 
-Custo total corrente (2010-2024):        R$ 535.140.920
-Custo total deflacionado (dez/2024):     R$ 790.617.014
+Custo total corrente (2010-2024):        R$ 565.455.362
+Custo total deflacionado (dez/2024):     R$ 836.891.538
 Inflacao acumulada implicita 2010-2024:  128.0%
 
 Fatores de deflacao por ano:
@@ -28,21 +28,21 @@ Fatores de deflacao por ano:
   2024  indice_medio= 6952.0733  fator_media=1.0213  fator_dez=1.0000
 
 Custo por macrorregiao (corrente e deflacionado a dez/2024):
-  Metropolitana      n=  164.751 corrente=R$    296.988.645 deflac=R$    433.133.960
-  Centro-Sul         n=   70.586 corrente=R$    146.184.235 deflac=R$    221.333.972
-  Norte e Noroeste   n=   32.409 corrente=R$     91.968.040 deflac=R$    136.149.082
+  Metropolitana      n=  174.127 corrente=R$    305.152.172 deflac=R$    445.946.774
+  Centro-Sul         n=   83.127 corrente=R$    160.154.361 deflac=R$    243.124.636
+  Norte e Noroeste   n=   38.419 corrente=R$    100.148.830 deflac=R$    147.820.128
 
 Custo por regiao de saude (corrente e deflacionado a dez/2024):
-  Metropolitana I        n=  129.259 corrente=R$    239.874.942 deflac=R$    354.274.964
-  Serrana                n=   30.765 corrente=R$     74.028.414 deflac=R$    117.058.430
-  Metropolitana II       n=   35.492 corrente=R$     57.113.703 deflac=R$     78.858.996
-  Medio Paraiba          n=   25.054 corrente=R$     44.698.808 deflac=R$     64.359.159
-  Norte                  n=   13.963 corrente=R$     38.803.397 deflac=R$     55.105.252
-  Noroeste               n=   10.178 corrente=R$     35.750.709 deflac=R$     54.559.886
-  Centro-Sul             n=   10.374 corrente=R$     19.783.225 deflac=R$     29.162.987
-  Baixada Litoranea      n=    8.268 corrente=R$     17.413.933 deflac=R$     26.483.944
-  Baia da Ilha Grande    n=    4.393 corrente=R$      7.673.789 deflac=R$     10.753.395
+  Metropolitana I        n=  135.595 corrente=R$    245.825.591 deflac=R$    363.624.128
+  Serrana                n=   35.062 corrente=R$     78.536.116 deflac=R$    123.940.234
+  Metropolitana II       n=   38.532 corrente=R$     59.326.581 deflac=R$     82.322.646
+  Medio Paraiba          n=   31.820 corrente=R$     52.773.167 deflac=R$     77.180.808
+  Norte                  n=   17.444 corrente=R$     44.618.201 deflac=R$     63.175.745
+  Noroeste               n=   11.512 corrente=R$     37.438.138 deflac=R$     57.142.363
+  Centro-Sul             n=   11.130 corrente=R$     20.528.562 deflac=R$     30.304.042
+  Baixada Litoranea      n=    9.463 corrente=R$     18.092.490 deflac=R$     27.502.020
+  Baia da Ilha Grande    n=    5.115 corrente=R$      8.316.516 deflac=R$     11.699.552
 
 Nota: recorte I60-I69 da coorte (mesma base dos indicadores de custo do
       manuscrito). Serie do IPCA em cache local; fatores pelo indice medio anual.
-fim: 2026-10-03 09:26:32
+fim: 2026-10-03 17:16:02

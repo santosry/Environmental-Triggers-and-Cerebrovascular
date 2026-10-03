@@ -160,7 +160,7 @@ if __name__ == "__main__":
     print("Processando SIH...")
     sih_out = _run_parallel(_sih_worker, sih_paths, "sih")
     sih = load_parquets(sih_out)
-    print(f"SIH bruto I60-I69 (residentes RJ): {len(sih):,}")
+    print(f"SIH bruto I60-I69 + G45/G46 (residentes RJ): {len(sih):,}")
 
     print("Processando SIM...")
     sim_out = _run_parallel(_sim_worker, sim_paths, "sim")
@@ -312,7 +312,7 @@ if __name__ == "__main__":
 
     print("=" * 70)
     print("RESUMO FINAL")
-    print(f"SIH I60-I69 residentes RJ, DT_INTER 2010-2024: {len(sih):,}")
+    print(f"SIH I60-I69 + G45/G46 residentes RJ, DT_INTER 2010-2024: {len(sih):,}")
     print(f"SIM I60-I69 + G45/G46 residentes RJ, DTOBITO 2010-2024: {len(sim):,}")
     print("SIH por CID3:")
     print(sih["cid3"].value_counts().sort_index().to_string())

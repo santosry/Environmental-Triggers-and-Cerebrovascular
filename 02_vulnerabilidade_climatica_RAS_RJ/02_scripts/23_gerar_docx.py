@@ -17,12 +17,14 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 
 def add_runs(par, texto):
-    """Adiciona texto com **negrito**, *italico* e `codigo` em runs."""
-    tokens = re.split(r"(\*\*.+?\*\*|\*[^*]+?\*|`[^`]+?`)", texto)
+    """Adiciona texto com **negrito**, *italico*, `codigo` e <sup>sobrescrito</sup>."""
+    tokens = re.split(r"(\*\*.+?\*\*|\*[^*]+?\*|`[^`]+?`|<sup>.+?</sup>)", texto)
     for tk in tokens:
         if not tk:
             continue
-        if tk.startswith("**") and tk.endswith("**"):
+        if tk.startswith("<sup>") and tk.endswith("</sup>"):
+            r = par.add_run(tk[5:-6]); r.font.superscript = True
+        elif tk.startswith("**") and tk.endswith("**"):
             r = par.add_run(tk[2:-2]); r.bold = True
         elif tk.startswith("*") and tk.endswith("*") and len(tk) > 2:
             r = par.add_run(tk[1:-1]); r.italic = True

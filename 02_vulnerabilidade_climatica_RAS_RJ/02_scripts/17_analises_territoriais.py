@@ -107,7 +107,7 @@ log("1. PERFIL SOCIODEMOGRÁFICO E CLÍNICO-ASSISTENCIAL")
 log("=" * 72)
 
 n_sih = len(sih)
-log(f"Internações I60-I69 (2010-2024): {n_sih:,}")
+log(f"Internações I60-I69 + G45/G46 (2010-2024): {n_sih:,}")
 log(f"Sexo M: {int((sih['sexo']=='M').sum()):,} ({(sih['sexo']=='M').mean()*100:.1f}%) | "
     f"F: {int((sih['sexo']=='F').sum()):,} ({(sih['sexo']=='F').mean()*100:.1f}%)")
 log(f"Idade: mediana {sih['idade_anos'].median():.0f} (IIQ {sih['idade_anos'].quantile(.25):.0f}-"
@@ -227,7 +227,7 @@ ax2 = ax1.twinx()
 ax2.plot(obito_ano.index, obito_ano["pct"], "s--",
          color=plt.cm.viridis(0.85), label="% óbito hospitalar")
 ax2.set_ylabel("% óbito hospitalar", color=plt.cm.viridis(0.85))
-ax1.set_title(f"Internações por DCV (I60-I69), RJ 2010-2024\n"
+ax1.set_title(f"Internações por DCV (I60-I69 + G45/G46), RJ 2010-2024\n"
               f"Mann-Kendall: tau={tau:+.3f}; p={p:.4f} | "
               f"Cochran-Armitage (letalidade): p={p_ca:.4f}")
 fig.tight_layout()

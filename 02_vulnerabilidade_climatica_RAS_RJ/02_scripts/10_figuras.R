@@ -9,9 +9,9 @@
 # A figura do Índice de Swaroop-Uemura e produzida pelo script 04 e a do uso
 # de UTI pelo script 06.
 #
-# Não ha shapefile das regiões de saúde do RJ no projeto nem nas pastas
-# vizinhas, por isso não se produz mapa coropletico. As figuras usam barras
-# e intervalos de confiança.
+# O mapa coroplático das regiões de saúde (malha municipal do geobr dissolvida)
+# e a Figura 1 do manuscrito são gerados pelo script 24_mapa_regioes_saude.R.
+# As demais figuras usam barras e intervalos de confiança.
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -77,12 +77,12 @@ suppressWarnings({
                            "(Benjamini-Hochberg); pontos vazios: n\u00e3o significativos"),
          x = "OR ajustado (escala logar\u00edtmica, IC95%)", y = NULL,
          colour = NULL, shape = NULL) +
-    theme_minimal(base_size = 10) +
+    theme_minimal(base_size = 13) +
     theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 8.5),
+          plot.subtitle = element_text(size = 11),
           legend.position = "bottom",
           panel.grid.minor = element_blank())
-  ggsave(file.path(FIG, "fig_or_forest.png"), g1, width = 9, height = 7, dpi = 300)
+  ggsave(file.path(FIG, "fig_or_forest.png"), g1, width = 9.5, height = 7.5, dpi = 300)
   say("gravada fig_or_forest.png")
 
   ## ================= 2. regiões isoladas =================
@@ -97,17 +97,17 @@ suppressWarnings({
     geom_errorbar(aes(xmin = lo, xmax = hi), orientation = "y", width = 0.2,
                   colour = COR_LINHA) +
     geom_point(size = 2.8, colour = COR_LINHA) +
-    geom_text(aes(label = sprintf("%.2f", or)), vjust = -0.9, size = 2.9) +
+    geom_text(aes(label = sprintf("%.2f", or)), vjust = -0.9, size = 3.8) +
     scale_x_log10() +
     labs(title = "Efeito ajustado da regi\u00e3o de sa\u00fade de resid\u00eancia",
          subtitle = paste0("OR de \u00f3bito intra-hospitalar em rela\u00e7\u00e3o \u00e0 Metropolitana I, ",
                            "ap\u00f3s ajuste por perfil do paciente e efeito aleat\u00f3rio do hospital"),
          x = "OR ajustado (IC95%)", y = NULL) +
-    theme_minimal(base_size = 11) +
+    theme_minimal(base_size = 14) +
     theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 8.5),
+          plot.subtitle = element_text(size = 11),
           panel.grid.minor = element_blank())
-  ggsave(file.path(FIG, "fig_regioes_ajustado.png"), g2, width = 8, height = 5, dpi = 300)
+  ggsave(file.path(FIG, "fig_regioes_ajustado.png"), g2, width = 9, height = 5.5, dpi = 300)
   say("gravada fig_regioes_ajustado.png")
 
   ## ================= 3. funnel plot observado/esperado =================
@@ -172,9 +172,9 @@ suppressWarnings({
          x = "\u00d3bitos esperados (escala logar\u00edtmica)",
          y = "Raz\u00e3o observado/esperado (escala logar\u00edtmica)",
          colour = NULL) +
-    theme_minimal(base_size = 11) +
+    theme_minimal(base_size = 14) +
     theme(plot.title = element_text(face = "bold"),
-          plot.subtitle = element_text(size = 8.5),
+          plot.subtitle = element_text(size = 10.5),
           legend.position = "bottom",
           panel.grid.minor = element_blank())
   ggsave(file.path(FIG_SUP, "fig_funnel_hospitais.png"), g3, width = 9, height = 6, dpi = 300,

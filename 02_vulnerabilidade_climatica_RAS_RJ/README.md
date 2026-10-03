@@ -111,6 +111,7 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\13_figuras_exploratorias.R" # banco de ~25 figuras
 & $R "02_scripts\19_figura_exploratorio.R"   # refaz a figura do script 11 (rapido)
 & $R "02_scripts\24_mapa_regioes_saude.R"     # mapas por regiao de saude (geobr)
+& $R "02_scripts\26_recalculo_duas_classes.R" # indicadores com I60-I69 + G45/G46
 
 # 10. denominadores populacionais e custos (analise atual)
 & $R "02_scripts\14_verificacao_sidra.R"
@@ -160,6 +161,7 @@ manuscrito.
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
 | `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
 | `24_mapa_regioes_saude.R` | Mapas coropléticos das nove regiões de saúde pela malha municipal do `geobr` dissolvida; gera a Figura 1 do manuscrito (série temporal + mapa). |
+| `26_recalculo_duas_classes.R` | Recálculo dos indicadores descritivos com a coorte completa (I60-I69 + G45/G46): Tabela 1 por macrorregião, fluxo, concentração, custos e taxas. |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
