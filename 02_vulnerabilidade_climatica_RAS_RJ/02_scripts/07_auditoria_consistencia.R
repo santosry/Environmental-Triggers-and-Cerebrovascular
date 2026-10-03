@@ -268,14 +268,14 @@ suppressWarnings({
     x <- readRDS(f)
     cb <- toupper(trimws(as.character(x[["CAUSABAS"]])))
     muni <- sprintf("%06s", as.character(x[["CODMUNRES"]]))
-    sel <- substr(cb, 1, 3) %in% sprintf("I6%d", 0:9) & substr(muni, 1, 2) == "33"
+    sel <- (substr(cb, 1, 3) %in% sprintf("I6%d", 0:9) | substr(cb, 1, 3) %in% c("G45", "G46")) & substr(muni, 1, 2) == "33"
     if (!any(sel)) return(NULL)
     data.table(DTOBITO = as.character(x[["DTOBITO"]])[sel],
                IDADE = x[["IDADE"]][sel], LOCOCOR = as.character(x[["LOCOCOR"]])[sel])
   }), fill = TRUE)
   dt <- suppressWarnings(as.Date(sim$DTOBITO, format = "%d%m%Y"))
   sim <- sim[!is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")]
-  say("  obitos I60-I69 no SIM, residentes no RJ, 2010-2024: ",
+  say("  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2010-2024: ",
       format(nrow(sim), big.mark = "."))
   sim_hosp <- sum(sim$LOCOCOR == "1", na.rm = TRUE)
   say("  desses, com local de ocorrencia hospitalar: ", format(sim_hosp, big.mark = "."))

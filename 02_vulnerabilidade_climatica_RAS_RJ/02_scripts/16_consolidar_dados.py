@@ -34,7 +34,7 @@ TMP_DIR = os.path.join(ROOT, "01_dados", "tmp_parquet")
 for d in (OUT_DIR, INV_DIR, TMP_DIR):
     os.makedirs(d, exist_ok=True)
 
-CID6 = [f"I6{i}" for i in range(10)]
+CID6 = [f"I6{i}" for i in range(10)] + ["G45", "G46"]
 N_WORKERS = 3
 
 
@@ -165,7 +165,7 @@ if __name__ == "__main__":
     print("Processando SIM...")
     sim_out = _run_parallel(_sim_worker, sim_paths, "sim")
     sim = load_parquets(sim_out)
-    print(f"SIM bruto I60-I69 (residentes RJ): {len(sim):,}")
+    print(f"SIM bruto I60-I69 + G45/G46 (residentes RJ): {len(sim):,}")
 
     # Deduplicação SIH
     DEDUP_KEY = ["N_AIH", "IDENT", "DT_INTER", "DT_SAIDA", "DIAG_PRINC",
@@ -313,7 +313,7 @@ if __name__ == "__main__":
     print("=" * 70)
     print("RESUMO FINAL")
     print(f"SIH I60-I69 residentes RJ, DT_INTER 2010-2024: {len(sih):,}")
-    print(f"SIM I60-I69 residentes RJ, DTOBITO 2010-2024: {len(sim):,}")
+    print(f"SIM I60-I69 + G45/G46 residentes RJ, DTOBITO 2010-2024: {len(sim):,}")
     print("SIH por CID3:")
     print(sih["cid3"].value_counts().sort_index().to_string())
     print("SIM por CID3:")
