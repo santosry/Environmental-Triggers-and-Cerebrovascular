@@ -61,7 +61,7 @@ de 2026.
 |---|---|
 | `brutos_sih/` | 191 competências do SIH-RD do RJ, 2010-01 a 2025-11, baixadas pelo `microdatasus` (~479 MB). |
 | `brutos_sim/` | 15 arquivos anuais do SIM-DO do RJ, 2010 a 2024, baixados pelo `microdatasus` (~98 MB). |
-| `processados/` | Bases consolidadas (`sih_cerebrovascular_...csv`, `coorte_glmm_2010_2024.csv`, `modelo_glmm_principal_glmmTMB.rds`, previsões e efeitos hospitalares). |
+| `processados/` | Bases consolidadas e derivadas. Os recortes por CID do estudo (`sih_cid_estudo_2010_2024.csv`, `sim_cid_estudo_2010_2024.csv`) são **leves e versionados**, gerados pelo script 01; os demais (`coorte_glmm_2010_2024.csv`, `modelo_glmm_principal_glmmTMB.rds`, previsões e efeitos hospitalares) são pesados e não versionados. |
 | `inventario_colunas/` | Inventário de colunas por arquivo do SIH-RD. |
 | `tmp_ipca/` | Cache da série do IPCA (SIDRA/IBGE, tabela 1737). |
 | `tmp_parquet/` | Intermediário da consolidação histórica (pode ser refeito). |
@@ -97,6 +97,7 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 
 # 6. auditoria de consistencia (SIH x SIM x modelo)
 & $R "02_scripts\07_auditoria_consistencia.R"
+& $R "02_scripts\12_auditoria_geral.R"        # aquisicao, recorte CID, codigo e repo
 
 # 7. robustez -- cerca de 40 min
 & $R "02_scripts\08_glmm_robustez.R"
@@ -106,6 +107,7 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 
 # 9. figuras
 & $R "02_scripts\10_figuras.R"
+& $R "02_scripts\11_exploratorio.R"          # variaveis nao usadas (~20 min)
 ```
 
 ### Legado da fase anterior
@@ -130,7 +132,7 @@ GLMM. Foram mantidos para reprodutibilidade:
 | Script | Função |
 |---|---|
 | `00_glmm_utils.R` | Utilitários compartilhados do GLMM (ajuste, ICC, MOR, calibração). Normaliza a interface entre `lme4::glmer` e `glmmTMB::glmmTMB`. |
-| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus`. |
+| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus` e, em seguida, filtragem dos códigos CID do estudo (I60–I69, G45/G46 no SIH; I60–I69 no SIM, residentes no RJ, 2010–2024) com gravação dos recortes leves em CSV versionado. |
 | `02_montar_coorte.R` | Coorte analítica a partir dos `.rds` baixados (I60–I69 + G45/G46 completos). |
 | `03_tabelas_descritivas.R` | Tabelas descritivas da coorte. |
 | `04_isu_regiao_saude.R` | Índice de Swaroop-Uemura por região de saúde. |
@@ -140,6 +142,10 @@ GLMM. Foram mantidos para reprodutibilidade:
 | `08_glmm_robustez.R` | Bateria de 18 cenários de robustez. |
 | `09_conferencia_motores.R` | Conferência `glmmTMB` × `lme4` e adequação da aproximação de Laplace (processo isolado, `--worker`). |
 | `10_figuras.R` | Figuras do Bloco 4 (OR, regiões, funnel, subtipos, UTI). |
+| `11_exploratorio.R` | Exploração das variáveis não usadas no modelo principal: raça/cor, escolaridade, comorbidade, natureza jurídica, complexidade e permanência. |
+| `12_auditoria_geral.R` | Bateria de auditoria do repositório: aquisição e integridade dos `.rds`, re-derivação do recorte CID versionado, coerência entre coorte e tabelas, consistência numérica, sintaxe/paths dos scripts e higiene/LGPD do Git. |
+
+**Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
 ---
 
@@ -219,6 +225,74 @@ indicador tem pouco poder discriminante entre territórios.
 
 ---
 
+## Exploração das variáveis restantes
+
+Os microdados do SIH-RD trazem **113 colunas**; o modelo principal usa oito. A exploração
+das demais (script `11`) produziu dois achados que mudam leituras correntes.
+
+### O que não é utilizável
+
+| Campo | Verificação | Situação |
+|---|---|---|
+| `INSTRU` (escolaridade) | 0% de ausência, mas **constante**: "sem instrução" em 295.672 de 295.673 | inutilizável |
+| `DIAGSEC1`–`9` (comorbidade) | inexiste até 2013; de 2014 em diante cobre no máximo 17% | mede codificação, não doença |
+| `INFEHOSP` | 100% vazio em 2010–2024 | inutilizável |
+| `CID_ASSO` | apenas o valor `0000` | inutilizável |
+| `NATUREZA` | um único valor distinto | inutilizável |
+| `ESPEC` | varia, mas sem tabela oficial do DATASUS | não interpretado |
+| `RACA_COR` | ausência cai de 35,4% (2010) a **0,0%** (2024) | utilizável, com ressalva |
+| `NAT_JUR` | só existe a partir de 2013 | utilizável nesse período |
+
+> **Armadilha registrada:** ausência zero não significa campo útil. `INSTRU` aparece com
+> 0,00% de ausência e é perfeitamente inútil. Por isso a verificação passou a incluir o
+> número de níveis e a proporção do nível dominante, não apenas o percentual de ausentes.
+
+> **Convenção de ausente:** valores ausentes são `NA`, como o R os representa, sem rótulo
+> substituto. Códigos que a fonte usa para "sem informação" ou "ignorado" (99 em
+> `RACA_COR`, 9 em `INSTRU`) também viram `NA`. Cada modelo usa os casos completos das
+> variáveis que emprega, e o n é reportado. As comparações de variância são feitas contra
+> o modelo base **reajustado na mesma amostra**.
+
+### O que os ajustes revelaram
+
+**Raça/cor.** Com Branca como referência, o gradiente bruto (preta 18,26%, parda 17,94%,
+branca 15,45%) **não se sustenta**: preta OR 0,982 (0,946–1,018; ns) e parda OR 0,934
+(0,907–0,963; **p = 8,2 × 10⁻⁶**). A diferença bruta entre pretas e brancas era composição
+de idade e subtipo. O que permanece é a **ausência**: quem tem `NA` em raça/cor apresenta
+24,17% de mortalidade contra 17,13% de quem tem valor — **+7,04 p.p.**, padrão clássico de
+ausência informativa.
+
+**Natureza jurídica.** A diferença bruta é de **4,6 vezes** (administração pública 22,28%
+contra entidades empresariais 4,81%). Depois do ajuste pelo perfil do paciente, o OR das
+empresariais fica em **0,396** (IC95% 0,296–0,528). Ou seja, a diferença é essencialmente
+**composição de casos**, não qualidade: os hospitais públicos concentram os casos graves,
+o mesmo mecanismo de seleção já visto com a UTI.
+
+**Impacto no componente hospitalar (base reajustada na mesma amostra):**
+
+| Modelo | n | ICC base | ICC modelo | Δ ICC | Variância hospitalar explicada |
+|---|---|---|---|---|---|
+| M0 principal | 295.673 | — | 14,95% | — | — |
+| M1 + raça/cor | 222.003 | 14,45% | 14,54% | +0,10 p.p. | −0,8% |
+| M2 + natureza jurídica | 255.118 | 14,60% | 12,39% | **−2,21 p.p.** | **17,3%** |
+| M3 + complexidade | 295.673 | 14,95% | 13,12% | **−1,83 p.p.** | **14,1%** |
+| **M4 completo** | 195.399 | 15,12% | **11,69%** | **−3,43 p.p.** | **25,7%** |
+
+**Natureza jurídica e complexidade do procedimento explicam, juntas, 25,7% da
+heterogeneidade entre hospitais.** Cerca de **três quartos** da variação entre serviços
+permanecem sem explicação por variáveis observáveis — o componente hospitalar é real e
+majoritariamente não capturado pelos dados administrativos. Raça/cor praticamente não move
+o ICC (+0,10 p.p.).
+
+> **Correção registrada.** Numa primeira passagem, a natureza jurídica aparecia
+> **elevando** o ICC para 16,91% e o modelo completo parecia não alterar nada. Os dois
+> resultados eram artefato: a variável trazia uma categoria "não informado" que era, na
+> prática, o período de 2010–2012, quando o campo não existia, e que inflava a variância
+> hospitalar. Além disso, os modelos eram comparados em amostras diferentes. Com ausente
+> tratado como `NA` e a base reajustada na mesma amostra, as duas conclusões se invertem.
+
+---
+
 ## Robustez e conferência entre motores
 
 - **18 cenários** de robustez, todos convergidos. Fora dos extremos, o ICC fica entre
@@ -243,12 +317,16 @@ indicador tem pouco poder discriminante entre territórios.
 2. **Mortalidade registrada em AIT:** G45 tem 11,99% de mortalidade intra-hospitalar,
    valor clinicamente implausível para evento transitório.
 3. **Ausência de gravidade clínica:** sem sinais vitais, escalas, exames ou neuroimagem.
-4. **Comorbidade incompleta:** diagnóstico secundário só tem preenchimento integral a
-   partir de 2015.
+4. **Comorbidade incompleta:** o diagnóstico secundário inexiste até 2013 e, de 2014 em
+   diante, cobre no máximo 17% dos registros — mede completude de codificação, não doença.
 5. **Reinternações:** o SIH-RD é anonimizado; internações tratadas como independentes.
 6. **Áreas pequenas:** 68 estabelecimentos com <100 internações em 15 anos e 26 sem
    nenhum óbito.
-7. **Raça/cor (~25% sem informação) e escolaridade (~inutilizável)** não entraram.
+7. **Raça/cor e escolaridade:** escolaridade é inutilizável (campo constante); raça/cor tem
+   24,9% de ausência **informativa** (quem tem `NA` apresenta 24,17% de mortalidade contra
+   17,13% de quem tem valor) e ausência decrescente no tempo, de 35,4% (2010) a 0,0%
+   (2024). Valores ausentes são `NA`, sem rótulo substituto, e os modelos usam casos
+   completos. Nenhuma das duas entrou no modelo principal.
 8. **Generalização:** restrito ao Rio de Janeiro, sem validação externa.
 9. **Sem leitura causal:** desenho observacional.
 10. **Sem mapa coroplético:** não há shapefile das regiões de saúde do RJ no projeto.
@@ -272,9 +350,10 @@ Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
 
 ## Pendências
 
-1. **Repor documentos ausentes:** `HANDOFF.md` e `PLANO_METODOLOGICO_GLMM_COX.md`
-   (especificação/continuidade) não estão mais na pasta; recomenda-se repô-los ou
-   substituí-los por este README.
+1. **Documentos de continuidade:** `HANDOFF.md` foi reposto em 3 de outubro de 2026
+   (estado da aquisição, dos recortes CID versionados e das auditorias). Falta o
+   `PLANO_METODOLOGICO_GLMM_COX.md` original; enquanto isso, este README e o
+   `HANDOFF.md` fazem as vezes de especificação.
 2. **Decidir sobre a UTI** no modelo principal ou apresentar as duas versões
    (retirá-la eleva o ICC a ~17%).
 3. **Produzir o mapa** das regiões de saúde quando a malha territorial estiver
@@ -289,6 +368,7 @@ Em 2 de outubro de 2026 foram removidos cerca de 320 MB de arquivos obsoletos:
 | Item | Caminho |
 |---|---|
 | Relatório executivo final | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
+| Handoff / continuidade | [`HANDOFF.md`](HANDOFF.md) |
 | Relatório final | [`12_relatorios/RELATORIO_FINAL.md`](12_relatorios/RELATORIO_FINAL.md) |
 | Manuscrito | [`08_manuscrito/manuscrito.md`](08_manuscrito/manuscrito.md) |
 | Matriz de literatura | [`07_literatura/MATRIZ_LITERATURA.md`](07_literatura/MATRIZ_LITERATURA.md) |

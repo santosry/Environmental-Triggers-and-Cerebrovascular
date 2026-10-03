@@ -19,10 +19,15 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\05_glmm_principal.R"        # GLMM + FDR (~3 min)
 & $R "02_scripts\06_glmm_uti.R"              # tratamento da UTI (Mundlak)
 & $R "02_scripts\07_auditoria_consistencia.R"
+& $R "02_scripts\12_auditoria_geral.R"         # auditoria do repositorio
 & $R "02_scripts\08_glmm_robustez.R"         # 18 cenarios (~40 min)
 & $R "02_scripts\09_conferencia_motores.R"   # glmmTMB x lme4 (processo isolado)
 & $R "02_scripts\10_figuras.R"
+& $R "02_scripts\11_exploratorio.R"          # raca/cor, comorbidade, natureza juridica
 ```
+
+> 🎨 Todas as figuras usam a paleta **viridis** (uniforme, legível em cinza e segura para
+> daltonismo).
 
 ## Referências rápidas
 
