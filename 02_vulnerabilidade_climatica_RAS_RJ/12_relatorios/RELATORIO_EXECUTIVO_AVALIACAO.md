@@ -129,7 +129,7 @@ enquadramento de apoio institucional ancorado no Plano Estadual.
 | Funil: ingênuos → ajustados | 102 → 3 (de 206) |
 | AUC condicional / marginal | 0,740 / 0,690 |
 | Taxa de internação 2010 → 2024 | 94,76 → 125,97/100.000 |
-| Mortalidade populacional 2010 → 2024 | 65,66 → 58,33/100.000 |
+| Mortalidade populacional 2010 → 2024 (I60–I69 + G45/G46) | 65,68 → 58,38/100.000 |
 | Custo (corrente / dez-2024) | R$ 535,1 mi / R$ 790,6 mi |
 | ISU estadual | 92,39% |
 | Auditoria | 75 OK, 0 erro |
