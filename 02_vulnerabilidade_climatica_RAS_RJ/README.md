@@ -156,6 +156,10 @@ manuscrito.
 | `17_analises_territoriais_legado.py` | (Histórico) tendências, taxas, fluxo, permanência e custo. |
 | `18_mortalidade_sim_legado.py` | (Histórico) mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
+| `20_baixar_cnes_sia.R` | Download dos 13 subsistemas do CNES e dos 12 do SIA (RJ) via `microdatasus`, para caracterizar a capacidade instalada e a produção ambulatorial da RAS. |
+| `21_explorar_ras_cnes_sia.R` | Exploração dos dados de CNES/SIA baixados: leitos (UTI), equipamentos de imagem, serviços especializados, habilitações, profissionais, estabelecimentos e produção ambulatorial. |
+| `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
+| `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
@@ -197,7 +201,7 @@ manuscrito.
 | MOR | **2,065** (IC95% 1,911–2,253) |
 | AUC condicional | 0,740 |
 | Coeficientes significativos após FDR | **14 de 19** |
-| ISU estadual por DCV | **92,38%** |
+| ISU estadual por DCV* | **92,39%** |
 
 **Composição:** I60–I69 = 267.746 internações (90,55%; mortalidade 19,58%);
 G45/G46 = 27.927 (9,45%; 12,16%). Subtipos com maior letalidade: isquêmico (I63,
@@ -232,7 +236,9 @@ sexo = feminino, caráter = eletiva, região = Metropolitana I.
 | Noroeste | 93,51 |
 | … | … |
 | Baixada Litorânea | 91,50 |
-| **Estado do Rio de Janeiro** | **92,38** |
+| **Estado do Rio de Janeiro** | **92,39** |
+
+*A série de mortalidade do ISU passou a incluir I60–I69 e os blocos G45/G46 (147.611 óbitos).*
 
 A amplitude regional do ISU por DCV é de apenas 2,25 p.p. (4,68 p.p. com corte em 65
 anos): a mortalidade cerebrovascular já se concentra em idades avançadas, e o
@@ -385,9 +391,24 @@ mais armazenados. O script `11_exploratorio.R` ganhou o atalho
 
 ## Pendências
 
-1. **Documentos de continuidade:** o `HANDOFF.md` foi removido em 3 de outubro de 2026 a
-   pedido. Falta o `PLANO_METODOLOGICO_GLMM_COX.md` original; este README faz as vezes de
-   especificação.
+**Concluído nesta fase:** padronização etária direta (script 22; `tab28`),
+ISU alinhado a I60–I69 + G45/G46, consistência dos custos conferida, sensibilidade a I64
+já existente na robustez (S8), `sessionInfo`/lista de pacotes, backup do manuscrito,
+otimização do script 01 (não tenta mais a competência 2025-12) e do script 11
+(`GLMM_SO_FIGURAS=1`).
+
+**Documentos de submissão** gerados em `08_manuscrito/` (não versionados): folha de
+rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e as versões
+`.docx` do manuscrito e dos documentos.
+
+**Bloqueio de rede:** o FTP do DATASUS não transfere dados neste ambiente (o canal
+passivo expira); os scripts `20` e `21` (CNES/SIA) estão prontos e devem ser rodados em
+rede com acesso ao DATASUS. Enquanto isso, a costura com o apoio institucional no
+manuscrito se apoia nos indicadores já disponíveis (fluxo, concentração, funil e
+heterogeneidade hospitalar).
+
+1. **Preencher a folha de rosto** (autores, ORCID, autor correspondente) e assinar o
+   termo de autoria.
 2. **Decidir sobre a UTI** no modelo principal ou apresentar as duas versões
    (retirá-la eleva o ICC a ~17%).
 3. **Produzir o mapa** das regiões de saúde quando a malha territorial estiver

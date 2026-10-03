@@ -1,0 +1,4 @@
+EXPLORACAO CNES/SIA - CAPACIDADE E PRODUCAO DA RAS | inicio: 2026-10-03 13:05:56
+arquivos encontrados: 0
+Nenhum arquivo em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/brutos_cnes_sia.
+Rode 02_scripts/20_baixar_cnes_sia.R em rede com acesso ao FTP do DATASUS.
