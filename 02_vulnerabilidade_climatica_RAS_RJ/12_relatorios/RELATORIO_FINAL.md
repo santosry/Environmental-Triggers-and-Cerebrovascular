@@ -1,5 +1,11 @@
 # RELATÓRIO FINAL — Nova fase
 
+> **Nota de versão (histórico).** Este relatório refere-se à série de mortalidade
+> **I60–I69 apenas** (147.551 óbitos; ISU 92,38%) e antecede a inclusão dos blocos G45/G46
+> no SIM. Os números correntes (147.611 óbitos; taxas 65,68 → 58,38/100.000; ISU 92,39%)
+> estão no `08_manuscrito/manuscrito.md` e no
+> `12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`.
+
 **Título de trabalho:** Vulnerabilidade climática, morbimortalidade cerebrovascular e
 organização da Rede de Atenção à Saúde no Rio de Janeiro
 
