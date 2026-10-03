@@ -116,15 +116,16 @@ suppressWarnings({
                    by = .(macro3, ano)]
   pop_est <- pop[ano %in% 2010:2024, .(pop = sum(populacao, na.rm = TRUE)), by = ano]
 
-  co_i <- co[coorte == "I60-I69"]
+  ## coorte completa: I60-I69 + G45/G46 (ambas as classes, em todas as análises)
+  co_tot <- co
 
   ## taxas de internação
-  n_reg <- co_i[, .(n = .N), by = .(regiao_saude, ano)]
+  n_reg <- co_tot[, .(n = .N), by = .(regiao_saude, ano)]
   tx_reg <- merge(n_reg, pop_reg, by = c("regiao_saude", "ano"))
   tx_reg[, taxa := n / pop * 1e5]
-  n_est <- co_i[, .(n = .N), by = ano]
+  n_est <- co_tot[, .(n = .N), by = ano]
   tx_est <- merge(n_est, pop_est, by = "ano"); tx_est[, taxa := n / pop * 1e5]
-  n_macro <- co_i[, .(n = .N), by = .(macro3, ano)]
+  n_macro <- co_tot[, .(n = .N), by = .(macro3, ano)]
   tx_macro <- merge(n_macro, pop_macro, by = c("macro3", "ano")); tx_macro[, taxa := n / pop * 1e5]
 
   ## taxas de mortalidade SIM
@@ -152,7 +153,7 @@ suppressWarnings({
   salvar(g, "fig_ex01_taxa_internacao_estado.png")
 
   ## ================= 2. internação x mortalidade estadual =================
-  ob_ano <- co_i[, .(obitos = sum(obito_hospitalar), n = .N), by = ano][order(ano)][, pct := 100 * obitos / n]
+  ob_ano <- co_tot[, .(obitos = sum(obito_hospitalar), n = .N), by = ano][order(ano)][, pct := 100 * obitos / n]
   p_ca <- cochran_armitage(ob_ano$obitos, ob_ano$n, seq_len(nrow(ob_ano)))
   d2 <- merge(tx_est[, .(ano, taxa)], ob_ano[, .(ano, pct)], by = "ano")
   g <- ggplot(d2, aes(ano)) +
@@ -206,7 +207,7 @@ suppressWarnings({
   salvar(g, "fig_ex05_mortalidade_sim_regiao.png", w = 9.5, h = 5.5)
 
   ## ================= 6. piramide etária =================
-  pir <- co_i[!is.na(faixa), .(n = .N), by = .(faixa, sexo)][sexo %in% c("M", "F")]
+  pir <- co_tot[!is.na(faixa), .(n = .N), by = .(faixa, sexo)][sexo %in% c("M", "F")]
   pir[, n := ifelse(sexo == "M", -n, n)]
   g <- ggplot(pir, aes(faixa, n, fill = sexo)) +
     geom_col(width = 0.8) + coord_flip() +
@@ -218,7 +219,7 @@ suppressWarnings({
   salvar(g, "fig_ex06_piramide_etaria.png", w = 8, h = 4.5)
 
   ## ================= 7. letalidade por faixa e sexo =================
-  let <- co_i[!is.na(faixa), .(obitos = sum(obito_hospitalar), n = .N), by = .(faixa, sexo)][sexo %in% c("M", "F")]
+  let <- co_tot[!is.na(faixa), .(obitos = sum(obito_hospitalar), n = .N), by = .(faixa, sexo)][sexo %in% c("M", "F")]
   let[, `:=`(pct = 100 * obitos / n)]
   let[, lo := 100 * (qbeta(0.025, obitos + 0.5, n - obitos + 0.5))]
   let[, hi := 100 * (qbeta(0.975, obitos + 0.5, n - obitos + 0.5))]
@@ -265,7 +266,7 @@ suppressWarnings({
   salvar(g, "fig_ex09_permanencia_subtipo.png", w = 9, h = 5)
 
   ## ================= 10. custo por região =================
-  custo <- co_i[!is.na(VAL_TOT) & VAL_TOT > 0]
+  custo <- co_tot[!is.na(VAL_TOT) & VAL_TOT > 0]
   custo[, regiao_saude := ROT(regiao_saude)]
   kw_custo <- kruskal.test(VAL_TOT ~ regiao_saude, data = custo)
   g <- ggplot(custo, aes(reorder(regiao_saude, VAL_TOT, FUN = median), VAL_TOT)) +

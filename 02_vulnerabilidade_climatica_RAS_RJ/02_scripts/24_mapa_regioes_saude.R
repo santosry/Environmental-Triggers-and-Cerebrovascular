@@ -75,7 +75,8 @@ suppressWarnings({
 
   co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
               na.strings = c("NA", ""), select = c("ano", "regiao_saude", "coorte"))
-  co <- co[coorte == "I60-I69" & ano == 2024, .(int = .N), by = regiao_saude]
+  ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
+  co <- co[ano == 2024, .(int = .N), by = regiao_saude]
 
   sim <- fread(file.path(PROC, "sim_cid_estudo_2010_2024.csv"), encoding = "UTF-8",
                colClasses = "character", na.strings = c("NA", ""))
@@ -106,14 +107,14 @@ suppressWarnings({
   mapa <- function(var, titulo, subtitulo, nome) {
     g <- ggplot(ind) +
       geom_sf(aes(fill = .data[[var]]), colour = "white", linewidth = 0.3) +
-      geom_sf_text(data = cen, aes(label = rotulo), size = 2.3, colour = "grey15",
+      geom_sf_text(data = cen, aes(label = rotulo), size = 3.8, colour = "grey15",
                    lineheight = 0.85) +
       scale_fill_viridis_c(option = "D", name = NULL,
                            labels = function(x) format(x, big.mark = ".")) +
       labs(title = titulo, subtitle = subtitulo) +
-      theme_void(base_size = 11) +
+      theme_void(base_size = 15) +
       theme(plot.title = element_text(face = "bold"),
-            plot.subtitle = element_text(size = 8.5),
+            plot.subtitle = element_text(size = 11),
             plot.margin = margin(4, 4, 4, 4))
     ggsave(file.path(FIG_EX, nome), g, width = 8, height = 6, dpi = 300,
            device = ragg::agg_png)
@@ -132,7 +133,8 @@ suppressWarnings({
   co2 <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
                na.strings = c("NA", ""), select = c("ano", "coorte", "obito_hospitalar"))
   co2[, ano := as.integer(ano)]
-  n_est <- co2[coorte == "I60-I69", .(n = .N, obitos = sum(obito_hospitalar)), by = ano]
+  ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
+  n_est <- co2[, .(n = .N, obitos = sum(obito_hospitalar)), by = ano]
   tx <- merge(n_est, pop_est, by = "ano"); tx[, taxa := 1e5 * n / pop]
   tx[, letal := 100 * obitos / n]
   painelA <- ggplot(tx, aes(ano)) +
@@ -145,13 +147,14 @@ suppressWarnings({
     scale_colour_viridis_d(option = "D", end = 0.85) +
     labs(title = "A. Internação e letalidade hospitalar por DCV, 2010-2024",
          x = NULL, colour = NULL) +
-    theme_minimal(base_size = 10) +
-    theme(legend.position = "top", plot.title = element_text(face = "bold"))
+    theme_minimal(base_size = 14) +
+    theme(legend.position = "top", legend.text = element_text(size = 11),
+          plot.title = element_text(face = "bold"))
 
   painelB <- g_int + labs(title = "B. Taxa de internação por DCV em 2024")
   fig1 <- painelA / painelB
   ggsave(file.path(FIG_MAN, "figura1_taxa_internacao_mapa.jpg"), fig1,
-         width = 8.5, height = 11, dpi = 300, device = ragg::agg_jpeg, quality = 95)
+         width = 9, height = 12, dpi = 300, device = ragg::agg_jpeg, quality = 95)
   say("gravada figura1_taxa_internacao_mapa.jpg (serie + mapa)")
   say("fim: ", format(Sys.time()))
   close(logcon)

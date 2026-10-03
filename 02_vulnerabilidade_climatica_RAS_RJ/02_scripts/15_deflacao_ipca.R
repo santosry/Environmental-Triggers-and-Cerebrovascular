@@ -70,7 +70,8 @@ suppressWarnings({
   co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
               encoding = "UTF-8", na.strings = c("NA", ""),
               select = c("ano", "regiao_saude", "coorte", "cid3", "VAL_TOT"))
-  co <- co[coorte == "I60-I69"]
+  ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
+  co <- co[]
 
   MACRO_MAP <- c(
     "Metropolitana I" = "Metropolitana", "Metropolitana II" = "Metropolitana",
@@ -135,7 +136,7 @@ suppressWarnings({
                 format(round(por_regiao$custo_corrente[i]), big.mark = "."),
                 format(round(por_regiao$custo_deflacionado_dez2024[i]), big.mark = ".")))
   say("")
-  say("Nota: recorte I60-I69 da coorte (mesma base dos indicadores de custo do")
+  say("Nota: coorte completa (I60-I69 + G45/G46), mesma base dos indicadores de custo do")
   say("      manuscrito). Serie do IPCA em cache local; fatores pelo indice medio anual.")
   say("fim: ", format(Sys.time()))
   close(logcon)

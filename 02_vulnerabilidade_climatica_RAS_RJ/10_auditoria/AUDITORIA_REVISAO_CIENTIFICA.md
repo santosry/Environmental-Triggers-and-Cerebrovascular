@@ -94,17 +94,18 @@ e todas as referências são citadas no texto.
 
 1. **Referências 6, 7 e 11:** enunciado reformulado para não atribuir ao Rio de Janeiro
    uma concentração que essas referências não demonstram (ver item 4.3).
-2. **Relatórios históricos:** `RELATORIO_FINAL.md` e `RELATORIO_EXECUTIVO_FINAL.md`
-   receberam **nota de versão** informando que se referem à série **I60–I69 apenas**
-   (147.551 óbitos; ISU 92,38%) e que os números correntes (147.611; 65,68→58,38; 92,39%)
-   constam do manuscrito e do relatório de avaliação.
+2. **Relatórios históricos:** `RELATORIO_FINAL.md` recebeu **nota de versão** informando
+   que se refere à série **I60–I69 apenas** (147.551 óbitos; ISU 92,38%) e que os números
+   correntes (147.611; 65,68→58,38; 92,39%) constam do manuscrito. Os relatórios
+   executivos foram removidos.
 3. **Rigor do manuscrito:** analisado parágrafo a parágrafo, com reforço de tópico frasal,
    conectivos, precisão terminológica e nível de certeza.
 
 ## 8. Verificação final
 
-- Números preservados e coerentes entre resumo, resultados e conclusão
-  (295.673; 55.827; 147.611; 14,95%; 11,69%; 25,7%; 17,7%; 33,6%; 65,68→58,38).
+- Números coerentes entre resumo, resultados e conclusão
+  (295.673; 55.827; 147.611; 14,95%; 11,69%; 25,7%; 16,9%; 31,3%; 65,68→58,38),
+  recalculados com as **duas classes** (I60-I69 + G45/G46) em todas as análises (seção 10).
 - Sem travessões; citações em `<sup>` sem espaço anterior; tabelas/figuras na ordem
   Tabela 1 → Figura 1 → Tabela 2 → Tabela 3 → Figura 2.
 - Todas as 17 referências citadas.
@@ -117,3 +118,37 @@ Todas as afirmações numéricas foram confrontadas com os resultados, as tabela
 scripts do próprio repositório do estudo. Não foi criada nenhuma evidência, referência ou
 estimativa. Os pontos que dependiam de documentação externa ao repositório foram
 reformulados para o nível de certeza compatível com a evidência disponível.
+
+## 10. Duas classes de códigos em todas as análises (revisão de 2026-10-03)
+
+Toda a análise passou a usar explicitamente as **duas classes de códigos** de doenças
+cerebrovasculares, tanto para internações (SIH) quanto para óbitos (SIM): **I60–I69 e os
+blocos G45/G46**. As análises principais (GLMM de letalidade, tabelas descritivas e
+séries de mortalidade) já usavam a coorte completa; os pontos que ainda restringiam a
+I60–I69 foram corrigidos e reexecutados: taxas de internação (`13`), custos (`15`),
+padronização etária (`22`) e o mapa (`24`). Novo script `26_recalculo_duas_classes.R`
+recalcula Tabela 1 (macrorregião), fluxo, concentração, custos e taxas com a coorte
+completa.
+
+| Indicador | Antes (só I60-I69) | Agora (I60-I69 + G45/G46) |
+|---|---:|---:|
+| Taxa de internação estadual, 2010 → 2024 | 94,76 → 125,97 | 112,46 → 136,79 |
+| Tendência de Mann-Kendall (tau; p) | +0,657; 0,0008 | +0,448; 0,0228 |
+| Faixa regional, 2024 | 87,1 a 284,1 | 90,6 a 319,5 |
+| Fluxo intermunicipal | 17,7% | 16,9% |
+| Dez maiores estabelecimentos | 33,6% | 31,3% |
+| Custo total (corrente / deflacionado) | R$ 535 mi / R$ 790,6 mi | R$ 565,5 mi / R$ 836,9 mi |
+| Tabela 1, Metropolitana (internações; óbito) | 164.761; 22,84% | 174.127; 22,25% |
+| Tabela 1, Centro-Sul (internações; óbito) | 70.598; 13,35% | 83.127; 13,32% |
+| Tabela 1, Norte e Noroeste (internações; óbito) | 32.415; 16,57% | 38.419; 15,63% |
+
+Principais municípios (ambas as classes): Rio de Janeiro 82.017, São Gonçalo 21.470,
+Petrópolis 16.266 e Duque de Caxias 15.781. A letalidade hospitalar permaneceu estável
+(18,88%; pico de 21,7% em 2021; Cochran-Armitage p=0,5577). Como a Tabela 1 passa a
+referir-se à coorte completa, ela foi substituída pelos valores das duas classes.
+
+Além disso, o mapa coroplético das nove regiões de saúde foi produzido com a malha
+municipal do `geobr` (IBGE/IPEA) dissolvida por região (`24_mapa_regioes_saude.R`), e a
+Figura 1 passou a combinar a série temporal (painel A) e o mapa de 2024 (painel B). Os
+rótulos das figuras do manuscrito (Figuras 1 e 2) foram ampliados para leitura em
+tamanho final de publicação.

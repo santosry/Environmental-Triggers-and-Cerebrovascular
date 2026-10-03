@@ -103,7 +103,8 @@ suppressWarnings({
   ## ---------------- 2. eventos por idade ----------------
   co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding="UTF-8",
               na.strings=c("NA",""), select=c("ano","regiao_saude","idade_anos","coorte"))
-  co <- co[coorte == "I60-I69" & !is.na(idade_anos)]
+  ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
+  co <- co[!is.na(idade_anos)]
   co[, grupo := cut(idade_anos, breaks=CORTES, right=FALSE, labels=ROTULOS)]
   ev_sih <- co[, .(n = .N), by=.(regiao_saude, ano, grupo)]
   ev_sih <- rbind(ev_sih, co[, .(regiao_saude="ESTADO DO RJ", n=.N), by=.(ano, grupo)])

@@ -1,0 +1,32 @@
+RECALCULO COM AS DUAS CLASSES (I60-I69 + G45/G46) | 2026-10-03 17:18:07
+coorte completa: 295.673 internacoes
+  I60-I69: 267.746 | G45/G46: 27.927
+  obitos intra-hospitalares: 55.827 (18.88%)
+
+--- Tabela 1 (macrorregiao, ambas as classes) ---
+
+--- composicao diagnostica (%) ---
+
+--- fluxo intermunicipal ---
+  ambas as classes: 16.91% (49994 internacoes)
+  I60-I69 apenas:   17.67%
+
+--- principais municipios de residencia ---
+
+--- concentracao por estabelecimento (CNES) ---
+  10 maiores: 31.26% | 20 maiores: 48.77% | n estabelecimentos: 254
+
+--- custos ---
+  corrente:      R$ 565.455.362
+  deflacionado:  R$ 836.891.538
+  medio corrente: R$ 1912.43
+
+--- serie estadual de internacao (ambas as classes) ---
+  2010: 112.46/100 mil | 2024: 136.79/100 mil
+  Mann-Kendall tau = 0.448 | p = 0.0228
+  letalidade 2010: 19.12% | 2024: 17.52%
+
+--- taxas de internacao regionais 2024 (ambas as classes) ---
+  faixa: 90.6 a 319.5/100 mil
+
+fim: 2026-10-03 17:18:09
