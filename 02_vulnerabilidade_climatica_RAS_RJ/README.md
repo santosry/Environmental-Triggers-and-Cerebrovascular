@@ -156,8 +156,8 @@ manuscrito.
 | `17_analises_territoriais_legado.py` | (Histórico) tendências, taxas, fluxo, permanência e custo. |
 | `18_mortalidade_sim_legado.py` | (Histórico) mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
-| `20_baixar_cnes_sia.R` | Download dos 13 subsistemas do CNES e dos 12 do SIA (RJ) via `microdatasus`, para caracterizar a capacidade instalada e a produção ambulatorial da RAS. |
-| `21_explorar_ras_cnes_sia.R` | Exploração dos dados de CNES/SIA baixados: leitos (UTI), equipamentos de imagem, serviços especializados, habilitações, profissionais, estabelecimentos e produção ambulatorial. |
+| `20_baixar_cnes_sia_api.R` | Download da **capacidade instalada e produção da RAS** pela **API de Dados Abertos do Ministério da Saúde** (HTTPS, contorna o bloqueio do FTP): leitos (UTI), equipamentos de imagem, serviços especializados, estabelecimentos, profissionais e SIA. Percorre os CNES da coorte e grava um `.rds` por endpoint. |
+| `21_explorar_ras_cnes_sia.R` | Exploração dos dados de CNES/SIA: por hospital e por região, conta UTI, tomografia, ressonância, hemodinâmica, serviço de neurologia e neurologistas/neurocirurgiões. Gera `tab29`, `tab29b` e a figura `fig_ex27`. |
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
 | `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
 
@@ -401,11 +401,15 @@ otimização do script 01 (não tenta mais a competência 2025-12) e do script 1
 rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e as versões
 `.docx` do manuscrito e dos documentos.
 
-**Bloqueio de rede:** o FTP do DATASUS não transfere dados neste ambiente (o canal
-passivo expira); os scripts `20` e `21` (CNES/SIA) estão prontos e devem ser rodados em
-rede com acesso ao DATASUS. Enquanto isso, a costura com o apoio institucional no
-manuscrito se apoia nos indicadores já disponíveis (fluxo, concentração, funil e
-heterogeneidade hospitalar).
+**Rota de dados da RAS:** o FTP do DATASUS bloqueia o canal de dados em muitas redes; o
+download de CNES/SIA passou a ser feito **por HTTPS, pela API de Dados Abertos do
+Ministério da Saúde** (`20_baixar_cnes_sia_api.R`), que traz os sistemas **úteis à
+análise** (leitos/UTI, equipamentos de imagem, serviços especializados, estabelecimentos,
+profissionais e SIA). O script percorre os 254 CNES da coorte e grava um `.rds` por
+endpoint em `01_dados/brutos_cnes_sia/` (não versionados por serem dados brutos). O
+`21` consolida a capacidade por região: 254 hospitais, 259 leitos de UTI, 28 com
+tomografia, 7 com ressonância, 5 com hemodinâmica e 10 com serviço de
+neurologia/neurocirurgia.
 
 1. **Preencher a folha de rosto** (autores, ORCID, autor correspondente) e assinar o
    termo de autoria.

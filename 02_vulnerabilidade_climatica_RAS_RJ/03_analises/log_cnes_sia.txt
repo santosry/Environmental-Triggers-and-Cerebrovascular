@@ -1,9 +1,8 @@
 =====================================================================
 DOWNLOAD CNES/SIA via microdatasus 2.5.0
 sistemas: 25 | anos: 2024 | meses: 1,2,3,4,5,6,7,8,9,10,11,12 | uf: RJ
-inicio: 2026-10-03 13:26:26
+inicio: 2026-10-03 13:27:06
 =====================================================================
 raiz da frente: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM/02_vulnerabilidade_climatica_RAS_RJ
-CNES_DRYRUN=1: apenas valida caminhos e lista os sistemas, sem baixar.
-sistemas (25): CNES-LT, CNES-ST, CNES-DC, CNES-EQ, CNES-SR, CNES-HB, CNES-PF, CNES-EP, CNES-RC, CNES-IN, CNES-EE, CNES-EF, CNES-GM, SIA-AB, SIA-ABO, SIA-ACF, SIA-AD, SIA-AN, SIA-AM, SIA-AQ, SIA-AR, SIA-ATD, SIA-PA, SIA-PS, SIA-SAD
-fim: 2026-10-03 13:26:26
+    tentativa 1 falhou: Failed to connect to ftp.datasus.gov.br port 5790 after 42311 ms: Could not connect to server
+    tentativa 2 falhou: Failed to connect to ftp.datasus.gov.br port 5528 after 42351 ms: Could not connect to server

@@ -1,4 +1,17 @@
-EXPLORACAO CNES/SIA - CAPACIDADE E PRODUCAO DA RAS | inicio: 2026-10-03 13:26:26
-arquivos encontrados: 0
-Nenhum arquivo em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM/02_vulnerabilidade_climatica_RAS_RJ/01_dados/brutos_cnes_sia.
-Rode 02_scripts/20_baixar_cnes_sia.R em rede com acesso ao FTP do DATASUS.
+CAPACIDADE INSTALADA DA RAS (CNES/SIA) | inicio: 2026-10-03 13:56:17
+arquivos da API: 6 (api_cnes_equipamentos.rds, api_cnes_estabelecimentos.rds, api_cnes_leitos.rds, api_cnes_profissionais.rds, api_cnes_servicos_especializados.rds, api_sia_procedimentos_ambulatoriais.rds)
+
+--- CAPACIDADE POR REGIAO DE SAUDE ---
+  Metropolitana II     hosp=31 | UTI= 154 | TC= 1 | RM= 0 | hemo= 0 | neuro= 0 | prof.neuro= 1
+  Medio Paraiba        hosp=25 | UTI=   0 | TC= 1 | RM= 2 | hemo= 0 | neuro= 0 | prof.neuro= 1
+  Serrana              hosp=26 | UTI=  37 | TC= 1 | RM= 1 | hemo= 0 | neuro= 1 | prof.neuro= 5
+  Baixada Litoranea    hosp=24 | UTI=  21 | TC= 2 | RM= 1 | hemo= 0 | neuro= 0 | prof.neuro= 4
+  Metropolitana I      hosp=94 | UTI=  32 | TC=17 | RM= 2 | hemo= 3 | neuro= 6 | prof.neuro=14
+  Norte                hosp=16 | UTI=  10 | TC= 4 | RM= 0 | hemo= 1 | neuro= 2 | prof.neuro= 1
+  Noroeste             hosp=19 | UTI=   0 | TC= 1 | RM= 1 | hemo= 1 | neuro= 1 | prof.neuro= 3
+  Centro-Sul           hosp=14 | UTI=   5 | TC= 0 | RM= 0 | hemo= 0 | neuro= 0 | prof.neuro= 0
+  Baia da Ilha Grande  hosp= 5 | UTI=   0 | TC= 1 | RM= 0 | hemo= 0 | neuro= 0 | prof.neuro= 1
+
+  TOTAL: hospitais=254 | UTI=259 | tomografia=28 | ressonancia=7 | hemodinamica=5 | serviço neuro=10 | neurologistas=30
+figura gravada: fig_ex27_ras_capacidade.png
+fim: 2026-10-03 13:56:18
