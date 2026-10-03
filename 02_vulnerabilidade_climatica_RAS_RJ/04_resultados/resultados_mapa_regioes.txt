@@ -1,0 +1,14 @@
+MAPAS POR REGIAO DE SAUDE | inicio: 2026-10-03 17:08:52
+municipios na malha: 92 | sem regiao: 0
+indicadores 2024 por regiao:
+  Baia da Ilha Grande  pop=  270.358 | int=   462 (170.9/100k) | ob=   150 (55.5/100k)
+  Baixada Litoranea    pop=  903.171 | int=   972 (107.6/100k) | ob=   473 (52.4/100k)
+  Centro-Sul           pop=  336.061 | int=   795 (236.6/100k) | ob=   205 (61.0/100k)
+  Medio Paraiba        pop=  918.430 | int=  2609 (284.1/100k) | ob=   572 (62.3/100k)
+  Metropolitana I      pop=10.462.484 | int=  9113 (87.1/100k) | ob=  6155 (58.8/100k)
+  Metropolitana II     pop=2.043.395 | int=  3486 (170.6/100k) | ob=  1232 (60.3/100k)
+  Noroeste             pop=  353.408 | int=   629 (178.0/100k) | ob=   196 (55.5/100k)
+  Norte                pop=  969.642 | int=  1792 (184.8/100k) | ob=   520 (53.6/100k)
+  Serrana              pop=  962.730 | int=  1830 (190.1/100k) | ob=   534 (55.5/100k)
+gravada figura1_taxa_internacao_mapa.jpg (serie + mapa)
+fim: 2026-10-03 17:09:20

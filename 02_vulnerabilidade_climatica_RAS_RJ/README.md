@@ -110,6 +110,7 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\11_exploratorio.R"          # modelos exploratorios (~60 min)
 & $R "02_scripts\13_figuras_exploratorias.R" # banco de ~25 figuras
 & $R "02_scripts\19_figura_exploratorio.R"   # refaz a figura do script 11 (rapido)
+& $R "02_scripts\24_mapa_regioes_saude.R"     # mapas por regiao de saude (geobr)
 
 # 10. denominadores populacionais e custos (analise atual)
 & $R "02_scripts\14_verificacao_sidra.R"
@@ -158,6 +159,7 @@ manuscrito.
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
 | `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
+| `24_mapa_regioes_saude.R` | Mapas coropléticos das nove regiões de saúde pela malha municipal do `geobr` dissolvida; gera a Figura 1 do manuscrito (série temporal + mapa). |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
@@ -348,7 +350,7 @@ o ICC (+0,10 p.p.).
    completos. Nenhuma das duas entrou no modelo principal.
 8. **Generalização:** restrito ao Rio de Janeiro, sem validação externa.
 9. **Sem leitura causal:** desenho observacional.
-10. **Sem mapa coroplético:** não há shapefile das regiões de saúde do RJ no projeto.
+10. **Mapa coroplético:** produzido por região de saúde com a malha municipal do **geobr** dissolvida (`24_mapa_regioes_saude.R`); a malha usada é a versão 2020 do IBGE/IPEA.
 
 ---
 
