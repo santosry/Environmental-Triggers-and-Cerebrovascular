@@ -77,8 +77,8 @@ enquadramento de apoio institucional ancorado no Plano Estadual.
    a estrutura de saúde pelo **Plano Estadual de Saúde 2024-2027**, com indicação de página.
 3. **Renomear** os scripts de apoio, removendo o sufixo “legado”.
 4. **Ancorar o apoio institucional** no Plano: apoio institucional às 9 regiões pactuado na
-   CIB (pág. 356), coordenação do Planejamento Regional Integrado com apoiadores regionais do
-   COSEMS-RJ (pág. 364), linha de cuidado do AVC (pág. 480) e metas de leitos (pág. 461).
+   CIB (pág. 322), coordenação do Planejamento Regional Integrado com apoiadores regionais do
+   COSEMS-RJ (pág. 330), linha de cuidado do AVC (pág. 446) e metas de leitos (pág. 427).
 
 ---
 
@@ -122,7 +122,7 @@ enquadramento de apoio institucional ancorado no Plano Estadual.
 | Óbitos intra-hospitalares | 55.827 (18,88%) |
 | Óbitos SIM (I60–I69 / com G45/G46) | 147.551 / 147.611 |
 | Estabelecimentos / regiões de saúde | 254 / 9 |
-| Hospitais no estado (Plano, pág. 181) | 420 (272 com UTI) |
+| Hospitais no estado (Plano, pág. 147) | 420 (272 com UTI) |
 | VPC/ICC (faixa) | 14,95% (14,78%–17,25%) |
 | MOR | 2,065 |
 | Variância hospitalar explicada (M4) | 25,7% |
