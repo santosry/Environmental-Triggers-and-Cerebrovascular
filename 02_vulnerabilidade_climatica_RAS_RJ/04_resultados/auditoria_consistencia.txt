@@ -1,14 +1,14 @@
 =====================================================================
 AUDITORIA DE INCONGRUENCIAS E INCONSISTENCIAS
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 00:40:36
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 15:49:59
 =====================================================================
 
 =========== A. REGISTROS BRUTOS DO SIH-RD ===========
 competicoes lidas em varredura: 191
-     48/191 competicoes | 2.0 min
-     96/191 competicoes | 4.1 min
-    144/191 competicoes | 6.4 min
-    191/191 competicoes | 8.8 min
+     48/191 competicoes | 1.5 min
+     96/191 competicoes | 3.1 min
+    144/191 competicoes | 4.9 min
+    191/191 competicoes | 10.7 min
   [OK     ] Registros brutos lidos                                   11.947.354 
   [OK     ] DT_SAIDA anterior a DT_INTER                             0 
   [ATENCAO] DIAS_PERM divergente das datas (>1 dia)                  535.083 4.48%
@@ -52,14 +52,14 @@ competicoes lidas em varredura: 191
   [OK     ] Bloco G45/G46 nos arquivos brutos                        29.717 
 
 =========== C. TRIANGULACAO SIH x SIM ===========
-  obitos I60-I69 no SIM, residentes no RJ, 2010-2024: 147.551
-  desses, com local de ocorrencia hospitalar: 120.970
+  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2010-2024: 147.611
+  desses, com local de ocorrencia hospitalar: 121.018
   obitos intra-hospitalares no SIH (SUS): 55.827
-  [OK     ] Obitos hospitalares SIM (todas as fontes)                120.970 
+  [OK     ] Obitos hospitalares SIM (todas as fontes)                121.018 
   [OK     ] Obitos intra-hospitalares SIH (somente SUS)              55.827 
   [ATENCAO] Razao SIH / SIM hospitalar                               0.461 SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade
   [ATENCAO] Obitos no SIM com local ignorado                         15 afeta a comparacao entre fontes
-  tempo da leitura do SIM: 0.5 min
+  tempo da leitura do SIM: 1.0 min
 
 =========== D. MODELO E TABELAS ===========
   [OK     ] ICC da tabela coerente com sigma^2/(sigma^2+pi^2/3)      0.14945 vs 0.14945 
@@ -71,7 +71,7 @@ competicoes lidas em varredura: 191
   [OK     ] Soma de n na calibracao (condicional)                    295.673 coorte: 295.673
   [ATENCAO] Obitos esperados / observados (marginal)                 0.7319 marginal subestima por desigualdade de Jensen
   [OK     ] Obitos esperados / observados (condicional)              0.9999 previsao condicional e a calibrada
-  [OK     ] Soma dos obitos regionais igual ao total estadual do ISU 147.551 vs 147.551 
+  [OK     ] Soma dos obitos regionais igual ao total estadual do ISU 147.611 vs 147.611 
   [OK     ] Robustez reproduz o modelo principal (sigma^2)           0.57805 vs 0.57805 a coluna s2 da tabela de robustez deve repetir a do modelo principal
   [OK     ] Cenarios de robustez convergidos                         18 de 18 
 
@@ -98,4 +98,4 @@ competicoes lidas em varredura: 191
     - C | Obitos no SIM com local ignorado | 15 (afeta a comparacao entre fontes)
     - D | Obitos esperados / observados (marginal) | 0.7319 (marginal subestima por desigualdade de Jensen)
 
-fim: 2026-10-03 00:50:28
+fim: 2026-10-03 16:03:28

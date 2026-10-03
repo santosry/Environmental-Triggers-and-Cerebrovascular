@@ -236,10 +236,10 @@ plt.close(fig)
 
 # 3. MORTALIDADE — SIM
 log("=" * 72)
-log("3. MORTALIDADE (SIM, causa básica I60-I69)")
+log("3. MORTALIDADE (SIM, causa básica I60-I69 e G45/G46)")
 log("=" * 72)
 n_sim = len(sim)
-log(f"Óbitos I60-I69 (SIM, 2010-2024): {n_sim:,}")
+log(f"Óbitos I60-I69 + G45/G46 (SIM, 2010-2024): {n_sim:,}")
 log("Local de ocorrência:")
 log(sim["local_ocorrencia"].value_counts(dropna=False).to_string())
 log("Óbitos por CID3 (SIM):")

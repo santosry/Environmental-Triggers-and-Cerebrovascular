@@ -2,7 +2,7 @@
 """
 02b_analises_sim.py
 ===================
-Consolida e analisa o SIM (óbitos por DCV, causa básica I60-I69) de forma
+Consolida e analisa o SIM (óbitos por DCV, causa básica I60-I69 e G45/G46) de forma
 independente, via pyreadr (rápido), sem depender da consolidação lenta do SIH.
 
 Produz tabelas de mortalidade populacional e indicadores territoriais.
@@ -62,7 +62,7 @@ for ano in range(2010, 2025):
     df = list(pyreadr.read_r(f).values())[0]
     df.columns = [str(c) for c in df.columns]
     caus = df["CAUSABAS"].astype("string").str.slice(0, 3)
-    df = df[caus.isin([f"I6{i}" for i in range(10)])].copy()
+    df = df[caus.isin([f"I6{i}" for i in range(10)] + ["G45", "G46"])].copy()
     mun = df["CODMUNRES"].astype("string").str.zfill(6)
     df["MUNIC_RES6"] = mun
     df = df[mun.str.startswith("33")]
@@ -102,7 +102,7 @@ def log(*a):
     line = " ".join(str(x) for x in a); resumo.append(line); print(line, flush=True)
 
 log("=" * 70)
-log("ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69, 2010-2024)")
+log("ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69 e G45/G46, 2010-2024)")
 log("=" * 70)
 n = len(sim)
 log(f"Óbitos totais: {n:,}")

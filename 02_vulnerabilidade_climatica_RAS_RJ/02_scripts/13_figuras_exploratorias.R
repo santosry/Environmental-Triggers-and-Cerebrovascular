@@ -199,7 +199,7 @@ suppressWarnings({
     geom_line(linewidth = 0.7) + geom_point(size = 1.3) +
     scale_colour_manual(values = CORES9) +
     labs(title = "Taxa de mortalidade por DCV nas regiões de saúde",
-         subtitle = "Causa básica I60–I69 (SIM), RJ, 2010–2024, por 100.000",
+         subtitle = "Causa básica I60–I69 e G45/G46 (SIM), RJ, 2010–2024, por 100.000",
          x = NULL, y = "Óbitos por 100.000", colour = NULL) +
     scale_x_continuous(breaks = seq(2010, 2024, 2)) +
     theme(legend.position = "right", legend.text = element_text(size = 7))
