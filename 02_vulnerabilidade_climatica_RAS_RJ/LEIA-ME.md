@@ -3,9 +3,9 @@
 > 📖 A documentação completa desta frente está em **[`README.md`](README.md)**.
 > Este arquivo mantém apenas um atalho e a ordem de execução mais usada.
 
-**Projeto:** Vulnerabilidade climática, morbimortalidade cerebrovascular e RAS no Rio de
+**Projeto:** Morbimortalidade cerebrovascular e RAS no Rio de
 Janeiro — estudo ecológico 2010–2024 com GLMM logístico multinível da mortalidade
-intra-hospitalar. Última atualização: 2 de outubro de 2026.
+intra-hospitalar. Última atualização: 3 de outubro de 2026.
 
 ## Cadeia de execução (na raiz desta frente)
 
