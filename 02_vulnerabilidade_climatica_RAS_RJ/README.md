@@ -379,6 +379,24 @@ mais armazenados. O script `11_exploratorio.R` ganhou o atalho
 
 ---
 
+## Especificação do modelo multinível
+
+O modelo logístico multinível da mortalidade intra-hospitalar é especificado por:
+
+```
+logit P(óbito) = β₀ + β'X + u_j
+
+X   : idade padronizada, sexo, subtipo diagnóstico, caráter da internação,
+      uso de UTI, fluxo intermunicipal e região de saúde de residência
+u_j : intercepto aleatório por estabelecimento, u_j ~ N(0, σ²)
+```
+
+O ajuste usa `glmmTMB` (aproximação de Laplace), com conferência em `lme4` e quadratura
+adaptativa de Gauss-Hermite. A heterogeneidade hospitalar é resumida pelo VPC/ICC =
+σ²/(σ²+π²/3) e pela MOR = exp(√(2σ²)·Φ⁻¹(0,75)).
+
+---
+
 ## Pendências
 
 **Concluído nesta fase:** padronização etária direta (script 22; `tab28`),
