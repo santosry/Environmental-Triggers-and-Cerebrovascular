@@ -27,27 +27,27 @@ UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/124.0 Safari/537.36")
 
 ARTIGOS = [
-    ("Mendes_redes_atencao", "As redes de atenção à saúde", "10.1590/s1413-81232010000500005"),
-    ("Fernandes_regionalizacao", "Regionalização no SUS: uma revisão crítica", "10.1590/1413-81232017224.26412016"),
-    ("Lavras_APS_redes", "Atenção primária à saúde e a organização de redes regionais de atenção à saúde no Brasil", "10.1590/s0104-12902011000400005"),
-    ("Padilha_governanca", "Crise no Brasil e impactos na frágil governança regional e federativa da política de saúde", "10.1590/1413-812320182412.25392019"),
-    ("Felisberto_vigilancia", "Vigilância em Saúde: eixo orientador necessário a um adequado planejamento da descentralização", "10.1590/s1413-81232013000500001"),
-    ("Albuquerque_avaliacao", "Avaliação de desempenho da regionalização da vigilância em saúde em seis Regiões de Saúde brasileiras", "10.1590/0102-311x00065218"),
-    ("Albuquerque_desafios", "Desafios para regionalização da Vigilância em Saúde na percepção de gestores", "10.1590/0103-1104202112802"),
-    ("Lotufo_carga_DCV", "Doença cerebrovascular no Brasil de 1990 a 2015: Global Burden of Disease 2015", None),
-    ("Nilson_custos", "Custos atribuíveis à obesidade, hipertensão e diabetes no Sistema Único de Saúde, Brasil, 2018", None),
-    ("Lopes_AVC_Hiperdia", "Hospitalização por AVC isquêmico no Brasil: estudo ecológico sobre possível impacto do Hiperdia", None),
-    ("Souto_iniquidades", "Iniquidades raciais no acesso à reabilitação após AVC", None),
-    ("mortalidade_DCV_Brasil", "Tendência da Mortalidade por Doenças Cerebrovasculares no Brasil (1996-2015) e Associação com Desenvolvimento Humano e Vulnerabilidade Social", "10.36660/abc.20190532"),
-    ("Frutuoso_gestao_local", "Gestão local de saúde em território de vulnerabilidade: motivações e racionalidades", "10.1590/0103-110420151050002003"),
+    ("ref01_lotufo_carga_DCV_2017", "Doença cerebrovascular no Brasil de 1990 a 2015: Global Burden of Disease 2015", None),
+    ("ref02_mendes_redes_atencao", "As redes de atenção à saúde", "10.1590/s1413-81232010000500005"),
+    ("ref03_regionalizacao_2019", "Por uma análise política dos impasses da regionalização do SUS", "10.1590/0102-311x00077019"),
+    ("ref04_albuquerque_avaliacao", "Avaliação de desempenho da regionalização da vigilância em saúde em seis Regiões de Saúde brasileiras", "10.1590/0102-311x00065218"),
+    ("ref05_albuquerque_desafios", "Desafios para regionalização da Vigilância em Saúde na percepção de gestores", "10.1590/0103-1104202112802"),
+    ("ref06_planejamento_2024", "Política, Planejamento e Gestão em Saúde: reflexões a partir da experiência de CSP", "10.1590/0102-311xpt164524"),
+    ("ref07_vulnerabilidade_2021", "Vulnerabilidade social e crise sanitária no Brasil", "10.1590/0102-311x00071721"),
+    ("ref08_souto_iniquidades", "Iniquidades raciais no acesso à reabilitação após AVC", None),
+    ("ref09_mortalidade_DCV_Brasil", "Tendência da Mortalidade por Doenças Cerebrovasculares no Brasil (1996-2015) e Associação com Desenvolvimento Humano e Vulnerabilidade Social", "10.36660/abc.20190532"),
+    ("ref10_obitos_AVC_2019", "Perfil dos óbitos por acidente vascular cerebral não especificado após investigação de códigos garbage em 60 cidades do Brasil, 2017", "10.1590/1980-549720190013.supl.3"),
+    ("ref11_atencao_especializada_2022", "Atenção Especializada e transporte sanitário na perspectiva de integração às Redes de Atenção à Saúde", "10.1590/1413-812320222710.07432022"),
+    ("ref12_padilha_governanca", "Crise no Brasil e impactos na frágil governança regional e federativa da política de saúde", "10.1590/1413-812320182412.25392019"),
+    ("ref13_nilson_custos", "Custos atribuíveis à obesidade, hipertensão e diabetes no Sistema Único de Saúde, Brasil, 2018", None),
 ]
 
 # Fallback direto para itens cujo PDF não esta no Crossref ou cujo domínio bloqueia.
 FALLBACK = {
     # PAHO/IRIS retorna 403 no link classico; este e o bitstream via API DSpace.
-    "Nilson_custos": "https://iris.paho.org/server/api/core/bitstreams/2f4bb3c1-cb7e-4979-9214-167d945f6b8a/content",
+    "ref13_nilson_custos": "https://iris.paho.org/server/api/core/bitstreams/2f4bb3c1-cb7e-4979-9214-167d945f6b8a/content",
     # Arq Bras Cardiol: o Crossref so traz a pagina de destino; PDF direto:
-    "mortalidade_DCV_Brasil": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-01-0089/0066-782X-abc-116-01-0089.pdf",
+    "ref09_mortalidade_DCV_Brasil": "https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-01-0089/0066-782X-abc-116-01-0089.pdf",
 }
 
 
@@ -134,8 +134,8 @@ def slug(t):
 def main():
     log = []
     for i, (nome, titulo, doi) in enumerate(ARTIGOS, start=1):
-        dest = os.path.join(OUT, "art%02d_%s.pdf" % (i, nome))
-        linha = "art%02d %s" % (i, nome)
+        dest = os.path.join(OUT, nome + ".pdf")
+        linha = nome
         if os.path.exists(dest) and os.path.getsize(dest) > 20000:
             log.append(linha + " | JA EXISTE (%d KB)" % (os.path.getsize(dest) // 1024))
             print(log[-1], flush=True)
