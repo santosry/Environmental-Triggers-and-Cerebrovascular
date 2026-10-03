@@ -23,6 +23,7 @@ os guias de relato RECORD e STROBE.
 | 14 | Rio de Janeiro. Secretaria de Estado de Saúde. Plano Estadual de Saúde 2024-2027. Rio de Janeiro: SES-RJ; 2024. | Documento oficial | `13_documentos_referencia/` |
 | 15 | Benchimol EI, Smeeth L, Guttmann A, Harron K, Moher D, Petersen I, et al.; RECORD Working Committee. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. PLoS Med. 2015;12(10):e1001885. doi:10.1371/journal.pmed.1001885 | Guia de relato | `record.pdf` |
 | 16 | von Elm E, Altman DG, Egger M, Pocock SJ, Gøtzsche PC, Vandenbroucke JP; STROBE Initiative. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement. J Clin Epidemiol. 2008;61(4):344-9. doi:10.1016/j.jclinepi.2007.11.008 | Guia de relato | (não baixado) |
+| 17 | Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq). Portaria nº 2.664, de 6 de março de 2026, que institui a Política de Integridade na Atividade Científica. Brasília: CNPq; 2026. Disponível em: https://www.in.gov.br/web/dou/-/portaria-cnpq-n-2.664-de-6-de-marco-de-2026-691779232 | Norma | (não baixado) |
 
 **Observações:**
 
@@ -30,3 +31,6 @@ os guias de relato RECORD e STROBE.
   estudos baseados em dados de rotina.
 - O Plano Estadual é citado com indicação de página no manuscrito (p. 181, 356, 364, 461 e
   480), conforme a orientação editorial.
+- **Financiamento:** projeto de iniciação científica sobre a relação entre fatores
+  ambientais e doenças cerebrovasculares, com bolsa de Iniciação Científica do CNPq.
+- **Uso de IA:** declarado em conformidade com a Portaria CNPq nº 2.664/2026 (ref. 17).
