@@ -23,7 +23,10 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\08_glmm_robustez.R"         # 18 cenarios (~40 min)
 & $R "02_scripts\09_conferencia_motores.R"   # glmmTMB x lme4 (processo isolado)
 & $R "02_scripts\10_figuras.R"
-& $R "02_scripts\11_exploratorio.R"          # raca/cor, comorbidade, natureza juridica
+& $R "02_scripts\11_exploratorio.R"         # raca/cor, comorbidade, natureza juridica
+& $R "02_scripts\13_figuras_exploratorias.R" # banco de ~25 figuras
+& $R "02_scripts\14_verificacao_sidra.R"     # denominadores IBGE/SIDRA
+& $R "02_scripts\15_deflacao_ipca.R"         # custos deflacionados a dez/2024
 ```
 
 > 🎨 Todas as figuras usam a paleta **viridis** (uniforme, legível em cinza e segura para

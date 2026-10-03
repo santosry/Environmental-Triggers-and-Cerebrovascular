@@ -43,7 +43,8 @@ suppressWarnings({
   PROC <- file.path(ROOT, "01_dados", "processados")
   RES <- file.path(ROOT, "04_resultados")
   TAB <- file.path(ROOT, "05_tabelas")
-  FIG <- file.path(ROOT, "06_figuras")
+  FIG <- file.path(ROOT, "06_figuras", "suplementares")
+  dir.create(FIG, showWarnings = FALSE, recursive = TRUE)
 
   logcon <- file(file.path(RES, "resultados_uti.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
@@ -93,9 +94,42 @@ suppressWarnings({
     ct <- suppressWarnings(cor.test(hp$uti_pct, hp[[v]], method = "spearman"))
     say(sprintf("    %-18s rho=%+.3f  p=%s", v, ct$estimate, p_cient(ct$p.value)))
   }
-  say("  Se a taxa de UTI fosse so gravidade, ela acompanharia a mortalidade e a")
-  say("  composicao de casos. Correlacao fraca com o perfil sustenta a leitura de")
-  say("  pratica de registro.")
+
+  ## caracterizacao decisiva: a variavel separa dois tipos de hospital
+  say("\n  hospitais com taxa de UTI exatamente zero: ",
+      sum(hp$uti_pct == 0), sprintf(" (%.1f%%)", 100 * mean(hp$uti_pct == 0)))
+  say("  hospitais com taxa acima de 20%: ",
+      sum(hp$uti_pct > 20), sprintf(" (%.1f%%)", 100 * mean(hp$uti_pct > 20)))
+  hp_s <- hp[order(-(n * uti_pct / 100))]
+  for (k in c(5, 10, 30))
+    if (k <= nrow(hp_s))
+      say(sprintf("  os %2d hospitais com mais registros de UTI concentram %.1f%% de todos os registros",
+                  k, 100 * sum(hp_s[1:k]$n * hp_s[1:k]$uti_pct / 100) / sum(d$uti)))
+
+  hp[, grupo := fifelse(uti_pct == 0, "sem registro de UTI",
+                 fifelse(uti_pct < 10, "registro baixo (0-10%)", "registro alto (10%+)"))]
+  dg <- merge(d, hp[, .(CNES, grupo)], by = "CNES")
+  say("\n  perfil dos hospitais por intensidade de registro de UTI:")
+  say(sprintf("    %-24s %6s %10s %12s %8s %12s", "grupo", "hosp", "internacoes",
+              "mortalidade", "idade", "hemorragico"))
+  gt <- dg[, .(hosp = uniqueN(CNES), internacoes = .N,
+               mortalidade = 100 * mean(obito_hospitalar),
+               idade = mean(idade_anos),
+               hemorragico = 100 * mean(subtipo == "Hemorragico (I60-I62)")),
+           by = grupo][order(-internacoes)]
+  for (i in seq_len(nrow(gt)))
+    say(sprintf("    %-24s %6d %10s %11.2f%% %8.1f %11.1f%%", gt$grupo[i], gt$hosp[i],
+                format(gt$internacoes[i], big.mark = "."), gt$mortalidade[i],
+                gt$idade[i], gt$hemorragico[i]))
+
+  say("\n  LEITURA. A UTI nao e apenas pratica de registro: ela separa dois tipos")
+  say("  de estabelecimento. Os hospitais que registram UTI atendem 20,6% de casos")
+  say("  hemorragicos contra 1,3% nos que nao registram, e tem mortalidade de 22,9%")
+  say("  contra 10,4%. A variavel combina, portanto, tres coisas ao mesmo tempo:")
+  say("  gravidade do paciente, capacidade de UTI do hospital e posicao do hospital")
+  say("  na rede de referencia. Inclui-la como covariavel de PACIENTE transfere para")
+  say("  o nivel individual uma informacao que e do estabelecimento, e isso enviesa")
+  say("  o VPC/ICC para baixo.")
 
   say("\n  evolucao temporal da prevalencia de UTI:")
   tr <- d[, .(uti_pct = 100 * mean(uti)), by = ano][order(ano)]
@@ -223,45 +257,53 @@ suppressWarnings({
               "sem a variavel no modelo", "(referencia)", s_sem, 100 * cdf[modelo == "M1 sem UTI"]$ICC))
 
   ## ---------------- 4. figura ----------------
-  f1 <- rbind(
-    data.table(serie = "Por ano", x = tr$ano, y = tr$uti_pct),
-    fill = TRUE)
+  ## Paleta viridis em todos os paineis.
+  COR_LINHA <- viridisLite::viridis(1, begin = 0.30)
   g1 <- ggplot(tr, aes(x = ano, y = uti_pct)) +
-    geom_line(colour = "#08519c", linewidth = 0.9) +
-    geom_point(colour = "#08519c", size = 1.9) +
+    geom_line(colour = COR_LINHA, linewidth = 0.9) +
+    geom_point(colour = COR_LINHA, size = 1.9) +
     labs(title = "Registro de uso de UTI ao longo do tempo",
-         subtitle = sprintf("Percentual de internações com dias de UTI registrados (Mann-Kendall tau=%+.3f, p=%s)",
-                            mk$estimate, p_cient(mk$p.value)),
+         subtitle = sprintf("Mann-Kendall: tau = %+.3f", mk$estimate),
          x = NULL, y = "Internações com UTI (%)") +
     theme_minimal(base_size = 10) +
-    theme(plot.title = element_text(face = "bold"))
+    theme(plot.title = element_text(face = "bold"),
+          plot.subtitle = element_text(size = 8.5))
 
-  g2 <- ggplot(rg, aes(x = uti_pct, y = reorder(as.character(regiao_saude), uti_pct))) +
-    geom_col(fill = "#08519c", width = 0.68) +
-    geom_text(aes(label = sprintf("%.1f%%", uti_pct)), hjust = -0.1, size = 3) +
+  g2 <- ggplot(rg, aes(x = uti_pct, y = reorder(as.character(regiao_saude), uti_pct),
+                       fill = uti_pct)) +
+    geom_col(width = 0.68) +
+    geom_text(aes(label = sprintf("%.1f%%", uti_pct)), hjust = -0.1, size = 3,
+              colour = "grey20") +
+    scale_fill_viridis_c(option = "D", guide = "none") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
     labs(title = "Registro de uso de UTI por região de saúde",
-         subtitle = "Percentual de internações com dias de UTI, 2010-2024",
+         subtitle = "Internações com dias de UTI, 2010-2024",
          x = "Internações com UTI (%)", y = NULL) +
     theme_minimal(base_size = 10) +
     theme(plot.title = element_text(face = "bold"),
+          plot.subtitle = element_text(size = 8.5),
           panel.grid.major.y = element_blank())
 
-  g3 <- ggplot(cdf, aes(x = ICC, y = reorder(modelo, ICC))) +
-    geom_col(fill = "#238b45", width = 0.6) +
-    geom_text(aes(label = sprintf("%.2f%%", 100 * ICC)), hjust = -0.12, size = 3.2) +
+  g3 <- ggplot(cdf, aes(x = ICC, y = reorder(modelo, ICC), fill = ICC)) +
+    geom_col(width = 0.6) +
+    geom_text(aes(label = sprintf("%.2f%%", 100 * ICC)), hjust = -0.12, size = 3.2,
+              colour = "grey20") +
+    scale_fill_viridis_c(option = "D", direction = -1, guide = "none") +
     scale_x_continuous(labels = function(v) sprintf("%.0f%%", 100 * v),
                        expand = expansion(mult = c(0, 0.22))) +
     labs(title = "VPC/ICC hospitalar conforme o tratamento dado à UTI",
-         subtitle = "A UTI de paciente absorve variância do hospital; a decomposição de Mundlak separa as duas fontes",
+         subtitle = paste0("A UTI combina gravidade do paciente e capacidade do hospital; ",
+                           "incluí-la como covariável de paciente transfere\ninformação do ",
+                           "estabelecimento para o nível individual e reduz o ICC"),
          x = "VPC / ICC", y = NULL) +
     theme_minimal(base_size = 10) +
     theme(plot.title = element_text(face = "bold"),
+          plot.subtitle = element_text(size = 8),
           panel.grid.major.y = element_blank())
 
   library(patchwork)
   ggsave(file.path(FIG, "fig_uti.png"),
-         (g1 / g3) | g2, width = 13, height = 7, dpi = 300)
+         (g1 / g3) | g2, width = 15, height = 7.5, dpi = 300)
   say("\nfigura gravada: 06_figuras/fig_uti.png")
 
   say("\nfim: ", format(Sys.time()))

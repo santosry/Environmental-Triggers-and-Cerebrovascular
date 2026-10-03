@@ -1,0 +1,31 @@
+=====================================================================
+BANCO DE FIGURAS EXPLORATORIAS
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 09:29:02
+=====================================================================
+  gravada fig_ex01_taxa_internacao_estado.png
+  gravada fig_ex02_internacao_letalidade.png
+  gravada fig_ex03_taxa_internacao_regiao.png
+  gravada fig_ex04_heatmap_internacao_regiao.png
+  gravada fig_ex05_mortalidade_sim_regiao.png
+  gravada fig_ex06_piramide_etaria.png
+  gravada fig_ex07_letalidade_faixa_sexo.png
+  gravada fig_ex08_letalidade_subtipo.png
+  gravada fig_ex09_permanencia_subtipo.png
+  gravada fig_ex10_custo_regiao.png
+  gravada fig_ex11_fluxo_regioes.png
+  gravada fig_ex12_concentracao_cnes.png
+  gravada fig_ex13_volume_mortalidade_hospital.png
+  gravada fig_ex14_caterpillar_hospitais.png
+  gravada fig_ex15_forest_or_principal.png
+  gravada fig_ex16_icc_robustez.png
+  gravada fig_ex17_icc_modelos.png
+  gravada fig_ex18_uti_hospital.png
+  gravada fig_ex19_roc.png
+  gravada fig_ex20_calibracao.png
+  gravada fig_ex21_isu_heatmap.png
+  gravada fig_ex22_razao_obito_internacao.png
+  gravada fig_ex23_custo_ano.png
+  gravada fig_ex24_tendencia_regiao.png
+  gravada fig_ex25_cobertura_comorbidade.png
+
+fim: 2026-10-03 09:29:47 | figuras em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/06_figuras/exploratorias

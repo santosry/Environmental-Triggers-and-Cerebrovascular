@@ -25,10 +25,16 @@ import matplotlib.pyplot as plt
 warnings.filterwarnings("ignore")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# O script foi movido de 02_scripts/ para 02_scripts/legado_fase_anterior/.
+# Em vez de contar niveis, sobe a arvore ate achar a pasta do projeto, o que
+# continua correto em qualquer profundidade.
+while not os.path.isdir(os.path.join(ROOT, "01_dados")) and \
+        os.path.dirname(ROOT) != ROOT:
+    ROOT = os.path.dirname(ROOT)
 DLNM_ROOT = os.path.dirname(ROOT)
 DATA = os.path.join(ROOT, "01_dados", "processados")
 TAB = os.path.join(ROOT, "05_tabelas")
-FIG = os.path.join(ROOT, "06_figuras")
+FIG = os.path.join(ROOT, "06_figuras", "suplementares")
 RES = os.path.join(ROOT, "04_resultados")
 os.makedirs(TAB, exist_ok=True)
 os.makedirs(FIG, exist_ok=True)
@@ -221,11 +227,13 @@ log(f"Cochran-Armitage (proporção de óbito por ano): p={p_ca:.4f}")
 # figura 1: taxa estadual + proporção de óbito
 fig, ax1 = plt.subplots(figsize=(8, 4))
 anos = taxas_estado.sort_values("ano")["ano"]
-ax1.plot(anos, taxas_estado.sort_values("ano")["taxa"], "o-", color="tab:blue", label="Taxa/100k")
-ax1.set_xlabel("Ano"); ax1.set_ylabel("Taxa / 100.000", color="tab:blue")
+ax1.plot(anos, taxas_estado.sort_values("ano")["taxa"], "o-",
+         color=plt.cm.viridis(0.25), label="Taxa/100k")
+ax1.set_xlabel("Ano"); ax1.set_ylabel("Taxa / 100.000", color=plt.cm.viridis(0.25))
 ax2 = ax1.twinx()
-ax2.plot(obito_ano.index, obito_ano["pct"], "s--", color="tab:red", label="% óbito hospitalar")
-ax2.set_ylabel("% óbito hospitalar", color="tab:red")
+ax2.plot(obito_ano.index, obito_ano["pct"], "s--",
+         color=plt.cm.viridis(0.85), label="% óbito hospitalar")
+ax2.set_ylabel("% óbito hospitalar", color=plt.cm.viridis(0.85))
 ax1.set_title("Internações por DCV (I60-I69), RJ 2010-2024")
 fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig1_taxa_obito.png"))
@@ -361,10 +369,13 @@ fluxo = pd.crosstab(sih["regiao_saude"], sih["mun_nome_mov"]).reset_index()
 # 7. FIGURAS ADICIONAIS
 # ----------------------------------------------------------------------------
 # figura 2: taxas por macrorregião ao longo do tempo
+# paleta viridis: uma cor por macrorregião, do escuro ao claro
 fig, ax = plt.subplots(figsize=(8, 4))
-for grp, sub in taxas_macro.groupby("macro3"):
-    sub = sub.sort_values("ano")
-    ax.plot(sub["ano"], sub["taxa"], "o-", label=grp)
+_grupos = sorted(taxas_macro["macro3"].unique())
+_cores = plt.cm.viridis(np.linspace(0.10, 0.85, len(_grupos)))
+for grp, cor in zip(_grupos, _cores):
+    sub = taxas_macro[taxas_macro["macro3"] == grp].sort_values("ano")
+    ax.plot(sub["ano"], sub["taxa"], "o-", color=cor, label=grp)
 ax.set_xlabel("Ano"); ax.set_ylabel("Taxa / 100.000")
 ax.set_title("Taxa de internação por DCV por macrorregião, RJ 2010-2024")
 ax.legend(); fig.tight_layout()
@@ -375,7 +386,8 @@ plt.close(fig)
 fig, ax = plt.subplots(figsize=(8, 4))
 comp = pd.DataFrame({"obito_hosp_pct": obito_hosp_reg,
                      "taxa_mort_100k": taxas_obito.groupby("regiao_saude")["taxa"].mean()})
-comp.plot(kind="bar", ax=ax, secondary_y="taxa_mort_100k")
+comp.plot(kind="bar", ax=ax, secondary_y="taxa_mort_100k",
+          color=[plt.cm.viridis(0.25), plt.cm.viridis(0.80)])
 ax.set_title("Mortalidade por região: % óbito hospitalar (SIH) × taxa SIM/100k")
 fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig3_mortalidade_regiao.png"))

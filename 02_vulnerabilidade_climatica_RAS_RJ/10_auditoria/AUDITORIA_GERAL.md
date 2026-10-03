@@ -1,6 +1,6 @@
 # AUDITORIA GERAL DO REPOSITORIO
 
-**Data da execucao:** 2026-10-03 00:40:26
+**Data da execucao:** 2026-10-03 09:49:01
 **Ambiente:** R version 4.6.1 (2026-06-24 ucrt)
 **Script:** `02_scripts/12_auditoria_geral.R`
 
@@ -92,16 +92,16 @@ aquisicao, recorte CID versionado, coerencia entre artefatos, tabelas, codigo e 
 | 4 | README contem '267.746' | sim | OK |  |
 | 4 | README contem '27.927' | sim | OK |  |
 | 4 | README contem '252.992' | sim | OK |  |
-| 5 | Scripts R no diretorio de scripts | 15 | INFO |  |
-| 5 | Scripts Python no diretorio de scripts | 4 | INFO |  |
+| 5 | Scripts R no diretorio de scripts | 16 | INFO |  |
+| 5 | Scripts Python no diretorio de scripts | 3 | INFO |  |
 | 5 | Scripts R com erro de sintaxe | 0 | OK |  |
 | 5 | Scripts Python com erro de sintaxe | 0 | OK |  |
 | 5 | Linhas de codigo R com caminho absoluto | 0 | OK |  |
 | 5 | Ocorrencias de setwd() no codigo R | 0 | OK | quebra a portabilidade; usar normalizePath/caminho relativo |
-| 5 | Pacotes R exigidos pelo codigo | 10 | INFO | data.table, dplyr, ggplot2, jsonlite, lme4, microdatasus, patchwork, readr, splines, trend |
+| 5 | Pacotes R exigidos pelo codigo | 10 | INFO | data.table, ggplot2, jsonlite, lme4, microdatasus, patchwork, pROC, scales, splines, viridisLite |
 | 5 | Pacotes R exigidos e nao instalados | 0 | OK |  |
 | 5 | Scripts do diretorio ausentes do README | 0 | OK |  |
-| 6 | Arquivos versionados nesta frente | 97 | INFO |  |
+| 6 | Arquivos versionados nesta frente | 100 | INFO |  |
 | 6 | CSVs versionados com campo identificavel direto | 0 | OK |  |
 | 6 | Arquivos versionados maiores que 50 MB | 0 | OK |  |
 | 6 | Maior arquivo versionado (MB) | 37.36 | INFO |  |

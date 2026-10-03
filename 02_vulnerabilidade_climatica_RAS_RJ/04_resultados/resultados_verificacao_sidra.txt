@@ -1,0 +1,25 @@
+=====================================================================
+VERIFICACAO DOS DENOMINADORES POPULACIONAIS (IBGE/SIDRA)
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 09:27:34
+=====================================================================
+  [OK     ] Arquivo de populacao existe                          sim 
+  [INFO   ] Linhas na serie populacional                         1.472 
+  [INFO   ] Municipios distintos                                 92 
+  [INFO   ] Anos cobertos                                        2010 a 2025 
+  [OK     ] Municipios esperados (92 do RJ)                      92 
+  [OK     ] Cobertura completa municipio x ano (92 x 16)         1.472 esperado 1.472 linhas
+  [OK     ] Populacao ausente                                    0 
+  [OK     ] Populacao nao positiva                               0 
+  [OK     ] Pares municipio x ano duplicados                     0 
+      SIDRA 6579 v9324 - Populacao residente estimada                   1196
+      Interpolacao linear entre observacoes oficiais SIDRA disponiveis   184
+      SIDRA 4714 v93 - Censo Demografico 2022, Populacao residente        92
+  [OK     ] Registros por interpolacao linear                    184 (12.50%) anos sem estimativa oficial do IBGE
+  [OK     ] Municipios do lookup ausentes na populacao           0 
+  [OK     ] Municipios da populacao ausentes no lookup           0 
+  [INFO   ] Populacao do RJ em 2010                              16.112.678 
+  [INFO   ] Populacao do RJ em 2024                              17.219.679 
+  [ATENCAO] Variacao anual da populacao abaixo de 3%             max 8.06% 
+
+resumo: OK=9 | INFO=5 | ATENCAO=1
+fim: 2026-10-03 09:27:35

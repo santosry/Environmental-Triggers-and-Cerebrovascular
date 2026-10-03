@@ -147,28 +147,40 @@ suppressWarnings({
       "esperado: a mesma AIH aparece em linhas de procedimentos")
 
   ## --- fronteira dezembro/janeiro: risco de duplicacao entre competicoes ---
-  say("\n  verificacao da fronteira dezembro/janeiro (risco de duplicacao entre competicoes):")
+  ## Restrito aos diagnosticos de interesse, que sao os que entram na coorte.
+  ## Se a mesma AIH aparecer em duas competicoes, a deduplicacao do script 02
+  ## tem de elimina-la.
+  say("\n  fronteira dezembro/janeiro, restrita aos diagnosticos do estudo:")
   borda <- character(0)
   for (ano in 2010:2024)
     borda <- c(borda, sprintf("sih_rd_rj_%d_12.rds", ano), sprintf("sih_rd_rj_%d_01.rds", ano + 1))
   borda <- intersect(borda, basename(fs))
+  CHAVE <- c("N_AIH","IDENT","DT_INTER","DT_SAIDA","DIAG_PRINC","MUNIC_RES",
+             "SEXO","IDADE")
   ai <- rbindlist(lapply(file.path(DIR_SIH, borda), function(f) {
-    d <- readRDS(f); data.table(aih = as.character(d[["N_AIH"]]), comp = basename(f)) }))
-  repr <- ai[, .N, by = aih][N > 1]
-  cruz <- ai[aih %in% repr$aih]
-  cruz <- cruz[, .(comps = paste(sort(unique(comp)), collapse = " | ")), by = aih]
-  entre <- cruz[grepl("\\|", comps)]
+    x <- readRDS(f)
+    cid3 <- substr(toupper(trimws(as.character(x[["DIAG_PRINC"]]))), 1, 3)
+    sel <- cid3 %in% c(sprintf("I6%d", 0:9), "G45", "G46")
+    if (!any(sel)) return(NULL)
+    y <- as.data.table(x[sel, intersect(CHAVE, names(x)), drop = FALSE])
+    y[, MUNIC_RES := sprintf("%06s", as.character(MUNIC_RES))]
+    y[, comp := basename(f)]
+    y }), fill = TRUE)
+  ai[, chave := do.call(paste, c(.SD, sep = "|")), .SDcols = intersect(CHAVE, names(ai))]
+  dup_cruz <- ai[, .(n_comp = uniqueN(comp), n_linhas = .N), by = chave][n_comp > 1]
   say("    arquivos de fronteira analisados: ", length(borda))
-  say("    AIH em mais de uma competencia: ", nrow(entre))
-  reg("A", "AIH repetida em competicoes diferentes na fronteira",
-      nrow(entre), if (nrow(entre) == 0) "OK" else "ATENCAO",
-      "justifica ler 2025 e deduplicar")
+  say("    registros dos diagnosticos do estudo na fronteira: ",
+      format(nrow(ai), big.mark = "."))
+  say("    chaves de AIH presentes em mais de uma competencia: ", nrow(dup_cruz))
+  reg("A", "AIH do estudo repetida em competicoes diferentes na fronteira",
+      nrow(dup_cruz), if (nrow(dup_cruz) == 0) "OK" else "ATENCAO",
+      "a deduplicacao do script 02 remove essas repeticoes")
 
   ## ==================================================================
   ## B. COERENCIA DA COORTE
   ## ==================================================================
   say("\n=========== B. COORTE ANALITICA ===========")
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8")
+  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
   reg("B", "Internacoes na coorte", nrow(d), "OK")
   reg("B", "Obitos na coorte", sum(d$obito_hospitalar), "OK")
   reg("B", "Media de idade_z (deve ser 0)", sprintf("%.8f", mean(d$idade_z)),
@@ -194,11 +206,47 @@ suppressWarnings({
   reg("B", "Linhas com subtipo incoerente com o CID de 3 digitos", viol,
       if (viol == 0) "OK" else "ERRO")
 
-  dup_full <- sum(duplicated(d, by = c("CNES","idade_anos","sexo","car_int","subtipo",
-                                       "uti","fluxo_inter","regiao_saude","ano",
-                                       "obito_hospitalar")))
-  reg("B", "Linhas identicas em todas as covariaveis", dup_full,
-      if (dup_full == 0) "OK" else "ATENCAO", "esperado: nenhuma")
+  ## deduplicacao: a chave completa agora esta na base analitica, o que permite
+  ## reverificar o que o script 02 afirmou ter removido
+  CHAVE_DEDUP <- c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","cid4","MUNIC_RES6",
+                   "sexo","idade_anos")
+  CHAVE_DEDUP <- intersect(CHAVE_DEDUP, names(d))
+  dd <- sum(duplicated(d[, ..CHAVE_DEDUP]))
+  reg("B", "Duplicatas na chave de deduplicacao da coorte", dd,
+      if (dd == 0) "OK" else "ERRO",
+      "mesma chave do script 02; deve ser zero por construcao")
+
+  ## duplicacao integral: com N_AIH na base, agora e uma verificacao real
+  dup_full <- sum(duplicated(d))
+  reg("B", "Linhas integralmente duplicadas na base analitica", dup_full,
+      if (dup_full == 0) "OK" else "ERRO",
+      "todas as colunas, incluindo N_AIH e a data de saida")
+
+  ## coincidencia de perfil clinico sem a chave: e esperada e nao e defeito,
+  ## mas dimensiona quanto da base tem perfil repetido
+  sem_chave <- setdiff(names(d), c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","VAL_TOT",
+                                   "mun_nome","mun_nome_mov","MUNIC_RES6","MUNIC_MOV6"))
+  co <- sum(duplicated(d[, ..sem_chave]))
+  reg("B", "Linhas com perfil clinico coincidente (sem chave)", co,
+      "ATENCAO", sprintf("%.1f%% da base; esperado, nao e defeito", 100 * co / nrow(d)))
+
+  ## permanencia zero entre os obitos: se fosse sistematica, invalidaria as
+  ## estatisticas de permanencia do manuscrito
+  z <- sum(d$obito_hospitalar == 1 & d$DIAS_PERM == 0, na.rm = TRUE)
+  reg("B", "Obitos com zero dia de permanencia na coorte", z,
+      if (100 * z / sum(d$obito_hospitalar) < 10) "OK" else "ATENCAO",
+      sprintf("%.2f%% dos obitos", 100 * z / sum(d$obito_hospitalar)))
+
+  ## inconsistencia interna entre dias de UTI e permanencia
+  u <- sum(d$UTI_MES_TO > d$DIAS_PERM, na.rm = TRUE)
+  reg("B", "UTI_MES_TO maior que DIAS_PERM na coorte", u,
+      if (100 * u / nrow(d) < 2) "ATENCAO" else "ERRO",
+      sprintf("%.2f%% da coorte; %.1f%% dos registros com UTI",
+              100 * u / nrow(d), 100 * u / sum(d$uti == 1)))
+
+  reg("B", "Mediana de permanencia (manuscrito cita 7 dias)",
+      median(d$DIAS_PERM, na.rm = TRUE), "OK",
+      sprintf("I69: %d dias", median(d[subtipo == "Sequelas (I69)"]$DIAS_PERM, na.rm = TRUE)))
 
   reg("B", "Ausentes em qualquer covariavel do modelo",
       sum(is.na(d[, .(idade_z, sexo, subtipo, car_int, uti, fluxo_inter,
@@ -302,16 +350,35 @@ suppressWarnings({
       if (soma_reg == total_est) "OK" else "ERRO")
 
   rob <- fread(file.path(TAB, "tab8_robustez_componentes.csv"), encoding = "UTF-8")
-  s0 <- rob[cenario == "S0_principal"]$sigma2
+  s0 <- rob[cenario == "S0_principal"]$s2
   reg("D", "Robustez reproduz o modelo principal (sigma^2)",
-      sprintf("%.5f vs %.5f", s0, s2), if (abs(s0 - s2) < 1e-4) "OK" else "ERRO")
+      sprintf("%.5f vs %.5f", s0, s2),
+      if (length(s0) == 1 && abs(s0 - s2) < 1e-4) "OK" else "ERRO",
+      "a coluna s2 da tabela de robustez deve repetir a do modelo principal")
   reg("D", "Cenarios de robustez convergidos",
       sprintf("%d de %d", sum(rob$convergiu), nrow(rob)),
       if (all(rob$convergiu)) "OK" else "ATENCAO")
 
   ## ---------------- consolidacao ----------------
-  r <- rbindlist(res)
-  fwrite(r, file.path(TAB, "tab19_auditoria.csv"), encoding = "UTF-8")
+  say("\n=========== CONSOLIDACAO ===========")
+  r <- tryCatch({
+    x <- rbindlist(res)
+    fwrite(x, file.path(TAB, "tab19_auditoria.csv"), encoding = "UTF-8")
+    say("  verificacoes registradas: ", nrow(x))
+    x
+  }, error = function(e) {
+    say("  ERRO NA CONSOLIDACAO: ", conditionMessage(e))
+    say("  verificacoes acumuladas na memoria: ", length(res))
+    for (i in seq_along(res)) {
+      z <- res[[i]]
+      if (!is.data.table(z) || nrow(z) != 1)
+        say("    item ", i, " com formato inesperado: classe=", class(z)[1],
+            " nrow=", if (is.data.table(z)) nrow(z) else NA)
+    }
+    rbindlist(res[!vapply(res, function(z) is.null(z) || !is.data.table(z) ||
+                            nrow(z) != 1, logical(1))], fill = TRUE)
+  })
+
   say("\n=========== RESUMO DA AUDITORIA ===========")
   tb <- r[, .N, by = classificacao][order(classificacao)]
   for (i in seq_len(nrow(tb)))

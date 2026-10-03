@@ -57,9 +57,17 @@ suppressWarnings({
   say("competencias do SIH-RD encontradas: ", length(fs))
   if (!length(fs)) stop("nenhum arquivo em ", DIR_SIH, "; rode 01_baixar_microdatasus.R")
 
+  ## KEEP carrega tambem as variaveis ainda nao exploradas: os nove diagnosticos
+  ## secundarios (DIAGSEC1 a DIAGSEC9), a complexidade do procedimento, a
+  ## natureza juridica do estabelecimento, a infeccao hospitalar, o
+  ## procedimento realizado e a intensidade de uso. Sao elas que sustentam a
+  ## analise exploratoria do script 11.
   KEEP <- c("N_AIH", "IDENT", "DT_INTER", "DT_SAIDA", "DIAG_PRINC", "MUNIC_RES",
             "MUNIC_MOV", "SEXO", "IDADE", "COD_IDADE", "CNES", "MORTE", "CAR_INT",
-            "RACA_COR", "INSTRU", "UTI_MES_TO", "MARCA_UTI", "DIAS_PERM", "VAL_TOT")
+            "RACA_COR", "INSTRU", "UTI_MES_TO", "MARCA_UTI", "DIAS_PERM", "VAL_TOT",
+            "COMPLEX", "NATUREZA", "NAT_JUR", "INFEHOSP", "PROC_REA", "CID_ASSO",
+            "US_TOT", "ESPEC", "DIAR_ACOM", "UTI_INT_TO", "VAL_UTI", "ANO_CMPT",
+            paste0("DIAGSEC", 1:9), paste0("TPDISEC", 1:9))
 
   t0 <- Sys.time()
   acc <- vector("list", length(fs))
@@ -99,7 +107,7 @@ suppressWarnings({
   }
 
   vd <- rbindlist(verif, fill = TRUE)
-  fwrite(vd, file.path(TAB, "tab_verificacao_cid.csv"), encoding = "UTF-8")
+  fwrite(vd, file.path(TAB, "tab_verificacao_cid.csv"), encoding = "UTF-8", na = "NA")
 
   say("\n--- VERIFICACAO DE PRESENCA DOS CODIGOS ---")
   say("registros brutos lidos (todas as causas, RJ): ", format(n_bruto, big.mark = "."))
@@ -150,12 +158,16 @@ suppressWarnings({
   CAR_MAP <- c("01"="Eletiva","02"="Urgencia","03"="Acidente trabalho",
                "04"="Acidente trajeto","05"="Outros acidentes","06"="Outras lesoes",
                "07"="Outros")
+  ## Ausente e representado por NA, como o R faz nativamente. Os codigos que a
+  ## propria fonte usa para "sem informacao" ou "ignorado" (99 em RACA_COR,
+  ## 9 em INSTRU) NAO recebem rotulo: viram NA, para nao criar uma categoria
+  ## falsa que se confundiria com um nivel real da variavel.
   RACA_MAP <- c("01"="Branca","02"="Preta","03"="Parda","04"="Amarela",
-                "05"="Indigena","99"="Sem informacao")
+                "05"="Indigena")
   INSTRU_MAP <- c("0"="Sem instrucao","1"="Fundamental I incompleto",
                   "2"="Fundamental I completo","3"="Fundamental II incompleto",
                   "4"="Fundamental II completo","5"="Medio completo",
-                  "6"="Superior incompleto","7"="Superior completo","9"="Ignorado")
+                  "6"="Superior incompleto","7"="Superior completo")
 
   d[, sexo := unname(c("1"="M","3"="F")[as.character(SEXO)])]
   d[is.na(sexo), sexo := "I"]
@@ -165,18 +177,42 @@ suppressWarnings({
   d[cod == "2", idade_anos := idade_anos / 365]
   d[cod == "1", idade_anos := idade_anos / (365 * 24)]
 
+  ## Ausente permanece NA: nao se cria rotulo para ausencia.
   d[, car_int := unname(CAR_MAP[cod2(CAR_INT)])]
-  d[is.na(car_int), car_int := "Ignorado"]
   d[, raca_cor := unname(RACA_MAP[cod2(RACA_COR)])]
-  d[is.na(raca_cor), raca_cor := "Sem informacao"]
   d[, instru := unname(INSTRU_MAP[cod1(INSTRU)])]
-  d[is.na(instru), instru := "Ignorado"]
   d[, obito_hospitalar := as.integer(as.character(MORTE) == "1")]
   d[, UTI_MES_TO := suppressWarnings(as.numeric(as.character(UTI_MES_TO)))]
   d[, DIAS_PERM := suppressWarnings(as.numeric(as.character(DIAS_PERM)))]
   d[, VAL_TOT := suppressWarnings(as.numeric(as.character(VAL_TOT)))]
   d[, uti := as.integer(!is.na(UTI_MES_TO) & UTI_MES_TO > 0)]
   d[, uti_marca := as.integer(!is.na(MARCA_UTI) & cod2(MARCA_UTI) != "00")]
+  d[, UTI_INT_TO := suppressWarnings(as.numeric(as.character(UTI_INT_TO)))]
+  d[, VAL_UTI := suppressWarnings(as.numeric(as.character(VAL_UTI)))]
+  d[, US_TOT := suppressWarnings(as.numeric(as.character(US_TOT)))]
+
+  ## ---- variaveis de complexidade e comorbidade ----
+  ## ATENCAO, verificado nos arquivos brutos antes de derivar:
+  ##   DIAGSEC1 a DIAGSEC9 NAO EXISTEM antes de 2016 e, mesmo depois, estao
+  ##     preenchidos em apenas 18% a 22% dos registros (DIAGSEC1) e menos de
+  ##     4% (DIAGSEC2). A carga de comorbidade e, portanto, fraca e so pode ser
+  ##     usada como sensibilidade no periodo de 2016 a 2024.
+  ##   INFEHOSP esta 100% vazio em todos os anos: inutilizavel.
+  ##   CID_ASSO so traz "0000": inutilizavel.
+  ##   NAT_JUR e um codigo de 4 digitos (1015, 1023, ...). O primeiro digito
+  ##     indica a categoria ampla, que e o que se usa aqui.
+  ##   COMPLEX so assume 02 (media) e 03 (basica) nesta base.
+  SEC <- intersect(paste0("DIAGSEC", 1:9), names(d))
+  for (v in SEC) d[[v]] <- toupper(trimws(as.character(d[[v]])))
+  d[, n_diag_sec := Reduce(`+`, lapply(SEC, function(v)
+    as.integer(!is.na(d[[v]]) & d[[v]] != "" & d[[v]] != "0000")))]
+  d[, diagsec_disp := as.integer(as.integer(as.character(ANO_CMPT)) >= 2016)]
+  d[, complex_lab := unname(c("01" = "Alta complexidade", "02" = "Media complexidade",
+                              "03" = "Basica")[cod2(COMPLEX)])]
+  NAT_MAP <- c("1" = "Administracao publica", "2" = "Entidades empresariais",
+               "3" = "Entidades sem fins lucrativos", "4" = "Pessoas fisicas",
+               "5" = "Organizacoes internacionais")
+  d[, nat_jur_lab := unname(NAT_MAP[substr(as.character(NAT_JUR), 1, 1)])]
   d[, MUNIC_MOV6 := sprintf("%06s", as.character(MUNIC_MOV))]
   d[, fluxo_inter := fifelse(is.na(MUNIC_MOV6), NA_integer_,
                              as.integer(MUNIC_RES6 != MUNIC_MOV6))]
@@ -216,7 +252,7 @@ suppressWarnings({
   d[, sexo := factor(sexo, levels = c("F","M","I"))]
   d[, car_int := factor(car_int, levels = c("Eletiva","Urgencia","Acidente trabalho",
                                             "Acidente trajeto","Outros acidentes",
-                                            "Outras lesoes","Outros","Ignorado"))]
+                                            "Outras lesoes","Outros"))]
   d[, regiao_saude := factor(regiao_saude, levels = c(
     "Metropolitana I","Metropolitana II","Baixada Litoranea","Norte","Noroeste",
     "Serrana","Centro-Sul","Medio Paraiba","Baia da Ilha Grande"))]
@@ -285,15 +321,22 @@ suppressWarnings({
   say("  hospitais com menos de 100 internacoes: ", sum(h$n < 100))
   say("  hospitais com menos de 30 internacoes:  ", sum(h$n < 30))
   say("  hospitais sem nenhum obito:             ", sum(h$obitos == 0))
-  fwrite(h, file.path(TAB, "tab_hospitais.csv"), encoding = "UTF-8")
+  fwrite(h, file.path(TAB, "tab_hospitais.csv"), encoding = "UTF-8", na = "NA")
 
   ## ---------------- 7. gravacao ----------------
-  OUT <- c("CNES","coorte","obito_hospitalar","idade_anos","idade_z","sexo","car_int",
-           "subtipo","cid3","cid4","uti","uti_marca","fluxo_inter","regiao_saude",
-           "mun_nome","mun_nome_mov","ano","UTI_MES_TO","DIAS_PERM","VAL_TOT",
-           "raca_cor","instru","MUNIC_RES6","MUNIC_MOV6","DT_INTER_d")
+  ## N_AIH, IDENT e DT_SAIDA ficam na base de analise por rastreabilidade e
+  ## para que a auditoria (script 07) possa reverificar a deduplicacao, que so
+  ## e checavel com a chave completa.
+  OUT <- c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","CNES","coorte","obito_hospitalar",
+           "idade_anos","idade_z","sexo","car_int","subtipo","cid3","cid4","uti",
+           "uti_marca","fluxo_inter","regiao_saude","mun_nome","mun_nome_mov","ano",
+           "UTI_MES_TO","DIAS_PERM","VAL_TOT","raca_cor","instru","MUNIC_RES6",
+           "MUNIC_MOV6","UTI_INT_TO","VAL_UTI","US_TOT","n_diag_sec","diagsec_disp",
+           "complex_lab","nat_jur_lab","PROC_REA","DIAR_ACOM","ESPEC","NATUREZA",
+           "COMPLEX","NAT_JUR","INFEHOSP","CID_ASSO",
+           intersect(paste0("DIAGSEC", 1:9), names(d)))
   f <- file.path(PROC, "coorte_glmm_2010_2024.csv")
-  fwrite(d[, ..OUT], f, encoding = "UTF-8")
+  ## na = "NA": sem isso o fwrite grava ausente como string vazia e o NA
   say("\ngravado: ", f)
   say("  linhas: ", format(nrow(d), big.mark = "."), " | colunas: ", length(OUT))
   say("fim: ", format(Sys.time()))

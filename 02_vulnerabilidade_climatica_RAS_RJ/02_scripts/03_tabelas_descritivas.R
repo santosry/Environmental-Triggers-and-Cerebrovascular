@@ -24,7 +24,7 @@ suppressWarnings({
   logcon <- file(file.path(RES, "resultados_descritivas.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
 
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8")
+  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
   say("=====================================================================")
   say("TABELAS DESCRITIVAS DA COORTE")
   say("inicio: ", format(Sys.time()))

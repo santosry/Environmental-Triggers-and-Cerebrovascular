@@ -1,7 +1,7 @@
 =====================================================================
 BATERIA DE AUDITORIA GERAL DO REPOSITORIO
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-03 00:34:00
+inicio: 2026-10-03 09:33:45
 repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 =====================================================================
 
@@ -16,11 +16,11 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 2. RECORTE CID VERSIONADO ===========
   lendo os microdados brute para re-derivar o recorte...
-     40/191 | 0.8 min
-     80/191 | 1.7 min
-    120/191 | 2.8 min
-    160/191 | 4.0 min
-    191/191 | 5.1 min
+     40/191 | 2.4 min
+     80/191 | 5.6 min
+    120/191 | 8.5 min
+    160/191 | 10.6 min
+    191/191 | 12.5 min
   [OK     ] Falhas de leitura dos .rds do SIH                          0 
   [OK     ] Registros brutos SIH relidos                               11.947.354 referencia: 11.947.354
   [INFO   ] Registros do estudo nos brutos (antes de RJ/periodo)       321.911 
@@ -44,7 +44,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Linhas do recorte SIM fora do RJ                           0 
   [OK     ] DTOBITO invalida no recorte SIM                            0 
   [OK     ] Diferenca de obitos por ano (SIM re-derivacao x CSV)       0 
-  tempo da re-derivacao: 6.3 min
+  tempo da re-derivacao: 14.8 min
 
 =========== 3. COERENCIA ENTRE ARTEFATOS ===========
   [OK     ] Coorte analitica existe                                    sim 
@@ -88,18 +88,18 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] README contem '252.992'                                    sim 
 
 =========== 5. CODIGO E REPRODUTIBILIDADE ===========
-  [INFO   ] Scripts R no diretorio de scripts                          15 
-  [INFO   ] Scripts Python no diretorio de scripts                     4 
+  [INFO   ] Scripts R no diretorio de scripts                          16 
+  [INFO   ] Scripts Python no diretorio de scripts                     3 
   [OK     ] Scripts R com erro de sintaxe                              0 
   [OK     ] Scripts Python com erro de sintaxe                         0 
   [OK     ] Linhas de codigo R com caminho absoluto                    0 
   [OK     ] Ocorrencias de setwd() no codigo R                         0 quebra a portabilidade; usar normalizePath/caminho relativo
-  [INFO   ] Pacotes R exigidos pelo codigo                             10 data.table, dplyr, ggplot2, jsonlite, lme4, microdatasus, patchwork, readr, splines, trend
+  [INFO   ] Pacotes R exigidos pelo codigo                             10 data.table, ggplot2, jsonlite, lme4, microdatasus, patchwork, pROC, scales, splines, viridisLite
   [OK     ] Pacotes R exigidos e nao instalados                        0 
   [OK     ] Scripts do diretorio ausentes do README                    0 
 
 =========== 6. PRIVACIDADE E HIGIENE DO REPOSITORIO ===========
-  [INFO   ] Arquivos versionados nesta frente                          97 
+  [INFO   ] Arquivos versionados nesta frente                          100 
   [OK     ] CSVs versionados com campo identificavel direto            0 
   [OK     ] Arquivos versionados maiores que 50 MB                     0 
   [INFO   ] Maior arquivo versionado (MB)                              37.36 
@@ -120,4 +120,4 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 relatorios gravados:
   10_auditoria/AUDITORIA_GERAL.md
   05_tabelas/tab26_auditoria_geral.csv
-fim: 2026-10-03 00:40:26
+fim: 2026-10-03 09:49:01
