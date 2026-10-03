@@ -1,0 +1,40 @@
+=====================================================================
+CONFERENCIA ENTRE MOTORES E ADEQUACAO DA APROXIMACAO DE LAPLACE
+R R version 4.6.1 (2026-06-24 ucrt) | glmmTMB 1.1.15.2 | lme4 2.0.1
+inicio: 2026-10-02 15:15:25
+=====================================================================
+O lme4 roda em processo R separado, porque carregar glmmTMB e lme4 na
+mesma sessao encerra o processo sem mensagem de erro.
+
+subamostra: 20.000 registros | 228 hospitais | 3744 obitos | semente 20261001
+
+[A] glmmTMB
+    tempo=0.46 min | logLik=-8623.5596 | AIC=17289.12 | s2=0.25490 | ICC=0.07191 | MOR=1.6186
+
+disparando o lme4 em processo separado...
+
+Anexando pacote: 'data.table'
+
+O seguinte objeto é mascarado por 'package:base':
+
+    %notin%
+
+Carregando pacotes exigidos: Matrix
+[A] lme4 Laplace (nAGQ = 1) | 20.000 registros | 228 hospitais | 3744 obitos 
+    tempo=0.99 min | logLik=-8623.5606 | AIC=17289.12 | s2=0.25479 | ICC=0.07188 | MOR=1.6185 
+    glmmTMB na mesma subamostra: s2=0.25490 | diferenca relativa=0.041% 
+    log-verossimilhanca glmmTMB=-8623.5596 | diferenca absoluta=0.0011 
+
+[B] adequacao da aproximacao de Laplace: nAGQ = 11 
+    tempo=2.17 min | logLik=-8623.4105 | AIC=17288.82 
+    s2=0.25666 (Laplace 0.25479, diferenca relativa 0.732%) 
+    ICC=0.07237 (Laplace 0.07188) | MOR=1.6213 (Laplace 1.6185) 
+    OR: diferenca relativa maxima 0.1376% | mediana 0.0197% 
+    maiores divergencias: 
+      regiao_saudeNoroeste                       Laplace=0.5750 AGHQ=0.5758 dif=0.1376% 
+      regiao_saudeSerrana                        Laplace=0.6640 AGHQ=0.6646 dif=0.0950% 
+      (Intercept)                                Laplace=0.1173 AGHQ=0.1172 dif=0.0944% 
+      subtipoSequelas (I69)                      Laplace=0.4835 AGHQ=0.4839 dif=0.0793% 
+      regiao_saudeCentro-Sul                     Laplace=0.7770 AGHQ=0.7774 dif=0.0531% 
+
+fim: 2026-10-02 15:19:05

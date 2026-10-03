@@ -53,9 +53,7 @@ pop_reg = pop.groupby(["macro_regiao", "ano"], as_index=False)["populacao"].sum(
 pop_macro3 = pop.groupby(["macro3", "ano"], as_index=False)["populacao"].sum()
 pop_estado = pop.groupby("ano", as_index=False)["populacao"].sum()
 
-# ---------------------------------------------------------------------------
 # Consolida SIM
-# ---------------------------------------------------------------------------
 chunks = []
 for ano in range(2010, 2025):
     f = os.path.join(SRC_SIM, f"sim_do_rj_{ano}.rds")

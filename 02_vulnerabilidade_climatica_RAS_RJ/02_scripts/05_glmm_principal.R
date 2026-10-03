@@ -1,24 +1,22 @@
-# =====================================================================
 # 05_glmm_principal.R
-# ---------------------------------------------------------------------
 # Bloco 2 do PLANO_METODOLOGICO_GLMM_COX.md
-# Modelo logistico multinivel (GLMM) do obito intra-hospitalar:
+# Modelo logístico multinível (GLMM) do óbito intra-hospitalar:
 #
 #   logit(P(Obito_ijk = 1)) = b0 + b'X_ijk + u_j + g_k
 #
-#   Nivel 1 (paciente): idade padronizada, sexo, subtipo diagnostico
-#                       (I60-I69 e G45/G46), caracter da internacao,
+#   Nível 1 (paciente): idade padronizada, sexo, subtipo diagnóstico
+#                       (I60-I69 e G45/G46), caráter da internação,
 #                       uso de UTI, fluxo intermunicipal
-#   Nivel 2 (hospital): intercepto aleatorio por CNES, u_j ~ N(0, s2_hosp)
-#   Nivel 3 (regiao):   efeito fixo da regiao de saude (9 regioes)
+#   Nível 2 (hospital): intercepto aleatório por CNES, u_j ~ N(0, s2_hosp)
+#   Nível 3 (região):   efeito fixo da região de saúde (9 regiões)
 #
-# Metricas: OR ajustado com IC95% e p, variancia hospitalar, VPC/ICC e MOR.
-# Nao se aplica regressao logistica simples univariada, Cox ou Moran/LISA.
+# Metricas: OR ajustado com IC95% e p, variância hospitalar, VPC/ICC e MOR.
+# Não se aplica regressão logistica simples univariada, Cox ou Moran/LISA.
 #
 # Motor: glmmTMB (principal). lme4 na mesma especificacao e conferido pelo
-# script 09. Variavel de ambiente GLMM_ENGINE permite trocar o motor.
+# script 09. Variável de ambiente GLMM_ENGINE permite trocar o motor.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_glmm_principal.txt
 #   05_tabelas/tab3_glmm_or.csv
 #   05_tabelas/tab4_glmm_componentes.csv
@@ -26,7 +24,6 @@
 #   01_dados/processados/previsoes_glmm.csv
 #   01_dados/processados/efeitos_hospital_glmm.csv
 #   01_dados/processados/modelo_glmm_principal.rds
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -142,11 +139,11 @@ suppressWarnings({
       tryCatch(paste(round(performance::icc(fit$modelo)$ICC_adjusted, 5), collapse = " "),
                error = function(e) "erro"))
 
-  ## ================= 4. tabela de OR com correcao de FDR =================
-  ## Correcao de Benjamini-Hochberg (taxa de falsas descobertas).
+  ## ================= 4. tabela de OR com correção de FDR =================
+  ## Correção de Benjamini-Hochberg (taxa de falsas descobertas).
   ## O intercepto fica fora da familia de testes. A familia global reune
-  ## todos os coeficientes; as familias por bloco separam as covariaveis de
-  ## paciente das regioes de saude, porque as perguntas sao distintas.
+  ## todos os coeficientes; as familias por bloco separam as covariáveis de
+  ## paciente das regiões de saúde, porque as perguntas são distintas.
   tab <- copy(fit$coef)
   tab[, bloco := fifelse(grepl("^regiao_saude", termo), "Regiao de saude",
                   fifelse(termo == "(Intercept)", "Intercepto", "Paciente"))]
@@ -215,7 +212,7 @@ suppressWarnings({
   }
   fwrite(comp, file.path(TAB, "tab4_glmm_componentes.csv"), encoding = "UTF-8")
 
-  ## ================= 6. discriminacao e calibracao =================
+  ## ================= 6. discriminação e calibração =================
   d[, p_cond := fit$fitted]
   d[, lp_marg := fit$lp_marg]
   d[, p_marg := plogis(lp_marg)]

@@ -1,9 +1,10 @@
 =====================================================================
 BANCO DE FIGURAS EXPLORATORIAS
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 09:29:02
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 12:08:54
 =====================================================================
   gravada fig_ex01_taxa_internacao_estado.png
   gravada fig_ex02_internacao_letalidade.png
+  gravada (manuscrito) figura1_taxa_internacao_letalidade.jpg
   gravada fig_ex03_taxa_internacao_regiao.png
   gravada fig_ex04_heatmap_internacao_regiao.png
   gravada fig_ex05_mortalidade_sim_regiao.png
@@ -28,4 +29,4 @@ R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 09:29:02
   gravada fig_ex24_tendencia_regiao.png
   gravada fig_ex25_cobertura_comorbidade.png
 
-fim: 2026-10-03 09:29:47 | figuras em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/06_figuras/exploratorias
+fim: 2026-10-03 12:09:11 | figuras em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/06_figuras/exploratorias

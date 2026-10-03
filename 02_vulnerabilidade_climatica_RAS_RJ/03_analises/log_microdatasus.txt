@@ -1,20 +1,20 @@
 =====================================================================
 AQUISICAO VIA microdatasus 2.5.0
 R R version 4.6.1 (2026-06-24 ucrt)
-inicio: 2026-10-03 00:16:28
+inicio: 2026-10-03 12:00:12
 SIH-RD RJ: competicoes 2010-01 a 2025-12
 SIM-DO RJ: 2010 a 2024
 fonte SIH-RD: ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/RDRJ{aamm}.dbc
 =====================================================================
 
 =========== SIH-RD ===========
-    tentativa 1 falhou: Failed to connect to ftp.datasus.gov.br port 5714 after 42303 ms: Could not connect to server
-    tentativa 2 falhou: Failed to connect to ftp.datasus.gov.br port 5644 after 42330 ms: Could not connect to server
-    tentativa 3 falhou: Failed to connect to ftp.datasus.gov.br port 5504 after 42309 ms: Could not connect to server
-    tentativa 4 falhou: Failed to connect to ftp.datasus.gov.br port 5609 after 42340 ms: Could not connect to server
+    tentativa 1 falhou: server response timeout
+    tentativa 2 falhou: Failed to connect to ftp.datasus.gov.br port 5511 after 42378 ms: Could not connect to server
+    tentativa 3 falhou: Failed to connect to ftp.datasus.gov.br port 5641 after 42339 ms: Could not connect to server
+    tentativa 4 falhou: Failed to connect to ftp.datasus.gov.br port 5605 after 42365 ms: Could not connect to server
   FALHA 2025-12
 
-SIH-RD concluido: 0 baixados, 191 ja existiam, 1 falhas (4.2 min)
+SIH-RD concluido: 0 baixados, 191 ja existiam, 1 falhas (4.9 min)
 competencias com falha: 2025-12
 
 =========== SIM-DO ===========
@@ -22,19 +22,13 @@ competencias com falha: 2025-12
 SIM-DO concluido: 0 baixados, 15 ja existiam, 0 falhas (0.0 min)
 
 =========== FILTRAGEM POR CID DO ESTUDO (CSV) ===========
-  SIH  40/191 | brutos=2.365.010 | CID estudo=60.113 | recorte final=55.880
-  SIH  80/191 | brutos=4.687.828 | CID estudo=119.378 | recorte final=114.289
-  SIH 120/191 | brutos=7.073.334 | CID estudo=186.597 | recorte final=181.177
-  SIH 160/191 | brutos=9.582.190 | CID estudo=258.458 | recorte final=252.785
-  SIH 191/191 | brutos=11.947.354 | CID estudo=321.911 | recorte final=295.673
-  gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/sih_cid_estudo_2010_2024.csv | linhas: 295.673 | colunas: 21 | 37.4 MB
-  criterios: DIAG_PRINC I60-I69/G45/G46 + MUNIC_RES RJ + DT_INTER 2010-2024
-  gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/sim_cid_estudo_2010_2024.csv | linhas: 147.551 | colunas: 7 | 6.4 MB
-  criterios: CAUSABAS I60-I69 + CODMUNRES RJ + DTOBITO 2010-2024
+  SIH ja atualizado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/sih_cid_estudo_2010_2024.csv
+  gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/sim_cid_estudo_2010_2024.csv | linhas: 147.611 | colunas: 7 | 6.4 MB
+  criterios: CAUSABAS I60-I69 e G45/G46 + CODMUNRES RJ + DTOBITO 2010-2024
 
 =========== INVENTARIO ===========
 arquivos SIH-RD: 191
 tamanho total (MB): 479.3
 arquivos SIM-DO: 15 | tamanho (MB): 98.1
 
-fim: 2026-10-03 00:25:32
+fim: 2026-10-03 12:05:55

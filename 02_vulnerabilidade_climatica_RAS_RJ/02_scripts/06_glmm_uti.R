@@ -1,41 +1,39 @@
-# =====================================================================
 # 06_glmm_uti.R
-# ---------------------------------------------------------------------
-# Tratamento metodologico do uso de UTI no modelo.
+# Tratamento metodológico do uso de UTI no modelo.
 #
-# O PROBLEMA. O uso de UTI entrou no nivel 1 (paciente) por exigencia do
-# plano, mas ele nao se comporta como fator de risco:
+# O PROBLEMA. O uso de UTI entrou no nível 1 (paciente) por exigência do
+# plano, mas ele não se comporta como fator de risco:
 #   (i)  e marcador de gravidade e, em boa medida, mediador entre gravidade e
-#        obito, de modo que o seu OR nao tem leitura causal;
+#        óbito, de modo que o seu OR não tem leitura causal;
 #   (ii) o REGISTRO varia enormemente entre hospitais (9,5% na Serrana a
 #        31,7% no Noroeste) e cresce no tempo (8,2% em 2010 a 20,8% em 2024),
-#        o que indica pratica de registro e faturamento, nao apenas gravidade.
+#        o que indica pratica de registro e faturamento, não apenas gravidade.
 # Como o registro e uma caracteristica do estabelecimento, incluir a UTI como
-# covariavel de paciente transfere para o nivel do paciente uma informacao que
+# covariável de paciente transfere para o nível do paciente uma informação que
 # e do hospital, e isso enviesa o VPC/ICC para baixo.
 #
-# A SOLUCAO APLICADA. Decomposicao de Mundlak: a variavel e separada em
-#   uti_within  = uti - media do hospital   (contraste entre pacientes do
+# A SOLUÇÃO APLICADA. Decomposicao de Mundlak: a variável e separada em
+#   uti_within  = uti - média do hospital   (contraste entre pacientes do
 #                                            MESMO hospital)
-#   uti_between = media do hospital         (pratica de registro do hospital)
+#   uti_between = média do hospital         (pratica de registro do hospital)
 # Com os dois termos no modelo, o coeficiente de uti_within estima o contraste
 # dentro do hospital e o de uti_between captura o efeito contextual. O sigma^2
-# remanescente e a heterogeneidade entre hospitais que NAO se explica por
+# remanescente e a heterogeneidade entre hospitais que NÃO se explica por
 # pratica de UTI.
 #
-# Sao ajustados cinco modelos para isolar a contribuicao da UTI ao ICC.
+# São ajustados cinco modelos para isolar a contribuição da UTI ao ICC.
 #
-# Saidas:
+# Saídas:
 #   04_resultados/resultados_uti.txt
 #   05_tabelas/tab17_uti_modelos.csv
 #   05_tabelas/tab18_uti_hospital.csv
 #   06_figuras/fig_uti.png
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
   library(data.table)
   library(ggplot2)
+  library(ragg)
   source("02_scripts/00_glmm_utils.R")
 
   ENGINE <- Sys.getenv("GLMM_ENGINE", "glmmTMB")
@@ -95,7 +93,7 @@ suppressWarnings({
     say(sprintf("    %-18s rho=%+.3f  p=%s", v, ct$estimate, p_cient(ct$p.value)))
   }
 
-  ## caracterizacao decisiva: a variavel separa dois tipos de hospital
+  ## caracterizacao decisiva: a variável separa dois tipos de hospital
   say("\n  hospitais com taxa de UTI exatamente zero: ",
       sum(hp$uti_pct == 0), sprintf(" (%.1f%%)", 100 * mean(hp$uti_pct == 0)))
   say("  hospitais com taxa acima de 20%: ",
@@ -208,10 +206,10 @@ suppressWarnings({
   say(sprintf("  heterogeneidade hospitalar remanescente: ICC %.2f%%",
               100 * cdf[modelo == "M4 Mundlak (intra + entre)"]$ICC))
 
-  ## ---------------- 3. sensibilidade a definicao de UTI ----------------
-  ## A UTI foi definida como ao menos um dia registrado. Aqui a definicao e
-  ## variada para mostrar que o ICC nao depende do ponto de corte, apenas da
-  ## presenca ou nao da variavel no modelo.
+  ## ---------------- 3. sensibilidade a definição de UTI ----------------
+  ## A UTI foi definida como ao menos um dia registrado. Aqui a definição e
+  ## variada para mostrar que o ICC não depende do ponto de corte, apenas da
+  ## presenca ou não da variável no modelo.
   say("\n--- SENSIBILIDADE A DEFINICAO DE UTI ---")
   defs <- list(
     list(rot = "ao menos 1 dia (principal)", expr = quote(uti)),
@@ -263,7 +261,7 @@ suppressWarnings({
     geom_line(colour = COR_LINHA, linewidth = 0.9) +
     geom_point(colour = COR_LINHA, size = 1.9) +
     labs(title = "Registro de uso de UTI ao longo do tempo",
-         subtitle = sprintf("Mann-Kendall: tau = %+.3f", mk$estimate),
+         subtitle = sprintf("Mann–Kendall: τ = %+.3f; p = %.4f", mk$estimate, mk$p.value),
          x = NULL, y = "Internações com UTI (%)") +
     theme_minimal(base_size = 10) +
     theme(plot.title = element_text(face = "bold"),
@@ -303,7 +301,7 @@ suppressWarnings({
 
   library(patchwork)
   ggsave(file.path(FIG, "fig_uti.png"),
-         (g1 / g3) | g2, width = 15, height = 7.5, dpi = 300)
+         (g1 / g3) | g2, width = 15, height = 7.5, dpi = 300, device = ragg::agg_png)
   say("\nfigura gravada: 06_figuras/fig_uti.png")
 
   say("\nfim: ", format(Sys.time()))

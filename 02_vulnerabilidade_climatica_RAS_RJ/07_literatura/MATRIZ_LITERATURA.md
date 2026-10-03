@@ -21,13 +21,14 @@ reais do manuscrito anterior). Nenhum DOI/PMID foi inventado.
 | 9 | Nilson EAF, et al. Custos atribuíveis à obesidade, hipertensão e diabetes no SUS, Brasil, 2018. Rev Panam Salud Publica. 2020;44:e32. | SciELO | Sim | Custos no SUS | Econômico | Custos de DCNT no SUS | Referência para análise de custo | Foco em fatores de risco |
 | 10 | Lopes MJ, et al. Hospitalização por AVC isquêmico no Brasil: estudo ecológico sobre possível impacto do Hiperdia. Rev Bras Epidemiol. 2016;19:122-134. | SciELO | Sim | Internações por AVC | Ecológico | Associação Hiperdia e internações por AVC isquêmico | Desenho ecológico análogo | Brasil (não RJ) |
 | 11 | Souto SR, et al. Iniquidades raciais no acesso à reabilitação após AVC: estudo da população brasileira. Ciênc Saúde Coletiva. 2022;27(5):1919-1928. | SciELO | Sim | Equidade/AVC | Observacional | Iniquidade racial no acesso à reabilitação pós-AVC | Justifica cautela com raça/cor | Dados autorreferidos |
-| 12 | Lotufo PA, Lolio CA. Tendência da mortalidade por doença cerebrovascular no Estado de São Paulo: 1970 a 1989. Arq Neuro-Psiquiatr. 1993;51(4). DOI 10.1590/s0004-282x1993000400003 | SciELO | Sim | Tendência DCV | Séries temporais | Tendência histórica de mortalidade cerebrovascular | Antecedente de análise de tendência | Período antigo |
+| 12 | Souza CDF, Oliveira MVS, Silva LF, et al. Tendência da Mortalidade por Doenças Cerebrovasculares no Brasil (1996-2015) e Associação com Desenvolvimento Humano e Vulnerabilidade Social. Arq Bras Cardiol. 2021;116(1):89-97. DOI 10.36660/abc.20190532 | SciELO/PMC | Sim | Tendência DCV | Séries temporais | Tendência nacional de mortalidade cerebrovascular e associação com vulnerabilidade social | Antecedente recente de análise de tendência — substitui a referência de 1993 | Série até 2015 |
 | 13 | Frutuoso MFP, Mendes R, Rosa KRM, Silva CRC. Gestão local de saúde em território de vulnerabilidade: motivações e racionalidades. Saúde Debate. 2015;39(105). DOI 10.1590/0103-110420151050002003 | SciELO | Sim | Vulnerabilidade/gestão | Qualitativo | Gestão local em territórios vulneráveis | Dialoga com vulnerabilidade territorial | Qualitativo |
 
 **Documentos oficiais (contextualização institucional — não contam no limite de 15 artigos):**
 - Ministério da Saúde / CONASS / CONASEMS: documentos sobre regionalização e RAS.
 - IBGE: Censo 2022 e projeções populacionais.
-- Governo do Estado do RJ / SES-RJ: Plano Estadual de Saúde e mapa das regiões de saúde.
+- Rio de Janeiro. Secretaria de Estado de Saúde. Plano Estadual de Saúde 2024-2027.
+  Rio de Janeiro: SES-RJ; 2024. (citado como referência 14 no manuscrito.)
 
 **Observações:**
 - A lista possui 13 artigos (≤15). Pode ser ampliada em até 2 itens após revisão dos autores.

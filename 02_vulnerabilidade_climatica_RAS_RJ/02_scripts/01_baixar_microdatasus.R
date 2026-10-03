@@ -1,42 +1,41 @@
-# =====================================================================
 # 01_baixar_microdatasus.R
-# ---------------------------------------------------------------------
-# PRIMEIRO PASSO DA CADEIA. Aquisicao dos microdados direto da fonte, com
+# PRIMEIRO PASSO DA CADEIA. Aquisição dos microdados direto da fonte, com
 # o pacote microdatasus.
 #
-# SIH-RD: competicoes 2010-01 a 2025-12 do estado do RJ (192 arquivos).
-#   Os arquivos do SIH-RD sao estaduais e por competencia: NAO existe
-#   filtro por CID no download. O arquivo traz todos os capitulos da
-#   CID-10, incluindo G45 e G46 e tambem I60 a I69, que sao filtrados
-#   depois, no script 02. Baixar 2025 e necessario porque a competencia de
-#   processamento pode deslocar internacoes de dezembro de 2024 para
+# SIH-RD: competições 2010-01 a 2025-12 do estado do RJ (192 arquivos).
+#   Os arquivos do SIH-RD são estaduais e por competência: NÃO existe
+#   filtro por CID no download. O arquivo traz todos os capítulos da
+#   CID-10, incluindo G45 e G46 e também I60 a I69, que são filtrados
+#   depois, no script 02. Baixar 2025 e necessário porque a competência de
+#   processamento pode deslocar internações de dezembro de 2024 para
 #   janeiro de 2025; o filtro final do estudo continua sendo DT_INTER
 #   entre 2010 e 2024.
 #
-# SIM-DO: obitos por residencia no RJ, 2010 a 2024 (15 arquivos), usado
-#   para o Indice de Swaroop-Uemura no script 04.
+# SIM-DO: óbitos por residência no RJ, 2010 a 2024 (15 arquivos), usado
+#   para o Índice de Swaroop-Uemura no script 04.
 #
-# Fonte registrada no log (padrao confirmado):
+# Fonte registrada no log (padrão confirmado):
 #   ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/RDRJ{aamm}.dbc
 #
 # FILTRAGEM POR CID DO ESTUDO (CSV versionado):
-#   Depois do download, os .rds sao varridos uma unica vez para extrair
-#   apenas os codigos CID de interesse do estudo, gravando um recorte leve
-#   em CSV. Os .rds brutos sao volumosos (~480 MB) e nao entram no Git;
-#   o CSV filtrado entra no repositorio para que as contagens possam ser
+#   Depois do download, os .rds são varridos uma única vez para extrair
+#   apenas os códigos CID de interesse do estudo, gravando um recorte leve
+#   em CSV. Os .rds brutos são volumosos (~480 MB) e não entram no Git;
+#   o CSV filtrado entra no repositório para que as contagens possam ser
 #   conferidas sem reprocessar os microdados completos.
 #     SIH: DIAG_PRINC em I60-I69, G45 ou G46, residentes no RJ (33),
 #          DT_INTER de 2010 a 2024.
-#     SIM: CAUSABAS em I60-I69, residentes no RJ (33),
-#          DTOBITO de 2010 a 2024.
+#     SIM: CAUSABAS em I60-I69 e nos blocos G45/G46, residentes no RJ (33),
+#          DTOBITO de 2010 a 2024. Aqui a cobertura diagnostica e a mesma do
+#          SIH (I60-I69 + G45/G46), embora G45/G46 respondam por apenas 60
+#          obitos como causa basica no periodo.
 #
-# Saidas:
+# Saídas:
 #   01_dados/brutos_sih/sih_rd_rj_{ano}_{mes}.rds
 #   01_dados/brutos_sim/sim_do_rj_{ano}.rds
 #   01_dados/processados/sih_cid_estudo_2010_2024.csv
 #   01_dados/processados/sim_cid_estudo_2010_2024.csv
 #   03_analises/log_microdatasus.txt
-# =====================================================================
 
 suppressWarnings({
   library(microdatasus)
@@ -124,10 +123,10 @@ suppressWarnings({
   if (length(falhas2)) say("anos com falha: ", paste(falhas2, collapse = ", "))
 
   ## ---------------- filtragem por CID do estudo (CSV) ----------------
-  ## Recorte versionavel: apenas os diagnosticos do estudo, residentes no RJ e
-  ## dentro do periodo analitico. As colunas essenciais do estudo sao mantidas;
-  ## os nove diagnosticos secundarios e demais campos exploratorios permanecem
-  ## nos .rds brutos, que sao a fonte para o script 02.
+  ## Recorte versionavel: apenas os diagnósticos do estudo, residentes no RJ e
+  ## dentro do período analítico. As colunas essenciais do estudo são mantidas;
+  ## os nove diagnósticos secundários e demais campos exploratorios permanecem
+  ## nos .rds brutos, que são a fonte para o script 02.
   say("\n=========== FILTRAGEM POR CID DO ESTUDO (CSV) ===========")
 
   CODIGOS_I <- sprintf("I6%d", 0:9)
@@ -144,7 +143,7 @@ suppressWarnings({
   dest_sih <- file.path(DIR_PROC, "sih_cid_estudo_2010_2024.csv")
   dest_sim <- file.path(DIR_PROC, "sim_cid_estudo_2010_2024.csv")
 
-  ## Refaz o recorte se o CSV nao existir ou se algum .rds for mais novo.
+  ## Refaz o recorte se o CSV não existir ou se algum .rds for mais novo.
   precisa_refazer <- function(destino, fontes) {
     if (!file.exists(destino)) return(TRUE)
     if (!length(fontes)) return(FALSE)
@@ -193,7 +192,7 @@ suppressWarnings({
       cb <- toupper(trimws(as.character(d[["CAUSABAS"]])))
       cb3 <- substr(cb, 1, 3)
       muni <- sprintf("%06s", as.character(d[["CODMUNRES"]]))
-      sel <- cb3 %in% CODIGOS_I & substr(muni, 1, 2) == "33"
+      sel <- (cb3 %in% CODIGOS_I | cb3 %in% G_BLOCO) & substr(muni, 1, 2) == "33"
       n_cid2 <- n_cid2 + sum(sel)
       if (any(sel)) {
         dd <- d[sel, intersect(SIM_KEEP, names(d)), drop = FALSE]
@@ -206,7 +205,7 @@ suppressWarnings({
     fwrite(sim_f, dest_sim, encoding = "UTF-8", na = "NA")
     say("  gravado: ", dest_sim, " | linhas: ", format(nrow(sim_f), big.mark = "."),
         " | colunas: ", ncol(sim_f), " | ", round(file.info(dest_sim)$size / 1024^2, 1), " MB")
-    say("  criterios: CAUSABAS I60-I69 + CODMUNRES RJ + DTOBITO 2010-2024")
+    say("  criterios: CAUSABAS I60-I69 e G45/G46 + CODMUNRES RJ + DTOBITO 2010-2024")
   } else say("  SIM ja atualizado: ", dest_sim)
 
   ## ---------------- inventario ----------------

@@ -26,7 +26,7 @@ warnings.filterwarnings("ignore")
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # O script foi movido de 02_scripts/ para 02_scripts/legado_fase_anterior/.
-# Em vez de contar niveis, sobe a arvore ate achar a pasta do projeto, o que
+# Em vez de contar níveis, sobe a arvore até achar a pasta do projeto, o que
 # continua correto em qualquer profundidade.
 while not os.path.isdir(os.path.join(ROOT, "01_dados")) and \
         os.path.dirname(ROOT) != ROOT:
@@ -45,9 +45,7 @@ POP_PATH = os.path.join(DLNM_ROOT, "01_DLNMs_RJ_cerebrovascular", "data_processe
 
 plt.rcParams.update({"font.size": 9, "axes.titlesize": 10, "figure.dpi": 200})
 
-# ----------------------------------------------------------------------------
 # Carregamento
-# ----------------------------------------------------------------------------
 sih = pd.read_csv(os.path.join(DATA, "sih_cerebrovascular_2010_2024.csv"),
                   low_memory=False)
 sim = pd.read_csv(os.path.join(DATA, "sim_cerebrovascular_2010_2024.csv"),
@@ -104,9 +102,7 @@ def log(*args):
     print(line, flush=True)
 
 
-# ----------------------------------------------------------------------------
 # 1. PERFIL
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("1. PERFIL SOCIODEMOGRÁFICO E CLÍNICO-ASSISTENCIAL")
 log("=" * 72)
@@ -164,9 +160,7 @@ perfil_macro = pd.DataFrame({
 })
 perfil_macro.to_csv(os.path.join(TAB, "tabela_perfil_macrorregiao.csv"))
 
-# ----------------------------------------------------------------------------
 # 2. TAXAS POR 100 MIL E TENDÊNCIA
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("2. TAXAS POR 100 MIL E TENDÊNCIA TEMPORAL")
 log("=" * 72)
@@ -234,14 +228,14 @@ ax2 = ax1.twinx()
 ax2.plot(obito_ano.index, obito_ano["pct"], "s--",
          color=plt.cm.viridis(0.85), label="% óbito hospitalar")
 ax2.set_ylabel("% óbito hospitalar", color=plt.cm.viridis(0.85))
-ax1.set_title("Internações por DCV (I60-I69), RJ 2010-2024")
+ax1.set_title(f"Internações por DCV (I60-I69), RJ 2010-2024\n"
+              f"Mann-Kendall: tau={tau:+.3f}; p={p:.4f} | "
+              f"Cochran-Armitage (letalidade): p={p_ca:.4f}")
 fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig1_taxa_obito.png"))
 plt.close(fig)
 
-# ----------------------------------------------------------------------------
 # 3. MORTALIDADE — SIM
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("3. MORTALIDADE (SIM, causa básica I60-I69)")
 log("=" * 72)
@@ -274,9 +268,7 @@ obito_hosp_reg = sih.groupby("regiao_saude")["obito_hospitalar"].mean() * 100
 log("Mortalidade hospitalar por região (%):")
 log(obito_hosp_reg.sort_values(ascending=False).round(2).to_string())
 
-# ----------------------------------------------------------------------------
 # 4. PERMANÊNCIA E CUSTO
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("4. PERMANÊNCIA E CUSTO")
 log("=" * 72)
@@ -312,9 +304,7 @@ H_c, p_c = stats.kruskal(*groups_c)
 log(f"Kruskal-Wallis permanência × região: H={H_p:.1f} p={p_p:.2e}")
 log(f"Kruskal-Wallis custo × região: H={H_c:.1f} p={p_c:.2e}")
 
-# ----------------------------------------------------------------------------
 # 5. TESTES DE ASSOCIAÇÃO (qui-quadrado)
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("5. ASSOCIAÇÕES (qui-quadrado)")
 log("=" * 72)
@@ -336,9 +326,7 @@ for col in ["regiao_saude", "macro3", "sexo", "faixa_etaria", "car_int", "cid3"]
         if chi2 is not None:
             log(f"Óbito hospitalar × {col}: chi2={chi2:.1f} p={p:.2e}")
 
-# ----------------------------------------------------------------------------
 # 6. FLUXO TERRITORIAL E CNES
-# ----------------------------------------------------------------------------
 log("=" * 72)
 log("6. FLUXO RESIDÊNCIA × INTERNAÇÃO E CNES")
 log("=" * 72)
@@ -365,9 +353,7 @@ if "CNES" in sih.columns:
 fluxo = pd.crosstab(sih["regiao_saude"], sih["mun_nome_mov"]).reset_index()
 # (fluxo detalhado computado na etapa territorial)
 
-# ----------------------------------------------------------------------------
 # 7. FIGURAS ADICIONAIS
-# ----------------------------------------------------------------------------
 # figura 2: taxas por macrorregião ao longo do tempo
 # paleta viridis: uma cor por macrorregião, do escuro ao claro
 fig, ax = plt.subplots(figsize=(8, 4))
@@ -375,9 +361,14 @@ _grupos = sorted(taxas_macro["macro3"].unique())
 _cores = plt.cm.viridis(np.linspace(0.10, 0.85, len(_grupos)))
 for grp, cor in zip(_grupos, _cores):
     sub = taxas_macro[taxas_macro["macro3"] == grp].sort_values("ano")
-    ax.plot(sub["ano"], sub["taxa"], "o-", color=cor, label=grp)
+    _tr = tendencia[(tendencia["unidade"] == "macro3") & (tendencia["grupo"] == grp)]
+    _lab = grp
+    if len(_tr):
+        _lab = f"{grp} (tau={_tr['tau'].iloc[0]:+.3f}; p={_tr['p'].iloc[0]:.3f})"
+    ax.plot(sub["ano"], sub["taxa"], "o-", color=cor, label=_lab)
 ax.set_xlabel("Ano"); ax.set_ylabel("Taxa / 100.000")
-ax.set_title("Taxa de internação por DCV por macrorregião, RJ 2010-2024")
+ax.set_title("Taxa de internação por DCV por macrorregião, RJ 2010-2024\n"
+             "Mann-Kendall por macrorregião")
 ax.legend(); fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig2_taxa_macro.png"))
 plt.close(fig)
@@ -393,9 +384,7 @@ fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig3_mortalidade_regiao.png"))
 plt.close(fig)
 
-# ----------------------------------------------------------------------------
 # Resumo em arquivo
-# ----------------------------------------------------------------------------
 with open(os.path.join(RES, "resultados_principais.txt"), "w", encoding="utf-8") as f:
     f.write("\n".join(resumo))
 log("=" * 72)

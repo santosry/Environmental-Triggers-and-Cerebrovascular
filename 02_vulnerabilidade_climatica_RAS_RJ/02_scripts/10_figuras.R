@@ -1,32 +1,32 @@
-# =====================================================================
 # 10_figuras.R
-# ---------------------------------------------------------------------
-# Figuras do Bloco 4, por regiao de saude.
+# Figuras do Bloco 4, por região de saúde.
 #
 #   06_figuras/fig_or_forest.png            OR ajustado do GLMM, com FDR
-#   06_figuras/fig_regioes_ajustado.png     OR ajustado por regiao de saude
+#   06_figuras/fig_regioes_ajustado.png     OR ajustado por região de saúde
 #   06_figuras/fig_funnel_hospitais.png     mortalidade observada/esperada por hospital
-#   06_figuras/fig_mortalidade_subtipo.png  mortalidade por subtipo diagnostico
+#   06_figuras/fig_mortalidade_subtipo.png  mortalidade por subtipo diagnóstico
 #
-# A figura do Indice de Swaroop-Uemura e produzida pelo script 04 e a do uso
+# A figura do Índice de Swaroop-Uemura e produzida pelo script 04 e a do uso
 # de UTI pelo script 06.
 #
-# Nao ha shapefile das regioes de saude do RJ no projeto nem nas pastas
-# vizinhas, por isso nao se produz mapa coropletico. As figuras usam barras
-# e intervalos de confianca.
-# =====================================================================
+# Não ha shapefile das regiões de saúde do RJ no projeto nem nas pastas
+# vizinhas, por isso não se produz mapa coropletico. As figuras usam barras
+# e intervalos de confiança.
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
   library(data.table)
   library(ggplot2)
+  library(ragg)
 
   ROOT <- normalizePath(".")
   PROC <- file.path(ROOT, "01_dados", "processados")
   TAB <- file.path(ROOT, "05_tabelas")
   FIG <- file.path(ROOT, "06_figuras", "manuscrito")
+  FIG_SUP <- file.path(ROOT, "06_figuras", "suplementares")
   RES <- file.path(ROOT, "04_resultados")
   dir.create(FIG, showWarnings = FALSE, recursive = TRUE)
+  dir.create(FIG_SUP, showWarnings = FALSE, recursive = TRUE)
 
   logcon <- file(file.path(RES, "resultados_figuras_glmm.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
@@ -37,7 +37,7 @@ suppressWarnings({
   eh <- fread(file.path(PROC, "efeitos_hospital_glmm.csv"), encoding = "UTF-8")
   pv <- fread(file.path(PROC, "previsoes_glmm.csv"), encoding = "UTF-8")
 
-  ## ---- paleta viridis, unica em todas as figuras deste script ----
+  ## ---- paleta viridis, única em todas as figuras deste script ----
   COR_LINHA <- viridisLite::viridis(1, begin = 0.30)
   CORES_BLOCO <- viridisLite::viridis(3, option = "D", begin = 0.15, end = 0.85)
   names(CORES_BLOCO) <- c("Paciente", "Subtipo diagnostico", "Regiao de saude")
@@ -58,7 +58,7 @@ suppressWarnings({
   o[, rotulo := gsub("^uti$", "Uso de UTI", rotulo)]
   o[, rotulo := gsub("fluxo_inter", "Fluxo intermunicipal", rotulo)]
   o[, rotulo := factor(rotulo, levels = rev(rotulo[order(bloco, or)]))]
-  ## a significancia e marcada pela q-valor de Benjamini-Hochberg (FDR)
+  ## a significância e marcada pela q-valor de Benjamini-Hochberg (FDR)
   o[, sig_fdr := fifelse(!is.na(q_bh) & q_bh < 0.05,
                          "q < 0,05 (FDR)", "nao significativo apos FDR")]
 
@@ -85,7 +85,7 @@ suppressWarnings({
   ggsave(file.path(FIG, "fig_or_forest.png"), g1, width = 9, height = 7, dpi = 300)
   say("gravada fig_or_forest.png")
 
-  ## ================= 2. regioes isoladas =================
+  ## ================= 2. regiões isoladas =================
   r <- o[bloco == "Regiao de saude"]
   r[, regiao := gsub("^regiao_saude", "", termo)]
   r <- rbind(r[, .(regiao, or, lo, hi)],
@@ -111,7 +111,7 @@ suppressWarnings({
   say("gravada fig_regioes_ajustado.png")
 
   ## ================= 3. funnel plot observado/esperado =================
-  ## Limites ingenuos (Poisson) e limites ajustados pela variancia entre
+  ## Limites ingenuos (Poisson) e limites ajustados pela variância entre
   ## hospitais (s2 do GLMM). Sem o ajuste, a heterogeneidade real entre
   ## hospitais e interpretada como desempenho atipico de cada um.
   comp_tab <- fread(file.path(TAB, "tab4_glmm_componentes.csv"), encoding = "UTF-8")
@@ -177,8 +177,12 @@ suppressWarnings({
           plot.subtitle = element_text(size = 8.5),
           legend.position = "bottom",
           panel.grid.minor = element_blank())
-  ggsave(file.path(FIG, "fig_funnel_hospitais.png"), g3, width = 9, height = 6, dpi = 300)
-  say("gravada fig_funnel_hospitais.png")
+  ggsave(file.path(FIG_SUP, "fig_funnel_hospitais.png"), g3, width = 9, height = 6, dpi = 300,
+         device = ragg::agg_png)
+  ## Figura 2 do manuscrito: mesma figura, em JPEG 300 dpi (requisito do edital).
+  ggsave(file.path(FIG, "figura2_funnel_hospitais.jpg"), g3, width = 9, height = 6, dpi = 300,
+         device = ragg::agg_jpeg, quality = 95)
+  say("gravada fig_funnel_hospitais.png (suplementares) e figura2_funnel_hospitais.jpg (manuscrito)")
   fwrite(f[, .(CNES, n, obitos, esperado = round(esperado, 1), oe = round(oe, 3),
                fora_poisson_998 = oe > l998_pois_sup | oe < l998_pois_inf,
                fora_ajustado_998 = fora == "Fora dos limites ajustados 99,8%",

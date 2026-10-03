@@ -1,34 +1,32 @@
-# =====================================================================
 # 04_isu_regiao_saude.R
-# ---------------------------------------------------------------------
 # Bloco 1.3 do PLANO_METODOLOGICO_GLMM_COX.md
-# Indice de Swaroop-Uemura (ISU) estratificado por REGIAO DE SAUDE,
+# Índice de Swaroop-Uemura (ISU) estratificado por REGIÃO DE SAÚDE,
 # a partir dos microdados do SIM-DO baixados pelo microdatasus (script 01).
 #
-#   ISU = (obitos com 50 anos ou mais / total de obitos por DCV) * 100
+#   ISU = (óbitos com 50 anos ou mais / total de óbitos por DCV) * 100
 #
 # Etapas:
-#   1. Le os .rds anuais do SIM e mantem causa basica em I60 a I69 e
+#   1. Le os .rds anuais do SIM e mantem causa básica em I60 a I69 e
 #      residentes no estado do Rio de Janeiro.
 #   2. Decodifica o campo IDADE, que usa a centena como unidade de tempo:
 #      4xx = anos, 5xx = 100+xx anos, 3xx = meses, 2xx = horas,
 #      1xx = minutos, 999 = ignorada.
 #   3. Filtra DTOBITO entre 2010 e 2024.
-#   4. Calcula o ISU por regiao de saude, com sensibilidades.
-#   5. Quantifica G45 e G46 como causa basica, para declarar a assimetria
-#      entre a coorte de internacoes (SIH) e a serie de mortalidade (SIM).
+#   4. Calcula o ISU por região de saúde, com sensibilidades.
+#   5. Quantifica G45 e G46 como causa básica, para declarar a assimetria
+#      entre a coorte de internações (SIH) e a série de mortalidade (SIM).
 #
-# Saidas:
+# Saídas:
 #   05_tabelas/tab6_isu_regiao_saude.csv
 #   05_tabelas/tab7_isu_regiao_ano.csv
 #   04_resultados/resultados_isu.txt
 #   06_figuras/fig_isu_regiao.png
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
   library(data.table)
   library(ggplot2)
+  library(ragg)
 
   ROOT <- normalizePath(".")
   DIR_SIM <- file.path(ROOT, "01_dados", "brutos_sim")
@@ -95,7 +93,7 @@ suppressWarnings({
   say("obitos por DCV I60-I69, residentes no RJ (todas as competicoes): ",
       format(nrow(sim), big.mark = "."))
 
-  ## ---------------- 2. derivadas e periodo ----------------
+  ## ---------------- 2. derivadas e período ----------------
   sim[, idade_anos := decod_idade(IDADE)]
   dt <- as.Date(as.character(sim$DTOBITO), format = "%d%m%Y")
   say("DTOBITO invalida: ", sum(is.na(dt)))
@@ -113,7 +111,7 @@ suppressWarnings({
       format(sum(is.na(sim$regiao_saude)), big.mark = "."),
       sprintf(" (%.3f%%)", 100 * mean(is.na(sim$regiao_saude))))
 
-  ## ---------------- 3. ISU por regiao de saude ----------------
+  ## ---------------- 3. ISU por região de saúde ----------------
   sim[, regiao_rot := fifelse(is.na(regiao_saude), "SEM MUNICIPIO CORRESPONDENTE",
                               regiao_saude)]
   isu_reg <- sim[, .(
@@ -171,7 +169,7 @@ suppressWarnings({
   fwrite(rbind(isu_reg, isu_geral, fill = TRUE),
          file.path(TAB, "tab6_isu_regiao_saude.csv"), encoding = "UTF-8")
 
-  ## ---------------- 4. ISU por regiao e ano ----------------
+  ## ---------------- 4. ISU por região e ano ----------------
   ra <- sim[!is.na(regiao_saude), .(obitos = .N,
                                     obitos_50mais = sum(idade_anos >= 50, na.rm = TRUE)),
             by = .(regiao_saude, ano)]
@@ -198,8 +196,8 @@ suppressWarnings({
   say("  mas precisa ser declarada como limitacao.")
 
   ## ---------------- 6. figura ----------------
-  ## Paleta viridis: as barras sao coloridas pelo proprio valor do ISU, de modo
-  ## que a cor tambem carrega a informacao; a linha de referencia do estado usa
+  ## Paleta viridis: as barras são coloridas pelo proprio valor do ISU, de modo
+  ## que a cor também carrega a informação; a linha de referência do estado usa
   ## a extremidade escura da mesma paleta para manter o contraste.
   isu_plot <- isu_reg[regiao_saude != "SEM MUNICIPIO CORRESPONDENTE"]
   COR_REF <- viridisLite::viridis(1, begin = 0.0)
@@ -214,13 +212,14 @@ suppressWarnings({
              colour = COR_REF) +
     scale_fill_viridis_c(option = "D", name = "ISU (%)") +
     coord_flip(ylim = c(min(isu_plot$ISU) - 3, max(isu_plot$ISU) + 3)) +
-    labs(title = "Indice de Swaroop-Uemura por regiao de saude",
-         subtitle = "Obitos por doencas cerebrovasculares em pessoas de 50 anos ou mais (%) - RJ, 2010-2024",
+    labs(title = "Índice de Swaroop–Uemura por região de saúde",
+         subtitle = "Óbitos por doenças cerebrovasculares em pessoas de 50 anos ou mais (%) — RJ, 2010–2024",
          x = NULL, y = "ISU (%)") +
     theme_minimal(base_size = 11) +
     theme(plot.title = element_text(face = "bold"),
           panel.grid.major.y = element_blank())
-  ggsave(file.path(FIG, "fig_isu_regiao.png"), g, width = 8, height = 5, dpi = 300)
+  ggsave(file.path(FIG, "fig_isu_regiao.png"), g, width = 8, height = 5, dpi = 300,
+         device = ragg::agg_png)
   say("\nfigura gravada: 06_figuras/fig_isu_regiao.png")
 
   say("\nfim: ", format(Sys.time()))

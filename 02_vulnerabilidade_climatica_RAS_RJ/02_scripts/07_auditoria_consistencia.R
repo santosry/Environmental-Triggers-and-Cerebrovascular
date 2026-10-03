@@ -1,25 +1,22 @@
-# =====================================================================
 # 07_auditoria_consistencia.R
-# ---------------------------------------------------------------------
-# Auditoria de incongruencias e inconsistencias, em quatro blocos:
+# Auditoria de incongruências e inconsistências, em quatro blocos:
 #
-#   A. coerencia interna dos registros brutos do SIH-RD (191 competicoes,
-#      em varredura, sem carregar tudo em memoria);
-#   B. coerencia da coorte analitica e das derivadas;
-#   C. triangulacao entre SIH (internacoes) e SIM (obitos), que sao fontes
+#   A. coerência interna dos registros brutos do SIH-RD (191 competições,
+#      em varredura, sem carregar tudo em memória);
+#   B. coerência da coorte analítica e das derivadas;
+#   C. triangulação entre SIH (internações) e SIM (óbitos), que são fontes
 #      independentes;
-#   D. coerencia do modelo ajustado, da correcao de FDR e das tabelas
+#   D. coerência do modelo ajustado, da correção de FDR e das tabelas
 #      publicadas.
 #
-# Cada verificacao recebe uma classificacao:
+# Cada verificação recebe uma classificacao:
 #   OK       valor dentro do esperado
-#   ATENCAO  valor que exige leitura, mas tem explicacao conhecida
-#   ERRO     valor que indica defeito e precisa de correcao
+#   ATENÇÃO  valor que exige leitura, mas tem explicação conhecida
+#   ERRO     valor que indica defeito e precisa de correção
 #
-# Saidas:
+# Saídas:
 #   04_resultados/auditoria_consistencia.txt
 #   05_tabelas/tab19_auditoria.csv
-# =====================================================================
 
 suppressWarnings({
   options(stringsAsFactors = FALSE)
@@ -48,9 +45,7 @@ suppressWarnings({
   say("R ", R.version.string, " | inicio: ", format(Sys.time()))
   say("=====================================================================")
 
-  ## ==================================================================
-  ## A. COERENCIA INTERNA DOS REGISTROS BRUTOS DO SIH-RD
-  ## ==================================================================
+  ## A. COERÊNCIA INTERNA DOS REGISTROS BRUTOS DO SIH-RD
   say("\n=========== A. REGISTROS BRUTOS DO SIH-RD ===========")
   fs <- sort(list.files(DIR_SIH, pattern = "^sih_rd_rj_[0-9]{4}_[0-9]{2}\\.rds$",
                         full.names = TRUE))
@@ -146,9 +141,9 @@ suppressWarnings({
   reg("A", "N_AIH repetida na mesma competencia", a$ai_repetida_competencia, "ATENCAO",
       "esperado: a mesma AIH aparece em linhas de procedimentos")
 
-  ## --- fronteira dezembro/janeiro: risco de duplicacao entre competicoes ---
-  ## Restrito aos diagnosticos de interesse, que sao os que entram na coorte.
-  ## Se a mesma AIH aparecer em duas competicoes, a deduplicacao do script 02
+  ## --- fronteira dezembro/janeiro: risco de duplicação entre competições ---
+  ## Restrito aos diagnósticos de interesse, que são os que entram na coorte.
+  ## Se a mesma AIH aparecer em duas competições, a deduplicacao do script 02
   ## tem de elimina-la.
   say("\n  fronteira dezembro/janeiro, restrita aos diagnosticos do estudo:")
   borda <- character(0)
@@ -176,9 +171,7 @@ suppressWarnings({
       nrow(dup_cruz), if (nrow(dup_cruz) == 0) "OK" else "ATENCAO",
       "a deduplicacao do script 02 remove essas repeticoes")
 
-  ## ==================================================================
-  ## B. COERENCIA DA COORTE
-  ## ==================================================================
+  ## B. COERÊNCIA DA COORTE
   say("\n=========== B. COORTE ANALITICA ===========")
   d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
   reg("B", "Internacoes na coorte", nrow(d), "OK")
@@ -194,7 +187,7 @@ suppressWarnings({
       if (uniqueN(d$regiao_saude) == 9) "OK" else "ERRO")
   reg("B", "Hospitais distintos", uniqueN(d$CNES), "OK")
 
-  ## regra de derivacao do subtipo, verificada de forma direta
+  ## regra de derivação do subtipo, verificada de forma direta
   viol <- d[, sum(
     (cid3 %in% c("I60","I61","I62") & subtipo != "Hemorragico (I60-I62)") |
     (cid3 == "I63" & subtipo != "Isquemico (I63)") |
@@ -206,7 +199,7 @@ suppressWarnings({
   reg("B", "Linhas com subtipo incoerente com o CID de 3 digitos", viol,
       if (viol == 0) "OK" else "ERRO")
 
-  ## deduplicacao: a chave completa agora esta na base analitica, o que permite
+  ## deduplicacao: a chave completa agora esta na base analítica, o que permite
   ## reverificar o que o script 02 afirmou ter removido
   CHAVE_DEDUP <- c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","cid4","MUNIC_RES6",
                    "sexo","idade_anos")
@@ -216,13 +209,13 @@ suppressWarnings({
       if (dd == 0) "OK" else "ERRO",
       "mesma chave do script 02; deve ser zero por construcao")
 
-  ## duplicacao integral: com N_AIH na base, agora e uma verificacao real
+  ## duplicação integral: com N_AIH na base, agora e uma verificação real
   dup_full <- sum(duplicated(d))
   reg("B", "Linhas integralmente duplicadas na base analitica", dup_full,
       if (dup_full == 0) "OK" else "ERRO",
       "todas as colunas, incluindo N_AIH e a data de saida")
 
-  ## coincidencia de perfil clinico sem a chave: e esperada e nao e defeito,
+  ## coincidencia de perfil clínico sem a chave: e esperada e não e defeito,
   ## mas dimensiona quanto da base tem perfil repetido
   sem_chave <- setdiff(names(d), c("N_AIH","IDENT","DT_INTER_d","DT_SAIDA","VAL_TOT",
                                    "mun_nome","mun_nome_mov","MUNIC_RES6","MUNIC_MOV6"))
@@ -230,14 +223,14 @@ suppressWarnings({
   reg("B", "Linhas com perfil clinico coincidente (sem chave)", co,
       "ATENCAO", sprintf("%.1f%% da base; esperado, nao e defeito", 100 * co / nrow(d)))
 
-  ## permanencia zero entre os obitos: se fosse sistematica, invalidaria as
-  ## estatisticas de permanencia do manuscrito
+  ## permanência zero entre os óbitos: se fosse sistematica, invalidaria as
+  ## estatisticas de permanência do manuscrito
   z <- sum(d$obito_hospitalar == 1 & d$DIAS_PERM == 0, na.rm = TRUE)
   reg("B", "Obitos com zero dia de permanencia na coorte", z,
       if (100 * z / sum(d$obito_hospitalar) < 10) "OK" else "ATENCAO",
       sprintf("%.2f%% dos obitos", 100 * z / sum(d$obito_hospitalar)))
 
-  ## inconsistencia interna entre dias de UTI e permanencia
+  ## inconsistencia interna entre dias de UTI e permanência
   u <- sum(d$UTI_MES_TO > d$DIAS_PERM, na.rm = TRUE)
   reg("B", "UTI_MES_TO maior que DIAS_PERM na coorte", u,
       if (100 * u / nrow(d) < 2) "ATENCAO" else "ERRO",
@@ -254,7 +247,7 @@ suppressWarnings({
       if (sum(is.na(d[, .(idade_z, sexo, subtipo, car_int, uti, fluxo_inter,
                           regiao_saude, CNES, obito_hospitalar)])) == 0) "OK" else "ERRO")
 
-  ## conferencia contra o inventario de codigos do script 02
+  ## conferência contra o inventario de códigos do script 02
   vc <- file.path(TAB, "tab_verificacao_cid.csv")
   if (file.exists(vc)) {
     v <- fread(vc, encoding = "UTF-8")
@@ -267,9 +260,7 @@ suppressWarnings({
     reg("B", "Bloco G45/G46 nos arquivos brutos", soma_g, "OK")
   }
 
-  ## ==================================================================
-  ## C. TRIANGULACAO SIH x SIM
-  ## ==================================================================
+  ## C. TRIANGULAÇÃO SIH x SIM
   say("\n=========== C. TRIANGULACAO SIH x SIM ===========")
   t1 <- Sys.time()
   sim <- rbindlist(lapply(sort(list.files(DIR_SIM, pattern = "^sim_do_rj_[0-9]{4}\\.rds$",
@@ -301,9 +292,7 @@ suppressWarnings({
   say("  tempo da leitura do SIM: ",
       sprintf("%.1f min", as.numeric(difftime(Sys.time(), t1, units = "mins"))))
 
-  ## ==================================================================
-  ## D. COERENCIA DO MODELO E DAS TABELAS
-  ## ==================================================================
+  ## D. COERÊNCIA DO MODELO E DAS TABELAS
   say("\n=========== D. MODELO E TABELAS ===========")
   comp <- fread(file.path(TAB, "tab4_glmm_componentes.csv"), encoding = "UTF-8")
   gv <- function(m) as.numeric(comp[metrica == m, valor][1])
