@@ -46,6 +46,14 @@ suppressWarnings({
   library(ragg)
   source("02_scripts/00_glmm_utils.R")
 
+  ## Atalho de otimização: se o objetivo e apenas refazer a figura-painel
+  ## (que le os resultados ja cacheados em 05_tabelas), evita reajustar todos
+  ## os modelos exploratorios. Uso: GLMM_SO_FIGURAS=1 Rscript 11_exploratorio.R
+  if (Sys.getenv("GLMM_SO_FIGURAS", "0") == "1") {
+    source("02_scripts/19_figura_exploratorio.R", local = new.env())
+    quit(save = "no")
+  }
+
   ENGINE <- Sys.getenv("GLMM_ENGINE", "glmmTMB")
   ROOT <- normalizePath(".")
   PROC <- file.path(ROOT, "01_dados", "processados")

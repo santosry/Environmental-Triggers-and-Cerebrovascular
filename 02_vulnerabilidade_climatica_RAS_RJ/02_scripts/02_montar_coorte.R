@@ -2,13 +2,18 @@
 # Monta a coorte analítica a partir dos microdados baixados pelo
 # microdatasus (script 01), lendo os .rds direto, sem conversão de formato.
 #
-# COBERTURA DIAGNÓSTICA (Bloco 1.1 do plano, com a revisão pedida):
-#   I60 a I69 completos
-#   G45 completo, incluindo G45.8
-#   G46 completo, incluindo G46.7 e G46.8
-# Os códigos G45.8 e G46.8 foram incorporados a pedido e o bloco completo
-# passa a ser a definição única, o que também da interpretabilidade ao
-# grupo G46 (a lista parcial anterior deixava G46 com 18 internações).
+# COBERTURA DIAGNÓSTICA:
+#   I60 a I69 completos.
+#   Bloco G45 completo: G45.0, G45.1, G45.2, G45.3, G45.4, G45.8 e G45.9
+#     (G45.5, G45.6 e G45.7 não existem na CID-10).
+#   Bloco G46 completo: G46.0, G46.1, G46.2, G46.3, G46.4, G46.5, G46.6,
+#     G46.7 e G46.8 (G46.9 não existe).
+#   A definição é por bloco de três dígitos, de modo que também entram os
+#   registros truncados (G45/G46 sem quarto caractere): 411 no período.
+# Os códigos G45.8, G46.7 e G46.8 foram incorporados na revisão pedida; o
+# bloco completo passa a ser a definição única, o que também dá
+# interpretabilidade ao grupo G46 (a lista parcial anterior deixava G46 com 18
+# internações).
 #
 # PERÍODO: DT_INTER de 2010 a 2024. As competições de 2025 são lidas
 # porque o SIH-RD e organizado por competência de processamento e

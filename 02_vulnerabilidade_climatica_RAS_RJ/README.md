@@ -163,8 +163,11 @@ manuscrito.
 
 ## Decisões metodológicas registradas
 
-1. **Cobertura diagnóstica:** I60 a I69 completos mais os blocos completos **G45 e G46**,
-   incluindo G45.8 (7.113 registros), G46.7 (1) e G46.8 (1.406). A lista parcial
+1. **Cobertura diagnóstica:** I60 a I69 completos mais os blocos completos **G45 e G46**.
+   Códigos exatos: **G45.0, G45.1, G45.2, G45.3, G45.4, G45.8, G45.9** e
+   **G46.0, G46.1, G46.2, G46.3, G46.4, G46.5, G46.6, G46.7, G46.8** (G45.5–G45.7 e
+   G46.9 não existem na CID-10), além dos registros truncados em três dígitos (G45/G46).
+   Contagens no período: G45.8 = 7.113, G46.7 = 1 e G46.8 = 1.406. A lista parcial
    anterior deixava o grupo G46 com apenas 18 internações e um OR ininterpretável.
 2. **Período:** `DT_INTER` de 2010 a 2024.
 3. **Unidade territorial:** as nove regiões de saúde, sem agregação por macrorregião.
@@ -365,6 +368,18 @@ pelo IPCA foram promovidas a análise atual (`14_verificacao_sidra.R` e
 históricas foram renomeadas com o sufixo `_legado` (`16`, `17` e `18`). A pasta
 de figuras foi organizada em `manuscrito/`, `exploratorias/` e `suplementares/`, e o
 banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_exploratorias.R`.
+
+Também em 3 de outubro de 2026 foram removidos os **legados volumosos** de
+`01_dados/processados/` (`sih_cerebrovascular_2010_2024.csv`, ~172 MB;
+`sim_cerebrovascular_2010_2024.csv`, ~62 MB; `sih_g45_g46_2010_2024.csv`). Eles são
+**regeneráveis** pela cadeia histórica (`16_consolidar_dados_legado.py` →
+`18_mortalidade_sim_legado.py` → `17_analises_territoriais_legado.py`), mas não são
+mais armazenados. O script `11_exploratorio.R` ganhou o atalho
+`GLMM_SO_FIGURAS=1`, que refaz apenas a figura-painel a partir dos resultados cacheados
+(sem reajustar os modelos, que levam mais de uma hora).
+
+> `13_documentos_referencia/` e `08_manuscrito/manuscrito.md` **não são versionados**
+> a pedido; permanecem apenas no disco local.
 
 ---
 
