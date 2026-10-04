@@ -40,7 +40,7 @@ suppressWarnings({
   say("=====================================================================")
 
   ## ================= dados =================
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
              select = c("CNES", "obito_hospitalar", "idade_anos", "idade_z", "sexo",
                         "subtipo", "cid3", "cid4", "car_int", "uti", "uti_marca",
                         "fluxo_inter", "regiao_saude", "ano", "coorte"),
@@ -134,8 +134,8 @@ suppressWarnings({
             fluxo_inter + regiao_saude + (1 | CNES), "S2_UTI_por_MARCA_UTI")
 
   ## --- período ---
-  add_fit(d[ano >= 2015], BASE, "S3_periodo_2015_2024")
-  add_fit(d[ano <= 2014], BASE, "S4_periodo_2010_2014")
+  add_fit(d[ano >= 2020], BASE, "S3_periodo_2020_2024")
+  add_fit(d[ano <= 2019], BASE, "S4_periodo_2014_2019")
 
   ## --- recorte diagnóstico ---
   add_fit(d[cid3 != "I69"], BASE, "S5_sem_I69")

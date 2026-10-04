@@ -94,7 +94,7 @@ suppressWarnings({
 
   ## população estadual por ano (checagem de plausibilidade)
   est <- pop[ano <= 2024, .(populacao = sum(populacao, na.rm = TRUE)), by = ano][order(ano)]
-  reg("Populacao do RJ em 2010", round(est[ano == 2010, populacao]), "INFO")
+  reg("Populacao do RJ em 2014", round(est[ano == 2014, populacao]), "INFO")
   reg("Populacao do RJ em 2024", round(est[ano == 2024, populacao]), "INFO")
   va <- est[, .(ano, pop = populacao)]
   va[, cresc := c(NA, diff(pop) / head(pop, -1) * 100)]
@@ -106,7 +106,7 @@ suppressWarnings({
     metrica = c("linhas", "municipios", "ano_min", "ano_max", "pop_2010", "pop_2024",
                 "n_interpolados", "pct_interpolados", "duplicatas", "populacao_ausente"),
     valor = c(nrow(pop), uniqueN(pop$ibge6), min(pop$ano), max(pop$ano),
-              round(est[ano == 2010, populacao]), round(est[ano == 2024, populacao]),
+              round(est[ano == 2014, populacao]), round(est[ano == 2024, populacao]),
               if ("fonte_populacao" %in% names(pop)) sum(grepl("nterpol", pop$fonte_populacao)) else NA,
               if ("fonte_populacao" %in% names(pop)) round(pct_int, 2) else NA,
               dup, sum(is.na(pop$populacao))))

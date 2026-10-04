@@ -6,7 +6,7 @@
 #   (i)  e marcador de gravidade e, em boa medida, mediador entre gravidade e
 #        óbito, de modo que o seu OR não tem leitura causal;
 #   (ii) o REGISTRO varia enormemente entre hospitais (9,5% na Serrana a
-#        31,7% no Noroeste) e cresce no tempo (8,2% em 2010 a 20,8% em 2024),
+#        31,7% no Noroeste) e cresce no tempo (2014 a 2024),
 #        o que indica pratica de registro e faturamento, não apenas gravidade.
 # Como o registro e uma caracteristica do estabelecimento, incluir a UTI como
 # covariável de paciente transfere para o nível do paciente uma informação que
@@ -53,7 +53,7 @@ suppressWarnings({
   say("=====================================================================")
 
   ## ---------------- dados ----------------
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
              select = c("CNES","obito_hospitalar","idade_anos","idade_z","sexo","subtipo",
                         "car_int","uti","fluxo_inter","regiao_saude","ano"),
              encoding = "UTF-8")
@@ -121,9 +121,9 @@ suppressWarnings({
                 gt$idade[i], gt$hemorragico[i]))
 
   say("\n  LEITURA. A UTI nao e apenas pratica de registro: ela separa dois tipos")
-  say("  de estabelecimento. Os hospitais que registram UTI atendem 20,6% de casos")
-  say("  hemorragicos contra 1,3% nos que nao registram, e tem mortalidade de 22,9%")
-  say("  contra 10,4%. A variavel combina, portanto, tres coisas ao mesmo tempo:")
+  say("  de estabelecimento. Os hospitais com registro alto de UTI atendem 19,6% de")
+  say("  casos hemorragicos, contra 1,7% nos que nao registram, e tem mortalidade")
+  say("  de 22,5%, contra 11,0%. A variavel combina, portanto, tres coisas ao mesmo tempo:")
   say("  gravidade do paciente, capacidade de UTI do hospital e posicao do hospital")
   say("  na rede de referencia. Inclui-la como covariavel de PACIENTE transfere para")
   say("  o nivel individual uma informacao que e do estabelecimento, e isso enviesa")
@@ -217,7 +217,7 @@ suppressWarnings({
     list(rot = "ao menos 7 dias",            expr = quote(as.integer(UTI_MES_TO >= 7))),
     list(rot = "pelo campo MARCA_UTI",       expr = quote(uti_marca)))
 
-  dl <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  dl <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
               select = c("CNES","obito_hospitalar","idade_anos","idade_z","sexo","subtipo",
                          "car_int","uti","uti_marca","UTI_MES_TO","fluxo_inter",
                          "regiao_saude"),
@@ -275,7 +275,7 @@ suppressWarnings({
     scale_fill_viridis_c(option = "D", guide = "none") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.18))) +
     labs(title = "Registro de uso de UTI por região de saúde",
-         subtitle = "Internações com dias de UTI, 2010-2024",
+         subtitle = "Internações com dias de UTI, 2014-2024",
          x = "Internações com UTI (%)", y = NULL) +
     theme_minimal(base_size = 10) +
     theme(plot.title = element_text(face = "bold"),

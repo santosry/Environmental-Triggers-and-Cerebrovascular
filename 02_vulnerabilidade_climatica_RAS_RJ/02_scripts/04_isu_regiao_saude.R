@@ -11,7 +11,7 @@
 #   2. Decodifica o campo IDADE, que usa a centena como unidade de tempo:
 #      4xx = anos, 5xx = 100+xx anos, 3xx = meses, 2xx = horas,
 #      1xx = minutos, 999 = ignorada.
-#   3. Filtra DTOBITO entre 2010 e 2024.
+#   3. Filtra DTOBITO entre 2014 e 2024.
 #   4. Calcula o ISU por região de saúde, com sensibilidades.
 #   5. Quantifica G45 e G46 como causa básica, para declarar a assimetria
 #      entre a coorte de internações (SIH) e a série de mortalidade (SIM).
@@ -99,8 +99,8 @@ suppressWarnings({
   dt <- as.Date(as.character(sim$DTOBITO), format = "%d%m%Y")
   say("DTOBITO invalida: ", sum(is.na(dt)))
   sim[, ano := as.integer(format(dt, "%Y"))]
-  sim <- sim[!is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")]
-  say("apos filtro DTOBITO 2010-2024: ", format(nrow(sim), big.mark = "."))
+  sim <- sim[!is.na(dt) & dt >= as.Date("2014-01-01") & dt <= as.Date("2024-12-31")]
+  say("apos filtro DTOBITO 2014-2024: ", format(nrow(sim), big.mark = "."))
   say("idade ignorada (codigo 999): ", format(sum(is.na(sim$idade_anos)), big.mark = "."),
       sprintf(" (%.3f%%)", 100 * mean(is.na(sim$idade_anos))))
 
@@ -178,8 +178,8 @@ suppressWarnings({
   setorder(ra, regiao_saude, ano)
   fwrite(ra, file.path(TAB, "tab7_isu_regiao_ano.csv"), encoding = "UTF-8")
 
-  say("\n--- ISU POR REGIAO E ANO (2010, 2015, 2020, 2024) ---")
-  sel <- ra[ano %in% c(2010, 2015, 2020, 2024)]
+  say("\n--- ISU POR REGIAO E ANO (2014, 2019, 2020, 2024) ---")
+  sel <- ra[ano %in% c(2014, 2019, 2020, 2024)]
   for (rg in unique(sel$regiao_saude)) {
     v <- sel[regiao_saude == rg]
     say(sprintf("  %-24s %s", rg,
@@ -193,7 +193,8 @@ suppressWarnings({
       format(tot_g, big.mark = "."), " de ", format(tot_all, big.mark = "."),
       sprintf(" (%.4f%%)", 100 * tot_g / tot_all))
   say("  A serie de mortalidade passou a incluir I60-I69 e G45/G46, alinhada ao SIH.")
-  say("  G45/G46 somam 60 obitos (0,04%) como causa basica e nao alteram as conclusoes.")
+  say("  G45/G46 somam ", format(tot_g, big.mark = "."),
+      " obitos como causa basica e nao alteram as conclusoes.")
 
   ## ---------------- 6. figura ----------------
   ## Paleta viridis: as barras são coloridas pelo proprio valor do ISU, de modo
@@ -213,7 +214,7 @@ suppressWarnings({
     scale_fill_viridis_c(option = "D", name = "ISU (%)") +
     coord_flip(ylim = c(min(isu_plot$ISU) - 3, max(isu_plot$ISU) + 3)) +
     labs(title = "Índice de Swaroop–Uemura por região de saúde",
-         subtitle = "Óbitos por doenças cerebrovasculares em pessoas de 50 anos ou mais (%) — RJ, 2010–2024",
+         subtitle = "Óbitos por doenças cerebrovasculares em pessoas de 50 anos ou mais (%) — RJ, 2014–2024",
          x = NULL, y = "ISU (%)") +
     theme_minimal(base_size = 11) +
     theme(plot.title = element_text(face = "bold"),

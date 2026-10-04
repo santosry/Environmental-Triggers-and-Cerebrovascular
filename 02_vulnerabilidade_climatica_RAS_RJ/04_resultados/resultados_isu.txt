@@ -1,52 +1,51 @@
 =====================================================================
 INDICE DE SWAROOP-UEMURA POR REGIAO DE SAUDE
 fonte: microdados do SIM-DO baixados pelo microdatasus
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 12:59:18
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 18:53:48
 =====================================================================
 arquivos anuais do SIM-DO: 15
 obitos por DCV I60-I69, residentes no RJ (todas as competicoes): 147.611
 DTOBITO invalida: 0
-apos filtro DTOBITO 2010-2024: 147.611
-idade ignorada (codigo 999): 187 (0.127%)
-obitos sem municipio correspondente no lookup: 292 (0.198%)
+apos filtro DTOBITO 2014-2024: 106.799
+idade ignorada (codigo 999): 109 (0.102%)
+obitos sem municipio correspondente no lookup: 187 (0.175%)
 
 --- ISU POR REGIAO DE SAUDE ---
   regiao                                obitos   ISU(%)   ISU>=65  ISU s/I69
-  Serrana                                9.555    93.75     74.39      92.86
-  Metropolitana II                      17.939    93.61     72.20      92.93
-  Noroeste                               3.326    93.51     73.66      92.93
-  Medio Paraiba                          8.786    93.05     72.13      92.22
-  Baia da Ilha Grande                    1.773    92.22     69.71      91.36
-  Centro-Sul                             3.410    92.20     71.47      91.44
-  Metropolitana I                       89.162    92.15     70.56      91.60
-  Norte                                  7.753    91.82     70.30      90.63
-  Baixada Litoranea                      5.615    91.50     69.76      90.71
-  SEM MUNICIPIO CORRESPONDENTE             292    46.58     25.00      42.86
-  ESTADO DO RJ                         147.611    92.39     71.05      91.73
+  Serrana                                6.883    94.20     75.39      93.50
+  Metropolitana II                      13.220    93.74     72.63      93.16
+  Noroeste                               2.315    93.26     73.48      92.79
+  Medio Paraiba                          6.435    93.19     72.48      92.42
+  Baia da Ilha Grande                    1.347    92.50     70.08      91.74
+  Metropolitana I                       64.156    92.24     70.72      91.76
+  Centro-Sul                             2.452    92.21     71.57      91.57
+  Baixada Litoranea                      4.142    92.01     70.16      91.38
+  Norte                                  5.662    91.79     70.26      90.67
+  SEM MUNICIPIO CORRESPONDENTE             187    51.87     26.20      46.04
+  ESTADO DO RJ                         106.799    92.53     71.31      91.95
 
-amplitude regional do ISU: 2.25 pontos percentuais (maximo 93.75 em Serrana; minimo 91.50 em Baixada Litoranea)
-amplitude com corte em 65 anos: 4.68 pontos percentuais
+amplitude regional do ISU: 2.41 pontos percentuais (maximo 94.20 em Serrana; minimo 91.79 em Norte)
+amplitude com corte em 65 anos: 5.31 pontos percentuais
 O ISU por DCV tem faixa estreita por construcao, porque a mortalidade
 cerebrovascular ja se concentra em idades avancadas. O corte em 65 anos
 separa melhor os territorios.
 
---- ISU POR REGIAO E ANO (2010, 2015, 2020, 2024) ---
-  Baia da Ilha Grande      2010=92.0  2015=93.3  2020=96.5  2024=90.0
-  Baixada Litoranea        2010=89.0  2015=92.0  2020=92.8  2024=89.6
-  Centro-Sul               2010=94.2  2015=90.3  2020=91.4  2024=94.2
-  Medio Paraiba            2010=92.0  2015=92.6  2020=93.3  2024=95.6
-  Metropolitana I          2010=91.9  2015=92.2  2020=92.2  2024=92.0
-  Metropolitana II         2010=93.6  2015=93.0  2020=94.0  2024=92.8
-  Noroeste                 2010=95.5  2015=93.0  2020=94.4  2024=94.4
-  Norte                    2010=90.7  2015=90.6  2020=88.9  2024=92.3
-  Serrana                  2010=92.0  2015=94.2  2020=95.5  2024=94.9
+--- ISU POR REGIAO E ANO (2014, 2019, 2020, 2024) ---
+  Baia da Ilha Grande      2014=92.9  2019=88.7  2020=96.5  2024=90.0
+  Baixada Litoranea        2014=94.3  2019=91.4  2020=92.8  2024=89.6
+  Centro-Sul               2014=94.0  2019=91.3  2020=91.4  2024=94.2
+  Medio Paraiba            2014=91.1  2019=91.6  2020=93.3  2024=95.6
+  Metropolitana I          2014=92.6  2019=92.9  2020=92.2  2024=92.0
+  Metropolitana II         2014=92.5  2019=93.5  2020=94.0  2024=92.8
+  Noroeste                 2014=91.9  2019=92.8  2020=94.4  2024=94.4
+  Norte                    2014=94.1  2019=91.5  2020=88.9  2024=92.3
+  Serrana                  2014=91.6  2019=94.3  2020=95.5  2024=94.9
 
 --- SIMETRIA ENTRE AS COORTES: G45/G46 COMO CAUSA BASICA ---
   obitos com G45/G46 como causa basica (residentes RJ): 60 de 2.143.313 (0.0028%)
-  A ampliacao diagnostica do Bloco 1.1 vale para a coorte de internacoes.
-  A serie de mortalidade permanece em I60-I69 e a assimetria e desprezivel,
-  mas precisa ser declarada como limitacao.
+  A serie de mortalidade passou a incluir I60-I69 e G45/G46, alinhada ao SIH.
+  G45/G46 somam 60 obitos (0,04%) como causa basica e nao alteram as conclusoes.
 
 figura gravada: 06_figuras/fig_isu_regiao.png
 
-fim: 2026-10-03 12:59:54
+fim: 2026-10-03 18:54:58

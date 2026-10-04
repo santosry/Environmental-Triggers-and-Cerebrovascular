@@ -3,8 +3,13 @@
 # Recortes por CID do estudo: leves e versionados de proposito (produto do script 01)
 !/01_dados/processados/sih_cid_estudo_2010_2024.csv
 !/01_dados/processados/sim_cid_estudo_2010_2024.csv
+!/01_dados/processados/sih_cid_estudo_2014_2024.csv
+!/01_dados/processados/sim_cid_estudo_2014_2024.csv
 /10_auditoria/AUDITORIA_COMPLETA_R.md
 # Manuscrito e documentos de submissao nao versionados a pedido
 /08_manuscrito/
 # Documentos de referencia (edital e plano estadual): nao versionados a pedido
 /13_documentos_referencia/
+
+# backup local (nao versionar; contem copia do manuscrito)
+BACKUP_LOCK*/

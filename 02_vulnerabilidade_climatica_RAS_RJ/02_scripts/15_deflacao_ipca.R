@@ -4,8 +4,8 @@
 # mensal (SIDRA tabela 1737, variável 2266).
 #
 # Faz parte da ANÁLISE ATUAL: le a coorte analítica já consolidada
-# (01_dados/processados/coorte_glmm_2010_2024.csv) e não depende mais do
-# antigo arquivo de consolidacao (sih_cerebrovascular_2010_2024.csv).
+# (01_dados/processados/coorte_glmm_2014_2024.csv) e não depende mais do
+# antigo arquivo de consolidacao (sih_cerebrovascular_2014_2024.csv).
 # O recorte de custo e I60-I69, para manter a mesma base histórica dos
 # indicadores de custo do manuscrito; os blocos G45/G46 (AIT e sindromes
 # vasculares) ficam fora dos custos, como nas demais séries descritivas.
@@ -17,7 +17,7 @@
 #   3. Custo deflacionado = VAL_TOT * fator(ano).
 #
 # Entradas:
-#   01_dados/processados/coorte_glmm_2010_2024.csv
+#   01_dados/processados/coorte_glmm_2014_2024.csv
 #   01_dados/tmp_ipca/ipca_1737_2266.json
 #
 # Saídas:
@@ -67,7 +67,7 @@ suppressWarnings({
   setorder(fat, ano)
 
   ## ---------------- 2. coorte ----------------
-  co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
               encoding = "UTF-8", na.strings = c("NA", ""),
               select = c("ano", "regiao_saude", "coorte", "cid3", "VAL_TOT"))
   ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
@@ -111,10 +111,10 @@ suppressWarnings({
 
   ## ---------------- 4. relatório ----------------
   say("")
-  say(sprintf("Custo total corrente (2010-2024):        R$ %s", format(round(total_corrente, 2), big.mark = ".", decimal.mark = ",")))
+  say(sprintf("Custo total corrente (2014-2024):        R$ %s", format(round(total_corrente, 2), big.mark = ".", decimal.mark = ",")))
   say(sprintf("Custo total deflacionado (dez/2024):     R$ %s", format(round(total_defl, 2), big.mark = ".", decimal.mark = ",")))
-  say(sprintf("Inflacao acumulada implicita 2010-2024:  %.1f%%",
-              100 * (fat[ano == 2010, fator_para_dez2024_media] - 1)))
+  say(sprintf("Inflacao acumulada implicita 2014-2024:  %.1f%%",
+              100 * (fat[ano == 2014, fator_para_dez2024_media] - 1)))
   say("")
   say("Fatores de deflacao por ano:")
   for (i in seq_len(nrow(fat)))

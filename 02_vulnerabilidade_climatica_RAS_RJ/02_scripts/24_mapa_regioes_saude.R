@@ -9,7 +9,7 @@
 # internacao 2024 (painel B).
 #
 # Entradas: geobr (malha RJ), lookup municipio->regiao, populacao SIDRA,
-#           coorte_glmm_2010_2024.csv, sim_cid_estudo_2010_2024.csv.
+#           coorte_glmm_2014_2024.csv, sim_cid_estudo_2014_2024.csv.
 # Saidas:   06_figuras/exploratorias/fig_ex28_mapa_internacao.png
 #           06_figuras/exploratorias/fig_ex29_mapa_mortalidade.png
 #           06_figuras/manuscrito/figura1_taxa_internacao_mapa.jpg
@@ -73,12 +73,12 @@ suppressWarnings({
   pop <- merge(pop, lk[, .(ibge6, regiao_saude = macro_regiao)], by = "ibge6", all.x = TRUE)
   pop24 <- pop[ano == 2024, .(pop = sum(populacao, na.rm = TRUE)), by = regiao_saude]
 
-  co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
+  co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8",
               na.strings = c("NA", ""), select = c("ano", "regiao_saude", "coorte"))
   ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
   co <- co[ano == 2024, .(int = .N), by = regiao_saude]
 
-  sim <- fread(file.path(PROC, "sim_cid_estudo_2010_2024.csv"), encoding = "UTF-8",
+  sim <- fread(file.path(PROC, "sim_cid_estudo_2014_2024.csv"), encoding = "UTF-8",
                colClasses = "character", na.strings = c("NA", ""))
   sim[, ano := as.integer(substr(DTOBITO, 5, 8))]
   sim <- merge(sim, lk[, .(ibge6, regiao_saude = macro_regiao)],
@@ -130,7 +130,7 @@ suppressWarnings({
   ## ---------------- Figura 1 do manuscrito (serie + mapa) ----------------
   # serie temporal estadual
   pop_est <- pop[ano <= 2024, .(pop = sum(populacao, na.rm = TRUE)), by = ano]
-  co2 <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
+  co2 <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8",
                na.strings = c("NA", ""), select = c("ano", "coorte", "obito_hospitalar"))
   co2[, ano := as.integer(ano)]
   ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
@@ -145,7 +145,7 @@ suppressWarnings({
     scale_y_continuous(name = "Internações por 100.000",
                        sec.axis = sec_axis(~ . / 3, name = "% óbito hospitalar")) +
     scale_colour_viridis_d(option = "D", end = 0.85) +
-    labs(title = "A. Internação e letalidade hospitalar por DCV, 2010-2024",
+    labs(title = "A. Internação e letalidade hospitalar por DCV, 2014-2024",
          x = NULL, colour = NULL) +
     theme_minimal(base_size = 14) +
     theme(legend.position = "top", legend.text = element_text(size = 11),

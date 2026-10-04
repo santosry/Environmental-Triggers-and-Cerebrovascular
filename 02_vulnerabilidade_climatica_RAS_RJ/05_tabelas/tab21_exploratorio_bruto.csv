@@ -1,17 +1,16 @@
 nivel,n,obitos,mortalidade_pct,variavel
-Media complexidade,282078,54640,19.37,Complexidade
-Basica,13595,1187,8.73,Complexidade
-1,20305,8409,41.41,Diagnosticos secundarios
+Media complexidade,211779,41495,19.59,Complexidade
+Basica,11053,931,8.42,Complexidade
+1,20299,8404,41.4,Diagnosticos secundarios
 4,650,264,40.62,Diagnosticos secundarios
 3,1509,482,31.94,Diagnosticos secundarios
-2,4297,998,23.23,Diagnosticos secundarios
-0,268588,45538,16.95,Diagnosticos secundarios
-Administracao publica,180743,40267,22.28,Natureza juridica
-,40555,7762,19.14,Natureza juridica
-Entidades sem fins lucrativos,54619,6848,12.54,Natureza juridica
-Entidades empresariais,19756,950,4.81,Natureza juridica
-,73670,17804,24.17,Raca/cor
-Preta,41044,7496,18.26,Raca/cor
-Parda,101085,18135,17.94,Raca/cor
-Amarela,2842,488,17.17,Raca/cor
-Branca,77019,11900,15.45,Raca/cor
+2,4296,997,23.21,Diagnosticos secundarios
+0,195754,32143,16.42,Diagnosticos secundarios
+Administracao publica,163784,35855,21.89,Natureza juridica
+Entidades sem fins lucrativos,47784,5917,12.38,Natureza juridica
+Entidades empresariais,11264,654,5.81,Natureza juridica
+,51675,12516,24.22,Raca/cor
+Preta,33531,6437,19.2,Raca/cor
+Parda,78903,14342,18.18,Raca/cor
+Amarela,2716,472,17.38,Raca/cor
+Branca,56000,8656,15.46,Raca/cor

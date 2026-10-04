@@ -1,8 +1,4 @@
 regiao_saude,ano,obitos,obitos_50mais,ISU
-Baia da Ilha Grande,2010,113,104,92.04
-Baia da Ilha Grande,2011,107,101,94.39
-Baia da Ilha Grande,2012,111,96,86.49
-Baia da Ilha Grande,2013,95,88,92.63
 Baia da Ilha Grande,2014,113,105,92.92
 Baia da Ilha Grande,2015,120,112,93.33
 Baia da Ilha Grande,2016,123,114,92.68
@@ -14,10 +10,6 @@ Baia da Ilha Grande,2021,130,124,95.38
 Baia da Ilha Grande,2022,124,115,92.74
 Baia da Ilha Grande,2023,125,114,91.2
 Baia da Ilha Grande,2024,150,135,90
-Baixada Litoranea,2010,373,332,89.01
-Baixada Litoranea,2011,372,340,91.4
-Baixada Litoranea,2012,343,299,87.17
-Baixada Litoranea,2013,385,356,92.47
 Baixada Litoranea,2014,385,363,94.29
 Baixada Litoranea,2015,351,323,92.02
 Baixada Litoranea,2016,356,337,94.66
@@ -29,10 +21,6 @@ Baixada Litoranea,2021,410,368,89.76
 Baixada Litoranea,2022,396,363,91.67
 Baixada Litoranea,2023,382,350,91.62
 Baixada Litoranea,2024,473,424,89.64
-Centro-Sul,2010,260,245,94.23
-Centro-Sul,2011,257,230,89.49
-Centro-Sul,2012,208,187,89.9
-Centro-Sul,2013,233,221,94.85
 Centro-Sul,2014,215,202,93.95
 Centro-Sul,2015,228,206,90.35
 Centro-Sul,2016,238,216,90.76
@@ -44,10 +32,6 @@ Centro-Sul,2021,247,233,94.33
 Centro-Sul,2022,220,203,92.27
 Centro-Sul,2023,193,171,88.6
 Centro-Sul,2024,205,193,94.15
-Medio Paraiba,2010,590,543,92.03
-Medio Paraiba,2011,595,544,91.43
-Medio Paraiba,2012,570,532,93.33
-Medio Paraiba,2013,596,559,93.79
 Medio Paraiba,2014,595,542,91.09
 Medio Paraiba,2015,542,502,92.62
 Medio Paraiba,2016,582,536,92.1
@@ -59,10 +43,6 @@ Medio Paraiba,2021,548,507,92.52
 Medio Paraiba,2022,616,581,94.32
 Medio Paraiba,2023,581,553,95.18
 Medio Paraiba,2024,572,547,95.63
-Metropolitana I,2010,6575,6041,91.88
-Metropolitana I,2011,6237,5763,92.4
-Metropolitana I,2012,6192,5676,91.67
-Metropolitana I,2013,6002,5507,91.75
 Metropolitana I,2014,5813,5382,92.59
 Metropolitana I,2015,5591,5156,92.22
 Metropolitana I,2016,5937,5443,91.68
@@ -74,10 +54,6 @@ Metropolitana I,2021,6105,5629,92.2
 Metropolitana I,2022,6006,5527,92.02
 Metropolitana I,2023,6046,5618,92.92
 Metropolitana I,2024,6155,5663,92.01
-Metropolitana II,2010,1192,1116,93.62
-Metropolitana II,2011,1154,1073,92.98
-Metropolitana II,2012,1192,1107,92.87
-Metropolitana II,2013,1181,1104,93.48
 Metropolitana II,2014,1067,987,92.5
 Metropolitana II,2015,1061,987,93.03
 Metropolitana II,2016,1188,1119,94.19
@@ -89,10 +65,6 @@ Metropolitana II,2021,1295,1226,94.67
 Metropolitana II,2022,1369,1294,94.52
 Metropolitana II,2023,1242,1171,94.28
 Metropolitana II,2024,1232,1143,92.78
-Noroeste,2010,246,235,95.53
-Noroeste,2011,254,240,94.49
-Noroeste,2012,246,226,91.87
-Noroeste,2013,265,250,94.34
 Noroeste,2014,246,226,91.87
 Noroeste,2015,214,199,92.99
 Noroeste,2016,241,222,92.12
@@ -104,10 +76,6 @@ Noroeste,2021,198,187,94.44
 Noroeste,2022,199,187,93.97
 Noroeste,2023,204,188,92.16
 Noroeste,2024,196,185,94.39
-Norte,2010,569,516,90.69
-Norte,2011,529,482,91.12
-Norte,2012,493,456,92.49
-Norte,2013,500,468,93.6
 Norte,2014,474,446,94.09
 Norte,2015,479,434,90.61
 Norte,2016,527,494,93.74
@@ -119,10 +87,6 @@ Norte,2021,507,458,90.34
 Norte,2022,568,520,91.55
 Norte,2023,561,518,92.34
 Norte,2024,520,480,92.31
-Serrana,2010,646,594,91.95
-Serrana,2011,677,621,91.73
-Serrana,2012,641,599,93.45
-Serrana,2013,708,660,93.22
 Serrana,2014,691,633,91.61
 Serrana,2015,600,565,94.17
 Serrana,2016,666,631,94.74

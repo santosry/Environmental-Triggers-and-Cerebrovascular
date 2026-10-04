@@ -5,7 +5,7 @@
 # p-valores) sem reajustar os modelos exploratorios, que levam mais de uma
 # hora. O script 11 chama este arquivo ao final.
 #
-# Entradas: coorte_glmm_2010_2024.csv, tab22_exploratorio_modelos.csv,
+# Entradas: coorte_glmm_2014_2024.csv, tab22_exploratorio_modelos.csv,
 #           tab24_interacoes.csv, tab25_permanencia.csv
 # Saída:    06_figuras/suplementares/fig_exploratorio.png
 
@@ -22,7 +22,7 @@ suppressWarnings({
   FIG <- file.path(ROOT, "06_figuras", "suplementares")
   dir.create(FIG, showWarnings = FALSE, recursive = TRUE)
 
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8",
              na.strings = c("NA", ""),
              select = c("obito_hospitalar", "sexo", "idade_anos", "raca_cor",
                         "n_diag_sec", "nat_jur_lab", "DIAS_PERM", "uti"))

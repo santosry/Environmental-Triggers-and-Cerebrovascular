@@ -45,9 +45,9 @@ POP_PATH = os.path.join(DLNM_ROOT, "01_DLNMs_RJ_cerebrovascular", "data_processe
 plt.rcParams.update({"font.size": 9, "axes.titlesize": 10, "figure.dpi": 200})
 
 # Carregamento
-sih = pd.read_csv(os.path.join(DATA, "sih_cerebrovascular_2010_2024.csv"),
+sih = pd.read_csv(os.path.join(DATA, "sih_cerebrovascular_2014_2024.csv"),
                   low_memory=False)
-sim = pd.read_csv(os.path.join(DATA, "sim_cerebrovascular_2010_2024.csv"),
+sim = pd.read_csv(os.path.join(DATA, "sim_cerebrovascular_2014_2024.csv"),
                   low_memory=False)
 pop = pd.read_csv(POP_PATH)
 
@@ -107,7 +107,7 @@ log("1. PERFIL SOCIODEMOGRÁFICO E CLÍNICO-ASSISTENCIAL")
 log("=" * 72)
 
 n_sih = len(sih)
-log(f"Internações I60-I69 + G45/G46 (2010-2024): {n_sih:,}")
+log(f"Internações I60-I69 + G45/G46 (2014-2024): {n_sih:,}")
 log(f"Sexo M: {int((sih['sexo']=='M').sum()):,} ({(sih['sexo']=='M').mean()*100:.1f}%) | "
     f"F: {int((sih['sexo']=='F').sum()):,} ({(sih['sexo']=='F').mean()*100:.1f}%)")
 log(f"Idade: mediana {sih['idade_anos'].median():.0f} (IIQ {sih['idade_anos'].quantile(.25):.0f}-"
@@ -187,7 +187,7 @@ def mk_trend(series):
 # tendência estadual
 serie_estado = taxas_estado.sort_values("ano")["taxa"]
 tau, p, _ = mk_trend(serie_estado)
-log(f"Taxa estadual 2010: {serie_estado.iloc[0]:.2f} | 2024: {serie_estado.iloc[-1]:.2f} /100k")
+log(f"Taxa estadual 2014: {serie_estado.iloc[0]:.2f} | 2024: {serie_estado.iloc[-1]:.2f} /100k")
 log(f"Mann-Kendall estadual: tau={tau:.3f} p={p:.4f}")
 log("Taxa estadual por ano:")
 log(serie_estado.round(2).to_string())
@@ -198,7 +198,7 @@ for key, taxas in [("regiao_saude", taxas_reg), ("macro3", taxas_macro)]:
         sub = sub.sort_values("ano")
         tau, p, _ = mk_trend(sub["taxa"])
         tendencia_rows.append({"unidade": key, "grupo": grp, "tau": tau, "p": p,
-                               "taxa_2010": sub["taxa"].iloc[0],
+                               "taxa_2014": sub["taxa"].iloc[0],
                                "taxa_2024": sub["taxa"].iloc[-1]})
 tendencia = pd.DataFrame(tendencia_rows)
 tendencia.to_csv(os.path.join(TAB, "tendencia_mann_kendall.csv"), index=False)
@@ -227,7 +227,7 @@ ax2 = ax1.twinx()
 ax2.plot(obito_ano.index, obito_ano["pct"], "s--",
          color=plt.cm.viridis(0.85), label="% óbito hospitalar")
 ax2.set_ylabel("% óbito hospitalar", color=plt.cm.viridis(0.85))
-ax1.set_title(f"Internações por DCV (I60-I69 + G45/G46), RJ 2010-2024\n"
+ax1.set_title(f"Internações por DCV (I60-I69 + G45/G46), RJ 2014-2024\n"
               f"Mann-Kendall: tau={tau:+.3f}; p={p:.4f} | "
               f"Cochran-Armitage (letalidade): p={p_ca:.4f}")
 fig.tight_layout()
@@ -239,7 +239,7 @@ log("=" * 72)
 log("3. MORTALIDADE (SIM, causa básica I60-I69 e G45/G46)")
 log("=" * 72)
 n_sim = len(sim)
-log(f"Óbitos I60-I69 + G45/G46 (SIM, 2010-2024): {n_sim:,}")
+log(f"Óbitos I60-I69 + G45/G46 (SIM, 2014-2024): {n_sim:,}")
 log("Local de ocorrência:")
 log(sim["local_ocorrencia"].value_counts(dropna=False).to_string())
 log("Óbitos por CID3 (SIM):")
@@ -247,9 +247,9 @@ log(sim["cid3"].value_counts().sort_index().to_string())
 
 taxas_obito = calc_taxas(sim, pop_reg, "regiao_saude")
 taxas_obito_macro = calc_taxas(sim, pop_macro3, "macro3")
-# taxa de mortalidade por região (média 2010-2024)
+# taxa de mortalidade por região (média 2014-2024)
 mort_reg = taxas_obito.groupby("regiao_saude")["taxa"].mean().sort_values(ascending=False)
-log("Taxa média de mortalidade/100k por região (2010-2024):")
+log("Taxa média de mortalidade/100k por região (2014-2024):")
 log(mort_reg.round(2).to_string())
 
 # razão óbito/internação por região
@@ -366,7 +366,7 @@ for grp, cor in zip(_grupos, _cores):
         _lab = f"{grp} (tau={_tr['tau'].iloc[0]:+.3f}; p={_tr['p'].iloc[0]:.3f})"
     ax.plot(sub["ano"], sub["taxa"], "o-", color=cor, label=_lab)
 ax.set_xlabel("Ano"); ax.set_ylabel("Taxa / 100.000")
-ax.set_title("Taxa de internação por DCV por macrorregião, RJ 2010-2024\n"
+ax.set_title("Taxa de internação por DCV por macrorregião, RJ 2014-2024\n"
              "Mann-Kendall por macrorregião")
 ax.legend(); fig.tight_layout()
 fig.savefig(os.path.join(FIG, "fig2_taxa_macro.png"))

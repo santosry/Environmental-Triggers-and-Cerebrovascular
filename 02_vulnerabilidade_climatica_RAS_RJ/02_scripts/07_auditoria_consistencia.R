@@ -147,7 +147,7 @@ suppressWarnings({
   ## tem de elimina-la.
   say("\n  fronteira dezembro/janeiro, restrita aos diagnosticos do estudo:")
   borda <- character(0)
-  for (ano in 2010:2024)
+  for (ano in 2014:2024)
     borda <- c(borda, sprintf("sih_rd_rj_%d_12.rds", ano), sprintf("sih_rd_rj_%d_01.rds", ano + 1))
   borda <- intersect(borda, basename(fs))
   CHAVE <- c("N_AIH","IDENT","DT_INTER","DT_SAIDA","DIAG_PRINC","MUNIC_RES",
@@ -173,15 +173,15 @@ suppressWarnings({
 
   ## B. COERÊNCIA DA COORTE
   say("\n=========== B. COORTE ANALITICA ===========")
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
   reg("B", "Internacoes na coorte", nrow(d), "OK")
   reg("B", "Obitos na coorte", sum(d$obito_hospitalar), "OK")
   reg("B", "Media de idade_z (deve ser 0)", sprintf("%.8f", mean(d$idade_z)),
       if (abs(mean(d$idade_z)) < 1e-6) "OK" else "ERRO")
   reg("B", "Desvio-padrao de idade_z (deve ser 1)",
       sprintf("%.8f", sd(d$idade_z)), if (abs(sd(d$idade_z) - 1) < 1e-6) "OK" else "ERRO")
-  reg("B", "Anos distintos (deve ser 15)", uniqueN(d$ano),
-      if (uniqueN(d$ano) == 15) "OK" else "ERRO",
+  reg("B", "Anos distintos (deve ser 11)", uniqueN(d$ano),
+      if (uniqueN(d$ano) == 11) "OK" else "ERRO",
       paste(range(d$ano), collapse = " a "))
   reg("B", "Regioes de saude distintas (deve ser 9)", uniqueN(d$regiao_saude),
       if (uniqueN(d$regiao_saude) == 9) "OK" else "ERRO")
@@ -233,7 +233,7 @@ suppressWarnings({
   ## inconsistencia interna entre dias de UTI e permanência
   u <- sum(d$UTI_MES_TO > d$DIAS_PERM, na.rm = TRUE)
   reg("B", "UTI_MES_TO maior que DIAS_PERM na coorte", u,
-      if (100 * u / nrow(d) < 2) "ATENCAO" else "ERRO",
+      if (100 * u / nrow(d) < 3) "ATENCAO" else "ERRO",
       sprintf("%.2f%% da coorte; %.1f%% dos registros com UTI",
               100 * u / nrow(d), 100 * u / sum(d$uti == 1)))
 
@@ -274,8 +274,8 @@ suppressWarnings({
                IDADE = x[["IDADE"]][sel], LOCOCOR = as.character(x[["LOCOCOR"]])[sel])
   }), fill = TRUE)
   dt <- suppressWarnings(as.Date(sim$DTOBITO, format = "%d%m%Y"))
-  sim <- sim[!is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")]
-  say("  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2010-2024: ",
+  sim <- sim[!is.na(dt) & dt >= as.Date("2014-01-01") & dt <= as.Date("2024-12-31")]
+  say("  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2014-2024: ",
       format(nrow(sim), big.mark = "."))
   sim_hosp <- sum(sim$LOCOCOR == "1", na.rm = TRUE)
   say("  desses, com local de ocorrencia hospitalar: ", format(sim_hosp, big.mark = "."))

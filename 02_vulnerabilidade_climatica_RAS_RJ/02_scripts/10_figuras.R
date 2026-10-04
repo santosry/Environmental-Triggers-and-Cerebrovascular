@@ -72,7 +72,7 @@ suppressWarnings({
     scale_colour_viridis_d(option = "D", end = 0.85, name = NULL) +
     labs(title = "Odds ratio ajustado de \u00f3bito intra-hospitalar",
          subtitle = paste0("Modelo log\u00edstico multin\u00edvel com intercepto aleat\u00f3rio por ",
-                           "hospital (CNES) - RJ, 2010-2024\n",
+                           "hospital (CNES) - RJ, 2014-2024\n",
                            "Pontos cheios: significativos ap\u00f3s corre\u00e7\u00e3o de FDR ",
                            "(Benjamini-Hochberg); pontos vazios: n\u00e3o significativos"),
          x = "OR ajustado (escala logar\u00edtmica, IC95%)", y = NULL,
@@ -203,7 +203,7 @@ suppressWarnings({
     scale_fill_viridis_c(option = "D", direction = -1, guide = "none") +
     scale_x_continuous(expand = expansion(mult = c(0, 0.28))) +
     labs(title = "Mortalidade intra-hospitalar por subtipo diagn\u00f3stico",
-         subtitle = "Coorte I60-I69 e c\u00f3digos G45 e G46, RJ, 2010-2024",
+         subtitle = "Coorte I60-I69 e c\u00f3digos G45 e G46, RJ, 2014-2024",
          x = "Mortalidade intra-hospitalar (%)", y = NULL) +
     theme_minimal(base_size = 11) +
     theme(plot.title = element_text(face = "bold"),

@@ -1,26 +1,26 @@
 =====================================================================
 TABELAS DESCRITIVAS DA COORTE
-inicio: 2026-10-02 21:54:48
+inicio: 2026-10-03 18:23:38
 =====================================================================
-internacoes: 295.673 | obitos: 55.827 (18.88%)
+internacoes: 222.832 | obitos: 42.426 (19.04%)
 
 --- IDADE POR DESFECHO ---
-  Obito  n=  55.827 media= 68.5 mediana= 70 (P25-P75: 60-79)
-  Alta   n= 239.846 media= 64.8 mediana= 66 (P25-P75: 56-75)
+  Alta   n= 180.406 media= 64.8 mediana= 66 (P25-P75: 56-75)
+  Obito  n=  42.426 media= 68.5 mediana= 70 (P25-P75: 60-79)
 
 --- POR REGIAO DE SAUDE ---
-  Metropolitana I      n= 135.595 obitos= 31.487 mortalidade= 23.22% UTI= 10.68% fluxo= 18.39% hospitais=185
-  Metropolitana II     n=  38.532 obitos=  7.264 mortalidade= 18.85% UTI= 13.58% fluxo= 23.13% hospitais=124
-  Serrana              n=  35.062 obitos=  3.941 mortalidade= 11.24% UTI=  9.50% fluxo=  5.56% hospitais=109
-  Medio Paraiba        n=  31.820 obitos=  4.384 mortalidade= 13.78% UTI= 15.95% fluxo= 10.73% hospitais= 74
-  Norte                n=  17.444 obitos=  2.732 mortalidade= 15.66% UTI= 17.01% fluxo= 11.95% hospitais= 64
-  Noroeste             n=  11.512 obitos=  1.301 mortalidade= 11.30% UTI= 31.67% fluxo= 21.43% hospitais= 56
-  Centro-Sul           n=  11.130 obitos=  1.849 mortalidade= 16.61% UTI= 17.40% fluxo= 33.05% hospitais= 72
-  Baixada Litoranea    n=   9.463 obitos=  1.973 mortalidade= 20.85% UTI= 11.87% fluxo= 20.79% hospitais= 95
-  Baia da Ilha Grande  n=   5.115 obitos=    896 mortalidade= 17.52% UTI= 11.16% fluxo= 11.42% hospitais= 50
+  Metropolitana I      n= 101.336 obitos= 23.954 mortalidade= 23.64% UTI= 12.50% fluxo= 20.86% hospitais=164
+  Metropolitana II     n=  30.151 obitos=  5.699 mortalidade= 18.90% UTI= 15.79% fluxo= 25.06% hospitais=109
+  Medio Paraiba        n=  25.471 obitos=  3.442 mortalidade= 13.51% UTI= 15.48% fluxo= 10.18% hospitais= 70
+  Serrana              n=  23.764 obitos=  2.700 mortalidade= 11.36% UTI= 11.07% fluxo=  6.15% hospitais= 98
+  Norte                n=  13.955 obitos=  2.116 mortalidade= 15.16% UTI= 17.54% fluxo= 11.84% hospitais= 57
+  Centro-Sul           n=   8.440 obitos=  1.371 mortalidade= 16.24% UTI= 18.26% fluxo= 34.41% hospitais= 65
+  Noroeste             n=   8.148 obitos=    827 mortalidade= 10.15% UTI= 31.28% fluxo= 22.47% hospitais= 44
+  Baixada Litoranea    n=   7.424 obitos=  1.579 mortalidade= 21.27% UTI= 11.73% fluxo= 20.19% hospitais= 86
+  Baia da Ilha Grande  n=   4.143 obitos=    738 mortalidade= 17.81% UTI= 11.73% fluxo= 10.98% hospitais= 49
 
 --- HOSPITAIS ---
-  total de CNES: 254
-  mortalidade por hospital: P10=0.12% mediana=12.51% P90=28.42%
+  total de CNES: 222
+  mortalidade por hospital: P10=0.00% mediana=12.99% P90=27.69%
 
-fim: 2026-10-02 21:54:48
+fim: 2026-10-03 18:23:38

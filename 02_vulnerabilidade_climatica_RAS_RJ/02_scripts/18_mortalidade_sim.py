@@ -71,7 +71,7 @@ for ano in range(2010, 2025):
 sim = pd.concat(chunks, ignore_index=True)
 sim["DTOBITO_d"] = pd.to_datetime(sim["DTOBITO"].astype("string"), format="%d%m%Y",
                                   errors="coerce")
-sim = sim[(sim["DTOBITO_d"] >= "2010-01-01") & (sim["DTOBITO_d"] <= "2024-12-31")]
+sim = sim[(sim["DTOBITO_d"] >= "2014-01-01") & (sim["DTOBITO_d"] <= "2024-12-31")]
 
 def idade_sim(v):
     if pd.isna(v) or v == 999: return np.nan
@@ -95,14 +95,14 @@ sim = sim.merge(lookup[["ibge6", "mun_nome", "regiao_saude", "macro3"]],
                 left_on="MUNIC_RES6", right_on="ibge6", how="left")
 sim["ano"] = sim["DTOBITO_d"].dt.year
 sim.to_csv(os.path.join(ROOT, "01_dados", "processados",
-                        "sim_cerebrovascular_2010_2024.csv"), index=False)
+                        "sim_cerebrovascular_2014_2024.csv"), index=False)
 
 resumo = []
 def log(*a):
     line = " ".join(str(x) for x in a); resumo.append(line); print(line, flush=True)
 
 log("=" * 70)
-log("ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69 e G45/G46, 2010-2024)")
+log("ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69 e G45/G46, 2014-2024)")
 log("=" * 70)
 n = len(sim)
 log(f"Óbitos totais: {n:,}")
@@ -126,7 +126,7 @@ def taxas(df, popdf, key):
 t_reg = taxas(sim, pop_reg, "regiao_saude")
 t_macro = taxas(sim, pop_macro3, "macro3")
 
-log("Taxa média de mortalidade/100k por região (2010-2024):")
+log("Taxa média de mortalidade/100k por região (2014-2024):")
 log(t_reg.groupby("regiao_saude")["taxa"].mean().sort_values(ascending=False).round(2).to_string())
 
 log("Taxa média de mortalidade/100k por macrorregião:")
@@ -137,7 +137,7 @@ t_estado = taxas(sim.assign(uf="RJ"), pop_estado.assign(uf="RJ"), "uf")
 serie = t_estado.sort_values("ano")["taxa"]
 import pymannkendall as mk
 r = mk.original_test(serie)
-log(f"Taxa mortalidade estadual: 2010={serie.iloc[0]:.2f} | 2024={serie.iloc[-1]:.2f} /100k")
+log(f"Taxa mortalidade estadual: 2014={serie.iloc[0]:.2f} | 2024={serie.iloc[-1]:.2f} /100k")
 log(f"Mann-Kendall: tau={r.Tau:.3f} p={r.p:.4f}")
 
 # mortalidade por local de ocorrência (hospital vs domicílio)

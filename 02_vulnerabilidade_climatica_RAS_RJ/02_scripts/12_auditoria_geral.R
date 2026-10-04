@@ -5,7 +5,7 @@
 #
 #   1. ESTRUTURA E AQUISIÇÃO: completude e integridade dos .rds brutos.
 #   2. RECORTE CID VERSIONADO: re-derivação independente do recorte
-#      produzido pelo script 01 (sih/sim_cid_estudo_2010_2024.csv) a
+#      produzido pelo script 01 (sih/sim_cid_estudo_2014_2024.csv) a
 #      partir dos .rds e conferência linha a linha de totais e marginais.
 #   3. COERÊNCIA ENTRE ARTEFATOS: coorte x recorte x tabelas publicadas.
 #   4. CONSISTÊNCIA NUMERICA DAS TABELAS: formulas de OR, ICC, MOR, FDR,
@@ -80,8 +80,8 @@ suppressWarnings({
       if (identical(sort(faltantes_sih), "sih_rd_rj_2025_12.rds")) "ATENCAO" else "ERRO",
       if (length(faltantes_sih)) paste(faltantes_sih, collapse = ", ") else "nenhuma")
   reg("1", "Arquivos SIM-DO presentes", length(fs_sim),
-      if (length(fs_sim) == 15) "OK" else "ERRO", "esperado 15 (2010-2024)")
-  anos_sim_esperados <- sprintf("sim_do_rj_%d.rds", 2010:2024)
+      if (length(fs_sim) == 15) "OK" else "ERRO", "esperado 15 (2014-2024)")
+  anos_sim_esperados <- sprintf("sim_do_rj_%d.rds", 2014:2024)
   reg("1", "Anos do SIM ausentes", length(setdiff(anos_sim_esperados, basename(fs_sim))),
       if (length(setdiff(anos_sim_esperados, basename(fs_sim))) == 0) "OK" else "ERRO")
   reg("1", "Tamanho bruto SIH (MB)", round(sum(file.info(fs_sih)$size) / 1024^2, 1), "INFO")
@@ -107,7 +107,7 @@ suppressWarnings({
     muni <- sprintf("%06s", as.character(d[["MUNIC_RES"]]))
     dt <- suppressWarnings(as.Date(as.character(d[["DT_INTER"]]), format = "%Y%m%d"))
     sel <- sel & substr(muni, 1, 2) == "33" &
-      !is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")
+      !is.na(dt) & dt >= as.Date("2014-01-01") & dt <= as.Date("2024-12-31")
     if (any(sel)) {
       n_recorte <- n_recorte + sum(sel)
       acc_ano[[length(acc_ano) + 1L]] <- data.table(
@@ -129,7 +129,7 @@ suppressWarnings({
   exp_cid <- rbindlist(acc_cid)[, .N, by = cid3][order(cid3)]
   exp_mun <- rbindlist(acc_mun)[, .N, by = muni][order(-N)]
 
-  f_sih_csv <- file.path(PROC, "sih_cid_estudo_2010_2024.csv")
+  f_sih_csv <- file.path(PROC, "sih_cid_estudo_2014_2024.csv")
   chk(file.exists(f_sih_csv), "2", "Recorte SIH versionado existe", if (file.exists(f_sih_csv)) "sim" else "nao")
   if (file.exists(f_sih_csv)) {
     s <- fread(f_sih_csv, encoding = "UTF-8", na.strings = c("NA", ""), colClasses = "character")
@@ -146,8 +146,8 @@ suppressWarnings({
         "2", "Linhas do recorte fora do RJ (MUNIC_RES)",
         sum(substr(sprintf("%06s", as.character(s$MUNIC_RES)), 1, 2) != "33"))
     dts <- suppressWarnings(as.Date(as.character(s$DT_INTER), format = "%Y%m%d"))
-    fora <- sum(is.na(dts) | dts < as.Date("2010-01-01") | dts > as.Date("2024-12-31"))
-    chk(fora == 0, "2", "Linhas do recorte fora do periodo 2010-2024", fora)
+    fora <- sum(is.na(dts) | dts < as.Date("2014-01-01") | dts > as.Date("2024-12-31"))
+    chk(fora == 0, "2", "Linhas do recorte fora do periodo 2014-2024", fora)
     chk(!any(is.na(s$N_AIH) | s$N_AIH == ""), "2", "N_AIH ausente no recorte",
         sum(is.na(s$N_AIH) | s$N_AIH == ""))
     chk(!anyDuplicated(s), "2", "Linhas integralmente duplicadas no recorte", sum(duplicated(s)),
@@ -184,7 +184,7 @@ suppressWarnings({
     dt <- suppressWarnings(as.Date(as.character(d[["DTOBITO"]]), format = "%d%m%Y"))
     sel <- (substr(cb, 1, 3) %in% ESTUDO_I | substr(cb, 1, 3) %in% ESTUDO_G) &
       substr(muni, 1, 2) == "33" &
-      !is.na(dt) & dt >= as.Date("2010-01-01") & dt <= as.Date("2024-12-31")
+      !is.na(dt) & dt >= as.Date("2014-01-01") & dt <= as.Date("2024-12-31")
     if (any(sel)) {
       n_sim_rec <- n_sim_rec + sum(sel)
       sim_ano[[length(sim_ano) + 1L]] <- data.table(ano = format(dt[sel], "%Y"))
@@ -192,7 +192,7 @@ suppressWarnings({
   }
   chk(falhas_sim == 0, "2", "Falhas de leitura dos .rds do SIM", falhas_sim)
   exp_sim_ano <- rbindlist(sim_ano)[, .N, by = ano][order(ano)]
-  f_sim_csv <- file.path(PROC, "sim_cid_estudo_2010_2024.csv")
+  f_sim_csv <- file.path(PROC, "sim_cid_estudo_2014_2024.csv")
   chk(file.exists(f_sim_csv), "2", "Recorte SIM versionado existe",
       if (file.exists(f_sim_csv)) "sim" else "nao")
   if (file.exists(f_sim_csv)) {
@@ -218,16 +218,16 @@ suppressWarnings({
 
   ## 3. COERÊNCIA ENTRE ARTEFATOS (coorte x recorte x tabelas)
   say("\n=========== 3. COERENCIA ENTRE ARTEFATOS ===========")
-  f_coorte <- file.path(PROC, "coorte_glmm_2010_2024.csv")
+  f_coorte <- file.path(PROC, "coorte_glmm_2014_2024.csv")
   chk(file.exists(f_coorte), "3", "Coorte analitica existe", if (file.exists(f_coorte)) "sim" else "nao")
   if (file.exists(f_coorte)) {
     co <- fread(f_coorte, encoding = "UTF-8", na.strings = c("NA", ""))
-    reg("3", "Linhas na coorte", nrow(co), if (nrow(co) == 295673) "OK" else "ERRO")
+    reg("3", "Linhas na coorte", nrow(co), if (nrow(co) == 222832) "OK" else "ERRO")
     reg("3", "Obitos na coorte", sum(co$obito_hospitalar),
-        if (sum(co$obito_hospitalar) == 55827) "OK" else "ERRO")
+        if (sum(co$obito_hospitalar) == 42426) "OK" else "ERRO")
     if (file.exists(f_sih_csv)) {
       chk(nrow(co) == nrow(s), "3", "Tamanho da coorte igual ao recorte SIH", nrow(co),
-          nota = "ambos devem ter 295.673")
+          nota = "ambos devem ter 222.832")
       chk(sum(co$obito_hospitalar) ==
             sum(as.integer(as.character(s$MORTE) == "1"), na.rm = TRUE),
           "3", "Obitos da coorte iguais aos do recorte SIH", sum(co$obito_hospitalar))
@@ -329,7 +329,7 @@ suppressWarnings({
   ## README: afirmacoes-chave presentes
   rd <- paste(readLines(file.path(ROOT, "README.md"), encoding = "UTF-8", warn = FALSE),
               collapse = " ")
-  for (af in c("295.673", "55.827", "14,95%", "2,065", "92,39%", "267.746", "27.927", "252.992")) {
+  for (af in c("222.832", "42.426", "14,50%", "2,039", "92,53%", "203.762", "19.070", "192.228")) {
     chk(grepl(af, rd, fixed = TRUE), "4", paste0("README contem '", af, "'"),
         if (grepl(af, rd, fixed = TRUE)) "sim" else "nao")
   }
@@ -430,8 +430,8 @@ suppressWarnings({
         round(max(info$size, na.rm = TRUE) / 1024^2, 2), "INFO")
 
     ## os recortes CID não estão ignorados
-    for (f in c("01_dados/processados/sih_cid_estudo_2010_2024.csv",
-                "01_dados/processados/sim_cid_estudo_2010_2024.csv")) {
+    for (f in c("01_dados/processados/sih_cid_estudo_2014_2024.csv",
+                "01_dados/processados/sim_cid_estudo_2014_2024.csv")) {
       out <- suppressWarnings(system2("git", c("-C", shQuote(REPO), "check-ignore",
                                                file.path(basename(ROOT), f)),
                                       stdout = TRUE, stderr = FALSE))

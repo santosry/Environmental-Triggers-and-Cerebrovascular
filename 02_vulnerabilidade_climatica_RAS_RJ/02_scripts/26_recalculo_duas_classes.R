@@ -24,7 +24,7 @@ suppressWarnings({
 
   say("RECALCULO COM AS DUAS CLASSES (I60-I69 + G45/G46) | ", format(Sys.time()))
 
-  co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
               encoding = "UTF-8", na.strings = c("NA", ""))
   co[, ano := as.integer(ano)]
   co[, VAL_TOT := suppressWarnings(as.numeric(VAL_TOT))]
@@ -103,11 +103,11 @@ suppressWarnings({
   se[, letal := 100 * obitos / n]
   mk <- mk.test(se$taxa)
   say("\n--- serie estadual de internacao (ambas as classes) ---")
-  say("  2010: ", sprintf("%.2f", se[ano == 2010]$taxa),
+  say("  2014: ", sprintf("%.2f", se[ano == 2014]$taxa),
       "/100 mil | 2024: ", sprintf("%.2f", se[ano == 2024]$taxa), "/100 mil")
   say("  Mann-Kendall tau = ", sprintf("%.3f", mk$estimates[["tau"]]),
       " | p = ", sprintf("%.4f", mk$p.value))
-  say("  letalidade 2010: ", sprintf("%.2f", se[ano == 2010]$letal),
+  say("  letalidade 2014: ", sprintf("%.2f", se[ano == 2014]$letal),
       "% | 2024: ", sprintf("%.2f", se[ano == 2024]$letal), "%")
 
   ## taxas regionais 2024

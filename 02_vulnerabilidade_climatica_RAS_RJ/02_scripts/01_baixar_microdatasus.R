@@ -9,9 +9,9 @@
 #   depois, no script 02. Baixar 2025 e necessário porque a competência de
 #   processamento pode deslocar internações de dezembro de 2024 para
 #   janeiro de 2025; o filtro final do estudo continua sendo DT_INTER
-#   entre 2010 e 2024.
+#   entre 2014 e 2024.
 #
-# SIM-DO: óbitos por residência no RJ, 2010 a 2024 (15 arquivos), usado
+# SIM-DO: óbitos por residência no RJ, 2014 a 2024 (11 arquivos), usado
 #   para o Índice de Swaroop-Uemura no script 04.
 #
 # Fonte registrada no log (padrão confirmado):
@@ -24,17 +24,17 @@
 #   o CSV filtrado entra no repositório para que as contagens possam ser
 #   conferidas sem reprocessar os microdados completos.
 #     SIH: DIAG_PRINC em I60-I69, G45 ou G46, residentes no RJ (33),
-#          DT_INTER de 2010 a 2024.
+#          DT_INTER de 2014 a 2024.
 #     SIM: CAUSABAS em I60-I69 e nos blocos G45/G46, residentes no RJ (33),
-#          DTOBITO de 2010 a 2024. Aqui a cobertura diagnostica e a mesma do
+#          DTOBITO de 2014 a 2024. Aqui a cobertura diagnostica e a mesma do
 #          SIH (I60-I69 + G45/G46), embora G45/G46 respondam por apenas 60
 #          obitos como causa basica no periodo.
 #
 # Saídas:
 #   01_dados/brutos_sih/sih_rd_rj_{ano}_{mes}.rds
 #   01_dados/brutos_sim/sim_do_rj_{ano}.rds
-#   01_dados/processados/sih_cid_estudo_2010_2024.csv
-#   01_dados/processados/sim_cid_estudo_2010_2024.csv
+#   01_dados/processados/sih_cid_estudo_2014_2024.csv
+#   01_dados/processados/sim_cid_estudo_2014_2024.csv
 #   03_analises/log_microdatasus.txt
 
 suppressWarnings({
@@ -57,8 +57,8 @@ suppressWarnings({
   say("AQUISICAO VIA microdatasus ", as.character(packageVersion("microdatasus")))
   say("R ", R.version.string)
   say("inicio: ", format(Sys.time()))
-  say("SIH-RD RJ: competicoes 2010-01 a 2025-12")
-  say("SIM-DO RJ: 2010 a 2024")
+  say("SIH-RD RJ: competicoes 2014-01 a 2025-12")
+  say("SIM-DO RJ: 2014 a 2024")
   say("fonte SIH-RD: ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Dados/RDRJ{aamm}.dbc")
   say("=====================================================================")
 
@@ -76,7 +76,7 @@ suppressWarnings({
   say("\n=========== SIH-RD ===========")
   t0 <- Sys.time()
   ok <- 0L; falhas <- character(0); pulados <- 0L
-  comps <- expand.grid(ano = 2010:2025, mes = 1:12)
+  comps <- expand.grid(ano = 2014:2025, mes = 1:12)
   comps <- comps[order(comps$ano, comps$mes), ]
   ## Competências ainda não publicadas no DATASUS: evita perder ~4 min com
   ## 4 tentativas de rede a cada execução.
@@ -111,7 +111,7 @@ suppressWarnings({
   say("\n=========== SIM-DO ===========")
   t1 <- Sys.time()
   ok2 <- 0L; falhas2 <- character(0); pulados2 <- 0L
-  for (ano in 2010:2024) {
+  for (ano in 2014:2024) {
     dest <- file.path(DIR_SIM, sprintf("sim_do_rj_%d.rds", ano))
     if (file.exists(dest)) { pulados2 <- pulados2 + 1L; next }
     d <- baixar(function() microdatasus::fetch_datasus(
@@ -144,8 +144,8 @@ suppressWarnings({
   SIM_KEEP <- c("DTOBITO", "IDADE", "SEXO", "RACACOR", "LOCOCOR",
                 "CODMUNRES", "CAUSABAS")
 
-  dest_sih <- file.path(DIR_PROC, "sih_cid_estudo_2010_2024.csv")
-  dest_sim <- file.path(DIR_PROC, "sim_cid_estudo_2010_2024.csv")
+  dest_sih <- file.path(DIR_PROC, "sih_cid_estudo_2014_2024.csv")
+  dest_sim <- file.path(DIR_PROC, "sim_cid_estudo_2014_2024.csv")
 
   ## Refaz o recorte se o CSV não existir ou se algum .rds for mais novo.
   precisa_refazer <- function(destino, fontes) {
@@ -170,7 +170,7 @@ suppressWarnings({
       muni_res <- sprintf("%06s", as.character(dd[["MUNIC_RES"]]))
       dd <- dd[substr(muni_res, 1, 2) == "33", , drop = FALSE]
       dt_i <- suppressWarnings(as.Date(as.character(dd[["DT_INTER"]]), format = "%Y%m%d"))
-      dd <- dd[!is.na(dt_i) & dt_i >= as.Date("2010-01-01") & dt_i <= as.Date("2024-12-31"), , drop = FALSE]
+      dd <- dd[!is.na(dt_i) & dt_i >= as.Date("2014-01-01") & dt_i <= as.Date("2024-12-31"), , drop = FALSE]
       n_rj <- n_rj + nrow(dd)
       if (nrow(dd)) acc[[i]] <- dd
       if (i %% 40 == 0 || i == length(fs_sih))
@@ -182,7 +182,7 @@ suppressWarnings({
     fwrite(sih_f, dest_sih, encoding = "UTF-8", na = "NA")
     say("  gravado: ", dest_sih, " | linhas: ", format(nrow(sih_f), big.mark = "."),
         " | colunas: ", ncol(sih_f), " | ", round(file.info(dest_sih)$size / 1024^2, 1), " MB")
-    say("  criterios: DIAG_PRINC I60-I69/G45/G46 + MUNIC_RES RJ + DT_INTER 2010-2024")
+    say("  criterios: DIAG_PRINC I60-I69/G45/G46 + MUNIC_RES RJ + DT_INTER 2014-2024")
   } else say("  SIH ja atualizado: ", dest_sih)
 
   ## ---------------- SIM ----------------
@@ -201,7 +201,7 @@ suppressWarnings({
       if (any(sel)) {
         dd <- d[sel, intersect(SIM_KEEP, names(d)), drop = FALSE]
         dt_o <- suppressWarnings(as.Date(as.character(dd[["DTOBITO"]]), format = "%d%m%Y"))
-        dd <- dd[!is.na(dt_o) & dt_o >= as.Date("2010-01-01") & dt_o <= as.Date("2024-12-31"), , drop = FALSE]
+        dd <- dd[!is.na(dt_o) & dt_o >= as.Date("2014-01-01") & dt_o <= as.Date("2024-12-31"), , drop = FALSE]
         if (nrow(dd)) acc[[i]] <- dd
       }
     }
@@ -209,7 +209,7 @@ suppressWarnings({
     fwrite(sim_f, dest_sim, encoding = "UTF-8", na = "NA")
     say("  gravado: ", dest_sim, " | linhas: ", format(nrow(sim_f), big.mark = "."),
         " | colunas: ", ncol(sim_f), " | ", round(file.info(dest_sim)$size / 1024^2, 1), " MB")
-    say("  criterios: CAUSABAS I60-I69 e G45/G46 + CODMUNRES RJ + DTOBITO 2010-2024")
+    say("  criterios: CAUSABAS I60-I69 e G45/G46 + CODMUNRES RJ + DTOBITO 2014-2024")
   } else say("  SIM ja atualizado: ", dest_sim)
 
   ## ---------------- inventario ----------------

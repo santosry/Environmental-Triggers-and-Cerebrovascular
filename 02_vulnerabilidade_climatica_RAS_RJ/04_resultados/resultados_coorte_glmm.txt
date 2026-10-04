@@ -1,14 +1,14 @@
 =====================================================================
 COORTE A PARTIR DOS MICRODADOS DO microdatasus
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-02 21:51:24
+inicio: 2026-10-03 20:47:37
 =====================================================================
 competencias do SIH-RD encontradas: 191
-   40/191 competencias | brutos=2.365.010 | acumulado=59.940 | 0.5 min
-   80/191 competencias | brutos=4.687.828 | acumulado=119.009 | 1.1 min
-  120/191 competencias | brutos=7.073.334 | acumulado=185.897 | 1.7 min
-  160/191 competencias | brutos=9.582.190 | acumulado=257.505 | 2.4 min
-  191/191 competencias | brutos=11.947.354 | acumulado=320.739 | 3.0 min
+   40/191 competencias | brutos=2.365.010 | acumulado=59.940 | 0.4 min
+   80/191 competencias | brutos=4.687.828 | acumulado=119.009 | 1.0 min
+  120/191 competencias | brutos=7.073.334 | acumulado=185.897 | 1.5 min
+  160/191 competencias | brutos=9.582.190 | acumulado=257.505 | 2.1 min
+  191/191 competencias | brutos=11.947.354 | acumulado=320.739 | 2.7 min
 
 --- VERIFICACAO DE PRESENCA DOS CODIGOS ---
 registros brutos lidos (todas as causas, RJ): 11.947.354
@@ -45,9 +45,9 @@ bloco G45/G46 inteiro: 29.717 | soma dos subcodigos de 4 digitos: 29.306 | trunc
 apos filtro de CID e residencia no RJ: 320.739
 duplicatas removidas: 0
 DT_INTER invalida: 0
-apos filtro DT_INTER 2010-2024: 295.673
+apos filtro DT_INTER 2014-2024: 222.832
 
-idade: media=65.48 | DP=14.88 (OR por +1 DP de idade)
+idade: media=65.51 | DP=14.95 (OR por +1 DP de idade)
 
 --- TRAVA DE SEGURANCA (covariaveis do modelo) ---
   obito_hospitalar   ausentes=      0 ( 0.000%)
@@ -62,62 +62,58 @@ idade: media=65.48 | DP=14.88 (OR por +1 DP de idade)
   OK: nenhuma covariavel com perda acima de 0,1%
 
 --- COMPOSICAO ---
-internacoes: 295.673 | obitos: 55.827 (18.88%)
-estabelecimentos (CNES): 254 | regioes de saude: 9
+internacoes: 222.832 | obitos: 42.426 (19.04%)
+estabelecimentos (CNES): 222 | regioes de saude: 9
 
 Por coorte:
-  I60-I69                        n= 267.746 obitos= 52.432 mortalidade= 19.58% idade_mediana= 66
-  G45/G46                        n=  27.927 obitos=  3.395 mortalidade= 12.16% idade_mediana= 68
+  I60-I69                        n= 203.762 obitos= 40.288 mortalidade= 19.77% idade_mediana= 67
+  G45/G46                        n=  19.070 obitos=  2.138 mortalidade= 11.21% idade_mediana= 68
 
 Por subtipo:
-  Nao especificado (I64)         n= 167.470 obitos= 35.394 mortalidade= 21.13% idade_mediana= 68
-  Sequelas (I69)                 n=  40.012 obitos=  2.456 mortalidade=  6.14% idade_mediana= 68
-  Hemorragico (I60-I62)          n=  35.094 obitos=  9.356 mortalidade= 26.66% idade_mediana= 59
-  AIT (G45)                      n=  26.578 obitos=  3.187 mortalidade= 11.99% idade_mediana= 68
-  Isquemico (I63)                n=  16.831 obitos=  4.603 mortalidade= 27.35% idade_mediana= 67
-  Oclusao e outras (I65-I68)     n=   8.339 obitos=    623 mortalidade=  7.47% idade_mediana= 63
-  Sindromes vasculares (G46)     n=   1.349 obitos=    208 mortalidade= 15.42% idade_mediana= 66
+  Nao especificado (I64)         n= 134.128 obitos= 27.362 mortalidade= 20.40% idade_mediana= 67
+  Hemorragico (I60-I62)          n=  26.156 obitos=  6.931 mortalidade= 26.50% idade_mediana= 60
+  Sequelas (I69)                 n=  23.006 obitos=  1.667 mortalidade=  7.25% idade_mediana= 69
+  AIT (G45)                      n=  18.231 obitos=  2.024 mortalidade= 11.10% idade_mediana= 68
+  Isquemico (I63)                n=  13.943 obitos=  3.837 mortalidade= 27.52% idade_mediana= 66
+  Oclusao e outras (I65-I68)     n=   6.529 obitos=    491 mortalidade=  7.52% idade_mediana= 63
+  Sindromes vasculares (G46)     n=     839 obitos=    114 mortalidade= 13.59% idade_mediana= 67
 
 Por regiao de saude:
-  Metropolitana I                n= 135.595 obitos= 31.487 mortalidade= 23.22% idade_mediana= 66
-  Metropolitana II               n=  38.532 obitos=  7.264 mortalidade= 18.85% idade_mediana= 67
-  Serrana                        n=  35.062 obitos=  3.941 mortalidade= 11.24% idade_mediana= 68
-  Medio Paraiba                  n=  31.820 obitos=  4.384 mortalidade= 13.78% idade_mediana= 68
-  Norte                          n=  17.444 obitos=  2.732 mortalidade= 15.66% idade_mediana= 66
-  Noroeste                       n=  11.512 obitos=  1.301 mortalidade= 11.30% idade_mediana= 68
-  Centro-Sul                     n=  11.130 obitos=  1.849 mortalidade= 16.61% idade_mediana= 67
-  Baixada Litoranea              n=   9.463 obitos=  1.973 mortalidade= 20.85% idade_mediana= 65
-  Baia da Ilha Grande            n=   5.115 obitos=    896 mortalidade= 17.52% idade_mediana= 66
+  Metropolitana I                n= 101.336 obitos= 23.954 mortalidade= 23.64% idade_mediana= 66
+  Metropolitana II               n=  30.151 obitos=  5.699 mortalidade= 18.90% idade_mediana= 67
+  Medio Paraiba                  n=  25.471 obitos=  3.442 mortalidade= 13.51% idade_mediana= 68
+  Serrana                        n=  23.764 obitos=  2.700 mortalidade= 11.36% idade_mediana= 68
+  Norte                          n=  13.955 obitos=  2.116 mortalidade= 15.16% idade_mediana= 66
+  Centro-Sul                     n=   8.440 obitos=  1.371 mortalidade= 16.24% idade_mediana= 67
+  Noroeste                       n=   8.148 obitos=    827 mortalidade= 10.15% idade_mediana= 68
+  Baixada Litoranea              n=   7.424 obitos=  1.579 mortalidade= 21.27% idade_mediana= 66
+  Baia da Ilha Grande            n=   4.143 obitos=    738 mortalidade= 17.81% idade_mediana= 66
 
 Por carater:
-  Urgencia                       n= 249.959 obitos= 51.515 mortalidade= 20.61% idade_mediana= 66
-  Eletiva                        n=  45.714 obitos=  4.312 mortalidade=  9.43% idade_mediana= 68
+  Urgencia                       n= 195.207 obitos= 39.366 mortalidade= 20.17% idade_mediana= 66
+  Eletiva                        n=  27.625 obitos=  3.060 mortalidade= 11.08% idade_mediana= 68
 
 Por sexo:
-  M                              n= 152.913 obitos= 28.067 mortalidade= 18.35% idade_mediana= 65
-  F                              n= 142.760 obitos= 27.760 mortalidade= 19.45% idade_mediana= 68
+  M                              n= 114.446 obitos= 21.465 mortalidade= 18.76% idade_mediana= 66
+  F                              n= 108.386 obitos= 20.961 mortalidade= 19.34% idade_mediana= 68
 
 composicao dos codigos G (subtipo G45 e G46):
-  G459    14.760
-  G458     6.707
-  G450     3.643
-  G468     1.321
-  G451     1.044
+  G459     9.494
+  G458     5.534
+  G450     2.753
+  G468       813
   G45        323
-  G452        78
+  G451        61
+  G452        43
   G454        12
   G453        11
   G46         10
-  G464         8
   G460         6
+  G464         6
   G463         3
   G465         1
 
 Por ano:
-  2010  n=  18.120 obitos=  3.464 mortalidade= 19.12% UTI=  8.23%
-  2011  n=  17.956 obitos=  3.344 mortalidade= 18.62% UTI=  8.82%
-  2012  n=  17.871 obitos=  3.311 mortalidade= 18.53% UTI=  9.19%
-  2013  n=  18.894 obitos=  3.282 mortalidade= 17.37% UTI=  9.24%
   2014  n=  17.433 obitos=  3.313 mortalidade= 19.00% UTI= 10.37%
   2015  n=  17.554 obitos=  3.546 mortalidade= 20.20% UTI= 10.12%
   2016  n=  19.116 obitos=  3.627 mortalidade= 18.97% UTI=  9.97%
@@ -130,17 +126,17 @@ Por ano:
   2023  n=  24.701 obitos=  4.332 mortalidade= 17.54% UTI= 19.08%
   2024  n=  23.554 obitos=  4.126 mortalidade= 17.52% UTI= 20.85%
 
-Hospitais: 254
-  top   1 concentram   14.723 (  5.0%)
-  top   5 concentram   56.956 ( 19.3%)
-  top  10 concentram   92.417 ( 31.3%)
-  top  25 concentram  161.635 ( 54.7%)
-  top  50 concentram  217.022 ( 73.4%)
-  top 100 concentram  267.114 ( 90.3%)
-  hospitais com menos de 100 internacoes: 68
-  hospitais com menos de 30 internacoes:  42
-  hospitais sem nenhum obito:             26
+Hospitais: 222
+  top   1 concentram   12.882 (  5.8%)
+  top   5 concentram   49.431 ( 22.2%)
+  top  10 concentram   76.211 ( 34.2%)
+  top  25 concentram  129.738 ( 58.2%)
+  top  50 concentram  171.470 ( 77.0%)
+  top 100 concentram  206.181 ( 92.5%)
+  hospitais com menos de 100 internacoes: 54
+  hospitais com menos de 30 internacoes:  39
+  hospitais sem nenhum obito:             25
 
-gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/coorte_glmm_2010_2024.csv
-  linhas: 295.673 | colunas: 52
-fim: 2026-10-02 21:54:33
+gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/coorte_glmm_2014_2024.csv
+  linhas: 222.832 | colunas: 52
+fim: 2026-10-03 20:50:25

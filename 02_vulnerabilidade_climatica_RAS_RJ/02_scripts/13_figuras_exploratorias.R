@@ -1,6 +1,6 @@
 # 13_figuras_exploratorias.R
 # Banco de figuras exploratorias da análise atual (morbimortalidade
-# cerebrovascular e RAS no RJ, 2010-2024). Produz 25 figuras em
+# cerebrovascular e RAS no RJ, 2014-2024). Produz 25 figuras em
 # 06_figuras/exploratorias/ e as figuras finais do manuscrito em
 # 06_figuras/manuscrito/ (JPEG, 300 dpi, requisito do edital).
 #
@@ -9,7 +9,7 @@
 # Dispositivo ragg (PNG/JPEG) para garantir a acentuacao no Windows.
 #
 # Fontes (todas da análise atual):
-#   coorte_glmm_2010_2024.csv, sih/sim_cid_estudo_2010_2024.csv,
+#   coorte_glmm_2014_2024.csv, sih/sim_cid_estudo_2014_2024.csv,
 #   população SIDRA, lookup município->região,
 #   tabelas 03/04/05/06/08/10/11/12/18/22/23/25 e resultados de custos.
 
@@ -80,14 +80,14 @@ suppressWarnings({
             "regiao_saude", "mun_nome", "mun_nome_mov", "MUNIC_RES6", "MUNIC_MOV6",
             "CNES", "obito_hospitalar", "uti", "DIAS_PERM", "VAL_TOT",
             "n_diag_sec", "diagsec_disp", "raca_cor", "instru", "coorte")
-  co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8",
+  co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8",
               na.strings = c("NA", ""), select = COLS)
   co[, ano := as.integer(ano)]
   co[, faixa := cut(idade_anos, breaks = c(-Inf, 15, 30, 45, 60, 75, 90, Inf),
                     labels = c("<15", "15-29", "30-44", "45-59", "60-74", "75-89", "90+"),
                     right = FALSE)]
 
-  sim <- fread(file.path(PROC, "sim_cid_estudo_2010_2024.csv"), encoding = "UTF-8",
+  sim <- fread(file.path(PROC, "sim_cid_estudo_2014_2024.csv"), encoding = "UTF-8",
               colClasses = "character", na.strings = c("NA", ""))
   sim[, dto := as.Date(DTOBITO, format = "%d%m%Y")]
   sim[, ano := as.integer(format(dto, "%Y"))]
@@ -96,7 +96,7 @@ suppressWarnings({
                encoding = "UTF-8")
   pop[, ano := as.integer(ano)][, populacao := as.numeric(populacao)]
   pop[, ibge6 := sprintf("%06s", as.character(ibge6))]
-  pop_reg <- pop[ano %in% 2010:2024, .(pop = sum(populacao, na.rm = TRUE)),
+  pop_reg <- pop[ano %in% 2014:2024, .(pop = sum(populacao, na.rm = TRUE)),
                  by = .(regiao_saude = macro_regiao, ano)]
 
   lk <- fread(file.path(DLNM, "lookup_municipio_macrorregiao.csv"),
@@ -112,9 +112,9 @@ suppressWarnings({
                  "Baixada Litoranea" = "Norte e Noroeste")
   co[, macro3 := unname(MACRO_MAP[as.character(regiao_saude)])]
   pop[, macro3 := unname(MACRO_MAP[as.character(macro_regiao)])]
-  pop_macro <- pop[ano %in% 2010:2024, .(pop = sum(populacao, na.rm = TRUE)),
+  pop_macro <- pop[ano %in% 2014:2024, .(pop = sum(populacao, na.rm = TRUE)),
                    by = .(macro3, ano)]
-  pop_est <- pop[ano %in% 2010:2024, .(pop = sum(populacao, na.rm = TRUE)), by = ano]
+  pop_est <- pop[ano %in% 2014:2024, .(pop = sum(populacao, na.rm = TRUE)), by = ano]
 
   ## coorte completa: I60-I69 + G45/G46 (ambas as classes, em todas as análises)
   co_tot <- co
@@ -145,11 +145,11 @@ suppressWarnings({
     geom_point(colour = viridis(1, begin = 0.25), size = 2) +
     geom_smooth(method = "lm", se = TRUE, colour = viridis(1, begin = 0.8),
                 fill = viridis(1, begin = 0.8), alpha = 0.15, linewidth = 0.6) +
-    labs(title = "Internações por DCV no Rio de Janeiro, 2010–2024",
+    labs(title = "Internações por DCV no Rio de Janeiro, 2014–2024",
          subtitle = sprintf("Taxa por 100.000 habitantes (I60–I69). Tendência de Mann–Kendall: τ = %+.3f; p = %.4f",
                             mkt$estimate, mkt$p.value),
          x = NULL, y = "Internações por 100.000") +
-    scale_x_continuous(breaks = seq(2010, 2024, 2))
+    scale_x_continuous(breaks = seq(2014, 2024, 2))
   salvar(g, "fig_ex01_taxa_internacao_estado.png")
 
   ## ================= 2. internação x mortalidade estadual =================
@@ -165,11 +165,11 @@ suppressWarnings({
                        sec.axis = sec_axis(~ . / 3, name = "% óbito hospitalar")) +
     scale_colour_viridis_d(option = "D", end = 0.85) +
     labs(title = "Internação e letalidade hospitalar por DCV",
-         subtitle = sprintf("RJ, 2010–2024. Tendência da letalidade (Cochran–Armitage): p = %.4f. Eixos em escalas distintas",
+         subtitle = sprintf("RJ, 2014–2024. Tendência da letalidade (Cochran–Armitage): p = %.4f. Eixos em escalas distintas",
                             p_ca),
          x = NULL, colour = NULL) +
     theme(legend.position = "top") +
-    scale_x_continuous(breaks = seq(2010, 2024, 2))
+    scale_x_continuous(breaks = seq(2014, 2024, 2))
   salvar(g, "fig_ex02_internacao_letalidade.png")
   salvar_jpg(g, "figura1_taxa_internacao_letalidade.jpg")
 
@@ -179,9 +179,9 @@ suppressWarnings({
     geom_line(linewidth = 0.7) + geom_point(size = 1.3) +
     scale_colour_manual(values = CORES9) +
     labs(title = "Taxa de internação por DCV nas regiões de saúde",
-         subtitle = "RJ, 2010–2024 (I60–I69, por 100.000 habitantes)",
+         subtitle = "RJ, 2014–2024 (I60–I69, por 100.000 habitantes)",
          x = NULL, y = "Internações por 100.000", colour = NULL) +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     theme(legend.position = "right", legend.text = element_text(size = 7))
   salvar(g, "fig_ex03_taxa_internacao_regiao.png", w = 9.5, h = 5.5)
 
@@ -189,9 +189,9 @@ suppressWarnings({
   g <- ggplot(tx_reg, aes(ano, regiao_saude, fill = taxa)) +
     geom_tile(colour = "white", linewidth = 0.3) +
     scale_fill_viridis_c(option = "D", name = "Taxa/100 mil") +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     labs(title = "Mapa de calor da taxa de internação por DCV",
-         subtitle = "Regiões de saúde × ano, RJ, 2010–2024", x = NULL, y = NULL)
+         subtitle = "Regiões de saúde × ano, RJ, 2014–2024", x = NULL, y = NULL)
   salvar(g, "fig_ex04_heatmap_internacao_regiao.png", w = 9, h = 4.8)
 
   ## ================= 5. mortalidade SIM por região =================
@@ -200,9 +200,9 @@ suppressWarnings({
     geom_line(linewidth = 0.7) + geom_point(size = 1.3) +
     scale_colour_manual(values = CORES9) +
     labs(title = "Taxa de mortalidade por DCV nas regiões de saúde",
-         subtitle = "Causa básica I60–I69 e G45/G46 (SIM), RJ, 2010–2024, por 100.000",
+         subtitle = "Causa básica I60–I69 e G45/G46 (SIM), RJ, 2014–2024, por 100.000",
          x = NULL, y = "Óbitos por 100.000", colour = NULL) +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     theme(legend.position = "right", legend.text = element_text(size = 7))
   salvar(g, "fig_ex05_mortalidade_sim_regiao.png", w = 9.5, h = 5.5)
 
@@ -214,7 +214,7 @@ suppressWarnings({
     scale_y_continuous(labels = abs, name = "Internações") +
     scale_fill_viridis_d(option = "D", end = 0.75, labels = c("Feminino", "Masculino")) +
     labs(title = "Pirâmide etária das internações por DCV",
-         subtitle = "RJ, 2010–2024 (I60–I69)", x = "Faixa etária", fill = NULL) +
+         subtitle = "RJ, 2014–2024 (I60–I69)", x = "Faixa etária", fill = NULL) +
     theme(legend.position = "top")
   salvar(g, "fig_ex06_piramide_etaria.png", w = 8, h = 4.5)
 
@@ -229,7 +229,7 @@ suppressWarnings({
     geom_line(position = position_dodge(0.4)) +
     scale_colour_viridis_d(option = "D", end = 0.75, labels = c("Feminino", "Masculino")) +
     labs(title = "Letalidade hospitalar por faixa etária e sexo",
-         subtitle = sprintf("Internações por DCV, RJ, 2010–2024 (IC95%% de Wilson; interação faixa × sexo: p %s)",
+         subtitle = sprintf("Internações por DCV, RJ, 2014–2024 (IC95%% de Wilson; interação faixa × sexo: p %s)",
                             ifelse(chisq_fx < 0.001, "< 0,001", sprintf("= %.3f", chisq_fx))),
          x = "Faixa etária", y = "Óbito hospitalar (%)", colour = NULL) +
     theme(legend.position = "top")
@@ -246,7 +246,7 @@ suppressWarnings({
     geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.25, colour = "grey30", linewidth = 0.3) +
     coord_flip() + scale_fill_viridis_c(option = "D", guide = "none") +
     labs(title = "Letalidade hospitalar por subtipo diagnóstico",
-         subtitle = sprintf("Toda a coorte (I60–I69 + G45/G46), RJ, 2010–2024, com IC95%%; χ²: p %s",
+         subtitle = sprintf("Toda a coorte (I60–I69 + G45/G46), RJ, 2014–2024, com IC95%%; χ²: p %s",
                             ifelse(p_sub < 0.001, "< 0,001", sprintf("= %.3f", p_sub))),
          x = NULL, y = "Óbito hospitalar (%)")
   salvar(g, "fig_ex08_letalidade_subtipo.png", w = 9, h = 5)
@@ -260,7 +260,7 @@ suppressWarnings({
     coord_flip() + scale_y_continuous(limits = c(0, 60)) +
     scale_fill_viridis_d(option = "D") +
     labs(title = "Permanência hospitalar por subtipo diagnóstico",
-         subtitle = sprintf("Dias de permanência (limite visual 60 dias), RJ, 2010–2024; Kruskal–Wallis: p %s",
+         subtitle = sprintf("Dias de permanência (limite visual 60 dias), RJ, 2014–2024; Kruskal–Wallis: p %s",
                             ifelse(kw_perm$p.value < 0.001, "< 0,001", sprintf("= %.3f", kw_perm$p.value))),
          x = NULL, y = "Dias de permanência")
   salvar(g, "fig_ex09_permanencia_subtipo.png", w = 9, h = 5)
@@ -273,7 +273,7 @@ suppressWarnings({
     geom_boxplot(fill = viridis(1, begin = 0.25), outlier.size = 0.2, width = 0.6) +
     coord_flip() + scale_y_log10(labels = label_number(big.mark = ".")) +
     labs(title = "Custo por internação segundo a região de saúde",
-         subtitle = sprintf("Valores correntes (R$), escala logarítmica, RJ, 2010–2024; Kruskal–Wallis: p %s",
+         subtitle = sprintf("Valores correntes (R$), escala logarítmica, RJ, 2014–2024; Kruskal–Wallis: p %s",
                             ifelse(kw_custo$p.value < 0.001, "< 0,001", sprintf("= %.3f", kw_custo$p.value))),
          x = NULL, y = "Valor total da internação (R$)")
   salvar(g, "fig_ex10_custo_regiao.png", w = 9, h = 5)
@@ -287,7 +287,7 @@ suppressWarnings({
     geom_text(aes(label = ifelse(pct >= 1, sprintf("%.1f", pct), "")), size = 2.4) +
     scale_fill_viridis_c(option = "D", name = "% do total") +
     labs(title = "Fluxo de pacientes entre regiões de residência e de atendimento",
-         subtitle = "Percentual das internações por DCV, RJ, 2010–2024 (associação origem × destino: p < 0,001)",
+         subtitle = "Percentual das internações por DCV, RJ, 2014–2024 (associação origem × destino: p < 0,001)",
          x = "Região de residência", y = "Região de internação") +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
   salvar(g, "fig_ex11_fluxo_regioes.png", w = 9, h = 6)
@@ -428,9 +428,9 @@ suppressWarnings({
   g <- ggplot(isu, aes(ano, regiao_saude, fill = ISU)) +
     geom_tile(colour = "white", linewidth = 0.3) +
     scale_fill_viridis_c(option = "D", name = "ISU (%)") +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     labs(title = "Índice de Swaroop–Uemura por região de saúde",
-         subtitle = "Percentual de óbitos por DCV em pessoas de 50 anos ou mais, 2010–2024",
+         subtitle = "Percentual de óbitos por DCV em pessoas de 50 anos ou mais, 2014–2024",
          x = NULL, y = NULL)
   salvar(g, "fig_ex21_isu_heatmap.png", w = 9, h = 4.8)
 
@@ -441,7 +441,7 @@ suppressWarnings({
     geom_col(width = 0.7) + coord_flip() +
     scale_fill_viridis_c(option = "D", guide = "none") +
     labs(title = "Razão entre óbitos (SIM) e internações (SIH) por região",
-         subtitle = "Óbitos por causa básica I60–I69 por 100 internações, RJ, 2010–2024",
+         subtitle = "Óbitos por causa básica I60–I69 por 100 internações, RJ, 2014–2024",
          x = NULL, y = "Óbitos por 100 internações")
   salvar(g, "fig_ex22_razao_obito_internacao.png", w = 8, h = 5)
 
@@ -451,7 +451,7 @@ suppressWarnings({
     geom_col(fill = viridis(1, begin = 0.3), width = 0.7) +
     geom_line(aes(y = custo_corrente / 1e6), colour = viridis(1, begin = 0.85),
               linewidth = 0.8) +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     labs(title = "Custo das internações por DCV, corrente e deflacionado",
          subtitle = "Milhões de R$; barras = deflacionado a dez/2024, linha = corrente (IPCA/SIDRA 1737)",
          x = NULL, y = "Milhões de R$")
@@ -463,12 +463,12 @@ suppressWarnings({
   te[, sig := ifelse(p < 0.05, "p < 0,05", "p ≥ 0,05")]
   g <- ggplot(te, aes(reorder(grupo, taxa_2024), taxa_2024, fill = sig)) +
     geom_col(width = 0.7) +
-    geom_point(aes(y = taxa_2010), shape = 18, colour = "grey20", size = 2) +
+    geom_point(aes(y = taxa_2014), shape = 18, colour = "grey20", size = 2) +
     geom_text(aes(label = sprintf("p = %.3f", p)), hjust = -0.08, size = 2.5, colour = "grey25") +
     coord_flip() + scale_fill_viridis_d(option = "D", end = 0.8) +
     scale_y_continuous(expand = expansion(mult = c(0, 0.18))) +
-    labs(title = "Taxa de internação em 2010 e 2024 por região de saúde",
-         subtitle = "Barras = 2024; losangos = 2010; cor e rótulo = p do teste de Mann–Kendall",
+    labs(title = "Taxa de internação em 2014 e 2024 por região de saúde",
+         subtitle = "Barras = 2024; losangos = 2014; cor e rótulo = p do teste de Mann–Kendall",
          x = NULL, y = "Internações por 100.000", fill = NULL) +
     theme(legend.position = "top")
   salvar(g, "fig_ex24_tendencia_regiao.png", w = 9, h = 5)
@@ -477,7 +477,7 @@ suppressWarnings({
   cc <- co[, .(pct_com_diag = 100 * mean(n_diag_sec > 0)), by = ano]
   g <- ggplot(cc, aes(ano, pct_com_diag)) +
     geom_col(fill = viridis(1, begin = 0.3), width = 0.7) +
-    scale_x_continuous(breaks = seq(2010, 2024, 2)) +
+    scale_x_continuous(breaks = seq(2014, 2024, 2)) +
     labs(title = "Registro de diagnósticos secundários nas internações",
          subtitle = "Percentual de internações com ao menos um diagnóstico secundário (mede codificação, não comorbidade)",
          x = NULL, y = "% com diagnóstico secundário")

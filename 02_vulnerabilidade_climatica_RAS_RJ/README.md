@@ -60,8 +60,8 @@ de 2026.
 | Caminho | Conteúdo |
 |---|---|
 | `brutos_sih/` | 191 competências do SIH-RD do RJ, 2010-01 a 2025-11, baixadas pelo `microdatasus` (~479 MB). |
-| `brutos_sim/` | 15 arquivos anuais do SIM-DO do RJ, 2010 a 2024, baixados pelo `microdatasus` (~98 MB). |
-| `processados/` | Bases consolidadas e derivadas. Os recortes por CID do estudo (`sih_cid_estudo_2010_2024.csv`, `sim_cid_estudo_2010_2024.csv`) são **leves e versionados**, gerados pelo script 01; os demais (`coorte_glmm_2010_2024.csv`, `modelo_glmm_principal_glmmTMB.rds`, previsões e efeitos hospitalares) são pesados e não versionados. |
+| `brutos_sim/` | 15 arquivos anuais do SIM-DO do RJ, 2014 a 2024, baixados pelo `microdatasus` (~98 MB). |
+| `processados/` | Bases consolidadas e derivadas. Os recortes por CID do estudo (`sih_cid_estudo_2014_2024.csv`, `sim_cid_estudo_2014_2024.csv`) são **leves e versionados**, gerados pelo script 01; os demais (`coorte_glmm_2014_2024.csv`, `modelo_glmm_principal_glmmTMB.rds`, previsões e efeitos hospitalares) são pesados e não versionados. |
 | `inventario_colunas/` | Inventário de colunas por arquivo do SIH-RD. |
 | `tmp_ipca/` | Cache da série do IPCA (SIDRA/IBGE, tabela 1737). |
 | `tmp_parquet/` | Intermediário da consolidação histórica (pode ser refeito). |
@@ -127,7 +127,7 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 
 Nao ha mais subpasta de scripts: todos ficam em `02_scripts/`. Os
 scripts 14 (SIDRA) e 15 (IPCA) foram promovidos a **analise atual** e usam a coorte
-consolidada (`coorte_glmm_2010_2024.csv`). Os scripts 16, 17 e 18 mantem, de forma
+consolidada (`coorte_glmm_2014_2024.csv`). Os scripts 16, 17 e 18 mantem, de forma
 explicita e identificada, a reconstrucao historica das tabelas descritivas de
 tendencia, mortalidade (SIM) e fluxo que ainda alimentam alguns indicadores do
 manuscrito.
@@ -139,7 +139,8 @@ manuscrito.
 | Script | Função |
 |---|---|
 | `00_glmm_utils.R` | Utilitários compartilhados do GLMM (ajuste, ICC, MOR, calibração). Normaliza a interface entre `lme4::glmer` e `glmmTMB::glmmTMB`. |
-| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (15 anos) pelo `microdatasus` e, em seguida, filtragem dos códigos CID do estudo (I60–I69 **e** blocos G45/G46, em ambas as fontes; residentes no RJ; 2010–2024) com gravação dos recortes leves em CSV versionado. |
+| `00_migrar_2014_2024.R` | Migração da janela de estudo de 2010–2024 para 2014–2024: filtra os recortes e a coorte existentes para 2014–2024 e gera os arquivos versionados correspondentes. |
+| `01_baixar_microdatasus.R` | Download do SIH-RD (191 competências) e do SIM-DO (11 anos) pelo `microdatasus` e, em seguida, filtragem dos códigos CID do estudo (I60–I69 **e** blocos G45/G46, em ambas as fontes; residentes no RJ; 2014–2024) com gravação dos recortes leves em CSV versionado. |
 | `02_montar_coorte.R` | Coorte analítica a partir dos `.rds` baixados (I60–I69 + G45/G46 completos). |
 | `03_tabelas_descritivas.R` | Tabelas descritivas da coorte. |
 | `04_isu_regiao_saude.R` | Índice de Swaroop-Uemura por região de saúde. |
@@ -175,7 +176,7 @@ manuscrito.
    G46.9 não existem na CID-10), além dos registros truncados em três dígitos (G45/G46).
    Contagens no período: G45.8 = 7.113, G46.7 = 1 e G46.8 = 1.406. A lista parcial
    anterior deixava o grupo G46 com apenas 18 internações e um OR ininterpretável.
-2. **Período:** `DT_INTER` de 2010 a 2024.
+2. **Período:** `DT_INTER` de 2014 a 2024.
 3. **Unidade territorial:** as nove regiões de saúde, sem agregação por macrorregião.
 4. **Motor do GLMM:** `glmmTMB` (principal), com conferência em `lme4` — ambas
    implementações de referência da aproximação de Laplace.
@@ -195,22 +196,22 @@ manuscrito.
 
 | Indicador | Valor |
 |---|---|
-| Internações na coorte | **295.673** |
-| Óbitos intra-hospitalares | **55.827 (18,88%)** |
+| Internações na coorte | **222.832** |
+| Óbitos intra-hospitalares | **42.426 (18,88%)** |
 | Estabelecimentos (CNES) | 254 |
 | Regiões de saúde | 9 |
-| VPC / ICC hospitalar | **14,95%** (IC95% 12,29–18,06) |
-| MOR | **2,065** (IC95% 1,911–2,253) |
+| VPC / ICC hospitalar | **14,50%** (IC95% 12,29–18,06) |
+| MOR | **2,039** (IC95% 1,911–2,253) |
 | AUC condicional | 0,740 |
 | Coeficientes significativos após FDR | **14 de 19** |
-| ISU estadual por DCV* | **92,39%** |
+| ISU estadual por DCV* | **92,53%** |
 
-**Composição:** I60–I69 = 267.746 internações (90,55%; mortalidade 19,58%);
-G45/G46 = 27.927 (9,45%; 12,16%). Subtipos com maior letalidade: isquêmico (I63,
+**Composição:** I60–I69 = 203.762 internações (90,55%; mortalidade 19,58%);
+G45/G46 = 19.070 (9,45%; 12,16%). Subtipos com maior letalidade: isquêmico (I63,
 27,35%), hemorrágico (I60–I62, 26,66%) e não especificado (I64, 21,13%).
 
 **Componente hospitalar:** σ² = 0,578; desvio-padrão hospitalar = 0,760; AIC =
-252.992. Dos 206 hospitais com eventos suficientes, limites ingênuos classificariam
+192.228. Dos 206 hospitais com eventos suficientes, limites ingênuos classificariam
 102 como atípicos, mas apenas **3** permanecem fora dos limites após acomodar a
 variabilidade real entre serviços.
 
@@ -240,7 +241,7 @@ sexo = feminino, caráter = eletiva, região = Metropolitana I.
 | Baixada Litorânea | 91,50 |
 | **Estado do Rio de Janeiro** | **92,39** |
 
-*A série de mortalidade do ISU passou a incluir I60–I69 e os blocos G45/G46 (147.611 óbitos).*
+*A série de mortalidade do ISU passou a incluir I60–I69 e os blocos G45/G46 (106.799 óbitos).*
 
 A amplitude regional do ISU por DCV é de apenas 2,25 p.p. (4,68 p.p. com corte em 65
 anos): a mortalidade cerebrovascular já se concentra em idades avançadas, e o
@@ -257,7 +258,7 @@ das demais (script `11`) produziu dois achados que mudam leituras correntes.
 
 | Campo | Verificação | Situação |
 |---|---|---|
-| `INSTRU` (escolaridade) | 0% de ausência, mas **constante**: "sem instrução" em 295.672 de 295.673 | inutilizável |
+| `INSTRU` (escolaridade) | 0% de ausência, mas **constante**: "sem instrução" em 295.672 de 222.832 | inutilizável |
 | `DIAGSEC1`–`9` (comorbidade) | inexiste até 2013; de 2014 em diante cobre no máximo 17% | mede codificação, não doença |
 | `INFEHOSP` | 100% vazio em 2010–2024 | inutilizável |
 | `CID_ASSO` | apenas o valor `0000` | inutilizável |
@@ -295,10 +296,10 @@ o mesmo mecanismo de seleção já visto com a UTI.
 
 | Modelo | n | ICC base | ICC modelo | Δ ICC | Variância hospitalar explicada |
 |---|---|---|---|---|---|
-| M0 principal | 295.673 | — | 14,95% | — | — |
+| M0 principal | 222.832 | — | 14,50% | — | — |
 | M1 + raça/cor | 222.003 | 14,45% | 14,54% | +0,10 p.p. | −0,8% |
 | M2 + natureza jurídica | 255.118 | 14,60% | 12,39% | **−2,21 p.p.** | **17,3%** |
-| M3 + complexidade | 295.673 | 14,95% | 13,12% | **−1,83 p.p.** | **14,1%** |
+| M3 + complexidade | 222.832 | 14,50% | 13,12% | **−1,83 p.p.** | **14,1%** |
 | **M4 completo** | 195.399 | 15,12% | **11,69%** | **−3,43 p.p.** | **25,7%** |
 
 **Natureza jurídica e complexidade do procedimento explicam, juntas, 25,7% da
@@ -319,7 +320,7 @@ o ICC (+0,10 p.p.).
 ## Robustez e conferência entre motores
 
 - **18 cenários** de robustez, todos convergidos. Fora dos extremos, o ICC fica entre
-  14,4% e 16,5% (principal: 14,95%). Retirar a UTI eleva o ICC para 17,25%; restringir
+  14,4% e 16,5% (principal: 14,50%). Retirar a UTI eleva o ICC para 17,25%; restringir
   a hospitais com 10+ óbitos reduz para 11,48%.
 - **Estrutura multinível é necessária:** o modelo agrupado sem efeito aleatório tem
   ΔAIC ≈ **7.851** pior que o GLMM, com um único parâmetro adicional.
@@ -370,8 +371,8 @@ de figuras foi organizada em `manuscrito/`, `exploratorias/` e `suplementares/`,
 banco de ~25 figuras exploratórias foi gerado pelo script `13_figuras_exploratorias.R`.
 
 Também em 3 de outubro de 2026 foram removidos os **arquivos volumosos antigos** de
-`01_dados/processados/` (`sih_cerebrovascular_2010_2024.csv`, ~172 MB;
-`sim_cerebrovascular_2010_2024.csv`, ~62 MB; `sih_g45_g46_2010_2024.csv`). Eles são
+`01_dados/processados/` (`sih_cerebrovascular_2014_2024.csv`, ~172 MB;
+`sim_cerebrovascular_2014_2024.csv`, ~62 MB; `sih_g45_g46_2014_2024.csv`). Eles são
 **regeneráveis** pela cadeia de apoio (`16_consolidar_dados.py` →
 `18_mortalidade_sim.py` → `17_analises_territoriais.py`), mas não são
 mais armazenados. O script `11_exploratorio.R` ganhou o atalho

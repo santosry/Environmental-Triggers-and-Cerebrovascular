@@ -1,32 +1,32 @@
 =====================================================================
 TRATAMENTO DO USO DE UTI: DECOMPOSICAO INTRA E ENTRE HOSPITAIS
-R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | inicio: 2026-10-03 10:12:35
+R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | inicio: 2026-10-03 19:24:01
 =====================================================================
-internacoes: 295.673 | obitos: 55.827 | hospitais: 254
+internacoes: 222.832 | obitos: 42.426 | hospitais: 222
 
 --- O REGISTRO DE UTI E PRATICA INSTITUCIONAL? ---
-prevalencia global: 12.97%
-hospitais com 100 ou mais internacoes: 186
-  taxa de UTI entre hospitais: P10=0.0% mediana=0.4% P90=37.6% (amplitude 100.0 p.p.)
+prevalencia global: 14.31%
+hospitais com 100 ou mais internacoes: 168
+  taxa de UTI entre hospitais: P10=0.0% mediana=1.4% P90=37.5% (amplitude 92.5 p.p.)
 
   correlacao da taxa de UTI do hospital com o perfil de casos (Spearman):
-    idade_media        rho=-0.289  p=6.13e-05
-    hemorragico_pct    rho=+0.492  p=1.04e-12
-    eletiva_pct        rho=+0.203  p=0.0054
-    obito_pct          rho=+0.329  p=4.48e-06
-    n                  rho=+0.202  p=0.0056
+    idade_media        rho=-0.246  p=0.0013
+    hemorragico_pct    rho=+0.469  p=1.48e-10
+    eletiva_pct        rho=+0.230  p=0.0027
+    obito_pct          rho=+0.357  p=2.05e-06
+    n                  rho=+0.235  p=0.0022
 
-  hospitais com taxa de UTI exatamente zero: 91 (48.9%)
-  hospitais com taxa acima de 20%: 49 (26.3%)
-  os  5 hospitais com mais registros de UTI concentram 32.0% de todos os registros
-  os 10 hospitais com mais registros de UTI concentram 45.7% de todos os registros
-  os 30 hospitais com mais registros de UTI concentram 75.9% de todos os registros
+  hospitais com taxa de UTI exatamente zero: 79 (47.0%)
+  hospitais com taxa acima de 20%: 45 (26.8%)
+  os  5 hospitais com mais registros de UTI concentram 34.0% de todos os registros
+  os 10 hospitais com mais registros de UTI concentram 48.3% de todos os registros
+  os 30 hospitais com mais registros de UTI concentram 78.6% de todos os registros
 
   perfil dos hospitais por intensidade de registro de UTI:
     grupo                      hosp internacoes  mortalidade    idade  hemorragico
-    registro alto (10%+)         69    147.026       22.87%     64.3        20.6%
-    sem registro de UTI          91     77.517       10.42%     67.5         1.3%
-    registro baixo (0-10%)       26     69.200       20.05%     66.0         5.3%
+    registro alto (10%+)         65    115.664       22.50%     64.4        19.6%
+    registro baixo (0-10%)       24     55.172       19.23%     65.9         4.7%
+    sem registro de UTI          79     50.800       11.04%     67.6         1.7%
 
   LEITURA. A UTI nao e apenas pratica de registro: ela separa dois tipos
   de estabelecimento. Os hospitais que registram UTI atendem 20,6% de casos
@@ -38,10 +38,6 @@ hospitais com 100 ou mais internacoes: 186
   o VPC/ICC para baixo.
 
   evolucao temporal da prevalencia de UTI:
-    2010   8.23%
-    2011   8.82%
-    2012   9.19%
-    2013   9.24%
     2014  10.37%
     2015  10.12%
     2016   9.97%
@@ -53,49 +49,49 @@ hospitais com 100 ou mais internacoes: 186
     2022  18.03%
     2023  19.08%
     2024  20.85%
-  tendencia de Mann-Kendall: tau=+0.943  p=1.02e-09
+  tendencia de Mann-Kendall: tau=+0.891  p=1.37e-05
 
   taxa de UTI por regiao de saude:
-    Noroeste               31.67%  (n=11.512)
-    Centro-Sul             17.40%  (n=11.130)
-    Norte                  17.01%  (n=17.444)
-    Medio Paraiba          15.95%  (n=31.820)
-    Metropolitana II       13.58%  (n=38.532)
-    Baixada Litoranea      11.87%  (n=9.463)
-    Baia da Ilha Grande    11.16%  (n=5.115)
-    Metropolitana I        10.68%  (n=135.595)
-    Serrana                 9.50%  (n=35.062)
+    Noroeste               31.28%  (n=8.148)
+    Centro-Sul             18.26%  (n=8.440)
+    Norte                  17.54%  (n=13.955)
+    Metropolitana II       15.79%  (n=30.151)
+    Medio Paraiba          15.48%  (n=25.471)
+    Metropolitana I        12.50%  (n=101.336)
+    Baixada Litoranea      11.73%  (n=7.424)
+    Baia da Ilha Grande    11.73%  (n=4.143)
+    Serrana                11.07%  (n=23.764)
 
-### M1 sem UTI                                 sigma2=0.68598 ICC=0.17254 MOR=2.2035 AIC=261038.8
+### M1 sem UTI                                 sigma2=0.70204 ICC=0.17587 MOR=2.2238 AIC=199148.8
 
-### M2 com UTI (especificacao do plano)        sigma2=0.57811 ICC=0.14946 MOR=2.0653 AIC=252992.2
-      uti              OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00
+### M2 com UTI (especificacao do plano)        sigma2=0.55779 ICC=0.14497 MOR=2.0389 AIC=192228.0
+      uti              OR=  4.118 (IC95%  3.982-  4.257) p=0.00e+00
 
-### M3 so componente do hospital               sigma2=0.64588 ICC=0.16411 MOR=2.1524 AIC=261030.3
-      uti_between      OR=  2.397 (IC95%  1.426-  4.028) p=9.69e-04
+### M3 so componente do hospital               sigma2=0.60829 ICC=0.15605 MOR=2.1042 AIC=199129.2
+      uti_between      OR=  3.641 (IC95%  2.154-  6.153) p=1.39e-06
 
-### M4 Mundlak (intra + entre)                 sigma2=0.57052 ICC=0.14779 MOR=2.0554 AIC=252991.9
-      uti_within       OR=  3.909 (IC95%  3.794-  4.028) p=0.00e+00
-      uti_between      OR=  2.658 (IC95%  1.619-  4.364) p=1.11e-04
+### M4 Mundlak (intra + entre)                 sigma2=0.55755 ICC=0.14491 MOR=2.0386 AIC=192230.0
+      uti_within       OR=  4.118 (IC95%  3.983-  4.258) p=0.00e+00
+      uti_between      OR=  3.964 (IC95%  2.379-  6.603) p=1.23e-07
 
 --- CONTRIBUICAO DA UTI AO COMPONENTE HOSPITALAR ---
-  sigma2 sem UTI ............................... 0.68598 (ICC 17.25%)
-  sigma2 com UTI de paciente ................... 0.57811 (ICC 14.95%)
-  sigma2 so com a taxa de UTI do hospital ...... 0.64588 (ICC 16.41%)
-  sigma2 na decomposicao de Mundlak ............ 0.57052 (ICC 14.78%)
+  sigma2 sem UTI ............................... 0.70204 (ICC 17.59%)
+  sigma2 com UTI de paciente ................... 0.55779 (ICC 14.50%)
+  sigma2 so com a taxa de UTI do hospital ...... 0.60829 (ICC 15.60%)
+  sigma2 na decomposicao de Mundlak ............ 0.55755 (ICC 14.49%)
 
-  a UTI de paciente explica 15.7% da variancia hospitalar
-  a taxa de UTI do hospital explica 5.8% da variancia hospitalar
-  os dois componentes juntos explicam 16.8%
-  heterogeneidade hospitalar remanescente: ICC 14.78%
+  a UTI de paciente explica 20.5% da variancia hospitalar
+  a taxa de UTI do hospital explica 13.4% da variancia hospitalar
+  os dois componentes juntos explicam 20.6%
+  heterogeneidade hospitalar remanescente: ICC 14.49%
 
 --- SENSIBILIDADE A DEFINICAO DE UTI ---
-  ao menos 1 dia (principal) prevalencia=12.97% | sigma2=0.57805 | ICC= 14.94% | OR= 3.904 (3.789-4.022)
-  ao menos 2 dias            prevalencia=11.32% | sigma2=0.58155 | ICC= 15.02% | OR= 3.963 (3.844-4.086)
-  ao menos 7 dias            prevalencia= 5.33% | sigma2=0.58670 | ICC= 15.13% | OR= 3.351 (3.227-3.479)
-  pelo campo MARCA_UTI       prevalencia=12.99% | sigma2=0.57970 | ICC= 14.98% | OR= 3.917 (3.802-4.036)
-  sem a variavel no modelo   (referencia) | sigma2=0.68598 | ICC= 17.25%
+  ao menos 1 dia (principal) prevalencia=14.31% | sigma2=0.55779 | ICC= 14.50% | OR= 4.118 (3.982-4.257)
+  ao menos 2 dias            prevalencia=12.54% | sigma2=0.55182 | ICC= 14.36% | OR= 4.211 (4.069-4.358)
+  ao menos 7 dias            prevalencia= 5.96% | sigma2=0.58148 | ICC= 15.02% | OR= 3.395 (3.257-3.539)
+  pelo campo MARCA_UTI       prevalencia=14.31% | sigma2=0.55779 | ICC= 14.50% | OR= 4.118 (3.982-4.257)
+  sem a variavel no modelo   (referencia) | sigma2=0.70204 | ICC= 17.59%
 
 figura gravada: 06_figuras/fig_uti.png
 
-fim: 2026-10-03 10:45:01
+fim: 2026-10-03 19:35:36

@@ -15,7 +15,7 @@
 # interpretabilidade ao grupo G46 (a lista parcial anterior deixava G46 com 18
 # internações).
 #
-# PERÍODO: DT_INTER de 2010 a 2024. As competições de 2025 são lidas
+# PERÍODO: DT_INTER de 2014 a 2024. As competições de 2025 são lidas
 # porque o SIH-RD e organizado por competência de processamento e
 # internações de dezembro de 2024 podem cair em janeiro de 2025.
 #
@@ -24,7 +24,7 @@
 #   ../01_DLNMs_RJ_cerebrovascular/data_processed/lookup_municipio_macrorregiao.csv
 #
 # Saídas:
-#   01_dados/processados/coorte_glmm_2010_2024.csv
+#   01_dados/processados/coorte_glmm_2014_2024.csv
 #   05_tabelas/tab_verificacao_cid.csv
 #   04_resultados/resultados_coorte_glmm.txt
 
@@ -149,9 +149,9 @@ suppressWarnings({
 
   d[, DT_INTER_d := as.Date(as.character(DT_INTER), format = "%Y%m%d")]
   say("DT_INTER invalida: ", sum(is.na(d$DT_INTER_d)))
-  d <- d[!is.na(DT_INTER_d) & DT_INTER_d >= as.Date("2010-01-01") &
+  d <- d[!is.na(DT_INTER_d) & DT_INTER_d >= as.Date("2014-01-01") &
            DT_INTER_d <= as.Date("2024-12-31")]
-  say("apos filtro DT_INTER 2010-2024: ", format(nrow(d), big.mark = "."))
+  say("apos filtro DT_INTER 2014-2024: ", format(nrow(d), big.mark = "."))
 
   ## ---------------- 3. derivadas a partir do código bruto ----------------
   cod2 <- function(x) sprintf("%02d", suppressWarnings(as.integer(as.character(x))))
@@ -337,7 +337,7 @@ suppressWarnings({
            "complex_lab","nat_jur_lab","PROC_REA","DIAR_ACOM","ESPEC","NATUREZA",
            "COMPLEX","NAT_JUR","INFEHOSP","CID_ASSO",
            intersect(paste0("DIAGSEC", 1:9), names(d)))
-  f <- file.path(PROC, "coorte_glmm_2010_2024.csv")
+  f <- file.path(PROC, "coorte_glmm_2014_2024.csv")
   ## na = "NA": sem isso o fwrite grava ausente como string vazia e o NA
   say("\ngravado: ", f)
   say("  linhas: ", format(nrow(d), big.mark = "."), " | colunas: ", length(OUT))

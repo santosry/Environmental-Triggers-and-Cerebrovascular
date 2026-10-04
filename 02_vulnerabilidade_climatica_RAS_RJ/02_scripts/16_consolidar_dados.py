@@ -2,7 +2,7 @@
 """
 01_consolidar_dados.py  (versão paralela)
 ======================
-Consolida SIH-RD (2010-2025, análise 2010-2024) e SIM (2010-2024) em arquivos
+Consolida SIH-RD (2010-2025, análise 2014-2024) e SIM (2014-2024) em arquivos
 individuais padronizados.
 
 Leitura robusta: tenta pyreadr (C, rápido) e, se falhar por codificação,
@@ -184,13 +184,13 @@ if __name__ == "__main__":
                                        format="%Y%m%d", errors="coerce")
     sih["NASC_d"] = pd.to_datetime(sih["NASC"].astype("string"),
                                    format="%Y%m%d", errors="coerce")
-    sih = sih[(sih["DT_INTER_d"] >= "2010-01-01") & (sih["DT_INTER_d"] <= "2024-12-31")]
-    print(f"SIH após filtro DT_INTER 2010-2024: {len(sih):,}")
+    sih = sih[(sih["DT_INTER_d"] >= "2014-01-01") & (sih["DT_INTER_d"] <= "2024-12-31")]
+    print(f"SIH após filtro DT_INTER 2014-2024: {len(sih):,}")
 
     sim["DTOBITO_d"] = pd.to_datetime(sim["DTOBITO"].astype("string"),
                                       format="%d%m%Y", errors="coerce")
-    sim = sim[(sim["DTOBITO_d"] >= "2010-01-01") & (sim["DTOBITO_d"] <= "2024-12-31")]
-    print(f"SIM após filtro DTOBITO 2010-2024: {len(sim):,}")
+    sim = sim[(sim["DTOBITO_d"] >= "2014-01-01") & (sim["DTOBITO_d"] <= "2024-12-31")]
+    print(f"SIM após filtro DTOBITO 2014-2024: {len(sim):,}")
 
     # Lookup municipal
     lookup = pd.read_csv(SRC_LOOKUP, dtype=str)
@@ -293,8 +293,8 @@ if __name__ == "__main__":
     sim["ano"] = sim["DTOBITO_d"].dt.year
 
     # Gravação
-    sih.to_csv(os.path.join(OUT_DIR, "sih_cerebrovascular_2010_2024.csv"), index=False)
-    sim.to_csv(os.path.join(OUT_DIR, "sim_cerebrovascular_2010_2024.csv"), index=False)
+    sih.to_csv(os.path.join(OUT_DIR, "sih_cerebrovascular_2014_2024.csv"), index=False)
+    sim.to_csv(os.path.join(OUT_DIR, "sim_cerebrovascular_2014_2024.csv"), index=False)
     print(f"Gravado SIH: {len(sih):,} linhas")
     print(f"Gravado SIM: {len(sim):,} linhas")
 
@@ -312,8 +312,8 @@ if __name__ == "__main__":
 
     print("=" * 70)
     print("RESUMO FINAL")
-    print(f"SIH I60-I69 + G45/G46 residentes RJ, DT_INTER 2010-2024: {len(sih):,}")
-    print(f"SIM I60-I69 + G45/G46 residentes RJ, DTOBITO 2010-2024: {len(sim):,}")
+    print(f"SIH I60-I69 + G45/G46 residentes RJ, DT_INTER 2014-2024: {len(sih):,}")
+    print(f"SIM I60-I69 + G45/G46 residentes RJ, DTOBITO 2014-2024: {len(sim):,}")
     print("SIH por CID3:")
     print(sih["cid3"].value_counts().sort_index().to_string())
     print("SIM por CID3:")

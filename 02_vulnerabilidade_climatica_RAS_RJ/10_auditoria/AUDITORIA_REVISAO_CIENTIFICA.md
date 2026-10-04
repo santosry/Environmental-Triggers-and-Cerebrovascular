@@ -152,3 +152,27 @@ municipal do `geobr` (IBGE/IPEA) dissolvida por região (`24_mapa_regioes_saude.
 Figura 1 passou a combinar a série temporal (painel A) e o mapa de 2024 (painel B). Os
 rótulos das figuras do manuscrito (Figuras 1 e 2) foram ampliados para leitura em
 tamanho final de publicação.
+
+## 11. Reformulação da janela de estudo para 2014–2024 (2026-10-03)
+
+O estudo foi integralmente reformulado para a janela de **2014 a 2024** (11 anos), em
+dados e análises. Os recortes e a coorte foram refiltrados (`00_migrar_2014_2024.R`, com
+`01` e `02` atualizados) e todo o pipeline foi reexecutado. As sub-janelas de robustez
+passaram a ser 2014–2019 e 2020–2024. A estrutura etária de referência da padronização
+permanece a do Censo 2010.
+
+| Indicador | 2010–2024 | 2014–2024 |
+|---|---:|---:|
+| Internações (SIH) | 295.673 | 222.832 |
+| Óbitos intra-hospitalares | 55.827 | 42.426 |
+| Óbitos por causa básica (SIM) | 147.611 | 106.799 |
+| Taxa de internação, início → fim | 94,76 → 125,97 | 105,90 → 136,79 |
+| Mortalidade populacional, início → fim | 65,68 → 58,38 | 58,47 → 58,38 |
+| ICC (MOR) | 14,95% (2,065) | 14,50% (2,039) |
+| Fluxo intermunicipal | 17,7% | 18,4% |
+| Dez maiores estabelecimentos | 33,6% | 34,2% |
+| Custo (corrente / deflacionado) | R$ 535 mi / R$ 790,6 mi | R$ 440,4 mi / R$ 576,4 mi |
+
+Auditorias na nova janela: 84 verificações gerais, 75 aprovadas, 8 informativas, 1
+ressalva esperada (competência SIH ainda não publicada) e **nenhum erro**; 50 verificações
+de consistência interna, nenhuma classificada como erro.

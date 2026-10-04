@@ -1,14 +1,14 @@
 =====================================================================
 BATERIA DE AUDITORIA GERAL DO REPOSITORIO
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-03 14:13:17
+inicio: 2026-10-03 21:15:53
 repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 =====================================================================
 
 =========== 1. ESTRUTURA E AQUISICAO ===========
   [OK     ] Competicoes SIH-RD presentes                               191 esperado 191
   [ATENCAO] Competicoes SIH ausentes                                   1 sih_rd_rj_2025_12.rds
-  [OK     ] Arquivos SIM-DO presentes                                  15 esperado 15 (2010-2024)
+  [OK     ] Arquivos SIM-DO presentes                                  15 esperado 15 (2014-2024)
   [OK     ] Anos do SIM ausentes                                       0 
   [INFO   ] Tamanho bruto SIH (MB)                                     479.3 
   [INFO   ] Tamanho bruto SIM (MB)                                     98.1 
@@ -16,20 +16,20 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 2. RECORTE CID VERSIONADO ===========
   lendo os microdados brute para re-derivar o recorte...
-     40/191 | 1.8 min
-     80/191 | 3.9 min
-    120/191 | 6.2 min
-    160/191 | 8.4 min
-    191/191 | 10.7 min
+     40/191 | 0.6 min
+     80/191 | 1.2 min
+    120/191 | 1.9 min
+    160/191 | 2.6 min
+    191/191 | 3.3 min
   [OK     ] Falhas de leitura dos .rds do SIH                          0 
   [OK     ] Registros brutos SIH relidos                               11.947.354 referencia: 11.947.354
   [INFO   ] Registros do estudo nos brutos (antes de RJ/periodo)       321.911 
   [OK     ] Recorte SIH versionado existe                              sim 
-  [OK     ] Linhas no recorte SIH (CSV)                                295.673 re-derivado: 295.673
-  [OK     ] Recorte SIH bate com a re-derivacao                        295.673 
+  [OK     ] Linhas no recorte SIH (CSV)                                222.832 re-derivado: 222.832
+  [OK     ] Recorte SIH bate com a re-derivacao                        222.832 
   [OK     ] Linhas do recorte fora dos CIDs do estudo                  0 
   [OK     ] Linhas do recorte fora do RJ (MUNIC_RES)                   0 
-  [OK     ] Linhas do recorte fora do periodo 2010-2024                0 
+  [OK     ] Linhas do recorte fora do periodo 2014-2024                0 
   [OK     ] N_AIH ausente no recorte                                   0 
   [OK     ] Linhas integralmente duplicadas no recorte                 0 se >0, ha duplicacao exata no CSV
   [OK     ] Diferenca de n por ano entre re-derivacao e CSV            0 
@@ -38,73 +38,73 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Todos os 12 CID3 do estudo presentes no recorte            0 CID3 ausentes: 
   [OK     ] Falhas de leitura dos .rds do SIM                          0 
   [OK     ] Recorte SIM versionado existe                              sim 
-  [OK     ] Linhas no recorte SIM (CSV)                                147.611 re-derivado: 147.611
-  [OK     ] Recorte SIM bate com a re-derivacao                        147.611 
+  [OK     ] Linhas no recorte SIM (CSV)                                106.799 re-derivado: 106.799
+  [OK     ] Recorte SIM bate com a re-derivacao                        106.799 
   [OK     ] Linhas do recorte SIM fora de I60-I69 e G45/G46            0 
   [OK     ] Linhas do recorte SIM fora do RJ                           0 
   [OK     ] DTOBITO invalida no recorte SIM                            0 
   [OK     ] Diferenca de obitos por ano (SIM re-derivacao x CSV)       0 
-  tempo da re-derivacao: 12.9 min
+  tempo da re-derivacao: 3.9 min
 
 =========== 3. COERENCIA ENTRE ARTEFATOS ===========
   [OK     ] Coorte analitica existe                                    sim 
-  [OK     ] Linhas na coorte                                           295.673 
-  [OK     ] Obitos na coorte                                           55.827 
-  [OK     ] Tamanho da coorte igual ao recorte SIH                     295.673 ambos devem ter 295.673
-  [OK     ] Obitos da coorte iguais aos do recorte SIH                 55.827 
-  [OK     ] Registros do recorte localizados na coorte por chave       295.673 nao localizados: 0
-  [OK     ] tab1: soma das coortes = n da coorte                       295.673 
-  [OK     ] tab1: soma dos obitos = obitos da coorte                   55.827 
-  [OK     ] tab2: soma das internacoes por regiao                      295.673 
-  [OK     ] tab2: soma dos obitos por regiao                           55.827 
+  [OK     ] Linhas na coorte                                           222.832 
+  [OK     ] Obitos na coorte                                           42.426 
+  [OK     ] Tamanho da coorte igual ao recorte SIH                     222.832 ambos devem ter 222.832
+  [OK     ] Obitos da coorte iguais aos do recorte SIH                 42.426 
+  [OK     ] Registros do recorte localizados na coorte por chave       222.832 nao localizados: 0
+  [OK     ] tab1: soma das coortes = n da coorte                       222.832 
+  [OK     ] tab1: soma dos obitos = obitos da coorte                   42.426 
+  [OK     ] tab2: soma das internacoes por regiao                      222.832 
+  [OK     ] tab2: soma dos obitos por regiao                           42.426 
   [OK     ] tab2: numero de regioes de saude                           9 esperado 9
 
 =========== 4. CONSISTENCIA NUMERICA DAS TABELAS ===========
-  [OK     ] tab4: ICC = s2/(s2+pi^2/3)                                 0.14945 
-  [OK     ] tab4: MOR = exp(sqrt(2 s2) Phi^-1(0,75))                   2.0652 
-  [OK     ] tab3: or = exp(beta)                                       5.33e-15 
-  [OK     ] tab3: z = beta/ep                                          1.14e-13 
-  [OK     ] tab3: p bicaudal reproduzido                               1.44e-15 
-  [OK     ] tab3: IC95% inferior = exp(beta-1,96*ep)                   7.55e-15 
-  [OK     ] tab3: IC95% superior = exp(beta+1,96*ep)                   4.00e-15 
+  [OK     ] tab4: ICC = s2/(s2+pi^2/3)                                 0.14497 
+  [OK     ] tab4: MOR = exp(sqrt(2 s2) Phi^-1(0,75))                   2.0389 
+  [OK     ] tab3: or = exp(beta)                                       1.78e-14 
+  [OK     ] tab3: z = beta/ep                                          3.84e-13 
+  [OK     ] tab3: p bicaudal reproduzido                               1.08e-15 
+  [OK     ] tab3: IC95% inferior = exp(beta-1,96*ep)                   2.31e-14 
+  [OK     ] tab3: IC95% superior = exp(beta+1,96*ep)                   2.58e-14 
   [OK     ] tab3: q_bh >= p                                            0 
-  [OK     ] tab3: q_bh reproduz p.adjust(BH)                           5.55e-16 
-  [OK     ] tab5: soma de n na calibracao (marginal)                   295.673 
-  [OK     ] tab5: soma de n na calibracao (condicional)                295.673 
+  [OK     ] tab3: q_bh reproduz p.adjust(BH)                           6.11e-16 
+  [OK     ] tab5: soma de n na calibracao (marginal)                   222.832 
+  [OK     ] tab5: soma de n na calibracao (condicional)                222.832 
   [OK     ] tab5: razao esperado/observado condicional proxima de 1    0.9999 
-  [OK     ] tab6: soma regional = total estadual                       147.611 
-  [OK     ] tab6: ISU = 100*50+/total                                  4.90e-03 
-  [OK     ] tab6: total do ISU igual ao recorte SIM (I60-I69 + G45/G46) 147.611 
-  [OK     ] tab8: S0 reproduz o modelo principal                       0.57805 
+  [OK     ] tab6: soma regional = total estadual                       106.799 
+  [OK     ] tab6: ISU = 100*50+/total                                  4.33e-03 
+  [OK     ] tab6: total do ISU igual ao recorte SIM (I60-I69 + G45/G46) 106.799 
+  [OK     ] tab8: S0 reproduz o modelo principal                       0.55779 
   [OK     ] tab8: todos os cenarios convergidos                        18 de 18 
   [OK     ] tab19: nenhuma verificacao classificada como ERRO          0 
-  [OK     ] README contem '295.673'                                    sim 
-  [OK     ] README contem '55.827'                                     sim 
-  [OK     ] README contem '14,95%'                                     sim 
-  [OK     ] README contem '2,065'                                      sim 
-  [OK     ] README contem '92,39%'                                     sim 
-  [OK     ] README contem '267.746'                                    sim 
-  [OK     ] README contem '27.927'                                     sim 
-  [OK     ] README contem '252.992'                                    sim 
+  [OK     ] README contem '222.832'                                    sim 
+  [OK     ] README contem '42.426'                                     sim 
+  [OK     ] README contem '14,50%'                                     sim 
+  [OK     ] README contem '2,039'                                      sim 
+  [OK     ] README contem '92,53%'                                     sim 
+  [OK     ] README contem '203.762'                                    sim 
+  [OK     ] README contem '19.070'                                     sim 
+  [OK     ] README contem '192.228'                                    sim 
 
 =========== 5. CODIGO E REPRODUTIBILIDADE ===========
-  [INFO   ] Scripts R no diretorio de scripts                          20 
+  [INFO   ] Scripts R no diretorio de scripts                          21 
   [INFO   ] Scripts Python no diretorio de scripts                     4 
   [OK     ] Scripts R com erro de sintaxe                              0 
   [OK     ] Scripts Python com erro de sintaxe                         0 
   [OK     ] Linhas de codigo R com caminho absoluto                    0 
   [OK     ] Ocorrencias de setwd() no codigo R                         0 quebra a portabilidade; usar normalizePath/caminho relativo
-  [INFO   ] Pacotes R exigidos pelo codigo                             12 data.table, ggplot2, jsonlite, lme4, microdatasus, patchwork, pROC, ragg, scales, splines, trend, viridisLite
+  [INFO   ] Pacotes R exigidos pelo codigo                             15 data.table, dplyr, geobr, ggplot2, jsonlite, lme4, microdatasus, patchwork, pROC, ragg, scales, sf, splines, trend, viridisLite
   [OK     ] Pacotes R exigidos e nao instalados                        0 
   [OK     ] Scripts do diretorio ausentes do README                    0 
 
 =========== 6. PRIVACIDADE E HIGIENE DO REPOSITORIO ===========
-  [INFO   ] Arquivos versionados nesta frente                          167 
+  [INFO   ] Arquivos versionados nesta frente                          171 
   [OK     ] CSVs versionados com campo identificavel direto            0 
   [OK     ] Arquivos versionados maiores que 50 MB                     0 
   [INFO   ] Maior arquivo versionado (MB)                              37.36 
-  [OK     ] Recorte versionado e nao ignorado: sih_cid_estudo_2010_2024.csv sim 
-  [OK     ] Recorte versionado e nao ignorado: sim_cid_estudo_2010_2024.csv sim 
+  [OK     ] Recorte versionado e nao ignorado: sih_cid_estudo_2014_2024.csv sim 
+  [OK     ] Recorte versionado e nao ignorado: sim_cid_estudo_2014_2024.csv sim 
   [OK     ] Microdados .rds brutos ignorados pelo Git                  sim 
   [OK     ] Arquivos .rds brutos rastreados no Git                     0 
 
@@ -120,4 +120,4 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 relatorios gravados:
   10_auditoria/AUDITORIA_GERAL.md
   05_tabelas/tab26_auditoria_geral.csv
-fim: 2026-10-03 14:26:31
+fim: 2026-10-03 21:19:53

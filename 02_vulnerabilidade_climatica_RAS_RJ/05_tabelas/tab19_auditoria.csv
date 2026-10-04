@@ -15,37 +15,37 @@ A,COD_IDADE fora de 1 a 4,7004,ATENCAO,""
 A,DIAG_PRINC fora do padrao CID-10,0,OK,""
 A,N_AIH repetida na mesma competencia,16752,ATENCAO,esperado: a mesma AIH aparece em linhas de procedimentos
 A,AIH do estudo repetida em competicoes diferentes na fronteira,0,OK,a deduplicacao do script 02 remove essas repeticoes
-B,Internacoes na coorte,295673,OK,""
-B,Obitos na coorte,55827,OK,""
-B,Media de idade_z (deve ser 0),0.00000000,OK,""
+B,Internacoes na coorte,222832,OK,""
+B,Obitos na coorte,42426,OK,""
+B,Media de idade_z (deve ser 0),-0.00000000,OK,""
 B,Desvio-padrao de idade_z (deve ser 1),1.00000000,OK,""
-B,Anos distintos (deve ser 15),15,OK,2010 a 2024
+B,Anos distintos (deve ser 11),11,OK,2014 a 2024
 B,Regioes de saude distintas (deve ser 9),9,OK,""
-B,Hospitais distintos,254,OK,""
+B,Hospitais distintos,222,OK,""
 B,Linhas com subtipo incoerente com o CID de 3 digitos,0,OK,""
 B,Duplicatas na chave de deduplicacao da coorte,0,OK,mesma chave do script 02; deve ser zero por construcao
 B,Linhas integralmente duplicadas na base analitica,0,OK,"todas as colunas, incluindo N_AIH e a data de saida"
-B,Linhas com perfil clinico coincidente (sem chave),1763,ATENCAO,"0.6% da base; esperado, nao e defeito"
-B,Obitos com zero dia de permanencia na coorte,2091,OK,3.75% dos obitos
-B,UTI_MES_TO maior que DIAS_PERM na coorte,5173,ATENCAO,1.75% da coorte; 13.5% dos registros com UTI
+B,Linhas com perfil clinico coincidente (sem chave),804,ATENCAO,"0.4% da base; esperado, nao e defeito"
+B,Obitos com zero dia de permanencia na coorte,1578,OK,3.72% dos obitos
+B,UTI_MES_TO maior que DIAS_PERM na coorte,4522,ATENCAO,2.03% da coorte; 14.2% dos registros com UTI
 B,Mediana de permanencia (manuscrito cita 7 dias),6,OK,I69: 30 dias
 B,Ausentes em qualquer covariavel do modelo,0,OK,""
 B,I60-I69 nos arquivos brutos (antes de filtros),292194,OK,""
-B,Razao coorte / registros brutos I60-I69,0.9163,ATENCAO,"diferenca explica-se por residencia fora do RJ, duplicatas e periodo"
+B,Razao coorte / registros brutos I60-I69,0.6974,ATENCAO,"diferenca explica-se por residencia fora do RJ, duplicatas e periodo"
 B,Bloco G45/G46 nos arquivos brutos,29717,OK,""
-C,Obitos hospitalares SIM (todas as fontes),121018,OK,""
-C,Obitos intra-hospitalares SIH (somente SUS),55827,OK,""
-C,Razao SIH / SIM hospitalar,0.461,ATENCAO,SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade
-C,Obitos no SIM com local ignorado,15,ATENCAO,afeta a comparacao entre fontes
-D,ICC da tabela coerente com sigma^2/(sigma^2+pi^2/3),0.14945 vs 0.14945,OK,""
-D,"MOR coerente com exp(sqrt(2 s2) Phi^-1(0,75))",2.0652 vs 2.0652,OK,""
+C,Obitos hospitalares SIM (todas as fontes),85875,OK,""
+C,Obitos intra-hospitalares SIH (somente SUS),42426,OK,""
+C,Razao SIH / SIM hospitalar,0.494,ATENCAO,SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade
+C,Obitos no SIM com local ignorado,10,ATENCAO,afeta a comparacao entre fontes
+D,ICC da tabela coerente com sigma^2/(sigma^2+pi^2/3),0.14497 vs 0.14497,OK,""
+D,"MOR coerente com exp(sqrt(2 s2) Phi^-1(0,75))",2.0389 vs 2.0389,OK,""
 D,Coeficientes na tabela de OR,20,OK,""
 D,q-valor sempre maior ou igual ao p-valor,sim,OK,""
 D,q-valor reproduz p.adjust(BH),0.000000,OK,""
-D,Soma de n na calibracao (marginal),295673,OK,coorte: 295.673
-D,Soma de n na calibracao (condicional),295673,OK,coorte: 295.673
-D,Obitos esperados / observados (marginal),0.7319,ATENCAO,marginal subestima por desigualdade de Jensen
+D,Soma de n na calibracao (marginal),222832,OK,coorte: 222.832
+D,Soma de n na calibracao (condicional),222832,OK,coorte: 222.832
+D,Obitos esperados / observados (marginal),0.7745,ATENCAO,marginal subestima por desigualdade de Jensen
 D,Obitos esperados / observados (condicional),0.9999,OK,previsao condicional e a calibrada
-D,Soma dos obitos regionais igual ao total estadual do ISU,147.611 vs 147.611,OK,""
-D,Robustez reproduz o modelo principal (sigma^2),0.57805 vs 0.57805,OK,a coluna s2 da tabela de robustez deve repetir a do modelo principal
+D,Soma dos obitos regionais igual ao total estadual do ISU,106.799 vs 106.799,OK,""
+D,Robustez reproduz o modelo principal (sigma^2),0.55779 vs 0.55779,OK,a coluna s2 da tabela de robustez deve repetir a do modelo principal
 D,Cenarios de robustez convergidos,18 de 18,OK,""

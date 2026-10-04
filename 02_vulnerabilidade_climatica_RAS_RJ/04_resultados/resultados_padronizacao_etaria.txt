@@ -1,6 +1,6 @@
-PADRONIZACAO ETARIA DAS TAXAS | inicio: 2026-10-03 17:16:04
-linhas da tabela de padronizacao: 300
+PADRONIZACAO ETARIA DAS TAXAS | inicio: 2026-10-03 19:12:16
+linhas da tabela de padronizacao: 220
 figura gravada: fig_ex26_padronizacao_etaria.png
-  Internação - estado: bruta 112.46 -> 136.79; padronizada 112.46 -> 136.79
-  Mortalidade - estado: bruta 65.51 -> 58.26; padronizada 65.51 -> 58.26
-fim: 2026-10-03 17:16:15
+  Internação - estado: bruta 105.90 -> 136.79; padronizada 105.90 -> 136.79
+  Mortalidade - estado: bruta 58.20 -> 58.26; padronizada 58.20 -> 58.26
+fim: 2026-10-03 19:12:27

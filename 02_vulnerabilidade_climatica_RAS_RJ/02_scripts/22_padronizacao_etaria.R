@@ -8,7 +8,7 @@
 # obtida aplicando a estrutura etaria de 2010 (da propria regiao) ao total do ano.
 # Taxa padronizada: ASR = sum_i (eventos_i / pop_i * w_i) / sum_i w_i.
 #
-# Entradas: coorte_glmm_2010_2024.csv, sim_cid_estudo_2010_2024.csv,
+# Entradas: coorte_glmm_2014_2024.csv, sim_cid_estudo_2014_2024.csv,
 #           populacao_sidra..., lookup_municipio_macrorregiao.csv, API SIDRA.
 # Saidas:   05_tabelas/tab28_padronizacao_etaria.csv
 #           06_figuras/exploratorias/fig_ex26_padronizacao_etaria.png
@@ -88,20 +88,20 @@ suppressWarnings({
   pop[, ano := as.integer(ano)][, populacao := as.numeric(populacao)]
   pop[, ibge6 := sprintf("%06s", as.character(ibge6))]
   pop <- merge(pop, lk[, .(ibge6, regiao_saude = macro_regiao)], by="ibge6", all.x=TRUE)
-  pop_tot <- pop[ano %in% 2010:2024, .(pop_total = sum(populacao, na.rm=TRUE)), by=.(regiao_saude, ano)]
-  pop_tot <- rbind(pop_tot, pop[ano %in% 2010:2024,
+  pop_tot <- pop[ano %in% 2014:2024, .(pop_total = sum(populacao, na.rm=TRUE)), by=.(regiao_saude, ano)]
+  pop_tot <- rbind(pop_tot, pop[ano %in% 2014:2024,
                  .(regiao_saude = "ESTADO DO RJ", pop_total = sum(populacao, na.rm=TRUE)), by=ano])
   base10 <- pop_reg10[, .(pop_total_2010 = sum(pop)), by=regiao_saude]
   ref <- pop_reg10[regiao_saude == "ESTADO DO RJ", .(grupo, w = pop)]
 
-  den <- CJ(regiao_saude = unique(pop_reg10$regiao_saude), ano = 2010:2024)
+  den <- CJ(regiao_saude = unique(pop_reg10$regiao_saude), ano = 2014:2024)
   den <- merge(den, pop_reg10, by="regiao_saude", allow.cartesian=TRUE)
   den <- merge(den, pop_tot, by=c("regiao_saude","ano"))
   den <- merge(den, base10, by="regiao_saude")
   den[, pop_i := pop * pop_total / pop_total_2010]
 
   ## ---------------- 2. eventos por idade ----------------
-  co <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding="UTF-8",
+  co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding="UTF-8",
               na.strings=c("NA",""), select=c("ano","regiao_saude","idade_anos","coorte"))
   ## coorte completa: I60-I69 + G45/G46 (ambas as classes)
   co <- co[!is.na(idade_anos)]
@@ -109,7 +109,7 @@ suppressWarnings({
   ev_sih <- co[, .(n = .N), by=.(regiao_saude, ano, grupo)]
   ev_sih <- rbind(ev_sih, co[, .(regiao_saude="ESTADO DO RJ", n=.N), by=.(ano, grupo)])
 
-  sim <- fread(file.path(PROC, "sim_cid_estudo_2010_2024.csv"), encoding="UTF-8",
+  sim <- fread(file.path(PROC, "sim_cid_estudo_2014_2024.csv"), encoding="UTF-8",
                colClasses="character", na.strings=c("NA",""))
   sim[, dto := as.Date(DTOBITO, format="%d%m%Y")]
   sim[, ano := as.integer(format(dto, "%Y"))]
@@ -143,7 +143,7 @@ suppressWarnings({
   say("linhas da tabela de padronizacao: ", nrow(tp))
 
   ## ---------------- 4. figura ----------------
-  dd <- tp[ano %in% c(2010, 2024)]
+  dd <- tp[ano %in% c(2014, 2024)]
   dd[, ano := factor(ano)]
   g <- ggplot(dd, aes(x = taxa_bruta, y = taxa_padronizada, colour = ano, shape = tipo)) +
     geom_abline(slope = 1, intercept = 0, linetype = 2, colour = "grey55") +
@@ -159,7 +159,7 @@ suppressWarnings({
          dpi = 300, device = ragg::agg_png)
   say("figura gravada: fig_ex26_padronizacao_etaria.png")
 
-  rr <- tp[regiao_saude == "ESTADO DO RJ" & ano %in% c(2010, 2024)]
+  rr <- tp[regiao_saude == "ESTADO DO RJ" & ano %in% c(2014, 2024)]
   for (tp_ in unique(rr$tipo)) {
     x <- rr[tipo == tp_][order(ano)]
     say(sprintf("  %s - estado: bruta %.2f -> %.2f; padronizada %.2f -> %.2f",

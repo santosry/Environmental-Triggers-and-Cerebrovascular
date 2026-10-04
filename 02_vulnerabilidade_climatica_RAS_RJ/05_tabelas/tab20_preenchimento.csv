@@ -1,9 +1,9 @@
 variavel,coluna,pct_ausente,n_niveis,nivel_dominante,utilizavel
-Raca/cor,raca_cor,24.92,5,Parda (45.5%),TRUE
+Raca/cor,raca_cor,23.19,5,Parda (46.1%),TRUE
 Escolaridade,instru,0,2,Sem instrucao (100.0%),FALSE
-Diagnosticos secundarios,n_diag_sec,0,8,0 (90.8%),FALSE
-Complexidade,complex_lab,0,2,Media complexidade (95.4%),FALSE
-Natureza juridica,nat_jur_lab,13.72,3,Administracao public (70.8%),TRUE
-Permanencia,DIAS_PERM,0,225,3 (10.9%),TRUE
-Total de servicos,US_TOT,0,82556,228.18 (0.3%),TRUE
-Valor de UTI,VAL_UTI,0,868,0 (87.0%),TRUE
+Diagnosticos secundarios,n_diag_sec,0,8,0 (87.8%),TRUE
+Complexidade,complex_lab,0,2,Media complexidade (95.0%),FALSE
+Natureza juridica,nat_jur_lab,0,3,Administracao public (73.5%),TRUE
+Permanencia,DIAS_PERM,0,206,3 (11.8%),TRUE
+Total de servicos,US_TOT,0,67092,84.68 (0.3%),TRUE
+Valor de UTI,VAL_UTI,0,802,0 (85.7%),TRUE

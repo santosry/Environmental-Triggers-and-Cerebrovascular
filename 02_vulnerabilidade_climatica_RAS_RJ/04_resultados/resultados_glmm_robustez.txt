@@ -1,432 +1,430 @@
 =====================================================================
 ROBUSTEZ DO GLMM
 R R version 4.6.1 (2026-06-24 ucrt) | motor principal: glmmTMB
-inicio: 2026-10-02 10:43:25
+inicio: 2026-10-03 19:38:22
 =====================================================================
-base: 295.673 internacoes | 254 hospitais | 9 regioes
+base: 222.832 internacoes | 222 hospitais | 9 regioes
 
 
 ================ CENARIOS ================
 
-### S0_principal                   n=295.673 | s2=0.57805 | ICC=0.14945 | MOR=2.0652 | AIC= 252992.2 | conv=TRUE | 2.19 min
+### S0_principal                   n=222.832 | s2=0.55779 | ICC=0.14497 | MOR=2.0389 | AIC=   192228 | conv=TRUE | 1.35 min
 
-### S1_sem_UTI                     n=295.673 | s2=0.68598 | ICC=0.17254 | MOR=2.2035 | AIC= 261038.8 | conv=TRUE | 1.81 min
+### S1_sem_UTI                     n=222.832 | s2=0.70204 | ICC=0.17587 | MOR=2.2238 | AIC= 199148.8 | conv=TRUE | 1.67 min
 
-### S2_UTI_por_MARCA_UTI           n=295.673 | s2= 0.5797 | ICC=0.14981 | MOR=2.0673 | AIC=   252952 | conv=TRUE | 2.14 min
+### S2_UTI_por_MARCA_UTI           n=222.832 | s2=0.55779 | ICC=0.14497 | MOR=2.0389 | AIC=   192228 | conv=TRUE | 2.32 min
 
-### S3_periodo_2015_2024           n=205.399 | s2=0.58395 | ICC=0.15074 | MOR=2.0728 | AIC= 177188.7 | conv=TRUE | 1.54 min
+### S3_periodo_2020_2024           n=110.373 | s2=0.49941 | ICC=0.13179 | MOR=1.9622 | AIC=  93931.7 | conv=TRUE | 2.66 min
 
-### S4_periodo_2010_2014           n= 90.274 | s2=0.65109 | ICC=0.16521 | MOR=2.1591 | AIC=    73531 | conv=TRUE | 0.67 min
+### S4_periodo_2014_2019           n=112.459 | s2=0.53563 | ICC=0.14002 | MOR=  2.01 | AIC=  97239.1 | conv=TRUE | 2.19 min
 
-### S5_sem_I69                     n=255.661 | s2= 0.5844 | ICC=0.15084 | MOR=2.0734 | AIC= 236070.9 | conv=TRUE | 1.85 min
+### S5_sem_I69                     n=199.826 | s2=0.47585 | ICC=0.12636 | MOR=1.9309 | AIC= 181707.8 | conv=TRUE | 4.54 min
 
-### S6_somente_I60_I69             n=267.746 | s2=0.58751 | ICC=0.15152 | MOR=2.0774 | AIC= 234218.9 | conv=TRUE | 1.37 min
+### S6_somente_I60_I69             n=203.762 | s2=0.58935 | ICC=0.15193 | MOR=2.0798 | AIC= 179879.1 | conv=TRUE | 2.63 min
 
-### S7_somente_G45_G46             n= 27.927 | s2=0.76257 | ICC=0.18818 | MOR=2.3001 | AIC=  17913.3 | conv=TRUE | 0.15 min
+### S7_somente_G45_G46             n= 19.070 | s2=0.63322 | ICC=0.16141 | MOR=2.1362 | AIC=  11757.9 | conv=TRUE | 0.35 min
 
-### S8_sem_categoria_I64             n=127.313 | s2=0.65164 | ICC=0.16533 | MOR=2.1598 | AIC=  93413.2 | conv=TRUE | 0.69 min
+### S8_sem_categoria_I64           n= 87.814 | s2=0.76201 | ICC=0.18806 | MOR=2.2994 | AIC=  67418.2 | conv=TRUE | 2.46 min
 
-### S9_hospitais_100mais           n=293.743 | s2=0.55549 | ICC=0.14446 | MOR=2.0359 | AIC= 251665.8 | conv=TRUE | 1.94 min
+### S9_hospitais_100mais           n=221.636 | s2=0.53719 | ICC=0.14037 | MOR= 2.012 | AIC= 191331.5 | conv=TRUE | 4.32 min
 
-### S10_sem_hospitais_sem_obito    n=295.319 | s2=0.55857 | ICC=0.14514 | MOR=2.0399 | AIC= 252957.7 | conv=TRUE | 1.53 min
+### S10_sem_hospitais_sem_obito    n=222.480 | s2=0.52916 | ICC=0.13856 | MOR=2.0015 | AIC= 192187.5 | conv=TRUE | 4.35 min
 
-### S11_hospitais_10mais_obitos    n=290.555 | s2=0.42657 | ICC=0.11478 | MOR=1.8645 | AIC=   251610 | conv=TRUE | 1.85 min
+### S11_hospitais_10mais_obitos    n=218.841 | s2=0.42508 | ICC=0.11443 | MOR=1.8625 | AIC= 191271.7 | conv=TRUE | 1.27 min
 
-### S12_regiao_aleatoria           n=295.673 | s2=0.57402 | ICC=0.14856 | MOR=  2.06 | AIC= 253011.3 | conv=TRUE | 1.70 min
+### S12_regiao_aleatoria           n=222.832 | s2=0.55039 | ICC=0.14332 | MOR=2.0292 | AIC= 192244.5 | conv=TRUE | 1.26 min
 
-### S13_sem_efeito_aleatorio       n=295.673 | sem efeito aleatorio | AIC= 260842.8
+### S13_sem_efeito_aleatorio       n=222.832 | sem efeito aleatorio | AIC= 198715.3
 
-### S14_idade_spline_ns3           n=295.673 | s2= 0.5809 | ICC=0.15007 | MOR=2.0689 | AIC=   252333 | conv=TRUE | 1.87 min
+### S14_idade_spline_ns3           n=222.832 | s2=0.55565 | ICC=0.14449 | MOR=2.0361 | AIC= 191722.2 | conv=TRUE | 1.69 min
 
-### S15_com_tendencia_ano          n=295.673 | s2=0.73246 | ICC= 0.1821 | MOR=2.2622 | AIC=   251135 | conv=TRUE | 5.88 min
+### S15_com_tendencia_ano          n=222.832 | s2=0.62859 | ICC=0.16042 | MOR=2.1303 | AIC= 191477.9 | conv=TRUE | 4.90 min
 
+### S17_otimizador_optim_BFGS      n=222.832 | s2=0.55769 | ICC=0.14495 | MOR=2.0388 | AIC=   192228 | conv=TRUE | 5.54 min
 
-### S17_otimizador_optim_BFGS      n=295.673 | s2=0.57832 | ICC=0.14951 | MOR=2.0655 | AIC= 252992.2 | conv=TRUE | 8.13 min
-
-
-### S19_idade_categorica           n=295.673 | s2=   0.58 | ICC=0.14988 | MOR=2.0677 | AIC= 253375.6 | conv=TRUE | 0.61 min
+### S19_idade_categorica           n=222.832 | s2=0.55497 | ICC=0.14434 | MOR=2.0352 | AIC= 192510.7 | conv=TRUE | 0.42 min
 
 
 ================ ESTABILIDADE DOS COMPONENTES ================
-  S0_principal                   n= 295.673 s2= 0.57805 ICC= 0.14945 MOR= 2.0652 AIC=  252992.2 conv=TRUE
-  S1_sem_UTI                     n= 295.673 s2= 0.68598 ICC= 0.17254 MOR= 2.2035 AIC=  261038.8 conv=TRUE
-  S2_UTI_por_MARCA_UTI           n= 295.673 s2=  0.5797 ICC= 0.14981 MOR= 2.0673 AIC=    252952 conv=TRUE
-  S3_periodo_2015_2024           n= 205.399 s2= 0.58395 ICC= 0.15074 MOR= 2.0728 AIC=  177188.7 conv=TRUE
-  S4_periodo_2010_2014           n=  90.274 s2= 0.65109 ICC= 0.16521 MOR= 2.1591 AIC=     73531 conv=TRUE
-  S5_sem_I69                     n= 255.661 s2=  0.5844 ICC= 0.15084 MOR= 2.0734 AIC=  236070.9 conv=TRUE
-  S6_somente_I60_I69             n= 267.746 s2= 0.58751 ICC= 0.15152 MOR= 2.0774 AIC=  234218.9 conv=TRUE
-  S7_somente_G45_G46             n=  27.927 s2= 0.76257 ICC= 0.18818 MOR= 2.3001 AIC=   17913.3 conv=TRUE
-  S8_sem_categoria_I64             n= 127.313 s2= 0.65164 ICC= 0.16533 MOR= 2.1598 AIC=   93413.2 conv=TRUE
-  S9_hospitais_100mais           n= 293.743 s2= 0.55549 ICC= 0.14446 MOR= 2.0359 AIC=  251665.8 conv=TRUE
-  S10_sem_hospitais_sem_obito    n= 295.319 s2= 0.55857 ICC= 0.14514 MOR= 2.0399 AIC=  252957.7 conv=TRUE
-  S11_hospitais_10mais_obitos    n= 290.555 s2= 0.42657 ICC= 0.11478 MOR= 1.8645 AIC=    251610 conv=TRUE
-  S12_regiao_aleatoria           n= 295.673 s2= 0.57402 ICC= 0.14856 MOR=   2.06 AIC=  253011.3 conv=TRUE
-  S13_sem_efeito_aleatorio       n= 295.673 s2=      NA ICC=      NA MOR=     NA AIC=  260842.8 conv=TRUE
-  S14_idade_spline_ns3           n= 295.673 s2=  0.5809 ICC= 0.15007 MOR= 2.0689 AIC=    252333 conv=TRUE
-  S15_com_tendencia_ano          n= 295.673 s2= 0.73246 ICC=  0.1821 MOR= 2.2622 AIC=    251135 conv=TRUE
-  S17_otimizador_optim_BFGS      n= 295.673 s2= 0.57832 ICC= 0.14951 MOR= 2.0655 AIC=  252992.2 conv=TRUE
-  S19_idade_categorica           n= 295.673 s2=    0.58 ICC= 0.14988 MOR= 2.0677 AIC=  253375.6 conv=TRUE
+  S0_principal                   n= 222.832 s2= 0.55779 ICC= 0.14497 MOR= 2.0389 AIC=    192228 conv=TRUE
+  S1_sem_UTI                     n= 222.832 s2= 0.70204 ICC= 0.17587 MOR= 2.2238 AIC=  199148.8 conv=TRUE
+  S2_UTI_por_MARCA_UTI           n= 222.832 s2= 0.55779 ICC= 0.14497 MOR= 2.0389 AIC=    192228 conv=TRUE
+  S3_periodo_2020_2024           n= 110.373 s2= 0.49941 ICC= 0.13179 MOR= 1.9622 AIC=   93931.7 conv=TRUE
+  S4_periodo_2014_2019           n= 112.459 s2= 0.53563 ICC= 0.14002 MOR=   2.01 AIC=   97239.1 conv=TRUE
+  S5_sem_I69                     n= 199.826 s2= 0.47585 ICC= 0.12636 MOR= 1.9309 AIC=  181707.8 conv=TRUE
+  S6_somente_I60_I69             n= 203.762 s2= 0.58935 ICC= 0.15193 MOR= 2.0798 AIC=  179879.1 conv=TRUE
+  S7_somente_G45_G46             n=  19.070 s2= 0.63322 ICC= 0.16141 MOR= 2.1362 AIC=   11757.9 conv=TRUE
+  S8_sem_categoria_I64           n=  87.814 s2= 0.76201 ICC= 0.18806 MOR= 2.2994 AIC=   67418.2 conv=TRUE
+  S9_hospitais_100mais           n= 221.636 s2= 0.53719 ICC= 0.14037 MOR=  2.012 AIC=  191331.5 conv=TRUE
+  S10_sem_hospitais_sem_obito    n= 222.480 s2= 0.52916 ICC= 0.13856 MOR= 2.0015 AIC=  192187.5 conv=TRUE
+  S11_hospitais_10mais_obitos    n= 218.841 s2= 0.42508 ICC= 0.11443 MOR= 1.8625 AIC=  191271.7 conv=TRUE
+  S12_regiao_aleatoria           n= 222.832 s2= 0.55039 ICC= 0.14332 MOR= 2.0292 AIC=  192244.5 conv=TRUE
+  S13_sem_efeito_aleatorio       n= 222.832 s2=      NA ICC=      NA MOR=     NA AIC=  198715.3 conv=TRUE
+  S14_idade_spline_ns3           n= 222.832 s2= 0.55565 ICC= 0.14449 MOR= 2.0361 AIC=  191722.2 conv=TRUE
+  S15_com_tendencia_ano          n= 222.832 s2= 0.62859 ICC= 0.16042 MOR= 2.1303 AIC=  191477.9 conv=TRUE
+  S17_otimizador_optim_BFGS      n= 222.832 s2= 0.55769 ICC= 0.14495 MOR= 2.0388 AIC=    192228 conv=TRUE
+  S19_idade_categorica           n= 222.832 s2= 0.55497 ICC= 0.14434 MOR= 2.0352 AIC=  192510.7 conv=TRUE
 
 
 ================ OR POR CENARIO (termos centrais) ================
 
 idade_z
-   S0_principal                   OR=  1.460 (IC95%  1.444-  1.476) p=0.00e+00
-   S1_sem_UTI                     OR=  1.412 (IC95%  1.397-  1.427) p=0.00e+00
-   S2_UTI_por_MARCA_UTI           OR=  1.460 (IC95%  1.444-  1.476) p=0.00e+00
-   S3_periodo_2015_2024           OR=  1.469 (IC95%  1.450-  1.488) p=0.00e+00
-   S4_periodo_2010_2014           OR=  1.470 (IC95%  1.441-  1.501) p=2.37e-303
-   S5_sem_I69                     OR=  1.464 (IC95%  1.448-  1.481) p=0.00e+00
-   S6_somente_I60_I69             OR=  1.457 (IC95%  1.441-  1.474) p=0.00e+00
-   S7_somente_G45_G46             OR=  1.497 (IC95%  1.433-  1.564) p=4.07e-73
-   S8_sem_categoria_I64             OR=  1.433 (IC95%  1.409-  1.457) p=0.00e+00
-   S9_hospitais_100mais           OR=  1.459 (IC95%  1.443-  1.475) p=0.00e+00
-   S10_sem_hospitais_sem_obito    OR=  1.459 (IC95%  1.444-  1.475) p=0.00e+00
-   S11_hospitais_10mais_obitos    OR=  1.458 (IC95%  1.443-  1.474) p=0.00e+00
-   S12_regiao_aleatoria           OR=  1.460 (IC95%  1.444-  1.476) p=0.00e+00
-   S13_sem_efeito_aleatorio       OR=  1.449 (IC95%  1.434-  1.465) p=0.00e+00
-   S15_com_tendencia_ano          OR=  1.469 (IC95%  1.453-  1.485) p=0.00e+00
-   S17_otimizador_optim_BFGS      OR=  1.460 (IC95%  1.444-  1.476) p=0.00e+00
+   S0_principal                   OR=  1.467 (IC95%  1.449-  1.485) p=0.00e+00
+   S1_sem_UTI                     OR=  1.410 (IC95%  1.393-  1.427) p=0.00e+00
+   S2_UTI_por_MARCA_UTI           OR=  1.467 (IC95%  1.449-  1.485) p=0.00e+00
+   S3_periodo_2020_2024           OR=  1.490 (IC95%  1.464-  1.517) p=0.00e+00
+   S4_periodo_2014_2019           OR=  1.455 (IC95%  1.429-  1.481) p=0.00e+00
+   S5_sem_I69                     OR=  1.475 (IC95%  1.456-  1.494) p=0.00e+00
+   S6_somente_I60_I69             OR=  1.465 (IC95%  1.446-  1.484) p=0.00e+00
+   S7_somente_G45_G46             OR=  1.507 (IC95%  1.427-  1.592) p=9.45e-49
+   S8_sem_categoria_I64           OR=  1.425 (IC95%  1.398-  1.454) p=2.98e-273
+   S9_hospitais_100mais           OR=  1.467 (IC95%  1.449-  1.486) p=0.00e+00
+   S10_sem_hospitais_sem_obito    OR=  1.466 (IC95%  1.448-  1.485) p=0.00e+00
+   S11_hospitais_10mais_obitos    OR=  1.466 (IC95%  1.448-  1.485) p=0.00e+00
+   S12_regiao_aleatoria           OR=  1.467 (IC95%  1.449-  1.485) p=0.00e+00
+   S13_sem_efeito_aleatorio       OR=  1.450 (IC95%  1.433-  1.468) p=0.00e+00
+   S15_com_tendencia_ano          OR=  1.472 (IC95%  1.454-  1.491) p=0.00e+00
+   S17_otimizador_optim_BFGS      OR=  1.467 (IC95%  1.449-  1.485) p=0.00e+00
 
 sexoM
-   S0_principal                   OR=  1.004 (IC95%  0.985-  1.024) p=0.6778
-   S1_sem_UTI                     OR=  1.001 (IC95%  0.981-  1.020) p=0.9587
-   S2_UTI_por_MARCA_UTI           OR=  1.004 (IC95%  0.985-  1.024) p=0.6765
-   S3_periodo_2015_2024           OR=  1.012 (IC95%  0.988-  1.036) p=0.3232
-   S4_periodo_2010_2014           OR=  0.983 (IC95%  0.947-  1.019) p=0.3489
-   S5_sem_I69                     OR=  1.005 (IC95%  0.985-  1.026) p=0.6242
-   S6_somente_I60_I69             OR=  0.998 (IC95%  0.978-  1.019) p=0.8705
-   S7_somente_G45_G46             OR=  1.068 (IC95%  0.988-  1.154) p=0.0962
-   S8_sem_categoria_I64             OR=  0.988 (IC95%  0.956-  1.022) p=0.4872
-   S9_hospitais_100mais           OR=  1.004 (IC95%  0.984-  1.024) p=0.6904
-   S10_sem_hospitais_sem_obito    OR=  1.004 (IC95%  0.985-  1.024) p=0.6757
-   S11_hospitais_10mais_obitos    OR=  1.005 (IC95%  0.985-  1.025) p=0.6518
-   S12_regiao_aleatoria           OR=  1.004 (IC95%  0.985-  1.024) p=0.6681
-   S13_sem_efeito_aleatorio       OR=  1.023 (IC95%  1.003-  1.043) p=0.0231
-   S14_idade_spline_ns3           OR=  1.035 (IC95%  1.015-  1.056) p=7.17e-04
-   S15_com_tendencia_ano          OR=  1.007 (IC95%  0.987-  1.027) p=0.4889
-   S17_otimizador_optim_BFGS      OR=  1.004 (IC95%  0.985-  1.024) p=0.6780
-   S19_idade_categorica           OR=  1.011 (IC95%  0.991-  1.031) p=0.2917
+   S0_principal                   OR=  1.017 (IC95%  0.994-  1.040) p=0.1517
+   S1_sem_UTI                     OR=  1.013 (IC95%  0.990-  1.035) p=0.2677
+   S2_UTI_por_MARCA_UTI           OR=  1.017 (IC95%  0.994-  1.040) p=0.1517
+   S3_periodo_2020_2024           OR=  1.017 (IC95%  0.985-  1.051) p=0.3050
+   S4_periodo_2014_2019           OR=  1.018 (IC95%  0.986-  1.051) p=0.2689
+   S5_sem_I69                     OR=  1.019 (IC95%  0.995-  1.042) p=0.1215
+   S6_somente_I60_I69             OR=  1.010 (IC95%  0.987-  1.034) p=0.4011
+   S7_somente_G45_G46             OR=  1.108 (IC95%  1.006-  1.221) p=0.0375
+   S8_sem_categoria_I64           OR=  0.997 (IC95%  0.959-  1.036) p=0.8639
+   S9_hospitais_100mais           OR=  1.016 (IC95%  0.993-  1.040) p=0.1676
+   S10_sem_hospitais_sem_obito    OR=  1.017 (IC95%  0.994-  1.040) p=0.1473
+   S11_hospitais_10mais_obitos    OR=  1.017 (IC95%  0.994-  1.041) p=0.1397
+   S12_regiao_aleatoria           OR=  1.017 (IC95%  0.994-  1.040) p=0.1478
+   S13_sem_efeito_aleatorio       OR=  1.041 (IC95%  1.018-  1.064) p=4.53e-04
+   S14_idade_spline_ns3           OR=  1.047 (IC95%  1.024-  1.072) p=7.60e-05
+   S15_com_tendencia_ano          OR=  1.019 (IC95%  0.996-  1.043) p=0.1032
+   S17_otimizador_optim_BFGS      OR=  1.017 (IC95%  0.994-  1.040) p=0.1517
+   S19_idade_categorica           OR=  1.022 (IC95%  0.999-  1.046) p=0.0578
 
 subtipoHemorragico (I60-I62)
-   S0_principal                   OR=  1.264 (IC95%  1.222-  1.307) p=4.55e-42
-   S1_sem_UTI                     OR=  1.570 (IC95%  1.520-  1.622) p=1.75e-163
-   S2_UTI_por_MARCA_UTI           OR=  1.262 (IC95%  1.221-  1.306) p=9.62e-42
-   S3_periodo_2015_2024           OR=  1.245 (IC95%  1.195-  1.297) p=6.85e-26
-   S4_periodo_2010_2014           OR=  1.167 (IC95%  1.095-  1.245) p=2.18e-06
-   S5_sem_I69                     OR=  1.274 (IC95%  1.232-  1.318) p=1.18e-44
-   S6_somente_I60_I69             OR=  1.301 (IC95%  1.257-  1.346) p=1.71e-51
-   S9_hospitais_100mais           OR=  1.266 (IC95%  1.224-  1.309) p=1.72e-42
-   S10_sem_hospitais_sem_obito    OR=  1.263 (IC95%  1.221-  1.307) p=5.66e-42
-   S11_hospitais_10mais_obitos    OR=  1.265 (IC95%  1.223-  1.308) p=2.69e-42
-   S12_regiao_aleatoria           OR=  1.263 (IC95%  1.221-  1.306) p=6.43e-42
-   S13_sem_efeito_aleatorio       OR=  1.240 (IC95%  1.204-  1.278) p=1.64e-46
-   S14_idade_spline_ns3           OR=  1.227 (IC95%  1.186-  1.269) p=1.61e-32
-   S15_com_tendencia_ano          OR=  1.215 (IC95%  1.174-  1.257) p=3.11e-29
-   S17_otimizador_optim_BFGS      OR=  1.264 (IC95%  1.222-  1.307) p=4.53e-42
-   S19_idade_categorica           OR=  1.213 (IC95%  1.173-  1.255) p=2.47e-29
+   S0_principal                   OR=  1.262 (IC95%  1.214-  1.312) p=1.42e-31
+   S1_sem_UTI                     OR=  1.626 (IC95%  1.566-  1.688) p=1.67e-143
+   S2_UTI_por_MARCA_UTI           OR=  1.262 (IC95%  1.214-  1.312) p=1.42e-31
+   S3_periodo_2020_2024           OR=  1.237 (IC95%  1.169-  1.308) p=1.38e-13
+   S4_periodo_2014_2019           OR=  1.326 (IC95%  1.254-  1.402) p=3.85e-23
+   S5_sem_I69                     OR=  1.270 (IC95%  1.221-  1.321) p=5.08e-33
+   S6_somente_I60_I69             OR=  1.280 (IC95%  1.231-  1.331) p=1.16e-34
+   S9_hospitais_100mais           OR=  1.262 (IC95%  1.214-  1.313) p=1.44e-31
+   S10_sem_hospitais_sem_obito    OR=  1.262 (IC95%  1.213-  1.312) p=1.65e-31
+   S11_hospitais_10mais_obitos    OR=  1.263 (IC95%  1.214-  1.313) p=1.17e-31
+   S12_regiao_aleatoria           OR=  1.261 (IC95%  1.213-  1.312) p=1.92e-31
+   S13_sem_efeito_aleatorio       OR=  1.211 (IC95%  1.170-  1.253) p=5.20e-28
+   S14_idade_spline_ns3           OR=  1.225 (IC95%  1.178-  1.273) p=3.04e-24
+   S15_com_tendencia_ano          OR=  1.236 (IC95%  1.188-  1.285) p=3.52e-26
+   S17_otimizador_optim_BFGS      OR=  1.262 (IC95%  1.214-  1.312) p=1.43e-31
+   S19_idade_categorica           OR=  1.215 (IC95%  1.169-  1.263) p=1.11e-22
 
 subtipoIsquemico (I63)
-   S0_principal                   OR=  1.070 (IC95%  1.023-  1.119) p=0.0031
-   S1_sem_UTI                     OR=  1.050 (IC95%  1.005-  1.098) p=0.0289
-   S2_UTI_por_MARCA_UTI           OR=  1.070 (IC95%  1.023-  1.119) p=0.0032
-   S3_periodo_2015_2024           OR=  1.149 (IC95%  1.091-  1.212) p=2.13e-07
-   S4_periodo_2010_2014           OR=  0.817 (IC95%  0.742-  0.901) p=4.74e-05
-   S5_sem_I69                     OR=  1.076 (IC95%  1.028-  1.125) p=0.0014
-   S6_somente_I60_I69             OR=  1.063 (IC95%  1.016-  1.112) p=0.0079
-   S8_sem_categoria_I64             OR=  0.786 (IC95%  0.745-  0.829) p=7.86e-19
-   S9_hospitais_100mais           OR=  1.070 (IC95%  1.023-  1.119) p=0.0031
-   S10_sem_hospitais_sem_obito    OR=  1.070 (IC95%  1.023-  1.119) p=0.0032
-   S11_hospitais_10mais_obitos    OR=  1.069 (IC95%  1.022-  1.118) p=0.0037
-   S12_regiao_aleatoria           OR=  1.070 (IC95%  1.023-  1.119) p=0.0032
-   S13_sem_efeito_aleatorio       OR=  1.358 (IC95%  1.308-  1.410) p=1.23e-57
-   S14_idade_spline_ns3           OR=  1.068 (IC95%  1.021-  1.117) p=0.0043
-   S15_com_tendencia_ano          OR=  1.057 (IC95%  1.010-  1.105) p=0.0164
-   S17_otimizador_optim_BFGS      OR=  1.070 (IC95%  1.023-  1.119) p=0.0031
-   S19_idade_categorica           OR=  1.064 (IC95%  1.017-  1.113) p=0.0067
+   S0_principal                   OR=  1.131 (IC95%  1.075-  1.190) p=1.80e-06
+   S1_sem_UTI                     OR=  1.096 (IC95%  1.043-  1.152) p=2.88e-04
+   S2_UTI_por_MARCA_UTI           OR=  1.131 (IC95%  1.075-  1.190) p=1.80e-06
+   S3_periodo_2020_2024           OR=  1.205 (IC95%  1.117-  1.301) p=1.67e-06
+   S4_periodo_2014_2019           OR=  1.040 (IC95%  0.969-  1.116) p=0.2750
+   S5_sem_I69                     OR=  1.131 (IC95%  1.075-  1.190) p=1.87e-06
+   S6_somente_I60_I69             OR=  1.118 (IC95%  1.063-  1.177) p=1.72e-05
+   S8_sem_categoria_I64           OR=  0.810 (IC95%  0.763-  0.861) p=1.16e-11
+   S9_hospitais_100mais           OR=  1.130 (IC95%  1.074-  1.189) p=2.13e-06
+   S10_sem_hospitais_sem_obito    OR=  1.131 (IC95%  1.075-  1.189) p=1.96e-06
+   S11_hospitais_10mais_obitos    OR=  1.129 (IC95%  1.074-  1.188) p=2.41e-06
+   S12_regiao_aleatoria           OR=  1.131 (IC95%  1.075-  1.190) p=1.85e-06
+   S13_sem_efeito_aleatorio       OR=  1.465 (IC95%  1.406-  1.527) p=3.58e-73
+   S14_idade_spline_ns3           OR=  1.128 (IC95%  1.073-  1.187) p=2.97e-06
+   S15_com_tendencia_ano          OR=  1.107 (IC95%  1.053-  1.165) p=7.97e-05
+   S17_otimizador_optim_BFGS      OR=  1.131 (IC95%  1.075-  1.190) p=1.79e-06
+   S19_idade_categorica           OR=  1.124 (IC95%  1.069-  1.182) p=5.35e-06
 
 subtipoOclusao e outras (I65-I68)
-   S0_principal                   OR=  0.305 (IC95%  0.278-  0.334) p=2.28e-144
-   S1_sem_UTI                     OR=  0.470 (IC95%  0.431-  0.514) p=4.87e-63
-   S2_UTI_por_MARCA_UTI           OR=  0.305 (IC95%  0.278-  0.334) p=2.00e-144
-   S3_periodo_2015_2024           OR=  0.340 (IC95%  0.306-  0.379) p=8.85e-86
-   S4_periodo_2010_2014           OR=  0.211 (IC95%  0.177-  0.251) p=1.32e-67
-   S5_sem_I69                     OR=  0.303 (IC95%  0.276-  0.331) p=7.01e-146
-   S6_somente_I60_I69             OR=  0.321 (IC95%  0.293-  0.352) p=8.59e-132
-   S8_sem_categoria_I64             OR=  0.292 (IC95%  0.265-  0.321) p=1.06e-139
-   S9_hospitais_100mais           OR=  0.305 (IC95%  0.279-  0.334) p=2.37e-143
-   S10_sem_hospitais_sem_obito    OR=  0.305 (IC95%  0.279-  0.335) p=4.82e-144
-   S11_hospitais_10mais_obitos    OR=  0.308 (IC95%  0.281-  0.337) p=2.76e-141
-   S12_regiao_aleatoria           OR=  0.305 (IC95%  0.279-  0.334) p=2.38e-144
-   S13_sem_efeito_aleatorio       OR=  0.232 (IC95%  0.212-  0.252) p=3.87e-242
-   S14_idade_spline_ns3           OR=  0.307 (IC95%  0.280-  0.336) p=1.10e-143
-   S15_com_tendencia_ano          OR=  0.289 (IC95%  0.264-  0.316) p=4.41e-156
-   S17_otimizador_optim_BFGS      OR=  0.305 (IC95%  0.279-  0.334) p=2.37e-144
-   S19_idade_categorica           OR=  0.300 (IC95%  0.274-  0.329) p=1.20e-148
+   S0_principal                   OR=  0.337 (IC95%  0.304-  0.374) p=7.39e-94
+   S1_sem_UTI                     OR=  0.527 (IC95%  0.476-  0.582) p=6.24e-36
+   S2_UTI_por_MARCA_UTI           OR=  0.337 (IC95%  0.304-  0.374) p=7.39e-94
+   S3_periodo_2020_2024           OR=  0.383 (IC95%  0.331-  0.444) p=2.52e-37
+   S4_periodo_2014_2019           OR=  0.285 (IC95%  0.246-  0.331) p=3.46e-61
+   S5_sem_I69                     OR=  0.326 (IC95%  0.294-  0.362) p=3.79e-99
+   S6_somente_I60_I69             OR=  0.348 (IC95%  0.314-  0.386) p=5.46e-88
+   S8_sem_categoria_I64           OR=  0.329 (IC95%  0.295-  0.367) p=1.12e-87
+   S9_hospitais_100mais           OR=  0.338 (IC95%  0.304-  0.375) p=8.23e-93
+   S10_sem_hospitais_sem_obito    OR=  0.337 (IC95%  0.304-  0.374) p=1.19e-93
+   S11_hospitais_10mais_obitos    OR=  0.339 (IC95%  0.305-  0.376) p=2.48e-92
+   S12_regiao_aleatoria           OR=  0.337 (IC95%  0.303-  0.373) p=5.98e-94
+   S13_sem_efeito_aleatorio       OR=  0.234 (IC95%  0.212-  0.258) p=5.16e-188
+   S14_idade_spline_ns3           OR=  0.338 (IC95%  0.305-  0.375) p=1.23e-93
+   S15_com_tendencia_ano          OR=  0.324 (IC95%  0.292-  0.360) p=7.34e-100
+   S17_otimizador_optim_BFGS      OR=  0.337 (IC95%  0.304-  0.374) p=7.27e-94
+   S19_idade_categorica           OR=  0.331 (IC95%  0.299-  0.367) p=4.02e-97
 
 subtipoSequelas (I69)
-   S0_principal                   OR=  0.536 (IC95%  0.497-  0.578) p=2.36e-59
-   S1_sem_UTI                     OR=  0.512 (IC95%  0.475-  0.552) p=1.09e-67
-   S2_UTI_por_MARCA_UTI           OR=  0.536 (IC95%  0.498-  0.578) p=2.76e-59
-   S3_periodo_2015_2024           OR=  0.680 (IC95%  0.619-  0.748) p=1.40e-15
-   S4_periodo_2010_2014           OR=  0.320 (IC95%  0.281-  0.363) p=1.07e-68
-   S6_somente_I60_I69             OR=  0.558 (IC95%  0.517-  0.602) p=3.87e-51
-   S8_sem_categoria_I64             OR=  0.479 (IC95%  0.431-  0.531) p=1.78e-43
-   S9_hospitais_100mais           OR=  0.535 (IC95%  0.496-  0.577) p=3.93e-59
-   S10_sem_hospitais_sem_obito    OR=  0.535 (IC95%  0.497-  0.577) p=1.12e-59
-   S11_hospitais_10mais_obitos    OR=  0.534 (IC95%  0.495-  0.576) p=7.63e-60
-   S12_regiao_aleatoria           OR=  0.536 (IC95%  0.497-  0.578) p=2.32e-59
-   S13_sem_efeito_aleatorio       OR=  0.341 (IC95%  0.325-  0.357) p=0.00e+00
-   S14_idade_spline_ns3           OR=  0.528 (IC95%  0.490-  0.570) p=2.90e-62
-   S15_com_tendencia_ano          OR=  0.514 (IC95%  0.477-  0.555) p=2.28e-66
-   S17_otimizador_optim_BFGS      OR=  0.536 (IC95%  0.497-  0.578) p=2.22e-59
-   S19_idade_categorica           OR=  0.531 (IC95%  0.493-  0.572) p=1.54e-61
+   S0_principal                   OR=  0.667 (IC95%  0.610-  0.731) p=1.92e-18
+   S1_sem_UTI                     OR=  0.646 (IC95%  0.591-  0.707) p=2.48e-21
+   S2_UTI_por_MARCA_UTI           OR=  0.667 (IC95%  0.610-  0.731) p=1.92e-18
+   S3_periodo_2020_2024           OR=  0.764 (IC95%  0.651-  0.897) p=9.91e-04
+   S4_periodo_2014_2019           OR=  0.557 (IC95%  0.497-  0.625) p=9.29e-24
+   S6_somente_I60_I69             OR=  0.671 (IC95%  0.613-  0.735) p=6.86e-18
+   S8_sem_categoria_I64           OR=  0.550 (IC95%  0.490-  0.617) p=3.87e-24
+   S9_hospitais_100mais           OR=  0.666 (IC95%  0.608-  0.729) p=1.58e-18
+   S10_sem_hospitais_sem_obito    OR=  0.666 (IC95%  0.608-  0.729) p=1.20e-18
+   S11_hospitais_10mais_obitos    OR=  0.672 (IC95%  0.614-  0.736) p=7.89e-18
+   S12_regiao_aleatoria           OR=  0.667 (IC95%  0.609-  0.730) p=1.76e-18
+   S13_sem_efeito_aleatorio       OR=  0.450 (IC95%  0.425-  0.476) p=1.84e-168
+   S14_idade_spline_ns3           OR=  0.652 (IC95%  0.596-  0.714) p=2.09e-20
+   S15_com_tendencia_ano          OR=  0.627 (IC95%  0.573-  0.687) p=1.20e-23
+   S17_otimizador_optim_BFGS      OR=  0.667 (IC95%  0.610-  0.731) p=1.91e-18
+   S19_idade_categorica           OR=  0.660 (IC95%  0.603-  0.722) p=1.74e-19
 
 subtipoAIT (G45)
-   S0_principal                   OR=  0.588 (IC95%  0.561-  0.616) p=1.03e-106
-   S1_sem_UTI                     OR=  0.529 (IC95%  0.504-  0.554) p=1.62e-155
-   S2_UTI_por_MARCA_UTI           OR=  0.588 (IC95%  0.561-  0.617) p=1.28e-106
-   S3_periodo_2015_2024           OR=  0.550 (IC95%  0.517-  0.585) p=1.23e-79
-   S4_periodo_2010_2014           OR=  0.626 (IC95%  0.575-  0.681) p=1.07e-27
-   S5_sem_I69                     OR=  0.588 (IC95%  0.561-  0.617) p=2.21e-106
-   S8_sem_categoria_I64             OR=  0.434 (IC95%  0.408-  0.461) p=1.72e-159
-   S9_hospitais_100mais           OR=  0.590 (IC95%  0.562-  0.619) p=6.84e-105
-   S10_sem_hospitais_sem_obito    OR=  0.588 (IC95%  0.561-  0.617) p=1.13e-106
-   S11_hospitais_10mais_obitos    OR=  0.588 (IC95%  0.560-  0.616) p=2.78e-106
-   S12_regiao_aleatoria           OR=  0.588 (IC95%  0.561-  0.616) p=9.78e-107
-   S13_sem_efeito_aleatorio       OR=  0.599 (IC95%  0.575-  0.624) p=2.57e-135
-   S14_idade_spline_ns3           OR=  0.585 (IC95%  0.558-  0.613) p=1.81e-108
-   S15_com_tendencia_ano          OR=  0.545 (IC95%  0.520-  0.572) p=5.60e-134
-   S17_otimizador_optim_BFGS      OR=  0.588 (IC95%  0.561-  0.616) p=1.02e-106
-   S19_idade_categorica           OR=  0.584 (IC95%  0.557-  0.613) p=3.35e-109
+   S0_principal                   OR=  0.563 (IC95%  0.531-  0.597) p=2.34e-82
+   S1_sem_UTI                     OR=  0.514 (IC95%  0.485-  0.544) p=7.43e-113
+   S2_UTI_por_MARCA_UTI           OR=  0.563 (IC95%  0.531-  0.597) p=2.34e-82
+   S3_periodo_2020_2024           OR=  0.482 (IC95%  0.438-  0.529) p=8.07e-52
+   S4_periodo_2014_2019           OR=  0.569 (IC95%  0.526-  0.616) p=2.10e-44
+   S5_sem_I69                     OR=  0.563 (IC95%  0.531-  0.597) p=1.81e-82
+   S8_sem_categoria_I64           OR=  0.393 (IC95%  0.365-  0.424) p=1.17e-131
+   S9_hospitais_100mais           OR=  0.564 (IC95%  0.531-  0.598) p=1.07e-81
+   S10_sem_hospitais_sem_obito    OR=  0.563 (IC95%  0.531-  0.597) p=1.58e-82
+   S11_hospitais_10mais_obitos    OR=  0.560 (IC95%  0.528-  0.594) p=3.13e-83
+   S12_regiao_aleatoria           OR=  0.563 (IC95%  0.531-  0.597) p=2.29e-82
+   S13_sem_efeito_aleatorio       OR=  0.578 (IC95%  0.549-  0.608) p=2.72e-101
+   S14_idade_spline_ns3           OR=  0.560 (IC95%  0.528-  0.593) p=9.03e-84
+   S15_com_tendencia_ano          OR=  0.543 (IC95%  0.512-  0.576) p=4.92e-92
+   S17_otimizador_optim_BFGS      OR=  0.563 (IC95%  0.531-  0.597) p=2.35e-82
+   S19_idade_categorica           OR=  0.560 (IC95%  0.528-  0.593) p=4.25e-84
 
 subtipoSindromes vasculares (G46)
-   S0_principal                   OR=  0.971 (IC95%  0.821-  1.148) p=0.7326
-   S1_sem_UTI                     OR=  0.886 (IC95%  0.751-  1.045) p=0.1512
-   S2_UTI_por_MARCA_UTI           OR=  0.971 (IC95%  0.821-  1.149) p=0.7351
-   S3_periodo_2015_2024           OR=  0.844 (IC95%  0.663-  1.073) p=0.1658
-   S4_periodo_2010_2014           OR=  1.193 (IC95%  0.924-  1.541) p=0.1756
-   S5_sem_I69                     OR=  0.944 (IC95%  0.798-  1.116) p=0.4978
-   S7_somente_G45_G46             OR=  1.812 (IC95%  1.477-  2.222) p=1.14e-08
-   S8_sem_categoria_I64             OR=  0.753 (IC95%  0.629-  0.902) p=0.0021
-   S9_hospitais_100mais           OR=  0.967 (IC95%  0.817-  1.145) p=0.6988
-   S10_sem_hospitais_sem_obito    OR=  0.972 (IC95%  0.822-  1.149) p=0.7354
-   S11_hospitais_10mais_obitos    OR=  0.953 (IC95%  0.805-  1.128) p=0.5753
-   S12_regiao_aleatoria           OR=  0.971 (IC95%  0.821-  1.148) p=0.7314
-   S13_sem_efeito_aleatorio       OR=  0.886 (IC95%  0.761-  1.031) p=0.1181
-   S14_idade_spline_ns3           OR=  0.966 (IC95%  0.817-  1.143) p=0.6903
-   S15_com_tendencia_ano          OR=  0.882 (IC95%  0.745-  1.043) p=0.1429
-   S17_otimizador_optim_BFGS      OR=  0.971 (IC95%  0.821-  1.148) p=0.7312
-   S19_idade_categorica           OR=  0.959 (IC95%  0.811-  1.134) p=0.6245
+   S0_principal                   OR=  0.839 (IC95%  0.666-  1.057) p=0.1357
+   S1_sem_UTI                     OR=  0.799 (IC95%  0.637-  1.002) p=0.0525
+   S2_UTI_por_MARCA_UTI           OR=  0.839 (IC95%  0.666-  1.057) p=0.1357
+   S3_periodo_2020_2024           OR=  0.979 (IC95%  0.700-  1.368) p=0.9003
+   S4_periodo_2014_2019           OR=  0.724 (IC95%  0.523-  1.002) p=0.0513
+   S5_sem_I69                     OR=  0.840 (IC95%  0.667-  1.057) p=0.1372
+   S7_somente_G45_G46             OR=  1.482 (IC95%  1.127-  1.948) p=0.0049
+   S8_sem_categoria_I64           OR=  0.553 (IC95%  0.431-  0.710) p=3.34e-06
+   S9_hospitais_100mais           OR=  0.837 (IC95%  0.664-  1.055) p=0.1318
+   S10_sem_hospitais_sem_obito    OR=  0.840 (IC95%  0.667-  1.058) p=0.1379
+   S11_hospitais_10mais_obitos    OR=  0.814 (IC95%  0.645-  1.028) p=0.0840
+   S12_regiao_aleatoria           OR=  0.839 (IC95%  0.666-  1.056) p=0.1347
+   S13_sem_efeito_aleatorio       OR=  0.767 (IC95%  0.627-  0.940) p=0.0105
+   S14_idade_spline_ns3           OR=  0.833 (IC95%  0.662-  1.049) p=0.1201
+   S15_com_tendencia_ano          OR=  0.807 (IC95%  0.640-  1.016) p=0.0685
+   S17_otimizador_optim_BFGS      OR=  0.839 (IC95%  0.666-  1.057) p=0.1358
+   S19_idade_categorica           OR=  0.827 (IC95%  0.657-  1.041) p=0.1056
 
 car_intUrgencia
-   S0_principal                   OR=  1.798 (IC95%  1.679-  1.924) p=3.35e-64
-   S1_sem_UTI                     OR=  1.653 (IC95%  1.546-  1.767) p=3.43e-49
-   S2_UTI_por_MARCA_UTI           OR=  1.801 (IC95%  1.682-  1.927) p=1.50e-64
-   S3_periodo_2015_2024           OR=  2.275 (IC95%  2.089-  2.477) p=6.19e-80
-   S4_periodo_2010_2014           OR=  1.412 (IC95%  1.240-  1.607) p=1.91e-07
-   S5_sem_I69                     OR=  1.293 (IC95%  1.199-  1.395) p=2.47e-11
-   S6_somente_I60_I69             OR=  1.886 (IC95%  1.757-  2.024) p=6.38e-69
-   S7_somente_G45_G46             OR=  0.977 (IC95%  0.763-  1.252) p=0.8556
-   S8_sem_categoria_I64             OR=  2.497 (IC95%  2.265-  2.752) p=6.12e-76
-   S9_hospitais_100mais           OR=  1.805 (IC95%  1.685-  1.933) p=6.47e-64
-   S10_sem_hospitais_sem_obito    OR=  1.790 (IC95%  1.672-  1.916) p=2.50e-63
-   S11_hospitais_10mais_obitos    OR=  1.773 (IC95%  1.656-  1.898) p=6.47e-61
-   S12_regiao_aleatoria           OR=  1.801 (IC95%  1.683-  1.928) p=1.03e-64
-   S13_sem_efeito_aleatorio       OR=  1.544 (IC95%  1.487-  1.603) p=1.08e-113
-   S14_idade_spline_ns3           OR=  1.819 (IC95%  1.699-  1.947) p=2.05e-66
-   S15_com_tendencia_ano          OR=  1.805 (IC95%  1.685-  1.933) p=6.24e-64
-   S17_otimizador_optim_BFGS      OR=  1.797 (IC95%  1.679-  1.924) p=3.53e-64
-   S19_idade_categorica           OR=  1.796 (IC95%  1.678-  1.922) p=4.63e-64
+   S0_principal                   OR=  2.279 (IC95%  2.098-  2.476) p=1.51e-84
+   S1_sem_UTI                     OR=  1.976 (IC95%  1.821-  2.143) p=2.16e-60
+   S2_UTI_por_MARCA_UTI           OR=  2.279 (IC95%  2.098-  2.476) p=1.51e-84
+   S3_periodo_2020_2024           OR=  2.313 (IC95%  2.055-  2.603) p=6.05e-44
+   S4_periodo_2014_2019           OR=  2.997 (IC95%  2.601-  3.452) p=3.27e-52
+   S5_sem_I69                     OR=  1.438 (IC95%  1.312-  1.576) p=7.62e-15
+   S6_somente_I60_I69             OR=  2.339 (IC95%  2.148-  2.546) p=2.32e-85
+   S7_somente_G45_G46             OR=  1.067 (IC95%  0.773-  1.473) p=0.6920
+   S8_sem_categoria_I64           OR=  3.703 (IC95%  3.261-  4.205) p=1.36e-90
+   S9_hospitais_100mais           OR=  2.294 (IC95%  2.110-  2.494) p=3.06e-84
+   S10_sem_hospitais_sem_obito    OR=  2.261 (IC95%  2.081-  2.456) p=6.03e-83
+   S11_hospitais_10mais_obitos    OR=  2.237 (IC95%  2.059-  2.431) p=2.62e-80
+   S12_regiao_aleatoria           OR=  2.283 (IC95%  2.102-  2.480) p=5.50e-85
+   S13_sem_efeito_aleatorio       OR=  1.450 (IC95%  1.386-  1.516) p=3.84e-59
+   S14_idade_spline_ns3           OR=  2.312 (IC95%  2.128-  2.512) p=4.81e-87
+   S15_com_tendencia_ano          OR=  2.234 (IC95%  2.055-  2.430) p=6.56e-79
+   S17_otimizador_optim_BFGS      OR=  2.280 (IC95%  2.098-  2.477) p=1.42e-84
+   S19_idade_categorica           OR=  2.274 (IC95%  2.093-  2.470) p=3.32e-84
 
 uti
-   S0_principal                   OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00
-   S3_periodo_2015_2024           OR=  4.149 (IC95%  4.008-  4.295) p=0.00e+00
-   S4_periodo_2010_2014           OR=  4.402 (IC95%  4.120-  4.703) p=0.00e+00
-   S5_sem_I69                     OR=  3.890 (IC95%  3.775-  4.009) p=0.00e+00
-   S6_somente_I60_I69             OR=  3.686 (IC95%  3.574-  3.802) p=0.00e+00
-   S7_somente_G45_G46             OR=  8.274 (IC95%  7.371-  9.288) p=5.28e-281
-   S8_sem_categoria_I64             OR=  3.024 (IC95%  2.891-  3.163) p=0.00e+00
-   S9_hospitais_100mais           OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00
-   S10_sem_hospitais_sem_obito    OR=  3.903 (IC95%  3.789-  4.021) p=0.00e+00
-   S11_hospitais_10mais_obitos    OR=  3.883 (IC95%  3.769-  4.000) p=0.00e+00
-   S12_regiao_aleatoria           OR=  3.905 (IC95%  3.790-  4.023) p=0.00e+00
-   S13_sem_efeito_aleatorio       OR=  3.518 (IC95%  3.426-  3.613) p=0.00e+00
-   S14_idade_spline_ns3           OR=  3.898 (IC95%  3.784-  4.016) p=0.00e+00
-   S15_com_tendencia_ano          OR=  4.306 (IC95%  4.176-  4.440) p=0.00e+00
-   S17_otimizador_optim_BFGS      OR=  3.904 (IC95%  3.789-  4.022) p=0.00e+00
-   S19_idade_categorica           OR=  3.857 (IC95%  3.744-  3.973) p=0.00e+00
+   S0_principal                   OR=  4.118 (IC95%  3.982-  4.257) p=0.00e+00
+   S3_periodo_2020_2024           OR=  4.028 (IC95%  3.847-  4.218) p=0.00e+00
+   S4_periodo_2014_2019           OR=  4.591 (IC95%  4.361-  4.834) p=0.00e+00
+   S5_sem_I69                     OR=  4.079 (IC95%  3.944-  4.219) p=0.00e+00
+   S6_somente_I60_I69             OR=  3.953 (IC95%  3.819-  4.092) p=0.00e+00
+   S7_somente_G45_G46             OR=  7.863 (IC95%  6.863-  9.008) p=3.93e-194
+   S8_sem_categoria_I64           OR=  3.050 (IC95%  2.897-  3.211) p=0.00e+00
+   S9_hospitais_100mais           OR=  4.122 (IC95%  3.986-  4.262) p=0.00e+00
+   S10_sem_hospitais_sem_obito    OR=  4.116 (IC95%  3.981-  4.256) p=0.00e+00
+   S11_hospitais_10mais_obitos    OR=  4.095 (IC95%  3.961-  4.234) p=0.00e+00
+   S12_regiao_aleatoria           OR=  4.119 (IC95%  3.983-  4.258) p=0.00e+00
+   S13_sem_efeito_aleatorio       OR=  3.597 (IC95%  3.493-  3.705) p=0.00e+00
+   S14_idade_spline_ns3           OR=  4.117 (IC95%  3.982-  4.256) p=0.00e+00
+   S15_com_tendencia_ano          OR=  4.374 (IC95%  4.229-  4.525) p=0.00e+00
+   S17_otimizador_optim_BFGS      OR=  4.117 (IC95%  3.982-  4.257) p=0.00e+00
+   S19_idade_categorica           OR=  4.067 (IC95%  3.934-  4.205) p=0.00e+00
 
 fluxo_inter
-   S0_principal                   OR=  0.951 (IC95%  0.922-  0.980) p=0.0011
-   S1_sem_UTI                     OR=  0.991 (IC95%  0.962-  1.021) p=0.5405
-   S2_UTI_por_MARCA_UTI           OR=  0.951 (IC95%  0.922-  0.980) p=0.0011
-   S3_periodo_2015_2024           OR=  0.995 (IC95%  0.961-  1.031) p=0.7980
-   S4_periodo_2010_2014           OR=  0.916 (IC95%  0.859-  0.978) p=0.0081
-   S5_sem_I69                     OR=  0.922 (IC95%  0.894-  0.951) p=3.01e-07
-   S6_somente_I60_I69             OR=  0.947 (IC95%  0.918-  0.977) p=5.86e-04
-   S7_somente_G45_G46             OR=  1.047 (IC95%  0.903-  1.215) p=0.5428
-   S8_sem_categoria_I64             OR=  0.972 (IC95%  0.924-  1.023) p=0.2803
-   S9_hospitais_100mais           OR=  0.950 (IC95%  0.921-  0.979) p=8.50e-04
-   S10_sem_hospitais_sem_obito    OR=  0.950 (IC95%  0.922-  0.980) p=9.66e-04
-   S11_hospitais_10mais_obitos    OR=  0.949 (IC95%  0.920-  0.978) p=6.57e-04
-   S12_regiao_aleatoria           OR=  0.951 (IC95%  0.923-  0.981) p=0.0012
-   S13_sem_efeito_aleatorio       OR=  0.891 (IC95%  0.867-  0.915) p=2.08e-17
-   S14_idade_spline_ns3           OR=  0.954 (IC95%  0.925-  0.983) p=0.0021
-   S15_com_tendencia_ano          OR=  0.980 (IC95%  0.951-  1.010) p=0.1959
-   S17_otimizador_optim_BFGS      OR=  0.951 (IC95%  0.922-  0.980) p=0.0011
-   S19_idade_categorica           OR=  0.948 (IC95%  0.920-  0.977) p=5.89e-04
+   S0_principal                   OR=  0.990 (IC95%  0.957-  1.024) p=0.5658
+   S1_sem_UTI                     OR=  1.014 (IC95%  0.981-  1.048) p=0.4237
+   S2_UTI_por_MARCA_UTI           OR=  0.990 (IC95%  0.957-  1.024) p=0.5658
+   S3_periodo_2020_2024           OR=  1.023 (IC95%  0.975-  1.074) p=0.3524
+   S4_periodo_2014_2019           OR=  0.964 (IC95%  0.920-  1.011) p=0.1296
+   S5_sem_I69                     OR=  0.957 (IC95%  0.925-  0.990) p=0.0119
+   S6_somente_I60_I69             OR=  0.987 (IC95%  0.954-  1.022) p=0.4618
+   S7_somente_G45_G46             OR=  1.120 (IC95%  0.939-  1.336) p=0.2073
+   S8_sem_categoria_I64           OR=  1.028 (IC95%  0.971-  1.090) p=0.3424
+   S9_hospitais_100mais           OR=  0.988 (IC95%  0.956-  1.022) p=0.4983
+   S10_sem_hospitais_sem_obito    OR=  0.990 (IC95%  0.957-  1.024) p=0.5508
+   S11_hospitais_10mais_obitos    OR=  0.988 (IC95%  0.955-  1.022) p=0.4856
+   S12_regiao_aleatoria           OR=  0.991 (IC95%  0.958-  1.025) p=0.6053
+   S13_sem_efeito_aleatorio       OR=  0.952 (IC95%  0.924-  0.980) p=9.88e-04
+   S14_idade_spline_ns3           OR=  0.994 (IC95%  0.961-  1.028) p=0.7212
+   S15_com_tendencia_ano          OR=  0.996 (IC95%  0.963-  1.030) p=0.8110
+   S17_otimizador_optim_BFGS      OR=  0.990 (IC95%  0.957-  1.024) p=0.5658
+   S19_idade_categorica           OR=  0.988 (IC95%  0.955-  1.022) p=0.4781
 
 regiao_saudeMetropolitana II
-   S0_principal                   OR=  0.788 (IC95%  0.700-  0.887) p=8.10e-05
-   S1_sem_UTI                     OR=  0.782 (IC95%  0.695-  0.880) p=4.68e-05
-   S2_UTI_por_MARCA_UTI           OR=  0.788 (IC95%  0.699-  0.887) p=8.09e-05
-   S3_periodo_2015_2024           OR=  0.757 (IC95%  0.659-  0.869) p=7.99e-05
-   S4_periodo_2010_2014           OR=  0.882 (IC95%  0.712-  1.092) p=0.2494
-   S5_sem_I69                     OR=  0.804 (IC95%  0.712-  0.907) p=4.15e-04
-   S6_somente_I60_I69             OR=  0.787 (IC95%  0.697-  0.888) p=1.11e-04
-   S7_somente_G45_G46             OR=  0.712 (IC95%  0.470-  1.078) p=0.1088
-   S8_sem_categoria_I64             OR=  0.830 (IC95%  0.709-  0.970) p=0.0193
-   S9_hospitais_100mais           OR=  0.791 (IC95%  0.702-  0.891) p=1.20e-04
-   S10_sem_hospitais_sem_obito    OR=  0.788 (IC95%  0.700-  0.887) p=8.27e-05
-   S11_hospitais_10mais_obitos    OR=  0.792 (IC95%  0.703-  0.892) p=1.15e-04
-   S13_sem_efeito_aleatorio       OR=  0.640 (IC95%  0.621-  0.659) p=4.96e-191
-   S14_idade_spline_ns3           OR=  0.789 (IC95%  0.701-  0.889) p=9.33e-05
-   S15_com_tendencia_ano          OR=  0.791 (IC95%  0.701-  0.892) p=1.27e-04
-   S17_otimizador_optim_BFGS      OR=  0.788 (IC95%  0.700-  0.887) p=8.08e-05
-   S19_idade_categorica           OR=  0.796 (IC95%  0.707-  0.896) p=1.54e-04
+   S0_principal                   OR=  0.767 (IC95%  0.672-  0.877) p=9.77e-05
+   S1_sem_UTI                     OR=  0.745 (IC95%  0.652-  0.852) p=1.59e-05
+   S2_UTI_por_MARCA_UTI           OR=  0.767 (IC95%  0.672-  0.877) p=9.77e-05
+   S3_periodo_2020_2024           OR=  0.882 (IC95%  0.734-  1.060) p=0.1815
+   S4_periodo_2014_2019           OR=  0.669 (IC95%  0.559-  0.802) p=1.30e-05
+   S5_sem_I69                     OR=  0.781 (IC95%  0.683-  0.894) p=3.29e-04
+   S6_somente_I60_I69             OR=  0.752 (IC95%  0.656-  0.862) p=4.48e-05
+   S7_somente_G45_G46             OR=  0.918 (IC95%  0.586-  1.437) p=0.7085
+   S8_sem_categoria_I64           OR=  0.837 (IC95%  0.700-  1.002) p=0.0523
+   S9_hospitais_100mais           OR=  0.768 (IC95%  0.671-  0.878) p=1.14e-04
+   S10_sem_hospitais_sem_obito    OR=  0.770 (IC95%  0.674-  0.879) p=1.15e-04
+   S11_hospitais_10mais_obitos    OR=  0.761 (IC95%  0.666-  0.869) p=5.25e-05
+   S13_sem_efeito_aleatorio       OR=  0.644 (IC95%  0.623-  0.666) p=7.74e-145
+   S14_idade_spline_ns3           OR=  0.770 (IC95%  0.674-  0.880) p=1.21e-04
+   S15_com_tendencia_ano          OR=  0.774 (IC95%  0.677-  0.885) p=1.77e-04
+   S17_otimizador_optim_BFGS      OR=  0.767 (IC95%  0.672-  0.877) p=9.78e-05
+   S19_idade_categorica           OR=  0.777 (IC95%  0.680-  0.887) p=1.94e-04
 
 regiao_saudeBaixada Litoranea
-   S0_principal                   OR=  0.978 (IC95%  0.834-  1.148) p=0.7873
-   S1_sem_UTI                     OR=  1.040 (IC95%  0.888-  1.220) p=0.6252
-   S2_UTI_por_MARCA_UTI           OR=  0.980 (IC95%  0.835-  1.151) p=0.8081
-   S3_periodo_2015_2024           OR=  1.059 (IC95%  0.884-  1.270) p=0.5336
-   S4_periodo_2010_2014           OR=  0.828 (IC95%  0.612-  1.120) p=0.2217
-   S5_sem_I69                     OR=  1.055 (IC95%  0.897-  1.242) p=0.5162
-   S6_somente_I60_I69             OR=  1.015 (IC95%  0.861-  1.196) p=0.8636
-   S7_somente_G45_G46             OR=  0.759 (IC95%  0.470-  1.225) p=0.2586
-   S8_sem_categoria_I64             OR=  0.914 (IC95%  0.743-  1.126) p=0.3987
-   S9_hospitais_100mais           OR=  0.976 (IC95%  0.829-  1.149) p=0.7693
-   S10_sem_hospitais_sem_obito    OR=  0.975 (IC95%  0.831-  1.144) p=0.7575
-   S11_hospitais_10mais_obitos    OR=  0.975 (IC95%  0.831-  1.145) p=0.7614
-   S13_sem_efeito_aleatorio       OR=  0.816 (IC95%  0.774-  0.860) p=4.81e-14
-   S14_idade_spline_ns3           OR=  0.972 (IC95%  0.829-  1.141) p=0.7323
-   S15_com_tendencia_ano          OR=  1.023 (IC95%  0.870-  1.204) p=0.7809
-   S17_otimizador_optim_BFGS      OR=  0.978 (IC95%  0.833-  1.148) p=0.7865
-   S19_idade_categorica           OR=  0.978 (IC95%  0.834-  1.147) p=0.7870
+   S0_principal                   OR=  1.068 (IC95%  0.895-  1.273) p=0.4657
+   S1_sem_UTI                     OR=  1.089 (IC95%  0.913-  1.299) p=0.3426
+   S2_UTI_por_MARCA_UTI           OR=  1.068 (IC95%  0.895-  1.273) p=0.4657
+   S3_periodo_2020_2024           OR=  1.117 (IC95%  0.891-  1.401) p=0.3374
+   S4_periodo_2014_2019           OR=  0.987 (IC95%  0.775-  1.258) p=0.9162
+   S5_sem_I69                     OR=  1.128 (IC95%  0.946-  1.345) p=0.1812
+   S6_somente_I60_I69             OR=  1.108 (IC95%  0.924-  1.328) p=0.2688
+   S7_somente_G45_G46             OR=  0.876 (IC95%  0.533-  1.440) p=0.6023
+   S8_sem_categoria_I64           OR=  0.917 (IC95%  0.722-  1.164) p=0.4767
+   S9_hospitais_100mais           OR=  1.069 (IC95%  0.894-  1.279) p=0.4653
+   S10_sem_hospitais_sem_obito    OR=  1.060 (IC95%  0.890-  1.264) p=0.5129
+   S11_hospitais_10mais_obitos    OR=  1.053 (IC95%  0.884-  1.256) p=0.5620
+   S13_sem_efeito_aleatorio       OR=  0.884 (IC95%  0.833-  0.938) p=4.35e-05
+   S14_idade_spline_ns3           OR=  1.061 (IC95%  0.890-  1.265) p=0.5056
+   S15_com_tendencia_ano          OR=  1.082 (IC95%  0.906-  1.293) p=0.3826
+   S17_otimizador_optim_BFGS      OR=  1.068 (IC95%  0.895-  1.273) p=0.4659
+   S19_idade_categorica           OR=  1.065 (IC95%  0.893-  1.269) p=0.4834
 
 regiao_saudeNorte
-   S0_principal                   OR=  0.756 (IC95%  0.623-  0.916) p=0.0043
-   S1_sem_UTI                     OR=  0.931 (IC95%  0.769-  1.127) p=0.4629
-   S2_UTI_por_MARCA_UTI           OR=  0.759 (IC95%  0.626-  0.920) p=0.0050
-   S3_periodo_2015_2024           OR=  0.780 (IC95%  0.620-  0.982) p=0.0342
-   S4_periodo_2010_2014           OR=  0.702 (IC95%  0.511-  0.965) p=0.0290
-   S5_sem_I69                     OR=  0.812 (IC95%  0.668-  0.988) p=0.0377
-   S6_somente_I60_I69             OR=  0.723 (IC95%  0.591-  0.886) p=0.0017
-   S7_somente_G45_G46             OR=  0.594 (IC95%  0.376-  0.939) p=0.0258
-   S8_sem_categoria_I64             OR=  0.725 (IC95%  0.580-  0.905) p=0.0045
-   S9_hospitais_100mais           OR=  0.771 (IC95%  0.635-  0.936) p=0.0087
-   S10_sem_hospitais_sem_obito    OR=  0.744 (IC95%  0.614-  0.902) p=0.0025
-   S11_hospitais_10mais_obitos    OR=  0.747 (IC95%  0.617-  0.904) p=0.0028
-   S13_sem_efeito_aleatorio       OR=  0.519 (IC95%  0.496-  0.543) p=3.43e-179
-   S14_idade_spline_ns3           OR=  0.750 (IC95%  0.619-  0.909) p=0.0034
-   S15_com_tendencia_ano          OR=  0.856 (IC95%  0.701-  1.044) p=0.1256
-   S17_otimizador_optim_BFGS      OR=  0.756 (IC95%  0.623-  0.916) p=0.0043
-   S19_idade_categorica           OR=  0.764 (IC95%  0.630-  0.925) p=0.0059
+   S0_principal                   OR=  0.780 (IC95%  0.625-  0.974) p=0.0281
+   S1_sem_UTI                     OR=  0.922 (IC95%  0.739-  1.150) p=0.4703
+   S2_UTI_por_MARCA_UTI           OR=  0.780 (IC95%  0.625-  0.974) p=0.0281
+   S3_periodo_2020_2024           OR=  0.639 (IC95%  0.480-  0.849) p=0.0020
+   S4_periodo_2014_2019           OR=  0.726 (IC95%  0.552-  0.955) p=0.0218
+   S5_sem_I69                     OR=  0.787 (IC95%  0.632-  0.981) p=0.0327
+   S6_somente_I60_I69             OR=  0.740 (IC95%  0.585-  0.937) p=0.0123
+   S7_somente_G45_G46             OR=  0.646 (IC95%  0.399-  1.045) p=0.0750
+   S8_sem_categoria_I64           OR=  0.845 (IC95%  0.648-  1.102) p=0.2142
+   S9_hospitais_100mais           OR=  0.798 (IC95%  0.639-  0.998) p=0.0479
+   S10_sem_hospitais_sem_obito    OR=  0.766 (IC95%  0.615-  0.955) p=0.0178
+   S11_hospitais_10mais_obitos    OR=  0.768 (IC95%  0.616-  0.958) p=0.0190
+   S13_sem_efeito_aleatorio       OR=  0.517 (IC95%  0.492-  0.545) p=1.71e-140
+   S14_idade_spline_ns3           OR=  0.775 (IC95%  0.621-  0.968) p=0.0244
+   S15_com_tendencia_ano          OR=  0.835 (IC95%  0.667-  1.046) p=0.1165
+   S17_otimizador_optim_BFGS      OR=  0.780 (IC95%  0.625-  0.974) p=0.0280
+   S19_idade_categorica           OR=  0.786 (IC95%  0.630-  0.980) p=0.0327
 
 regiao_saudeNoroeste
-   S0_principal                   OR=  1.155 (IC95%  0.957-  1.393) p=0.1328
-   S1_sem_UTI                     OR=  1.808 (IC95%  1.506-  2.171) p=2.18e-10
-   S2_UTI_por_MARCA_UTI           OR=  1.163 (IC95%  0.964-  1.403) p=0.1155
-   S3_periodo_2015_2024           OR=  1.068 (IC95%  0.818-  1.394) p=0.6272
-   S4_periodo_2010_2014           OR=  1.275 (IC95%  0.980-  1.658) p=0.0703
-   S5_sem_I69                     OR=  1.317 (IC95%  1.089-  1.594) p=0.0046
-   S6_somente_I60_I69             OR=  1.167 (IC95%  0.963-  1.415) p=0.1152
-   S7_somente_G45_G46             OR=  0.395 (IC95%  0.229-  0.682) p=8.47e-04
-   S8_sem_categoria_I64             OR=  1.087 (IC95%  0.868-  1.361) p=0.4672
-   S9_hospitais_100mais           OR=  1.241 (IC95%  1.025-  1.503) p=0.0270
-   S10_sem_hospitais_sem_obito    OR=  1.137 (IC95%  0.942-  1.371) p=0.1802
-   S11_hospitais_10mais_obitos    OR=  1.199 (IC95%  0.991-  1.449) p=0.0614
-   S13_sem_efeito_aleatorio       OR=  0.284 (IC95%  0.266-  0.302) p=0.00e+00
-   S14_idade_spline_ns3           OR=  1.138 (IC95%  0.943-  1.373) p=0.1765
-   S15_com_tendencia_ano          OR=  1.364 (IC95%  1.122-  1.658) p=0.0019
-   S17_otimizador_optim_BFGS      OR=  1.155 (IC95%  0.957-  1.393) p=0.1324
-   S19_idade_categorica           OR=  1.171 (IC95%  0.971-  1.412) p=0.0990
+   S0_principal                   OR=  1.161 (IC95%  0.904-  1.492) p=0.2425
+   S1_sem_UTI                     OR=  1.715 (IC95%  1.339-  2.198) p=1.97e-05
+   S2_UTI_por_MARCA_UTI           OR=  1.161 (IC95%  0.904-  1.492) p=0.2425
+   S3_periodo_2020_2024           OR=  0.674 (IC95%  0.473-  0.961) p=0.0291
+   S4_periodo_2014_2019           OR=  1.031 (IC95%  0.765-  1.389) p=0.8409
+   S5_sem_I69                     OR=  1.196 (IC95%  0.932-  1.534) p=0.1593
+   S6_somente_I60_I69             OR=  1.179 (IC95%  0.910-  1.528) p=0.2119
+   S7_somente_G45_G46             OR=  0.405 (IC95%  0.213-  0.769) p=0.0057
+   S8_sem_categoria_I64           OR=  1.144 (IC95%  0.834-  1.569) p=0.4051
+   S9_hospitais_100mais           OR=  1.268 (IC95%  0.981-  1.640) p=0.0698
+   S10_sem_hospitais_sem_obito    OR=  1.152 (IC95%  0.898-  1.480) p=0.2659
+   S11_hospitais_10mais_obitos    OR=  1.220 (IC95%  0.945-  1.576) p=0.1272
+   S13_sem_efeito_aleatorio       OR=  0.271 (IC95%  0.251-  0.293) p=6.77e-244
+   S14_idade_spline_ns3           OR=  1.144 (IC95%  0.891-  1.469) p=0.2909
+   S15_com_tendencia_ano          OR=  1.280 (IC95%  0.993-  1.650) p=0.0565
+   S17_otimizador_optim_BFGS      OR=  1.161 (IC95%  0.904-  1.492) p=0.2424
+   S19_idade_categorica           OR=  1.168 (IC95%  0.910-  1.499) p=0.2230
 
 regiao_saudeSerrana
-   S0_principal                   OR=  1.101 (IC95%  0.981-  1.236) p=0.1027
-   S1_sem_UTI                     OR=  1.279 (IC95%  1.140-  1.436) p=2.93e-05
-   S2_UTI_por_MARCA_UTI           OR=  1.099 (IC95%  0.979-  1.233) p=0.1111
-   S3_periodo_2015_2024           OR=  1.061 (IC95%  0.927-  1.215) p=0.3904
-   S4_periodo_2010_2014           OR=  1.136 (IC95%  0.917-  1.408) p=0.2421
-   S5_sem_I69                     OR=  1.099 (IC95%  0.967-  1.249) p=0.1481
-   S6_somente_I60_I69             OR=  1.109 (IC95%  0.986-  1.249) p=0.0854
-   S7_somente_G45_G46             OR=  0.861 (IC95%  0.582-  1.273) p=0.4536
-   S8_sem_categoria_I64             OR=  1.160 (IC95%  0.999-  1.347) p=0.0508
-   S9_hospitais_100mais           OR=  1.111 (IC95%  0.989-  1.249) p=0.0762
-   S10_sem_hospitais_sem_obito    OR=  1.096 (IC95%  0.976-  1.230) p=0.1214
-   S11_hospitais_10mais_obitos    OR=  1.082 (IC95%  0.964-  1.214) p=0.1800
-   S13_sem_efeito_aleatorio       OR=  0.527 (IC95%  0.507-  0.547) p=2.10e-241
-   S14_idade_spline_ns3           OR=  1.094 (IC95%  0.975-  1.228) p=0.1254
-   S15_com_tendencia_ano          OR=  1.127 (IC95%  1.001-  1.268) p=0.0478
-   S17_otimizador_optim_BFGS      OR=  1.101 (IC95%  0.981-  1.236) p=0.1025
-   S19_idade_categorica           OR=  1.104 (IC95%  0.983-  1.238) p=0.0941
+   S0_principal                   OR=  1.065 (IC95%  0.934-  1.213) p=0.3482
+   S1_sem_UTI                     OR=  1.242 (IC95%  1.089-  1.416) p=0.0012
+   S2_UTI_por_MARCA_UTI           OR=  1.065 (IC95%  0.934-  1.213) p=0.3482
+   S3_periodo_2020_2024           OR=  1.018 (IC95%  0.849-  1.221) p=0.8463
+   S4_periodo_2014_2019           OR=  1.047 (IC95%  0.878-  1.248) p=0.6120
+   S5_sem_I69                     OR=  1.030 (IC95%  0.893-  1.188) p=0.6824
+   S6_somente_I60_I69             OR=  1.069 (IC95%  0.935-  1.222) p=0.3277
+   S7_somente_G45_G46             OR=  1.033 (IC95%  0.677-  1.576) p=0.8792
+   S8_sem_categoria_I64           OR=  1.127 (IC95%  0.948-  1.340) p=0.1764
+   S9_hospitais_100mais           OR=  1.068 (IC95%  0.936-  1.218) p=0.3280
+   S10_sem_hospitais_sem_obito    OR=  1.057 (IC95%  0.928-  1.205) p=0.4040
+   S11_hospitais_10mais_obitos    OR=  1.039 (IC95%  0.912-  1.183) p=0.5654
+   S13_sem_efeito_aleatorio       OR=  0.496 (IC95%  0.474-  0.519) p=1.39e-200
+   S14_idade_spline_ns3           OR=  1.057 (IC95%  0.928-  1.204) p=0.4072
+   S15_com_tendencia_ano          OR=  1.097 (IC95%  0.961-  1.252) p=0.1685
+   S17_otimizador_optim_BFGS      OR=  1.065 (IC95%  0.934-  1.213) p=0.3483
+   S19_idade_categorica           OR=  1.066 (IC95%  0.936-  1.215) p=0.3338
 
 regiao_saudeCentro-Sul
-   S0_principal                   OR=  0.742 (IC95%  0.637-  0.864) p=1.29e-04
-   S1_sem_UTI                     OR=  0.809 (IC95%  0.695-  0.941) p=0.0060
-   S2_UTI_por_MARCA_UTI           OR=  0.741 (IC95%  0.636-  0.864) p=1.23e-04
-   S3_periodo_2015_2024           OR=  0.768 (IC95%  0.647-  0.913) p=0.0027
-   S4_periodo_2010_2014           OR=  0.744 (IC95%  0.552-  1.003) p=0.0524
-   S5_sem_I69                     OR=  0.749 (IC95%  0.636-  0.881) p=4.92e-04
-   S6_somente_I60_I69             OR=  0.744 (IC95%  0.635-  0.871) p=2.44e-04
-   S7_somente_G45_G46             OR=  0.688 (IC95%  0.415-  1.142) p=0.1481
-   S8_sem_categoria_I64             OR=  0.885 (IC95%  0.702-  1.117) p=0.3038
-   S9_hospitais_100mais           OR=  0.750 (IC95%  0.643-  0.875) p=2.51e-04
-   S10_sem_hospitais_sem_obito    OR=  0.738 (IC95%  0.633-  0.859) p=9.22e-05
-   S11_hospitais_10mais_obitos    OR=  0.733 (IC95%  0.630-  0.853) p=6.02e-05
-   S13_sem_efeito_aleatorio       OR=  0.541 (IC95%  0.513-  0.571) p=2.62e-110
-   S14_idade_spline_ns3           OR=  0.732 (IC95%  0.629-  0.853) p=6.60e-05
-   S15_com_tendencia_ano          OR=  0.728 (IC95%  0.623-  0.850) p=5.86e-05
-   S17_otimizador_optim_BFGS      OR=  0.742 (IC95%  0.637-  0.864) p=1.28e-04
-   S19_idade_categorica           OR=  0.736 (IC95%  0.632-  0.857) p=8.25e-05
+   S0_principal                   OR=  0.751 (IC95%  0.636-  0.888) p=8.04e-04
+   S1_sem_UTI                     OR=  0.816 (IC95%  0.691-  0.963) p=0.0159
+   S2_UTI_por_MARCA_UTI           OR=  0.751 (IC95%  0.636-  0.888) p=8.04e-04
+   S3_periodo_2020_2024           OR=  0.842 (IC95%  0.663-  1.069) p=0.1581
+   S4_periodo_2014_2019           OR=  0.693 (IC95%  0.556-  0.863) p=0.0011
+   S5_sem_I69                     OR=  0.734 (IC95%  0.615-  0.876) p=6.12e-04
+   S6_somente_I60_I69             OR=  0.764 (IC95%  0.644-  0.908) p=0.0022
+   S7_somente_G45_G46             OR=  0.613 (IC95%  0.340-  1.107) p=0.1049
+   S8_sem_categoria_I64           OR=  0.903 (IC95%  0.691-  1.181) p=0.4571
+   S9_hospitais_100mais           OR=  0.760 (IC95%  0.641-  0.900) p=0.0015
+   S10_sem_hospitais_sem_obito    OR=  0.746 (IC95%  0.631-  0.881) p=5.58e-04
+   S11_hospitais_10mais_obitos    OR=  0.738 (IC95%  0.624-  0.873) p=3.74e-04
+   S13_sem_efeito_aleatorio       OR=  0.548 (IC95%  0.515-  0.583) p=1.55e-79
+   S14_idade_spline_ns3           OR=  0.741 (IC95%  0.627-  0.876) p=4.52e-04
+   S15_com_tendencia_ano          OR=  0.751 (IC95%  0.635-  0.888) p=8.29e-04
+   S17_otimizador_optim_BFGS      OR=  0.751 (IC95%  0.636-  0.888) p=8.02e-04
+   S19_idade_categorica           OR=  0.745 (IC95%  0.631-  0.880) p=5.36e-04
 
 regiao_saudeMedio Paraiba
-   S0_principal                   OR=  0.467 (IC95%  0.417-  0.524) p=7.51e-39
-   S1_sem_UTI                     OR=  0.491 (IC95%  0.438-  0.550) p=1.17e-34
-   S2_UTI_por_MARCA_UTI           OR=  0.467 (IC95%  0.417-  0.524) p=8.19e-39
-   S3_periodo_2015_2024           OR=  0.485 (IC95%  0.430-  0.548) p=9.46e-32
-   S4_periodo_2010_2014           OR=  0.674 (IC95%  0.510-  0.890) p=0.0055
-   S5_sem_I69                     OR=  0.719 (IC95%  0.624-  0.827) p=3.93e-06
-   S6_somente_I60_I69             OR=  0.470 (IC95%  0.418-  0.529) p=2.10e-36
-   S7_somente_G45_G46             OR=  0.585 (IC95%  0.392-  0.874) p=0.0089
-   S8_sem_categoria_I64             OR=  0.416 (IC95%  0.360-  0.480) p=8.73e-33
-   S9_hospitais_100mais           OR=  0.467 (IC95%  0.417-  0.524) p=2.05e-38
-   S10_sem_hospitais_sem_obito    OR=  0.466 (IC95%  0.415-  0.522) p=2.72e-39
-   S11_hospitais_10mais_obitos    OR=  0.463 (IC95%  0.414-  0.519) p=4.02e-40
-   S13_sem_efeito_aleatorio       OR=  0.515 (IC95%  0.496-  0.534) p=8.36e-277
-   S14_idade_spline_ns3           OR=  0.457 (IC95%  0.407-  0.512) p=7.36e-41
-   S15_com_tendencia_ano          OR=  0.463 (IC95%  0.412-  0.520) p=1.85e-38
-   S17_otimizador_optim_BFGS      OR=  0.467 (IC95%  0.417-  0.524) p=6.97e-39
-   S19_idade_categorica           OR=  0.468 (IC95%  0.417-  0.524) p=7.80e-39
+   S0_principal                   OR=  0.494 (IC95%  0.438-  0.557) p=5.24e-31
+   S1_sem_UTI                     OR=  0.510 (IC95%  0.453-  0.574) p=1.34e-28
+   S2_UTI_por_MARCA_UTI           OR=  0.494 (IC95%  0.438-  0.557) p=5.24e-31
+   S3_periodo_2020_2024           OR=  0.434 (IC95%  0.370-  0.508) p=2.34e-25
+   S4_periodo_2014_2019           OR=  0.631 (IC95%  0.532-  0.747) p=1.02e-07
+   S5_sem_I69                     OR=  0.750 (IC95%  0.645-  0.870) p=1.58e-04
+   S6_somente_I60_I69             OR=  0.492 (IC95%  0.436-  0.556) p=5.52e-30
+   S7_somente_G45_G46             OR=  0.708 (IC95%  0.460-  1.089) p=0.1160
+   S8_sem_categoria_I64           OR=  0.458 (IC95%  0.393-  0.533) p=1.24e-23
+   S9_hospitais_100mais           OR=  0.492 (IC95%  0.436-  0.554) p=3.38e-31
+   S10_sem_hospitais_sem_obito    OR=  0.492 (IC95%  0.437-  0.555) p=2.10e-31
+   S11_hospitais_10mais_obitos    OR=  0.486 (IC95%  0.431-  0.547) p=9.08e-33
+   S13_sem_efeito_aleatorio       OR=  0.536 (IC95%  0.514-  0.558) p=1.24e-190
+   S14_idade_spline_ns3           OR=  0.483 (IC95%  0.429-  0.545) p=1.06e-32
+   S15_com_tendencia_ano          OR=  0.492 (IC95%  0.436-  0.555) p=6.32e-31
+   S17_otimizador_optim_BFGS      OR=  0.494 (IC95%  0.438-  0.557) p=5.20e-31
+   S19_idade_categorica           OR=  0.495 (IC95%  0.440-  0.558) p=6.46e-31
 
 regiao_saudeBaia da Ilha Grande
-   S0_principal                   OR=  0.726 (IC95%  0.594-  0.886) p=0.0016
-   S1_sem_UTI                     OR=  0.801 (IC95%  0.657-  0.975) p=0.0271
-   S2_UTI_por_MARCA_UTI           OR=  0.726 (IC95%  0.595-  0.887) p=0.0017
-   S3_periodo_2015_2024           OR=  0.740 (IC95%  0.594-  0.921) p=0.0071
-   S4_periodo_2010_2014           OR=  0.853 (IC95%  0.561-  1.297) p=0.4581
-   S5_sem_I69                     OR=  0.802 (IC95%  0.654-  0.983) p=0.0338
-   S6_somente_I60_I69             OR=  0.717 (IC95%  0.584-  0.881) p=0.0016
-   S7_somente_G45_G46             OR=  0.946 (IC95%  0.483-  1.852) p=0.8712
-   S8_sem_categoria_I64             OR=  0.631 (IC95%  0.453-  0.879) p=0.0065
-   S9_hospitais_100mais           OR=  0.723 (IC95%  0.592-  0.883) p=0.0015
-   S10_sem_hospitais_sem_obito    OR=  0.722 (IC95%  0.592-  0.882) p=0.0014
-   S11_hospitais_10mais_obitos    OR=  0.718 (IC95%  0.590-  0.876) p=0.0011
-   S13_sem_efeito_aleatorio       OR=  0.638 (IC95%  0.592-  0.688) p=1.96e-31
-   S14_idade_spline_ns3           OR=  0.724 (IC95%  0.593-  0.883) p=0.0015
-   S15_com_tendencia_ano          OR=  0.740 (IC95%  0.604-  0.907) p=0.0036
-   S17_otimizador_optim_BFGS      OR=  0.726 (IC95%  0.594-  0.886) p=0.0017
-   S19_idade_categorica           OR=  0.720 (IC95%  0.590-  0.879) p=0.0012
+   S0_principal                   OR=  0.741 (IC95%  0.599-  0.918) p=0.0060
+   S1_sem_UTI                     OR=  0.811 (IC95%  0.657-  1.001) p=0.0516
+   S2_UTI_por_MARCA_UTI           OR=  0.741 (IC95%  0.599-  0.918) p=0.0060
+   S3_periodo_2020_2024           OR=  0.665 (IC95%  0.501-  0.883) p=0.0048
+   S4_periodo_2014_2019           OR=  0.872 (IC95%  0.644-  1.181) p=0.3759
+   S5_sem_I69                     OR=  0.815 (IC95%  0.656-  1.012) p=0.0635
+   S6_somente_I60_I69             OR=  0.738 (IC95%  0.591-  0.920) p=0.0070
+   S7_somente_G45_G46             OR=  0.950 (IC95%  0.485-  1.859) p=0.8800
+   S8_sem_categoria_I64           OR=  0.607 (IC95%  0.421-  0.875) p=0.0075
+   S9_hospitais_100mais           OR=  0.737 (IC95%  0.595-  0.912) p=0.0050
+   S10_sem_hospitais_sem_obito    OR=  0.738 (IC95%  0.596-  0.913) p=0.0051
+   S11_hospitais_10mais_obitos    OR=  0.730 (IC95%  0.591-  0.902) p=0.0035
+   S13_sem_efeito_aleatorio       OR=  0.695 (IC95%  0.639-  0.755) p=1.20e-17
+   S14_idade_spline_ns3           OR=  0.740 (IC95%  0.599-  0.916) p=0.0057
+   S15_com_tendencia_ano          OR=  0.752 (IC95%  0.607-  0.933) p=0.0094
+   S17_otimizador_optim_BFGS      OR=  0.741 (IC95%  0.599-  0.917) p=0.0059
+   S19_idade_categorica           OR=  0.737 (IC95%  0.595-  0.912) p=0.0049
 
-fim: 2026-10-02 11:19:23
+fim: 2026-10-03 20:22:21

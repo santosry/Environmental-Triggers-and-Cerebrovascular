@@ -25,7 +25,7 @@
 #   DIAGSEC    inexistente até 2013 e, de 2014 em diante, preenchido em no
 #              máximo 17% dos registros. Mede codificação, não doença.
 #   NAT_JUR    só existe a partir de 2013.
-#   RACA_COR   tem registros ausentes que variam de 35,4% (2010) a 0,0% (2024)
+#   RACA_COR   tem registros ausentes que diminuem ao longo do periodo (2014 a 2024)
 #              informativa, com mortalidade bem acima da dos demais.
 #              todas. A ausencia e informativa, o que limita a leitura racial.
 #
@@ -76,7 +76,7 @@ suppressWarnings({
   say("R ", R.version.string, " | motor: ", ENGINE, " | inicio: ", format(Sys.time()))
   say("=====================================================================")
 
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding = "UTF-8", na.strings = c("NA",""))
   NEC <- c("raca_cor","instru","n_diag_sec","diagsec_disp","complex_lab","nat_jur_lab",
            "DIAS_PERM","US_TOT","VAL_UTI","obito_hospitalar","idade_anos","idade_z",
            "sexo","subtipo","car_int","uti","fluxo_inter","regiao_saude","CNES","ano")
@@ -138,10 +138,10 @@ suppressWarnings({
                 if (prop$utilizavel[i]) "sim" else "NAO"))
 
   say("\n  VARIAVEIS INUTILIZAVEIS, VERIFICADAS NOS ARQUIVOS BRUTOS:")
-  say("    INFEHOSP  infeccao hospitalar: 100% vazio em 2010 a 2024.")
+  say("    INFEHOSP  infeccao hospitalar: 100% vazio em 2014 a 2024.")
   say("    CID_ASSO  causa associada: apenas o valor 0000.")
   say("    NATUREZA  um unico valor distinto no arquivo estadual.")
-  say("    INSTRU    preenchido em 100% e constante: 295.672 de 295.673")
+  say("    INSTRU    preenchido em 100% e constante em praticamente todos os")
   say("              registros como 'sem instrucao', o que nao e plausivel e")
   say("              indica campo nao utilizado na pratica. Escolaridade fica fora.")
   say("    ESPEC     varia, mas sem a tabela oficial do DATASUS a interpretacao")
@@ -157,10 +157,10 @@ suppressWarnings({
                by = ano][order(ano)]
   mostrar(por_ano)
   fwrite(por_ano, file.path(TAB, "tab20b_preenchimento_ano.csv"), encoding = "UTF-8")
-  say("\n  Leitura: DIAGSEC inexiste ate 2013 e, de 2014 em diante, esta")
-  say("  preenchido em no maximo 17% dos registros. NAT_JUR so existe a partir")
-  say("  de 2013. RACA_COR tem ausencia decrescente, de 35,4% em 2010 a 0,0% em")
-  say("  2024, o que por si so ja cria gradiente temporal na variavel.")
+  say("\n  Leitura: DIAGSEC esta disponivel em todo o periodo (2014-2024) e e")
+  say("  preenchido em no maximo 17% dos registros. NAT_JUR esta disponivel")
+  say("  em todo o periodo. RACA_COR tem ausencia decrescente ao longo do")
+  say("  periodo, o que por si so ja cria gradiente temporal na variavel.")
   say("  Os ausentes sao NA; nao existe rotulo substituto para ausencia.")
 
   ## ---- a mortalidade de quem tem ausencia: a ausencia e informativa? ----
@@ -380,7 +380,7 @@ suppressWarnings({
   say("\n  permanencia mediana por subtipo:")
   print(d[!is.na(DIAS_PERM), .(n = .N, mediana = median(DIAS_PERM)), by = subtipo][order(-n)])
   say("\n  permanencia mediana e mortalidade por regiao de saude:")
-  print(d[!is.na(DIAS_PERM), .(n = .N, mediana_permanencia = median(DIAS_PERM),
+  print(d[!is.na(DIAS_PERM), .(n = .N, mediana_permanencia = as.numeric(median(DIAS_PERM)),
                                mortalidade = sprintf("%.2f%%", 100 * mean(obito_hospitalar))),
           by = regiao_saude][order(-n)])
   ## F. FIGURAS

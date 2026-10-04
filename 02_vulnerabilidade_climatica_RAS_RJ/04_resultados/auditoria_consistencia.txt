@@ -1,14 +1,14 @@
 =====================================================================
 AUDITORIA DE INCONGRUENCIAS E INCONSISTENCIAS
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 15:49:59
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 21:04:58
 =====================================================================
 
 =========== A. REGISTROS BRUTOS DO SIH-RD ===========
 competicoes lidas em varredura: 191
-     48/191 competicoes | 1.5 min
-     96/191 competicoes | 3.1 min
-    144/191 competicoes | 4.9 min
-    191/191 competicoes | 10.7 min
+     48/191 competicoes | 1.1 min
+     96/191 competicoes | 2.4 min
+    144/191 competicoes | 3.7 min
+    191/191 competicoes | 5.4 min
   [OK     ] Registros brutos lidos                                   11.947.354 
   [OK     ] DT_SAIDA anterior a DT_INTER                             0 
   [ATENCAO] DIAS_PERM divergente das datas (>1 dia)                  535.083 4.48%
@@ -26,53 +26,53 @@ competicoes lidas em varredura: 191
   [ATENCAO] N_AIH repetida na mesma competencia                      16.752 esperado: a mesma AIH aparece em linhas de procedimentos
 
   fronteira dezembro/janeiro, restrita aos diagnosticos do estudo:
-    arquivos de fronteira analisados: 30
-    registros dos diagnosticos do estudo na fronteira: 49.211
+    arquivos de fronteira analisados: 22
+    registros dos diagnosticos do estudo na fronteira: 37.922
     chaves de AIH presentes em mais de uma competencia: 0
   [OK     ] AIH do estudo repetida em competicoes diferentes na fronteira 0 a deduplicacao do script 02 remove essas repeticoes
 
 =========== B. COORTE ANALITICA ===========
-  [OK     ] Internacoes na coorte                                    295.673 
-  [OK     ] Obitos na coorte                                         55.827 
-  [OK     ] Media de idade_z (deve ser 0)                            0.00000000 
+  [OK     ] Internacoes na coorte                                    222.832 
+  [OK     ] Obitos na coorte                                         42.426 
+  [OK     ] Media de idade_z (deve ser 0)                            -0.00000000 
   [OK     ] Desvio-padrao de idade_z (deve ser 1)                    1.00000000 
-  [OK     ] Anos distintos (deve ser 15)                             15 2010 a 2024
+  [OK     ] Anos distintos (deve ser 11)                             11 2014 a 2024
   [OK     ] Regioes de saude distintas (deve ser 9)                  9 
-  [OK     ] Hospitais distintos                                      254 
+  [OK     ] Hospitais distintos                                      222 
   [OK     ] Linhas com subtipo incoerente com o CID de 3 digitos     0 
   [OK     ] Duplicatas na chave de deduplicacao da coorte            0 mesma chave do script 02; deve ser zero por construcao
   [OK     ] Linhas integralmente duplicadas na base analitica        0 todas as colunas, incluindo N_AIH e a data de saida
-  [ATENCAO] Linhas com perfil clinico coincidente (sem chave)        1.763 0.6% da base; esperado, nao e defeito
-  [OK     ] Obitos com zero dia de permanencia na coorte             2.091 3.75% dos obitos
-  [ATENCAO] UTI_MES_TO maior que DIAS_PERM na coorte                 5.173 1.75% da coorte; 13.5% dos registros com UTI
+  [ATENCAO] Linhas com perfil clinico coincidente (sem chave)        804 0.4% da base; esperado, nao e defeito
+  [OK     ] Obitos com zero dia de permanencia na coorte             1.578 3.72% dos obitos
+  [ATENCAO] UTI_MES_TO maior que DIAS_PERM na coorte                 4.522 2.03% da coorte; 14.2% dos registros com UTI
   [OK     ] Mediana de permanencia (manuscrito cita 7 dias)          6 I69: 30 dias
   [OK     ] Ausentes em qualquer covariavel do modelo                0 
   [OK     ] I60-I69 nos arquivos brutos (antes de filtros)           292.194 
-  [ATENCAO] Razao coorte / registros brutos I60-I69                  0.9163 diferenca explica-se por residencia fora do RJ, duplicatas e periodo
+  [ATENCAO] Razao coorte / registros brutos I60-I69                  0.6974 diferenca explica-se por residencia fora do RJ, duplicatas e periodo
   [OK     ] Bloco G45/G46 nos arquivos brutos                        29.717 
 
 =========== C. TRIANGULACAO SIH x SIM ===========
-  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2010-2024: 147.611
-  desses, com local de ocorrencia hospitalar: 121.018
-  obitos intra-hospitalares no SIH (SUS): 55.827
-  [OK     ] Obitos hospitalares SIM (todas as fontes)                121.018 
-  [OK     ] Obitos intra-hospitalares SIH (somente SUS)              55.827 
-  [ATENCAO] Razao SIH / SIM hospitalar                               0.461 SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade
-  [ATENCAO] Obitos no SIM com local ignorado                         15 afeta a comparacao entre fontes
-  tempo da leitura do SIM: 1.0 min
+  obitos I60-I69 + G45/G46 no SIM, residentes no RJ, 2014-2024: 106.799
+  desses, com local de ocorrencia hospitalar: 85.875
+  obitos intra-hospitalares no SIH (SUS): 42.426
+  [OK     ] Obitos hospitalares SIM (todas as fontes)                85.875 
+  [OK     ] Obitos intra-hospitalares SIH (somente SUS)              42.426 
+  [ATENCAO] Razao SIH / SIM hospitalar                               0.494 SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade
+  [ATENCAO] Obitos no SIM com local ignorado                         10 afeta a comparacao entre fontes
+  tempo da leitura do SIM: 0.4 min
 
 =========== D. MODELO E TABELAS ===========
-  [OK     ] ICC da tabela coerente com sigma^2/(sigma^2+pi^2/3)      0.14945 vs 0.14945 
-  [OK     ] MOR coerente com exp(sqrt(2 s2) Phi^-1(0,75))            2.0652 vs 2.0652 
+  [OK     ] ICC da tabela coerente com sigma^2/(sigma^2+pi^2/3)      0.14497 vs 0.14497 
+  [OK     ] MOR coerente com exp(sqrt(2 s2) Phi^-1(0,75))            2.0389 vs 2.0389 
   [OK     ] Coeficientes na tabela de OR                             20 
   [OK     ] q-valor sempre maior ou igual ao p-valor                 sim 
   [OK     ] q-valor reproduz p.adjust(BH)                            0.000000 
-  [OK     ] Soma de n na calibracao (marginal)                       295.673 coorte: 295.673
-  [OK     ] Soma de n na calibracao (condicional)                    295.673 coorte: 295.673
-  [ATENCAO] Obitos esperados / observados (marginal)                 0.7319 marginal subestima por desigualdade de Jensen
+  [OK     ] Soma de n na calibracao (marginal)                       222.832 coorte: 222.832
+  [OK     ] Soma de n na calibracao (condicional)                    222.832 coorte: 222.832
+  [ATENCAO] Obitos esperados / observados (marginal)                 0.7745 marginal subestima por desigualdade de Jensen
   [OK     ] Obitos esperados / observados (condicional)              0.9999 previsao condicional e a calibrada
-  [OK     ] Soma dos obitos regionais igual ao total estadual do ISU 147.611 vs 147.611 
-  [OK     ] Robustez reproduz o modelo principal (sigma^2)           0.57805 vs 0.57805 a coluna s2 da tabela de robustez deve repetir a do modelo principal
+  [OK     ] Soma dos obitos regionais igual ao total estadual do ISU 106.799 vs 106.799 
+  [OK     ] Robustez reproduz o modelo principal (sigma^2)           0.55779 vs 0.55779 a coluna s2 da tabela de robustez deve repetir a do modelo principal
   [OK     ] Cenarios de robustez convergidos                         18 de 18 
 
 =========== CONSOLIDACAO ===========
@@ -91,11 +91,11 @@ competicoes lidas em varredura: 191
     - A | Idade divergente da data de nascimento (>2 anos) | 175627 (1.470%)
     - A | COD_IDADE fora de 1 a 4 | 7004
     - A | N_AIH repetida na mesma competencia | 16752 (esperado: a mesma AIH aparece em linhas de procedimentos)
-    - B | Linhas com perfil clinico coincidente (sem chave) | 1763 (0.6% da base; esperado, nao e defeito)
-    - B | UTI_MES_TO maior que DIAS_PERM na coorte | 5173 (1.75% da coorte; 13.5% dos registros com UTI)
-    - B | Razao coorte / registros brutos I60-I69 | 0.9163 (diferenca explica-se por residencia fora do RJ, duplicatas e periodo)
-    - C | Razao SIH / SIM hospitalar | 0.461 (SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade)
-    - C | Obitos no SIM com local ignorado | 15 (afeta a comparacao entre fontes)
-    - D | Obitos esperados / observados (marginal) | 0.7319 (marginal subestima por desigualdade de Jensen)
+    - B | Linhas com perfil clinico coincidente (sem chave) | 804 (0.4% da base; esperado, nao e defeito)
+    - B | UTI_MES_TO maior que DIAS_PERM na coorte | 4522 (2.03% da coorte; 14.2% dos registros com UTI)
+    - B | Razao coorte / registros brutos I60-I69 | 0.6974 (diferenca explica-se por residencia fora do RJ, duplicatas e periodo)
+    - C | Razao SIH / SIM hospitalar | 0.494 (SIH cobre apenas internacoes SUS; SIM cobre toda a mortalidade)
+    - C | Obitos no SIM com local ignorado | 10 (afeta a comparacao entre fontes)
+    - D | Obitos esperados / observados (marginal) | 0.7745 (marginal subestima por desigualdade de Jensen)
 
-fim: 2026-10-03 16:03:28
+fim: 2026-10-03 21:11:08

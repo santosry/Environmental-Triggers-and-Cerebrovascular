@@ -55,7 +55,7 @@ suppressWarnings({
   say("=====================================================================")
 
   ## ================= 1. dados =================
-  d <- fread(file.path(PROC, "coorte_glmm_2010_2024.csv"),
+  d <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"),
              select = c("CNES", "obito_hospitalar", "idade_anos", "idade_z", "sexo",
                         "subtipo", "cid3", "car_int", "uti", "uti_marca", "fluxo_inter",
                         "regiao_saude", "ano"),

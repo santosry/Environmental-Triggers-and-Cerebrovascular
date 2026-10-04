@@ -142,7 +142,7 @@ suppressWarnings({
     x
   }
 
-  D <- prep(fread(file.path(PROC, "coorte_glmm_2010_2024.csv"), select = COLS,
+  D <- prep(fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), select = COLS,
                   encoding = "UTF-8"))
   set.seed(SEMENTE)
   sub <- as.data.frame(prep(copy(D)[sample(.N, min(N_SUB, .N))]))
