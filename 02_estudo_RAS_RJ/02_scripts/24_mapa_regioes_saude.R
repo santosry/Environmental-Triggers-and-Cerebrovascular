@@ -30,7 +30,7 @@ suppressWarnings({
     d <- normalizePath(".")
     for (i in 1:6) {
       if (dir.exists(file.path(d, "01_dados")) && dir.exists(file.path(d, "02_scripts"))) break
-      sub <- file.path(d, "02_vulnerabilidade_climatica_RAS_RJ")
+      sub <- file.path(d, "02_estudo_RAS_RJ")
       if (dir.exists(file.path(sub, "01_dados"))) { d <- sub; break }
       pai <- dirname(d); if (pai == d) break; d <- pai
     }

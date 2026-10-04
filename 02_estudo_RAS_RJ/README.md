@@ -159,7 +159,6 @@ manuscrito.
 | `18_mortalidade_sim.py` | Mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
-| `23_gerar_docx.py` | Converte os documentos locais de Markdown para `.docx` (Word). |
 | `24_mapa_regioes_saude.R` | Mapas coropléticos das nove regiões de saúde pela malha municipal do `geobr` dissolvida; gera a Figura 1 do manuscrito (série temporal + mapa). |
 | `26_recalculo_duas_classes.R` | Recálculo dos indicadores descritivos com a coorte completa (I60-I69 + G45/G46): Tabela 1 por macrorregião, fluxo, concentração, custos e taxas. |
 

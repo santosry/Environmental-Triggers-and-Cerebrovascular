@@ -34,6 +34,7 @@ suppressWarnings({
               list.files("06_figuras", pattern = "\\.(png|jpg|jpeg)$", recursive = TRUE, full.names = TRUE))
   codigo <- c(list.files("02_scripts", pattern = "\\.(R|py)$", full.names = TRUE),
               list.files("11_reprodutibilidade", pattern = "\\.R$", full.names = TRUE))
+  codigo <- codigo[basename(codigo) %in% basename(system2("git", c("ls-files"), stdout = TRUE))]
 
   mk <- function(papel, paths) {
     paths <- paths[file.exists(paths)]

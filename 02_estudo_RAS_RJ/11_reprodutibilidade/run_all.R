@@ -52,8 +52,7 @@ suppressWarnings({
     "26_recalculo_duas_classes.R",
     "16_consolidar_dados.py",
     "17_analises_territoriais.py",
-    "18_mortalidade_sim.py",
-    "23_gerar_docx.py")
+    "18_mortalidade_sim.py")
 
   PESADOS <- c("02_montar_coorte.R", "05_glmm_principal.R", "06_glmm_uti.R",
                "07_auditoria_consistencia.R", "08_glmm_robustez.R",

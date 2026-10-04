@@ -1,13 +1,13 @@
 {
   "projeto": "Morbimortalidade cerebrovascular e RAS no Rio de Janeiro",
   "periodo": "2014-2024",
-  "data_geracao": "2026-10-03T21:41:28-0300",
-  "git_commit": "296338a07f6af4886f119503bafc2ce277b7f24b",
-  "git_commit_curto": "296338a",
+  "data_geracao": "2026-10-04T19:26:58-0300",
+  "git_commit": "902f413956a0ef0add4e2741960f73ce62909037",
+  "git_commit_curto": "902f413",
   "git_status_limpo": false,
   "R": "R version 4.6.1 (2026-06-24 ucrt)",
   "plataforma": "x86_64-w64-mingw32",
   "n_entradas": 5,
   "n_saidas": 108,
-  "n_codigo": 30
+  "n_codigo": 29
 }

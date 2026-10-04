@@ -1,8 +1,7 @@
-PIPELINE | inicio: 2026-10-03 21:38:21 | scripts: 4
-R: R version 4.6.1 (2026-06-24 ucrt) | wd: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/02_vulnerabilidade_climatica_RAS_RJ
-[ 1/ 4] 16_consolidar_dados.py         OK       35.7 s
-[ 2/ 4] 17_analises_territoriais.py    OK       19.5 s
-[ 3/ 4] 18_mortalidade_sim.py          OK       102.6 s
-[ 4/ 4] 23_gerar_docx.py               OK       0.8 s
+PIPELINE | inicio: 2026-10-03 21:38:21 | scripts: 3
+R: R version 4.6.1 (2026-06-24 ucrt) | wd: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM/02_estudo_RAS_RJ
+[ 1/ 3] 16_consolidar_dados.py         OK       35.7 s
+[ 2/ 3] 17_analises_territoriais.py    OK       19.5 s
+[ 3/ 3] 18_mortalidade_sim.py          OK       102.6 s
 benchmark gravado: benchmarks_execucao.csv | total 13.1 min
 fim: 2026-10-03 21:41:00
