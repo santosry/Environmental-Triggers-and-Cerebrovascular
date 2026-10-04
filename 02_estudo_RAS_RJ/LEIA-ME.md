@@ -38,7 +38,6 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 |---|---|
 | Documentação completa | [`README.md`](README.md) |
 | Relatório executivo | [`12_relatorios/RELATORIO_EXECUTIVO_FINAL.md`](12_relatorios/RELATORIO_EXECUTIVO_FINAL.md) |
-| Manuscrito | [`08_manuscrito/manuscrito.md`](08_manuscrito/manuscrito.md) |
 | OR ajustados | [`05_tabelas/tab3_glmm_or.csv`](05_tabelas/tab3_glmm_or.csv) |
 | Scripts | [`02_scripts/`](02_scripts/) |
 

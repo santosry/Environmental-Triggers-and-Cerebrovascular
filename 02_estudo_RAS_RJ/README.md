@@ -49,9 +49,8 @@ de 2026.
 | `05_tabelas/` | Tabelas em CSV, numeradas na ordem em que entram no manuscrito. |
 | `06_figuras/` | Figuras em `manuscrito/` (Figuras 1–2 finais em `.jpg` 300 dpi), `exploratorias/` (banco de ~25) e `suplementares/` (demais). PNG/JPEG a 300 dpi. |
 | `07_literatura/` | Matriz de literatura com autoria verificada e 13 artigos completos em PDF (texto livre, via DOI/SciELO/Europe PMC). |
-| `08_manuscrito/` | Manuscrito em Markdown. |
-| `09_documentos_submissao/` | Modelos de documentos exigidos pelo edital. |
 | `10_auditoria/` | Auditorias do estudo anterior, dos dados e da metodologia. |
+| `11_reprodutibilidade/` | Benchmarks, reprodutibilidade, portabilidade e auditabilidade (manifesto SHA-256, Dockerfile). |
 | `12_relatorios/` | Relatórios executivo e final, e comparação antigo×novo. |
 | `13_documentos_referencia/` | PDFs de referência (edital e plano estadual de saúde). |
 
@@ -160,7 +159,7 @@ manuscrito.
 | `18_mortalidade_sim.py` | Mortalidade populacional no SIM. |
 | `19_figura_exploratorio.R` | Regenera a figura-painel do script 11 a partir dos resultados cacheados, sem reajustar os modelos (rápido). |
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2010, IBGE/SIDRA), por região de saúde e estado. |
-| `23_gerar_docx.py` | Converte o manuscrito e os documentos de submissão de Markdown para `.docx` (Word). |
+| `23_gerar_docx.py` | Converte os documentos locais de Markdown para `.docx` (Word). |
 | `24_mapa_regioes_saude.R` | Mapas coropléticos das nove regiões de saúde pela malha municipal do `geobr` dissolvida; gera a Figura 1 do manuscrito (série temporal + mapa). |
 | `26_recalculo_duas_classes.R` | Recálculo dos indicadores descritivos com a coorte completa (I60-I69 + G45/G46): Tabela 1 por macrorregião, fluxo, concentração, custos e taxas. |
 
@@ -379,8 +378,7 @@ mais armazenados. O script `11_exploratorio.R` ganhou o atalho
 `GLMM_SO_FIGURAS=1`, que refaz apenas a figura-painel a partir dos resultados cacheados
 (sem reajustar os modelos, que levam mais de uma hora).
 
-> `13_documentos_referencia/` e `08_manuscrito/manuscrito.md` **não são versionados**
-> a pedido; permanecem apenas no disco local.
+> `13_documentos_referencia/` **não é versionado** a pedido; permanece apenas no disco local.
 
 ---
 
@@ -406,13 +404,9 @@ adaptativa de Gauss-Hermite. A heterogeneidade hospitalar é resumida pelo VPC/I
 
 **Concluído nesta fase:** padronização etária direta (script 22; `tab28`),
 ISU alinhado a I60–I69 + G45/G46, consistência dos custos conferida, sensibilidade a I64
-já existente na robustez (S8), `sessionInfo`/lista de pacotes, backup do manuscrito,
+já existente na robustez (S8), `sessionInfo`/lista de pacotes,
 otimização do script 01 (não tenta mais a competência 2025-12) e do script 11
 (`GLMM_SO_FIGURAS=1`).
-
-**Documentos de submissão** gerados em `08_manuscrito/` (não versionados): folha de
-rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e as versões
-`.docx` do manuscrito e dos documentos.
 
 ⬅️ [Voltar ao README do monorepo](../README.md)
 

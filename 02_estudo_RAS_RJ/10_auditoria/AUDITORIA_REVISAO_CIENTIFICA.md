@@ -10,8 +10,8 @@
 
 | Arquivo | Papel |
 |---|---|
-| `08_manuscrito/manuscrito.md` | **Documento principal** (artigo original) |
-| `08_manuscrito/folha_de_rosto.md`, `carta_apresentacao.md`, `declaracao_etica.md`, `termo_autoria_responsabilidade.md` | Documentos de submissão |
+| Documento principal do manuscrito (local, não versionado) | **Artigo original** |
+| Documentos locais de submissão (não versionados) | Folha de rosto, carta de apresentação, declaração de ética/LGPD e termo de autoria |
 | `README.md`, `LEIA-ME.md` | Documentação técnica |
 | `07_literatura/MATRIZ_LITERATURA.md` | Matriz de referências |
 | `12_relatorios/RELATORIO_EXECUTIVO_AVALIACAO.md`, `RELATORIO_FINAL.md`, `RELATORIO_EXECUTIVO_FINAL.md`, `COMPARACAO_ANALISE_ANTIGA_NOVA.md` | Relatórios |

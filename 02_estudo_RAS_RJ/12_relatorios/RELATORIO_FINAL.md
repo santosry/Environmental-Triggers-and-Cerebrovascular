@@ -5,7 +5,8 @@
 > inclusão dos blocos G45/G46 no SIM quanto à reformulação do estudo para **2014–2024**.
 > Os números correntes (222.832 internações; 42.426 óbitos intra-hospitalares; 106.799
 > óbitos por causa básica; taxas de internação 105,90 → 136,79/100.000; mortalidade
-> 58,47 → 58,38/100.000; ISU 92,53%) constam do `08_manuscrito/manuscrito.md`.
+> 58,47 → 58,38/100.000; ISU 92,53%) constam do documento local do manuscrito
+> (não versionado).
 
 **Título de trabalho:** Vulnerabilidade climática, morbimortalidade cerebrovascular e
 organização da Rede de Atenção à Saúde no Rio de Janeiro

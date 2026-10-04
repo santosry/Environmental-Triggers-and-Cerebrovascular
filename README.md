@@ -87,7 +87,7 @@ exposição, usando DLNM.
 
 ### 02 — Vulnerabilidade climática e RAS
 
-📁 **[`02_vulnerabilidade_climatica_RAS_RJ/`](02_vulnerabilidade_climatica_RAS_RJ/README.md)**
+📁 **[`02_estudo_RAS_RJ/`](02_estudo_RAS_RJ/README.md)**
 
 Estudo ecológico de séries temporais (2010–2024) com modelagem logística multinível.
 
@@ -142,7 +142,7 @@ DLNM/                                    # raiz do monorepo
 │       ├── audits/                       # auditorias consolidadas
 │       └── logs/                         # logs de execução
 │
-├── 02_vulnerabilidade_climatica_RAS_RJ/ # Frente 2 — estudo ecológico + GLMM + RAS
+├── 02_estudo_RAS_RJ/                     # Frente 2 — estudo ecológico + GLMM + RAS
 │   ├── README.md                         # visão da frente (LEIA-ME.md = atalho)
 │   ├── 01_dados/                         # SIH/SIM brutos, processados, inventário, IPCA
 │   ├── 02_scripts/                       # pipeline R (00_glmm_utils … 10_figuras) + legado
@@ -151,9 +151,8 @@ DLNM/                                    # raiz do monorepo
 │   ├── 05_tabelas/                       # tabelas numeradas (tab1…tab16, tendências, custos)
 │   ├── 06_figuras/                       # figuras do GLMM e séries
 │   ├── 07_literatura/                    # matriz de literatura verificada
-│   ├── 08_manuscrito/                    # manuscrito.md
-│   ├── 09_documentos_submissao/          # modelos de documentos do edital
 │   ├── 10_auditoria/                     # auditorias de dados e metodológica
+│   ├── 11_reprodutibilidade/             # benchmarks, manifesto SHA-256, Dockerfile
 │   ├── 12_relatorios/                    # relatórios executivo e final
 │   └── 13_documentos_referencia/         # edital e plano estadual de saúde (PDF)
 │
@@ -271,7 +270,7 @@ Cada frente traz o seu próprio README com a cadeia de execução. Resumo:
 ```bash
 # Frente 01 — dados/resultados (scripts de modelagem no repo dlnm-gam-cerebrovascular-rj)
 # Frente 02 — pipeline GLMM (executar na raiz da frente)
-cd 02_vulnerabilidade_climatica_RAS_RJ
+cd 02_estudo_RAS_RJ
 Rscript 02_scripts/01_baixar_microdatasus.R   # aquisição (~38 min)
 Rscript 02_scripts/02_montar_coorte.R         # coorte
 Rscript 02_scripts/05_glmm_principal.R        # GLMM + FDR (~3 min)
@@ -328,6 +327,6 @@ O código, a documentação e os resultados deste repositório estão licenciado
 
 ## Contato
 
-**Ryan de Paulo Santos** — <ryandpaulosantos@gmail.com>
+**Ryan de Paulo Santos** — <ryan.paulo@gsuite.iff.edu.br>
 
-Para dúvidas, sugestões ou colaboração, abra uma *issue* neste repositório.
+Para dúvidas, sugestões ou colaboração, abra uma *issue* neste repositório ou mande um e-mail.
