@@ -1,0 +1,14 @@
+indicador,valor_esperado,tolerancia,fonte,descricao
+n_internacoes,222832,0,coorte,Internacoes da coorte SIH (2014-2024)
+obitos_intra_hospitalares,42426,0,coorte,Obitos intra-hospitalares (SIH)
+obitos_sim,106799,0,sim,Obitos por causa basica (SIM)
+icc_principal,0.14497,0.00002,tab8,ICC do modelo principal (S0)
+mor_principal,2.0389,0.002,tab8,MOR do modelo principal (S0)
+icc_sem_uti,0.17587,0.00002,tab8,ICC sem UTI (S1)
+icc_sem_i64,0.18806,0.00002,tab8,ICC sem categoria I64 (S8)
+taxa_internacao_2014,105.90,0.05,tab28,Taxa de internacao estadual 2014 (por 100 mil)
+taxa_internacao_2024,136.79,0.05,tab28,Taxa de internacao estadual 2024 (por 100 mil)
+fluxo_intermunicipal_pct,18.44,0.01,tab1,Percentual de internacoes com fluxo intermunicipal
+concentracao_10_hospitais_pct,34.20,0.05,coorte,Percentual das internacoes nos 10 maiores hospitais
+custo_corrente_total,440417097,100,tab15,Custo total em reais correntes
+custo_deflacionado_total,576373154,100,tab15,Custo total deflacionado a dez/2024

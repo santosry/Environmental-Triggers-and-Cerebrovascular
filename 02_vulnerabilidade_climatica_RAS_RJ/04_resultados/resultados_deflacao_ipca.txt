@@ -2,7 +2,7 @@
 DEFLACAO DOS CUSTOS PELO IPCA (base: dezembro/2024)
 Fonte: IBGE/SIDRA tabela 1737, variavel 2266 (numero-indice mensal)
 Fator: indice_dez2024 / indice_medio_anual(t)  [fluxo anual -> dez/2024]
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 18:52:37
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 21:36:04
 =====================================================================
 meses do IPCA lidos: 180 | de 201001 a 202412
 
@@ -45,4 +45,4 @@ Custo por regiao de saude (corrente e deflacionado a dez/2024):
 
 Nota: coorte completa (I60-I69 + G45/G46), mesma base dos indicadores de custo do
       manuscrito). Serie do IPCA em cache local; fatores pelo indice medio anual.
-fim: 2026-10-03 18:52:38
+fim: 2026-10-03 21:36:05

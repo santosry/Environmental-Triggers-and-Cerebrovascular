@@ -1,7 +1,7 @@
 =====================================================================
 CONFERENCIA ENTRE MOTORES E ADEQUACAO DA APROXIMACAO DE LAPLACE
 R R version 4.6.1 (2026-06-24 ucrt) | glmmTMB 1.1.15.2 | lme4 2.0.1
-inicio: 2026-10-03 19:35:37
+inicio: 2026-10-03 21:28:15
 =====================================================================
 O lme4 roda em processo R separado, porque carregar glmmTMB e lme4 na
 mesma sessao encerra o processo sem mensagem de erro.
@@ -9,7 +9,7 @@ mesma sessao encerra o processo sem mensagem de erro.
 subamostra: 20.000 registros | 199 hospitais | 3675 obitos | semente 20261001
 
 [A] glmmTMB
-    tempo=0.22 min | logLik=-8544.5896 | AIC=17131.18 | s2=0.31534 | ICC=0.08747 | MOR=1.7086
+    tempo=0.71 min | logLik=-8544.5896 | AIC=17131.18 | s2=0.31533 | ICC=0.08747 | MOR=1.7085
 
 disparando o lme4 em processo separado...
 
@@ -21,20 +21,20 @@ The following object is masked from 'package:base':
 
 Loading required package: Matrix
 [A] lme4 Laplace (nAGQ = 1) | 20.000 registros | 199 hospitais | 3675 obitos 
-    tempo=0.76 min | logLik=-8544.5909 | AIC=17131.18 | s2=0.31519 | ICC=0.08743 | MOR=1.7083 
-    glmmTMB na mesma subamostra: s2=0.31534 | diferenca relativa=0.047% 
+    tempo=2.10 min | logLik=-8544.5909 | AIC=17131.18 | s2=0.31519 | ICC=0.08743 | MOR=1.7083 
+    glmmTMB na mesma subamostra: s2=0.31533 | diferenca relativa=0.044% 
     log-verossimilhanca glmmTMB=-8544.5896 | diferenca absoluta=0.0013 
 
 [B] adequacao da aproximacao de Laplace: nAGQ = 11 
-    tempo=1.66 min | logLik=-8544.3994 | AIC=17130.80 
+    tempo=4.51 min | logLik=-8544.3994 | AIC=17130.80 
     s2=0.31802 (Laplace 0.31519, diferenca relativa 0.899%) 
     ICC=0.08815 (Laplace 0.08743) | MOR=1.7124 (Laplace 1.7083) 
-    OR: diferenca relativa maxima 0.1467% | mediana 0.0204% 
+    OR: diferenca relativa maxima 0.1445% | mediana 0.0179% 
     maiores divergencias: 
-      (Intercept)                                Laplace=0.0936 AGHQ=0.0934 dif=0.1467% 
-      regiao_saudeSerrana                        Laplace=0.7206 AGHQ=0.7217 dif=0.1430% 
+      (Intercept)                                Laplace=0.0936 AGHQ=0.0935 dif=0.1445% 
+      regiao_saudeSerrana                        Laplace=0.7206 AGHQ=0.7217 dif=0.1412% 
       regiao_saudeNoroeste                       Laplace=0.3557 AGHQ=0.3562 dif=0.1347% 
-      car_intUrgencia                            Laplace=2.1114 AGHQ=2.1136 dif=0.1076% 
-      subtipoSequelas (I69)                      Laplace=0.5642 AGHQ=0.5648 dif=0.1060% 
+      car_intUrgencia                            Laplace=2.1114 AGHQ=2.1136 dif=0.1068% 
+      subtipoSequelas (I69)                      Laplace=0.5642 AGHQ=0.5648 dif=0.1041% 
 
-fim: 2026-10-03 19:38:17
+fim: 2026-10-03 21:35:37

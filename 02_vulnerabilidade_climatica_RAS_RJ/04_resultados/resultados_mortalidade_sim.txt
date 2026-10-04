@@ -1,59 +1,60 @@
 ======================================================================
-ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69, 2010-2024)
+ANÁLISE DE MORTALIDADE — SIM (causa básica I60-I69 e G45/G46, 2014-2024)
 ======================================================================
-Óbitos totais: 147,551
+Óbitos totais: 106,799
 Sexo:
 sexo
-F    75990
-M    71549
-I       12
+F    54738
+M    52052
+I        9
 Idade mediana: 73 anos
 Local de ocorrência:
 local_ocorrencia
-Hospital              120970
-Outro estab. saúde     15053
-Domicílio              10185
-Outros                  1209
-Via pública              119
-Ignorado                  15
+Hospital              85875
+Outro estab. saúde    12877
+Domicílio              7301
+Outros                  658
+Via pública              78
+Ignorado                 10
 CID3:
 cid3
-I60     6681
-I61    27452
-I62     2891
-I63     1235
-I64    55523
-I67    36853
-I69    16916
+G45       43
+I60     4996
+I61    20087
+I62     2282
+I63      969
+I64    38636
+I67    28308
+I69    11478
 Raça/cor:
 raca_cor
-Branca      73668
-Parda       44830
-Preta       27182
-Ignorado     1521
-Amarela       268
-Indígena       82
-Taxa média de mortalidade/100k por região (2010-2024):
+Branca      52259
+Parda       33378
+Preta       20058
+Ignorado      851
+Amarela       189
+Indígena       64
+Taxa média de mortalidade/100k por região (2014-2024):
 regiao_saude
-Centro-Sul             68.84
-Serrana                67.59
-Medio Paraiba          65.99
-Noroeste               65.24
-Metropolitana II       59.01
-Metropolitana I        58.42
-Norte                  56.94
-Baixada Litoranea      47.10
-Baia da Ilha Grande    43.74
+Centro-Sul             66.96
+Serrana                65.87
+Medio Paraiba          65.30
+Noroeste               61.35
+Metropolitana II       58.76
+Metropolitana I        56.89
+Norte                  55.52
+Baixada Litoranea      45.42
+Baia da Ilha Grande    44.35
 Taxa média de mortalidade/100k por macrorregião:
 macro3
-Centro-Sul          64.53
-Metropolitana       58.52
-Norte e Noroeste    54.52
-Taxa mortalidade estadual: 2010=65.66 | 2024=58.33 /100k
-Mann-Kendall: tau=-0.371 p=0.0600
+Centro-Sul          63.38
+Metropolitana       57.20
+Norte e Noroeste    52.50
+Taxa mortalidade estadual: 2014=58.47 | 2024=58.38 /100k
+Mann-Kendall: tau=0.127 p=0.6404
 Óbitos por local de ocorrência e macrorregião (cross):
 local_ocorrencia  Domicílio  Hospital  Ignorado  Outro estab. saúde  Outros  Via pública
 macro3                                                                                  
-Centro-Sul            0.085     0.850       0.0               0.052   0.012        0.001
-Metropolitana         0.064     0.808       0.0               0.120   0.007        0.000
-Norte e Noroeste      0.079     0.850       0.0               0.055   0.013        0.002
+Centro-Sul            0.085     0.847       0.0               0.056   0.010        0.001
+Metropolitana         0.063     0.788       0.0               0.144   0.005        0.000
+Norte e Noroeste      0.081     0.849       0.0               0.061   0.007        0.002

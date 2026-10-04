@@ -1,4 +1,4 @@
-RECALCULO COM AS DUAS CLASSES (I60-I69 + G45/G46) | 2026-10-03 18:53:04
+RECALCULO COM AS DUAS CLASSES (I60-I69 + G45/G46) | 2026-10-03 21:36:53
 coorte completa: 222.832 internacoes
   I60-I69: 203.762 | G45/G46: 19.070
   obitos intra-hospitalares: 42.426 (19.04%)
@@ -29,4 +29,4 @@ coorte completa: 222.832 internacoes
 --- taxas de internacao regionais 2024 (ambas as classes) ---
   faixa: 90.6 a 319.5/100 mil
 
-fim: 2026-10-03 18:53:05
+fim: 2026-10-03 21:36:55

@@ -1,6 +1,6 @@
 =====================================================================
 BANCO DE FIGURAS EXPLORATORIAS
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 20:22:41
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 21:35:45
 =====================================================================
   gravada fig_ex01_taxa_internacao_estado.png
   gravada fig_ex02_internacao_letalidade.png
@@ -26,10 +26,10 @@ R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 20:22:41
   gravada fig_ex21_isu_heatmap.png
   gravada fig_ex22_razao_obito_internacao.png
   gravada fig_ex23_custo_ano.png
-  ERRO ao gravar fig_ex24_tendencia_regiao.png: Problem while computing aesthetics.
-ℹ Error occurred in the 2nd layer.
-Caused by error:
-! object 'taxa_2014' not found
+  ERRO ao gravar fig_ex24_tendencia_regiao.png: [1m[22mProblem while computing aesthetics.
+[36mℹ[39m Error occurred in the 2nd layer.
+[1mCaused by error:[22m
+[33m![39m object 'taxa_2014' not found
   gravada fig_ex25_cobertura_comorbidade.png
 
-fim: 2026-10-03 20:22:54 | figuras em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/06_figuras/exploratorias
+fim: 2026-10-03 21:36:03 | figuras em C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/06_figuras/exploratorias

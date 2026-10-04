@@ -1,0 +1,14 @@
+indicador,esperado,obtido,diferenca,tolerancia,status
+n_internacoes,222832,222832,0,0,PASS
+obitos_intra_hospitalares,42426,42426,0,0,PASS
+obitos_sim,106799,106799,0,0,PASS
+icc_principal,0.14497,0.14497,0,2e-05,PASS
+mor_principal,2.0389,2.0389,0,0.002,PASS
+icc_sem_uti,0.17587,0.17587,0,2e-05,PASS
+icc_sem_i64,0.18806,0.18806,0,2e-05,PASS
+taxa_internacao_2014,105.9,105.903753031452,0.00375303145199268,0.05,PASS
+taxa_internacao_2024,136.79,136.785360516883,0.00463948311698914,0.05,PASS
+fluxo_intermunicipal_pct,18.44,18.44,0,0.01,PASS
+concentracao_10_hospitais_pct,34.2,34.2,0,0.05,PASS
+custo_corrente_total,440417097,440417097.42001,0.420009791851044,100,PASS
+custo_deflacionado_total,576373154,576373153.943407,0.056592583656311,100,PASS

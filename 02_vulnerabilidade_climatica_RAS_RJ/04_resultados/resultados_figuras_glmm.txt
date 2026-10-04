@@ -1,4 +1,4 @@
-FIGURAS DO GLMM | inicio: 2026-10-03 20:22:33
+FIGURAS DO GLMM | inicio: 2026-10-03 21:35:39
 gravada fig_or_forest.png
 gravada fig_regioes_ajustado.png
 variancia entre hospitais usada no funnel: s2 = 0.55779
@@ -9,4 +9,4 @@ hospitais no funnel (esperado >= 5 obitos): 178 | excluidos por baixo volume de 
   fora dos limites AJUSTADOS 95% (total): 5
 gravada fig_funnel_hospitais.png (suplementares) e figura2_funnel_hospitais.jpg (manuscrito)
 gravada fig_mortalidade_subtipo.png
-fim: 2026-10-03 20:22:38
+fim: 2026-10-03 21:35:43

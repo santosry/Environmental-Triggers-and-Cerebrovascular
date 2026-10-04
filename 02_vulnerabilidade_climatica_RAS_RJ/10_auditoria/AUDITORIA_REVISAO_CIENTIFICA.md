@@ -176,3 +176,13 @@ permanece a do Censo 2010.
 Auditorias na nova janela: 84 verificações gerais, 75 aprovadas, 8 informativas, 1
 ressalva esperada (competência SIH ainda não publicada) e **nenhum erro**; 50 verificações
 de consistência interna, nenhuma classificada como erro.
+
+## 12. Camada de reprodutibilidade, portabilidade e auditabilidade (2026-10-03)
+
+Foi adicionada a pasta `11_reprodutibilidade/`, com: execução instrumentada do pipeline e
+benchmarks (`run_all.R`, `benchmarks_execucao.csv`); captura de versões de R e Python
+(`versoes_ambiente.R`); teste de regressão por valores-síntese (`teste_regressao.R`, 13
+indicadores, todos aprovados); manifesto de integridade SHA-256 de entradas, código e
+saídas (`manifest_sha256.R`; 146 arquivos verificados, todos OK) e proveniência com o
+commit do Git (`PROVENANCE.json`); além de `Dockerfile`, `requirements.txt`, `CITATION.cff`
+e `.gitattributes` para portabilidade.

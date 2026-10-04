@@ -1,7 +1,7 @@
 =====================================================================
 INDICE DE SWAROOP-UEMURA POR REGIAO DE SAUDE
 fonte: microdados do SIM-DO baixados pelo microdatasus
-R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 18:53:48
+R R version 4.6.1 (2026-06-24 ucrt) | inicio: 2026-10-03 21:26:27
 =====================================================================
 arquivos anuais do SIM-DO: 15
 obitos por DCV I60-I69, residentes no RJ (todas as competicoes): 147.611
@@ -44,8 +44,8 @@ separa melhor os territorios.
 --- SIMETRIA ENTRE AS COORTES: G45/G46 COMO CAUSA BASICA ---
   obitos com G45/G46 como causa basica (residentes RJ): 60 de 2.143.313 (0.0028%)
   A serie de mortalidade passou a incluir I60-I69 e G45/G46, alinhada ao SIH.
-  G45/G46 somam 60 obitos (0,04%) como causa basica e nao alteram as conclusoes.
+  G45/G46 somam 60 obitos como causa basica e nao alteram as conclusoes.
 
 figura gravada: 06_figuras/fig_isu_regiao.png
 
-fim: 2026-10-03 18:54:58
+fim: 2026-10-03 21:28:15

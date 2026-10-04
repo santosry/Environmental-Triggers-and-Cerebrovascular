@@ -1,4 +1,4 @@
-MAPAS POR REGIAO DE SAUDE | inicio: 2026-10-03 19:21:02
+MAPAS POR REGIAO DE SAUDE | inicio: 2026-10-03 21:36:26
 municipios na malha: 92 | sem regiao: 0
 indicadores 2024 por regiao:
   Baia da Ilha Grande  pop=  270.358 | int=   521 (192.7/100k) | ob=   150 (55.5/100k)
@@ -11,4 +11,4 @@ indicadores 2024 por regiao:
   Norte                pop=  969.642 | int=  2217 (228.6/100k) | ob=   520 (53.6/100k)
   Serrana              pop=  962.730 | int=  1990 (206.7/100k) | ob=   534 (55.5/100k)
 gravada figura1_taxa_internacao_mapa.jpg (serie + mapa)
-fim: 2026-10-03 19:21:20
+fim: 2026-10-03 21:36:52

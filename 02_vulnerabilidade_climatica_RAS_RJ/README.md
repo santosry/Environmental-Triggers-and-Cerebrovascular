@@ -415,3 +415,21 @@ rosto, carta de apresentação, declaração de ética/LGPD, termo de autoria e 
 `.docx` do manuscrito e dos documentos.
 
 ⬅️ [Voltar ao README do monorepo](../README.md)
+
+## Reprodutibilidade, benchmarks, portabilidade e auditabilidade
+
+A camada de engenharia do estudo está em `11_reprodutibilidade/`:
+
+- **Benchmarks:** `run_all.R` executa o pipeline na ordem canônica, mede o tempo de cada
+  etapa e grava `benchmarks_execucao.csv`. Aceita `--rapido`, `--somente=` e `--continuar`.
+- **Reprodutibilidade:** `versoes_ambiente.R` grava versões do R, dos pacotes e do Python
+  (`versoes_pacotes_R.csv`, `sessionInfo.txt`, `requirements.txt`); `teste_regressao.R`
+  confere 13 valores-síntese (`golden_values.csv`).
+- **Portabilidade:** `Dockerfile` (R 4.6.1 + Python) e `requirements.txt` fixam o ambiente;
+  os scripts detectam a raiz do projeto a partir do próprio caminho; `.gitattributes`
+  normaliza fins de linha.
+- **Auditabilidade:** `manifest_sha256.R` grava o SHA-256 de entradas, código e saídas e o
+  `PROVENANCE.json` com o commit do Git; `verificar_manifest.R` recomputa os hashes.
+
+Fluxo: `versoes_ambiente.R` → `run_all.R` → `teste_regressao.R` → `manifest_sha256.R` →
+`verificar_manifest.R`. Detalhes em `11_reprodutibilidade/README.md`.
