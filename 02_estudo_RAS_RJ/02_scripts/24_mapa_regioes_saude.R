@@ -152,9 +152,9 @@ suppressWarnings({
           plot.title = element_text(face = "bold"))
 
   painelB <- g_int + labs(title = "B. Taxa de internação por DCV em 2024")
-  fig1 <- painelA / painelB
+  fig1 <- (painelA | painelB) + plot_layout(widths = c(1.25, 1))
   ggsave(file.path(FIG_MAN, "figura1_taxa_internacao_mapa.jpg"), fig1,
-         width = 9, height = 12, dpi = 300, device = ragg::agg_jpeg, quality = 95)
+         width = 15, height = 6.5, dpi = 300, device = ragg::agg_jpeg, quality = 95)
   say("gravada figura1_taxa_internacao_mapa.jpg (serie + mapa)")
   say("fim: ", format(Sys.time()))
   close(logcon)
