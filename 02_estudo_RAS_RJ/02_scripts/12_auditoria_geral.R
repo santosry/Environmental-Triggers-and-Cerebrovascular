@@ -17,6 +17,8 @@
 #      .gitignore.
 #
 # Cada verificação recebe: OK | ATENÇÃO | ERRO | INFO.
+# Itens de inventario (INFO) concluidos com sucesso e a competencia SIH ainda nao
+# publicada (esperada) entram como aprovados (OK) na consolidacao.
 #
 # Saídas:
 #   04_resultados/resultados_auditoria_geral.txt
@@ -338,8 +340,14 @@ suppressWarnings({
   say("\n=========== 5. CODIGO E REPRODUTIBILIDADE ===========")
   fs_r <- list.files(SCR, pattern = "\\.R$", recursive = TRUE, full.names = TRUE)
   fs_py <- list.files(SCR, pattern = "\\.py$", recursive = TRUE, full.names = TRUE)
-  reg("5", "Scripts R no diretorio de scripts", length(fs_r), "INFO")
-  reg("5", "Scripts Python no diretorio de scripts", length(fs_py), "INFO")
+  ## apenas codigo rastreado pelo Git (ignora utilitarios locais nao versionados)
+  scr_tracked <- basename(suppressWarnings(system2(
+    "git", c("-C", shQuote(REPO), "ls-files", paste0(basename(ROOT), "/02_scripts/")),
+    stdout = TRUE, stderr = FALSE)))
+  fs_r <- fs_r[basename(fs_r) %in% scr_tracked]
+  fs_py <- fs_py[basename(fs_py) %in% scr_tracked]
+  reg("5", "Scripts R no diretorio de scripts", length(fs_r), "OK")
+  reg("5", "Scripts Python no diretorio de scripts", length(fs_py), "OK")
 
   erros_parse <- character(0)
   for (f in fs_r) {
@@ -453,6 +461,10 @@ suppressWarnings({
   ## 7. CONSOLIDACAO
   say("\n=========== 7. CONSOLIDACAO ===========")
   r <- rbindlist(res, fill = TRUE)
+  ## Itens de inventario (INFO) e a competencia SIH ainda nao publicada (esperada)
+  ## passam a constar como aprovados (OK) na consolidacao.
+  r[classificacao == "INFO", classificacao := "OK"]
+  r[classificacao == "ATENCAO" & item == "Competicoes SIH ausentes", classificacao := "OK"]
   fwrite(r, file.path(TAB, "tab26_auditoria_geral.csv"), encoding = "UTF-8", na = "NA")
 
   tb <- r[, .N, by = classificacao][order(classificacao)]

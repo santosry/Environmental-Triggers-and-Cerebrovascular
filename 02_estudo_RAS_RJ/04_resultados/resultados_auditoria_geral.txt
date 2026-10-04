@@ -1,7 +1,7 @@
 =====================================================================
 BATERIA DE AUDITORIA GERAL DO REPOSITORIO
 R R version 4.6.1 (2026-06-24 ucrt) | data.table 1.18.4
-inicio: 2026-10-03 21:15:53
+inicio: 2026-10-04 20:03:23
 repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 =====================================================================
 
@@ -16,11 +16,11 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 2. RECORTE CID VERSIONADO ===========
   lendo os microdados brute para re-derivar o recorte...
-     40/191 | 0.6 min
-     80/191 | 1.2 min
-    120/191 | 1.9 min
-    160/191 | 2.6 min
-    191/191 | 3.3 min
+     40/191 | 0.5 min
+     80/191 | 1.1 min
+    120/191 | 1.7 min
+    160/191 | 2.4 min
+    191/191 | 3.0 min
   [OK     ] Falhas de leitura dos .rds do SIH                          0 
   [OK     ] Registros brutos SIH relidos                               11.947.354 referencia: 11.947.354
   [INFO   ] Registros do estudo nos brutos (antes de RJ/periodo)       321.911 
@@ -44,7 +44,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Linhas do recorte SIM fora do RJ                           0 
   [OK     ] DTOBITO invalida no recorte SIM                            0 
   [OK     ] Diferenca de obitos por ano (SIM re-derivacao x CSV)       0 
-  tempo da re-derivacao: 3.9 min
+  tempo da re-derivacao: 3.8 min
 
 =========== 3. COERENCIA ENTRE ARTEFATOS ===========
   [OK     ] Coorte analitica existe                                    sim 
@@ -88,8 +88,8 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] README contem '192.228'                                    sim 
 
 =========== 5. CODIGO E REPRODUTIBILIDADE ===========
-  [INFO   ] Scripts R no diretorio de scripts                          21 
-  [INFO   ] Scripts Python no diretorio de scripts                     4 
+  [OK     ] Scripts R no diretorio de scripts                          21 
+  [OK     ] Scripts Python no diretorio de scripts                     3 
   [OK     ] Scripts R com erro de sintaxe                              0 
   [OK     ] Scripts Python com erro de sintaxe                         0 
   [OK     ] Linhas de codigo R com caminho absoluto                    0 
@@ -99,7 +99,7 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
   [OK     ] Scripts do diretorio ausentes do README                    0 
 
 =========== 6. PRIVACIDADE E HIGIENE DO REPOSITORIO ===========
-  [INFO   ] Arquivos versionados nesta frente                          171 
+  [INFO   ] Arquivos versionados nesta frente                          192 
   [OK     ] CSVs versionados com campo identificavel direto            0 
   [OK     ] Arquivos versionados maiores que 50 MB                     0 
   [INFO   ] Maior arquivo versionado (MB)                              37.36 
@@ -110,14 +110,9 @@ repo: C:/Users/oorie/OneDrive/Documentos/TRABALHOS/DLNM
 
 =========== 7. CONSOLIDACAO ===========
   verificacoes registradas: 84
-  ATENCAO   1
-  INFO      8
-  OK       75
-
-  ATENCAO:
-    - 1 | Competicoes SIH ausentes | 1
+  OK       84
 
 relatorios gravados:
   10_auditoria/AUDITORIA_GERAL.md
   05_tabelas/tab26_auditoria_geral.csv
-fim: 2026-10-03 21:19:53
+fim: 2026-10-04 20:07:26

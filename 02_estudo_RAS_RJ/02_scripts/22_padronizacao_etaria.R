@@ -2,10 +2,10 @@
 # Padronizacao etaria direta das taxas de internacao (SIH) e de mortalidade (SIM)
 # por doencas cerebrovasculares, por regiao de saude e para o estado.
 #
-# Método: referencia = estrutura etaria do RJ no Censo 2010 (IBGE/SIDRA tabela 200,
-# variavel 93, grupos de idade 1140-1155 e 2503), por municipio, agregada as nove
-# regioes. Como nao ha denominador etario anual, a populacao de cada regiao-ano e
-# obtida aplicando a estrutura etaria de 2010 (da propria regiao) ao total do ano.
+# Método: referencia = estrutura etaria do RJ no Censo 2022 (IBGE/SIDRA tabela 9514,
+# variavel 93, grupos de idade da classificacao c287), por municipio, agregada as
+# nove regioes. Como nao ha denominador etario anual, a populacao de cada regiao-ano
+# e obtida aplicando a estrutura etaria de 2022 (da propria regiao) ao total do ano.
 # Taxa padronizada: ASR = sum_i (eventos_i / pop_i * w_i) / sum_i w_i.
 #
 # Entradas: coorte_glmm_2014_2024.csv, sim_cid_estudo_2014_2024.csv,
@@ -43,45 +43,44 @@ suppressWarnings({
   logcon <- file(file.path(RES, "resultados_padronizacao_etaria.txt"), open = "wt", encoding = "UTF-8")
   say <- function(...) { m <- paste0(...); cat(m, "\n"); writeLines(m, logcon); flush(logcon) }
 
-  say("PADRONIZACAO ETARIA DAS TAXAS | inicio: ", format(Sys.time()))
+  say("PADRONIZACAO ETARIA DAS TAXAS | referencia: Censo 2022 | inicio: ", format(Sys.time()))
 
-  GRUPOS <- c("1140"="0-4","1141"="5-9","1142"="10-14","1143"="15-19","1144"="20-24",
-              "1145"="25-29","1146"="30-34","1147"="35-39","1148"="40-44","1149"="45-49",
-              "1150"="50-54","1151"="55-59","1152"="60-64","1153"="65-69","1154"="70-74",
-              "1155"="75-79",
-              ## o agregado "80 anos ou mais" (2503) vem suprimido no SIDRA; usam-se
-              ## os grupos individuais 80-84, 85-89, 90-94, 95-99 e 100+
-              "6802"="80+","6803"="80+","92963"="80+","92964"="80+","92965"="80+",
-              "2503"="80+")
+  ## Grupos de idade quinquenais da classificacao c287 (tabela 9514, Censo 2022).
+  ## O grupo "80 anos ou mais" e formado por 80-84, 85-89, 90-94, 95-99 e 100+.
+  GRUPOS <- c("93070"="0-4","93084"="5-9","93085"="10-14","93086"="15-19",
+              "93087"="20-24","93088"="25-29","93089"="30-34","93090"="35-39",
+              "93091"="40-44","93092"="45-49","93093"="50-54","93094"="55-59",
+              "93095"="60-64","93096"="65-69","93097"="70-74","93098"="75-79",
+              "49108"="80+","49109"="80+","60040"="80+","60041"="80+","6653"="80+")
   ROTULOS <- unique(unname(GRUPOS))
   CORTES <- c(0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,Inf)
 
   lk <- fread(file.path(DLNM, "lookup_municipio_macrorregiao.csv"), colClasses="character", encoding="UTF-8")
   lk[, ibge6 := sprintf("%06s", ibge6)][, ibge7 := sprintf("%07s", ibge7)]
 
-  ## ---------------- 1. populacao por idade (Censo 2010) ----------------
+  ## ---------------- 1. populacao por idade (Censo 2022) ----------------
   cods <- paste(lk$ibge7, collapse=",")
-  url <- paste0("https://apisidra.ibge.gov.br/values/t/200/n6/", cods, "/v/93/p/2010/c58/all")
+  url <- paste0("https://apisidra.ibge.gov.br/values/t/9514/n6/", cods, "/v/93/p/2022/c287/all")
   fetch_sidra <- function(u, tries = 5) {
     for (k in seq_len(tries)) {
       r <- tryCatch(fromJSON(u), error = function(e) NULL)
       if (!is.null(r) && "D1C" %in% names(r)) return(as.data.table(r))
       Sys.sleep(5 * k)
     }
-    stop("falha ao obter a estrutura etaria do SIDRA (tabela 200)")
+    stop("falha ao obter a estrutura etaria do SIDRA (tabela 9514, Censo 2022)")
   }
   raw <- fetch_sidra(url)
-  raw <- raw[grepl("^[0-9]{7}$", D1C) & D5C == "0" & D6C == "0" & D4C %in% names(GRUPOS)]
-  pop10 <- raw[, .(ibge7 = sprintf("%07s", as.character(D1C)),
-                   grupo = unname(GRUPOS[as.character(D4C)]),
-                   pop = suppressWarnings(as.numeric(V)))]
-  pop10[is.na(pop), pop := 0]
-  pop10 <- merge(pop10, lk[, .(ibge7, regiao_saude = macro_regiao)], by="ibge7", all.x=TRUE)
-  pop_reg10 <- pop10[, .(pop = sum(pop, na.rm=TRUE)), by=.(regiao_saude, grupo)]
+  raw <- raw[grepl("^[0-9]{7}$", D1C) & D4C %in% names(GRUPOS)]
+  pop_ref <- raw[, .(ibge7 = sprintf("%07s", as.character(D1C)),
+                     grupo = unname(GRUPOS[as.character(D4C)]),
+                     pop = suppressWarnings(as.numeric(V)))]
+  pop_ref[is.na(pop), pop := 0]
+  pop_ref <- merge(pop_ref, lk[, .(ibge7, regiao_saude = macro_regiao)], by="ibge7", all.x=TRUE)
+  pop_reg_ref <- pop_ref[, .(pop = sum(pop, na.rm=TRUE)), by=.(regiao_saude, grupo)]
   ## estado como pseudo-regiao
-  pop_reg10 <- rbind(pop_reg10,
-                     pop_reg10[, .(regiao_saude = "ESTADO DO RJ", pop = sum(pop)), by=grupo])
-  pop_reg10[, grupo := factor(grupo, levels=ROTULOS)]
+  pop_reg_ref <- rbind(pop_reg_ref,
+                       pop_reg_ref[, .(regiao_saude = "ESTADO DO RJ", pop = sum(pop)), by=grupo])
+  pop_reg_ref[, grupo := factor(grupo, levels=ROTULOS)]
 
   ## totais populacionais anuais (fonte auditada)
   pop <- fread(file.path(DLNM, "populacao_sidra_municipio_rj_2010-2025.csv"), encoding="UTF-8")
@@ -91,14 +90,14 @@ suppressWarnings({
   pop_tot <- pop[ano %in% 2014:2024, .(pop_total = sum(populacao, na.rm=TRUE)), by=.(regiao_saude, ano)]
   pop_tot <- rbind(pop_tot, pop[ano %in% 2014:2024,
                  .(regiao_saude = "ESTADO DO RJ", pop_total = sum(populacao, na.rm=TRUE)), by=ano])
-  base10 <- pop_reg10[, .(pop_total_2010 = sum(pop)), by=regiao_saude]
-  ref <- pop_reg10[regiao_saude == "ESTADO DO RJ", .(grupo, w = pop)]
+  base_ref <- pop_reg_ref[, .(pop_total_ref = sum(pop)), by=regiao_saude]
+  ref <- pop_reg_ref[regiao_saude == "ESTADO DO RJ", .(grupo, w = pop)]
 
-  den <- CJ(regiao_saude = unique(pop_reg10$regiao_saude), ano = 2014:2024)
-  den <- merge(den, pop_reg10, by="regiao_saude", allow.cartesian=TRUE)
+  den <- CJ(regiao_saude = unique(pop_reg_ref$regiao_saude), ano = 2014:2024)
+  den <- merge(den, pop_reg_ref, by="regiao_saude", allow.cartesian=TRUE)
   den <- merge(den, pop_tot, by=c("regiao_saude","ano"))
-  den <- merge(den, base10, by="regiao_saude")
-  den[, pop_i := pop * pop_total / pop_total_2010]
+  den <- merge(den, base_ref, by="regiao_saude")
+  den[, pop_i := pop * pop_total / pop_total_ref]
 
   ## ---------------- 2. eventos por idade ----------------
   co <- fread(file.path(PROC, "coorte_glmm_2014_2024.csv"), encoding="UTF-8",
@@ -150,7 +149,7 @@ suppressWarnings({
     geom_point(size = 2.2) +
     scale_colour_viridis_d(option = "D", end = 0.8) +
     labs(title = "Taxas brutas e padronizadas por idade",
-         subtitle = "Internação e mortalidade por DCV por região de saúde; referência = estrutura etária do RJ (Censo 2010)",
+         subtitle = "Internação e mortalidade por DCV por região de saúde; referência = estrutura etária do RJ (Censo 2022)",
          x = "Taxa bruta (/100.000)", y = "Taxa padronizada (/100.000)",
          colour = "Ano", shape = "Desfecho") +
     theme_minimal(base_size = 10) +

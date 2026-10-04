@@ -83,7 +83,7 @@ e todas as referências são citadas no texto.
 | Ponto | Tratamento |
 |---|---|
 | **Codificação (I64 ≈ 56,6%)** | Declarada como limitação e verificada por **análise de sensibilidade que exclui a categoria I64** (ICC 16,53%; MOR 2,160), incorporada aos Resultados e às Limitações. A heterogeneidade hospitalar permanece. |
-| **Padronização etária** | Aplicada como **sensibilidade** com a estrutura do Censo 2010; o padrão e a ordenação regional foram preservados. Declarada explicitamente nos Métodos e nas Limitações. |
+| **Padronização etária** | Aplicada como **sensibilidade** com a estrutura do Censo 2022; o padrão e a ordenação regional foram preservados. Declarada explicitamente nos Métodos e nas Limitações. |
 | **UTI como marcador não causal** | OR reportado sem leitura causal; **decomposição de Mundlak** (intra-hospitalar e contextual); modelo sem UTI como sensibilidade (ICC 17,25%); ICC apresentado como **faixa** (14,78%–17,25%). |
 | **Componente hospitalar residual (~¾)** | Declarado que variáveis de estrutura e processo (ensino, volume, habilitações) **não estavam disponíveis**, de modo que a natureza da variação residual não é identificável com dados administrativos. |
 | **Fluxo como descrição ecológica** | Explicitado que a análise de fluxos é **descritiva** e não permite inferir barreiras individuais de acesso nem causalidade. |
@@ -159,7 +159,7 @@ O estudo foi integralmente reformulado para a janela de **2014 a 2024** (11 anos
 dados e análises. Os recortes e a coorte foram refiltrados (`00_migrar_2014_2024.R`, com
 `01` e `02` atualizados) e todo o pipeline foi reexecutado. As sub-janelas de robustez
 passaram a ser 2014–2019 e 2020–2024. A estrutura etária de referência da padronização
-permanece a do Censo 2010.
+permanece a do Censo 2022.
 
 | Indicador | 2010–2024 | 2014–2024 |
 |---|---:|---:|

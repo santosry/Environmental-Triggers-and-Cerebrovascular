@@ -1,6 +1,6 @@
-PADRONIZACAO ETARIA DAS TAXAS | inicio: 2026-10-03 21:36:13
+PADRONIZACAO ETARIA DAS TAXAS | referencia: Censo 2022 | inicio: 2026-10-04 20:02:08
 linhas da tabela de padronizacao: 220
 figura gravada: fig_ex26_padronizacao_etaria.png
   Internação - estado: bruta 105.90 -> 136.79; padronizada 105.90 -> 136.79
   Mortalidade - estado: bruta 58.20 -> 58.26; padronizada 58.20 -> 58.26
-fim: 2026-10-03 21:36:18
+fim: 2026-10-04 20:02:13
