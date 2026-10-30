@@ -58,7 +58,7 @@ SIH-RD/SUS (microdatasus), IBGE/SIDRA (tabela 6579 — população), 9 regiões 
 | L5 | **Falácia de polo assistencial** (Barra do Piraí) — taxa municipal distorcida por município de residência vs. internação, não decomposta. | MÉDIA |
 | L6 | **Extração individual incompleta**: os CSVs corrigidos não contêm raça/cor, caráter, permanência, custo ou CNES — as análises dessas variáveis do artigo não são reprodutíveis a partir dos arquivos salvos. | ALTA |
 | L7 | Custos em reais correntes, sem correção inflacionária. | MÉDIA |
-| L8 | Declaração de uso de IA (Copilot, Claude) na elaboração — incompatível com edital-alvo. | ALTA (para submissão) |
+| L8 | Declaração de uso de IA (Copilot, Claude) na elaboração — incompatível com as normas editoriais. | ALTA (para submissão) |
 | L9 | Conversão de idade SIM incorreta no texto do estudo DLNM ("228 = 28 anos"; correto: 228 = 28 horas). | BAIXA (documental) |
 | L10 | Referências majoritariamente internacionais; ausência de base brasileira de regionalização/RAS. | MÉDIA |
 

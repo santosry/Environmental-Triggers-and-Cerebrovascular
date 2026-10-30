@@ -179,7 +179,7 @@ suppressWarnings({
           panel.grid.minor = element_blank())
   ggsave(file.path(FIG_SUP, "fig_funnel_hospitais.png"), g3, width = 9, height = 6, dpi = 300,
          device = ragg::agg_png)
-  ## Figura 2 do manuscrito: mesma figura, em JPEG 300 dpi (requisito do edital).
+  ## Figura 2 do manuscrito: mesma figura, em JPEG 300 dpi.
   ggsave(file.path(FIG, "figura2_funnel_hospitais.jpg"), g3, width = 9, height = 6, dpi = 300,
          device = ragg::agg_jpeg, quality = 95)
   say("gravada fig_funnel_hospitais.png (suplementares) e figura2_funnel_hospitais.jpg (manuscrito)")

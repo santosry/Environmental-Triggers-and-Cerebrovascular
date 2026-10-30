@@ -1,0 +1,2 @@
+modelo,n,obitos,sigma2,ICC,MOR,logLik,AIC,df,LR_vs_base,gl_LR,p_LR,tempo_min
+volume,222832,42426,0.535805,0.140055,2.01018,-96089.212,192222.423,22,7.62,1,0.00578595428728922,10.05

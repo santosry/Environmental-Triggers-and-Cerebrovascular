@@ -1,0 +1,25 @@
+=====================================================================
+EXTENSOES DO GLMM PRINCIPAL - CONSOLIDADO
+base: ICC = 14.497% | AIC = 192228.04
+=====================================================================
+volume_ano               conv=0 n=222.832 sigma2= 0.60603 ICC= 15.556% delta= +1.059 p.p. AIC= 191472.77 LRT=  759.27 gl= 2 p=1.34e-165
+ano                      conv=0 n=222.832 sigma2= 0.62859 ICC= 16.042% delta= +1.545 p.p. AIC= 191477.89 LRT=  752.14 gl= 1 p=1.37e-165
+volume                   conv=0 n=222.832 sigma2= 0.53580 ICC= 14.006% delta= -0.491 p.p. AIC= 192222.42 LRT=    7.62 gl= 1 p=5.79e-03
+interacao_regiao_ano     conv=1 n=222.832 sigma2= 0.61190 ICC= 15.683% delta= +1.186 p.p. AIC= 191231.57 LRT= 1014.47 gl= 9 p=1.31e-212  <== NAO CONVERGIU
+
+--- COEFICIENTES ADICIONADOS ---
+ano                      ano                                      OR=  0.9484 (IC95%   0.9448-  0.9520) p=6.27e-165
+interacao_regiao_ano     regiao_saudeMetropolitana I:ano          OR=  0.9685 (IC95%   0.9635-  0.9734) p=1.29e-34
+interacao_regiao_ano     regiao_saudeMetropolitana II:ano         OR=  0.9102 (IC95%   0.9008-  0.9197) p=1.82e-70
+interacao_regiao_ano     regiao_saudeBaixada Litoranea:ano        OR=  0.9919 (IC95%   0.9718-  1.0124) p=4.35e-01
+interacao_regiao_ano     regiao_saudeNorte:ano                    OR=  0.8882 (IC95%   0.8744-  0.9022) p=1.18e-49
+interacao_regiao_ano     regiao_saudeNoroeste:ano                 OR=  0.9678 (IC95%   0.9450-  0.9912) p=7.27e-03
+interacao_regiao_ano     regiao_saudeSerrana:ano                  OR=  0.9318 (IC95%   0.9193-  0.9444) p=9.65e-25
+interacao_regiao_ano     regiao_saudeCentro-Sul:ano               OR=  0.9638 (IC95%   0.9446-  0.9833) p=3.12e-04
+interacao_regiao_ano     regiao_saudeMedio Paraiba:ano            OR=  0.9154 (IC95%   0.9042-  0.9267) p=6.87e-45
+interacao_regiao_ano     regiao_saudeBaia da Ilha Grande:ano      OR=  0.9329 (IC95%   0.9075-  0.9589) p=7.79e-07
+volume                   vol_hosp_1000                            OR=  1.0816 (IC95%   1.0233-  1.1432) p=5.56e-03
+volume_ano               vol_hosp_1000                            OR=  1.0837 (IC95%   1.0218-  1.1494) p=7.37e-03
+volume_ano               ano                                      OR=  0.9484 (IC95%   0.9448-  0.9520) p=8.10e-165
+
+fim: 2026-10-29 21:14:47

@@ -52,7 +52,7 @@ de 2026.
 | `10_auditoria/` | Auditorias do estudo anterior, dos dados e da metodologia. |
 | `11_reprodutibilidade/` | Benchmarks, reprodutibilidade, portabilidade e auditabilidade (manifesto SHA-256, Dockerfile). |
 | `12_relatorios/` | Relatórios executivo e final, e comparação antigo×novo. |
-| `13_documentos_referencia/` | PDFs de referência (edital e plano estadual de saúde). |
+| `13_documentos_referencia/` | PDF de referência (Plano Estadual de Saúde 2024–2027). |
 
 ### Detalhamento de `01_dados/`
 
@@ -112,6 +112,15 @@ $R = "C:\Program Files\R\R-4.6.1\bin\Rscript.exe"
 & $R "02_scripts\24_mapa_regioes_saude.R"     # mapas por regiao de saude (geobr)
 & $R "02_scripts\26_recalculo_duas_classes.R" # indicadores com I60-I69 + G45/G46
 
+# 9b. tamanhos de efeito (V de Cramer, inclinacao de Sen) e extensoes do GLMM
+& $R "02_scripts\28_tamanhos_efeito.R"
+# extensoes opcionais do GLMM (uma execucao por modelo, ~10 min cada):
+# & $R "02_scripts\27_glmm_extensoes.R" ano
+# & $R "02_scripts\27_glmm_extensoes.R" volume
+# & $R "02_scripts\27_glmm_extensoes.R" volume_ano
+# & $R "02_scripts\27_glmm_extensoes.R" interacao_regiao_ano
+# & $R "02_scripts\27_consolidar_extensoes.R"
+
 # 10. denominadores populacionais e custos (analise atual)
 & $R "02_scripts\14_verificacao_sidra.R"
 & $R "02_scripts\15_deflacao_ipca.R"
@@ -143,7 +152,7 @@ manuscrito.
 | `02_montar_coorte.R` | Coorte analítica a partir dos `.rds` baixados (I60–I69 + G45/G46 completos). |
 | `03_tabelas_descritivas.R` | Tabelas descritivas da coorte. |
 | `04_isu_regiao_saude.R` | Índice de Swaroop-Uemura por região de saúde. |
-| `05_glmm_principal.R` | GLMM principal, OR, IC95%, p-valores e FDR. |
+| `05_glmm_principal.R` | GLMM principal, OR, IC95%, p-valores, FDR, AUC e métricas de calibração. |
 | `06_glmm_uti.R` | Tratamento do uso de UTI (marcador de gravidade; decomposição *within/between* de Mundlak). |
 | `07_auditoria_consistencia.R` | Auditoria de incongruências (SIH bruto, coorte, triangulação SIH×SIM, modelo). |
 | `08_glmm_robustez.R` | Bateria de 18 cenários de robustez. |
@@ -161,6 +170,9 @@ manuscrito.
 | `22_padronizacao_etaria.R` | Padronização etária direta das taxas de internação e mortalidade (referência: Censo 2022, IBGE/SIDRA), por região de saúde e estado. |
 | `24_mapa_regioes_saude.R` | Mapas coropléticos das nove regiões de saúde pela malha municipal do `geobr` dissolvida; gera a Figura 1 do manuscrito (série temporal + mapa). |
 | `26_recalculo_duas_classes.R` | Recálculo dos indicadores descritivos com a coorte completa (I60-I69 + G45/G46): Tabela 1 por macrorregião, fluxo, concentração, custos e taxas. |
+| `27_glmm_extensoes.R` | Extensões de sensibilidade do GLMM: ano, volume hospitalar, volume + ano e interação região × ano, com LRT e AIC contra o modelo base. Executa um modelo por chamada. |
+| `27_consolidar_extensoes.R` | Reúne as extensões do GLMM em `tab29_glmm_extensoes.csv`. |
+| `28_tamanhos_efeito.R` | V de Cramér com IC95% bootstrap para as associações categóricas e inclinação de Sen com IC95% para as tendências de 11 pontos. |
 
 **Paleta:** todas as figuras usam a paleta **viridis** (`scale_*_viridis_*` e `viridisLite::viridis()`), escolhida por ser perceptualmente uniforme, legível em escala de cinza e segura para daltonismo.
 
@@ -187,6 +199,10 @@ manuscrito.
 7. **Assimetria SIH × SIM:** a coorte de internações inclui G45/G46, mas a série de
    mortalidade permanece em I60–I69. G45/G46 aparecem como causa básica em 60 de
    2.143.313 óbitos (0,0028%) — assimetria desprezível, declarada como limitação.
+8. **Inferência com n grande e séries curtas:** o qui-quadrado é acompanhado do V de
+   Cramér com IC95% bootstrap; o Mann-Kendall (11 pontos anuais) é acompanhado da
+   inclinação de Sen com IC95%; o Hosmer-Lemeshow é descritivo e a calibração é lida
+   pelo intercepto e pela inclinação, não pelo p do HL.
 
 ---
 
@@ -198,9 +214,9 @@ manuscrito.
 | Óbitos intra-hospitalares | **42.426 (18,88%)** |
 | Estabelecimentos (CNES) | 254 |
 | Regiões de saúde | 9 |
-| VPC / ICC hospitalar | **14,50%** (IC95% 12,29–18,06) |
+| VPC / ICC hospitalar | **14,50%** (IC95% 11,67–17,86) |
 | MOR | **2,039** (IC95% 1,911–2,253) |
-| AUC condicional | 0,740 |
+| AUC condicional | 0,736 |
 | Coeficientes significativos após FDR | **14 de 19** |
 | ISU estadual por DCV* | **92,53%** |
 
@@ -208,22 +224,22 @@ manuscrito.
 G45/G46 = 19.070 (9,45%; 12,16%). Subtipos com maior letalidade: isquêmico (I63,
 27,35%), hemorrágico (I60–I62, 26,66%) e não especificado (I64, 21,13%).
 
-**Componente hospitalar:** σ² = 0,578; desvio-padrão hospitalar = 0,760; AIC =
-192.228. Dos 206 hospitais com eventos suficientes, limites ingênuos classificariam
-102 como atípicos, mas apenas **3** permanecem fora dos limites após acomodar a
-variabilidade real entre serviços.
+**Componente hospitalar:** σ² = 0,558; desvio-padrão hospitalar = 0,747; AIC =
+192.228. Dos 178 hospitais com ao menos cinco óbitos esperados, limites ingênuos
+classificariam 82 como atípicos, mas apenas **4** permanecem fora dos limites após
+acomodar a variabilidade real entre serviços.
 
 ### Odds ratios ajustados (destaques)
 
 | Covariável | OR (IC95%) | q (FDR) |
 |---|---|---|
-| Idade (+1 DP = 14,9 anos) | 1,460 (1,444–1,476) | < 1,0 × 10⁻³⁰⁰ |
-| Hemorrágico (I60–I62) | 1,264 (1,222–1,307) | 1,23 × 10⁻⁴¹ |
-| Isquêmico (I63) | 1,070 (1,023–1,119) | 4,60 × 10⁻³ |
-| Caráter de urgência | 1,798 (1,679–1,924) | 1,27 × 10⁻⁶³ |
-| Uso de UTI* | 3,904 (3,789–4,022) | < 1,0 × 10⁻³⁰⁰ |
-| Fluxo intermunicipal | 0,951 (0,922–0,980) | 1,90 × 10⁻³ |
-| Médio Paraíba (vs. Metropolitana I) | 0,467 (0,417–0,524) | 1,78 × 10⁻³⁸ |
+| Idade (+1 DP = 14,9 anos) | 1,470 (1,451–1,488) | < 1,0 × 10⁻³⁰⁰ |
+| Hemorrágico (I60–I62) | 1,262 (1,214–1,312) | 4,48 × 10⁻³¹ |
+| Isquêmico (I63) | 1,131 (1,075–1,190) | 3,79 × 10⁻⁶ |
+| Caráter de urgência | 2,279 (2,098–2,476) | 7,18 × 10⁻⁸⁴ |
+| Uso de UTI* | 4,118 (3,982–4,257) | < 1,0 × 10⁻³⁰⁰ |
+| Fluxo intermunicipal | 0,990 (0,957–1,024) | 0,566 (ns) |
+| Médio Paraíba (vs. Metropolitana I) | 0,494 (0,438–0,557) | 1,43 × 10⁻³⁰ |
 
 \* OR sem leitura causal (marcador de gravidade/registro). Referências: subtipo = I64,
 sexo = feminino, caráter = eletiva, região = Metropolitana I.
@@ -325,6 +341,10 @@ o ICC (+0,10 p.p.).
 - **Conferência `glmmTMB` × `lme4`** (subamostra de 20.000): σ² = 0,25490 vs 0,25479
   (0,042%); log-verossimilhanças diferem em 0,0006. Quadratura de Gauss-Hermite
   (`nAGQ = 11`) altera OR em no máximo 0,14% → aproximação de Laplace adequada.
+- **Extensões do GLMM:** ano melhora o AIC (191.478 vs 192.228) e eleva o ICC para
+  16,04%; volume hospitalar tem efeito pequeno (OR 1,082 por 1.000 internações;
+  AIC 192.222; ICC 14,01%); volume + ano fica em AIC 191.473 e ICC 15,56%. A interação
+  região × ano não convergiu (código 1) e não foi retida. Ver `tab29_glmm_extensoes.csv`.
 
 > ⚠️ Carregar `glmmTMB` e `lme4` na mesma sessão R encerra o processo sem mensagem de
 > erro, mesmo com 20 mil registros. Por isso a conferência roda em processo isolado
@@ -426,3 +446,11 @@ A camada de engenharia do estudo está em `11_reprodutibilidade/`:
 
 Fluxo: `versoes_ambiente.R` → `run_all.R` → `teste_regressao.R` → `manifest_sha256.R` →
 `verificar_manifest.R`. Detalhes em `11_reprodutibilidade/README.md`.
+
+---
+
+## Plano de exploração de variáveis
+
+O plano exploratório para testar as demais variáveis do SIH/SIM, com registro
+obrigatório de todos os modelos (inclusive nulos e não convergidos), está em
+[`PLANO_EXPLORACAO_VARIAVEIS_GLMM.md`](PLANO_EXPLORACAO_VARIAVEIS_GLMM.md).

@@ -21,6 +21,7 @@
 #   05_tabelas/tab3_glmm_or.csv
 #   05_tabelas/tab4_glmm_componentes.csv
 #   05_tabelas/tab5_calibracao.csv
+#   05_tabelas/tab5b_calibracao_metricas.csv
 #   01_dados/processados/previsoes_glmm.csv
 #   01_dados/processados/efeitos_hospital_glmm.csv
 #   01_dados/processados/modelo_glmm_principal.rds
@@ -233,30 +234,51 @@ suppressWarnings({
     say(sprintf("  %5d %7d %7d %11.1f %7.2f %7.2f", H$tab$g[i], H$tab$n[i], H$tab$obs[i],
                 H$tab$esp[i], 100 * H$tab$obs[i] / H$tab$n[i],
                 100 * H$tab$esp[i] / H$tab$n[i]))
-  say(sprintf("  Hosmer-Lemeshow: X2=%.2f  gl=%d  p=%s", H$stat, H$gl, p_cient(H$p)))
-  say("  Nota: com n desta ordem o teste de Hosmer-Lemeshow tem poder excessivo e")
-  say("  rejeita quase qualquer modelo. A calibracao deve ser lida pela tabela acima,")
-  say("  pela inclinacao e pelo intercepto de calibracao.")
+  say(sprintf("  Hosmer-Lemeshow (descritivo): X2=%.2f  gl=%d  p=%s",
+              H$stat, H$gl, p_cient(H$p)))
+  say("  Nota: o p de Hosmer-Lemeshow depende do tamanho da amostra e, com n desta")
+  say("  ordem, rejeita quase qualquer modelo. Ele NAO e usado como criterio de")
+  say("  adequacao. A calibracao e lida pelo intercepto e pela inclinacao abaixo,")
+  say("  que nao dependem de um ponto de corte de p.")
   H$tab[, `:=`(obs_pct = round(100 * obs / n, 2), esp_pct = round(100 * esp / n, 2),
                tipo = "marginal")]
   fwrite(H$tab, file.path(TAB, "tab5_calibracao.csv"), encoding = "UTF-8")
 
   lp <- qlogis(pmin(pmax(d$p_marg, 1e-9), 1 - 1e-9))
   cs <- glm(d$obito_hospitalar ~ lp, family = binomial)
-  say(sprintf("  MARGINAL   intercepto (in-the-large) = %.4f (EP %.4f) | inclinacao = %.4f (EP %.4f)",
-              coef(cs)[1], summary(cs)$coefficients[1, 2],
-              coef(cs)[2], summary(cs)$coefficients[2, 2]))
+  b1 <- coef(cs); se1 <- summary(cs)$coefficients[, 2]
+  say(sprintf("  MARGINAL   intercepto (in-the-large) = %.4f (IC95%% %.4f a %.4f) | inclinacao = %.4f (IC95%% %.4f a %.4f)",
+              b1[1], b1[1] - 1.96 * se1[1], b1[1] + 1.96 * se1[1],
+              b1[2], b1[2] - 1.96 * se1[2], b1[2] + 1.96 * se1[2]))
 
   Hc <- hosmer_lemeshow(d$obito_hospitalar, d$p_cond)
   lp2 <- qlogis(pmin(pmax(d$p_cond, 1e-9), 1 - 1e-9))
   cs2 <- glm(d$obito_hospitalar ~ lp2, family = binomial)
-  say(sprintf("  CONDICIONAL intercepto (in-the-large) = %.4f (EP %.4f) | inclinacao = %.4f (EP %.4f)",
-              coef(cs2)[1], summary(cs2)$coefficients[1, 2],
-              coef(cs2)[2], summary(cs2)$coefficients[2, 2]))
+  b2 <- coef(cs2); se2 <- summary(cs2)$coefficients[, 2]
+  say(sprintf("  CONDICIONAL intercepto (in-the-large) = %.4f (IC95%% %.4f a %.4f) | inclinacao = %.4f (IC95%% %.4f a %.4f)",
+              b2[1], b2[1] - 1.96 * se2[1], b2[1] + 1.96 * se2[1],
+              b2[2], b2[2] - 1.96 * se2[2], b2[2] + 1.96 * se2[2]))
   say("  A previsao condicional e a que reproduz os riscos estimados por hospital.")
   Hc$tab[, `:=`(obs_pct = round(100 * obs / n, 2), esp_pct = round(100 * esp / n, 2),
                 tipo = "condicional")]
   fwrite(rbind(H$tab, Hc$tab), file.path(TAB, "tab5_calibracao.csv"), encoding = "UTF-8")
+
+  ## Metricas de calibracao que nao dependem do p do Hosmer-Lemeshow.
+  ## O HL fica registrado como diagnostico descritivo, nao como teste.
+  cal_met <- rbind(
+    data.table(tipo = "marginal", n = nrow(d),
+               intercepto = b1[1], ep_intercepto = se1[1],
+               intercepto_lo = b1[1] - 1.96 * se1[1], intercepto_hi = b1[1] + 1.96 * se1[1],
+               inclinacao = b1[2], ep_inclinacao = se1[2],
+               inclinacao_lo = b1[2] - 1.96 * se1[2], inclinacao_hi = b1[2] + 1.96 * se1[2],
+               HL_X2 = H$stat, HL_gl = H$gl, HL_p = H$p),
+    data.table(tipo = "condicional", n = nrow(d),
+               intercepto = b2[1], ep_intercepto = se2[1],
+               intercepto_lo = b2[1] - 1.96 * se2[1], intercepto_hi = b2[1] + 1.96 * se2[1],
+               inclinacao = b2[2], ep_inclinacao = se2[2],
+               inclinacao_lo = b2[2] - 1.96 * se2[2], inclinacao_hi = b2[2] + 1.96 * se2[2],
+               HL_X2 = Hc$stat, HL_gl = Hc$gl, HL_p = Hc$p))
+  fwrite(cal_met, file.path(TAB, "tab5b_calibracao_metricas.csv"), encoding = "UTF-8")
   say("\n--- R2 ---")
   say("  marginal: ", tryCatch(round(performance::r2(fit$modelo)$R2_marginal, 4),
                                 error = function(e) "erro"))

@@ -1,0 +1,16 @@
+=====================================================================
+EXTENSAO DO GLMM PRINCIPAL: ano
+R R version 4.6.1 (2026-06-24 ucrt) | glmmTMB 1.1.15.2
+inicio: 2026-10-29 20:41:41
+=====================================================================
+modelo base: AIC=192228.04 logLik=-96093.02 df=21 n=222832
+formula: obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti +      fluxo_inter + regiao_saude + (1 | CNES) + ano
+tempo (min): 18.07
+convergencia: 0 | pdHess: TRUE
+AIC=191477.9 | logLik=-95716.95 | sigma2=0.62859 | ICC=16.042% | MOR=2.1303
+LRT vs base: LR=752.14 gl=1 p=1.37e-165
+
+--- COEFICIENTES DOS TERMOS ADICIONADOS ---
+  ano                                                     OR=  0.9484 (IC95%   0.9448-  0.9520) p=6.27e-165
+
+fim: 2026-10-29 21:00:01

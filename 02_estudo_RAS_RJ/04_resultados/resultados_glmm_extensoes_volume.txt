@@ -1,0 +1,16 @@
+=====================================================================
+EXTENSAO DO GLMM PRINCIPAL: volume
+R R version 4.6.1 (2026-06-24 ucrt) | glmmTMB 1.1.15.2
+inicio: 2026-10-29 20:41:41
+=====================================================================
+modelo base: AIC=192228.04 logLik=-96093.02 df=21 n=222832
+formula: obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti +      fluxo_inter + regiao_saude + (1 | CNES) + vol_hosp_1000
+tempo (min): 10.05
+convergencia: 0 | pdHess: TRUE
+AIC=192222.42 | logLik=-96089.21 | sigma2=0.5358 | ICC=14.005% | MOR=2.0102
+LRT vs base: LR=7.62 gl=1 p=0.0058
+
+--- COEFICIENTES DOS TERMOS ADICIONADOS ---
+  vol_hosp_1000                                           OR=  1.0816 (IC95%   1.0233-  1.1432) p=0.0056
+
+fim: 2026-10-29 20:51:52

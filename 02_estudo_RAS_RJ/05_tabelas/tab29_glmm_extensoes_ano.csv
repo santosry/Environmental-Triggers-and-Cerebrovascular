@@ -1,0 +1,2 @@
+modelo,n,obitos,sigma2,ICC,MOR,logLik,AIC,df,LR_vs_base,gl_LR,p_LR,tempo_min
+ano,222832,42426,0.62859,0.160418,2.13031,-95716.948,191477.895,22,752.14,1,1.37161184252244e-165,18.07

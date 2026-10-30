@@ -50,6 +50,7 @@ suppressWarnings({
     "22_padronizacao_etaria.R",
     "24_mapa_regioes_saude.R",
     "26_recalculo_duas_classes.R",
+    "28_tamanhos_efeito.R",
     "16_consolidar_dados.py",
     "17_analises_territoriais.py",
     "18_mortalidade_sim.py")

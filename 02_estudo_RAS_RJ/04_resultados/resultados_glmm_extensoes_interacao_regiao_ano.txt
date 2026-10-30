@@ -1,0 +1,24 @@
+=====================================================================
+EXTENSAO DO GLMM PRINCIPAL: interacao_regiao_ano
+R R version 4.6.1 (2026-06-24 ucrt) | glmmTMB 1.1.15.2
+inicio: 2026-10-29 20:41:41
+=====================================================================
+modelo base: AIC=192228.04 logLik=-96093.02 df=21 n=222832
+formula: obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti +      fluxo_inter + regiao_saude + (1 | CNES) + regiao_saude:ano
+tempo (min): 28.31
+convergencia: 1 | pdHess: TRUE
+AIC=191231.57 | logLik=-95585.78 | sigma2=0.6119 | ICC=15.683% | MOR=2.1089
+LRT vs base: LR=1014.47 gl=9 p=1.31e-212
+
+--- COEFICIENTES DOS TERMOS ADICIONADOS ---
+  regiao_saudeMetropolitana I:ano                         OR=  0.9685 (IC95%   0.9635-  0.9734) p=1.29e-34
+  regiao_saudeMetropolitana II:ano                        OR=  0.9102 (IC95%   0.9008-  0.9197) p=1.82e-70
+  regiao_saudeBaixada Litoranea:ano                       OR=  0.9919 (IC95%   0.9718-  1.0124) p=0.4351
+  regiao_saudeNorte:ano                                   OR=  0.8882 (IC95%   0.8744-  0.9022) p=1.18e-49
+  regiao_saudeNoroeste:ano                                OR=  0.9678 (IC95%   0.9450-  0.9912) p=0.0073
+  regiao_saudeSerrana:ano                                 OR=  0.9318 (IC95%   0.9193-  0.9444) p=9.65e-25
+  regiao_saudeCentro-Sul:ano                              OR=  0.9638 (IC95%   0.9446-  0.9833) p=3.12e-04
+  regiao_saudeMedio Paraiba:ano                           OR=  0.9154 (IC95%   0.9042-  0.9267) p=6.87e-45
+  regiao_saudeBaia da Ilha Grande:ano                     OR=  0.9329 (IC95%   0.9075-  0.9589) p=7.79e-07
+
+fim: 2026-10-29 21:10:08

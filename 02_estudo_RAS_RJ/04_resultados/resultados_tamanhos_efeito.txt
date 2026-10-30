@@ -1,0 +1,42 @@
+=====================================================================
+TAMANHOS DE EFEITO E INCLINACAO DE SEN
+inicio: 2026-10-29 20:44:06
+=====================================================================
+regiao_saude     n= 222832 chi2=   3428.6 gl= 8 p=0.00e+00 | V=0.124 (IC95% 0.120-0.128)
+macro3           n= 222832 chi2=   2617.6 gl= 2 p=0.00e+00 | V=0.108 (IC95% 0.105-0.112)
+sexo             n= 222832 chi2=     12.3 gl= 1 p=4.62e-04 | V=0.007 (IC95% 0.003-0.012)
+faixa_etaria     n= 222832 chi2=   2597.1 gl= 5 p=0.00e+00 | V=0.108 (IC95% 0.104-0.112)
+faixa_sexo       n= 222832 chi2=   2621.8 gl=11 p=0.00e+00 | V=0.108 (IC95% 0.104-0.113)
+car_int          n= 222832 chi2=   1296.5 gl= 1 p=6.62e-284 | V=0.076 (IC95% 0.073-0.080)
+cid3             n= 222832 chi2=   5567.8 gl=11 p=0.00e+00 | V=0.158 (IC95% 0.155-0.162)
+subtipo          n= 222832 chi2=   5154.8 gl= 6 p=0.00e+00 | V=0.152 (IC95% 0.149-0.156)
+raca_cor         n= 171157 chi2=    257.2 gl= 4 p=1.87e-54 | V=0.039 (IC95% 0.035-0.044)
+n_diag_sec       n= 222832 chi2=   7980.1 gl= 7 p=0.00e+00 | V=0.189 (IC95% 0.184-0.194)
+nat_jur_lab      n= 222832 chi2=   3517.7 gl= 2 p=0.00e+00 | V=0.126 (IC95% 0.122-0.129)
+complex_lab      n= 222832 chi2=    849.6 gl= 1 p=8.74e-187 | V=0.062 (IC95% 0.059-0.065)
+Letalidade hospitalar: Cochran-Armitage p=1.87e-06 | Sen=-0.1487 p.p./ano (IC95% -0.4165 a 0.1865)
+
+Tendencias: tau, p e inclinacao de Sen (unidade: taxa por 100.000/ano;
+letalidade em pontos percentuais/ano).
+Internacao    estado           RJ                     tau=+0.709 p=0.0031 | Sen=+3.088 (IC95% +0.941 a +5.640)
+Internacao    regiao_saude     Baia da Ilha Grande    tau=+0.745 p=0.0018 | Sen=+9.839 (IC95% +2.154 a +14.170)
+Internacao    regiao_saude     Baixada Litoranea      tau=+0.855 p=3.42e-04 | Sen=+6.472 (IC95% +4.000 a +9.130)
+Internacao    regiao_saude     Centro-Sul             tau=+0.600 p=0.0127 | Sen=+4.302 (IC95% +0.490 a +9.948)
+Internacao    regiao_saude     Medio Paraiba          tau=+0.745 p=0.0018 | Sen=+12.087 (IC95% +8.717 a +16.724)
+Internacao    regiao_saude     Metropolitana I        tau=+0.491 p=0.0430 | Sen=+1.106 (IC95% +0.147 a +3.007)
+Internacao    regiao_saude     Metropolitana II       tau=+0.855 p=3.42e-04 | Sen=+10.724 (IC95% +8.199 a +13.341)
+Internacao    regiao_saude     Noroeste               tau=-0.055 p=0.8763 | Sen=-0.258 (IC95% -8.468 a +2.948)
+Internacao    regiao_saude     Norte                  tau=+0.600 p=0.0127 | Sen=+11.811 (IC95% +1.548 a +19.594)
+Internacao    regiao_saude     Serrana                tau=-0.382 p=0.1195 | Sen=-9.634 (IC95% -19.242 a +3.508)
+Mortalidade   estado           RJ                     tau=+0.127 p=0.6404 | Sen=+0.126 (IC95% -0.675 a +0.767)
+Mortalidade   regiao_saude     Baia da Ilha Grande    tau=+0.309 p=0.2129 | Sen=+0.624 (IC95% -0.358 a +1.915)
+Mortalidade   regiao_saude     Baixada Litoranea      tau=-0.018 p=1.0000 | Sen=-0.173 (IC95% -0.985 a +1.013)
+Mortalidade   regiao_saude     Centro-Sul             tau=-0.273 p=0.2758 | Sen=-0.779 (IC95% -2.177 a +0.402)
+Mortalidade   regiao_saude     Medio Paraiba          tau=-0.200 p=0.4363 | Sen=-0.345 (IC95% -1.089 a +0.562)
+Mortalidade   regiao_saude     Metropolitana I        tau=+0.200 p=0.4363 | Sen=+0.320 (IC95% -0.821 a +1.010)
+Mortalidade   regiao_saude     Metropolitana II       tau=+0.455 p=0.0617 | Sen=+0.868 (IC95% -0.006 a +1.763)
+Mortalidade   regiao_saude     Noroeste               tau=-0.491 p=0.0430 | Sen=-1.473 (IC95% -2.651 a -0.028)
+Mortalidade   regiao_saude     Norte                  tau=+0.018 p=1.0000 | Sen=+0.053 (IC95% -0.488 a +1.169)
+Mortalidade   regiao_saude     Serrana                tau=-0.527 p=0.0293 | Sen=-1.167 (IC95% -2.567 a -0.178)
+
+fim: 2026-10-29 20:44:20

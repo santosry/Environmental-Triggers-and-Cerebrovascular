@@ -83,5 +83,5 @@ evidência para regionalização / planejamento / RAS / vigilância territoriali
 - **CNS 510/2016** dispensa apreciação por CEP (reavaliada para a inclusão do SIM —
   permanece aplicável, pois o SIM é igualmente banco público anonimizado).
 - LGPD: dados sem identificação pessoal.
-- **Remover declaração de uso de IA** da nova versão (incompatível com o edital-alvo),
-  salvo exigência da revista.
+- **Remover declaração de uso de IA** da nova versão (incompatível com as normas
+  editoriais), salvo exigência da revista.

@@ -1,0 +1,2 @@
+modelo,n,obitos,sigma2,ICC,MOR,logLik,AIC,df,LR_vs_base,gl_LR,p_LR,tempo_min
+interacao_regiao_ano,222832,42426,0.611901,0.156827,2.10888,-95585.784,191231.569,30,1014.47,9,1.30652306258331e-212,28.31

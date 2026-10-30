@@ -2,7 +2,7 @@
 # Banco de figuras exploratorias da análise atual (morbimortalidade
 # cerebrovascular e RAS no RJ, 2014-2024). Produz 25 figuras em
 # 06_figuras/exploratorias/ e as figuras finais do manuscrito em
-# 06_figuras/manuscrito/ (JPEG, 300 dpi, requisito do edital).
+# 06_figuras/manuscrito/ (JPEG, 300 dpi).
 #
 # Todas as figuras usam rótulos acentuados (UTF-8) e, quando ha teste
 # estatístico, trazem o p-valor ou o q-valor (FDR) no rótulo ou na legenda.

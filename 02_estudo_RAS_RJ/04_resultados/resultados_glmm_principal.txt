@@ -1,7 +1,7 @@
 =====================================================================
 GLMM PRINCIPAL - OBITO INTRA-HOSPITALAR
-R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | glmmTMB 1.1.15.2 | lme4 2.0.1
-inicio: 2026-10-03 19:21:34
+R R version 4.6.1 (2026-06-24 ucrt) | motor: glmmTMB | glmmTMB 1.1.15.2 | lme4 2.0.6
+inicio: 2026-10-29 21:00:41
 =====================================================================
 n = 222.832 | obitos = 42.426 (19.04%)
 hospitais (CNES) = 222 | regioes = 9
@@ -28,45 +28,45 @@ niveis de referencia: subtipo=Nao especificado (I64) | sexo=F | car_int=Eletiva 
 
 --- AJUSTE DO MODELO ---
 formula: obito_hospitalar ~ idade_z + sexo + subtipo + car_int + uti +      fluxo_inter + regiao_saude + (1 | CNES)
-tempo de ajuste (min): 1.82
+tempo de ajuste (min): 1.96
 convergiu: TRUE | mensagem: convergence=0; pdHess=TRUE
 singular: FALSE
 log-verossimilhanca: -96093.02 | AIC: 192228.04
 
 --- VARIANCIA DOS EFEITOS ALEATORIOS ---
 
-Variancia hospitalar (s2_hosp) = 0.55779
-Desvio-padrao hospitalar (s_hosp)  = 0.74685
+Variancia hospitalar (s2_hosp) = 0.55782
+Desvio-padrao hospitalar (s_hosp)  = 0.74687
 VPC / ICC (latente, pi^2/3) = 0.14497  (14.50%)
 MOR (median odds ratio) = 2.0389
 Proporcao da variancia da mortalidade atribuivel ao hospital = 14.5%
-DP hospitalar IC95% (Wald): 0.65941 a 0.84589
-VPC/ICC IC95%: 0.11674 a 0.17864
+DP hospitalar IC95% (Wald): 0.65943 a 0.84591
+VPC/ICC IC95%: 0.11675 a 0.17865
 MOR IC95%: 1.8757 a 2.2409
 ICC performance::icc: 0.14497
 
 --- OR AJUSTADO (IC95%), p e FDR ---
   significancia marcada pela q-valor de Benjamini-Hochberg, nao pelo p bruto
-  (Intercept)                                OR=  0.070 (IC95%  0.061-  0.081)  p=2.02e-280  q=NA ns
-  idade_z                                    OR=  1.467 (IC95%  1.449-  1.485)  p=0.00e+00  q=0.00e+00 ***
-  sexoM                                      OR=  1.017 (IC95%  0.994-  1.040)  p=0.1517  q=0.1922 ns
-  subtipoHemorragico (I60-I62)               OR=  1.262 (IC95%  1.214-  1.312)  p=1.42e-31  q=4.49e-31 ***
-  subtipoIsquemico (I63)                     OR=  1.131 (IC95%  1.075-  1.190)  p=1.80e-06  q=3.80e-06 ***
-  subtipoOclusao e outras (I65-I68)          OR=  0.337 (IC95%  0.304-  0.374)  p=7.39e-94  q=4.68e-93 ***
-  subtipoSequelas (I69)                      OR=  0.667 (IC95%  0.610-  0.731)  p=1.92e-18  q=4.55e-18 ***
-  subtipoAIT (G45)                           OR=  0.563 (IC95%  0.531-  0.597)  p=2.34e-82  q=8.89e-82 ***
+  (Intercept)                                OR=  0.070 (IC95%  0.061-  0.081)  p=2.88e-280  q=NA ns
+  idade_z                                    OR=  1.470 (IC95%  1.451-  1.488)  p=0.00e+00  q=0.00e+00 ***
+  sexoM                                      OR=  1.017 (IC95%  0.994-  1.040)  p=0.1517  q=0.1921 ns
+  subtipoHemorragico (I60-I62)               OR=  1.262 (IC95%  1.214-  1.312)  p=1.42e-31  q=4.48e-31 ***
+  subtipoIsquemico (I63)                     OR=  1.131 (IC95%  1.075-  1.190)  p=1.80e-06  q=3.79e-06 ***
+  subtipoOclusao e outras (I65-I68)          OR=  0.337 (IC95%  0.304-  0.374)  p=7.29e-94  q=4.62e-93 ***
+  subtipoSequelas (I69)                      OR=  0.667 (IC95%  0.610-  0.731)  p=1.91e-18  q=4.54e-18 ***
+  subtipoAIT (G45)                           OR=  0.563 (IC95%  0.531-  0.597)  p=2.34e-82  q=8.88e-82 ***
   subtipoSindromes vasculares (G46)          OR=  0.839 (IC95%  0.666-  1.057)  p=0.1357  q=0.1842 ns
   car_intUrgencia                            OR=  2.279 (IC95%  2.098-  2.476)  p=1.51e-84  q=7.18e-84 ***
   uti                                        OR=  4.118 (IC95%  3.982-  4.257)  p=0.00e+00  q=0.00e+00 ***
   fluxo_inter                                OR=  0.990 (IC95%  0.957-  1.024)  p=0.5658  q=0.5658 ns
-  regiao_saudeMetropolitana II               OR=  0.767 (IC95%  0.672-  0.877)  p=9.77e-05  q=1.86e-04 ***
-  regiao_saudeBaixada Litoranea              OR=  1.068 (IC95%  0.895-  1.273)  p=0.4657  q=0.4916 ns
+  regiao_saudeMetropolitana II               OR=  0.767 (IC95%  0.672-  0.877)  p=9.78e-05  q=1.86e-04 ***
+  regiao_saudeBaixada Litoranea              OR=  1.068 (IC95%  0.895-  1.273)  p=0.4657  q=0.4915 ns
   regiao_saudeNorte                          OR=  0.780 (IC95%  0.625-  0.974)  p=0.0281  q=0.0411 *
   regiao_saudeNoroeste                       OR=  1.161 (IC95%  0.904-  1.492)  p=0.2425  q=0.2879 ns
-  regiao_saudeSerrana                        OR=  1.065 (IC95%  0.934-  1.213)  p=0.3482  q=0.3891 ns
-  regiao_saudeCentro-Sul                     OR=  0.751 (IC95%  0.636-  0.888)  p=8.04e-04  q=0.0014 **
-  regiao_saudeMedio Paraiba                  OR=  0.494 (IC95%  0.438-  0.557)  p=5.24e-31  q=1.42e-30 ***
-  regiao_saudeBaia da Ilha Grande            OR=  0.741 (IC95%  0.599-  0.918)  p=0.0060  q=0.0095 **
+  regiao_saudeSerrana                        OR=  1.065 (IC95%  0.934-  1.213)  p=0.3479  q=0.3888 ns
+  regiao_saudeCentro-Sul                     OR=  0.752 (IC95%  0.636-  0.888)  p=8.05e-04  q=0.0014 **
+  regiao_saudeMedio Paraiba                  OR=  0.494 (IC95%  0.438-  0.557)  p=5.28e-31  q=1.43e-30 ***
+  regiao_saudeBaia da Ilha Grande            OR=  0.741 (IC95%  0.599-  0.918)  p=0.0060  q=0.0094 **
 
 --- RESUMO DA CORRECAO DE FDR ---
   familia global  : 19 testes | p<0,05: 13 | q<0,05: 13
@@ -84,21 +84,22 @@ ICC performance::icc: 0.14497
   calibracao deve ser lida com essa ressalva.
   grupo       n     obs    esperado    obs%    esp%
       1   22315    1283       818.3    5.75    3.67
-      2   22261    2123      1396.2    9.54    6.27
-      3   22313    2629      1855.2   11.78    8.31
-      4   22256    3045      2252.5   13.68   10.12
-      5   22454    3620      2653.0   16.12   11.82
+      2   22260    2123      1396.1    9.54    6.27
+      3   22314    2629      1855.2   11.78    8.31
+      4   22256    3045      2252.4   13.68   10.12
+      5   22454    3620      2652.9   16.12   11.82
       6   22176    3827      2994.6   17.26   13.50
-      7   22212    4409      3399.1   19.85   15.30
-      8   22773    5476      4024.1   24.05   17.67
-      9   21793    6877      4771.4   31.56   21.89
-     10   22279    9137      8694.6   41.01   39.03
-  Hosmer-Lemeshow: X2=4224.36  gl=8  p=0.00e+00
-  Nota: com n desta ordem o teste de Hosmer-Lemeshow tem poder excessivo e
-  rejeita quase qualquer modelo. A calibracao deve ser lida pela tabela acima,
-  pela inclinacao e pelo intercepto de calibracao.
-  MARGINAL   intercepto (in-the-large) = 0.1257 (EP 0.0139) | inclinacao = 0.8738 (EP 0.0076)
-  CONDICIONAL intercepto (in-the-large) = 0.0104 (EP 0.0106) | inclinacao = 1.0081 (EP 0.0071)
+      7   22212    4409      3399.0   19.85   15.30
+      8   22773    5476      4024.0   24.05   17.67
+      9   21793    6877      4771.3   31.56   21.89
+     10   22279    9137      8694.5   41.01   39.03
+  Hosmer-Lemeshow (descritivo): X2=4224.89  gl=8  p=0.00e+00
+  Nota: o p de Hosmer-Lemeshow depende do tamanho da amostra e, com n desta
+  ordem, rejeita quase qualquer modelo. Ele NAO e usado como criterio de
+  adequacao. A calibracao e lida pelo intercepto e pela inclinacao abaixo,
+  que nao dependem de um ponto de corte de p.
+  MARGINAL   intercepto (in-the-large) = 0.1257 (IC95% 0.0985 a 0.1530) | inclinacao = 0.8738 (IC95% 0.8589 a 0.8887)
+  CONDICIONAL intercepto (in-the-large) = 0.0104 (IC95% -0.0103 a 0.0311) | inclinacao = 1.0081 (IC95% 0.9942 a 1.0220)
   A previsao condicional e a que reproduz os riscos estimados por hospital.
 
 --- R2 ---
@@ -127,7 +128,7 @@ ICC performance::icc: 0.14497
   CNES 2825376    n=   679 obitos=    3 obs=  0.4% esp=  6.3% O/E=0.07 u_j=-1.941
   CNES 7065515    n=   961 obitos=    8 obs=  0.8% esp= 12.0% O/E=0.07 u_j=-2.400
 
-modelo gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_vulnerabilidade_climatica_RAS_RJ/01_dados/processados/modelo_glmm_principal_glmmTMB.rds
+modelo gravado: C:\Users\oorie\OneDrive\Documentos\TRABALHOS\DLNM\02_estudo_RAS_RJ/01_dados/processados/modelo_glmm_principal_glmmTMB.rds
 teste de releitura: ok
 
-fim: 2026-10-03 19:23:54
+fim: 2026-10-29 21:03:40

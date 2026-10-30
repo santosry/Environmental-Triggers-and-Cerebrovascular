@@ -5,17 +5,17 @@ Obitos,42426
 Taxa de obito (%),19.039
 Hospitais (CNES),222
 Regioes de saude,9
-Variancia hospitalar (s2_hosp),0.55779
-DP hospitalar (s_hosp),0.74685
+Variancia hospitalar (s2_hosp),0.55782
+DP hospitalar (s_hosp),0.74687
 VPC / ICC,0.14497
 VPC / ICC (%),14.497
 MOR,2.0389
 Log-verossimilhanca,-96093.02
 AIC,192228.04
-Tempo de ajuste (min),1.82
-DP hospitalar IC95% inf,0.65941
-DP hospitalar IC95% sup,0.84589
-VPC/ICC IC95% inf,0.11674
-VPC/ICC IC95% sup,0.17864
+Tempo de ajuste (min),1.96
+DP hospitalar IC95% inf,0.65943
+DP hospitalar IC95% sup,0.84591
+VPC/ICC IC95% inf,0.11675
+VPC/ICC IC95% sup,0.17865
 MOR IC95% inf,1.8757
 MOR IC95% sup,2.2409
