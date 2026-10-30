@@ -49,6 +49,7 @@ de 2026.
 | `05_tabelas/` | Tabelas em CSV, numeradas na ordem em que entram no manuscrito. |
 | `06_figuras/` | Figuras em `manuscrito/` (Figuras 1–2 finais em `.jpg` 300 dpi), `exploratorias/` (banco de ~25) e `suplementares/` (demais). PNG/JPEG a 300 dpi. |
 | `07_literatura/` | Matriz de literatura com autoria verificada e 13 artigos completos em PDF (texto livre, via DOI/SciELO/Europe PMC). |
+| `09_machine_learning/` | Plano e pipeline do segundo artigo: predição de óbito intra-hospitalar com machine learning, validação temporal e comparação com o GLMM. |
 | `10_auditoria/` | Auditorias do estudo anterior, dos dados e da metodologia. |
 | `11_reprodutibilidade/` | Benchmarks, reprodutibilidade, portabilidade e auditabilidade (manifesto SHA-256, Dockerfile). |
 | `12_relatorios/` | Relatórios executivo e final, e comparação antigo×novo. |
@@ -454,3 +455,12 @@ Fluxo: `versoes_ambiente.R` → `run_all.R` → `teste_regressao.R` → `manifes
 O plano exploratório para testar as demais variáveis do SIH/SIM, com registro
 obrigatório de todos os modelos (inclusive nulos e não convergidos), está em
 [`PLANO_EXPLORACAO_VARIAVEIS_GLMM.md`](PLANO_EXPLORACAO_VARIAVEIS_GLMM.md).
+
+---
+
+## Plano de machine learning
+
+O segundo artigo, dedicado à predição de óbito intra-hospitalar com machine learning,
+tem plano próprio em
+[`09_machine_learning/PLANO_IMPLEMENTACAO_ML.md`](09_machine_learning/PLANO_IMPLEMENTACAO_ML.md).
+Ele é deliberadamente separado do artigo inferencial de GLMM.
