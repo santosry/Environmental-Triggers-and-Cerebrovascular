@@ -22,6 +22,7 @@
   - [01 — Modelagem DLNM](#01--modelagem-dlnm-clima--dcv)
   - [02 — Vulnerabilidade climática e RAS](#02--vulnerabilidade-climática-e-ras)
   - [03 — Revisão sistemática e meta-análise](#03--revisão-sistemática-e-meta-análise)
+- [Anexo — exploração de variáveis com ML](#anexo--exploração-de-variáveis-com-ml)
 - [Estrutura do repositório](#estrutura-do-repositório)
 - [Resultados principais](#resultados-principais)
 - [Fontes de dados](#fontes-de-dados)
@@ -120,6 +121,20 @@ lifespan: a global systematic review and meta-analysis.*
 
 ---
 
+## Anexo — exploração de variáveis com ML
+
+📁 **[`04_machine_learning_exploratorio/`](04_machine_learning_exploratorio/README.md)**
+
+Anexo metodológico separado das três frentes. Explora a estrutura, os padrões e
+as associações entre as variáveis da coorte com técnicas **não supervisionadas**
+(FAMD/MCA, clustering, regras de associação e estabilidade).
+
+**Não é um estudo de predição:** não há treino/teste, AUC, calibração, curva de
+decisão ou model card. O plano completo está em
+[`04_machine_learning_exploratorio/PLANO_EXPLORACAO_ML.md`](04_machine_learning_exploratorio/PLANO_EXPLORACAO_ML.md).
+
+---
+
 ## Estrutura do repositório
 
 ```
@@ -165,6 +180,16 @@ DLNM/                                    # raiz do monorepo
 │   ├── 04_referencias/                   # referencias.bib, protocolo, session_info
 │   ├── HANDOFF.md                        # continuidade do projeto
 │   └── sumario_execucao.md               # o que foi executado e próximos passos
+│
+├── 04_machine_learning_exploratorio/     # Anexo — exploração de variáveis (sem previsão)
+│   ├── README.md                         # escopo do anexo
+│   ├── PLANO_EXPLORACAO_ML.md            # plano metodológico
+│   ├── 01_dados/                         # bases derivadas (dados pesados não versionados)
+│   ├── 02_scripts/                       # pipeline exploratório em R
+│   ├── 03_resultados/                    # logs e registro de análises
+│   ├── 04_tabelas/                       # associações, clusters e regras
+│   ├── 05_figuras/                       # componentes, mapas e perfis
+│   └── 06_relatorios/                    # relatório narrativo
 │
 ├── .gitignore                            # exclusões (dados grandes/binários)
 ├── LICENSE                               # licença MIT
